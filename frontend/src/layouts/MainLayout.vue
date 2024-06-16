@@ -1,9 +1,7 @@
 <template>
   <q-layout view="hHh Lpr lFf">
 
-    <q-header class="bg-white text-grey-8 q-py-xs "
-      height-hint="58"
-      bordered>
+    <q-header class="bg-white text-grey-8 q-py-xs " height-hint="58" bordered v-if="showMenu">
       <q-toolbar>
         <q-btn flat
           dense
@@ -32,6 +30,15 @@
         </q-btn>
 
         <q-space />
+            <q-btn round
+            dense
+            flat
+            color="grey-8" icon="refresh"
+            @click="reloadPage">
+            <q-tooltip >
+              Atualizar Página
+            </q-tooltip>
+          </q-btn>
 
         <div class="q-gutter-sm row items-center no-wrap">
           <q-btn round
@@ -42,20 +49,34 @@
             <q-badge color="red"
               text-color="white"
               floating
-              v-if="(parseInt(notifications.count) + parseInt(notifications_p.count)) > 0">
-              {{ parseInt(notifications.count) + parseInt(notifications_p.count) }}
+              v-if="(parseInt(notificacoesChat) + parseInt(notifications_p.count)) > 0">
+              {{ this.notificacaoInternaNaoLida + parseInt(notifications_p.count) }}
             </q-badge>
             <q-menu>
               <q-list style="min-width: 300px">
-                <!--q-item>
-                  <q-item-section
-                    style="cursor: pointer;">
-                    {{ parseInt(notifications.count) }} + {{ parseInt(notifications_p.count) }}
-                  </q-item-section>
-                </q-item-->
-                <q-item v-if="(parseInt(notifications.count) + parseInt(notifications_p.count)) == 0">
+                <q-item v-if="(parseInt(notificacoesChat) + parseInt(notifications_p.count)) == 0">
                   <q-item-section style="cursor: pointer;">
                     Nada de novo por aqui!
+                  </q-item-section>
+                </q-item>
+                <q-item v-if="parseInt(notificacoesChat) > 0">
+                  <q-item-section avatar @click="() => $router.push({ name: 'chat-interno' })" style="cursor: pointer;">
+                    <q-avatar style="width: 60px; height: 60px" color="blue" text-color="white">
+                      {{ notificacoesChat }}
+                    </q-avatar>
+                  </q-item-section>
+                  <q-item-section @click="() => $router.push({ name: 'chat-interno' })" style="cursor: pointer;">
+                    Novas mensagens não lidas no chat interno!
+                  </q-item-section>
+                </q-item>
+                <q-item v-if="parseInt(notificacaoInternaNaoLida) > 0">
+                  <q-item-section avatar @click="() => $router.push({ name: 'chat-interno' })" style="cursor: pointer;">
+                    <q-avatar style="width: 60px; height: 60px" color="primary" text-color="white">
+                      {{ notificacaoInternaNaoLida }}
+                    </q-avatar>
+                  </q-item-section>
+                  <q-item-section @click="() => $router.push({ name: 'chat-interno' })" style="cursor: pointer;">
+                    Mensagens não lidas no chat interno!
                   </q-item-section>
                 </q-item>
                 <q-item v-if="parseInt(notifications_p.count) > 0">
@@ -71,25 +92,6 @@
                   <q-item-section @click="() => $router.push({ name: 'atendimento' })"
                     style="cursor: pointer;">
                     Clientes pendentes na fila
-                  </q-item-section>
-                </q-item>
-                <q-item v-for="ticket in notifications.tickets"
-                  :key="ticket.id"
-                  style="border-bottom: 1px solid #ddd; margin: 5px;">
-                  <q-item-section avatar
-                    @click="abrirAtendimentoExistente(ticket.name, ticket)"
-                    style="cursor: pointer;">
-                    <q-avatar style="width: 60px; height: 60px">
-                      <img :src="ticket.profilePicUrl">
-                    </q-avatar>
-                  </q-item-section>
-                  <q-item-section @click="abrirAtendimentoExistente(ticket.name, ticket)"
-                    style="cursor: pointer;">
-                    <q-list>
-                      <q-item style="text-align:center; font-size: 17px; font-weight: bold; min-height: 0">{{ ticket.name
-                      }}</q-item>
-                      <q-item style="min-height: 0; padding-top: 0"><b>Mensagem: </b> {{ ticket.lastMessage }}</q-item>
-                    </q-list>
                   </q-item-section>
                 </q-item>
               </q-list>
@@ -115,19 +117,6 @@
             <q-menu>
               <q-list style="min-width: 100px">
                 <q-item-label header> Olá! <b> {{ username }} </b> </q-item-label>
-                <!-- <q-item
-                  clickable
-                  v-close-popup
-                >
-                  <q-item-section>
-                    <q-toggle
-                      color="blue"
-                      :value="$q.dark.isActive"
-                      label="Modo escuro"
-                      @input="$setConfigsUsuario({isDark: !$q.dark.isActive})"
-                    />
-                  </q-item-section>
-                </q-item> -->
                 <cStatusUsuario @update:usuario="atualizarUsuario"
                   :usuario="usuario" />
                 <q-item clickable
@@ -156,34 +145,23 @@
       </q-toolbar>
     </q-header>
 
-    <q-drawer v-model="leftDrawerOpen"
-      show-if-above
-      bordered
-      :mini="miniState"
-      @mouseover="miniState = false"
-      @mouseout="miniState = true"
-      mini-to-overlay
-      content-class="bg-white text-grey-9">
+    <q-drawer v-model="leftDrawerOpen" show-if-above bordered :mini="miniState" @mouseover="miniState = false"
+      v-if="showMenu" @mouseout="miniState = true" mini-to-overlay content-class="bg-white text-grey-9">
       <q-scroll-area class="fit">
-        <q-list padding
-          :key="userProfile">
+        <q-list padding :key="userProfile">
           <!-- <q-item-label
             header
             class="text-grey-8"
           >
             Menu
           </q-item-label> -->
-          <EssentialLink v-for="item in menuData"
-            :key="item.title"
-            v-bind="item" />
+          <EssentialLink v-for="item in menuData" :key="item.title" v-bind="item" />
           <div v-if="userProfile === 'admin'">
             <q-separator spaced />
             <div class="q-mb-lg"></div>
             <!-- <q-item-label header>Administração</q-item-label> -->
             <template v-for="item in menuDataAdmin">
-              <EssentialLink v-if="exibirMenuBeta(item)"
-                :key="item.title"
-                v-bind="item" />
+              <EssentialLink v-if="exibirMenuBeta(item) && validaTelaAdmin(item)" :key="item.title" v-bind="item" />
             </template>
           </div>
 
@@ -231,6 +209,7 @@ import { ListarWhatsapps } from 'src/service/sessoesWhatsapp'
 import EssentialLink from 'components/EssentialLink.vue'
 import socketInitial from './socketInitial'
 import alertSound from 'src/assets/sound.mp3'
+import alertInterno from 'src/assets/chatInterno.mp3'
 import { format } from 'date-fns'
 const username = localStorage.getItem('username')
 import ModalUsuario from 'src/pages/usuarios/ModalUsuario'
@@ -240,7 +219,7 @@ import { RealizarLogout } from 'src/service/login'
 import cStatusUsuario from '../components/cStatusUsuario.vue'
 import { socketIO } from 'src/utils/socket'
 import { ConsultarTickets } from 'src/service/tickets'
-
+import { listCountUnreadMessage } from 'src/service/chatInterno'
 const socket = socketIO()
 
 const objMenu = [
@@ -317,7 +296,7 @@ const objMenuAdmin = [
     routeName: 'usuarios'
   },
   {
-    title: 'Filas',
+    title: 'Filas | Grupos',
     caption: 'Cadastro de Filas',
     icon: 'mdi-arrow-decision-outline',
     routeName: 'filas'
@@ -382,15 +361,17 @@ export default {
       modalUsuario: false,
       usuario: {},
       alertSound,
+      alertInterno,
       leftDrawerOpen: false,
       menuData: objMenu,
       menuDataAdmin: objMenuAdmin,
       countTickets: 0,
-      ticketsList: []
+      ticketsList: [],
+      notificacaoInternaNaoLida: ''
     }
   },
   computed: {
-    ...mapGetters(['notifications', 'notifications_p', 'whatsapps']),
+    ...mapGetters(['notifications', 'notifications_p', 'whatsapps', 'showMenu', 'chatFocado', 'notificacaoChatInterno', 'notificacoesChat', 'notificacaoTicket']),
     cProblemaConexao () {
       const idx = this.whatsapps.findIndex(w =>
         ['PAIRING', 'TIMEOUT', 'DISCONNECTED'].includes(w.status)
@@ -422,15 +403,50 @@ export default {
       return objMenu
     }
   },
+  watch: {
+    notificacaoChatInterno: {
+      handler() {
+        if (this.$router.currentRoute.fullPath.indexOf('atendimento-Interno') < 0 || !this.chatFocado.id || this.chatFocado.id !== this.notificacaoChatInterno.senderId) {
+          this.$store.commit('LISTA_NOTIFICACOES_CHAT_INTERNO', { action: 'update', data: 1 })
+          this.listarMensagens()
+          const audio = new Audio(alertInterno)
+          audio.play()
+        }
+      }
+    },
+    notificacaoTicket: {
+      handler() {
+        this.$nextTick(() => {
+          this.$refs.audioNotification.play()
+        })
+      }
+    }
+  },
   methods: {
-    exibirMenuBeta (itemMenu) {
+    async listarMensagens() {
+      try {
+        const { data } = await listCountUnreadMessage(this.usuario.userId)
+        this.notificacaoInternaNaoLida = data.count
+      } catch (e) {
+
+      }
+    },
+    reloadPage() {
+      window.location.reload()
+    },
+    exibirMenuBeta(itemMenu) {
       if (!itemMenu?.isBeta) return true
       for (const domain of this.domainExperimentalsMenus) {
         if (this.usuario.email.indexOf(domain) !== -1) return true
       }
       return false
     },
-    async listarWhatsapps () {
+    validaTelaAdmin(itemMenu) {
+      const user = JSON.parse(localStorage.getItem('usuario'))
+      if (itemMenu.routeName === 'empresas' && user.tenantId != 1) return false
+      return true
+    },
+    async listarWhatsapps() {
       const { data } = await ListarWhatsapps()
       this.$store.commit('LOAD_WHATSAPPS', data)
     },
@@ -518,6 +534,9 @@ export default {
         // this.ticketsList = data.tickets
         // console.log(data)
         this.$store.commit('UPDATE_NOTIFICATIONS', data)
+        setTimeout(() => {
+          this.$store.commit('UPDATE_NOTIFICATIONS', data)
+        }, 500)
         // this.$store.commit('SET_HAS_MORE', data.hasMore)
         // console.log(this.notifications)
       } catch (err) {
@@ -542,6 +561,9 @@ export default {
         // this.ticketsList = data.tickets
         // console.log(data)
         this.$store.commit('UPDATE_NOTIFICATIONS_P', data)
+        setTimeout(() => {
+          this.$store.commit('UPDATE_NOTIFICATIONS_P', data)
+        }, 500)
         // this.$store.commit('SET_HAS_MORE', data.hasMore)
         // console.log(this.notifications)
       } catch (err) {
@@ -590,6 +612,7 @@ export default {
     await this.listarWhatsapps()
     await this.listarConfiguracoes()
     await this.consultarTickets()
+    await this.listarMensagens()
     if (!('Notification' in window)) {
     } else {
       Notification.requestPermission()
