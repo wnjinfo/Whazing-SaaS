@@ -83,16 +83,6 @@ const user = {
           })
         }
       } catch (error) {
-        console.error(error, error.data.error === 'ERROR_NO_PERMISSION_API_ADMIN')
-        if (error.data.error === 'ERROR_NO_PERMISSION_API_ADMIN') {
-          Notify.create({
-            type: 'negative',
-            message: 'Instalação não AUTORIZADA, entre em contato com Grupo Izing Pro - https://grupo.izing.app',
-            caption: 'ERROR_NO_PERMISSION_API_ADMIN',
-            position: 'top',
-            progress: true
-          })
-        }
       }
     }
   }

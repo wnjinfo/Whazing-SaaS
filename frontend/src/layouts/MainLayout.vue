@@ -254,7 +254,7 @@ const objMenu = [
   {
     title: 'Atendimentos',
     caption: 'Lista de atendimentos',
-    icon: 'mdi-forum-outline',
+    icon: 'mdi-whatsapp',
     routeName: 'atendimento'
   },
   {
@@ -262,6 +262,12 @@ const objMenu = [
     caption: 'Lista de contatos',
     icon: 'mdi-card-account-mail',
     routeName: 'contatos'
+  },
+  {
+    title: 'Chat Interno',
+    caption: 'Chat Interno',
+    icon: 'mdi-forum-outline',
+    routeName: 'chat-interno'
   }
 ]
 

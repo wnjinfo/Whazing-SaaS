@@ -65,6 +65,7 @@ const routes = [
       }
     ]
   },
+  { path: '/chat-interno', name: 'chat-interno', component: () => import('pages/chatInterno/index.vue') },
   {
     path: '/atendimento',
     name: 'atendimento',
