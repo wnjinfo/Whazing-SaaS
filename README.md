@@ -3,7 +3,7 @@
 Um sistema para gestão de atendimento multicanais centralizado.
 
 Sistema possui o backend e canais baseado em:
-- Whatsapp [whatsapp-web.js](https://github.com/pedroslopez/whatsapp-web.js)
+- Whatsapp [@whiskeysockets/baileys](https://github.com/WhiskeySockets/Baileys)
 - Telegram [telegraf](github.com/telegraf/telegraf)
 - Instagram [instagram-private-api](https://github.com/dilame/instagram-private-api)
 - Messenger [messaging-api-messenger](https://github.com/Yoctol/messaging-apis#readme)
@@ -36,130 +36,11 @@ ___
 - Enviar e receber mídias diversas (imagens/áudio/documentos) ✅
 - Multiempresas (abordagem de base compartilhada)
 
-
-## Docker compose Localhost
-
-Execute comando na pasta raiz do projeto (izing.io)
-```
-docker compose -f "docker-compose.yml" up -d --build
-```
-Após os containers estarem rodando, faça a carga de dados iniciais (apenas na primeira vez)
-```
-docker compose exec -it izing-backend  bash -c 'npx sequelize db:seed:all'    
-```
-> Se tudo correu bem, acesse o sistema e faça login no link: [http://localhost:8080/#/login](http://localhost:8080/#/login).
-```
-usuário: admin@izing.io
-senha: 123456
-```
-
-
-## Instalação (Linux Ubuntu - Desenvolvimento)
-
-```
-Instale o postgres;
-Instale o rabbitmq;
-Instale o redis;
-Instale node 14.* via nvm
-```
- 
-Install puppeteer dependencies:
-
-```bash
-sudo apt-get install -y libgbm-dev wget unzip fontconfig locales gconf-service libasound2 libatk1.0-0 libc6 libcairo2 libcups2 libdbus-1-3 libexpat1 libfontconfig1 libgcc1 libgconf-2-4 libgdk-pixbuf2.0-0 libglib2.0-0 libgtk-3-0 libnspr4 libpango-1.0-0 libpangocairo-1.0-0 libstdc++6 libx11-6 libx11-xcb1 libxcb1 libxcomposite1 libxcursor1 libxdamage1 libxext6 libxfixes3 libxi6 libxrandr2 libxrender1 libxss1 libxtst6 ca-certificates fonts-liberation libappindicator1 libnss3 lsb-release xdg-utils
-```
-
-Clone este repositório
-
-```bash
-git clone git@github.com:ldurans/izing.io.git
-```
-
-Navegue até a pasta backend e crie o arquivo .env:
-
-```bash
-cp .env.example .env
-nano .env
-```
-
-Edite os valores das variáveis do arquivo `.env`:
-
-```bash
-NODE_ENV=DEVELOPMENT #it helps on debugging
-BACKEND_URL=http://localhost
-FRONTEND_URL=https://localhost:3000
-PROXY_PORT=8080
-PORT=8080
-
-POSTGRES_HOST=
-DB_PORT=
-POSTGRES_DB=
-POSTGRES_USER=
-POSTGRES_PASSWORD=
-
-JWT_SECRET=ainjpansaiubspiusbpsjp918921601826
-JWT_REFRESH_SECRET=ain@@@@jpansai_!0ubspiusbpsjp
-MIN_SLEEP_BUSINESS_HOURS=10000
-MAX_SLEEP_BUSINESS_HOURS=20000
-MIN_SLEEP_AUTO_REPLY=4000
-MAX_SLEEP_AUTO_REPLY=6000
-MIN_SLEEP_INTERVAL=2000
-MAX_SLEEP_INTERVAL=5000
-RABBITMQ_DEFAULT_USER=
-RABBITMQ_DEFAULT_PASS=
-AMQP_URL='amqp://USER:SENHAS@HOST:PORTA?connection_attempts=5&retry_delay=5'
-API_URL_360=https://waba-sandbox.360dialog.io
-ADMIN_DOMAIN=izing.io
-FACEBOOK_APP_ID=
-FACEBOOK_APP_SECRET_KEY=
-
-```
-
-Instale as dependências do backend e execute as migrações e carga de dados iniciais:
-
-```bash
-npm install
-npm run build
-npx sequelize db:migrate
-npx sequelize db:seed:all
-```
-
-Inicie o backend:
-
-```bash
-npm start
-```
-
-Abra um novo terminal e navegue até a pasta do frontend.
-
-Instale as dependências do backend e execute as migrações e carga de dados iniciais:
-
-```bash
-npm install
-```
-
-
-Crie o arquivo .env na pasta frontend:
-
-```bash
-cp .env.example .env
-nano .env
-```
-```bash
-URL_API='http://api.mydomain.com' # URL do backend
-FACEBOOK_APP_ID='1554345554575413' # id do app criado na console do facebook
-```
-
-
-Inicie o frontend (suponto que já possua instalado as cli do vue e quasar):
-```bash
-quasar c && quasar d
-```
   
-## Guia básico para produção (Ubuntu >= 18.04 VPS)
+## Guia básico para produção (Ubuntu >= 20 VPS)
 
 ```
-Instale o postgres;
+Instale o postgres 16;
 Instale o rabbitmq;
 Instale o redis;
 ```
@@ -191,7 +72,7 @@ sudo apt update && sudo apt upgrade
 
 Instale o node:
 ```bash
-curl -sL https://deb.nodesource.com/setup_14.x | sudo -E bash -
+curl -sL https://deb.nodesource.com/setup_20.x | sudo -E bash -
 sudo apt-get install -y nodejs
 node -v
 npm -v
@@ -204,7 +85,7 @@ Clone o repositório:
 
 ```bash
 cd  ~
-git clone git@github.com:ldurans/izing.io.git
+git clone https://github.com/cleitonme/izingpro.bayles.git izing
 ```
 
 Na pasta backend, crie o arquivo .env:
@@ -212,39 +93,6 @@ Na pasta backend, crie o arquivo .env:
 ```bash
 cp izing/backend/.env.example izing/backend/.env
 nano izing/backend/.env
-```
-
-```bash
-NODE_ENV=
-BACKEND_URL=https://api.mydomain.com #USE HTTPS HERE, WE WILL ADD SSL LATTER
-FRONTEND_URL=https://myapp.mydomain.com #USE HTTPS HERE, WE WILL ADD SSL LATTER, CORS RELATED!
-PROXY_PORT=443 #USE NGINX REVERSE PROXY PORT HERE, WE WILL CONFIGURE IT LATTER
-PORT=8080
-
-DB_DIALECT=postgres
-DB_PORT=5432
-POSTGRES_HOST=
-POSTGRES_USER=postgres
-POSTGRES_PASSWORD=
-POSTGRES_DB=izing
-IO_REDIS_SERVER=localhost
-IO_REDIS_PORT='6379'
-IO_REDIS_DB_SESSION='2'
-JWT_SECRET=DPHmNRZ!!@56WZ4isLF9vXkMv1QabvpcA80Rc
-JWT_REFRESH_SECRET=EMPehEbr908879Adi7s8fGSeYzqGQbV5wrjH4i
-MIN_SLEEP_BUSINESS_HOURS=10000
-MAX_SLEEP_BUSINESS_HOURS=20000
-MIN_SLEEP_AUTO_REPLY=4000
-MAX_SLEEP_AUTO_REPLY=6000
-MIN_SLEEP_INTERVAL=2000
-MAX_SLEEP_INTERVAL=5000RABBITMQ_DEFAULT_USER=durans
-RABBITMQ_DEFAULT_PASS=marina0509
-AMQP_URL='amqp://USER:SENHAS@HOST:PORTA?connection_attempts=5&retry_delay=5'
-API_URL_360=https://waba-sandbox.360dialog.io
-
-FACEBOOK_APP_ID=
-FACEBOOK_APP_SECRET_KEY=
-
 ```
 
 Instale as dependências do puppeteer:
@@ -258,7 +106,6 @@ Instale as dependências do backend e execute as migrações e carga de dados in
 ```bash
 cd izing/backend
 npm install
-npm run build
 npx sequelize db:migrate
 npx sequelize db:seed:all
 ```
