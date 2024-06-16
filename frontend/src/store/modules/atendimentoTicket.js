@@ -163,7 +163,8 @@ const atendimentoTicket = {
     },
     hasMore: false,
     contatos: [],
-    mensagens: []
+    mensagens: [],
+    notificacaoTicket: 0
   },
   mutations: {
     // OK
@@ -328,18 +329,24 @@ const atendimentoTicket = {
             state.ticketFocado.scheduledMessages.push(payload)
           }
         }
+      } else {
+        if (!payload.fromMe && payload.ticket.status !== 'closed') {
+          state.notificacaoTicket += 1
+        }
       }
 
       const TicketIndexUpdate = state.tickets.findIndex(t => t.id == payload.ticket.id)
       if (TicketIndexUpdate !== -1) {
-        const tickets = [...state.tickets]
+        let tickets = [...state.tickets]
         const unreadMessages = state.ticketFocado.id == payload.ticket.id ? 0 : payload.ticket.unreadMessages
         tickets[TicketIndexUpdate] = {
           ...state.tickets[TicketIndexUpdate],
           answered: payload.ticket.answered,
           unreadMessages,
-          lastMessage: payload.mediaName || payload.body
+          lastMessage: payload.mediaName || payload.body,
+          lastMessageAt: payload.ticket.lastMessageAt
         }
+        tickets = orderTickets(tickets)
         state.tickets = tickets
       }
     },
@@ -356,12 +363,43 @@ const atendimentoTicket = {
         state.mensagens = mensagens
       }
 
+      const ticketIndex = state.tickets.findIndex(m => m.id === payload.ticket.id)
+      if (ticketIndex !== -1) {
+        state.tickets[ticketIndex].lastMessage = payload.ticket.lastMessage
+        state.tickets[ticketIndex].lastMessageAt = payload.ticket.lastMessageAt
+        state.tickets[ticketIndex].updatedAt = payload.ticket.updatedAt
+      }
+      state.tickets = orderTickets(state.tickets)
       // Se existir mensagens agendadas no ticket focado,
       // tratar a atualização das mensagens deletadas.
       if (state.ticketFocado?.scheduledMessages) {
         const scheduledMessages = [...state.ticketFocado.scheduledMessages]
         const scheduled = scheduledMessages.filter(m => m.id != payload.id)
         state.ticketFocado.scheduledMessages = scheduled
+      }
+    },
+    UPDATE_MESSAGE(state, payload) {
+      // Se ticket não for o focado, não atualizar.
+      if (state.ticketFocado.id != payload.ticketId) {
+        return
+      }
+
+      state.mensagens = state.mensagens.map((m) => {
+        if (m.id == payload.id) {
+          return { ...m, ...payload }
+        }
+
+        return m
+      })
+
+      if (state.ticketFocado?.scheduledMessages) {
+        state.ticketFocado.scheduledMessages = state.ticketFocado.scheduledMessages.map((m) => {
+          if (m.id == payload.id) {
+            return { ...m, ...payload }
+          }
+
+          return m
+        })
       }
     },
     // OK
