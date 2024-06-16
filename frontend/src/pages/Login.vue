@@ -1,7 +1,7 @@
 <template>
   <div class="q-pa-md bg-video">
     <video autoplay muted loop>
-      <source src="../videologin.mp4" type="video/mp4" />
+      <source src="/videologin.mp4" type="video/mp4" />
     </video>
   <q-layout class="vertical-center">
     <q-page-container>
