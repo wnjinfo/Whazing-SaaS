@@ -146,6 +146,33 @@
               </q-list>
             </q-menu>
           </q-btn>
+             <q-btn
+                round
+                flat
+                class="q-ml-sm"
+              >
+              <q-icon
+                size="2em"
+                name="mdi-emoticon-happy-outline"
+              />
+              <q-tooltip>
+                Emoji
+              </q-tooltip>
+              <q-menu
+                anchor="top right"
+                self="bottom middle"
+                :offset="[5, 40]"
+              >
+                <VEmojiPicker
+                  style="width: 40vw"
+                  :showSearch="false"
+                  :emojisByRow="20"
+                  labelSearch="Localizar..."
+                  lang="pt-BR"
+                  @select="onInsertSelectEmoji"
+                />
+              </q-menu>
+            </q-btn>
         </div>
       </q-card-section>
       <q-card-actions align="center"
@@ -170,9 +197,10 @@ import { required, minLength, maxLength } from 'vuelidate/lib/validators'
 import { UpdateWhatsapp, CriarWhatsapp } from 'src/service/sessoesWhatsapp'
 import cInput from 'src/components/cInput.vue'
 import { copyToClipboard, Notify } from 'quasar'
+import { VEmojiPicker } from 'v-emoji-picker'
 
 export default {
-  components: { cInput },
+  components: { cInput, VEmojiPicker },
   name: 'ModalWhatsapp',
   props: {
     modalWhatsapp: {
@@ -227,6 +255,27 @@ export default {
     }
   },
   methods: {
+    onInsertSelectEmoji (emoji) {
+      const self = this
+      var tArea = this.$refs.inputFarewellMessage
+      // get cursor's position:
+      var startPos = tArea.selectionStart,
+        endPos = tArea.selectionEnd,
+        cursorPos = startPos,
+        tmpStr = tArea.value
+      // filter:
+      if (!emoji.data) {
+        return
+      }
+      // insert:
+      self.txtContent = this.whatsapp.farewellMessage
+      self.txtContent = tmpStr.substring(0, startPos) + emoji.data + tmpStr.substring(endPos, tmpStr.length)
+      this.whatsapp.farewellMessage = self.txtContent
+      // move cursor:
+      setTimeout(() => {
+        tArea.selectionStart = tArea.selectionEnd = cursorPos + emoji.data.length
+      }, 10)
+    },
     copy (text) {
       copyToClipboard(text)
         .then(this.$notificarSucesso('URL de integração copiada!'))
@@ -307,7 +356,7 @@ export default {
         if (error.data.error === 'ERR_NO_PERMISSION_CONNECTIONS_LIMIT') {
           Notify.create({
             type: 'negative',
-            message: 'Limite de conexões atingida.',
+            message: 'Limite de conexões atingida, para ter mais conexões entre em contato com a equipe de suporte',
             caption: 'ERR_NO_PERMISSION_CONNECTIONS_LIMIT',
             position: 'top',
             progress: true
