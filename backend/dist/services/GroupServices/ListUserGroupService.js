@@ -1,0 +1,99 @@
+'use strict';
+const _0x1a2a63 = _0x1748;
+(function (_0x4607f7, _0x3a6d1b) {
+    const _0x1b3467 = _0x1748, _0x459476 = _0x4607f7();
+    while (!![]) {
+        try {
+            const _0x5d4687 = -parseInt(_0x1b3467(0x165)) / (0x1e2f + 0xd91 + -0xe95 * 0x3) * (parseInt(_0x1b3467(0x15c)) / (0xa81 + 0xfb5 + -0x1a34)) + parseInt(_0x1b3467(0x159)) / (0xaf7 * -0x2 + 0x1b * -0x9 + 0x16e4) * (-parseInt(_0x1b3467(0x161)) / (0x31 * 0x78 + -0xe33 + -0x53 * 0x1b)) + -parseInt(_0x1b3467(0x15b)) / (0x19d * 0x1 + 0x43 + -0x1db) + -parseInt(_0x1b3467(0x14d)) / (-0x1131 + 0x1343 * 0x1 + -0x20c * 0x1) * (parseInt(_0x1b3467(0x16c)) / (0x9d * 0x21 + -0x2539 + 0x1103)) + parseInt(_0x1b3467(0x173)) / (0xe46 + -0x1 * -0x23b + -0x1079) + -parseInt(_0x1b3467(0x154)) / (-0x3 * -0x255 + 0x1 * 0x2335 + -0x55 * 0x7f) + -parseInt(_0x1b3467(0x170)) / (-0x1713 + 0x1 * 0x177e + -0x61) * (-parseInt(_0x1b3467(0x168)) / (0x1 * 0x115 + 0xbec + 0xe * -0xed));
+            if (_0x5d4687 === _0x3a6d1b)
+                break;
+            else
+                _0x459476['push'](_0x459476['shift']());
+        } catch (_0x5924a4) {
+            _0x459476['push'](_0x459476['shift']());
+        }
+    }
+}(_0x7dfe, -0xd5c90 + 0x15 * 0x91aa + 0xd0e9e));
+function _0x1748(_0x37333c, _0x223f1f) {
+    const _0x150f97 = _0x7dfe();
+    return _0x1748 = function (_0x4f0a4f, _0x13d87a) {
+        _0x4f0a4f = _0x4f0a4f - (-0xd7e + -0x1e20 + 0x2ce9 * 0x1);
+        let _0x550cb8 = _0x150f97[_0x4f0a4f];
+        return _0x550cb8;
+    }, _0x1748(_0x37333c, _0x223f1f);
+}
+function _0x7dfe() {
+    const _0x54779a = [
+        '\x0a\x20\x20\x20\x20selec',
+        '2527540eJnfLX',
+        '12tfiXlR',
+        '\x0a\x20\x20\x20\x20and\x20q',
+        '.\x22tenantId',
+        '.\x22groupId\x22',
+        '\x20from\x20\x22Gro',
+        '6740mMpsra',
+        '\x20u\x20\x0a\x20\x20\x20\x20,\x20',
+        'SELECT',
+        'fault',
+        '180673UsYgqQ',
+        '\x20\x20where\x20uq',
+        'type',
+        '8646ASpYUb',
+        'ls/Group',
+        't\x20q.*\x20\x0a\x20\x20\x20',
+        'replacemen',
+        '12439UJBTwu',
+        '\x22userId\x22\x20=',
+        '\x22UsersGrou',
+        '__importDe',
+        '29570GxrAQq',
+        'tId\x0a\x20\x20\x20\x20',
+        '\x20\x20\x20and\x20uq.',
+        '9997184kpXBcG',
+        '__esModule',
+        'value',
+        'query',
+        'userId',
+        'ps\x22\x20uq\x20\x0a\x20\x20',
+        'tenantId',
+        'erty',
+        '../../mode',
+        'sequelize',
+        '\x20,\x20\x22Users\x22',
+        '1926xndyus',
+        '=\x20:userId\x20',
+        'ups\x22\x20q\x0a\x20\x20\x20',
+        '\x20u.id\x20\x0a\x20\x20\x20',
+        'QueryTypes',
+        '\x20=\x20q.id\x20\x0a\x20',
+        '\x22\x20=\x20:tenan',
+        '5386644qRYpaf',
+        '\x20and\x20u.id\x20',
+        'nest',
+        'default',
+        'defineProp',
+        '93XcISVL'
+    ];
+    _0x7dfe = function () {
+        return _0x54779a;
+    };
+    return _0x7dfe();
+}
+var __importDefault = this && this[_0x1a2a63(0x16f) + _0x1a2a63(0x164)] || function (_0x1d0669) {
+    const _0x4ec10e = _0x1a2a63;
+    return _0x1d0669 && _0x1d0669[_0x4ec10e(0x174)] ? _0x1d0669 : { 'default': _0x1d0669 };
+};
+const _0x1dba95 = {};
+_0x1dba95[_0x1a2a63(0x175)] = !![], Object[_0x1a2a63(0x158) + _0x1a2a63(0x17a)](exports, _0x1a2a63(0x174), _0x1dba95);
+const sequelize_1 = require(_0x1a2a63(0x14b)), Group_1 = __importDefault(require(_0x1a2a63(0x17b) + _0x1a2a63(0x169))), ListUserGroupService = async ({
+        tenantId: _0x59fddb,
+        userId: _0x10a480
+    }) => {
+        const _0x509cf1 = _0x1a2a63, _0x3ae50d = _0x509cf1(0x15a) + _0x509cf1(0x16a) + _0x509cf1(0x160) + _0x509cf1(0x14f) + _0x509cf1(0x14c) + _0x509cf1(0x162) + _0x509cf1(0x16e) + _0x509cf1(0x178) + _0x509cf1(0x166) + _0x509cf1(0x15f) + _0x509cf1(0x152) + _0x509cf1(0x172) + _0x509cf1(0x16d) + _0x509cf1(0x150) + _0x509cf1(0x155) + _0x509cf1(0x14e) + _0x509cf1(0x15d) + _0x509cf1(0x15e) + _0x509cf1(0x153) + _0x509cf1(0x171), _0x386ebf = {};
+        _0x386ebf[_0x509cf1(0x179)] = _0x59fddb, _0x386ebf[_0x509cf1(0x177)] = _0x10a480;
+        const _0x10000b = {};
+        _0x10000b[_0x509cf1(0x16b) + 'ts'] = _0x386ebf, _0x10000b[_0x509cf1(0x167)] = sequelize_1[_0x509cf1(0x151)][_0x509cf1(0x163)], _0x10000b[_0x509cf1(0x156)] = !![];
+        const _0x5a02e7 = await Group_1[_0x509cf1(0x157)][_0x509cf1(0x14b)]?.[_0x509cf1(0x176)](_0x3ae50d, _0x10000b);
+        return _0x5a02e7;
+    };
+exports[_0x1a2a63(0x157)] = ListUserGroupService;
