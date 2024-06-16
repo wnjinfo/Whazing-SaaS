@@ -142,13 +142,10 @@ Crie o arquivo .env na pasta frontend:
 cp .env.example .env
 nano .env
 ```
-```bash
-URL_API='http://api.mydomain.com' # URL do backend
-FACEBOOK_APP_ID='1554345554575413' # id do app criado na console do facebook
-```
 
 Faça o build do front:
 ```bash
+export NODE_OPTIONS=--openssl-legacy-provider
 quasar build -P -m pwa
 ```
 
@@ -177,7 +174,7 @@ server {
   server_name api.mydomain.com;
 
   location / {
-    proxy_pass http://127.0.0.1:8080;
+    proxy_pass http://127.0.0.1:3000;
 ......
 }
 
@@ -268,12 +265,11 @@ cd izing
 git pull
 cd backend
 npm install
-rm -rf dist
-npm run build
 npx sequelize db:migrate
 #npx sequelize db:seed
 cd ../frontend
 npm install
+export NODE_OPTIONS=--openssl-legacy-provider
 quasar build -P -m pwa
 pm2 restart all
 
@@ -294,10 +290,5 @@ A utilização desta ferramenta é feita por sua conta e risco. O código é abe
 Este projeto não é afiliado, associado, autorizado, endossado por, ou de qualquer forma oficialmente ligado à WhatsApp, ou a qualquer uma das suas filiais ou afiliadas. O website oficial da WhatsApp pode ser encontrado em https://whatsapp.com. "WhatsApp", bem como nomes, marcas, emblemas e imagens relacionadas são marcas registadas dos seus respectivos proprietários.
 
 
-
---------------------------
-### Curtiu? Pague-me um café!! Segue QR code (PIX)  
-[<img src="donate.jpeg" height="150" width="200"/>](donate.jpeg)
-# izing
 
 # izing
