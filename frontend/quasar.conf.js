@@ -47,9 +47,7 @@ module.exports = function (ctx) {
     build: {
       env: {
         URL_API: process.env.URL_API,
-        FACEBOOK_APP_ID: process.env.FACEBOOK_APP_ID,
-        USUARIO_API: process.env.USUARIO_API,
-        SENHA_API: process.env.SENHA_API
+        FACEBOOK_APP_ID: process.env.FACEBOOK_APP_ID
       },
       vueRouterMode: 'hash', // available values: 'hash', 'history'
 
@@ -128,11 +126,10 @@ module.exports = function (ctx) {
     // https://quasar.dev/quasar-cli/developing-pwa/configuring-pwa
     pwa: {
       workboxPluginMode: 'GenerateSW', // 'GenerateSW' or 'InjectManifest'
-      workboxOptions: {}, // only for GenerateSW
+      workboxOptions: {maximumFileSizeToCacheInBytes: 10000000,}, // only for GenerateSW
       manifest: {
-        name: 'IZINGPRO',
-        maximumFileSizeToCacheInBytes: '5000000',
-        short_name: 'IZINGPRO',
+        name: 'IZING',
+        short_name: 'IZING',
         description: 'Bot Multi-atendimento para whatsapp',
         display: 'standalone',
         orientation: 'portrait',
@@ -197,7 +194,7 @@ module.exports = function (ctx) {
 
       builder: {
         // https://www.electron.build/configuration/configuration
-        appId: 'IZINGPRO'
+        appId: 'IZING'
       },
 
       // More info: https://quasar.dev/quasar-cli/developing-electron-apps/node-integration
