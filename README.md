@@ -8,7 +8,7 @@ Sistema possui o backend e canais baseado em:
 - Instagram [instagram-private-api](https://github.com/dilame/instagram-private-api)
 - Messenger [messaging-api-messenger](https://github.com/Yoctol/messaging-apis#readme)
 
-Como escolha para o banco de dados, optamos pelo [PostgresSql 14](https://www.postgresql.org/).
+Como escolha para o banco de dados, optamos pelo [PostgresSql](https://www.postgresql.org/).
 
 No front, todas as funcionalidades são baseadas no [vue](https://vuejs.org/) e [quasar](https://quasar.dev/), com integração via REST API e Websockets.
 
