@@ -142,15 +142,8 @@
             Enviar link para videoconferencia
           </q-tooltip>
         </q-btn>
-        <q-toggle
-          keep-color
-          v-model="sign"
-          dense
-          @input="handleSign"
-          class="q-mx-sm q-ml-md"
-          :color="sign ? 'positive' : 'black'"
-          type="toggle"
-        >
+        <q-toggle keep-color v-model="sign" dense @input="handleSign" class="q-mx-sm q-ml-md"
+          :color="sign ? 'positive' : 'black'" type="toggle" v-if="disabledSign">
           <q-tooltip>
             {{ sign ? 'Desativar' : 'Ativar' }} Assinatura
           </q-tooltip>
@@ -388,6 +381,7 @@ import { mapGetters } from 'vuex'
 import RecordingTimer from './RecordingTimer'
 import MicRecorder from 'mic-recorder-to-mp3'
 const Mp3Recorder = new MicRecorder({ bitRate: 128 })
+import { ListarConfiguracoes } from 'src/service/configuracoes'
 
 export default {
   name: 'InputMensagem',
@@ -424,7 +418,8 @@ export default {
       arquivos: [],
       textChat: '',
       sign: false,
-      scheduleDate: null
+      scheduleDate: null,
+      disabledSign: false
     }
   },
   computed: {
@@ -445,6 +440,24 @@ export default {
     }
   },
   methods: {
+    async listarConfiguracoes() {
+      const { data } = await ListarConfiguracoes()
+      this.configuracoes = data
+      this.configuracoes.forEach(el => {
+        let value = el.value
+        if (el.key === 'botTicketActive' && el.value) {
+          value = +el.value
+        }
+        this.$data[el.key] = value
+      })
+      const enabledSign = this.configuracoes.filter(item => item.key === 'userDisableSignature')[0]
+      if (enabledSign.value === 'enabled') {
+        this.disabledSign = true
+      } else {
+        LocalStorage.set('sign', true)
+        this.disabledSign = false
+      }
+    },
     openFilePreview (event) {
       const data = event.clipboardData.files[0]
       const urlImg = window.URL.createObjectURL(data)
@@ -713,6 +726,7 @@ export default {
     this.$root.$on('mensagem-chat:focar-input-mensagem', () => this.$refs.inputEnvioMensagem.focus())
     const self = this
     window.addEventListener('paste', self.handleInputPaste)
+    this.listarConfiguracoes()
     if (![null, undefined].includes(LocalStorage.getItem('sign'))) {
       this.handleSign(LocalStorage.getItem('sign'))
     }

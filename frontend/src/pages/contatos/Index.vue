@@ -58,7 +58,7 @@
           class="q-ml-md"
           color="warning"
           label="Sincronizar"
-          @click="confirmarSincronizarContatos"
+          @click="confirmarSincronizarContatos('whatsapp')"
         />
         <q-btn
           class="q-ml-md"
@@ -307,6 +307,12 @@
             label="Confirmar"
             @click="handleImportCSV"
           />
+          <q-btn
+            class="q-ml-md"
+            color="warning"
+            label="Baixar Modelo"
+            @click="downloadModelCsv"
+          />
         </q-card-actions>
       </q-card>
     </q-dialog>
@@ -410,6 +416,16 @@ export default {
     }
   },
   methods: {
+    downloadModelCsv () {
+      const csvContent = 'nome;numero\nCliente;5511999999999'
+      const blob = new Blob([csvContent], { type: 'text/csv' })
+      const link = document.createElement('a')
+      link.href = window.URL.createObjectURL(blob)
+      link.setAttribute('download', 'modelo.csv')
+      document.body.appendChild(link)
+      link.click()
+      document.body.removeChild(link)
+    },
     abrirEnvioArquivo (event) {
       this.isImportCSV = true
       this.$refs.PickerFileMessage.pickFiles(event)
@@ -675,10 +691,24 @@ export default {
         }
       })
     },
-    confirmarSincronizarContatos () {
+    confirmarSincronizarContatos(channel) {
+      const itens = []
+      const channelId = null
+      console.log(this.whatsapps)
+      this.whatsapps.forEach(w => {
+        if (w.type === channel) {
+          itens.push({ label: w.name, value: w.id })
+        }
+      })
       this.$q.dialog({
         title: 'Atenção!! Deseja realmente sincronizar os contatos? ',
         message: 'Todas os contatos com os quais você já conversou pelo Whatsapp serão criados. Isso pode demorar um pouco...',
+        options: {
+          type: 'radio',
+          model: channelId, // Use o channelId como modelo
+          isValid: v => !!v,
+          items: itens
+        },
         cancel: {
           label: 'Não',
           color: 'primary',
@@ -690,16 +720,16 @@ export default {
           push: true
         },
         persistent: true
-      }).onOk(async () => {
+      }).onOk(async (channelId) => {
         this.loading = true
-        await this.sincronizarContatos()
+        await this.sincronizarContatos(channelId)
         this.loading = false
       })
     },
-    async sincronizarContatos () {
+    async sincronizarContatos (channelId) {
       try {
         this.loading = true
-        await SyncronizarContatos()
+        await SyncronizarContatos(channelId)
         this.$q.notify({
           type: 'info',
           progress: true,
