@@ -38,5 +38,4 @@ RUN chmod +x /start_production
 
 ENTRYPOINT ["dumb-init", "--"]
 
-CMD npx sequelize db:migrate \
-  && node dist/server.js
+CMD node dist/server.js
