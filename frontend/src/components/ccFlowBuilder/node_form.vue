@@ -679,7 +679,6 @@ export default {
         { label: 'Qualquer resposta', value: 'US' },
         { label: 'Respostas', value: 'R' }
       ],
-      // node 或 line
       type: 'node',
       node: {},
       line: {},
@@ -756,7 +755,6 @@ export default {
         interactions: [],
         conditions: [],
         actions: []
-        // ico: 'el-icon-present'
       }
       const evt = {
         originalEvent: {
