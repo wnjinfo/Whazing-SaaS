@@ -2,7 +2,7 @@ const usuario = JSON.parse(localStorage.getItem('usuario'))
 import Router from 'src/router/index'
 import { socketIO } from '../utils/socket'
 import { ConsultarTickets } from 'src/service/tickets'
-
+import { ListarUsuariosChatInterno } from 'src/service/user'
 const socket = socketIO()
 
 const userId = +localStorage.getItem('userId')
@@ -210,6 +210,50 @@ export default {
         this.$store.commit('UPDATE_CONTACT', data.payload)
       })
       */
+      socket.on(`${usuario.tenantId}:ticketList`, async data => {
+        if (data.type === 'chat:ack' || data.type === 'chat:delete') {
+          console.log('socket ON: CHAT:ACK')
+          this.$store.commit('UPDATE_MESSAGE_STATUS', data.payload)
+        }
+
+        if (data.type === 'chat:update') {
+          this.$store.commit('UPDATE_MESSAGE', data.payload)
+        }
+      })
+
+      socket.on(`${usuario.tenantId}:mensagem-chat-interno`, data => {
+        if (data.action === 'update' && (data.data.receiverId == usuario.userId || data.data.groupId != null)) {
+          this.$store.commit('MENSAGEM_INTERNA_UPDATE', data)
+        }
+      })
+
+      socket.on(`${usuario.tenantId}:unread-mensagem-chat-interno`, data => {
+        if (data.action === 'update' && data.data.senderId == usuario.userId) {
+          this.$store.commit('UNREAD_MENSAGEM_INTERNA_UPDATE', data)
+        }
+      })
+
+      socket.on(`${usuario.tenantId}:mensagem-chat-interno-notificacao`, data => {
+        if (data.action === 'update' && (data.data.receiverId == usuario.userId || data.data.groupId != null)) {
+          this.$store.commit('NOTIFICACAO_CHAT_INTERNO_UPDATE', data)
+        }
+      })
+
+      socket.on('verifyOnlineUsers', data => {
+        this.$store.commit('LISTA_USUARIOS_CHAT_INTERNO', { action: 'updateAllUsers', data: {} })
+        this.socket.emit(`${usuario.tenantId}:userVerified`, usuario)
+      })
+
+      socket.on(`${usuario.tenantId}:user-online`, data => {
+        if (data.action === 'update' && data.data.userId !== usuario.userId) {
+          this.$store.commit('USER_CHAT_UPDATE', data)
+        }
+      })
+
+      socket.on(`${usuario.tenantId}:updateStatusUser`, async () => {
+        const { data } = await ListarUsuariosChatInterno()
+        this.$store.commit('LISTA_USUARIOS_CHAT_INTERNO', { action: 'create', data: data.users })
+      })
     }
   },
   mounted () {
