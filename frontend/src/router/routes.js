@@ -3,7 +3,7 @@ const routes = [
   {
     path: '/',
     component: () => import('layouts/MainLayout.vue'),
-    redirect: { name: 'contatos' },
+    redirect: { name: 'home' },
     children: [
       { path: '', component: () => import('pages/contatos/Index.vue') },
       { path: '/home', name: 'home-dashboard', component: () => import('pages/dashboard/Index.vue') },
@@ -11,6 +11,7 @@ const routes = [
       // { path: '/ConsultarTicketsQueuesService', name: 'dashboard', component: () => import('pages/dashboard/Index.vue') },
       { path: '/sessoes', name: 'sessoes', component: () => import('pages/sessaoWhatsapp/Index.vue') },
       { path: '/contatos', name: 'contatos', component: () => import('pages/contatos/Index.vue') },
+      { path: '/empresas', name: 'empresas', component: () => import('pages/empresas/Index.vue'), meta: { requiresAuth: true } },
       { path: '/usuarios', name: 'usuarios', component: () => import('pages/usuarios/Index.vue') },
       { path: '/auto-resposta', name: 'auto-resposta', component: () => import('pages/fluxoAutoResposta/Index.vue') },
       { path: '/mensagens-rapidas', name: 'mensagens-rapidas', component: () => import('pages/mensagensRapidas/Index.vue') },
@@ -100,6 +101,7 @@ const routes = [
   // but you can also remove it
   {
     path: '*',
+    name: '404',
     component: () => import('pages/Error404.vue')
   },
   {

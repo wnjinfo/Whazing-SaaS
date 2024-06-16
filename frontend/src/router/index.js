@@ -59,7 +59,22 @@ Router.beforeEach((to, from, next) => {
       next()
     }
   } else {
-    next()
+    if (to.meta.requiresAuth) {
+      const usuario = JSON.parse(localStorage.getItem('usuario'))
+      if (usuario.profile === 'admin') {
+        console.log('to.fullPath', to.fullPath)
+        if (to.fullPath == '/empresas' && usuario.tenantId != 1) {
+          Notify.create({ message: 'Acesso não autorizado', position: 'top' })
+          next({ name: 'home-dashboard' })
+        }
+        next()
+      } else {
+        Notify.create({ message: 'Acesso não autorizado', position: 'top' })
+        next({ name: 'home-dashboard' })
+      }
+    } else {
+      next()
+    }
   }
 })
 

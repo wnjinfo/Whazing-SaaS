@@ -273,6 +273,26 @@ const objMenuAdmin = [
     routeName: 'sessoes'
   },
   {
+    title: 'Empresas',
+    caption: 'Lista de empresas',
+    icon: 'mdi-office-building',
+    routeName: 'empresas',
+    submenu: [
+      {
+        title: 'Subitem 1',
+        caption: 'Descrição do Subitem 1',
+        icon: 'mdi-office-building',
+        routeName: 'empresas'
+      },
+      {
+        title: 'Subitem 2',
+        caption: 'Descrição do Subitem 2',
+        icon: 'mdi-office-building',
+        routeName: 'empresas'
+      }
+    ]
+  },
+  {
     title: 'Painel Atendimentos',
     caption: 'Visão geral dos atendimentos',
     icon: 'mdi-view-dashboard-variant',
