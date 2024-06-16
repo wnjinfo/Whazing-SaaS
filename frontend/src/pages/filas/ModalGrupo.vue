@@ -1,40 +1,37 @@
 <template>
-  <q-dialog persistent :value="modalFila" @hide="fecharModal" @show="abrirModal">
+  <q-dialog persistent :value="modalGrupo" @hide="fecharModal" @show="abrirModal">
     <q-card style="width: 500px" class="q-pa-lg">
       <q-card-section>
-        <div class="text-h6">{{ filaEdicao.id ? 'Editar' : 'Criar' }} Fila</div>
+        <div class="text-h6">{{ grupoEdicao.id ? 'Editar' : 'Criar' }} Grupo</div>
       </q-card-section>
       <q-card-section>
         <div class="row">
           <div class="col-12">
-            <q-input square outlined v-model="fila.queue" label="Nome da Fila" />
+            <q-input square outlined v-model="grupo.group" label="Nome do Grupo" />
           </div>
           <div class="col-6">
-            <q-toggle v-model="fila.isActive" label="Ativo" />
+            <q-toggle v-model="grupo.isActive" label="Ativo" />
           </div>
-          <!-- <div class="col-6">
-            <q-toggle v-model="fila.from_ia" label="Chat pela IA" />
-          </div> -->
         </div>
       </q-card-section>
       <q-card-actions align="right" class="q-mt-md">
         <q-btn flat label="Cancelar" color="negative" v-close-popup class="q-mr-md" />
-        <q-btn flat label="Salvar" color="primary" @click="handleFila" />
+        <q-btn flat label="Salvar" color="primary" @click="handleGrupo" />
       </q-card-actions>
     </q-card>
   </q-dialog>
 </template>
 
 <script>
-import { CriarFila, AlterarFila } from 'src/service/filas'
+import { CriarGrupo, AlterarGrupo } from 'src/service/grupos'
 export default {
-  name: 'ModalFila',
+  name: 'ModalGrupo',
   props: {
-    modalFila: {
+    modalGrupo: {
       type: Boolean,
       default: false
     },
-    filaEdicao: {
+    grupoEdicao: {
       type: Object,
       default: () => {
         return { id: null }
@@ -43,47 +40,45 @@ export default {
   },
   data() {
     return {
-      fila: {
+      grupo: {
         id: null,
-        queue: null,
-        from_ia: false,
+        grupo: null,
         isActive: true
       }
     }
   },
   methods: {
-    resetarFila() {
-      this.fila = {
+    resetarGrupo() {
+      this.grupo = {
         id: null,
-        queue: null,
-        from_ia: false,
+        grupo: null,
         isActive: true
       }
     },
     fecharModal() {
-      this.resetarFila()
-      this.$emit('update:filaEdicao', { id: null })
-      this.$emit('update:modalFila', false)
+      this.resetarGrupo()
+      this.$emit('update:grupoEdicao', { id: null })
+      this.$emit('update:modalGrupo', false)
     },
     abrirModal() {
-      if (this.filaEdicao.id) {
-        this.fila = { ...this.filaEdicao }
+      if (this.grupoEdicao.id) {
+        this.grupo = { ...this.grupoEdicao }
       } else {
-        this.resetarFila()
+        this.resetarGrupo()
       }
     },
-    async handleFila() {
+    async handleGrupo() {
       try {
         this.loading = true
-        if (this.fila.id) {
-          const { data } = await AlterarFila(this.fila)
-          this.$emit('modal-fila:editada', data)
+        if (this.grupo.id) {
+          const { data } = await AlterarGrupo(this.grupo)
+          this.$emit('modal-grupo:editada', data)
           this.$q.notify({
             type: 'info',
             progress: true,
             position: 'top',
             textColor: 'black',
-            message: 'Etapa editada!',
+            message: 'Grupo Editado!',
             actions: [{
               icon: 'close',
               round: true,
@@ -91,13 +86,13 @@ export default {
             }]
           })
         } else {
-          const { data } = await CriarFila(this.fila)
-          this.$emit('modal-fila:criada', data)
+          const { data } = await CriarGrupo(this.grupo)
+          this.$emit('modal-grupo:criada', data)
           this.$q.notify({
             type: 'positive',
             progress: true,
             position: 'top',
-            message: 'Fila criada!',
+            message: 'Grupo criado!',
             actions: [{
               icon: 'close',
               round: true,

@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div v-if="userProfile === 'admin'">
     <q-table
       class="my-sticky-dynamic q-ma-lg"
       title="Usuarios"
@@ -93,6 +93,7 @@ export default {
   components: { ModalUsuario, ModalFilaUsuario },
   data () {
     return {
+      userProfile: 'user',
       usuarios: [],
       usuarioSelecionado: {},
       modalFilaUsuario: false,
@@ -239,6 +240,7 @@ export default {
     }
   },
   async mounted () {
+    this.userProfile = localStorage.getItem('profile')
     await this.listarFilas()
     await this.listarUsuarios()
   }

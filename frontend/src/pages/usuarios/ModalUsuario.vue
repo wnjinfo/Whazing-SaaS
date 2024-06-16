@@ -224,7 +224,7 @@ export default {
         if (error.data.error === 'ERR_USER_LIMIT_USER_CREATION') {
           Notify.create({
             type: 'negative',
-            message: 'Limite de usuario atingido.',
+            message: 'Limite de usuario atingido. para ter mais usuários entre em contato com a equipe de suporte',
             caption: 'ERR_USER_LIMIT_USER_CREATION',
             position: 'top',
             progress: true
