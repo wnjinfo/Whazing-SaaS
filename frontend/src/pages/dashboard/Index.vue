@@ -7,64 +7,19 @@
         </div>
         <div class="col-xs-12 col-md-9 justify-end flex q-gutter-sm text-center text-md-right q-my-md rdsPainelDate">
           <div class="q-mb-sm">
-            <q-datetime-picker
-              style="width: 200px"
-              dense
-              hide-bottom-space
-              outlined
-              stack-label
-              bottom-slots
-              label="Data/Hora Agendamento"
-              mode="date"
-              color="primary"
-              format24h
-              v-model="params.startDate"
-            />
+            <q-datetime-picker style="width: 200px" dense hide-bottom-space outlined stack-label bottom-slots
+              label="Data/Hora Agendamento" mode="date" color="primary" format24h v-model="params.startDate" />
           </div>
           <div class="q-mb-sm">
-            <q-datetime-picker
-              style="width: 200px"
-              dense
-              hide-bottom-space
-              outlined
-              stack-label
-              bottom-slots
-              label="Data/Hora Agendamento"
-              mode="date"
-              color="primary"
-              format24h
-              v-model="params.endDate"
-            />
+            <q-datetime-picker style="width: 200px" dense hide-bottom-space outlined stack-label bottom-slots
+              label="Data/Hora Agendamento" mode="date" color="primary" format24h v-model="params.endDate" />
           </div>
           <div class="q-mb-sm">
-            <q-select
-              style="width: 300px"
-              dense
-              outlined
-              hide-bottom-space
-              emit-value
-              map-options
-              multiple
-              options-dense
-              use-chips
-              label="SETORES"
-              color="primary"
-              v-model="params.queuesIds"
-              :options="filas"
-              :input-debounce="700"
-              option-value="id"
-              option-label="queue"
-              input-style="width: 280px; max-width: 280px;"
-            />
+            <q-select style="width: 300px" dense outlined hide-bottom-space emit-value map-options multiple options-dense
+              use-chips label="SETORES" color="primary" v-model="params.queuesIds" :options="filas" :input-debounce="700"
+              option-value="id" option-label="queue" input-style="width: 280px; max-width: 280px;" />
           </div>
-          <q-btn
-            class="bg-padrao q-mb-sm"
-            flat
-            color="primary"
-            icon="refresh"
-            label="Gerar"
-            @click="getDashData"
-          />
+          <q-btn class="bg-padrao q-mb-sm" flat color="primary" icon="refresh" label="Gerar" @click="getDashData" />
         </div>
 
       </q-card-section>
@@ -73,12 +28,8 @@
       <q-card-section class="q-pa-md">
         <div class="row q-gutter-md justify-center">
           <div class="col-xs-12 col-sm-shrink">
-            <q-card
-              flat
-              bordered
-              class="my-card full-height"
-              style="min-width: 200px; background-color: #ff2a00; color: white"
-            >
+            <q-card flat bordered class="my-card full-height"
+              style="min-width: 200px; background-color: #ff2a00; color: white">
               <q-card-section class="text-center">
                 <div class="row items-center">
                   <div class="col">
@@ -95,12 +46,8 @@
             </q-card>
           </div>
           <div class="col-xs-12 col-sm-shrink">
-            <q-card
-              flat
-              bordered
-              class="my-card full-height"
-              style="min-width: 200px; background-color: #fec107; color: white"
-            >
+            <q-card flat bordered class="my-card full-height"
+              style="min-width: 200px; background-color: #fec107; color: white">
               <q-card-section class="text-center">
                 <div class="row items-center">
                   <div class="col">
@@ -117,12 +64,8 @@
             </q-card>
           </div>
           <div class="col-xs-12 col-sm-shrink">
-            <q-card
-              flat
-              bordered
-              class="my-card full-height"
-              style="min-width: 200px; background-color: #01c853; color: white"
-            >
+            <q-card flat bordered class="my-card full-height"
+              style="min-width: 200px; background-color: #01c853; color: white">
               <q-card-section class="text-center">
                 <div class="row items-center">
                   <div class="col">
@@ -139,12 +82,8 @@
             </q-card>
           </div>
           <div class="col-xs-12 col-sm-shrink">
-            <q-card
-              flat
-              bordered
-              class="my-card full-height"
-              style="min-width: 200px; background-color: #2879ff; color: white"
-            >
+            <q-card flat bordered class="my-card full-height"
+              style="min-width: 200px; background-color: #2879ff; color: white">
               <q-card-section class="text-center">
                 <div class="row items-center">
                   <div class="col">
@@ -189,69 +128,37 @@
       <div class="col-xs-12 col-sm-6">
         <q-card>
           <q-card-section class="q-pa-md">
-            <ApexChart
-              ref="ChartTicketsChannels"
-              type="donut"
-              height="300"
-              width="100%"
-              :options="ticketsChannelsOptions"
-              :series="ticketsChannelsOptions.series"
-            />
+            <ApexChart ref="ChartTicketsChannels" type="donut" height="300" width="100%" :options="ticketsChannelsOptions"
+              :series="ticketsChannelsOptions.series" />
           </q-card-section>
         </q-card>
       </div>
       <div class="col-xs-12 col-sm-6">
         <q-card>
           <q-card-section class="q-pa-md">
-            <ApexChart
-              ref="ChartTicketsQueue"
-              type="donut"
-              height="300"
-              width="100%"
-              :options="ticketsQueueOptions"
-              :series="ticketsQueueOptions.series"
-            />
+            <ApexChart ref="ChartTicketsQueue" type="donut" height="300" width="100%" :options="ticketsQueueOptions"
+              :series="ticketsQueueOptions.series" />
           </q-card-section>
         </q-card>
       </div>
     </div>
     <q-card class="q-my-md">
       <q-card-section>
-        <ApexChart
-          ref="ChartTicketsEvolutionChannels"
-          type="bar"
-          height="300"
-          width="100%"
-          :options="ticketsEvolutionChannelsOptions"
-          :series="ticketsEvolutionChannelsOptions.series"
-        />
+        <ApexChart ref="ChartTicketsEvolutionChannels" type="bar" height="300" width="100%"
+          :options="ticketsEvolutionChannelsOptions" :series="ticketsEvolutionChannelsOptions.series" />
       </q-card-section>
     </q-card>
     <q-card class="q-my-md">
       <q-card-section class="q-pa-md">
-        <ApexChart
-          ref="ChartTicketsEvolutionByPeriod"
-          type="line"
-          height="300"
-          :options="ticketsEvolutionByPeriodOptions"
-          :series="ticketsEvolutionByPeriodOptions.series"
-        />
+        <ApexChart ref="ChartTicketsEvolutionByPeriod" type="line" height="300" :options="ticketsEvolutionByPeriodOptions"
+          :series="ticketsEvolutionByPeriodOptions.series" />
       </q-card-section>
     </q-card>
 
     <q-card class="q-my-md q-pa-sm">
       <q-card-section class="q-pa-md">
-        <q-table
-          title="Desenpenho da Equipe"
-          :data="ticketsPerUsersDetail"
-          :columns="TicketsPerUsersDetailColumn"
-          row-key="email"
-          :pagination.sync="paginationTableUser"
-          :rows-per-page-options="[0]"
-          bordered
-          flat
-          hide-bottom
-        >
+        <q-table title="Desempenho da Equipe" :data="ticketsPerUsersDetail" :columns="TicketsPerUsersDetailColumn"
+          row-key="email" :pagination.sync="paginationTableUser" :rows-per-page-options="[0]" bordered flat hide-bottom>
           <template v-slot:body-cell-name="props">
             <q-td :props="props">
               <div class="row col text-bold"> {{ props.row.name || 'Não informado' }} </div>
@@ -282,7 +189,13 @@ import { QIcon } from 'quasar'
 export default {
   name: 'IndexDashboard',
   components: { ApexChart, QIcon },
-  data () {
+  props: {
+    showMenu: {
+      type: Boolean,
+      default: true
+    }
+  },
+  data() {
     return {
       confiWidth: {
         horizontal: false,
@@ -690,31 +603,31 @@ export default {
     }
   },
   watch: {
-    '$q.dark.isActive' () {
+    '$q.dark.isActive'() {
       // necessário para carregar os gráficos com a alterçaão do mode (dark/light)
       this.$router.go()
     },
-    '$q.screen.width' () {
+    '$q.screen.width'() {
       // necessário para carregar os gráficos com a alterçaão do mode (dark/light)
       this.setConfigWidth()
     }
   },
   computed: {
-    cTmaFormat () {
+    cTmaFormat() {
       const tma = this.ticketsAndTimes.tma || {}
       return formatDuration(tma) || ''
     },
-    cTmeFormat () {
+    cTmeFormat() {
       const tme = this.ticketsAndTimes.tme || {}
       return formatDuration(tme) || ''
     }
   },
   methods: {
-    async listarFilas () {
+    async listarFilas() {
       const { data } = await ListarFilas()
       this.filas = data
     },
-    setConfigWidth () {
+    setConfigWidth() {
       const diffDays = differenceInDays(new Date(this.params.endDate), new Date(this.params.startDate))
       if (diffDays > 30) {
         this.configWidth = { horizontal: true, width: 2200 }
@@ -723,7 +636,7 @@ export default {
         this.configWidth = { horizontal: true, width: actualWidth - (actualWidth < 768 ? 40 : 100) }
       }
     },
-    getDashTicketsAndTimes () {
+    getDashTicketsAndTimes() {
       GetDashTicketsAndTimes(this.params).then(res => {
         this.ticketsAndTimes = res.data[0]
       })
@@ -731,7 +644,7 @@ export default {
           console.error(err)
         })
     },
-    getDashTicketsQueue () {
+    getDashTicketsQueue() {
       GetDashTicketsQueue(this.params).then(res => {
         this.ticketsQueue = res.data
         const series = []
@@ -749,7 +662,7 @@ export default {
           console.error(err)
         })
     },
-    getDashTicketsChannels () {
+    getDashTicketsChannels() {
       GetDashTicketsChannels(this.params).then(res => {
         this.ticketsChannels = res.data
         const series = []
@@ -767,7 +680,7 @@ export default {
           console.error(err)
         })
     },
-    getDashTicketsEvolutionChannels () {
+    getDashTicketsEvolutionChannels() {
       GetDashTicketsEvolutionChannels(this.params)
         .then(res => {
           this.ticketsEvolutionChannels = res.data
@@ -798,7 +711,7 @@ export default {
           console.error(error)
         })
     },
-    getDashTicketsEvolutionByPeriod () {
+    getDashTicketsEvolutionByPeriod() {
       GetDashTicketsEvolutionByPeriod(this.params)
         .then(res => {
           this.ticketsEvolutionByPeriod = res.data
@@ -826,7 +739,7 @@ export default {
           console.error(error)
         })
     },
-    getDashTicketsPerUsersDetail () {
+    getDashTicketsPerUsersDetail() {
       GetDashTicketsPerUsersDetail(this.params)
         .then(res => {
           this.ticketsPerUsersDetail = res.data
@@ -835,7 +748,7 @@ export default {
           console.error(error)
         })
     },
-    getDashData () {
+    getDashData() {
       this.setConfigWidth()
       this.getDashTicketsAndTimes()
       this.getDashTicketsChannels()
@@ -846,7 +759,8 @@ export default {
     }
 
   },
-  beforeMount () {
+  beforeMount() {
+    this.$store.commit('UPDATE_SHOW_MENU', this.showMenu)
     const mode = this.$q.dark.isActive ? 'dark' : 'light'
     const theme = {
       mode,
@@ -864,7 +778,7 @@ export default {
     this.ticketsEvolutionChannelsOptions = { ...this.ticketsEvolutionChannelsOptions, theme }
     this.ticketsEvolutionByPeriodOptions = { ...this.ticketsEvolutionByPeriodOptions, theme }
   },
-  mounted () {
+  mounted() {
     this.listarFilas()
     this.getDashData()
   }
@@ -872,19 +786,23 @@ export default {
 </script>
 
 <style lang="scss" >
-.text-branco{
+.text-branco {
   color: white;
 }
+
 .apexcharts-theme-dark svg {
   background: none !important;
 }
+
 .bg-vermelho {
   background-color: #ff2a00;
 }
-.bg-amarelo{
+
+.bg-amarelo {
   background-color: #fec107;
 }
-.rdsPainelDate{
+
+.rdsPainelDate {
   display: flex;
   justify-content: space-around !important;
 }
