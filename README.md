@@ -4,7 +4,7 @@ Um sistema para gestão de atendimento multicanais centralizado.
 
 Sistema possui o backend e canais baseado em:
 - Whatsapp [@whiskeysockets/baileys](https://github.com/WhiskeySockets/Baileys)
-- Telegram [telegraf](github.com/telegraf/telegraf)
+- Telegram [telegraf](https://github.com/telegraf/telegraf)
 - Instagram [instagram-private-api](https://github.com/dilame/instagram-private-api)
 - Messenger [messaging-api-messenger](https://github.com/Yoctol/messaging-apis#readme)
 
