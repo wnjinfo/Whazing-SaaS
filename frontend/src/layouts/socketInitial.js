@@ -260,6 +260,6 @@ export default {
     this.socketInitial()
   },
   destroyed () {
-    socket.disconnect()
+    socket && socket.disconnect()
   }
 }
