@@ -60,7 +60,7 @@
                     {{ parseInt(notificacoesChat) }} + {{ parseInt(notifications_p.count) }}
                   </q-item-section>
                 </q-item-->
-                <q-item v-if="(parseInt(notifications_p.count)) + parseInt(notifications.count) == 0">
+                <q-item v-if="(parseInt(notificacoesChat) + parseInt(notifications_p.count)) == 0">
                   <q-item-section style="cursor: pointer;">
                     Nada de novo por aqui!
                   </q-item-section>
@@ -475,33 +475,33 @@ export default {
       const { data } = await ListarWhatsapps()
       this.$store.commit('LOAD_WHATSAPPS', data)
     },
-    handlerNotifications (data) {
-      const { message, contact, ticket } = data
+    handlerNotifications(data) {
+      const { body, contact, ticket } = data
+      console.log(data)
+      if ('Notification' in window && Notification.permission === 'granted') {
+        const options = {
+          body: `${body} - ${format(new Date(), 'HH:mm')}`,
+          icon: contact.profilePicUrl,
+          tag: ticket.id,
+          renotify: true
+        }
 
-      const options = {
-        body: `${message.body} - ${format(new Date(), 'HH:mm')}`,
-        icon: contact.profilePicUrl,
-        tag: ticket.id,
-        renotify: true
+        const notification = new Notification(
+          `Mensagem de ${contact.name}`,
+          options
+        )
+
+        notification.onclick = e => {
+          e.preventDefault()
+          window.focus()
+          this.$store.dispatch('AbrirChatMensagens', ticket)
+          this.$router.push({ name: 'atendimento' })
+        }
+
+        this.$nextTick(() => {
+          this.$refs.audioNotification.play()
+        })
       }
-
-      const notification = new Notification(
-        `Mensagem de ${contact.name}`,
-        options
-      )
-
-      notification.onclick = e => {
-        e.preventDefault()
-        window.focus()
-        this.$store.dispatch('AbrirChatMensagens', ticket)
-        this.$router.push({ name: 'atendimento' })
-
-        // history.push(`/tickets/${ticket.id}`);
-      }
-      this.$nextTick(() => {
-        // utilizar refs do layout
-        this.$refs.audioNotification.play()
-      })
     },
     async abrirModalUsuario () {
       this.modalUsuario = true
@@ -638,9 +638,22 @@ export default {
     await this.listarConfiguracoes()
     await this.consultarTickets()
     await this.listarMensagens()
-    if (!('Notification' in window)) {
-    } else {
-      Notification.requestPermission()
+    if ('Notification' in window) {
+      if (Notification.permission !== 'granted') {
+        await Notification.requestPermission()
+      }
+
+      this.usuario = JSON.parse(localStorage.getItem('usuario'))
+      this.userProfile = localStorage.getItem('profile')
+
+      await this.conectarSocket(this.usuario)
+
+      this.atualizarUsuario()
+      await this.listarWhatsapps()
+      await this.listarConfiguracoes()
+      await this.consultarTickets()
+
+      this.socket.on('chat:update', this.handlerNotifications)
     }
     this.usuario = JSON.parse(localStorage.getItem('usuario'))
     this.userProfile = localStorage.getItem('profile')
