@@ -41,7 +41,7 @@
           </q-btn>
 
         <div class="q-gutter-sm row items-center no-wrap">
-          <q-btn round
+           <q-btn round
             dense
             flat
             color="grey-8"
@@ -54,7 +54,13 @@
             </q-badge>
             <q-menu>
               <q-list style="min-width: 300px">
-                <q-item v-if="(parseInt(notificacoesChat) + parseInt(notifications_p.count)) == 0">
+                <!--q-item>
+                  <q-item-section
+                    style="cursor: pointer;">
+                    {{ parseInt(notificacoesChat) }} + {{ parseInt(notifications_p.count) }}
+                  </q-item-section>
+                </q-item-->
+                <q-item v-if="(parseInt(notificacoesChat) + parseInt(notifications_p.count)) + parseInt(notifications.count) == 0">
                   <q-item-section style="cursor: pointer;">
                     Nada de novo por aqui!
                   </q-item-section>
@@ -81,7 +87,7 @@
                 </q-item>
                 <q-item v-if="parseInt(notifications_p.count) > 0">
                   <q-item-section avatar
-                    @click="() => $router.push({ name: 'atendimento' })"
+                    @click="() => $router.push({ name: 'chat-empty' })"
                     style="cursor: pointer;">
                     <q-avatar style="width: 60px; height: 60px"
                       color="blue"
@@ -89,14 +95,33 @@
                       {{ notifications_p.count }}
                     </q-avatar>
                   </q-item-section>
-                  <q-item-section @click="() => $router.push({ name: 'atendimento' })"
+                  <q-item-section @click="() => $router.push({ name: 'chat-empty' })"
                     style="cursor: pointer;">
                     Clientes pendentes na fila
                   </q-item-section>
                 </q-item>
+                <q-item v-for="ticket in notifications.tickets"
+                  :key="ticket.id"
+                  style="border-bottom: 1px solid #ddd; margin: 5px;">
+                  <q-item-section avatar
+                    @click="abrirAtendimentoExistente(ticket.name, ticket)"
+                    style="cursor: pointer;">
+                    <q-avatar style="width: 60px; height: 60px">
+                      <img :src="ticket.profilePicUrl">
+                    </q-avatar>
+                  </q-item-section>
+                  <q-item-section @click="abrirAtendimentoExistente(ticket.name, ticket)"
+                    style="cursor: pointer;">
+                    <q-list>
+                      <q-item style="text-align:center; font-size: 17px; font-weight: bold; min-height: 0">{{ ticket.name
+                      }}</q-item>
+                      <q-item style="min-height: 0; padding-top: 0"><b>Mensagem: </b> {{ ticket.lastMessage }}</q-item>
+                    </q-list>
+                  </q-item-section>
+                </q-item>
               </q-list>
             </q-menu>
-            <q-tooltip>Notificações</q-tooltip>
+            <q-tooltip >Notificações</q-tooltip>
           </q-btn>
           <q-avatar :color="usuario.status === 'offline' ? 'negative' : 'positive'"
             text-color="white"
