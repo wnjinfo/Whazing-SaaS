@@ -121,14 +121,6 @@
                     :disable=" isDesactivatDelete(mensagem) || ticketFocado.channel === 'messenger' ">
                     <q-item-section>
                       <q-item-label>Deletar</q-item-label>
-                      <!-- <q-item-label caption>
-                        Apagará mensagem: {{ isDesactivatDelete(mensagem) ? 'PARA TODOS' : 'PARAM MIN' }}
-                      </q-item-label> -->
-                      <!-- <q-tooltip :delay="500"
-                        content-class="text-black bg-red-3 text-body1">
-                        * Após 5 min do envio, não será possível apagar a mensagem. <br>
-                        ** Não está disponível para Messenger.
-                      </q-tooltip> -->
                     </q-item-section>
                   </q-item>
                 </q-list>
@@ -144,30 +136,77 @@
                 <audio class="q-mt-md full-width"
                   controls
                   ref="audioMessage"
-                  controlsList="nodownload noplaybackrate volume novolume">
+                  controlsList="nodownload volume novolume">
                   <source :src=" mensagem.mediaUrl "
                     type="audio/ogg" />
                 </audio>
               </div>
             </template>
-            <template v-if=" mensagem.mediaType === 'vcard' ">
-              <q-btn type="a"
-                :color=" $q.dark.isActive ? '' : 'black' "
-                outline
-                dense
-                class="q-px-sm text-center btn-rounded "
-                download="vCard"
-                :href=" `data:text/x-vcard;charset=utf-8;base64,${returnCardContato(mensagem.body)}` ">
-                Download Contato
-              </q-btn>
+            <template v-if=" mensagem.mediaType === 'contactMessage' ">
+                <div style="min-width: 250px;">
+                <ContatoCard
+                :mensagem="mensagem"
+                @openContactModal="openContactModal"
+                />
+                <ContatoModal
+                :value="modalContato"
+                :contact="currentContact"
+                @close="closeModal"
+                @saveContact="saveContact"
+                />
+                </div>
             </template>
-            <template v-if=" mensagem.mediaType === 'image' ">
+            <template v-if="mensagem.mediaType === 'locationMessage'">
+              <q-img
+                @click="openGoogleMaps(mensagem.body)"
+                :src="getMapThumbnail(mensagem.body)"
+                spinner-color="primary"
+                height="150px"
+                width="330px"
+                class="q-mt-md"
+                style="cursor: pointer"
+              />
+            </template>
+            <template v-if="mensagem.mediaType === 'liveLocationMessage'">
+              <q-img
+                @click="openGoogleMaps(mensagem.body)"
+                :src="getMapThumbnail(mensagem.body)"
+                spinner-color="primary"
+                height="150px"
+                width="330px"
+                class="q-mt-md"
+                style="cursor: pointer"
+              />
+            <div style="color: red;">*Ainda não é possível exibir a localização em tempo real neste dispositivo. Abra o WhatsApp no seu celular para ver corretamente.</div>
+            </template>
+            <template v-if="mensagem.mediaType === 'interactiveMessage'">
+            <div style="color: red;">*Não é possível exibir essa mensagem neste dispositivo. Abra o WhatsApp no seu celular para ver a mensagem.</div>
+            </template>
+            <template v-if="mensagem.mediaType === 'pollCreationMessageV3'">
+            <div style="color: red;">*Não é possível exibir essa mensagem neste dispositivo. Abra o WhatsApp no seu celular para ver a mensagem.</div>
+            </template>
+            <template v-if="mensagem.mediaType === 'image' && !mensagem.mediaUrl.includes('.webp')">
               <!-- @click="buscarImageCors(mensagem.mediaUrl)" -->
               <q-img @click=" urlMedia = mensagem.mediaUrl; abrirModalImagem = true "
                 :src=" mensagem.mediaUrl "
                 spinner-color="primary"
                 height="150px"
                 width="330px"
+                class="q-mt-md"
+                style="cursor: pointer;" />
+              <VueEasyLightbox moveDisabled
+                :visible=" abrirModalImagem "
+                :imgs=" urlMedia "
+                :index=" mensagem.ticketId || 1 "
+                @hide=" abrirModalImagem = false " />
+            </template>
+            <template v-if="mensagem.mediaType === 'image' && mensagem.mediaUrl.includes('.webp')">
+              <!-- @click="buscarImageCors(mensagem.mediaUrl)" -->
+              <q-img @click=" urlMedia = mensagem.mediaUrl; abrirModalImagem = true "
+                :src=" mensagem.mediaUrl "
+                spinner-color="primary"
+                height="200px"
+                width="200px"
                 class="q-mt-md"
                 style="cursor: pointer;" />
               <VueEasyLightbox moveDisabled
@@ -231,20 +270,9 @@
                   </div>
                 </q-btn>
               </div>
-              <!-- <q-btn
-                type="a"
-                color="primary"
-                outline
-                dense
-                class="q-px-sm text-center"
-                target="_blank"
-                :href="`http://docs.google.com/gview?url=${mensagem.mediaUrl}&embedded=true`"
-              >
-                Visualizar
-              </q-btn> -->
             </template>
             <div v-linkified
-              v-if=" !['vcard', 'application', 'audio'].includes(mensagem.mediaType) "
+              v-if=" !['contactMessage', 'application', 'audio', 'locationMessage', 'liveLocationMessage', 'interactiveMessage', 'pollCreationMessageV3', 'video', 'image'].includes(mensagem.mediaType) "
               :class=" { 'q-mt-sm': mensagem.mediaType !== 'chat' } "
               class="q-message-container row items-end no-wrap">
               <div v-html=" farmatarMensagemWhatsapp(mensagem.body) ">
@@ -262,6 +290,8 @@ import mixinCommon from './mixinCommon'
 import axios from 'axios'
 import VueEasyLightbox from 'vue-easy-lightbox'
 import MensagemRespondida from './MensagemRespondida'
+import ContatoCard from './ContatoCard.vue'
+import ContatoModal from './ContatoModal.vue'
 const downloadImageCors = axios.create({
   baseURL: process.env.URL_API,
   timeout: 20000,
@@ -275,6 +305,10 @@ export default {
   name: 'MensagemChat',
   mixins: [mixinCommon],
   props: {
+    mensagem: {
+      type: Object,
+      required: true
+    },
     mensagens: {
       type: Array,
       default: () => []
@@ -306,6 +340,8 @@ export default {
   },
   data () {
     return {
+      modalContato: false,
+      currentContact: {},
       abrirModalImagem: false,
       urlMedia: '',
       identificarMensagem: null,
@@ -320,9 +356,30 @@ export default {
   },
   components: {
     VueEasyLightbox,
-    MensagemRespondida
+    MensagemRespondida,
+    ContatoCard,
+    ContatoModal
   },
   methods: {
+    openContactModal (contact) {
+      this.currentContact = contact
+      this.modalContato = true
+    },
+    closeModal () {
+      this.modalContato = false
+    },
+    saveContact (contact) {
+      console.log('Contato salvo:', contact)
+      // Aqui você pode adicionar a lógica para salvar o contato
+    },
+    getMapThumbnail(body) {
+      const [thumbnail] = body.split('|')
+      return thumbnail
+    },
+    openGoogleMaps(body) {
+      const [, mapLink] = body.split('|')
+      window.open(mapLink, '_blank')
+    },
     verificarEncaminharMensagem (mensagem) {
       const mensagens = [...this.mensagensParaEncaminhar]
       const msgIdx = mensagens.findIndex(m => m.id === mensagem.id)
