@@ -423,6 +423,7 @@ export default {
         DeletarMensagem(data)
           .then(res => {
             this.loading = false
+            mensagem.isDeleted = true
           })
           .catch(error => {
             this.loading = false
