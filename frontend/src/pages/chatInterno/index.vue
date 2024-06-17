@@ -276,10 +276,11 @@ import { VEmojiPicker } from 'v-emoji-picker'
 import whatsBackground from 'src/assets/wa-background.png'
 import whatsBackgroundDark from 'src/assets/wa-background-dark.jpg'
 import alertSound from 'src/assets/chatInterno.mp3'
+import mixinSockets from 'src/pages/atendimento/mixinSockets'
 import socketInitial from 'src/layouts/socketInitial'
 
 export default {
-  mixins: [socketInitial],
+  mixins: [mixinSockets, socketInitial],
   name: 'WhatsappLayout',
   props: {
     isLineDate: {
