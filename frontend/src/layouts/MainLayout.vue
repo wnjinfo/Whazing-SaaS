@@ -60,7 +60,7 @@
                     {{ parseInt(notificacoesChat) }} + {{ parseInt(notifications_p.count) }}
                   </q-item-section>
                 </q-item-->
-                <q-item v-if="(parseInt(notificacoesChat) + parseInt(notifications_p.count)) + parseInt(notifications.count) == 0">
+                <q-item v-if="(parseInt(notifications_p.count)) + parseInt(notifications.count) == 0">
                   <q-item-section style="cursor: pointer;">
                     Nada de novo por aqui!
                   </q-item-section>
