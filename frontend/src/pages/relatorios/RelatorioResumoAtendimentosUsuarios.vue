@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div v-if="userProfile === 'admin'">
     <q-card bordered>
       <q-card-section>
         <div class="text-h6 q-px-sm"> Relatório Resumo Atendimentos Usuários </div>
@@ -159,6 +159,7 @@ export default {
   },
   data () {
     return {
+      userProfile: 'user',
       data: null,
       bl_sintetico: false,
       dadosResumo: [],
@@ -214,6 +215,7 @@ export default {
     }
   },
   async mounted () {
+    this.userProfile = localStorage.getItem('profile')
     this.gerarRelatorio()
   }
 }
