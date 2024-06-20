@@ -128,7 +128,7 @@
           color="primary"
           dense
           round
-          v-if="ticket.status === 'pending' || (buscaTicket && ticket.status === 'pending')"
+          v-if="enablespyticket === true && (ticket.status === 'pending' || buscaTicket)"
           class="q-mr-md">
           <q-badge v-if="ticket.unreadMessages"
             style="border-radius: 10px;"
@@ -171,6 +171,7 @@ export default {
     return {
       outlinedAccountCircle,
       recalcularHora: 1,
+      enablespyticket: false,
       statusAbreviado: {
         open: 'A',
         pending: 'P',
@@ -236,6 +237,9 @@ export default {
       this.$store.commit('SET_HAS_MORE', true)
       this.$store.dispatch('AbrirChatMensagens', ticket)
     }
+  },
+  mounted () {
+    this.listarConfiguracoes()
   },
   created () {
     setInterval(() => {

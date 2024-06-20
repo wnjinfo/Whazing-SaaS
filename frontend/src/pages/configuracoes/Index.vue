@@ -112,6 +112,31 @@
             unchecked-icon="clear" @input="atualizarConfiguracao('userContactWallet')" />
         </q-item-section>
       </q-item>
+
+        <q-item tag="label" v-ripple>
+        <q-item-section>
+          <q-item-label>Mensagem boas vidas ao aceitar ticket</q-item-label>
+          <q-item-label caption>Irá mandar automaticamente uma mensagem informando nome atendente</q-item-label>
+        </q-item-section>
+        <q-item-section avatar>
+          <q-toggle v-model="sendGreetingAccepted" false-value="disabled" true-value="enabled" checked-icon="check"
+            keep-color :color="sendGreetingAccepted === 'enabled' ? 'green' : 'negative'" size="md"
+            unchecked-icon="clear" @input="atualizarConfiguracao('sendGreetingAccepted')" />
+        </q-item-section>
+      </q-item>
+
+      <q-item tag="label" v-ripple>
+        <q-item-section>
+          <q-item-label>Usuarios podem espiar ticket</q-item-label>
+          <q-item-label caption>Desativando essa opção somente administradores podem espiar os tickets</q-item-label>
+        </q-item-section>
+        <q-item-section avatar>
+          <q-toggle v-model="spyticket" false-value="disabled" true-value="enabled" checked-icon="check"
+            keep-color :color="spyticket === 'enabled' ? 'green' : 'negative'" size="md"
+            unchecked-icon="clear" @input="atualizarConfiguracao('spyticket')" />
+        </q-item-section>
+      </q-item>
+
     </q-list>
 
   </div>
@@ -135,6 +160,8 @@ export default {
       userContactWallet: null,
       rejectCalls: null,
       userDisableSignature: null,
+      sendGreetingAccepted: null,
+      spyticket: null,
       callRejectMessage: ''
     }
   },
