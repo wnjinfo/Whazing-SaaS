@@ -28,8 +28,8 @@
             class="text-center text-bold"
             floating
             dense
-            text-color="black"
-            color="blue-2"
+            text-color="white"
+            color="red"
             :label="ticket.unreadMessages" />
           <q-avatar>
             <q-icon size="50px"
@@ -47,8 +47,8 @@
             class="text-center text-bold"
             floating
             dense
-            color="blue-2"
-            text-color="black"
+            text-color="white"
+            color="red"
             :label="ticket.unreadMessages" />
           <img :src="ticket.profilePicUrl"
             onerror="this.style.display='none'"
@@ -59,7 +59,7 @@
         </q-avatar>
 
       </q-item-section>
-      <q-item-section id="ListItemsTicket">
+      <q-item-section id="ListItemsTicket" >
         <q-item-label class="text-bold"
           lines="1">
           {{ !ticket.name ? ticket.contact.name : ticket.name }}
@@ -83,8 +83,31 @@
         <q-item-label lines="1"
           caption>
           #{{ ticket.id }}
-          <span class="q-ml-sm">
-            {{ `Fila: ${ticket.queue || obterNomeFila(ticket) || ''}` }}
+          <q-icon
+            v-for="tag in tagsDoTicket"
+            :key="tag.tag"
+            :style="{ color: tag.color }"
+            name="mdi-tag"
+            size="1.4em"
+            class="q-mb-sm">
+            <q-tooltip>
+              {{tag && tag.tag}}
+            </q-tooltip>
+          </q-icon>
+          <q-icon
+            v-for="wallet in walletsDoTicket"
+            :key="wallet.wallet"
+            name="mdi-wallet"
+            size="1.4em"
+            class="q-mb-sm">
+            <q-tooltip>
+              {{wallet.wallet}}
+            </q-tooltip>
+          </q-icon>
+          <span class="q-ml-sm text-bold"
+          :color="$q.dark.isActive ? 'white ' : 'black'"
+          >
+            {{ `${ticket.queue || obterNomeFila(ticket) || ''}` }}
           </span>
           <span class="absolute-bottom-right ">
             <q-icon v-if="ticket.status === 'closed'"
@@ -110,7 +133,7 @@
         </q-item-label>
         <q-item-label class="row col items-center justify-between"
           caption>
-          Usuário: {{ ticket.username }}
+          Usuário: {{ ticket.username || '' }}
           <q-chip :color="$q.dark.isActive ? 'blue-9' : 'blue-2'"
             dense
             square
@@ -118,10 +141,9 @@
             size="10px"
             class="q-mr-md text-bold" />
         </q-item-label>
-        <!-- <span class="absolute-bottom-right" v-if="ticket.unreadMessages">
-          <q-badge style="font-size: .8em; border-radius: 10px;" class="q-py-xs" dense text-color="white" color="green" :label="ticket.unreadMessages" />
-        </span> -->
-        <q-item-section avatar class="absolute-right q-pr-xs">
+        </q-item-section>
+        <q-item-section avatar
+        class="q-px-none">
         <q-btn flat
           @click="espiarAtendimento(ticket)"
           push
@@ -130,14 +152,6 @@
           round
           v-if="enablespyticket === true && (ticket.status === 'pending' || buscaTicket)"
           class="q-mr-md">
-          <q-badge v-if="ticket.unreadMessages"
-            style="border-radius: 10px;"
-            class="text-center text-bold"
-            floating
-            dense
-            text-color="black"
-            color="blue-2"
-            :label="ticket.unreadMessages" />
           <q-avatar>
             <q-icon size="20px"
               name="mdi-eye-outline" />
@@ -146,15 +160,11 @@
             Espiar
           </q-tooltip>
         </q-btn>
-
-        <!-- <span class="absolute-bottom-right" v-if="ticket.unreadMessages">
-          <q-badge style="font-size: .8em; border-radius: 10px;" class="q-py-xs" dense text-color="white" color="green" :label="ticket.unreadMessages" />
-        </span> -->
       </q-item-section>
     </q-item>
     <q-separator color="grey-2"
       inset="item" />
-    <!-- <q-separator /> -->
+     <q-separator />
   </q-list>
 </template>
 
@@ -163,12 +173,15 @@ import { formatDistance, parseJSON } from 'date-fns'
 import pt from 'date-fns/locale/pt-BR'
 import mixinAtualizarStatusTicket from './mixinAtualizarStatusTicket'
 import { outlinedAccountCircle } from '@quasar/extras/material-icons-outlined'
+import { ObterContato } from 'src/service/contatos'
 
 export default {
   name: 'ItemTicket',
   mixins: [mixinAtualizarStatusTicket],
   data () {
     return {
+      tagsDoTicket: [],
+      walletsDoTicket: [],
       outlinedAccountCircle,
       recalcularHora: 1,
       enablespyticket: false,
@@ -207,7 +220,16 @@ export default {
     filas: {
       type: Array,
       default: () => []
+    },
+    etiquetas: {
+      type: Array,
+      default: () => []
     }
+  },
+  async mounted() {
+    this.tagsDoTicket = await this.obterInformacoes(this.ticket, 'tags')
+    this.walletsDoTicket = await this.obterInformacoes(this.ticket, 'carteiras')
+    this.listarConfiguracoes()
   },
   methods: {
     obterNomeFila (ticket) {
@@ -219,6 +241,24 @@ export default {
         return ''
       } catch (error) {
         return ''
+      }
+    },
+    async obterInformacoes(ticket, tipo) {
+      try {
+        const contato = await ObterContato(ticket.contactId)
+        if (contato) {
+          if (tipo === 'tags') {
+            const tags = contato.data.tags
+            return tags.map(tag => ({ tag: tag.tag, color: tag.color }))
+          } else if (tipo === 'carteiras') {
+            const wallets = contato.data.wallets
+            return wallets.map(wallet => ({ wallet: wallet.name }))
+          }
+        }
+        return []
+      } catch (error) {
+        console.error(`Erro ao obter ${tipo}:`, error)
+        return []
       }
     },
     dataInWords (timestamp, updated) {
@@ -238,9 +278,6 @@ export default {
       this.$store.dispatch('AbrirChatMensagens', ticket)
     }
   },
-  mounted () {
-    this.listarConfiguracoes()
-  },
   created () {
     setInterval(() => {
       this.recalcularHora++
@@ -250,15 +287,6 @@ export default {
 </script>
 
 <style lang="sass">
-
-.relative-container
-  position: relative
-
-.absolute-btn
-  position: absolute
-  top: 20px
-  right: 20px
-
 img:after
   content: ""
   vertical-align: middle
