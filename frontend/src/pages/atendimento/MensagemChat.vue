@@ -69,6 +69,12 @@
                 </div>
               </q-tooltip>
             </q-icon>
+            <div v-if="mensagem.edited" class="text-italic">
+            Editada: {{ mensagem.edited }}
+            </div>
+            <div v-if="mensagem.edited" class="text-italic">
+             Mensagem anterior:<br>
+            </div>
             <div v-if="mensagem.isDeleted"
               class="text-italic">
               Mensagem apagada em {{ formatarData(mensagem.updatedAt, 'dd/MM/yyyy') }}.
@@ -113,6 +119,16 @@
                   <q-item clickable
                     @click=" marcarMensagensParaEncaminhar(mensagem) ">
                     <q-item-section>Marcar (encaminhar várias)</q-item-section>
+                  </q-item>
+                  <q-item
+                    @click=" AbrirmodaleditarMensagem(mensagem) "
+                    clickable
+                    v-if=" mensagem.fromMe  && mensagem.mediaType === 'chat'"
+                    :disable="ticketFocado.channel === 'messenger'"
+                  >
+                    <q-item-section>
+                      <q-item-label>Editar Mensagem</q-item-label>
+                    </q-item-section>
                   </q-item>
                   <q-separator />
                   <q-item @click=" deletarMensagem(mensagem) "
@@ -183,6 +199,9 @@
             <div style="color: red;">*Não é possível exibir essa mensagem neste dispositivo. Abra o WhatsApp no seu celular para ver a mensagem.</div>
             </template>
             <template v-if="mensagem.mediaType === 'pollCreationMessageV3'">
+            <div style="color: red;">*Não é possível exibir essa mensagem neste dispositivo. Abra o WhatsApp no seu celular para ver a mensagem.</div>
+            </template>
+            <template v-if="mensagem.mediaType === 'productMessage'">
             <div style="color: red;">*Não é possível exibir essa mensagem neste dispositivo. Abra o WhatsApp no seu celular para ver a mensagem.</div>
             </template>
             <template v-if="mensagem.mediaType === 'image' && !mensagem.mediaUrl.includes('.webp')">
@@ -272,7 +291,7 @@
               </div>
             </template>
             <div v-linkified
-              v-if=" !['contactMessage', 'application', 'audio', 'locationMessage', 'liveLocationMessage', 'interactiveMessage', 'pollCreationMessageV3', 'video', 'image'].includes(mensagem.mediaType) "
+              v-if=" !['productMessage', 'contactMessage', 'application', 'audio', 'locationMessage', 'liveLocationMessage', 'interactiveMessage', 'pollCreationMessageV3', 'video', 'image'].includes(mensagem.mediaType) "
               :class=" { 'q-mt-sm': mensagem.mediaType !== 'chat' } "
               class="q-message-container row items-end no-wrap">
               <div v-html=" farmatarMensagemWhatsapp(mensagem.body) ">
@@ -282,6 +301,20 @@
         </q-chat-message>
       </template>
     </transition-group>
+  <q-dialog v-model="showModaledit">
+  <q-card>
+    <q-card-section>
+      <div class="text-h6">Editar Mensagem</div>
+    </q-card-section>
+    <q-card-section>
+      <q-input filled v-model="mensagemAtual.body" label="Mensagem" />
+    </q-card-section>
+    <q-card-actions align="right">
+      <q-btn label="Cancelar" color="negative" v-close-popup />
+      <q-btn label="Salvar" color="primary" @click="salvarMensagem" />
+    </q-card-actions>
+  </q-card>
+</q-dialog>
   </div>
 </template>
 
@@ -299,7 +332,7 @@ const downloadImageCors = axios.create({
     responseType: 'blob'
   }
 })
-import { DeletarMensagem } from 'src/service/tickets'
+import { DeletarMensagem, EditarMensagem } from 'src/service/tickets'
 import { Base64 } from 'js-base64'
 export default {
   name: 'MensagemChat',
@@ -340,6 +373,8 @@ export default {
   },
   data () {
     return {
+      mensagemAtual: { body: '' },
+      showModaledit: false,
       modalContato: false,
       currentContact: {},
       abrirModalImagem: false,
@@ -361,6 +396,31 @@ export default {
     ContatoModal
   },
   methods: {
+    async salvarMensagem () {
+      try {
+        const updatedMessage = await EditarMensagem({
+          id: this.mensagemAtual.id,
+          messageId: this.mensagemAtual.messageId,
+          body: this.mensagemAtual.body
+        })
+        console.log('Mensagem editada com sucesso')
+        this.showModaledit = false
+        this.atualizarMensagem(updatedMessage)
+      } catch (error) {
+        console.error('Erro ao editar a mensagem', error.message)
+        this.$notificarErro('Não foi possível editar a mensagem')
+      }
+    },
+    atualizarMensagem (updatedMessage) {
+      const index = this.mensagens.findIndex(mensagem => mensagem.id === updatedMessage.id)
+      if (index !== -1) {
+        this.mensagens.splice(index, 1, updatedMessage)
+      }
+    },
+    AbrirmodaleditarMensagem (mensagem) {
+      this.mensagemAtual = mensagem
+      this.showModaledit = true
+    },
     openContactModal (contact) {
       this.currentContact = contact
       this.modalContato = true
