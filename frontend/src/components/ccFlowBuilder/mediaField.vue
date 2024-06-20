@@ -134,21 +134,6 @@
             </q-tooltip>
           </q-btn>
         </div>
-        <!-- <q-input
-          v-if="cMediaUrl && $attrs.element.data.type.indexOf('audio') == -1"
-          dense
-          outlined
-          label="Subtítulo"
-          v-model="$attrs.element.data.caption"
-          color="black"
-          class="z-max q-pa-none q-mt-sm"
-        >
-
-          <template
-            slot="after"
-          >
-          </template>
-        </q-input> -->
 
       </q-card-section>
     </q-card>
