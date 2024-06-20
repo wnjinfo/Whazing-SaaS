@@ -21,12 +21,6 @@
           <q-img src="/izing-logo_5_transparent.png"
             spinner-color="primary"
             style="height: 50px; width: 140px" />
-          <!-- <q-toolbar-title
-            shrink
-            class="text-bold text-grey-7"
-          >
-            IZING
-          </q-toolbar-title> -->
         </q-btn>
 
         <q-space />
@@ -54,12 +48,6 @@
             </q-badge>
             <q-menu>
               <q-list style="min-width: 300px">
-                <!--q-item>
-                  <q-item-section
-                    style="cursor: pointer;">
-                    {{ parseInt(notificacoesChat) }} + {{ parseInt(notifications_p.count) }}
-                  </q-item-section>
-                </q-item-->
                 <q-item v-if="(parseInt(notificacoesChat) + parseInt(notifications_p.count)) == 0">
                   <q-item-section style="cursor: pointer;">
                     Nada de novo por aqui!
@@ -277,13 +265,7 @@ const objMenu = [
 
 const objMenuAdmin = [
   {
-    title: 'Canais',
-    caption: 'Canais de Comunicação',
-    icon: 'mdi-cellphone-wireless',
-    routeName: 'sessoes'
-  },
-  {
-    title: 'Empresas',
+    title: 'Empresas SaaS',
     caption: 'Lista de empresas',
     icon: 'mdi-office-building',
     routeName: 'empresas',
@@ -301,6 +283,12 @@ const objMenuAdmin = [
         routeName: 'empresas'
       }
     ]
+  },
+  {
+    title: 'Canais',
+    caption: 'Canais de Comunicação',
+    icon: 'mdi-cellphone-wireless',
+    routeName: 'sessoes'
   },
   {
     title: 'Painel Atendimentos',
