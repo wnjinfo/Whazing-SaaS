@@ -93,3 +93,11 @@ export function CriarTicket (data) {
     data
   })
 }
+
+export function EditarMensagem (mensagem) {
+  return request({
+    url: `/messages/edit/${mensagem.messageId}`,
+    method: 'post',
+    data: mensagem
+  })
+}
