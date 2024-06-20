@@ -2,26 +2,21 @@
 
 Um sistema para gestão de atendimento multicanais centralizado.
 
-Sistema possui o backend e canais baseado em:
-- Whatsapp [@whiskeysockets/baileys](https://github.com/WhiskeySockets/Baileys)
-- Telegram [telegraf](https://github.com/telegraf/telegraf)
+Esta versão foi trocada pela api [@whiskeysockets/baileys](https://github.com/WhiskeySockets/Baileys)
 
-Como escolha para o banco de dados, optamos pelo [PostgresSql](https://www.postgresql.org/).
+Novos recursos
+Chat Interno
 
-No front, todas as funcionalidades são baseadas no [vue](https://vuejs.org/) e [quasar](https://quasar.dev/), com integração via REST API e Websockets.
 
-Esse projeto tem inspiração e também é baseado no projeto fantástico [whaticket](https://github.com/canove/whaticket-community).
 
 
 **IMPORTANTE**: não garantimos que a utilização desta ferramenta não irá gerar bloqueio nas contas utilizadas. São bots que em sua maioria utilizam APIs segundarias para comunicação com os fornecedores dos serviços. Use com responsabilidade!
 
 
 ## Screenshots
->![Doação](screenshots/Bot.gif) 
+>![Doação](screenshots/painelsaas1.png) 
 ___  
->![Doação](screenshots/dashboard.gif)
-___
->![Doação](screenshots/izing.gif)
+>![Doação](screenshots/painelsaas2.png)
 ___
 
 ## Principais funcionalidades
