@@ -1,6 +1,6 @@
 {
   "name": "Izing PRO",
-  "version": "1.9.5",
+  "version": "2.0.0",
   "description": "Bot Multiatendimento, multicanais e multiempresas.",
   "productName": "Izing",
   "author": "Durans <lumardyelson@gmail.com>",
@@ -58,6 +58,9 @@
     "workbox-webpack-plugin": "^6.6.0"
   },
   "scripts": {
+    "fix": "eslint --ext .js,.vue ./ --fix",
+    "lint": "eslint --ext .js,.vue ./",
+    "test": "echo \"No test specified\" && exit 0",
     "start": "pm2 start server.js --name izing-frontend",
     "stop": "pm2 stop server.js --name izing-frontend",
     "build": "export NODE_OPTIONS=--openssl-legacy-provider && npx quasar build -P -m pwa"
