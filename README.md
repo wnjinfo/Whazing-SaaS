@@ -4,9 +4,10 @@ Um sistema para gestão de atendimento multicanais centralizado.
 
 Esta versão foi trocada pela api [@whiskeysockets/baileys](https://github.com/WhiskeySockets/Baileys)
 
+Acesso instagram funcional somente use servidor no Brasil pois usa instagram web
+
 Novos recursos
 Chat Interno
-
 
 
 
@@ -33,46 +34,11 @@ ___
 ## Instalando
 Seguem links sugerimos:
 
--  [Como Instalar o IZING VPS - Texto - UBUNTU 20, 22](docs/INSTALL_VPS_UBUNTU_20_22.md)
+-  [Como Instalar o Whazing VPS - Texto - UBUNTU 20, 22](docs/INSTALL_VPS_UBUNTU_20_22.md)
 
--  [Instalador automatico](https://github.com/cleitonme/izingpro.bayles.install)
+-  [Instalador automatico](https://github.com/cleitonme/Whazing-SaaS.instalador)
 <br/>
 
-## Atualizando
-
-Izing é um trabalho em progresso e estamos frequentemente adicionando novas funcionalidades e correções de bugs.
-
-**IMPORTANTE**: verifique sempre o .env.example e ajuste o seu .env antes de atualizar, uma vez que algumas novas variáveis podem ser adicionadas.
-
-```bash
-nano updateIzing
-```
-
-```bash
-#!/bin/bash
-echo  "Atualizando izing, aguarde..."
-cd  ~
-cd izing
-git pull
-cd backend
-npm install
-npx sequelize db:migrate
-#npx sequelize db:seed
-cd ../frontend
-npm install
-export NODE_OPTIONS=--openssl-legacy-provider
-quasar build -P -m pwa
-pm2 restart all
-
-echo  "Atualização finalizada!"
-```
-
-Marque o arquivo como executável:
-
-```bash
-chmod +x updateIzing
-./updateIzing
-```
 
 ## FIQUE ATENTO
 
