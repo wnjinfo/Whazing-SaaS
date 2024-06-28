@@ -1,4 +1,4 @@
-# Izing Pro
+# Whazing SaaS
 
 Um sistema para gestão de atendimento multicanais centralizado.
 

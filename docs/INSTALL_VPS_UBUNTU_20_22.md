@@ -82,11 +82,8 @@ docker run --name postgresql -e POSTGRES_USER=whazing -e POSTGRES_PASSWORD=123@m
 docker run --name redis-whazing -e TZ="America/Sao_Paulo" -p 6379:6379 --restart=always -d redis:latest redis-server --appendonly yes --requirepass "123@mudar"
 ```
 
-11. Instalar Rabbitmq no Docker
+11. Instalar Rabbitmq no Docker opcional
 
-```bash
-docker run -d --name rabbitmq -p 5672:5672 -p 15672:15672 --restart=always --hostname rabbitmq -e RABBITMQ_DEFAULT_USER=admin -e RABBITMQ_DEFAULT_PASS=123@mudar -v /data:/var/lib/rabbitmq rabbitmq:3-management-alpine
-```
 
 12. Instalar Portainer no Docker
 
@@ -213,7 +210,7 @@ MAX_SLEEP_INTERVAL=5000
 # dados do RabbitMQ / Para não utilizar, basta comentar a var AMQP_URL
 RABBITMQ_DEFAULT_USER=admin
 RABBITMQ_DEFAULT_PASS=123@mudar
-AMQP_URL='amqp://admin:123@mudar@localhost:5672?connection_attempts=5&retry_delay=5'
+#AMQP_URL='amqp://admin:123@mudar@localhost:5672?connection_attempts=5&retry_delay=5'
 
 # api oficial (integração em desenvolvimento)
 API_URL_360=https://waba-sandbox.360dialog.io
@@ -225,7 +222,7 @@ ADMIN_DOMAIN=whazing.io
 VUE_FACEBOOK_APP_ID=3237415623048660
 FACEBOOK_APP_SECRET_KEY=3266214132b8c98ac59f3e957a5efeaaa13500
 
-# Limitar Uso do Izing Usuario e Conexões
+# Limitar Uso do whazing Usuario e Conexões
 USER_LIMIT=99
 CONNECTIONS_LIMIT=99
 ```
@@ -259,7 +256,6 @@ npm run build
 docker container restart portainer
 docker container restart postgresql
 docker container restart redis-whazing
-docker container restart rabbitmq
 ```
 
 33. Criando as tabelas no BD
@@ -505,11 +501,6 @@ docker container restart postgresql
 67. reniciar serviços docker
 ```bash
 docker container restart redis-whazing
-```
-
-68. reniciar serviços docker
-```bash
-docker container restart rabbitmq
 ```
 
 
