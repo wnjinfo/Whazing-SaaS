@@ -23,15 +23,23 @@
             {{ props.row.cnpj }}
           </q-td>
           <q-td key="status" :props="props">
-            <q-badge :color="props.row.status == 'active' ? 'green' : 'grey'">
-              {{ props.row.status == 'active' ? 'Ativada' : 'Desativada' }}
-            </q-badge>
+          <q-icon size="24px" :name="props.row.status == 'active' ? 'mdi-check-circle-outline' : 'mdi-close-circle-outline'"
+              :color="props.row.status == 'active' ? 'positive' : 'negative'" />
           </q-td>
           <q-td key="maxUsers" :props="props">
             {{ props.row.maxUsers }}
           </q-td>
           <q-td key="maxConnections" :props="props">
             {{ props.row.maxConnections }}
+          </q-td>
+          <q-td key="phone" :props="props">
+            {{ props.row.phone }}
+          </q-td>
+          <q-td key="email" :props="props">
+            {{ props.row.email }}
+          </q-td>
+          <q-td key="dueDate" :props="props">
+            {{ props.row.dueDate }}
           </q-td>
           <q-td class="text-center">
             <q-btn flat round icon="mdi-account-reactivate" @click="abrirModalConformacaoAtivacao(props.row)">
@@ -87,6 +95,7 @@ import ModalEmpresa from './ModalEmpresa.vue'
 import ModalUsuario from './ModalUsuario.vue'
 import ModalWhatsapp from './ModalWhatsapp.vue'
 import { mapGetters } from 'vuex'
+import { format, parseISO } from 'date-fns'
 
 export default {
   name: 'Empresa',
@@ -157,6 +166,28 @@ export default {
           field: 'maxConnections',
           align: 'left',
           sortable: false
+        },
+        {
+          name: 'phone',
+          label: 'WhatsApp',
+          field: 'phone',
+          align: 'left',
+          sortable: false
+        },
+        {
+          name: 'email',
+          label: 'E-mail',
+          field: 'email',
+          align: 'left',
+          sortable: false
+        },
+        {
+          name: 'dueDate',
+          label: 'Vencimento',
+          field: 'dueDate',
+          align: 'left',
+          sortable: false,
+          format: (v) => format(parseISO(v), 'dd/MM/yyyy')
         },
         {
           name: 'acoes',
