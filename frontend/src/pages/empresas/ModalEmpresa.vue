@@ -20,6 +20,27 @@
             <c-input outlined v-model.trim="tenant.maxConnections" mask="###" label="Máximo de Conexões"
               :validator="$v.tenant.maxConnections" @blur="$v.tenant.maxConnections.$touch" />
           </div>
+          <div class="col-12">
+            <c-input outlined v-model.trim="tenant.phone" mask="(##)#####-####" label="Whatsapp"
+              :validator="$v.tenant.phone" @blur="$v.tenant.phone.$touch" />
+          </div>
+          <div class="col-12">
+          <q-datetime-picker
+            dense
+            hide-bottom-space
+            outlined
+            stack-label
+            bottom-slots
+            label="Data/Hora Vencimento"
+            mode="datetime"
+            color="primary"
+            format24h
+            v-model="tenant.dueDate"
+            @blur="$v.tenant.dueDate.$touch"
+            :error="$v.tenant.dueDate.$error"
+            error-message="Não pode ser inferior ao dia atual"
+          />
+          </div>
         </div>
       </q-card-section>
       <q-card-section class="q-col-gutter-sm" v-if="!isEdit">
@@ -81,7 +102,9 @@ export default {
         email: '',
         password: '',
         maxUsers: 1,
-        maxConnections: 1
+        maxConnections: 1,
+        phone: '',
+        dueDate: ''
       },
       usuario: {
         name: '',
@@ -110,6 +133,12 @@ export default {
       maxConnections: {
         required,
         minValue: minValue(1)
+      },
+      phone: {
+        required
+      },
+      dueDate: {
+        required
       }
     },
     usuario: {
@@ -144,7 +173,7 @@ export default {
       }
 
       const { name, email, password } = this.usuario
-      const { name: tenantName, cnpj, maxUsers, maxConnections } = this.tenant
+      const { name: tenantName, cnpj, maxUsers, maxConnections, phone, dueDate } = this.tenant
       const data = {
         name,
         email,
@@ -152,7 +181,9 @@ export default {
         maxConnections,
         password,
         tenantName,
-        cnpj
+        cnpj,
+        phone,
+        dueDate
       }
 
       const tenant = await CriarTenant(data)
@@ -178,12 +209,14 @@ export default {
         this.$v.tenant.$touch()
         return
       }
-      const { name, cnpj, maxUsers, maxConnections } = this.tenant
+      const { name, cnpj, maxUsers, maxConnections, phone, dueDate } = this.tenant
       const data = {
         name,
         cnpj,
         maxUsers,
-        maxConnections
+        maxConnections,
+        phone,
+        dueDate
       }
       const tenant = await AdminUpdateEmpresa(this.tenantSelecionado.id, data)
 
@@ -210,7 +243,9 @@ export default {
           name: this.tenantSelecionado.name,
           cnpj: this.tenantSelecionado.cnpj,
           maxUsers: this.tenantSelecionado.maxUsers,
-          maxConnections: this.tenantSelecionado.maxConnections
+          maxConnections: this.tenantSelecionado.maxConnections,
+          phone: this.tenantSelecionado.phone,
+          dueDate: this.tenantSelecionado.dueDate
         }
       }
     },
@@ -223,7 +258,9 @@ export default {
       this.tenant = {
         name: '',
         cnpj: '',
-        status: 'active'
+        status: 'active',
+        phone: '',
+        dueDate: ''
       }
       this.$v.usuario.$reset()
       this.$v.tenant.$reset()
