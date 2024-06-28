@@ -1,6 +1,6 @@
 {
-  "name": "backend",
-  "version": "2.0.0",
+  "name": "Whazing",
+  "version": "1.0.0",
   "description": "",
   "main": "index.js",
   "scripts": {
@@ -18,7 +18,7 @@
   "author": "",
   "license": "MIT",
   "dependencies": {
-    "@androz2091/insta.js": "^1.6.1",
+    "@androz2091/insta.js": "github:NaNonnI/insta.js",
     "@ffmpeg-installer/ffmpeg": "^1.1.0",
     "@sentry/node": "7.117.0",
     "@types/pino": "^6.3.5",
@@ -42,7 +42,7 @@
     "fluent-ffmpeg": "^2.1.3",
     "helmet": "^4.6.0",
     "http-graceful-shutdown": "^3.1.13",
-    "instagram-private-api": "^1.46.1",
+    "instagram-private-api": "github:cleitonme/instagram-private-api#master",
     "instagram_mqtt": "^1.2.3",
     "ioredis": "^5.4.1",
     "is-base64": "^1.1.0",
