@@ -127,6 +127,18 @@
 
       <q-item tag="label" v-ripple>
         <q-item-section>
+          <q-item-label>Enviar mensagem de transferencia de Fila</q-item-label>
+          <q-item-label caption>Irá mandar automaticamente uma mensagem informando transferencia</q-item-label>
+        </q-item-section>
+        <q-item-section avatar>
+          <q-toggle v-model="sendMsgTransfTicket" false-value="disabled" true-value="enabled" checked-icon="check"
+            keep-color :color="sendMsgTransfTicket === 'enabled' ? 'green' : 'negative'" size="md"
+            unchecked-icon="clear" @input="atualizarConfiguracao('sendMsgTransfTicket')" />
+        </q-item-section>
+      </q-item>
+
+      <q-item tag="label" v-ripple>
+        <q-item-section>
           <q-item-label>Usuarios podem espiar ticket</q-item-label>
           <q-item-label caption>Desativando essa opção somente administradores podem espiar os tickets</q-item-label>
         </q-item-section>
@@ -161,6 +173,7 @@ export default {
       rejectCalls: null,
       userDisableSignature: null,
       sendGreetingAccepted: null,
+      sendMsgTransfTicket: null,
       spyticket: null,
       callRejectMessage: ''
     }
