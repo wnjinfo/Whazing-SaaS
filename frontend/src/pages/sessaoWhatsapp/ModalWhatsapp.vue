@@ -52,6 +52,7 @@
             <div class="col">
               <fieldset class="full-width q-pa-md">
                 <legend>Dados da conta do Instagram</legend>
+                <legend>Somente use se seu servidor é no BRASIL</legend>
                 <div class="col-12 q-mb-md"
                   v-if="whatsapp.type === 'instagram'">
                   <c-input outlined
@@ -232,9 +233,9 @@ export default {
       },
       optionsWhatsappsTypes: [
         { label: 'Whatsapp', value: 'whatsapp' },
-        { label: 'Telegram', value: 'telegram' }
-        // { label: 'Instagram', value: 'instagram' },
-        // { label: 'Messenger', value: 'messenger' }
+        { label: 'Telegram', value: 'telegram' },
+        { label: 'Instagram', value: 'instagram' },
+        { label: 'Messenger', value: 'messenger' }
       ],
       variaveis: [
         { label: 'Nome', value: '{{name}}' },
