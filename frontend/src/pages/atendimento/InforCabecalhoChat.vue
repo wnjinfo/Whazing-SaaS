@@ -278,7 +278,9 @@ const userId = +localStorage.getItem('userId')
 import { mapGetters } from 'vuex'
 import { ListarUsuarios } from 'src/service/user'
 import { ListarFilas } from 'src/service/filas'
-import { AtualizarTicket } from 'src/service/tickets'
+import { AtualizarTicket, EnviarMensagemTexto } from 'src/service/tickets'
+import { uid } from 'quasar'
+import { ListarConfiguracoes } from 'src/service/configuracoes'
 export default {
   name: 'InfoCabecalhoMensagens',
   data () {
@@ -303,6 +305,15 @@ export default {
     }
   },
   methods: {
+    async listarConfiguracoes() {
+      const { data } = await ListarConfiguracoes()
+      this.configuracoes = data
+      const MsgTransfTicket = this.configuracoes.filter(item => item.key === 'sendMsgTransfTicket')[0]
+
+      if (MsgTransfTicket.value === 'enabled') {
+        this.MsgTransf = true
+      }
+    },
     Value (obj, prop) {
       try {
         return obj[prop]
@@ -390,6 +401,23 @@ export default {
         status: this.usuarioSelecionado == null ? 'pending' : 'open',
         isTransference: 1
       })
+      await this.listarConfiguracoes()
+      if (this.MsgTransf) {
+        const message = {
+          read: 1,
+          fromMe: true,
+          mediaUrl: '',
+          body: 'Seu atendimento esta sendo transferido Por Favor aguarde, já vamos te atender!',
+          scheduleDate: null,
+          quotedMsg: null,
+          idFront: uid()
+        }
+        try {
+          await EnviarMensagemTexto(this.ticketFocado.id, message)
+        } catch (error) {
+          console.error('Erro ao enviar mensagem automática', error)
+        }
+      }
       this.$q.notify({
         type: 'positive',
         message: 'Ticket transferido.',
