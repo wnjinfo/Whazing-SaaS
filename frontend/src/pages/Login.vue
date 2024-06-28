@@ -70,15 +70,15 @@
               </span>
             </q-btn>
           </q-card-actions>
-          <!-- <q-btn
+           <q-btn
             flat
             color="info"
             no-caps
             dense
             class="q-px-sm"
-            label="Esqueci a senha"
-            @click="modalEsqueciSenha=true"
-          /> -->
+            label="Registre-se, agora mesmo!"
+            @click="redirecionarParaCadastro"
+          />
 
           <q-inner-loading :showing="loading" />
         </q-card>
@@ -115,6 +115,9 @@ export default {
     emailRedefinicao: { required, email }
   },
   methods: {
+    redirecionarParaCadastro() {
+      this.$router.push('/signup')
+    },
     fazerLogin () {
       this.$v.form.$touch()
       if (this.$v.form.$error) {
