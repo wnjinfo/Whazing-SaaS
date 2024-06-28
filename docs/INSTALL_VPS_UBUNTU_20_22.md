@@ -1,11 +1,11 @@
-# Manual de Instação do izing.io na VPS
+# Manual de Instação do whazing na VPS
 
 ### Observação:
 - Antes de começar a instalação é necessário ter criado antecipadamente os subdomínios e já estarem apontados para o IP da VPS.
 - Feito ubuntu 20
-- Nesse modelo vamos usar docker porque versão Postgresql do repositorio UBUNTU 20 ta dando erro com izing
+- Nesse modelo vamos usar docker porque versão Postgresql do repositorio UBUNTU 20 ta dando erro com whazing
 - Senha usada 123@mudar
-- Dominio Frontend: izing.seusite.com.br
+- Dominio Frontend: whazing.seusite.com.br
 - Dominio backend: backend.seusite.com.br
   
 ================================================
@@ -73,13 +73,13 @@ apt autoremove -y
 9. Instalar POSTGRESQL no Docker
 
 ```bash
-docker run --name postgresql -e POSTGRES_USER=izing -e POSTGRES_PASSWORD=123@mudar -e TZ="America/Sao_Paulo" -p 5432:5432 --restart=always -v /data:/var/lib/postgresql/data -d postgres
+docker run --name postgresql -e POSTGRES_USER=whazing -e POSTGRES_PASSWORD=123@mudar -e TZ="America/Sao_Paulo" -p 5432:5432 --restart=always -v /data:/var/lib/postgresql/data -d postgres
 ```
 
 10. Instalar Redis no Docker
 
 ```bash
-docker run --name redis-izing -e TZ="America/Sao_Paulo" -p 6379:6379 --restart=always -d redis:latest redis-server --appendonly yes --requirepass "123@mudar"
+docker run --name redis-whazing -e TZ="America/Sao_Paulo" -p 6379:6379 --restart=always -d redis:latest redis-server --appendonly yes --requirepass "123@mudar"
 ```
 
 11. Instalar Rabbitmq no Docker
@@ -141,15 +141,15 @@ sudo apt-get install -y nodejs
 cd ~
 ```
 
-25. baixar o repositório do izing
+25. baixar o repositório do whazing
 
 ```bash
-git clone https://github.com/cleitonme/izingpro.bayles.git izing
+git clone https://github.com/cleitonme/Whazing-SaaS.git whazing
 ```
 
 26. Copiar o env de exemplo para o backend
 ```bash 
-cp izing/backend/.env.example izing/backend/.env
+cp whazing/backend/.env.example whazing/backend/.env
 ```
 
 27. Rodar o comando abaixo 2x para gerar JWT_SECRET e JWT_REFRESH_SECRET
@@ -168,7 +168,7 @@ NODE_ENV=dev
 BACKEND_URL=https://backend.seusite.com.br
 
 # URL do front para liberação do cors
-FRONTEND_URL=https://izing.seusite.com.br
+FRONTEND_URL=https://whazing.seusite.com.br
 
 # Porta utilizada para proxy com o serviço do backend
 PROXY_PORT=443
@@ -182,7 +182,7 @@ DB_DIALECT=postgres
 DB_TIMEZONE=-03:00
 DB_PORT=5432
 POSTGRES_HOST=localhost
-POSTGRES_USER=izing
+POSTGRES_USER=whazing
 POSTGRES_PASSWORD=123@mudar
 POSTGRES_DB=postgres
 
@@ -219,7 +219,7 @@ AMQP_URL='amqp://admin:123@mudar@localhost:5672?connection_attempts=5&retry_dela
 API_URL_360=https://waba-sandbox.360dialog.io
 
 # usado para mosrar opções não disponíveis normalmente.
-ADMIN_DOMAIN=izing.io
+ADMIN_DOMAIN=whazing.io
 
 # Dados para utilização do canal do facebook
 VUE_FACEBOOK_APP_ID=3237415623048660
@@ -233,13 +233,13 @@ CONNECTIONS_LIMIT=99
 29. Abrir para edição o arquivo .env com o comando abaixo e prencher com os dados acima. Para salvar se usa Ctrl + x
 
 ```bash
-nano izing/backend/.env
+nano whazing/backend/.env
 ```
 
 30. Acessando o backend
 
 ```bash
-cd izing/backend
+cd whazing/backend
 ```
 
 31. Instalando as dependências
@@ -258,7 +258,7 @@ npm run build
 ```bash
 docker container restart portainer
 docker container restart postgresql
-docker container restart redis-izing
+docker container restart redis-whazing
 docker container restart rabbitmq
 ```
 
@@ -283,7 +283,7 @@ sudo npm install -g pm2
 36. Iniciando o backend com PM2
 
 ```bash
-pm2 start dist/server.js --name izing-backend
+pm2 start dist/server.js --name whazing-backend
 ```
 
 37. Gerar Startup
@@ -361,7 +361,7 @@ npm run build
 
 48. Iniciando o frontend com PM2
 ```bash
-pm2 start server.js --name izing-frontend
+pm2 start server.js --name whazing-frontend
 ```
 
 49. Salvando os serviços iniciados pelo PM2
@@ -380,7 +380,7 @@ pm2 list
 
 ```bash
 server {
-  server_name izing.seusite.com.br;
+  server_name whazing.seusite.com.br;
 
   location / {
     proxy_pass http://127.0.0.1:4444;
@@ -397,10 +397,10 @@ server {
 }
 ```
 
-52. Criar e editar o arquivo izing-frontend com o comando abaixo e prencher com os dados do item 52. Para salvar se usa Ctrl + x
+52. Criar e editar o arquivo whazing-frontend com o comando abaixo e prencher com os dados do item 52. Para salvar se usa Ctrl + x
 
 ```bash
-sudo nano /etc/nginx/sites-available/izing-frontend
+sudo nano /etc/nginx/sites-available/whazing-frontend
 ```
 
 53. Editar os dados abaixo com a URL que será usada para acessar o backend.
@@ -424,23 +424,23 @@ server {
 }
 ```
 
-54. Criar e editar o arquivo izing-frontend com o comando abaixo e prencher com os dados do item 54. Para salvar se usa Ctrl + x
+54. Criar e editar o arquivo whazing-frontend com o comando abaixo e prencher com os dados do item 54. Para salvar se usa Ctrl + x
 
 ```bash
-sudo nano /etc/nginx/sites-available/izing-backend
+sudo nano /etc/nginx/sites-available/whazing-backend
 ```
 
-55. Criar link simbólico para o arquivo izing-frontend
+55. Criar link simbólico para o arquivo whazing-frontend
 
 ```bash
-sudo ln -s /etc/nginx/sites-available/izing-frontend /etc/nginx/sites-enabled/
+sudo ln -s /etc/nginx/sites-available/whazing-frontend /etc/nginx/sites-enabled/
 ```
 
 
-56. Criar link simbólico para o arquivo izing-backend
+56. Criar link simbólico para o arquivo whazing-backend
 
 ```bash
-sudo ln -s /etc/nginx/sites-available/izing-backend /etc/nginx/sites-enabled/
+sudo ln -s /etc/nginx/sites-available/whazing-backend /etc/nginx/sites-enabled/
 ```
 
 57. Editar o arquivo de configuração do nginx com o comando abaixo e prencher com os dados do item 59. adicionar antes# server_tokens off;. Para salvar se usa Ctrl + x
@@ -504,7 +504,7 @@ docker container restart postgresql
 
 67. reniciar serviços docker
 ```bash
-docker container restart redis-izing
+docker container restart redis-whazing
 ```
 
 68. reniciar serviços docker
@@ -519,7 +519,7 @@ Usuário padrão para acesso
 
 Usuário
 
-admin@izing.io  
+admin@admin.com 
 
 Senha:
 
