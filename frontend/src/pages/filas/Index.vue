@@ -17,10 +17,20 @@
                 <q-btn color="primary" label="Adicionar" @click="filaEdicao = {}; modalFila = true" />
               </div>
             </div>
-
             <q-table style="width: 100%;margin-left: 0;" flat bordered square hide-bottom
               class="my-sticky-dynamic q-ma-lg" :data="filas" :columns="columns" :loading="loading" row-key="id"
               :pagination.sync="pagination" :rows-per-page-options="[0]">
+
+      <template v-slot:body-cell-color="props">
+        <q-td class="text-center">
+          <div
+            class="q-pa-sm rounded-borders"
+            :style="`background: ${props.row.color}`"
+          >
+            {{ props.row.color }}
+          </div>
+        </q-td>
+      </template>
 
               <template v-slot:body-cell-isActive="props">
                 <q-td class="text-center">
@@ -81,6 +91,7 @@ export default {
       columns: [
         { name: 'id', label: '#', field: 'id', align: 'left' },
         { name: 'queue', label: 'Fila', field: 'queue', align: 'left' },
+        { name: 'color', label: 'Cor', field: 'color', align: 'center' },
         { name: 'isActive', label: 'Ativo', field: 'isActive', align: 'center' },
         // { name: 'from_ia', label: 'Fluxo IA', field: 'from_ia', align: 'center' },
         { name: 'acoes', label: 'Ações', field: 'acoes', align: 'center' }

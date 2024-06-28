@@ -5,17 +5,46 @@
         <div class="text-h6">{{ filaEdicao.id ? 'Editar' : 'Criar' }} Fila</div>
       </q-card-section>
       <q-card-section>
-        <div class="row">
-          <div class="col-12">
-            <q-input square outlined v-model="fila.queue" label="Nome da Fila" />
-          </div>
-          <div class="col-6">
-            <q-toggle v-model="fila.isActive" label="Ativo" />
-          </div>
+            <q-input class="row col" square outlined v-model="fila.queue" label="Nome da Fila" />
+        <q-input
+          filled
+          hide-bottom-space
+          :style="`background: ${fila.color} `"
+          v-model="fila.color"
+          :rules="['anyColor']"
+          class="q-my-md"
+          :dark="false"
+        >
+          <template v-slot:preappend>
+          </template>
+          <template v-slot:append>
+            <q-icon
+              name="colorize"
+              class="cursor-pointer"
+            >
+              <q-popup-proxy
+                transition-show="scale"
+                transition-hide="scale"
+              >
+                <q-color
+                  format-model="hex"
+                  square
+                  default-view="palette"
+                  no-header
+                  bordered
+                  v-model="fila.color"
+                />
+              </q-popup-proxy>
+            </q-icon>
+          </template>
+        </q-input>
+        <q-checkbox
+          v-model="fila.isActive"
+          label="Ativo"
+        />
           <!-- <div class="col-6">
             <q-toggle v-model="fila.from_ia" label="Chat pela IA" />
           </div> -->
-        </div>
       </q-card-section>
       <q-card-actions align="right" class="q-mt-md">
         <q-btn flat label="Cancelar" color="negative" v-close-popup class="q-mr-md" />
@@ -47,6 +76,7 @@ export default {
         id: null,
         queue: null,
         from_ia: false,
+        color: '#ffffff',
         isActive: true
       }
     }
@@ -57,6 +87,7 @@ export default {
         id: null,
         queue: null,
         from_ia: false,
+        color: '#ffffff',
         isActive: true
       }
     },
