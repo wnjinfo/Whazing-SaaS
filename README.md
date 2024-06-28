@@ -8,17 +8,26 @@ Acesso instagram funcional somente use servidor no Brasil pois usa instagram web
 
 Novos recursos
 Chat Interno
+Solicitar teste na pagina de login
 
+Dados Acesso
+
+admin@admin.com
+123456
 
 
 **IMPORTANTE**: não garantimos que a utilização desta ferramenta não irá gerar bloqueio nas contas utilizadas. São bots que em sua maioria utilizam APIs segundarias para comunicação com os fornecedores dos serviços. Use com responsabilidade!
 
 
 ## Screenshots
->![Doação](screenshots/painelsaas1.png) 
+>![Doação](screenshots/solicitarteste.png) 
 ___  
->![Doação](screenshots/painelsaas2.png)
+>![Doação](screenshots/planos.png)
 ___
+
+>![Doação](screenshots/config.png)
+___
+
 
 ## Principais funcionalidades
 
