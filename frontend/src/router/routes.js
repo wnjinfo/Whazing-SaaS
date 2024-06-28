@@ -106,6 +106,11 @@ const routes = [
     component: () => import('pages/Error404.vue')
   },
   {
+    path: '/signup',
+    name: 'signup',
+    component: () => import('pages/Signup.vue')
+  },
+  {
     path: '/login',
     name: 'login',
     component: () => import('pages/Login.vue')

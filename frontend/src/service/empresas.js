@@ -70,6 +70,7 @@ export function CriarTenant(data) {
     data
   })
 }
+
 export function AtualizarTenant(data) {
   return request({
     url: '/admin/tenants/' + data.id,
@@ -87,5 +88,13 @@ export function ListarWhatsappsAdmin () {
   return request({
     url: '/admin/channels',
     method: 'get'
+  })
+}
+
+export function CriarTeste(data) {
+  return request({
+    url: '/empresa/signup',
+    method: 'post',
+    data
   })
 }

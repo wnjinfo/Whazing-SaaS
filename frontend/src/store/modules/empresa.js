@@ -17,6 +17,10 @@ const empresa = {
         state.empresas[index].cnpj = payload.data.cnpj
         state.empresas[index].maxUsers = payload.data.maxUsers
         state.empresas[index].maxConnections = payload.data.maxConnections
+        state.empresas[index].phone = payload.data.phone
+        state.empresas[index].email = payload.data.email
+        state.empresas[index].dueDate = payload.data.dueDate
+        state.empresas[index].recurrence = payload.data.recurrence
       }
     }
   }
