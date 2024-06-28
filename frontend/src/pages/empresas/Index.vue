@@ -11,7 +11,8 @@
       >
         <q-tab name="Dashboard" label="Dashboard" />
         <q-tab name="empresas" label="Empresas" />
-        <!-- <q-tab name="movies" label="Configurações" /> -->
+        <q-tab name="planos" label="Planos" />
+        <q-tab name="config" label="Configurações" />
       </q-tabs>
       <q-separator />
 
@@ -24,10 +25,14 @@
           <empresa/>
         </q-tab-panel>
 
-        <!-- <q-tab-panel name="movies">
-          <div class="text-h6">Movies</div>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit.
-        </q-tab-panel> -->
+        <q-tab-panel name="planos">
+          <planos/>
+        </q-tab-panel>
+
+        <q-tab-panel name="config">
+          <config/>
+        </q-tab-panel>
+
       </q-tab-panels>
     </q-card>
   </div>
@@ -36,6 +41,8 @@
 <script>
 import empresa from './empresa.vue'
 import dashboard from './dashboard/index.vue'
+import planos from './planos/Index.vue'
+import config from './config/Index.vue'
 
 export default {
   data () {
@@ -47,7 +54,9 @@ export default {
   },
   components: {
     empresa,
-    dashboard
+    dashboard,
+    planos,
+    config
   }
 }
 </script>
