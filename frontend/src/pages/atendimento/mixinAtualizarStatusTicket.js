@@ -1,4 +1,4 @@
-import { AtualizarStatusTicket, EnviarMensagemTexto } from 'src/service/tickets'
+import { AtualizarStatusTicket, EnviarMensagemTexto, LocalizarMensagens } from 'src/service/tickets'
 import { ListarConfiguracoes } from 'src/service/configuracoes'
 import { uid } from 'quasar'
 const userId = +localStorage.getItem('userId')
@@ -71,7 +71,7 @@ export default {
           }]
         })
         this.$store.commit('TICKET_FOCADO', {})
-        this.$store.commit('SET_HAS_MORE', true)
+        this.$store.commit('SET_HAS_MORE', false)
         this.$store.dispatch('AbrirChatMensagens', ticket)
       } catch (error) {
         this.loading = false
@@ -104,6 +104,53 @@ export default {
           console.error(error)
           this.$notificarErro('Não foi possível atualizar o status', error)
         })
+    },
+    async fetchMessagesForTicket(ticket) {
+      try {
+        const response = await LocalizarMensagens({ ticketId: ticket.id })
+        this.currentTicket = { ...ticket, messages: response.data.messages }
+        this.isTicketModalOpen = true
+      } catch (error) {
+        console.error('Failed to fetch messages:', error)
+        this.isTicketModalOpen = false
+      }
+    },
+    async espiarAtendimentoPainel (ticket) {
+      try {
+        this.fetchMessagesForTicket(ticket)
+        this.$q.notify({
+          message: `Espiando - Ticket: ${ticket.id}`,
+          type: 'positive',
+          progress: true,
+          position: 'top',
+          actions: [{
+            icon: 'close',
+            round: true,
+            color: 'white'
+          }]
+        })
+      } catch (e) {
+        console.log('Erro ao espiar: ', e)
+      }
+
+      // AtualizarStatusTicket(ticket.id, 'pending').then(res => {
+      //   this.$q.notify({
+      //     message: `Espiando - Ticket: ${ticket.id}`,
+      //     type: 'positive',
+      //     progress: true,
+      //     position: 'top',
+      //     actions: [{
+      //       icon: 'close',
+      //       round: true,
+      //       color: 'white'
+      //     }]
+      //   });
+      //   this.$store.commit('TICKET_FOCADO', ticket);
+      //   // Aqui, você pode optar por não chamar ações de roteamento ou outras lógicas que foram deslocadas para o modal.
+      // }).catch(error => {
+      //   console.error(error);
+      //   this.$notificarErro('Não foi possível atualizar o status', error);
+      // });
     },
     atualizarStatusTicket (status) {
       const contatoName = this.ticketFocado.contact.name || ''
