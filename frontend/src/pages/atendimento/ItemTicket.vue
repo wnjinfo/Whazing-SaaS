@@ -104,11 +104,14 @@
               {{wallet.wallet}}
             </q-tooltip>
           </q-icon>
-          <span class="q-ml-sm text-bold"
-          :color="$q.dark.isActive ? 'white ' : 'black'"
-          >
-            {{ `${ticket.queue || obterNomeFila(ticket) || ''}` }}
-          </span>
+          <q-chip
+          :style="chipStyle"
+          dense
+          square
+          :label="chipLabel"
+          size="11px"
+          class="q-mr-md text-bold"
+          />
           <span class="absolute-bottom-right ">
             <q-icon v-if="ticket.status === 'closed'"
               name="mdi-check-circle-outline"
@@ -226,17 +229,39 @@ export default {
       default: () => []
     }
   },
+  computed: {
+    chipStyle() {
+      return { backgroundColor: this.ticket.color || this.obterCorFila(this.ticket) || 'grey', color: 'white' }
+    },
+    chipLabel() {
+      return this.ticket.queue || this.obterNomeFila(this.ticket) || 'SEM FILA'
+    }
+  },
   async mounted() {
     this.tagsDoTicket = await this.obterInformacoes(this.ticket, 'tags')
     this.walletsDoTicket = await this.obterInformacoes(this.ticket, 'carteiras')
     this.listarConfiguracoes()
   },
   methods: {
+    closeModal() {
+      this.isTicketModalOpen = false
+    },
     obterNomeFila (ticket) {
       try {
         const fila = this.filas.find(f => f.id === ticket.queueId)
         if (fila) {
           return fila.queue
+        }
+        return ''
+      } catch (error) {
+        return ''
+      }
+    },
+    obterCorFila (ticket) {
+      try {
+        const fila = this.filas.find(f => f.id === ticket.queueId)
+        if (fila) {
+          return fila.color
         }
         return ''
       } catch (error) {
