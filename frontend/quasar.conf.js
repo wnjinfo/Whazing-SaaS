@@ -128,9 +128,9 @@ module.exports = function (ctx) {
       workboxPluginMode: 'GenerateSW', // 'GenerateSW' or 'InjectManifest'
       workboxOptions: { maximumFileSizeToCacheInBytes: 10000000 }, // only for GenerateSW
       manifest: {
-        name: 'IZING',
-        short_name: 'IZING',
-        description: 'Bot Multi-atendimento para whatsapp',
+        name: 'Whazing',
+        short_name: 'Whazing',
+        description: 'Bot Multi-atendimento',
         display: 'standalone',
         orientation: 'portrait',
         background_color: '#ffffff',
