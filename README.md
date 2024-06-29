@@ -16,7 +16,7 @@ admin@admin.com
 123456
 
 
-**IMPORTANTE**: não garantimos que a utilização desta ferramenta não irá gerar bloqueio nas contas utilizadas. São bots que em sua maioria utilizam APIs segundarias para comunicação com os fornecedores dos serviços. Use com responsabilidade!
+**IMPORTANTE**: Versão disponível para teste e correção de bugs essa versão beta no futuro se tornando premium. Modelo de negócio existira 2 versão 1 gratis com recursos limitados e a versao Premium. Essa versão ja esta codigo inicial para validar licença.
 
 
 ## Screenshots
