@@ -7,8 +7,8 @@ Esta versão foi trocada pela api [@whiskeysockets/baileys](https://github.com/W
 Acesso instagram funcional somente use servidor no Brasil pois usa instagram web
 
 Novos recursos
-Chat Interno
-Solicitar teste na pagina de login
+- Chat Interno
+- Solicitar teste na pagina de login
 
 Dados Acesso
 
