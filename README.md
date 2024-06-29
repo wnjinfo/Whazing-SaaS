@@ -16,7 +16,7 @@ admin@admin.com
 123456
 
 
-**IMPORTANTE**: Versão disponível para teste e correção de bugs essa versão beta no futuro se tornando premium. Modelo de negócio existira 2 versão 1 gratis com recursos limitados e a versao Premium. Essa versão ja esta codigo inicial para validar licença.
+**IMPORTANTE**: Versão disponível para teste e correção de bugs esta em versão beta no futuro se tornara um servico premium. Modelo de negócio existirá uma grátis com recursos limitados e a versão Premium. Essa versão ja está codigo inicial para validar licença.
 
 
 ## Screenshots
