@@ -9,8 +9,9 @@ Acesso instagram funcional somente use servidor no Brasil pois usa instagram web
 Novos recursos
 - Chat Interno
 - Solicitar teste na pagina de login
+- Planos
 
-Dados Acesso
+Dados de Acesso
 
 admin@admin.com
 123456
