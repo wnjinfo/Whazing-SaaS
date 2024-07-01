@@ -50,6 +50,15 @@
           <q-item-label>Fluxo ativo para o Bot de atendimento</q-item-label>
           <q-item-label caption>Fluxo a ser utilizado pelo Bot para os novos atendimentos</q-item-label>
         </q-item-section>
+        <q-btn  @click="resetarFluxoAtivo"
+            flat
+            icon="mdi-replay"
+            color="negative"
+            class="bg-padrao btn-rounded" >
+          <q-tooltip content-class="bg-negative text-bold">
+            Resetar Fluxo Chatbot
+          </q-tooltip>
+        </q-btn>
         <q-item-section avatar>
           <q-select style="width: 300px" outlined dense v-model="botTicketActive" :options="listaChatFlow" map-options
             emit-value option-value="id" option-label="name" @input="atualizarConfiguracao('botTicketActive')" />
@@ -179,6 +188,10 @@ export default {
     }
   },
   methods: {
+    resetarFluxoAtivo() {
+      this.botTicketActive = ''
+      this.atualizarConfiguracao('botTicketActive')
+    },
     async listarConfiguracoes() {
       const { data } = await ListarConfiguracoes()
       this.configuracoes = data
