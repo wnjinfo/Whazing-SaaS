@@ -7,6 +7,7 @@ Esta versão foi trocada pela api [@whiskeysockets/baileys](https://github.com/W
 Acesso instagram funcional somente use servidor no Brasil pois usa instagram web
 
 Novos recursos
+- Painel SaaS
 - Chat Interno
 - Solicitar teste na pagina de login
 - Planos
@@ -17,12 +18,17 @@ admin@admin.com
 123456
 
 
-**IMPORTANTE**: Versão disponível para teste e correção de bugs esta em versão beta. Modelo de negócio existirá uma grátis com recursos limitados e a versão Premium. Essa versão ja está codigo inicial (webhook) para validar licença.
+**IMPORTANTE**: 
+Versão grátis disponivel nesse repositorio*
 
-Recursos versão Premium*
+- Limite 10 usuários e 2 canais
 
--Painel SaaS
 
+Versão Premium
+
+-Não posso possui limites
+
+Essa versão ja está codigo inicial (webhook) para validar licença.
 *Durante a fase beta os recursos premium estaram liberados para todos
 
 
