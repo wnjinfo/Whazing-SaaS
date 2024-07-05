@@ -21,6 +21,8 @@ const empresa = {
         state.empresas[index].email = payload.data.email
         state.empresas[index].dueDate = payload.data.dueDate
         state.empresas[index].recurrence = payload.data.recurrence
+      } else if (payload.action == 'delete') {
+        state.empresas = state.empresas.filter(item => item.id != payload.id)
       }
     }
   }

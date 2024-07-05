@@ -78,12 +78,7 @@ export function AtualizarTenant(data) {
     data
   })
 }
-export function DeletarTenant(id) {
-  return request({
-    url: '/admin/tenants/' + id,
-    method: 'delete'
-  })
-}
+
 export function ListarWhatsappsAdmin () {
   return request({
     url: '/admin/channels',
@@ -96,5 +91,26 @@ export function CriarTeste(data) {
     url: '/empresa/signup',
     method: 'post',
     data
+  })
+}
+
+export function MostrarVencimento() {
+  return request({
+    url: '/tenants/date/',
+    method: 'get'
+  })
+}
+
+export function DeletarTenant (data) {
+  return request({
+    url: `/admin/tenants/${data.id}`,
+    method: 'delete'
+  })
+}
+
+export function AddMonthTenant (data) {
+  return request({
+    url: `/admin/tenantsMonth/${data.id}`,
+    method: 'post'
   })
 }

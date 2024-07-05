@@ -39,9 +39,14 @@
             {{ props.row.email }}
           </q-td>
           <q-td key="dueDate" :props="props">
-            {{ props.row.dueDate }}
+            {{ formatDate(props.row.dueDate) }}
           </q-td>
           <q-td class="text-center">
+            <q-btn flat round icon="mdi-calendar-plus" @click="addMonthTenant(props.row)">
+              <q-tooltip content-class="shadow-4" :offset="[10, 10]">
+                Adicionar 1 mês
+              </q-tooltip>
+            </q-btn>
             <q-btn flat round icon="mdi-account-reactivate" @click="abrirModalConformacaoAtivacao(props.row)">
               <q-tooltip content-class="shadow-4" :offset="[10, 10]">
                 {{ props.row.status == 'active' ? 'Desativar Empresa' : 'Ativar Empresa' }}
@@ -60,6 +65,11 @@
             <q-btn flat round icon="edit" @click="editarEmpresa(props.row)">
               <q-tooltip content-class="shadow-4" :offset="[10, 10]">
                 Editar Empresa
+              </q-tooltip>
+            </q-btn>
+            <q-btn flat round icon="delete" @click="deletarTenant(props.row)">
+              <q-tooltip content-class="shadow-4" :offset="[10, 10]">
+                Deletar Empresa
               </q-tooltip>
             </q-btn>
           </q-td>
@@ -89,7 +99,7 @@
 </template>
 
 <script>
-import { AdminListarEmpresas, AdminUpdateStatusEmpresa } from '../../service/empresas'
+import { AdminListarEmpresas, AdminUpdateStatusEmpresa, DeletarTenant, AddMonthTenant } from '../../service/empresas'
 import { adminListarWhatsapps } from 'src/service/sessoesWhatsapp'
 import ModalEmpresa from './ModalEmpresa.vue'
 import ModalUsuario from './ModalUsuario.vue'
@@ -210,6 +220,104 @@ export default {
     }
   },
   methods: {
+    async addMonthTenant(tenant) {
+      this.loading = true
+      try {
+        const response = await AddMonthTenant(tenant)
+        const updatedTenant = response.data
+
+        // Atualize o estado da empresa no Vuex
+        this.$store.commit('EMPRESAS_ADMIN', {
+          action: 'update',
+          id: tenant.id,
+          data: updatedTenant
+        })
+        this.$q.notify({
+          type: 'positive',
+          progress: true,
+          position: 'top',
+          message: `1 mês adicionado para a empresa ${tenant.name}!`,
+          actions: [{
+            icon: 'close',
+            round: true,
+            color: 'white'
+          }]
+        })
+      } catch (error) {
+        console.error('Erro ao adicionar mês para a empresa:', error)
+        this.$q.notify({
+          type: 'negative',
+          progress: true,
+          position: 'top',
+          message: 'Erro ao adicionar mês. Por favor, tente novamente.',
+          actions: [{
+            icon: 'close',
+            round: true,
+            color: 'white'
+          }]
+        })
+      } finally {
+        this.loading = false
+      }
+    },
+    deletarTenant(tenant) {
+      this.$q.dialog({
+        title: 'Atenção!!',
+        message: `Deseja realmente deletar a Empresa "${tenant.id}"?`,
+        cancel: {
+          label: 'Não',
+          color: 'primary',
+          push: true
+        },
+        ok: {
+          label: 'Sim',
+          color: 'negative',
+          push: true
+        },
+        persistent: true
+      }).onOk(async () => {
+        this.loading = true
+        try {
+          await DeletarTenant(tenant)
+          // Atualize o estado das empresas no Vuex
+          this.$store.commit('EMPRESAS_ADMIN', { action: 'delete', id: tenant.id })
+          this.$q.notify({
+            type: 'positive',
+            progress: true,
+            position: 'top',
+            message: `Empresa ${tenant.id} deletada!`,
+            actions: [{
+              icon: 'close',
+              round: true,
+              color: 'white'
+            }]
+          })
+        } catch (error) {
+          console.error('Erro ao deletar a empresa:', error)
+          this.$q.notify({
+            type: 'negative',
+            progress: true,
+            position: 'top',
+            message: 'Erro ao deletar a empresa. Por favor, tente novamente.',
+            actions: [{
+              icon: 'close',
+              round: true,
+              color: 'white'
+            }]
+          })
+        } finally {
+          this.loading = false
+        }
+      })
+    },
+    formatDate(date) {
+      try {
+        return format(parseISO(date), 'dd/MM/yyyy')
+      } catch (error) {
+        console.error('Invalid date format:', error)
+        return date // Fallback to original date if parsing/formatting fails
+      }
+    },
     async listarEmpresas() {
       this.loading = true
       const { data } = await AdminListarEmpresas()
