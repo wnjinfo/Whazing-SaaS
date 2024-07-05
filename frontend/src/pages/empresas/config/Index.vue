@@ -26,6 +26,104 @@
         </div>
       </div>
 
+      <q-item tag="label" v-ripple>
+        <q-item-section>
+          <q-item-label>Exibir informativo</q-item-label>
+          <q-item-label caption>Mostrara uma informação em todas paginas</q-item-label>
+        </q-item-section>
+        <q-item-section avatar>
+          <q-toggle v-model="informative" false-value="disabled" true-value="enabled" checked-icon="check"
+            keep-color :color="informative === 'enabled' ? 'green' : 'negative'" size="md"
+            unchecked-icon="clear" @input="atualizarConfiguracao('informative')" />
+        </q-item-section>
+      </q-item>
+
+      <div class="row q-px-md" v-if="informative === 'enabled'">
+        <div class="col-12">
+          <q-input v-model="textinformative" type="textarea" autogrow dense outlined
+            label="Informativo:" input-style="min-height: 6vh; max-height: 9vh;" debounce="700"
+            @input="atualizarConfiguracao('textinformative')" />
+        </div>
+      </div>
+
+      <div class="row q-px-md" v-if="informative === 'enabled'">
+        <div class="col-12">
+      <q-input
+        label="Cor do Fundo do informativo:"
+        autogrow dense outlined
+        :style="`background: ${colorinformative}`"
+        v-model="colorinformative"
+        input-style="min-height: 6vh; max-height: 9vh;" debounce="700"
+        :dark="false"
+        @input="atualizarConfiguracao('colorinformative')"
+      >
+	  
+        <template v-slot:preappend></template>
+        <template v-slot:append>
+          <q-icon
+            name="colorize"
+            class="cursor-pointer"
+            @click="openColorPicker = true"
+          ></q-icon>
+          <q-popup-proxy
+            v-model="openColorPicker"
+            transition-show="scale"
+            transition-hide="scale"
+          >
+            <q-color
+              format-model="hex"
+              square
+              default-view="palette"
+              no-header
+              bordered
+              v-model="colorinformative"
+              @input="atualizarConfiguracao('colorinformative')"
+            />
+          </q-popup-proxy>
+        </template>
+      </q-input>
+        </div>
+      </div>
+	  
+      <div class="row q-px-md" v-if="informative === 'enabled'">
+        <div class="col-12">
+      <q-input
+        label="Cor do Texto do informativo:"
+        autogrow dense outlined
+        :style="`background: ${colorinformativetext}`"
+        v-model="colorinformativetext"
+        input-style="min-height: 6vh; max-height: 9vh;" debounce="700"
+        :dark="false"
+        @input="atualizarConfiguracao('colorinformativetext')"
+      >
+	  
+        <template v-slot:preappend></template>
+        <template v-slot:append>
+          <q-icon
+            name="colorize"
+            class="cursor-pointer"
+            @click="openColorPicker2 = true"
+          ></q-icon>
+          <q-popup-proxy
+            v-model="openColorPicker2"
+            transition-show="scale"
+            transition-hide="scale"
+          >
+            <q-color
+              format-model="hex"
+              square
+              default-view="palette"
+              no-header
+              bordered
+              v-model="colorinformativetext"
+              @input="atualizarConfiguracao('colorinformativetext')"
+            />
+          </q-popup-proxy>
+        </template>
+      </q-input>
+        </div>
+      </div>
+
     </q-list>
 
   </div>
@@ -39,7 +137,13 @@ export default {
     return {
       configuracoes: [],
       allowSignup: null,
-      timeTest: ''
+      timeTest: '',
+      informative: null,
+      textinformative: '',
+      colorinformative: '',
+      colorinformativetext: '',
+      openColorPicker: false,
+      openColorPicker2: false
     }
   },
   methods: {

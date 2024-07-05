@@ -203,6 +203,7 @@
     </q-drawer>
 
     <q-page-container>
+        <informative />
       <q-page class="q-pa-xs">
         <router-view />
       </q-page>
@@ -233,6 +234,7 @@ import { ListarConfiguracoes } from 'src/service/configuracoes'
 import { RealizarLogout } from 'src/service/login'
 import cStatusUsuario from '../components/cStatusUsuario.vue'
 import vencimento from '../components/vencimento.vue'
+import informative from '../components/informative.vue'
 import { socketIO } from 'src/utils/socket'
 import { ConsultarTickets } from 'src/service/tickets'
 import { listCountUnreadMessage } from 'src/service/chatInterno'
@@ -367,7 +369,7 @@ const objMenuAdmin = [
 export default {
   name: 'MainLayout',
   mixins: [socketInitial],
-  components: { EssentialLink, ModalUsuario, cStatusUsuario, cSystemVersion, vencimento },
+  components: { EssentialLink, ModalUsuario, cStatusUsuario, cSystemVersion, vencimento, informative },
   data () {
     return {
       username,
