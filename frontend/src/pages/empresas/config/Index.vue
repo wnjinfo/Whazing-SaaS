@@ -32,7 +32,7 @@
 </template>
 
 <script>
-import { ListarConfiguracoes, AlterarConfiguracao } from '../../../service/configuracoes'
+import { ListarConfiguracoesGeneral, AlterarConfiguracaoGeneral } from '../../../service/configuracoesgeneral'
 export default {
   name: 'ConfiguracoesSaaS',
   data() {
@@ -44,7 +44,7 @@ export default {
   },
   methods: {
     async listarConfiguracoes() {
-      const { data } = await ListarConfiguracoes()
+      const { data } = await ListarConfiguracoesGeneral()
       this.configuracoes = data
       this.configuracoes.forEach(el => {
         const value = el.value
@@ -57,7 +57,7 @@ export default {
         value: this.$data[key]
       }
       try {
-        await AlterarConfiguracao(params)
+        await AlterarConfiguracaoGeneral(params)
         this.$q.notify({
           type: 'positive',
           message: 'Configuração alterada!',
