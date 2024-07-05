@@ -22,8 +22,10 @@
             spinner-color="primary"
             style="height: 50px; width: 140px" />
         </q-btn>
-
         <q-space />
+        <div v-if="$q.screen.gt.xs">
+        <vencimento />
+        </div>
             <q-btn round
             dense
             flat
@@ -230,6 +232,7 @@ import { mapGetters } from 'vuex'
 import { ListarConfiguracoes } from 'src/service/configuracoes'
 import { RealizarLogout } from 'src/service/login'
 import cStatusUsuario from '../components/cStatusUsuario.vue'
+import vencimento from '../components/vencimento.vue'
 import { socketIO } from 'src/utils/socket'
 import { ConsultarTickets } from 'src/service/tickets'
 import { listCountUnreadMessage } from 'src/service/chatInterno'
@@ -364,7 +367,7 @@ const objMenuAdmin = [
 export default {
   name: 'MainLayout',
   mixins: [socketInitial],
-  components: { EssentialLink, ModalUsuario, cStatusUsuario, cSystemVersion },
+  components: { EssentialLink, ModalUsuario, cStatusUsuario, cSystemVersion, vencimento },
   data () {
     return {
       username,
