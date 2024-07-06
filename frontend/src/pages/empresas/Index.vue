@@ -12,6 +12,7 @@
         <q-tab name="Dashboard" label="Dashboard" />
         <q-tab name="empresas" label="Empresas" />
         <q-tab name="planos" label="Planos" />
+        <q-tab name="ajuda" label="Ajuda" />
         <q-tab name="config" label="Configurações" />
       </q-tabs>
       <q-separator />
@@ -29,6 +30,10 @@
           <planos/>
         </q-tab-panel>
 
+        <q-tab-panel name="ajuda">
+          <ajuda/>
+        </q-tab-panel>
+
         <q-tab-panel name="config">
           <config/>
         </q-tab-panel>
@@ -42,6 +47,7 @@
 import empresa from './empresa.vue'
 import dashboard from './dashboard/index.vue'
 import planos from './planos/Index.vue'
+import ajuda from './ajuda/Index.vue'
 import config from './config/Index.vue'
 
 export default {
@@ -56,6 +62,7 @@ export default {
     empresa,
     dashboard,
     planos,
+    ajuda,
     config
   }
 }

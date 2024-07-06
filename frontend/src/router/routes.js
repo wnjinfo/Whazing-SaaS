@@ -11,6 +11,7 @@ const routes = [
       // { path: '/ConsultarTicketsQueuesService', name: 'dashboard', component: () => import('pages/dashboard/Index.vue') },
       { path: '/sessoes', name: 'sessoes', component: () => import('pages/sessaoWhatsapp/Index.vue') },
       { path: '/contatos', name: 'contatos', component: () => import('pages/contatos/Index.vue') },
+      { path: '/ajuda', name: 'ajuda', component: () => import('pages/ajuda/Index.vue') },
       { path: '/empresas', name: 'empresas', component: () => import('pages/empresas/Index.vue'), meta: { requiresAuth: true } },
       { path: '/usuarios', name: 'usuarios', component: () => import('pages/usuarios/Index.vue') },
       { path: '/auto-resposta', name: 'auto-resposta', component: () => import('pages/fluxoAutoResposta/Index.vue') },

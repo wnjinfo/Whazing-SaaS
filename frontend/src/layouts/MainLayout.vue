@@ -265,6 +265,12 @@ const objMenu = [
     caption: 'Chat Interno',
     icon: 'mdi-forum-outline',
     routeName: 'chat-interno'
+  },
+  {
+    title: 'Ajuda',
+    caption: 'Ajuda',
+    icon: 'mdi-help',
+    routeName: 'ajuda'
   }
 ]
 
