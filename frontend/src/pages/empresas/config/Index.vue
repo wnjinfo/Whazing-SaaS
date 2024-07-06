@@ -57,7 +57,7 @@
         :dark="false"
         @input="atualizarConfiguracao('colorinformative')"
       >
-	  
+
         <template v-slot:preappend></template>
         <template v-slot:append>
           <q-icon
@@ -84,7 +84,7 @@
       </q-input>
         </div>
       </div>
-	  
+
       <div class="row q-px-md" v-if="informative === 'enabled'">
         <div class="col-12">
       <q-input
@@ -96,7 +96,7 @@
         :dark="false"
         @input="atualizarConfiguracao('colorinformativetext')"
       >
-	  
+
         <template v-slot:preappend></template>
         <template v-slot:append>
           <q-icon
