@@ -11,6 +11,7 @@ Novos recursos
 - Chat Interno
 - Solicitar teste na pagina de login
 - Planos
+- Menu Ajuda
 
 Dados de Acesso
 
