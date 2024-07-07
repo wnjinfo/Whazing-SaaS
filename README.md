@@ -67,6 +67,8 @@ Seguem links sugerimos:
 
 -  [Powerful cloud VPS & Web hosting.](https://control.peramix.com/?affid=58)
 
+- Cupom 25% desconto "WHAZING"
+
 ## Consultoria particular
 
 Para quem gostaria de uma consultoria ou que eu faça instalação pode chamar no whatsapp (será cobrado por isso) 48 999416725
