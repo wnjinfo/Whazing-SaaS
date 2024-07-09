@@ -245,12 +245,6 @@ cd whazing/backend
 npm install --force
 ```
 
-32. Buildando o backend
-
-```bash
-npm run build
-```
-
 . Reniciando docker
 ```bash
 docker container restart portainer
