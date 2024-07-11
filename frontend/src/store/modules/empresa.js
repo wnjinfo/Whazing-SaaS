@@ -19,6 +19,7 @@ const empresa = {
         state.empresas[index].maxConnections = payload.data.maxConnections
         state.empresas[index].phone = payload.data.phone
         state.empresas[index].email = payload.data.email
+        state.empresas[index].planId = payload.data.planId
         state.empresas[index].dueDate = payload.data.dueDate
         state.empresas[index].recurrence = payload.data.recurrence
       } else if (payload.action == 'delete') {

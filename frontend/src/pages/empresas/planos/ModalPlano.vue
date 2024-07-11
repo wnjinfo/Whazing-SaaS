@@ -8,10 +8,10 @@
             <q-input class="row col" square outlined v-model="plano.name" label="Nome do Plano" />
             <q-input class="row col" square outlined v-model="plano.maxUsers" label="Máx. Usuários" />
             <q-input class="row col" square outlined v-model="plano.maxConnections" label="Máx. Conexões" />
-            <q-input class="row col" square outlined v-model="plano.value" label="value" />
+            <q-input class="row col" square outlined v-model="plano.value" label="Valor" />
         <q-checkbox
           v-model="plano.isPublic"
-          label="Ativo"
+          label="Publico"
         />
       </q-card-section>
       <q-card-actions align="right" class="q-mt-md">
