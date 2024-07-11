@@ -13,14 +13,6 @@
               :validator="$v.tenant.cnpj" @blur="$v.tenant.cnpj.$touch" />
           </div>
           <div class="col-12">
-            <c-input outlined v-model.trim="tenant.maxUsers" mask="###" label="Máximo de Usuários"
-              :validator="$v.tenant.maxUsers" @blur="$v.tenant.maxUsers.$touch" />
-          </div>
-          <div class="col-12">
-            <c-input outlined v-model.trim="tenant.maxConnections" mask="###" label="Máximo de Conexões"
-              :validator="$v.tenant.maxConnections" @blur="$v.tenant.maxConnections.$touch" />
-          </div>
-          <div class="col-12">
             <c-input outlined v-model.trim="tenant.phone" mask="(##)#####-####" label="Whatsapp"
               :validator="$v.tenant.phone" @blur="$v.tenant.phone.$touch" />
           </div>
@@ -40,6 +32,13 @@
             :error="$v.tenant.dueDate.$error"
             error-message="Não pode ser inferior ao dia atual"
           />
+              <!-- Plano (seleção) -->
+              <q-select
+                v-model="tenant.planId"
+                :options="options"
+                label="Plano"
+                outlined
+              />
           </div>
         </div>
       </q-card-section>
@@ -75,8 +74,9 @@
 </template>
 
 <script>
-import { required, email, minLength, maxLength, minValue } from 'vuelidate/lib/validators'
+import { required, email, minLength, maxLength } from 'vuelidate/lib/validators'
 import { CriarTenant, AdminUpdateEmpresa } from 'src/service/empresas'
+import { list } from 'src/service/plans'
 
 export default {
   name: 'ModalEmpresa',
@@ -101,17 +101,22 @@ export default {
         name: '',
         email: '',
         password: '',
-        maxUsers: 1,
-        maxConnections: 1,
         phone: '',
-        dueDate: ''
+        dueDate: '',
+        plano: null
       },
+      planos: [],
       usuario: {
         name: '',
         email: '',
         password: '',
         profile: ''
       }
+    }
+  },
+  computed: {
+    options() {
+      return this.formattedPlanos()
     }
   },
   validations: {
@@ -125,14 +130,6 @@ export default {
         required,
         minLength: minLength(18),
         maxLength: maxLength(18)
-      },
-      maxUsers: {
-        required,
-        minValue: minValue(1)
-      },
-      maxConnections: {
-        required,
-        minValue: minValue(1)
       },
       phone: {
         required
@@ -159,6 +156,25 @@ export default {
     }
   },
   methods: {
+    async fetchPlanData() {
+      try {
+        const response = await list()
+        this.planos = response.data
+        console.log('Planos fetched:', this.planos) // Log para verificar os dados recebidos
+      } catch (error) {
+        console.error('Error fetching plan data:', error)
+      }
+    },
+    formattedPlanos() {
+      const formatted = this.planos.map(plan => ({
+        label: `${plan.name} - Atendentes: ${plan.maxUsers} - Canais: ${plan.maxConnections} - R$ ${plan.value.toFixed(2).replace('.', ',')}`,
+        value: plan.id,
+        maxUsers: plan.maxUsers,
+        maxConnections: plan.maxConnections
+      }))
+      console.log('Formatted Planos:', formatted) // Log para verificar os dados formatados
+      return formatted
+    },
     async handleUsuario() {
       if (this.tenantSelecionado.id) {
         await this.handleEdit()
@@ -173,17 +189,16 @@ export default {
       }
 
       const { name, email, password } = this.usuario
-      const { name: tenantName, cnpj, maxUsers, maxConnections, phone, dueDate } = this.tenant
+      const { name: tenantName, cnpj, phone, dueDate, planId } = this.tenant
       const data = {
         name,
         email,
-        maxUsers,
-        maxConnections,
         password,
         tenantName,
         cnpj,
         phone,
-        dueDate
+        dueDate,
+        planId
       }
 
       const tenant = await CriarTenant(data)
@@ -209,14 +224,13 @@ export default {
         this.$v.tenant.$touch()
         return
       }
-      const { name, cnpj, maxUsers, maxConnections, phone, dueDate } = this.tenant
+      const { name, cnpj, phone, dueDate, planId } = this.tenant
       const data = {
         name,
         cnpj,
-        maxUsers,
-        maxConnections,
         phone,
-        dueDate
+        dueDate,
+        planId
       }
       const tenant = await AdminUpdateEmpresa(this.tenantSelecionado.id, data)
 
@@ -242,10 +256,9 @@ export default {
         this.tenant = {
           name: this.tenantSelecionado.name,
           cnpj: this.tenantSelecionado.cnpj,
-          maxUsers: this.tenantSelecionado.maxUsers,
-          maxConnections: this.tenantSelecionado.maxConnections,
           phone: this.tenantSelecionado.phone,
-          dueDate: this.tenantSelecionado.dueDate
+          dueDate: this.tenantSelecionado.dueDate,
+          plano: this.tenantSelecionado.PlanId
         }
       }
     },
@@ -260,7 +273,8 @@ export default {
         cnpj: '',
         status: 'active',
         phone: '',
-        dueDate: ''
+        dueDate: '',
+        plano: ''
       }
       this.$v.usuario.$reset()
       this.$v.tenant.$reset()
@@ -269,6 +283,9 @@ export default {
       this.$emit('update:tenantSelecionado', {})
       this.isPwd = true
     }
+  },
+  mounted() {
+    this.fetchPlanData()
   }
 }
 

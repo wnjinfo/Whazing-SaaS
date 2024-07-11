@@ -15,3 +15,17 @@ export function AlterarConfiguracaoGeneral (data) {
     data
   })
 }
+
+export function enviarArquivoPrivado(file) {
+  const formData = new FormData()
+  formData.append('file', file)
+
+  return request({
+    url: '/settings/privateFile',
+    method: 'post',
+    data: formData,
+    headers: {
+      'Content-Type': 'multipart/form-data'
+    }
+  })
+}

@@ -1,32 +1,49 @@
 <template>
-  <div class="text-caption text-center bg-grey-1 q-pa-sm">
-    <q-badge align="middle"
-      color="primary">
+  <div :class="['text-caption text-center q-pa-sm', { 'bg-red': isDueSoon }]">
+    <q-badge align="middle" color="primary">
       Seu plano vence dia {{ duedate }}!
     </q-badge>
   </div>
 </template>
+
 <script>
 import { MostrarVencimento } from 'src/service/empresas'
-import { format, parseISO } from 'date-fns'
+import { format, parseISO, differenceInDays } from 'date-fns'
+
 export default {
   name: 'Vencimento',
-  data () {
+  data() {
     return {
-      duedate: null
+      duedate: null,
+      isDueSoon: false
     }
   },
   methods: {
-    async listarDate () {
+    async listarDate() {
       const { data } = await MostrarVencimento()
-      this.duedate = format(parseISO(data.dueDate), 'dd/MM/yyyy')
+      const dueDate = parseISO(data.dueDate)
+      const formattedDate = format(dueDate, 'dd/MM/yyyy')
+      this.duedate = formattedDate
+
+      const today = new Date()
+      const daysUntilDue = differenceInDays(dueDate, today)
+
+      if (daysUntilDue <= 3 && daysUntilDue > 0) {
+        this.isDueSoon = true
+      } else if (daysUntilDue <= 0) {
+        this.isDueSoon = true
+        this.$router.push('/financeiro')
+      }
     }
   },
-  mounted () {
-    this.listarDate()
+  async mounted() {
+    await this.listarDate()
   }
 }
 </script>
-<style>
 
+<style>
+.bg-red {
+  background-color: red;
+}
 </style>

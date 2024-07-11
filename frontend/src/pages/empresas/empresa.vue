@@ -41,6 +41,9 @@
           <q-td key="dueDate" :props="props">
             {{ formatDate(props.row.dueDate) }}
           </q-td>
+          <q-td key="planId" :props="props">
+            {{ props.row.planId }}
+          </q-td>
           <q-td class="text-center">
             <q-btn flat round icon="mdi-calendar-plus" @click="addMonthTenant(props.row)">
               <q-tooltip content-class="shadow-4" :offset="[10, 10]">
@@ -198,6 +201,13 @@ export default {
           align: 'left',
           sortable: false,
           format: (v) => format(parseISO(v), 'dd/MM/yyyy')
+        },
+        {
+          name: 'planId',
+          label: 'Plano',
+          field: 'planId',
+          align: 'left',
+          sortable: false
         },
         {
           name: 'acoes',

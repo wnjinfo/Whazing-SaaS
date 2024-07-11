@@ -19,6 +19,7 @@ const routes = [
       { path: '/filas', name: 'filas', component: () => import('pages/filas/Index.vue') },
       { path: '/configuracoes', name: 'configuracoes', component: () => import('pages/configuracoes/Index.vue') },
       { path: '/etiquetas', name: 'etiquetas', component: () => import('pages/etiquetas/Index.vue') },
+      { path: '/financeiro', name: 'financeiro', component: () => import('pages/financeiro/Index.vue') },
       { path: '/campanhas', name: 'campanhas', component: () => import('pages/campanhas/Index.vue') },
       { path: '/campanhas/:campanhaId', name: 'contatos-campanha', component: () => import('pages/campanhas/ContatosCampanha.vue') },
       { path: '/horario-atendimento', name: 'horarioAtendimento', component: () => import('pages/horarioAtendimento/Index.vue') },
