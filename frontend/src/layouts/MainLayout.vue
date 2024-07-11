@@ -355,7 +355,12 @@ const objMenuAdmin = [
     icon: 'mdi-cog',
     routeName: 'configuracoes'
   },
-  /// / criar rotina para liberar pelo backend
+  {
+    title: 'Financeiro',
+    caption: 'Financeiro',
+    icon: 'mdi-cash-multiple',
+    routeName: 'financeiro'
+  },
   {
     title: 'Campanha',
     caption: 'Campanhas de envio',
