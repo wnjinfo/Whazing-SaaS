@@ -12,6 +12,7 @@ Novos recursos
 - Solicitar teste na pagina de login
 - Planos
 - Menu Ajuda
+- Integração bancaria recebimento PIX, verificar docs
 
 Dados de Acesso
 
