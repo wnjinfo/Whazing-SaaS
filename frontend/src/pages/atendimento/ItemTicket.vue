@@ -183,6 +183,8 @@ export default {
   mixins: [mixinAtualizarStatusTicket],
   data () {
     return {
+      isTicketModalOpen: false,
+      currentTicket: {},
       tagsDoTicket: [],
       walletsDoTicket: [],
       outlinedAccountCircle,

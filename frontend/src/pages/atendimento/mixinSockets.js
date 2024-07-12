@@ -115,13 +115,13 @@ export default {
             const params = {
               searchParam: '',
               pageNumber: 1,
-              status: ['open'],
+              status: ['open', 'pending', 'closed'],
               showAll: false,
               count: null,
               queuesIds: [],
-              withUnreadMessages: true,
-              isNotAssignedUser: false,
-              includeNotQueueDefined: true
+              withUnreadMessages: [true, false],
+              isNotAssignedUser: [true, false],
+              includeNotQueueDefined: [true, false]
               // date: new Date(),
             }
             console.log('Definiu parametros')
@@ -164,7 +164,7 @@ export default {
             const params = {
               searchParam: '',
               pageNumber: 1,
-              status: ['pending'],
+              status: ['open', 'pending', 'closed'],
               showAll: false,
               count: null,
               queuesIds: [],

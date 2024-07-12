@@ -152,7 +152,7 @@ export default {
           const params = {
             searchParam: '',
             pageNumber: 1,
-            status: ['pending'],
+            status: ['open', 'pending', 'closed'],
             showAll: false,
             count: null,
             queuesIds: [],
@@ -260,6 +260,6 @@ export default {
     this.socketInitial()
   },
   destroyed () {
-    socket && socket.disconnect()
+    socket.disconnect()
   }
 }
