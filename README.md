@@ -9,7 +9,7 @@ Acesso instagram funcional somente use servidor no Brasil pois usa instagram web
 Novos recursos
 - Painel SaaS
 - Chat Interno
-- Solicitar teste na pagina de login
+- Solicitar teste na pagina de login, e função esqueci a senha
 - Planos
 - Menu Ajuda
 - Integração bancaria recebimento PIX, verificar docs
