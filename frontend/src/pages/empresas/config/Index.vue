@@ -173,6 +173,39 @@
         </div>
       </div>
 
+      <div class="row q-px-md">
+        <div class="col-12">
+        <q-item-section>
+          <q-item-label>Configuração servidor email para opção esqueci senha</q-item-label>
+        </q-item-section>
+          <q-input v-model="smtp" type="textarea" autogrow dense outlined
+            label="SMTP:" input-style="min-height: 6vh; max-height: 9vh;" debounce="700"
+            @input="atualizarConfiguracao('smtp')" />
+          <q-input v-model="usuariosmtp" type="textarea" autogrow dense outlined
+            label="Usuario SMTP:" input-style="min-height: 6vh; max-height: 9vh;" debounce="700"
+            @input="atualizarConfiguracao('usuariosmtp')" />
+          <q-input v-model="senhasmtp" type="textarea" autogrow dense outlined
+            label="Senha SMTP:" input-style="min-height: 6vh; max-height: 9vh;" debounce="700"
+            @input="atualizarConfiguracao('senhasmtp')" />
+          <q-input v-model="fromemail" type="textarea" autogrow dense outlined
+            label="FROM:" input-style="min-height: 6vh; max-height: 9vh;" debounce="700"
+            @input="atualizarConfiguracao('fromemail')" />
+          <q-input v-model="portasmtp" type="number" autogrow dense outlined
+            label="Porta SMTP:" input-style="min-height: 6vh; max-height: 9vh;" debounce="700"
+            @input="atualizarConfiguracao('portasmtp')" />
+      <q-item tag="label" v-ripple>
+        <q-item-section>
+          <q-item-label>Habilitar SSL/TLS</q-item-label>
+        </q-item-section>
+        <q-item-section avatar>
+          <q-toggle v-model="smtpsecure" false-value="false" true-value="true" checked-icon="check"
+            keep-color :color="smtpsecure === 'true' ? 'green' : 'negative'" size="md"
+            unchecked-icon="clear" @input="atualizarConfiguracao('smtpsecure')" />
+        </q-item-section>
+      </q-item>
+        </div>
+      </div>
+
     </q-list>
 
   </div>
@@ -205,7 +238,13 @@ export default {
       owenCnpj: '',
       owenToken: '',
       owenSecretKey: '',
-      efiCertFile: ''
+      efiCertFile: '',
+      smtp: '',
+      usuariosmtp: '',
+      senhasmtp: '',
+      fromemail: '',
+      portasmtp: '',
+      smtpsecure: ''
     }
   },
   methods: {
