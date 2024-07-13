@@ -45,8 +45,8 @@
             <q-badge color="red"
               text-color="white"
               floating
-              v-if="(parseInt(notificacoesChat) + parseInt(notifications_p.count)) > 0">
-              {{ this.notificacaoInternaNaoLida + parseInt(notifications_p.count) }}
+              v-if="(this.notificacaoInternaNaoLida + parseInt(notifications_p.count) + parseInt(notifications.count)) > 0">
+              {{ this.notificacaoInternaNaoLida + parseInt(notifications_p.count) + parseInt(notifications.count)}}
             </q-badge>
             <q-menu>
               <q-list style="min-width: 300px">
@@ -267,6 +267,12 @@ const objMenu = [
     routeName: 'chat-interno'
   },
   {
+    title: 'Mensagens Rápidas',
+    caption: 'Mensagens pré-definidas',
+    icon: 'mdi-reply-all-outline',
+    routeName: 'mensagens-rapidas'
+  },
+  {
     title: 'Ajuda',
     caption: 'Ajuda',
     icon: 'mdi-help',
@@ -324,12 +330,6 @@ const objMenuAdmin = [
     caption: 'Cadastro de Filas',
     icon: 'mdi-arrow-decision-outline',
     routeName: 'filas'
-  },
-  {
-    title: 'Mensagens Rápidas',
-    caption: 'Mensagens pré-definidas',
-    icon: 'mdi-reply-all-outline',
-    routeName: 'mensagens-rapidas'
   },
   {
     title: 'Chatbot',
@@ -642,6 +642,10 @@ export default {
     await this.listarConfiguracoes()
     await this.consultarTickets()
     await this.listarMensagens()
+    this.socket.on('disconnect', () => {
+      console.log('Socket disconnected. Trying to reconnect...')
+      this.socket.connect()
+    })
     if ('Notification' in window) {
       if (Notification.permission !== 'granted') {
         await Notification.requestPermission()
