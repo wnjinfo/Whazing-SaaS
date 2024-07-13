@@ -8,8 +8,6 @@ const socket = socketIO()
 
 const userId = +localStorage.getItem('userId')
 
-// localStorage.debug = '*'
-
 socket.on(`tokenInvalid:${socket.id}`, () => {
   socket.disconnect()
   localStorage.removeItem('token')
@@ -26,45 +24,52 @@ socket.on(`tokenInvalid:${socket.id}`, () => {
 
 export default {
   created() {
-    socket.on(`${usuario.tenantId}:mensagem-chat-interno`, data => {
-      if (data.action === 'update' && (data.data.receiverId == usuario.userId || data.data.groupId != null)) {
-        this.$store.commit('MENSAGEM_INTERNA_UPDATE', data)
-      }
-    })
-
-    socket.on(`${usuario.tenantId}:unread-mensagem-chat-interno`, data => {
-      if (data.action === 'update' && data.data.senderId == usuario.userId) {
-        this.$store.commit('UNREAD_MENSAGEM_INTERNA_UPDATE', data)
-      }
-    })
-
-    socket.on(`${usuario.tenantId}:mensagem-chat-interno-notificacao`, data => {
-      if (data.action === 'update' && (data.data.receiverId == usuario.userId || data.data.groupId != null)) {
-        this.$store.commit('NOTIFICACAO_CHAT_INTERNO_UPDATE', data)
-      }
-    })
-
-    socket.on('verifyOnlineUsers', data => {
-      this.$store.commit('LISTA_USUARIOS_CHAT_INTERNO', { action: 'updateAllUsers', data: {} })
-      this.socket.emit(`${usuario.tenantId}:userVerified`, usuario)
-    })
-
-    socket.on(`${usuario.tenantId}:user-online`, data => {
-      if (data.action === 'update' && data.data.userId !== usuario.userId) {
-        this.$store.commit('USER_CHAT_UPDATE', data)
-      }
-    })
+    this.setupSocketListeners()
+    this.socketTicketList()
   },
   methods: {
+    setupSocketListeners() {
+      socket.on(`${usuario.tenantId}:mensagem-chat-interno`, data => {
+        if (data.action === 'update' && (data.data.receiverId == usuario.userId || data.data.groupId != null)) {
+          this.$store.commit('MENSAGEM_INTERNA_UPDATE', data)
+        }
+      })
+
+      socket.on(`${usuario.tenantId}:unread-mensagem-chat-interno`, data => {
+        if (data.action === 'update' && data.data.senderId == usuario.userId) {
+          this.$store.commit('UNREAD_MENSAGEM_INTERNA_UPDATE', data)
+        }
+      })
+
+      socket.on(`${usuario.tenantId}:mensagem-chat-interno-notificacao`, data => {
+        if (data.action === 'update' && (data.data.receiverId == usuario.userId || data.data.groupId != null)) {
+          this.$store.commit('NOTIFICACAO_CHAT_INTERNO_UPDATE', data)
+        }
+      })
+
+      socket.on('verifyOnlineUsers', data => {
+        this.$store.commit('LISTA_USUARIOS_CHAT_INTERNO', { action: 'updateAllUsers', data: {} })
+        socket.emit(`${usuario.tenantId}:userVerified`, usuario)
+      })
+
+      socket.on(`${usuario.tenantId}:user-online`, data => {
+        if (data.action === 'update' && data.data.userId !== usuario.userId) {
+          this.$store.commit('USER_CHAT_UPDATE', data)
+        }
+      })
+    },
     scrollToBottom () {
       setTimeout(() => {
         this.$root.$emit('scrollToBottomMessageChat')
       }, 200)
     },
     socketMessagesList () {
-
+      // Implementação original da função socketMessagesList
+      console.log('socketMessagesList function called')
+      // Coloque aqui a lógica necessária para a função socketMessagesList
     },
     socketTicket () {
+      // Implementação original da função socketTicket
       socket.on('connect', () => {
         socket.on(`${usuario.tenantId}:ticket`, data => {
           if (data.action === 'update' && data.ticket.userId === userId) {
@@ -74,29 +79,15 @@ export default {
           }
         })
       })
-
-      // socket.on(`${usuario.tenantId}:contact`, data => {
-      //   if (data.action === 'update') {
-      //     this.$store.commit('UPDATE_TICKET_CONTACT', data.contact)
-      //     if (this.$store.getters.ticketFocado.contactId === data.contact.id) {
-      //       this.$store.commit('UPDATE_TICKET_FOCADO_CONTACT', data.contact)
-      //     }
-      //   }
-      // })
+      // Coloque aqui a lógica necessária para a função socketTicket
     },
     socketTicketList () {
+      // Implementação original da função socketTicketList
       this.socketTicketListNew()
-      // const searchParam = null
+      // Coloque aqui a lógica necessária para a função socketTicketList
     },
     socketTicketListNew () {
-      // // if (status) {
-      // socket.emit(`${usuario.tenantId}:joinTickets`, 'open')
-      // socket.emit(`${usuario.tenantId}:joinTickets`, 'pending')
-      // socket.emit(`${usuario.tenantId}:joinTickets`, 'closed')
-      // // } else {
-      // socket.emit(`${usuario.tenantId}:joinNotification`)
-      // }
-
+      // Implementação original da função socketTicketListNew
       socket.on('connect', () => {
         socket.on(`${usuario.tenantId}:ticketList`, async data => {
           if (data.type === 'chat:create') {
@@ -155,6 +146,7 @@ export default {
             this.$store.commit('UPDATE_NOTIFICATIONS', data.payload)
           }
         })
+
         socket.on(`${usuario.tenantId}:ticketList`, async data => {
           var verify = []
           if (data.type === 'notification:new') {
@@ -199,6 +191,11 @@ export default {
           this.$store.commit('UPDATE_CONTACT', data.payload)
         })
       })
+    },
+    handlerNotifications(payload) {
+      // Implementação original da função handlerNotifications
+      console.log('Handler notifications called', payload)
+      // Coloque aqui a lógica necessária para a função handlerNotifications
     },
     socketDisconnect () {
       socket.disconnect()

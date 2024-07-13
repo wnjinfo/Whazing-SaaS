@@ -17,7 +17,6 @@ export const socketIO = () => {
 const socket = socketIO()
 
 socket.io.on('error', (error) => {
-  // ...
   console.error('socket error', error)
 })
 
@@ -30,3 +29,5 @@ socket.on('disconnect', (reason) => {
   }
   // else the socket will automatically try to reconnect
 })
+
+export default socket

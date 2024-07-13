@@ -1,57 +1,44 @@
-const usuario = JSON.parse(localStorage.getItem('usuario'))
 import Router from 'src/router/index'
 import { socketIO } from '../utils/socket'
 import { ConsultarTickets } from 'src/service/tickets'
 import { ListarUsuariosChatInterno } from 'src/service/user'
-const socket = socketIO()
 
+const usuario = JSON.parse(localStorage.getItem('usuario'))
 const userId = +localStorage.getItem('userId')
 
-socket.on(`tokenInvalid:${socket.id}`, () => {
-  socket.disconnect()
-  localStorage.removeItem('token')
-  localStorage.removeItem('username')
-  localStorage.removeItem('profile')
-  localStorage.removeItem('userId')
-  localStorage.removeItem('usuario')
-  setTimeout(() => {
-    Router.push({
-      name: 'login'
-    })
-  }, 1000)
-})
-
 export default {
+  data() {
+    return {
+      socket: null
+    }
+  },
   methods: {
-    socketInitial () {
-      socket.emit(`${usuario.tenantId}:joinNotification`)
+    socketInitial() {
+      this.socket = socketIO()
 
-      // socket.on(`${ usuario.tenantId }:ticket`, data => {
-      //   if (!verifySocketTicketAction(data.ticket, data.action)) return
-      //   if (data.action === 'updateUnread' || data.action === 'delete') {
+      this.socket.on(`tokenInvalid:${this.socket.id}`, () => {
+        this.socket.disconnect()
+        localStorage.removeItem('token')
+        localStorage.removeItem('username')
+        localStorage.removeItem('profile')
+        localStorage.removeItem('userId')
+        localStorage.removeItem('usuario')
+        setTimeout(() => {
+          Router.push({
+            name: 'login'
+          })
+        }, 1000)
+      })
 
-      //   }
-      // })
+      this.socket.emit(`${usuario.tenantId}:joinNotification`)
 
-      // socket.on(`${ usuario.tenantId }:appMessage`, data => {
-      //   if (
-      //     data.action === 'create' &&
-      //     !data.message.read &&
-      //     (data.ticket.userId === userId || !data.ticket.userId)
-      //   ) {
-      //     if (isQueueOrUserNotify(data.ticket)) {
-      //       this.handlerNotifications(data)
-      //     }
-      //   }
-      // })
-
-      socket.io.on(`${usuario.tenantId}:whatsapp`, data => {
+      this.socket.on(`${usuario.tenantId}:whatsapp`, data => {
         if (data.action === 'update') {
           this.$store.commit('UPDATE_WHATSAPPS', data.whatsapp)
         }
       })
 
-      socket.on(`${usuario.tenantId}:ticketList`, async data => {
+      this.socket.on(`${usuario.tenantId}:ticketList`, async data => {
         console.log('socket ON')
         if (data.type === 'chat:create') {
           console.log('chat:create')
@@ -98,13 +85,13 @@ export default {
         }
       })
 
-      socket.on(`${usuario.tenantId}:whatsapp`, data => {
+      this.socket.on(`${usuario.tenantId}:whatsapp`, data => {
         if (data.action === 'delete') {
           this.$store.commit('DELETE_WHATSAPPS', data.whatsappId)
         }
       })
 
-      socket.on(`${usuario.tenantId}:whatsappSession`, data => {
+      this.socket.on(`${usuario.tenantId}:whatsappSession`, data => {
         if (data.action === 'update') {
           this.$store.commit('UPDATE_SESSION', data.session)
           this.$root.$emit('UPDATE_SESSION', data.session)
@@ -130,7 +117,7 @@ export default {
         }
       })
 
-      socket.on(`${usuario.tenantId}:change_battery`, data => {
+      this.socket.on(`${usuario.tenantId}:change_battery`, data => {
         this.$q.notify({
           message: `Bateria do celular do whatsapp ${data.batteryInfo.sessionName} está com bateria em ${data.batteryInfo.battery}%. Necessário iniciar carregamento.`,
           type: 'negative',
@@ -143,7 +130,8 @@ export default {
           }]
         })
       })
-      socket.on(`${usuario.tenantId}:ticketList`, async data => {
+
+      this.socket.on(`${usuario.tenantId}:ticketList`, async data => {
         var verify = []
         if (data.type === 'notification:new') {
           // console.log(data)
@@ -183,34 +171,7 @@ export default {
         }
       })
 
-      /*
-      socket.on(`${usuario.tenantId}:ticketList`, data => {
-        if (data.type === 'chat:create') {
-          if (
-            !data.payload.read &&
-            (data.payload.ticket.userId === userId || !data.payload.ticket.userId) &&
-            data.payload.ticket.id !== this.$store.getters.ticketFocado.id
-          ) {
-            if (checkTicketFilter(data.payload.ticket)) {
-              this.handlerNotifications(data.payload)
-            }
-          }
-          this.$store.commit('UPDATE_MESSAGES', data.payload)
-          this.scrollToBottom()
-        }
-        if (data.type === 'chat:ack' || data.type === 'chat:delete') {
-          this.$store.commit('UPDATE_MESSAGE_STATUS', data.payload)
-        }
-        if (data.type === 'ticket:update') {
-          console.log('Atualização de Ticket')
-          console.log(data)
-        }
-      })
-      socket.on(`${usuario.tenantId}:contactList`, data => {
-        this.$store.commit('UPDATE_CONTACT', data.payload)
-      })
-      */
-      socket.on(`${usuario.tenantId}:ticketList`, async data => {
+      this.socket.on(`${usuario.tenantId}:ticketList`, async data => {
         if (data.type === 'chat:ack' || data.type === 'chat:delete') {
           console.log('socket ON: CHAT:ACK')
           this.$store.commit('UPDATE_MESSAGE_STATUS', data.payload)
@@ -221,45 +182,47 @@ export default {
         }
       })
 
-      socket.on(`${usuario.tenantId}:mensagem-chat-interno`, data => {
+      this.socket.on(`${usuario.tenantId}:mensagem-chat-interno`, data => {
         if (data.action === 'update' && (data.data.receiverId == usuario.userId || data.data.groupId != null)) {
           this.$store.commit('MENSAGEM_INTERNA_UPDATE', data)
         }
       })
 
-      socket.on(`${usuario.tenantId}:unread-mensagem-chat-interno`, data => {
+      this.socket.on(`${usuario.tenantId}:unread-mensagem-chat-interno`, data => {
         if (data.action === 'update' && data.data.senderId == usuario.userId) {
           this.$store.commit('UNREAD_MENSAGEM_INTERNA_UPDATE', data)
         }
       })
 
-      socket.on(`${usuario.tenantId}:mensagem-chat-interno-notificacao`, data => {
+      this.socket.on(`${usuario.tenantId}:mensagem-chat-interno-notificacao`, data => {
         if (data.action === 'update' && (data.data.receiverId == usuario.userId || data.data.groupId != null)) {
           this.$store.commit('NOTIFICACAO_CHAT_INTERNO_UPDATE', data)
         }
       })
 
-      socket.on('verifyOnlineUsers', data => {
+      this.socket.on('verifyOnlineUsers', data => {
         this.$store.commit('LISTA_USUARIOS_CHAT_INTERNO', { action: 'updateAllUsers', data: {} })
         this.socket.emit(`${usuario.tenantId}:userVerified`, usuario)
       })
 
-      socket.on(`${usuario.tenantId}:user-online`, data => {
+      this.socket.on(`${usuario.tenantId}:user-online`, data => {
         if (data.action === 'update' && data.data.userId !== usuario.userId) {
           this.$store.commit('USER_CHAT_UPDATE', data)
         }
       })
 
-      socket.on(`${usuario.tenantId}:updateStatusUser`, async () => {
+      this.socket.on(`${usuario.tenantId}:updateStatusUser`, async () => {
         const { data } = await ListarUsuariosChatInterno()
         this.$store.commit('LISTA_USUARIOS_CHAT_INTERNO', { action: 'create', data: data.users })
       })
     }
   },
-  mounted () {
+  mounted() {
     this.socketInitial()
   },
-  destroyed () {
-    socket.disconnect()
+  destroyed() {
+    if (this.socket) {
+      this.socket.disconnect()
+    }
   }
 }
