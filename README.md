@@ -35,26 +35,16 @@ Essa versão ja está codigo inicial (webhook) para validar licença.
 
 
 ## Screenshots
->![Doação](screenshots/solicitarteste.png) 
+>![print](screenshots/saas.png) 
 ___  
->![Doação](screenshots/planos.png)
+>![print](screenshots/atendimento.png)
 ___
 
->![Doação](screenshots/config.png)
+>![print](screenshots/solicitarteste.png)
 ___
 
 
-## Principais funcionalidades
-
-- Multíplos canais de atendimento ✅
-- Multíplos usuários simultâneos por canais de atendimento ✅
-- Iniciar conversa com contatos existentes (whatsapp) ✅
-- Construção de Chatbot interativo ✅
-- Enviar e receber mensagens ✅
-- Enviar e receber mídias diversas (imagens/áudio/documentos) ✅
-- Multiempresas (abordagem de base compartilhada)
-
-  
+ 
 ## Instalando
 Seguem links sugerimos:
 
