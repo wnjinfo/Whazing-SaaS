@@ -1,18 +1,10 @@
 'use strict';
 const G = b, H = b;
-function b(c, d) {
-    const e = a();
-    return b = function (f, g) {
-        f = f - (-0x4b * 0x49 + 0x10dc + 0x656);
-        let h = e[f];
-        return h;
-    }, b(c, d);
-}
 (function (c, d) {
     const E = b, F = b, e = c();
     while (!![]) {
         try {
-            const f = parseInt(E(0x1ff)) / (-0x1d * -0x3b + 0x1 * -0xf8f + -0x1 * -0x8e1) * (-parseInt(E(0x20d)) / (-0x25e0 + 0x154 * -0x11 + 0x3c76)) + parseInt(F(0x1d3)) / (-0x5f8 + 0x9df + -0x3e4) * (parseInt(F(0x1df)) / (-0x1f56 + 0x1547 + 0xa13 * 0x1)) + parseInt(F(0x1ea)) / (-0x1fc4 + -0xd7a * 0x1 + 0x2d43 * 0x1) * (parseInt(F(0x1fd)) / (-0x21 * -0x38 + -0xd81 + -0x1 * -0x64f)) + -parseInt(F(0x1dc)) / (0x4 * 0x694 + 0x5e * -0x35 + -0x6d3) + -parseInt(F(0x1dd)) / (0x3da + 0x1266 + -0x1638) * (-parseInt(F(0x1f8)) / (-0x1 * 0x22e7 + 0x5 * -0x2f1 + 0x31a5)) + -parseInt(E(0x1e1)) / (-0x21d2 + 0x1482 + 0x1 * 0xd5a) + parseInt(F(0x1d7)) / (0x1904 + 0x1801 + -0x30fa);
+            const f = -parseInt(E(0x1ff)) / (0x3 * 0x4f4 + 0x21eb + -0x30c6 * 0x1) * (parseInt(F(0x204)) / (-0x23 * 0x90 + 0x183e + -0xc * 0x61)) + parseInt(F(0x1d9)) / (-0xca1 + -0x1ac4 + 0x2768) * (parseInt(E(0x1f0)) / (0x45 * 0x62 + -0x1 * 0xc9d + -0xdc9 * 0x1)) + -parseInt(E(0x215)) / (0x4f3 + 0x1808 + -0x2 * 0xe7b) + parseInt(F(0x1f2)) / (0x3b9 * 0x9 + -0x1091 * 0x1 + -0x10ea) + parseInt(E(0x1e0)) / (0x122d + -0x2 * -0xb61 + -0x28e8) * (parseInt(E(0x1d7)) / (0xed7 + 0x1 * 0xa6f + 0x1 * -0x193e)) + -parseInt(F(0x1e9)) / (-0xab9 * -0x2 + 0x26 * -0xce + -0x92b * -0x1) * (-parseInt(E(0x1df)) / (-0xfb0 + 0xf9a * 0x2 + -0xf7a)) + -parseInt(E(0x1f3)) / (0xff7 + 0x1 * -0x2de + -0xd0e);
             if (f === d)
                 break;
             else
@@ -21,160 +13,168 @@ function b(c, d) {
             e['push'](e['shift']());
         }
     }
-}(a, -0x2dc70 + 0x59d9a + 0x33f2));
-function a() {
-    const L = [
-        '952655HmjLSr',
-        'tenantId',
-        '../../util',
-        'status',
-        '_SYSTEM',
-        '1783670NJQerx',
-        '568SgHKqN',
-        'include',
-        '84DkjafF',
-        'default',
-        '1434350pHWmdJ',
-        'where',
-        'type',
-        'erty',
-        'KTLVl',
-        'cGdlN',
-        'pending',
-        '../TicketS',
-        'getTime',
-        '6555XFbfFx',
-        'ers/socket',
-        'mediaName',
-        'findOne',
-        'yCyHG',
-        'rvice',
-        'ls/Message',
-        'value',
-        'update',
-        'owTicketSe',
-        'ervices/Sh',
-        'chat',
-        'create',
-        '../../mode',
-        '17217uGguXM',
-        'body',
-        'quotedMsg',
-        'model',
-        'VFdzF',
-        '1614edtToa',
-        'idation',
-        '172253GmuMtv',
-        'whatsappId',
-        'contactId',
-        'XemkA',
-        'kXMBj',
-        '../../help',
-        'chat:creat',
-        'sequelize',
-        '__esModule',
-        'open',
-        'ls/Ticket',
-        's/queueVal',
-        'payload',
-        'ERR_CREATI',
-        '2yVmSTM',
-        'mediaType',
-        'dypdn',
-        'isGroup',
-        'Emit',
-        'ticket',
-        'fault',
-        '__importDe',
-        'NG_MESSAGE',
-        'qFTqT',
-        '27033fOcIlh',
-        'findByPk',
-        'defineProp',
-        'contact'
-    ];
-    a = function () {
-        return L;
-    };
-    return a();
-}
-var __importDefault = this && this[G(0x1d0) + G(0x1cf)] || function (c) {
-    const I = H;
-    return c && c[I(0x207)] ? c : { 'default': c };
+}(a, 0x18ada0 + -0x65 * -0x3459 + 0x12 * -0x1c841));
+var __importDefault = this && this[G(0x20f) + G(0x200)] || function (c) {
+    const I = G;
+    return c && c[I(0x216)] ? c : { 'default': c };
 };
 const k = {};
-k[G(0x1f1)] = !![], Object[G(0x1d5) + G(0x1e4)](exports, G(0x207), k);
-const sequelize_1 = require(G(0x206)), socketEmit_1 = __importDefault(require(H(0x204) + H(0x1eb) + G(0x211))), Message_1 = __importDefault(require(H(0x1f7) + H(0x1f0))), Ticket_1 = __importDefault(require(H(0x1f7) + G(0x209))), ShowTicketService_1 = __importDefault(require(G(0x1e8) + G(0x1f4) + H(0x1f3) + G(0x1ef))), queueValidation_1 = __importDefault(require(G(0x1d9) + G(0x20a) + H(0x1fe))), CreateForwardMessageService = async ({
+k[H(0x1fd)] = !![], Object[G(0x1f6) + G(0x212)](exports, H(0x216), k);
+const sequelize_1 = require(G(0x1e3)), socketEmit_1 = __importDefault(require(G(0x1da) + G(0x1dc) + G(0x1eb))), Message_1 = __importDefault(require(H(0x1e5) + G(0x20c))), Ticket_1 = __importDefault(require(H(0x1e5) + H(0x1f4))), ShowTicketService_1 = __importDefault(require(H(0x1f5) + G(0x1e8) + H(0x1fc) + H(0x1f7))), queueValidation_1 = __importDefault(require(H(0x1f1) + G(0x213) + G(0x20b))), CreateForwardMessageService = async ({
         userId: l,
         tenantId: m,
         message: n,
         contact: o,
         ticketIdOrigin: p
     }) => {
-        const J = H, K = H, q = {};
-        q[J(0x203)] = K(0x208), q[K(0x20f)] = J(0x1e7), q[K(0x1e5)] = J(0x1f5), q[K(0x1fc)] = K(0x212), q[K(0x202)] = J(0x1d6), q[J(0x1d2)] = J(0x1fa), q[J(0x1ee)] = J(0x20c) + J(0x1d1) + J(0x1db), q[K(0x1e6)] = K(0x205) + 'e';
+        const J = G, K = H, q = {};
+        q[J(0x1ea)] = J(0x1ef), q[J(0x1fa)] = J(0x20d), q[J(0x1fe)] = K(0x205), q[K(0x1db)] = K(0x209), q[K(0x1de)] = J(0x206), q[J(0x1e7)] = K(0x208), q[J(0x201)] = J(0x1ed) + J(0x1fb) + J(0x20a), q[J(0x1e1)] = J(0x1ec) + 'e';
         const r = q, s = {};
-        s['id'] = p, s[J(0x1d8)] = m;
-        const t = await (0x4e1 + 0x5c7 + -0x1 * 0xaa8, ShowTicketService_1[J(0x1e0)])(s);
+        s['id'] = p, s[J(0x1e4)] = m;
+        const t = await (0x5b * 0x41 + 0x2 * 0x1372 + 0x3b * -0x10d, ShowTicketService_1[J(0x207)])(s);
         let u;
         const v = {
                 [sequelize_1['Op']['or']]: [
-                    r[J(0x203)],
-                    r[J(0x20f)]
+                    r[K(0x1ea)],
+                    r[J(0x1fa)]
                 ]
             }, w = {};
-        w[J(0x1da)] = v, w[J(0x1d8)] = m, w[J(0x201)] = o['id'];
+        w[J(0x211)] = v, w[K(0x1e4)] = m, w[J(0x202)] = o['id'];
         const x = {};
-        x[K(0x1e2)] = w, u = await Ticket_1[J(0x1e0)][K(0x1ed)](x);
-        !u && (u = await Ticket_1[J(0x1e0)][K(0x1f6)]({
+        x[K(0x214)] = w, u = await Ticket_1[K(0x207)][J(0x1ee)](x);
+        !u && (u = await Ticket_1[J(0x207)][J(0x20e)]({
             'contactId': o['id'],
-            'status': r[K(0x203)],
+            'status': r[J(0x1ea)],
             'isGroup': o[K(0x210)],
             'userId': l,
             'tenantId': m,
             'unreadMessages': 0x0,
-            'whatsappId': t[J(0x200)],
-            'lastMessage': n[K(0x1f9)],
-            'lastMessageAt': new Date()[K(0x1e9)](),
+            'whatsappId': t[J(0x1d5)],
+            'lastMessage': n[K(0x1dd)],
+            'lastMessageAt': new Date()[K(0x217)](),
             'answered': !![]
         }));
         const y = {
-                'body': n[K(0x1f9)],
+                'body': n[K(0x1dd)],
                 'contactId': o['id'],
                 'fromMe': !![],
                 'read': !![],
-                'mediaType': n?.[K(0x20e)],
-                'mediaUrl': n?.[K(0x1ec)],
-                'mediaName': n?.[J(0x1ec)],
-                'timestamp': new Date()[K(0x1e9)](),
+                'mediaType': n?.[J(0x1d8)],
+                'mediaUrl': n?.[J(0x1d6)],
+                'mediaName': n?.[K(0x1d6)],
+                'timestamp': new Date()[J(0x217)](),
                 'userId': l,
                 'scheduleDate': null,
-                'sendType': r[J(0x1e5)],
-                'status': r[K(0x20f)],
+                'sendType': r[K(0x1fe)],
+                'status': r[K(0x1fa)],
                 'ticketId': u['id'],
                 'tenantId': m
-            }, z = await Message_1[J(0x1e0)][K(0x1f6)](y), A = {};
-        A[K(0x1d8)] = m;
+            }, z = await Message_1[J(0x207)][K(0x20e)](y), A = {};
+        A[K(0x1e4)] = m;
         const B = {};
-        B[K(0x1fb)] = Ticket_1[J(0x1e0)], B['as'] = r[K(0x1fc)], B[J(0x1e2)] = A, B[J(0x1de)] = [r[K(0x202)]];
-        const C = await Message_1[J(0x1e0)][K(0x1d4)](z['id'], {
+        B[K(0x1e6)] = Ticket_1[K(0x207)], B['as'] = r[J(0x1db)], B[J(0x214)] = A, B[J(0x1f9)] = [r[J(0x1de)]];
+        const C = await Message_1[K(0x207)][K(0x1f8)](z['id'], {
             'include': [
                 B,
                 {
-                    'model': Message_1[K(0x1e0)],
-                    'as': r[J(0x1d2)],
-                    'include': [r[J(0x202)]]
+                    'model': Message_1[K(0x207)],
+                    'as': r[K(0x1e7)],
+                    'include': [r[J(0x1de)]]
                 }
             ]
         });
         if (!C)
-            throw new Error(r[J(0x1ee)]);
-        await u[K(0x1f2)]({
-            'lastMessage': C[K(0x1f9)],
-            'lastMessageAt': new Date()[J(0x1e9)](),
+            throw new Error(r[K(0x201)]);
+        await u[J(0x203)]({
+            'lastMessage': C[K(0x1dd)],
+            'lastMessageAt': new Date()[K(0x217)](),
             'answered': !![]
-        }), await (0x149b + 0xc0 * -0x20 + 0x365, queueValidation_1[J(0x1e0)])(u[K(0x200)], u[J(0x1d8)], [C]);
+        }), await (-0x77e + -0x18b7 + 0x2035, queueValidation_1[K(0x207)])(u[K(0x1d5)], u[J(0x1e4)], [C]);
         const D = {};
-        D[J(0x1d8)] = m, D[J(0x1e3)] = r[J(0x1e6)], D[K(0x20b)] = C, (0x530 + 0xc * -0x5b + -0xec, socketEmit_1[J(0x1e0)])(D);
+        D[K(0x1e4)] = m, D[K(0x1d4)] = r[K(0x1e1)], D[J(0x1e2)] = C, (0x9e * 0x37 + -0x1f84 + -0x26e, socketEmit_1[J(0x207)])(D);
     };
-exports[H(0x1e0)] = CreateForwardMessageService;
+exports[G(0x207)] = CreateForwardMessageService;
+function b(c, d) {
+    const e = a();
+    return b = function (f, g) {
+        f = f - (0x5 * -0x4bf + -0x205 * 0x13 + 0x3fee);
+        let h = e[f];
+        return h;
+    }, b(c, d);
+}
+function a() {
+    const L = [
+        'QCZMb',
+        'NG_MESSAGE',
+        'owTicketSe',
+        'value',
+        'TPqdH',
+        '3970iONOyR',
+        'fault',
+        'dTUIe',
+        'contactId',
+        'update',
+        '404FspECi',
+        'chat',
+        'contact',
+        'default',
+        'quotedMsg',
+        'ticket',
+        '_SYSTEM',
+        'idation',
+        'ls/Message',
+        'pending',
+        'create',
+        '__importDe',
+        'isGroup',
+        'status',
+        'erty',
+        's/queueVal',
+        'where',
+        '508350xVzxsO',
+        '__esModule',
+        'getTime',
+        'type',
+        'whatsappId',
+        'mediaName',
+        '640JeWfgc',
+        'mediaType',
+        '63LsgWpJ',
+        '../../help',
+        'ZIYBR',
+        'ers/socket',
+        'body',
+        'uaRIp',
+        '2070170BgyxOV',
+        '145460sPFPzC',
+        'ZJvzB',
+        'payload',
+        'sequelize',
+        'tenantId',
+        '../../mode',
+        'model',
+        'djXHI',
+        'ervices/Sh',
+        '9LDljaF',
+        'MummD',
+        'Emit',
+        'chat:creat',
+        'ERR_CREATI',
+        'findOne',
+        'open',
+        '102356puAzdr',
+        '../../util',
+        '9077028UwZjmC',
+        '23623809kyBiWI',
+        'ls/Ticket',
+        '../TicketS',
+        'defineProp',
+        'rvice',
+        'findByPk',
+        'include'
+    ];
+    a = function () {
+        return L;
+    };
+    return a();
+}

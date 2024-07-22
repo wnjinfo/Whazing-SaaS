@@ -1,10 +1,10 @@
 'use strict';
-const Z = b, a0 = b;
+const a1 = b, a2 = b;
 (function (c, d) {
-    const X = b, Y = b, e = c();
+    const Z = b, a0 = b, e = c();
     while (!![]) {
         try {
-            const f = -parseInt(X(0x12a)) / (-0x1d2d + -0x9e0 + -0x1387 * -0x2) + parseInt(X(0x101)) / (-0x1 * 0x9dc + -0x1a55 + 0x1 * 0x2433) * (-parseInt(X(0x121)) / (-0x1 * -0x911 + -0x16a1 + 0x2b7 * 0x5)) + parseInt(Y(0x116)) / (0x1987 + 0x40 * -0x13 + -0x14c3 * 0x1) * (parseInt(Y(0x10f)) / (0xef1 + 0x8 * -0x7a + -0x24 * 0x4f)) + -parseInt(Y(0xfe)) / (-0x1d46 + 0x1a13 + 0x339) + -parseInt(Y(0x12c)) / (-0x2373 + -0x15bd + 0x3937) * (parseInt(Y(0x11a)) / (0x581 + 0x184 * 0x1 + -0x1 * 0x6fd)) + -parseInt(X(0x109)) / (0x8ae + 0x1031 + 0x121 * -0x16) + parseInt(Y(0x115)) / (0x8eb + 0xabc + -0x139d * 0x1);
+            const f = parseInt(Z(0xa5)) / (-0x843 + 0x1708 + -0xec4) * (parseInt(Z(0x8d)) / (-0x14b8 + -0x117 * -0x18 + -0x116 * 0x5)) + parseInt(a0(0x95)) / (0x2371 + -0xd17 * -0x1 + 0x3085 * -0x1) * (parseInt(a0(0x85)) / (-0x1272 + -0x1f * -0x142 + 0x48 * -0x49)) + -parseInt(a0(0x92)) / (0x1 * 0xdcc + -0x1826 + 0xf * 0xb1) * (-parseInt(Z(0x73)) / (0x7 * -0x1bb + -0x8d3 + 0x14f6)) + parseInt(a0(0x90)) / (0x2085 + -0x2392 + 0x314) + parseInt(Z(0xa3)) / (-0x18b4 + -0x2404 + 0x3cc0) * (parseInt(a0(0x84)) / (0x1678 * 0x1 + -0xa * 0x17b + 0x5d * -0x15)) + -parseInt(Z(0x8c)) / (0x9ca + 0x1c45 + -0x1 * 0x2605) + -parseInt(Z(0x97)) / (-0x1039 * 0x1 + -0x2 * 0xb93 + 0x276a) * (parseInt(Z(0x9c)) / (0x1336 + 0x1f91 * 0x1 + 0x75 * -0x6f));
             if (f === d)
                 break;
             else
@@ -13,84 +13,87 @@ const Z = b, a0 = b;
             e['push'](e['shift']());
         }
     }
-}(a, -0x24808 + 0x3 * -0x140ce + 0x55 * 0x29fd));
+}(a, 0x173887 + -0x9 * 0x182c3 + -0x2 * -0x193c6));
+function a() {
+    const a5 = [
+        '54VFSIMX',
+        '6028580oZxZXA',
+        'videoMessa',
+        'seMessage',
+        'leys',
+        'liveLocati',
+        'listRespon',
+        'buttonsMes',
+        '10577790abKKOm',
+        '2BQZZmE',
+        'message',
+        'editedMess',
+        '9568538iBysxD',
+        'audioMessa',
+        '60mQGlGm',
+        'erty',
+        'ponseMessa',
+        '3VwITBj',
+        'protocolMe',
+        '4380013QKJXSd',
+        'buttonsRes',
+        'thCaptionM',
+        'textInfo',
+        'ephemeralM',
+        '108OSoRJy',
+        'age',
+        'extendedTe',
+        'defineProp',
+        'conversati',
+        'essage',
+        '__esModule',
+        '698296qywqbE',
+        'locationMe',
+        '998717uDuXLk',
+        'contactsAr',
+        'ssage',
+        'ssageV2',
+        '541170FXGxcu',
+        'listMessag',
+        'xtMessage',
+        'contactMes',
+        'viewOnceMe',
+        'documentMe',
+        'rayMessage',
+        'broadcast',
+        'isValidBai',
+        'imageMessa',
+        'sage',
+        'stickerMes',
+        'reactionMe',
+        'messageCon',
+        'documentWi',
+        'value',
+        'onMessage'
+    ];
+    a = function () {
+        return a5;
+    };
+    return a();
+}
 function b(c, d) {
     const e = a();
     return b = function (f, g) {
-        f = f - (0x3a6 * 0x8 + 0x2390 + -0x3fc2);
+        f = f - (-0x1 * 0x16d9 + 0x5ff * 0x1 + 0x1b * 0xa4);
         let h = e[f];
         return h;
     }, b(c, d);
 }
-function a() {
-    const a3 = [
-        '2204QOElyb',
-        'editedMess',
-        'age',
-        'value',
-        'xtMessage',
-        'onMessage',
-        'viewOnceMe',
-        'leys',
-        '9066249LfiSRW',
-        'conversati',
-        'imageMessa',
-        'isValidBai',
-        'seMessage',
-        'thCaptionM',
-        '20215SySwGJ',
-        'videoMessa',
-        'buttonsRes',
-        'liveLocati',
-        'ephemeralM',
-        'ssage',
-        '28940610ZuAVdK',
-        '860nGXYMM',
-        'documentWi',
-        'essage',
-        'messageCon',
-        '416KAbwRQ',
-        'erty',
-        'defineProp',
-        'rayMessage',
-        'contactMes',
-        'reactionMe',
-        'extendedTe',
-        '63WFkuTJ',
-        'audioMessa',
-        'textInfo',
-        'sage',
-        'protocolMe',
-        'locationMe',
-        'listRespon',
-        '__esModule',
-        'stickerMes',
-        '1010751qUTyie',
-        'buttonsMes',
-        '130690xzzcRu',
-        'listMessag',
-        'ponseMessa',
-        'message',
-        'broadcast',
-        '1400622HkhiEs',
-        'contactsAr',
-        'documentMe'
-    ];
-    a = function () {
-        return a3;
-    };
-    return a();
-}
-const W = {};
-W[Z(0x104)] = !![], Object[Z(0x11c) + Z(0x11b)](exports, Z(0x128), W), exports[a0(0x10c) + a0(0x108)] = void (-0x1b18 * -0x1 + -0x3 * -0x335 + -0xf1 * 0x27);
+const Y = {};
+Y[a1(0x82)] = !![], Object[a2(0x9f) + a2(0x93)](exports, a1(0xa2), Y), exports[a1(0x7b) + a1(0x88)] = void (-0x267a + 0xef * 0x7 + 0x1ff1);
 const isValidBaileys = c => {
-    const a1 = Z, a2 = Z;
-    if (c[a1(0x12f)]?.[a1(0x125) + a2(0x114)])
+    const a3 = a2, a4 = a2;
+    if (c[a3(0x8e)]?.[a3(0x96) + a4(0xa7)])
         return ![];
-    if (c[a2(0x130)])
+    if (c[a3(0x7a)])
         return ![];
-    if (c[a2(0x12f)]?.[a2(0x120) + a2(0x105)] || c[a2(0x12f)]?.[a1(0x10a) + 'on'] || c[a1(0x12f)]?.[a2(0x122) + 'ge'] || c[a2(0x12f)]?.[a2(0x110) + 'ge'] || c[a2(0x12f)]?.[a1(0x10b) + 'ge'] || c[a1(0x12f)]?.[a1(0x100) + a2(0x114)] || c[a2(0x12f)]?.[a1(0x11e) + a1(0x124)] || c[a1(0x12f)]?.[a2(0x129) + a1(0x124)] || c[a1(0x12f)]?.[a2(0x117) + a1(0x10e) + a1(0x118)] || c[a2(0x12f)]?.[a2(0x111) + a1(0x12e) + 'ge'] || c[a2(0x12f)]?.[a1(0x12b) + a1(0x124)] || c[a1(0x12f)]?.[a2(0x119) + a2(0x123)] || c[a1(0x12f)]?.[a2(0x11f) + a1(0x114)] || c[a2(0x12f)]?.[a2(0x113) + a2(0x118)] || c[a1(0x12f)]?.[a2(0x102) + a1(0x103)] || c[a2(0x12f)]?.[a2(0x112) + a1(0x106)] || c[a2(0x12f)]?.[a1(0xff) + a2(0x11d)] || c[a1(0x12f)]?.[a2(0x127) + a2(0x10d)] || c[a1(0x12f)]?.[a1(0x12d) + 'e'] || c[a1(0x12f)]?.[a2(0x107) + a2(0x114)] || c[a2(0x12f)]?.[a1(0x126) + a2(0x114)])
+    if (c[a4(0x8e)]?.[a4(0x9e) + a4(0x75)] || c[a3(0x8e)]?.[a3(0xa0) + 'on'] || c[a4(0x8e)]?.[a4(0x91) + 'ge'] || c[a4(0x8e)]?.[a4(0x86) + 'ge'] || c[a3(0x8e)]?.[a3(0x7c) + 'ge'] || c[a3(0x8e)]?.[a3(0x78) + a4(0xa7)] || c[a3(0x8e)]?.[a4(0x76) + a3(0x7d)] || c[a4(0x8e)]?.[a3(0x7e) + a3(0x7d)] || c[a4(0x8e)]?.[a4(0x81) + a3(0x99) + a4(0xa1)] || c[a3(0x8e)]?.[a4(0x98) + a4(0x94) + 'ge'] || c[a3(0x8e)]?.[a4(0x8b) + a3(0x7d)] || c[a3(0x8e)]?.[a3(0x80) + a4(0x9a)] || c[a4(0x8e)]?.[a3(0x7f) + a4(0xa7)] || c[a4(0x8e)]?.[a3(0x9b) + a4(0xa1)] || c[a3(0x8e)]?.[a4(0x8f) + a3(0x9d)] || c[a4(0x8e)]?.[a3(0x89) + a3(0x83)] || c[a4(0x8e)]?.[a4(0xa6) + a4(0x79)] || c[a3(0x8e)]?.[a3(0x8a) + a4(0x87)] || c[a3(0x8e)]?.[a3(0x74) + 'e'] || c[a4(0x8e)]?.[a4(0x77) + a4(0xa7)] || c[a3(0x8e)]?.[a3(0x77) + a3(0x72)] || c[a4(0x8e)]?.[a4(0xa4) + a3(0xa7)])
         return !![];
     return ![];
 };
-exports[Z(0x10c) + a0(0x108)] = isValidBaileys;
+exports[a1(0x7b) + a2(0x88)] = isValidBaileys;

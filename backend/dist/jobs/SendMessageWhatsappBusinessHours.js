@@ -1,68 +1,66 @@
 'use strict';
-const u = b, v = b;
 function a() {
     const y = [
+        'djoxB',
+        '../libs/wb',
+        'contact',
+        'g.us',
+        'lvUBP',
+        '\x20business\x20',
+        'erty',
+        'ogger',
+        'ticket',
+        'tenant',
+        'eWhatsappB',
+        'defineProp',
+        '11931104cvPfPn',
+        'usinessHou',
+        '5965100KOgVvK',
+        '197792vDPclK',
+        'message',
+        'ar\x20message',
+        '__esModule',
+        'number',
+        '35MEsXgT',
+        '475674OieIFz',
+        'mplete',
+        'value',
+        'whatsappId',
+        'removeOnFa',
         'inessHours',
         'text',
-        'error',
-        'contact',
-        'removeOnCo',
-        '2590568KCleFJ',
-        'whatsappId',
-        '8356290bsNRuO',
-        'SendMessag',
-        'delay',
-        'ticket',
-        'g.us',
-        'mplete',
-        '7UoCXJn',
-        '../libs/wb',
-        '673302OtzoHG',
-        'ATwIG',
-        'number',
-        '8KljAiS',
-        '70885BoSDHr',
-        'ot-baileys',
-        '\x20business\x20',
-        'defineProp',
-        'erty',
-        '630621lWWHMQ',
-        'message',
-        'default',
-        'ogger',
-        'sendMessag',
-        '1143402oJxFsn',
-        'Error\x20envi',
-        'removeOnFa',
-        'tenant',
-        'isGroup',
-        'hours:\x20',
-        '8296oADxZk',
         'messageBus',
-        'IJzon',
-        'logger',
-        'value',
-        'getWbot',
-        '36hXpqJf',
-        's.whatsapp',
-        'eWhatsappB',
-        '.net',
         'attempts',
+        'ot-baileys',
+        'isGroup',
+        '187952SMKQXj',
+        '67968qkeryk',
+        'logger',
+        'delay',
+        'Error\x20envi',
+        'removeOnCo',
+        '2669330rZJvPb',
+        'sendMessag',
         '../utils/l',
-        '__esModule',
-        'usinessHou',
-        'ar\x20message'
+        'getWbot',
+        'error',
+        'hours:\x20',
+        'default',
+        'SendMessag',
+        's.whatsapp',
+        '.net'
     ];
     a = function () {
         return y;
     };
     return a();
 }
+const u = b, v = b;
 (function (c, d) {
     const s = b, t = b, e = c();
     while (!![]) {
         try {
-            const f = parseInt(s(0x181)) / (-0x22 * 0x52 + 0x50d * 0x1 + 0x5d8) * (parseInt(s(0x170)) / (0x1 * 0x1b0a + -0x7d6 + -0xea * 0x15)) + -parseInt(s(0x16d)) / (-0x1 * 0x647 + 0x2 * 0xd60 + 0x12 * -0x123) + -parseInt(s(0x187)) / (0x223 * -0xb + -0x1 * 0x2ef + 0xd3a * 0x2) * (-parseInt(s(0x171)) / (-0x1 * -0x229 + -0x13 * -0x131 + -0x18c7)) + -parseInt(s(0x17b)) / (-0x985 * -0x1 + -0x454 * -0x6 + -0x7 * 0x511) + parseInt(s(0x19d)) / (-0x113 + -0x249a + -0xfe * -0x26) * (-parseInt(t(0x195)) / (0x3 * -0x376 + 0x10b7 + -0x1 * 0x64d)) + -parseInt(t(0x176)) / (-0x22fb + -0x15a * 0x1a + 0x382 * 0x14) + parseInt(s(0x197)) / (0x67a * -0x3 + -0xd95 + 0x210d);
+            const f = -parseInt(s(0x1e0)) / (-0x1474 + -0xdb2 + 0x2227) + -parseInt(t(0x1f7)) / (0x1ba5 + 0x11 * 0x121 + -0x1bc * 0x1b) + -parseInt(s(0x1f2)) / (-0x1 * 0x200d + 0x1041 + 0xfcf) + -parseInt(s(0x1f1)) / (-0x76b + 0x1825 + -0x10b6) + parseInt(s(0x1df)) / (-0x1 * -0x4cd + 0x212b + -0x25f3) + -parseInt(s(0x1e6)) / (0x1d3 * -0x6 + -0xbf1 * -0x1 + -0xf9) * (parseInt(t(0x1e5)) / (0x3 * 0xea + -0x1007 * -0x1 + -0x12be)) + parseInt(t(0x1dd)) / (-0x1f0f + -0x7 * -0x2cf + -0x9a * -0x13);
             if (f === d)
                 break;
             else
@@ -71,34 +69,34 @@ function a() {
             e['push'](e['shift']());
         }
     }
-}(a, -0x1 * 0x2deea + -0x349fa + 0x1 * 0x9055f));
+}(a, 0x824ef * -0x1 + 0xac4fb * 0x1 + 0x7d74c * 0x1));
 function b(c, d) {
     const e = a();
     return b = function (f, g) {
-        f = f - (-0x683 * 0x1 + -0x9cc + -0x8de * -0x2);
+        f = f - (0x7ee + 0x1c2 + -0x7d6);
         let h = e[f];
         return h;
     }, b(c, d);
 }
 const k = {};
-k[u(0x185)] = !![], Object[u(0x174) + u(0x175)](exports, u(0x18d), k);
-const wbot_baileys_1 = require(v(0x19e) + u(0x172)), logger_1 = require(v(0x18c) + v(0x179)), l = {};
-l[u(0x199)] = 0x1f4, l[v(0x18b)] = 0x32, l[u(0x194) + v(0x19c)] = !![], l[u(0x17d) + 'il'] = ![], exports[u(0x178)] = {
-    'key': v(0x198) + u(0x189) + u(0x18e) + 'rs',
+k[u(0x1e8)] = !![], Object[v(0x1dc) + u(0x207)](exports, v(0x1e3), k);
+const wbot_baileys_1 = require(v(0x202) + v(0x1ef)), logger_1 = require(v(0x1f9) + v(0x208)), l = {};
+l[v(0x1f4)] = 0x1f4, l[v(0x1ee)] = 0x32, l[v(0x1f6) + u(0x1e7)] = !![], l[u(0x1ea) + 'il'] = ![], exports[v(0x1fd)] = {
+    'key': v(0x1fe) + v(0x1db) + v(0x1de) + 'rs',
     'options': l,
     async 'handle'({data: f}) {
-        const w = v, x = u, g = {};
-        g[w(0x16e)] = w(0x19b), g[w(0x183)] = x(0x188) + x(0x18a);
+        const w = v, x = v, g = {};
+        g[w(0x201)] = w(0x204), g[x(0x205)] = w(0x1ff) + w(0x200);
         const h = g;
         try {
-            const i = (0x1044 + -0x1095 + 0x51, wbot_baileys_1[x(0x186)])(f[x(0x19a)][x(0x196)]), j = f[x(0x19a)]?.[w(0x17f)] ? h[w(0x16e)] : h[x(0x183)], m = f[x(0x19a)][x(0x193)][w(0x16f)] + '@' + j, n = {};
-            n[x(0x191)] = f[x(0x17e)][x(0x182) + x(0x190)];
-            const o = await i[w(0x17a) + 'e'](m, n), p = {};
-            p[x(0x177)] = o, p[w(0x182) + x(0x190)] = f[w(0x17e)][w(0x182) + w(0x190)], p[x(0x19a)] = f[x(0x19a)];
+            const i = (0x22e + 0x1b5c + -0x1d8a * 0x1, wbot_baileys_1[w(0x1fa)])(f[w(0x209)][x(0x1e9)]), j = f[w(0x209)]?.[x(0x1f0)] ? h[x(0x201)] : h[w(0x205)], m = f[w(0x209)][w(0x203)][x(0x1e4)] + '@' + j, n = {};
+            n[w(0x1ec)] = f[w(0x1da)][x(0x1ed) + w(0x1eb)];
+            const o = await i[w(0x1f8) + 'e'](m, n), p = {};
+            p[x(0x1e1)] = o, p[x(0x1ed) + w(0x1eb)] = f[x(0x1da)][w(0x1ed) + x(0x1eb)], p[w(0x209)] = f[w(0x209)];
             const q = p;
             return q;
         } catch (r) {
-            logger_1[w(0x184)][w(0x192)](x(0x17c) + w(0x18f) + x(0x173) + x(0x180) + r);
+            logger_1[x(0x1f3)][x(0x1fb)](w(0x1f5) + x(0x1e2) + w(0x206) + x(0x1fc) + r);
             throw new Error(r);
         }
     }

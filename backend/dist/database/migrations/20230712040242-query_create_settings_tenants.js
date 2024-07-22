@@ -1,77 +1,85 @@
 'use strict';
-const x = b, y = b;
 function a() {
-    const K = [
-        '980820KUmAxC',
-        'rom\x20\x22Setti',
-        'GmZHs',
-        'callReject',
-        '2065238CgcdHL',
-        '29286664tGupBM',
-        '\x20vídeo\x20est',
-        'luvnr',
-        'bulkInsert',
-        'Message',
-        'defineProp',
-        'cGdjX',
-        '822lxHaKk',
-        '\x20enviar\x20um',
-        'Settings',
-        'Cvhek',
-        'ão\x20desabil',
-        '241635rBxCZI',
-        'sequelize',
-        'As\x20chamada',
+    const H = [
         'FROM\x20\x22Tena',
-        's\x20de\x20voz\x20e',
-        'newTicketT',
-        'dPvkN',
         'value',
-        'a\x20mensagem',
-        'App,\x20favor',
-        'ivOhI',
-        'exports',
-        'ransferenc',
-        'select\x20max',
-        'erty',
-        'QueryTypes',
-        'type',
-        'bRJyp',
-        'SELECT\x20id\x20',
-        'aLoMV',
-        '__esModule',
-        'fiDOv',
+        '145SOSwzp',
+        'JtHBc',
+        'newTicketT',
+        's\x20de\x20voz\x20e',
+        '487663tGKQwk',
+        '2290KffKwK',
+        'sequelize',
         'esse\x20Whats',
-        '15935twHiCw',
-        '\x20de\x20texto.',
-        'qWlBT',
+        '6KNNNgz',
         'map',
-        '2040888oGLybK',
-        'SELECT',
-        'mrnhm',
-        'disabled',
-        'UXAEA',
-        '(id)\x20mId\x20f',
-        'all',
-        'mid',
-        'yGwFc',
+        '1105616hHHgHH',
+        'rom\x20\x22Setti',
+        'maeiT',
+        'Ufcrs',
         'rejectCall',
-        '6898339QCWfAR',
+        'mid',
+        'App,\x20favor',
+        '__esModule',
+        'tlLNd',
+        'EWtTE',
+        '2069961wNCZfJ',
+        'jlFJd',
+        '(id)\x20mId\x20f',
+        '147174RMUmEj',
+        'gvDey',
+        '\x20vídeo\x20est',
+        'exports',
+        'all',
+        'erty',
+        'bulkInsert',
+        'disabled',
+        'nts\x22',
+        'select\x20max',
+        'type',
         'itas\x20para\x20',
-        'query',
+        'WIOsD',
+        '10638887JmDZyV',
+        'a\x20mensagem',
+        'Message',
+        '55989BhvNiM',
+        'QueryTypes',
+        'gYpdq',
+        'hCsRP',
+        '\x20enviar\x20um',
+        'ransferenc',
+        'As\x20chamada',
+        'SELECT',
+        'callReject',
+        'SELECT\x20id\x20',
+        'Settings',
+        'aEhqn',
+        '\x20de\x20texto.',
+        '4236488qlfuDN',
+        'ão\x20desabil',
         'ngs\x22',
-        'nts\x22'
+        'query',
+        'defineProp'
     ];
     a = function () {
-        return K;
+        return H;
     };
     return a();
+}
+const x = b, y = b;
+function b(c, d) {
+    const e = a();
+    return b = function (f, g) {
+        f = f - (0x2ef * -0xb + -0xdfb + 0x2ffd);
+        let h = e[f];
+        return h;
+    }, b(c, d);
 }
 (function (c, d) {
     const v = b, w = b, e = c();
     while (!![]) {
         try {
-            const f = parseInt(v(0x7d)) / (-0xc95 + 0x1ce + 0xac8) + -parseInt(v(0xab)) / (-0x12d8 + 0x43 * 0x87 + -0x107b * 0x1) + -parseInt(w(0x98)) / (-0x300 + -0x2 * 0x88c + -0x141b * -0x1) + -parseInt(w(0xa7)) / (0x15e5 + 0xd85 * -0x1 + -0x85c) + parseInt(w(0x94)) / (-0xf65 * 0x1 + 0x1cc1 + 0xd57 * -0x1) * (-parseInt(w(0xb3)) / (0x1ece + 0x616 + -0x24de)) + -parseInt(w(0xa2)) / (0x178f + -0x20f2 + 0x5 * 0x1e2) + parseInt(w(0xac)) / (-0x7c6 * -0x5 + -0x608 + -0x20ce);
+            const f = parseInt(v(0x1ed)) / (-0x22aa + -0x246b + 0x36 * 0x151) * (-parseInt(v(0x1f1)) / (-0x226c + -0xb7a + 0x2de8)) + -parseInt(v(0x1c2)) / (-0x3 * -0x81 + -0x4e6 + 0x366) + parseInt(v(0x1f3)) / (-0xbb * -0x25 + -0x1685 + -0x47e) + parseInt(w(0x1e9)) / (-0x1f25 + 0x5 * -0xbe + 0x22e0) * (-parseInt(w(0x1c5)) / (-0x20f3 + 0x2f9 * 0x6 + 0xf23)) + parseInt(w(0x1d2)) / (-0x114d + 0x3 * -0x382 + 0x1bda) + parseInt(v(0x1e2)) / (0x1 * 0xb3f + 0x1 * -0x62b + -0x4c * 0x11) + -parseInt(v(0x1d5)) / (0x20e3 + 0x21b3 + -0x3 * 0x162f) * (-parseInt(w(0x1ee)) / (0x137 * -0x1 + -0x23ee + -0xa7 * -0x39));
             if (f === d)
                 break;
             else
@@ -80,79 +88,60 @@ function a() {
             e['push'](e['shift']());
         }
     }
-}(a, -0x20 * 0x6dfe + -0x33a5 * -0x3b + 0x9d0c5));
-function b(c, d) {
-    const e = a();
-    return b = function (f, g) {
-        f = f - (0x373 * -0x1 + -0x106e * -0x1 + -0xc81);
-        let h = e[f];
-        return h;
-    }, b(c, d);
-}
+}(a, -0xda166 + -0x90c61 + 0x243319));
 const k = {};
-k[x(0x84)] = !![], Object[y(0xb1) + x(0x8b)](exports, x(0x91), k);
-const sequelize_1 = require(x(0x7e));
-module[y(0x88)] = {
+k[x(0x1e8)] = !![], Object[y(0x1e6) + y(0x1ca)](exports, y(0x1bf), k);
+const sequelize_1 = require(y(0x1ef));
+module[y(0x1c8)] = {
     'up': async f => {
-        const z = x, A = x, g = {};
-        g[z(0xb2)] = function (n, o) {
+        const z = y, A = y, g = {};
+        g[z(0x1ea)] = function (n, o) {
             return n + o;
-        }, g[z(0x8e)] = A(0x82) + A(0x89) + 'e', g[z(0x83)] = z(0x9b), g[z(0xa0)] = z(0xa1) + 's', g[A(0x9a)] = z(0xaa) + z(0xb0), g[A(0x9c)] = A(0x7f) + A(0x81) + A(0xad) + A(0x7c) + z(0xa3) + A(0x93) + z(0x86) + z(0xb4) + z(0x85) + z(0x95), g[A(0xae)] = z(0x7a), g[z(0xa9)] = A(0x8f) + z(0x80) + A(0xa6), g[A(0x90)] = z(0x8a) + A(0x9d) + z(0xa8) + z(0xa5);
+        }, g[A(0x1f5)] = function (n, o) {
+            return n + o;
+        }, g[A(0x1c0)] = z(0x1eb) + z(0x1da) + 'e', g[A(0x1c3)] = A(0x1cc), g[z(0x1d7)] = A(0x1f7) + 's', g[A(0x1d1)] = z(0x1dd) + A(0x1d4), g[z(0x1d8)] = z(0x1db) + z(0x1ec) + A(0x1c7) + z(0x1e3) + z(0x1d0) + A(0x1f0) + z(0x1be) + A(0x1d9) + A(0x1d3) + A(0x1e1), g[z(0x1e0)] = A(0x1df), g[z(0x1f6)] = A(0x1de) + z(0x1e7) + z(0x1cd), g[A(0x1c1)] = A(0x1ce) + z(0x1c4) + A(0x1f4) + z(0x1e4);
         const h = g, i = {};
-        i[z(0x8d)] = sequelize_1[A(0x8c)][A(0x99)];
-        const j = await f[A(0x7e)][A(0xa4)](h[z(0xa9)], i), l = {};
-        l[A(0x8d)] = sequelize_1[z(0x8c)][z(0x99)];
-        const m = await f[z(0x7e)][A(0xa4)](h[z(0x90)], l);
-        await Promise[z(0x9e)](j[z(0x97)](async (n, o) => {
-            const E = z, F = z, p = {
-                    'fiDOv': function (t, u) {
-                        const B = b;
-                        return h[B(0xb2)](t, u);
-                    },
-                    'Cvhek': function (t, u) {
-                        const C = b;
-                        return h[C(0xb2)](t, u);
-                    },
-                    'qWlBT': function (t, u) {
-                        const D = b;
-                        return h[D(0xb2)](t, u);
-                    }
-                }, {id: q} = n, r = [
+        i[A(0x1cf)] = sequelize_1[A(0x1d6)][A(0x1dc)];
+        const j = await f[z(0x1ef)][A(0x1e5)](h[z(0x1f6)], i), l = {};
+        l[z(0x1cf)] = sequelize_1[z(0x1d6)][A(0x1dc)];
+        const m = await f[z(0x1ef)][z(0x1e5)](h[z(0x1c1)], l);
+        await Promise[z(0x1c9)](j[A(0x1f2)](async (n, o) => {
+            const B = A, C = z, {id: p} = n, q = [
                     {
-                        'key': h[E(0x8e)],
-                        'value': h[F(0x83)],
-                        'tenantId': q,
+                        'key': h[B(0x1c0)],
+                        'value': h[B(0x1c3)],
+                        'tenantId': p,
                         'createdAt': new Date(),
                         'updatedAt': new Date()
                     },
                     {
-                        'key': h[E(0xa0)],
-                        'value': h[F(0x83)],
-                        'tenantId': q,
+                        'key': h[C(0x1d7)],
+                        'value': h[B(0x1c3)],
+                        'tenantId': p,
                         'createdAt': new Date(),
                         'updatedAt': new Date()
                     },
                     {
-                        'key': h[E(0x9a)],
-                        'value': h[F(0x9c)],
-                        'tenantId': q,
+                        'key': h[B(0x1d1)],
+                        'value': h[C(0x1d8)],
+                        'tenantId': p,
                         'createdAt': new Date(),
                         'updatedAt': new Date()
                     }
-                ], s = r[F(0x97)]((t, u) => {
-                    const G = E, H = E;
+                ], r = q[C(0x1f2)]((t, u) => {
+                    const D = B, E = C;
                     return {
                         ...t,
-                        'id': p[G(0x92)](p[G(0x7b)](p[G(0x96)](m[0x224a + 0x2 * 0xdd3 + -0x3df0][G(0x9f)], o), 0x1f9d * -0x1 + 0x3 * -0x775 + 0x35fd), u)
+                        'id': h[D(0x1ea)](h[D(0x1f5)](h[E(0x1ea)](m[0x40f * 0x3 + 0x3bc * -0x7 + 0x113 * 0xd][D(0x1bd)], o), 0x409 + 0x10e3 + -0x42f * 0x5), u)
                     };
                 });
-            await f[F(0xaf)](h[F(0xae)], s);
+            await f[C(0x1cb)](h[C(0x1e0)], r);
         }));
     },
     'down': async e => {
-        const I = x, J = x, f = {};
-        f[I(0x87)] = J(0x8f) + J(0x80) + J(0xa6);
+        const F = x, G = y, f = {};
+        f[F(0x1c6)] = G(0x1de) + G(0x1e7) + F(0x1cd);
         const g = f, h = {};
-        h[I(0x8d)] = sequelize_1[J(0x8c)][J(0x99)], await e[I(0x7e)][I(0xa4)](g[J(0x87)], h);
+        h[G(0x1cf)] = sequelize_1[F(0x1d6)][G(0x1dc)], await e[G(0x1ef)][G(0x1e5)](g[G(0x1c6)], h);
     }
 };

@@ -4,7 +4,7 @@ const D = b, E = b;
     const B = b, C = b, e = c();
     while (!![]) {
         try {
-            const f = parseInt(B(0xea)) / (0x832 * 0x1 + 0x1 * -0x307 + -0x52a) + parseInt(C(0xd4)) / (-0x1420 + -0xb30 + 0x1f52) + -parseInt(C(0xdf)) / (0x1821 + -0x12c + -0x21 * 0xb2) * (-parseInt(B(0xe2)) / (-0x1811 + 0xd69 + 0xaac)) + parseInt(B(0xf3)) / (0x1d * -0xa1 + 0x1abe + -0x87c) + -parseInt(C(0xeb)) / (-0x2538 + 0x162d + 0xf11) * (-parseInt(C(0xdc)) / (0x12f1 + 0xfe4 + -0x9 * 0x3de)) + -parseInt(B(0xca)) / (0xc67 + 0x1 * 0x729 + 0xfa * -0x14) * (parseInt(B(0xee)) / (0x2 * 0xed7 + 0x8 * -0x487 + 0x693)) + -parseInt(B(0xd3)) / (-0x1200 + 0x77c + 0xa8e);
+            const f = parseInt(B(0x1aa)) / (0xc * -0x18 + -0x15c4 * 0x1 + 0x1 * 0x16e5) + -parseInt(C(0x19f)) / (-0x1a0d + 0x74f * -0x5 + 0x3e9a) * (-parseInt(B(0x19c)) / (-0x46c * 0x7 + 0x7ed * 0x4 + 0x7 * -0x1b)) + parseInt(B(0x194)) / (0xc1b + -0x1efc + 0x12e5) * (-parseInt(B(0x1b6)) / (-0xd * 0x245 + 0x498 + 0x2 * 0xc77)) + parseInt(C(0x1bb)) / (-0x98a + -0xba0 + 0x1530) * (-parseInt(B(0x199)) / (-0x209c + 0xc2f + 0x1474)) + parseInt(C(0x1bd)) / (0x15a9 + 0x111 + 0x2 * -0xb59) * (-parseInt(C(0x1ba)) / (0x3b * 0x15 + 0x83e + -0xd0c)) + parseInt(C(0x1a5)) / (-0x11 * 0xe9 + 0x218c + 0x39 * -0x51) + -parseInt(B(0x1ab)) / (-0x243c + 0x2386 + 0xc1 * 0x1) * (-parseInt(C(0x19a)) / (0xa27 * 0x1 + -0x2b * 0xd7 + -0x2 * -0xd01));
             if (f === d)
                 break;
             else
@@ -13,118 +13,127 @@ const D = b, E = b;
             e['push'](e['shift']());
         }
     }
-}(a, 0x2d121 * -0x3 + 0xa5ffa + 0x3b4bd));
+}(a, -0x1f3e0 + 0x3c3d * -0x28 + 0x109d3c));
+function b(c, d) {
+    const e = a();
+    return b = function (f, g) {
+        f = f - (0x12 * 0x95 + 0x1590 + -0x1 * 0x1e77);
+        let h = e[f];
+        return h;
+    }, b(c, d);
+}
 function a() {
     const I = [
-        'tenantId',
-        'hPbCS',
-        '44xVaNiP',
-        'profile',
-        'defineProp',
-        '__importDe',
-        'split',
-        'value',
-        'ed.',
-        'auth',
-        '152189cyispt',
-        '626538YGRtpa',
-        'AppError',
-        'authorizat',
-        '36jymNwS',
-        'ion',
-        'JQPat',
-        'ken.',
-        'Token\x20was\x20',
-        '2923285pWZwHu',
-        'dmMHR',
-        '623064bPsThL',
-        'jsonwebtok',
-        'user',
-        '../errors/',
-        'Lefig',
-        'RLWPh',
-        'IIVAV',
-        'headers',
-        'fault',
-        '11771700YGwlkl',
-        '759004zcMXHw',
-        'erty',
-        'default',
-        '../config/',
+        '5oROmBE',
         'secret',
-        'verify',
-        'cBnAH',
+        'oPRme',
         'not\x20provid',
-        '7tfYtvr',
+        '1549755YwWzIQ',
+        '788772ScYxBD',
+        'qQoOw',
+        '8TMhhcK',
+        'VWHtl',
+        'ken.',
+        '../errors/',
+        'Grwuq',
+        'kSRFd',
+        'jsonwebtok',
+        'frdPM',
         '__esModule',
+        'erty',
+        '669748rZnWWt',
+        'AppError',
+        'ion',
+        'ed.',
+        'fault',
+        '14PFypky',
+        '150828HbqiKV',
         'Invalid\x20to',
-        '173703zGdrPQ'
+        '15CwXIsL',
+        'tenantId',
+        '../config/',
+        '5458TPYxOZ',
+        'default',
+        '__importDe',
+        'verify',
+        'JyEKo',
+        'IVdoR',
+        '3646780dMTWrU',
+        'user',
+        'luMDv',
+        'headers',
+        'fvhnF',
+        '2648MOhaiS',
+        '495sHVpfm',
+        'Token\x20was\x20',
+        'OKieq',
+        'OGROn',
+        'auth',
+        'defineProp',
+        'jUbnJ',
+        'value',
+        'profile',
+        'split',
+        'authorizat'
     ];
     a = function () {
         return I;
     };
     return a();
 }
-var __importDefault = this && this[D(0xe5) + E(0xd2)] || function (c) {
-    const F = E;
-    return c && c[F(0xdd)] ? c : { 'default': c };
+var __importDefault = this && this[D(0x1a1) + E(0x198)] || function (c) {
+    const F = D;
+    return c && c[F(0x1c5)] ? c : { 'default': c };
 };
-function b(c, d) {
-    const e = a();
-    return b = function (f, g) {
-        f = f - (0x52a * -0x1 + 0x206f + -0x1a7b);
-        let h = e[f];
-        return h;
-    }, b(c, d);
-}
 const A = {};
-A[D(0xe7)] = !![], Object[E(0xe4) + E(0xd5)](exports, D(0xdd), A);
-const jsonwebtoken_1 = require(E(0xcb) + 'en'), AppError_1 = __importDefault(require(D(0xcd) + E(0xec))), auth_1 = __importDefault(require(D(0xd7) + E(0xe9))), isAuth = (d, e, f) => {
-        const G = E, H = E, g = {
-                'RLWPh': G(0xf2) + H(0xdb) + H(0xe8),
-                'JQPat': H(0xde) + G(0xf1),
-                'Lefig': function (j) {
-                    return j();
-                },
-                'dmMHR': function (j, k) {
+A[E(0x1b2)] = !![], Object[D(0x1b0) + E(0x193)](exports, E(0x1c5), A);
+const jsonwebtoken_1 = require(D(0x1c3) + 'en'), AppError_1 = __importDefault(require(E(0x1c0) + E(0x195))), auth_1 = __importDefault(require(E(0x19e) + D(0x1af))), isAuth = (d, e, f) => {
+        const G = D, H = E, g = {
+                'qQoOw': G(0x19b) + H(0x1bf),
+                'fvhnF': function (j, k) {
                     return j !== k;
                 },
-                'hPbCS': H(0xda),
-                'IIVAV': function (j) {
+                'oPRme': G(0x1ad),
+                'IVdoR': G(0x1ac) + H(0x1b9) + G(0x197),
+                'VWHtl': H(0x1ae),
+                'kSRFd': G(0x1c4),
+                'luMDv': function (j, k) {
+                    return j !== k;
+                },
+                'JyEKo': H(0x1c1),
+                'jUbnJ': function (j) {
                     return j();
                 }
-            }, h = d[G(0xd1)][G(0xed) + H(0xef)];
-        if (!h)
-            throw new AppError_1[(G(0xd6))](g[G(0xcf)], -0x2 * 0x47 + -0x238f * -0x1 + -0xb * 0x30a);
-        const [, i] = h[G(0xe6)]('\x20');
+            }, h = d[G(0x1a8)][H(0x1b5) + H(0x196)];
+        if (!h) {
+            if (g[H(0x1a9)](g[H(0x1b8)], g[H(0x1b8)])) {
+                const k = {};
+                return k[G(0x1a0)] = j, g && h[G(0x1c5)] ? i : k;
+            } else
+                throw new AppError_1[(G(0x1a0))](g[H(0x1a4)], -0x1ebd + 0x3bd + -0x415 * -0x7);
+        }
+        const [, i] = h[G(0x1b4)]('\x20');
         try {
-            if (g[H(0xf4)](g[G(0xe1)], g[G(0xe1)])) {
-                const k = j[H(0xd1)][G(0xed) + G(0xef)];
-                if (!k)
-                    throw new q[(G(0xd6))](g[H(0xcf)], 0x1 * 0x1f1a + -0x1 * 0x234a + -0x3b * -0x19);
-                const [, l] = k[G(0xe6)]('\x20');
-                try {
-                    const m = (-0x1be5 + 0x354 + -0x1 * -0x1891, r[H(0xd9)])(l, s[G(0xd6)][G(0xd8)]), {
-                            id: n,
-                            profile: o,
-                            tenantId: p
-                        } = m, q = {};
-                    q['id'] = n, q[H(0xe3)] = o, q[G(0xe0)] = p, t[H(0xcc)] = q;
-                } catch (r) {
-                    throw new v[(H(0xd6))](g[G(0xf0)], -0x1069 * -0x2 + 0x268 * 0x9 + -0x34e7);
-                }
-                return g[H(0xce)](p);
-            } else {
-                const k = (-0xe36 + -0x1389 * -0x1 + -0x553, jsonwebtoken_1[H(0xd9)])(i, auth_1[H(0xd6)][H(0xd8)]), {
+            if (g[G(0x1a9)](g[H(0x1be)], g[H(0x1c2)])) {
+                const k = (0x24ae + -0x562 * -0x7 + -0x4a5c, jsonwebtoken_1[H(0x1a2)])(i, auth_1[H(0x1a0)][G(0x1b7)]), {
                         id: l,
                         profile: m,
                         tenantId: n
                     } = k, o = {};
-                o['id'] = l, o[H(0xe3)] = m, o[H(0xe0)] = n, d[G(0xcc)] = o;
-            }
-        } catch (p) {
-            throw new AppError_1[(G(0xd6))](g[G(0xf0)], -0x3 * 0x7f7 + -0x1 * 0x187d + 0x31f5);
+                o['id'] = l, o[G(0x1b3)] = m, o[G(0x19d)] = n, d[G(0x1a6)] = o;
+            } else
+                throw new d[(G(0x1a0))](g[G(0x1bc)], -0xe * 0x62 + 0xd05 * 0x1 + 0x26 * -0x29);
+        } catch (q) {
+            if (g[H(0x1a7)](g[G(0x1a3)], g[G(0x1a3)])) {
+                const s = (-0x581 * -0x5 + 0xa7c + -0x2601, g[G(0x1a2)])(h, i[H(0x1a0)][H(0x1b7)]), {
+                        id: t,
+                        profile: u,
+                        tenantId: v
+                    } = s, w = {};
+                w['id'] = t, w[G(0x1b3)] = u, w[G(0x19d)] = v, j[H(0x1a6)] = w;
+            } else
+                throw new AppError_1[(G(0x1a0))](g[G(0x1bc)], 0xf * -0x17b + -0x2e * 0xa7 + 0x35ca);
         }
-        return g[H(0xd0)](f);
+        return g[G(0x1b1)](f);
     };
-exports[E(0xd6)] = isAuth;
+exports[D(0x1a0)] = isAuth;

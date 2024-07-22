@@ -1,89 +1,89 @@
 'use strict';
+const r = b, s = b;
 function a() {
     const y = [
-        '329870GgCOrJ',
-        'CONNECTED',
-        'iciada\x20|\x20E',
-        'info',
-        'kzfbz',
-        '627648znlFxf',
-        ':whatsappS',
-        'RAM:\x20',
-        'ERROR_CONN',
-        'fault',
-        'erty',
-        'OPENING',
-        './Instagra',
-        'ession',
-        'DISCONNECT',
-        'initInstaB',
-        'ERROR:\x20che',
-        '2czCQjA',
-        '61116hyegkV',
-        '4015lVqbAs',
-        'default',
-        'ECT_INSTAG',
-        'logger',
-        '10557dKspSq',
-        '15170OWsFVw',
-        './InstaBot',
-        'rs/AppErro',
-        'StartInsta',
-        'InstaBotMe',
-        'BotSession',
-        'gesSystem',
-        'CHECK_INTE',
-        '2171jjTwKJ',
-        'value',
-        '\x20Tenant:\x20',
-        'mSendMessa',
-        'ckMessages',
-        '16lSLFHj',
-        'qNZGE',
-        '1760SuuJTi',
-        '3720HArScx',
-        'Conexão\x20In',
-        'env',
-        'qzHgt',
-        'ner',
-        '__importDe',
-        'RVAL',
-        '/InstaBot',
-        '5316OFtQOf',
-        '/socket',
-        'tenantId',
-        '\x20|\x20Error:\x20',
-        'update',
-        'error',
-        'XORub',
-        '50628CZtCYv',
-        'stagram\x20in',
-        'defineProp',
-        's/logger',
-        '__esModule',
-        'status',
-        '../../util',
-        'emit',
-        'ssageListe',
-        '../../libs',
-        'getIO',
-        'MessageLis',
-        'mpresa:\x20',
         '../../erro',
+        'erty',
+        'fault',
+        '1065629QMZoqW',
+        'ECT_INSTAG',
+        'ERROR:\x20che',
+        '2302932siSWJu',
+        'stagram\x20in',
+        'Conexão\x20In',
+        '324MIfFhn',
+        '8574282RfNwZt',
+        '10TgGmCv',
+        'YcNzx',
+        'env',
+        'InstaBotMe',
+        '/socket',
+        'rs/AppErro',
+        'mpresa:\x20',
+        'CONNECTED',
+        'value',
+        'ckMessages',
+        'status',
+        '\x20Tenant:\x20',
+        'default',
+        '8802343oZtsmP',
+        'qJXqO',
+        'emit',
+        'error',
+        'initInstaB',
+        'mSendMessa',
+        'iciada\x20|\x20E',
+        '186069LibWwV',
+        'MessageLis',
+        'defineProp',
+        'logger',
+        'ERROR_CONN',
+        '2330804GEYhYs',
+        'RVAL',
+        '8oWqmoH',
+        'BotSession',
+        './InstaBot',
+        '7HoOYHx',
+        'info',
+        'ssageListe',
+        'StartInsta',
+        '3228whzCtQ',
+        '__esModule',
+        '../../libs',
+        'tenantId',
+        'ession',
+        'getIO',
+        'RAM:\x20',
+        '../../util',
+        '1761mmVVQH',
+        '/InstaBot',
+        's/logger',
+        'CHECK_INTE',
+        'tyHIE',
+        '\x20|\x20Error:\x20',
+        'mwflt',
+        'OPENING',
+        ':whatsappS',
+        'update',
         'tener',
-        'pscHi'
+        'DISCONNECT',
+        '5gqWTWI',
+        'lEWdU',
+        './Instagra',
+        'gesSystem',
+        'ner',
+        '__importDe'
     ];
     a = function () {
         return y;
     };
     return a();
 }
-const r = b, s = b;
 (function (c, d) {
     const p = b, q = b, e = c();
     while (!![]) {
         try {
-            const f = -parseInt(p(0x18f)) / (0x12e6 + -0xdc9 * 0x1 + -0x51c) * (parseInt(p(0x17e)) / (-0x1363 + 0x1571 + -0x106 * 0x2)) + -parseInt(q(0x190)) / (-0x1de8 + 0x1464 + 0x987) * (parseInt(p(0x1a3)) / (-0x1 * -0x1dd1 + 0x3 * -0x98f + -0x120)) + parseInt(p(0x1a5)) / (0x466 * 0x8 + -0x998 + -0x1993 * 0x1) * (parseInt(p(0x1ae)) / (0x6d5 + 0x1 * -0x24fb + 0x1e2c)) + parseInt(q(0x183)) / (0x1 * -0xf1a + -0x162b + 0x254c) + -parseInt(p(0x1a6)) / (-0x1c2e + 0x2 * -0xee4 + 0x39fe) * (-parseInt(q(0x195)) / (0x2390 + 0x255 + -0x1 * 0x25dc)) + -parseInt(q(0x196)) / (0x6b * 0x45 + 0x12ff + -0x2fcc) * (-parseInt(p(0x191)) / (0x13 * -0x8e + -0x1c2e + 0x26c3)) + -parseInt(p(0x1b5)) / (0x1d76 + 0x1 * 0x564 + -0xa * 0x37b) * (parseInt(q(0x19e)) / (-0x2419 * 0x1 + 0x68b + 0x1d9b));
+            const f = -parseInt(p(0x138)) / (0x1 * -0x757 + -0x12 * 0x22b + 0x2e5e) + -parseInt(q(0x11b)) / (0x4 * -0x45d + 0x1 * -0x11d9 + -0x83 * -0x45) * (-parseInt(q(0x123)) / (0x189 + 0x2227 * 0x1 + -0x23ad)) + parseInt(p(0x159)) / (0x8cb * 0x1 + -0x1 * -0x2605 + -0x2ecc) * (parseInt(p(0x12f)) / (-0x2103 + 0x27 * 0x2f + 0x19df)) + -parseInt(p(0x13b)) / (0x150b + -0x4 * 0xf5 + -0xa3 * 0x1b) * (-parseInt(p(0x117)) / (-0x2eb * -0x5 + -0x353 + -0xb3d)) + -parseInt(q(0x15b)) / (0x1746 + -0x21ef + -0xab1 * -0x1) * (-parseInt(p(0x13f)) / (-0x15a + -0x87 + 0x62 * 0x5)) + parseInt(q(0x140)) / (-0x1bdb * -0x1 + 0x16 * 0x89 + -0x2797) * (-parseInt(p(0x14d)) / (0x1d5 * -0xa + -0xcd8 + 0x1f35)) + -parseInt(p(0x13e)) / (0x1 * 0x1655 + -0x146a + -0x1df) * (parseInt(q(0x154)) / (0x23 * -0x1f + 0x10d2 + -0x322 * 0x4));
             if (f === d)
                 break;
             else
@@ -92,62 +92,62 @@ const r = b, s = b;
             e['push'](e['shift']());
         }
     }
-}(a, 0x3d15 * -0x13 + -0x94b8 + 0xafc3a));
-var __importDefault = this && this[r(0x1ab) + r(0x187)] || function (c) {
+}(a, -0x6d5df + 0xdb29c + -0x2830d * -0x1));
+var __importDefault = this && this[r(0x134) + s(0x137)] || function (c) {
     const t = r;
-    return c && c[t(0x1b9)] ? c : { 'default': c };
+    return c && c[t(0x11c)] ? c : { 'default': c };
 };
 const k = {};
-k[r(0x19f)] = !![], Object[s(0x1b7) + r(0x188)](exports, r(0x1b9), k), exports[s(0x199) + r(0x19b)] = void (0x697 * -0x1 + -0xf45 + 0x15dc);
 function b(c, d) {
     const e = a();
     return b = function (f, g) {
-        f = f - (0x224e + -0x1b56 + -0x583);
+        f = f - (0x2398 + 0x914 + -0x2b96);
         let h = e[f];
         return h;
     }, b(c, d);
 }
-const AppError_1 = __importDefault(require(s(0x17b) + s(0x198) + 'r')), InstaBot_1 = require(r(0x177) + r(0x1ad)), socket_1 = require(s(0x177) + s(0x1af)), logger_1 = require(r(0x1bb) + s(0x1b8)), InstaBotMessageListener_1 = require(r(0x197) + s(0x179) + s(0x17c)), InstagramSendMessagesSystem_1 = __importDefault(require(r(0x18a) + s(0x1a1) + s(0x19c))), checkingInstagram = {}, checkMessages = async (c, d) => {
+k[s(0x148)] = !![], Object[s(0x156) + r(0x136)](exports, s(0x11c), k), exports[s(0x11a) + r(0x15c)] = void (-0x1 * 0x1cc9 + -0x13d5 + 0x309e);
+const AppError_1 = __importDefault(require(s(0x135) + s(0x145) + 'r')), InstaBot_1 = require(r(0x11d) + r(0x124)), socket_1 = require(s(0x11d) + r(0x144)), logger_1 = require(r(0x122) + r(0x125)), InstaBotMessageListener_1 = require(r(0x116) + s(0x155) + s(0x12d)), InstagramSendMessagesSystem_1 = __importDefault(require(s(0x131) + r(0x152) + s(0x132))), checkingInstagram = {}, checkMessages = async (c, d) => {
         const u = r, v = s;
         if (checkingInstagram[d])
             return;
         checkingInstagram[d] = !![];
         try {
-            await (0x19b8 + 0xa * 0x76 + 0x6 * -0x50e, InstagramSendMessagesSystem_1[u(0x192)])(c, d);
+            await (0x12 * 0x6e + 0x160f + 0x1dcb * -0x1, InstagramSendMessagesSystem_1[u(0x14c)])(c, d);
         } catch (e) {
-            logger_1[u(0x194)][v(0x1b3)](v(0x18e) + v(0x1a2) + v(0x1a0) + d + '::', e);
+            logger_1[u(0x157)][u(0x150)](u(0x13a) + v(0x149) + u(0x14b) + d + '::', e);
         }
         checkingInstagram[d] = ![];
     }, StartInstaBotSession = async f => {
-        const w = s, x = r, g = {
-                'kzfbz': w(0x189),
-                'pscHi': x(0x1b2),
-                'qzHgt': function (j, l, m, n, o) {
+        const w = r, x = s, g = {
+                'YcNzx': w(0x12a),
+                'mwflt': x(0x12c),
+                'qJXqO': function (j, l, m, n, o) {
                     return j(l, m, n, o);
                 },
-                'qNZGE': x(0x17f),
-                'XORub': x(0x18c) + 'ED'
-            }, h = (0x1133 + 0x2fc * 0xa + -0x2f0b, socket_1[w(0x178)])(), i = {};
-        i[w(0x1ba)] = g[w(0x182)], await f[x(0x1b2)](i), h[x(0x175)](f[x(0x1b0)] + (x(0x184) + x(0x18b)), {
-            'action': g[x(0x17d)],
+                'lEWdU': w(0x147),
+                'tyHIE': x(0x12e) + 'ED'
+            }, h = (-0x15dc + 0x111e * 0x1 + 0x4be, socket_1[x(0x120)])(), i = {};
+        i[w(0x14a)] = g[w(0x141)], await f[w(0x12c)](i), h[x(0x14f)](f[x(0x11e)] + (x(0x12b) + w(0x11f)), {
+            'action': g[x(0x129)],
             'session': f
         });
         try {
-            const j = await (-0x1f03 + 0x245c + -0x559, InstaBot_1[x(0x18d) + 'ot'])(f);
-            (0x1 * -0x212f + 0x2414 + 0xf7 * -0x3, InstaBotMessageListener_1[x(0x19a) + x(0x176) + w(0x1aa)])(j), g[w(0x1a9)](setInterval, checkMessages, +(process[w(0x1a8)][w(0x19d) + w(0x1ac)] || -0x15d9 + -0x4 * -0x455 + 0x83 * 0x2f), j, f[x(0x1b0)]), logger_1[w(0x194)][x(0x181)](w(0x1a7) + w(0x1b6) + w(0x180) + w(0x17a) + f[x(0x1b0)]);
+            const j = await (-0x1 * -0x137 + -0x11c1 + -0x3a * -0x49, InstaBot_1[w(0x151) + 'ot'])(f);
+            (-0x15 * -0xd3 + 0x7 * 0x503 + -0x3464, InstaBotMessageListener_1[w(0x143) + x(0x119) + w(0x133)])(j), g[w(0x14e)](setInterval, checkMessages, +(process[x(0x142)][w(0x126) + w(0x15a)] || 0x3 * -0xcf7 + 0x19 * -0x185 + -0x3035 * -0x2), j, f[x(0x11e)]), logger_1[w(0x157)][x(0x118)](w(0x13d) + w(0x13c) + w(0x153) + w(0x146) + f[x(0x11e)]);
             const l = {};
-            l[x(0x1ba)] = g[x(0x1a4)], await f[w(0x1b2)](l), h[w(0x175)](f[w(0x1b0)] + (w(0x184) + x(0x18b)), {
-                'action': g[w(0x17d)],
+            l[w(0x14a)] = g[x(0x130)], await f[w(0x12c)](l), h[x(0x14f)](f[x(0x11e)] + (w(0x12b) + x(0x11f)), {
+                'action': g[w(0x129)],
                 'session': f
             });
         } catch (m) {
-            logger_1[x(0x194)][w(0x1b3)](x(0x199) + w(0x19b) + x(0x1b1) + m);
+            logger_1[x(0x157)][w(0x150)](x(0x11a) + w(0x15c) + w(0x128) + m);
             const n = {};
-            n[x(0x1ba)] = g[w(0x1b4)], await f[x(0x1b2)](n), h[x(0x175)](f[x(0x1b0)] + (x(0x184) + w(0x18b)), {
-                'action': g[x(0x17d)],
+            n[w(0x14a)] = g[x(0x127)], await f[x(0x12c)](n), h[w(0x14f)](f[w(0x11e)] + (x(0x12b) + x(0x11f)), {
+                'action': g[x(0x129)],
                 'session': f
             });
-            throw new AppError_1[(x(0x192))](w(0x186) + w(0x193) + x(0x185) + m, 0x1 * 0x134f + 0x463 + -0x161e);
+            throw new AppError_1[(x(0x14c))](w(0x158) + x(0x139) + w(0x121) + m, -0xdc9 + 0x1228 + -0x2cb);
         }
     };
-exports[s(0x199) + r(0x19b)] = StartInstaBotSession;
+exports[s(0x11a) + s(0x15c)] = StartInstaBotSession;

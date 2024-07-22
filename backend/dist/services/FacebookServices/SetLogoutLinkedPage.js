@@ -1,18 +1,10 @@
 'use strict';
 const w = b, x = b;
-function b(c, d) {
-    const e = a();
-    return b = function (f, g) {
-        f = f - (-0x8 * 0x355 + -0x264f * -0x1 + 0xa1f * -0x1);
-        let h = e[f];
-        return h;
-    }, b(c, d);
-}
 (function (c, d) {
     const u = b, v = b, e = c();
     while (!![]) {
         try {
-            const f = -parseInt(u(0x19d)) / (-0xa * 0x209 + 0x1f9a + 0xb3f * -0x1) + -parseInt(v(0x196)) / (0xbf2 + -0x3 * 0x54 + -0xaf4) + parseInt(v(0x19b)) / (0x530 + -0x1aa6 + 0x1579) * (-parseInt(v(0x189)) / (0x1045 * -0x2 + -0x3a * 0x15 + 0x2550)) + -parseInt(v(0x18f)) / (-0x3 * 0x789 + 0xdf + -0x15c1 * -0x1) + parseInt(u(0x1a6)) / (-0xa44 + 0x18c6 + -0xe7c * 0x1) * (parseInt(u(0x197)) / (-0x1 * 0x18b + -0x2220 + 0x23b2)) + parseInt(v(0x18e)) / (-0x1353 + -0x25 * -0xf + 0x1130) * (parseInt(u(0x1a8)) / (-0x8b * 0x16 + 0xe13 + -0x218)) + parseInt(v(0x18c)) / (0x1fe1 + 0xce7 + -0x2cbe) * (parseInt(u(0x1a2)) / (0x244f + 0x3b * -0x5d + -0xed5 * 0x1));
+            const f = -parseInt(u(0xad)) / (-0x4 * -0x5ad + -0x2194 + 0xae1) + -parseInt(v(0xbf)) / (-0xf6c + -0x4 * -0x78 + 0xd8e) * (parseInt(v(0xae)) / (-0x244d + 0x107 * -0xc + -0x2 * -0x1852)) + parseInt(u(0xb5)) / (-0x14d5 + -0x4 * 0x77c + 0x32c9) * (parseInt(v(0xc1)) / (-0x2265 + 0x2541 + 0x1 * -0x2d7)) + -parseInt(v(0xbb)) / (-0x179a + -0x20f5 + 0xb51 * 0x5) * (parseInt(u(0x9e)) / (0x629 + -0x95b + 0x339)) + -parseInt(u(0xaa)) / (-0x14d7 + -0x313 + -0x4ca * -0x5) + parseInt(v(0xb9)) / (-0xca4 + -0xecc * -0x1 + -0x21f) * (parseInt(u(0xc2)) / (-0xb * -0x32b + -0x1 * 0x21cd + -0x102)) + parseInt(v(0xb3)) / (0xb * 0x303 + 0x706 + -0x12e * 0x22) * (parseInt(v(0xa2)) / (-0xfdf + 0x1b7e + -0xb93 * 0x1));
             if (f === d)
                 break;
             else
@@ -21,75 +13,84 @@ function b(c, d) {
             e['push'](e['shift']());
         }
     }
-}(a, -0x144921 + 0x1b328 + 0x43 * 0x74dd));
+}(a, -0xacaf0 * -0x1 + 0x3e * 0x766 + -0xc8a4));
+var __importDefault = this && this[w(0xba) + x(0xa5)] || function (c) {
+    const y = w;
+    return c && c[y(0xa8)] ? c : { 'default': c };
+};
+const q = {};
+q[x(0xc3)] = !![], Object[w(0xc0) + x(0xa0)](exports, x(0xa8), q);
+function b(c, d) {
+    const e = a();
+    return b = function (f, g) {
+        f = f - (0xbf7 + 0x26a0 + 0x31fa * -0x1);
+        let h = e[f];
+        return h;
+    }, b(c, d);
+}
 function a() {
     const B = [
-        '../../mode',
-        'ession',
-        'default',
-        'tenantId',
-        'update',
-        'defineProp',
-        '28hqtiLV',
-        ':whatsappS',
-        '../../libs',
-        '25480CTMnfx',
-        'emit',
-        '1608guoTUc',
-        '1358445ZpwKoR',
-        'erty',
-        'status',
-        'pCkEi',
-        'fSuRn',
         '__importDe',
-        'fault',
-        '2861238wQjyxb',
-        '70DDnnGE',
-        'where',
-        'value',
-        'fbObject',
-        '430644OeWecb',
-        'tokenAPI',
-        '58644btiPlg',
-        'ls/Whatsap',
-        'fbPageId',
+        '2952vwJCdl',
         'session',
-        'getIO',
-        '10230loOMNt',
-        '__esModule',
+        'fbObject',
         '/socket',
-        'DISCONNECT',
-        '232434eJaeLg',
+        '8830MfYfzy',
+        'defineProp',
+        '154825fCOBKT',
+        '582740ZqyFBX',
+        'value',
+        'ls/Whatsap',
+        '20293RMqQOZ',
+        'tenantId',
+        'erty',
+        '../../libs',
+        '35154804swXTjZ',
+        'fbPageId',
+        'emit',
+        'fault',
+        'getIO',
+        'ession',
+        '__esModule',
+        'status',
+        '10201944iyqwXQ',
+        'update',
+        'oCYMW',
+        '133234VbVJsC',
+        '357EBFSCT',
+        'default',
         'action',
-        '35604lzRXec'
+        '../../mode',
+        'hbBLZ',
+        '11Temavc',
+        ':whatsappS',
+        '148ecipQD',
+        'tokenAPI',
+        'where',
+        'DISCONNECT',
+        '9LCgQly'
     ];
     a = function () {
         return B;
     };
     return a();
 }
-var __importDefault = this && this[w(0x194) + x(0x195)] || function (c) {
-    const y = w;
-    return c && c[y(0x1a3)] ? c : { 'default': c };
-};
-const q = {};
-q[x(0x199)] = !![], Object[x(0x188) + w(0x190)](exports, x(0x1a3), q);
-const socket_1 = require(w(0x18b) + x(0x1a4)), Whatsapp_1 = __importDefault(require(x(0x1a9) + x(0x19e) + 'p')), SetLogoutLinkedPage = async ({
+const socket_1 = require(w(0xa1) + x(0xbe)), Whatsapp_1 = __importDefault(require(x(0xb1) + x(0x9d) + 'p')), SetLogoutLinkedPage = async ({
         whatsapp: i,
         tenantId: j
     }) => {
-        const z = w, A = w, k = {};
-        k[z(0x192)] = A(0x1a5) + 'ED', k[A(0x193)] = A(0x1ad);
-        const l = k, m = (-0x757 + 0xcf5 * -0x3 + -0x46 * -0xa9, socket_1[z(0x1a1)])(), n = {};
-        n[z(0x19f)] = null, n[z(0x19a)] = {}, n[z(0x19c)] = null, n[z(0x191)] = l[A(0x192)];
+        const z = x, A = w, k = {};
+        k[z(0xb2)] = z(0xb8) + 'ED', k[A(0xac)] = A(0xab);
+        const l = k, m = (0x217b + 0x23b7 + -0x4532, socket_1[A(0xa6)])(), n = {};
+        n[z(0xa3)] = null, n[A(0xbd)] = {}, n[z(0xb6)] = null, n[z(0xa9)] = l[z(0xb2)];
         const o = n, p = {};
-        p['id'] = i['id'], p[A(0x1ac)] = j;
+        p['id'] = i['id'], p[A(0x9f)] = j;
         const r = {};
-        r[A(0x198)] = p, Whatsapp_1[A(0x1ab)][A(0x1ad)](o, r);
+        r[z(0xb7)] = p, Whatsapp_1[A(0xaf)][z(0xab)](o, r);
         const s = {
                 ...i,
                 ...o
             }, t = {};
-        t[z(0x1a7)] = l[z(0x193)], t[z(0x1a0)] = s, m[A(0x18d)](j + (z(0x18a) + z(0x1aa)), t);
+        t[z(0xb0)] = l[z(0xac)], t[A(0xbc)] = s, m[z(0xa4)](j + (A(0xb4) + A(0xa7)), t);
     };
-exports[w(0x1ab)] = SetLogoutLinkedPage;
+exports[w(0xaf)] = SetLogoutLinkedPage;

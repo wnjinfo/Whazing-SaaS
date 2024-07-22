@@ -1,10 +1,18 @@
 'use strict';
+function b(c, d) {
+    const e = a();
+    return b = function (f, g) {
+        f = f - (-0x142 + -0xa * -0x13 + 0xed);
+        let h = e[f];
+        return h;
+    }, b(c, d);
+}
 const l = b, m = b;
 (function (c, d) {
     const j = b, k = b, e = c();
     while (!![]) {
         try {
-            const f = parseInt(j(0x13c)) / (0x4 * -0x287 + -0x1 * -0x340 + 0x1 * 0x6dd) * (-parseInt(j(0x12c)) / (-0x1104 + 0x1f18 + -0xe12)) + -parseInt(k(0x141)) / (-0xf99 + -0x1b20 + 0x2abc) + parseInt(k(0x14a)) / (-0x260c + 0x214a + 0x4c6) + parseInt(j(0x142)) / (0x2180 + 0x16bf + 0x1c1d * -0x2) * (parseInt(k(0x12d)) / (0x14d2 + -0x48 * 0xd + -0x1124)) + -parseInt(k(0x13e)) / (0x185 * -0x1 + -0x1916 + -0xe * -0x1e7) * (-parseInt(k(0x135)) / (0xcd1 * -0x1 + -0xb * -0x23b + 0x110 * -0xb)) + -parseInt(k(0x13a)) / (-0x1cf5 + 0x22 * 0x18 + 0x19ce) * (-parseInt(k(0x139)) / (0x61 * -0x48 + -0x542 + 0x2094)) + -parseInt(k(0x148)) / (0x1 * 0x1ab3 + -0x2598 + 0x8 * 0x15e) * (-parseInt(j(0x133)) / (0x1 * -0xe21 + 0x13 * -0x189 + 0x2b58));
+            const f = -parseInt(j(0x6b)) / (-0xc7 * 0x13 + 0xdda + 0xec) + parseInt(j(0x80)) / (0x178e + 0x172 * -0x19 + -0xb3 * -0x12) * (parseInt(k(0x7e)) / (-0x10fc + 0x2170 + 0x3d * -0x45)) + -parseInt(k(0x74)) / (0x2 * 0xd7e + 0x62e * -0x1 + -0x3 * 0x6ee) + -parseInt(j(0x7a)) / (0x1f68 + -0x1e * 0xad + 0x5 * -0x239) * (parseInt(j(0x6d)) / (-0x2f * -0x5e + 0x289 + -0x13c5)) + -parseInt(k(0x81)) / (-0x1 * -0x1d21 + -0x1ef8 + -0x2 * -0xef) + parseInt(j(0x82)) / (0x1128 + 0x1 * 0xb35 + -0x1c55 * 0x1) + parseInt(j(0x7c)) / (-0x17 * -0x2f + -0x25 * 0x7f + 0xe2b);
             if (f === d)
                 break;
             else
@@ -13,65 +21,54 @@ const l = b, m = b;
             e['push'](e['shift']());
         }
     }
-}(a, 0x1b8a2b * -0x1 + 0x1cd100 + -0x47375 * -0x3));
+}(a, 0x2532d + 0x1bc8a5 + -0x819c8 * 0x2));
 const g = {};
-g[l(0x138)] = !![], Object[m(0x134) + m(0x146)](exports, l(0x145), g);
-function b(c, d) {
-    const e = a();
-    return b = function (f, g) {
-        f = f - (-0x1c5a + -0x17a5 + -0x1 * -0x352b);
-        let h = e[f];
-        return h;
-    }, b(c, d);
-}
-const sequelize_1 = require(l(0x136));
-module[l(0x13b)] = {
+g[l(0x79)] = !![], Object[l(0x7d) + m(0x73)](exports, m(0x7f), g);
+const sequelize_1 = require(l(0x6e));
+module[m(0x7b)] = {
     'up': e => {
-        const n = l, o = m, f = {};
-        f[n(0x132)] = n(0x13f), f[o(0x130)] = o(0x137);
+        const n = m, o = l, f = {};
+        f[n(0x70)] = n(0x78), f[n(0x71)] = o(0x83);
         const h = f, i = {};
-        return i[o(0x12f)] = sequelize_1[n(0x13d)][o(0x147)], i[o(0x131)] = !![], i[n(0x143) + 'ue'] = null, e[n(0x149) + 'mn'](h[o(0x132)], h[n(0x130)], i);
+        return i[o(0x75)] = sequelize_1[o(0x6f)][o(0x69)], i[n(0x6a)] = !![], i[n(0x84) + 'ue'] = null, e[o(0x72) + 'mn'](h[n(0x70)], h[o(0x71)], i);
     },
     'down': e => {
-        const p = l, q = l, f = {};
-        f[p(0x140)] = p(0x13f), f[p(0x12e)] = q(0x137);
+        const p = l, q = m, f = {};
+        f[p(0x77)] = p(0x78), f[q(0x76)] = q(0x83);
         const h = f, i = {};
-        return i[p(0x12f)] = sequelize_1[q(0x13d)][p(0x144)], i[p(0x131)] = !![], i[p(0x143) + 'ue'] = null, e[p(0x149) + 'mn'](h[q(0x140)], h[q(0x12e)], i);
+        return i[q(0x75)] = sequelize_1[p(0x6f)][q(0x6c)], i[q(0x6a)] = !![], i[p(0x84) + 'ue'] = null, e[p(0x72) + 'mn'](h[p(0x77)], h[p(0x76)], i);
     }
 };
 function a() {
     const r = [
-        'BIGINT',
-        '237743ZybvYs',
-        'changeColu',
-        '3725996DWpIak',
-        '14VRAcjx',
-        '2130XRJnkY',
-        'fqhma',
-        'type',
-        'uXEvf',
-        'allowNull',
-        'OBoGt',
-        '36bZKstj',
-        'defineProp',
-        '528CLyqqe',
-        'sequelize',
         'timestamp',
-        'value',
-        '30wzLbCT',
-        '721017QfsFXP',
-        'exports',
-        '263122jIGEYf',
-        'DataTypes',
-        '93254tNsszk',
-        'Messages',
-        'btHbu',
-        '1759674sybYsk',
-        '17905lbuKUV',
         'defaultVal',
+        'BIGINT',
+        'allowNull',
+        '1264225LvEBJK',
         'INTEGER',
+        '10850166yemfDA',
+        'sequelize',
+        'DataTypes',
+        'SgkQx',
+        'FkKjD',
+        'changeColu',
+        'erty',
+        '5844804QvbJwm',
+        'type',
+        'brKbl',
+        'NjTBs',
+        'Messages',
+        'value',
+        '5DudxMD',
+        'exports',
+        '52484715dpVDXr',
+        'defineProp',
+        '7647plqztx',
         '__esModule',
-        'erty'
+        '994TxKsgP',
+        '12091814PaQbEe',
+        '593016eYuNHl'
     ];
     a = function () {
         return r;

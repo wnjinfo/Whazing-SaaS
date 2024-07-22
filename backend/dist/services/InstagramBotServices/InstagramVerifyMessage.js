@@ -1,10 +1,53 @@
 'use strict';
+function a() {
+    const u = [
+        'reateMessa',
+        'getTime',
+        'UGZyJ',
+        'erty',
+        'geService',
+        'otBRH',
+        '1240719mbZwiR',
+        'messageDat',
+        'Services/C',
+        'received',
+        'default',
+        '2314272jWVvjs',
+        'item_id',
+        'value',
+        '85858pxhzCB',
+        '../Message',
+        'fault',
+        '52DGfTvw',
+        '5880ALfZsT',
+        'defineProp',
+        '99gAXKiu',
+        '24414280kPunRA',
+        'tenantId',
+        'chat',
+        '228681cFrugu',
+        '8071mnflcZ',
+        '536245QKYfAo',
+        '__importDe',
+        '__esModule',
+        'ycIhI',
+        '130VwxFsG',
+        'hLMcP',
+        'message',
+        'text',
+        'update'
+    ];
+    a = function () {
+        return u;
+    };
+    return a();
+}
 const p = b, q = b;
 (function (c, d) {
     const n = b, o = b, e = c();
     while (!![]) {
         try {
-            const f = -parseInt(n(0x9e)) / (0x5b3 * 0x6 + -0x265c + 0xb * 0x61) + parseInt(n(0xa0)) / (-0x112b + 0x3d * -0x79 + -0x1c5 * -0x1a) * (-parseInt(o(0xa7)) / (-0x1d63 + 0x9e + 0x6 * 0x4cc)) + -parseInt(o(0x8d)) / (-0x1b91 + 0x1cad + -0x118) + parseInt(o(0xab)) / (-0x1 * -0x182a + 0x1d10 + -0x3535) * (-parseInt(n(0x90)) / (-0x2 * -0x556 + 0x1835 + 0x22db * -0x1)) + parseInt(n(0xa8)) / (0x24ed * 0x1 + 0xa21 + -0x2f07) * (-parseInt(n(0x93)) / (-0xb8e + -0x1181 + 0x1 * 0x1d17)) + parseInt(o(0xa1)) / (-0x3eb + 0x11 * 0xa7 + -0x723) + parseInt(n(0x8e)) / (0x131a + -0x33b + -0xfd5) * (parseInt(n(0x91)) / (-0x1b * -0xca + 0x1f7 * 0xd + -0x6 * 0x7cd));
+            const f = parseInt(n(0x1c7)) / (-0x1f2 * 0xa + 0x16af + -0x33a) + parseInt(n(0x1ac)) / (-0x1370 + 0xd3f + 0x633) * (parseInt(n(0x1b2)) / (0x129c + -0x26af + 0x359 * 0x6)) + -parseInt(n(0x1af)) / (0x9 * -0x392 + -0x104e + 0x3074) * (-parseInt(n(0x1b8)) / (0x1 * 0x1e9d + -0x59 * 0x6d + 0x74d)) + parseInt(n(0x1b0)) / (0x1ce2 + 0x1d06 + 0xef * -0x3e) * (-parseInt(n(0x1b7)) / (0x1f0e + -0x167 + -0x1da0)) + -parseInt(n(0x1cc)) / (-0x131 + -0x9 * 0x1db + 0x11ec) + -parseInt(n(0x1b6)) / (-0x6fb + 0x5a8 + 0x15c) * (-parseInt(o(0x1bc)) / (0x1b * -0x1e + -0x1 * 0x119c + 0x14d0)) + -parseInt(n(0x1b3)) / (0x860 + -0x10a5 + 0xe * 0x98);
             if (f === d)
                 break;
             else
@@ -13,92 +56,49 @@ const p = b, q = b;
             e['push'](e['shift']());
         }
     }
-}(a, 0xab34f + -0x8575b + 0x1c9 * 0x24e));
-var __importDefault = this && this[p(0x8c) + p(0x98)] || function (c) {
-    const r = p;
-    return c && c[r(0x8f)] ? c : { 'default': c };
-};
-const k = {};
-k[p(0x9c)] = !![], Object[p(0x92) + q(0x96)](exports, q(0x8f), k);
+}(a, 0x8 * -0xe252 + -0x2d6 * 0x2dc + -0x1 * -0x1a85b2));
 function b(c, d) {
     const e = a();
     return b = function (f, g) {
-        f = f - (0x18a9 * 0x1 + 0x1094 + -0x1 * 0x28b3);
+        f = f - (0x18 + -0x792 + 0x924);
         let h = e[f];
         return h;
     }, b(c, d);
 }
-function a() {
-    const u = [
-        '394gfKwzX',
-        '2392083AsGMmw',
-        'update',
-        'tenantId',
-        'reateMessa',
-        'getTime',
-        'WKCUw',
-        '10194PhBklJ',
-        '7GvAJgC',
-        'Services/C',
-        'geService',
-        '5tytTKg',
-        'messageDat',
-        'default',
-        'chat',
-        '__importDe',
-        '115816lMOxuK',
-        '10RRNQwY',
-        '__esModule',
-        '4677186VZMaGa',
-        '30079841QwoJTU',
-        'defineProp',
-        '4407216fvZdqe',
-        'received',
-        'LRQtp',
-        'erty',
-        'text',
-        'fault',
-        '../Message',
-        'EKEIy',
-        'xYgsX',
-        'value',
-        'message',
-        '547283uBZeMI',
-        'item_id'
-    ];
-    a = function () {
-        return u;
-    };
-    return a();
-}
-const CreateMessageService_1 = __importDefault(require(p(0x99) + p(0xa9) + p(0xa4) + q(0xaa))), VerifyMessage = async (d, e, f, g) => {
+var __importDefault = this && this[p(0x1b9) + p(0x1ae)] || function (c) {
+    const r = q;
+    return c && c[r(0x1ba)] ? c : { 'default': c };
+};
+const k = {};
+k[p(0x1ab)] = !![], Object[q(0x1b1) + p(0x1c4)](exports, p(0x1ba), k);
+const CreateMessageService_1 = __importDefault(require(q(0x1ad) + p(0x1c9) + q(0x1c1) + p(0x1c5))), VerifyMessage = async (d, e, f, g) => {
         const s = q, t = q, h = {
-                'LRQtp': function (l, m) {
+                'UGZyJ': function (l, m) {
                     return l(m);
                 },
-                'xYgsX': s(0x8b),
-                'EKEIy': s(0x94),
-                'WKCUw': function (l, m) {
+                'hLMcP': s(0x1b5),
+                'otBRH': t(0x1ca),
+                'ycIhI': function (l, m) {
                     return l || m;
                 }
             }, i = {
-                'messageId': h[t(0x95)](String, d[s(0x9d)][s(0x9f)]),
+                'messageId': h[s(0x1c3)](String, d[t(0x1be)][s(0x1aa)]),
                 'ticketId': f['id'],
                 'contactId': e ? undefined : g['id'],
-                'body': d[t(0x9d)][s(0x97)],
+                'body': d[t(0x1be)][t(0x1bf)],
                 'fromMe': e,
                 'read': e,
-                'mediaType': h[t(0x9b)],
+                'mediaType': h[t(0x1bd)],
                 'quotedMsgId': '',
-                'timestamp': new Date()[s(0xa5)](),
-                'status': h[t(0x9a)]
+                'timestamp': new Date()[s(0x1c2)](),
+                'status': h[s(0x1c6)]
             };
-        await f[s(0xa2)]({
-            'lastMessage': d[t(0x9d)][s(0x97)],
-            'lastMessageAt': new Date()[s(0xa5)](),
-            'answered': h[s(0xa6)](e, ![])
+        await f[s(0x1c0)]({
+            'lastMessage': d[s(0x1be)][s(0x1bf)],
+            'lastMessageAt': new Date()[t(0x1c2)](),
+            'answered': h[t(0x1bb)](e, ![])
         });
         const j = {};
-        j[t(0xac) + 'a'] = i, j[s(0xa3)] = f[t(0xa3)], await (-0x2455 * 0x1 + -0xa3 * -0x8 + -0x1f3d * -0x1, CreateMessageService_1[t(0x8a)])(j);
+        j[t(0x1c8) + 'a'] = i, j[s(0x1b4)] = f[s(0x1b4)], await (0x346 * 0x7 + 0x1b0d + -0x31f7, CreateMessageService_1[t(0x1cb)])(j);
     };
-exports[p(0x8a)] = VerifyMessage;
+exports[p(0x1cb)] = VerifyMessage;

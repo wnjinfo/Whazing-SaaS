@@ -1,84 +1,10 @@
 'use strict';
 var a4 = b, a7 = b;
-function a() {
-    var ab = [
-        'userId',
-        'default',
-        'prototype',
-        'updatedAt',
-        'groupId',
-        'metadata',
-        'fault',
-        'function',
-        'AutoIncrem',
-        '72888kTSxye',
-        'eUHYS',
-        'PrimaryKey',
-        'vigaI',
-        'wZGGP',
-        'pWzvG',
-        'hunzQ',
-        'Model',
-        'defineProp',
-        './User',
-        'ertyDescri',
-        'design:typ',
-        'NVZsO',
-        'Table',
-        'user',
-        'length',
-        '72275bVvWki',
-        'TAftC',
-        '__metadata',
-        'typescript',
-        'iLOFC',
-        'ptor',
-        '__importDe',
-        '__esModule',
-        '279490dfNOvL',
-        '261066ELmVGY',
-        'ZrzRb',
-        'VMugv',
-        '138719qmWveu',
-        '287262epbzgN',
-        '__decorate',
-        'ForeignKey',
-        'eName',
-        './Group',
-        'rbpBo',
-        'EfoHK',
-        'getOwnProp',
-        'decorate',
-        'xvKWd',
-        'UpdatedAt',
-        'object',
-        'sequelize-',
-        'group',
-        'ent',
-        'createdAt',
-        'value',
-        'CreatedAt',
-        '28GBXBoB',
-        'Column',
-        '21uyEidZ',
-        '523341ZIaKmE',
-        'BelongsTo',
-        'vsVNL',
-        'EmsDm',
-        'erty',
-        'freezeTabl',
-        '54YpbwhC'
-    ];
-    a = function () {
-        return ab;
-    };
-    return a();
-}
 (function (c, d) {
     var a2 = b, a3 = b, e = c();
     while (!![]) {
         try {
-            var f = parseInt(a2(0x12f)) / (0x1d26 + 0xd5a + -0x2a7f) + parseInt(a2(0x130)) / (-0x207d + 0x26e + 0x1e11) + parseInt(a3(0x145)) / (-0x1 * 0x469 + -0x2a5 + -0x1 * -0x711) + parseInt(a2(0x142)) / (0x203e * 0x1 + -0xa54 + 0xaf3 * -0x2) * (-parseInt(a2(0x123)) / (-0x5aa + -0xb3 * 0x9 + 0xbfa)) + parseInt(a3(0x12c)) / (0x1e72 + 0xaed + -0x2959) * (-parseInt(a2(0x144)) / (0xbf * 0x2b + 0x3a4 * 0x2 + 0xa * -0x3ef)) + -parseInt(a2(0x155)) / (-0x535 * 0x4 + -0xd5e + -0x111d * -0x2) * (parseInt(a2(0x14b)) / (0xb30 + -0x1757 + 0xc30)) + parseInt(a2(0x12b)) / (-0x2 * -0xf19 + -0x1d8d + 0x1f * -0x5);
+            var f = parseInt(a2(0xd1)) / (-0x1 * 0x296 + -0x5 * 0x1a + 0x319 * 0x1) * (parseInt(a3(0xfd)) / (-0x17dd * -0x1 + 0xd6f + -0x6f * 0x56)) + parseInt(a2(0xff)) / (0x2fa + 0x25cd + -0x28c4) + -parseInt(a3(0xf1)) / (-0x1146 + 0x3 * 0xadc + -0xf4a) + -parseInt(a2(0xdf)) / (0x1 * 0x1869 + -0x3 * -0x5cf + 0x1 * -0x29d1) + -parseInt(a3(0xd2)) / (0x6fb * -0x5 + -0x13ef + 0x36dc) * (-parseInt(a2(0xe7)) / (-0x1 * 0x1ced + -0x13a9 + 0x309d)) + parseInt(a2(0xd4)) / (-0x1 * 0x715 + 0x12d3 + -0xbb6 * 0x1) * (-parseInt(a3(0xf8)) / (0x7cf * -0x5 + 0x25da + 0x13a)) + parseInt(a2(0xed)) / (0x1 * 0x2cd + 0x2446 + 0x3 * -0xd03);
             if (f === d)
                 break;
             else
@@ -87,99 +13,181 @@ function a() {
             e['push'](e['shift']());
         }
     }
-}(a, 0x1f0aa + 0x127 * -0x125 + -0x931 * -0x43));
+}(a, -0xe75 * 0xa3 + 0xd849f * -0x1 + 0x1dc17c));
 function b(c, d) {
     var e = a();
     return b = function (f, g) {
-        f = f - (-0x1 * -0xb1b + 0x26bb + 0x1 * -0x30b9);
+        f = f - (-0x2 * -0x100a + 0x1398 + 0xcb9 * -0x4);
         var h = e[f];
         return h;
     }, b(c, d);
 }
-var __decorate = this && this[a4(0x131)] || function (e, f, g, h) {
+var __decorate = this && this[a4(0xcd)] || function (e, f, g, h) {
         var a5 = a4, a6 = a4, j = {
-                'vsVNL': function (o, p) {
+                'bpMFx': function (o, p) {
                     return o < p;
                 },
-                'rbpBo': function (o, p) {
+                'fjAcu': function (o, p) {
                     return o === p;
                 },
-                'VMugv': function (o, p) {
+                'WCrhH': function (o, p) {
                     return o === p;
                 },
-                'iLOFC': a5(0x13b),
-                'NVZsO': a5(0x153),
-                'hunzQ': function (o, p) {
+                'NefUn': a5(0x105),
+                'sGjKc': function (o, p) {
+                    return o === p;
+                },
+                'AspAQ': a6(0xf2),
+                'nqToo': function (o, p) {
                     return o - p;
                 },
-                'xvKWd': function (o, p) {
+                'UiijL': function (o, p) {
                     return o >= p;
                 },
-                'vigaI': function (o, p) {
+                'nGnOe': function (o, p) {
+                    return o < p;
+                },
+                'bknEj': function (o, p) {
                     return o(p);
                 },
-                'EmsDm': function (o, p) {
+                'WSzhp': function (o, p) {
                     return o > p;
                 },
-                'ZrzRb': function (o, p, q, s) {
+                'Btdhy': function (o, p, q, s) {
                     return o(p, q, s);
                 },
-                'EfoHK': function (o, p, q) {
+                'dWtCn': function (o, p, q) {
                     return o(p, q);
                 },
-                'eUHYS': function (o, p) {
+                'mRHAI': function (o, p) {
                     return o > p;
                 }
-            }, k = arguments[a6(0x122)], l = j[a6(0x147)](k, -0x254f + -0xfa7 + 0x34f9) ? f : j[a5(0x135)](h, null) ? h = Object[a5(0x137) + a5(0x11d) + a6(0x128)](f, g) : h, m;
-        if (j[a5(0x12e)](typeof Reflect, j[a6(0x127)]) && j[a6(0x12e)](typeof Reflect[a6(0x138)], j[a6(0x11f)]))
-            l = Reflect[a6(0x138)](e, f, g, h);
+            }, k = arguments[a6(0xe6)], l = j[a6(0xdc)](k, 0x68c + -0x2 * -0xc97 + 0x161 * -0x17) ? f : j[a5(0xf5)](h, null) ? h = Object[a5(0xec) + a6(0xd0) + a6(0x100)](f, g) : h, m;
+        if (j[a6(0x109)](typeof Reflect, j[a5(0xfe)]) && j[a6(0xe4)](typeof Reflect[a6(0xd7)], j[a5(0xc9)]))
+            l = Reflect[a6(0xd7)](e, f, g, h);
         else {
-            for (var n = j[a6(0x15b)](e[a6(0x122)], 0x9a5 + 0x183d + -0x21e1); j[a5(0x139)](n, 0x24f3 + -0x1 * 0xf79 + 0x2 * -0xabd); n--)
+            for (var n = j[a6(0xf3)](e[a6(0xe6)], 0x2462 + -0x2279 + -0xf4 * 0x2); j[a5(0xe2)](n, -0x152 * 0x9 + -0x1 * -0xce + 0xb14); n--)
                 if (m = e[n])
-                    l = (j[a5(0x147)](k, -0x1a55 * 0x1 + 0x1a09 + 0x4f) ? j[a6(0x158)](m, l) : j[a5(0x148)](k, 0x211d + -0xf31 * 0x2 + -0x1 * 0x2b8) ? j[a5(0x12d)](m, f, g, l) : j[a6(0x136)](m, f, g)) || l;
+                    l = (j[a6(0xd3)](k, -0x867 + -0x147f + -0x3 * -0x9a3) ? j[a5(0x107)](m, l) : j[a5(0xca)](k, -0x1f71 + -0x1 * -0x63d + 0x50b * 0x5) ? j[a6(0x103)](m, f, g, l) : j[a6(0xcb)](m, f, g)) || l;
         }
-        return j[a6(0x156)](k, 0x2 * 0x4ee + 0x1 * -0x253d + 0x1 * 0x1b64) && l && Object[a6(0x15d) + a6(0x149)](f, g, l), l;
-    }, __metadata = this && this[a7(0x125)] || function (d, e) {
-        var a8 = a7, a9 = a4, f = {};
-        f[a8(0x15a)] = function (h, i) {
+        return j[a6(0xe3)](k, -0x941 + -0x5d1 + 0x27 * 0x63) && l && Object[a5(0xdd) + a6(0xf6)](f, g, l), l;
+    }, __metadata = this && this[a4(0xf7)] || function (d, e) {
+        var a8 = a4, a9 = a4, f = {};
+        f[a8(0xfa)] = function (h, i) {
             return h === i;
-        }, f[a8(0x159)] = a9(0x13b), f[a8(0x124)] = a9(0x153);
+        }, f[a9(0xd6)] = a9(0x105), f[a9(0xcc)] = a9(0xf2);
         var g = f;
-        if (g[a9(0x15a)](typeof Reflect, g[a9(0x159)]) && g[a9(0x15a)](typeof Reflect[a8(0x151)], g[a8(0x124)]))
-            return Reflect[a9(0x151)](d, e);
-    }, __importDefault = this && this[a4(0x129) + a7(0x152)] || function (c) {
+        if (g[a8(0xfa)](typeof Reflect, g[a9(0xd6)]) && g[a9(0xfa)](typeof Reflect[a9(0xeb)], g[a8(0xcc)]))
+            return Reflect[a8(0xeb)](d, e);
+    }, __importDefault = this && this[a7(0x10a) + a7(0xc8)] || function (c) {
         var aa = a7;
-        return c && c[aa(0x12a)] ? c : { 'default': c };
+        return c && c[aa(0xd8)] ? c : { 'default': c };
     }, a0 = {};
-a0[a7(0x140)] = !![], Object[a7(0x15d) + a4(0x149)](exports, a4(0x12a), a0);
-const sequelize_typescript_1 = require(a4(0x13c) + a4(0x126)), User_1 = __importDefault(require(a7(0x15e))), Group_1 = __importDefault(require(a7(0x134)));
-let UsersGroups = class UsersGroups extends sequelize_typescript_1[a4(0x15c)] {
+function a() {
+    var ab = [
+        'NefUn',
+        '484857wteiIZ',
+        'ptor',
+        'typescript',
+        'ent',
+        'Btdhy',
+        'BelongsTo',
+        'object',
+        'UpdatedAt',
+        'bknEj',
+        './User',
+        'WCrhH',
+        '__importDe',
+        'updatedAt',
+        'fault',
+        'AspAQ',
+        'WSzhp',
+        'dWtCn',
+        'jinYH',
+        '__decorate',
+        'sequelize-',
+        'PrimaryKey',
+        'ertyDescri',
+        '9019HfQMeQ',
+        '84fbtdnj',
+        'nGnOe',
+        '725176JNZeJs',
+        'Table',
+        'mqkLf',
+        'decorate',
+        '__esModule',
+        'AutoIncrem',
+        'freezeTabl',
+        'user',
+        'bpMFx',
+        'defineProp',
+        'groupId',
+        '2889585HhHkCS',
+        './Group',
+        'Column',
+        'UiijL',
+        'mRHAI',
+        'sGjKc',
+        'eName',
+        'length',
+        '97797UoTzgO',
+        'group',
+        'ForeignKey',
+        'CreatedAt',
+        'metadata',
+        'getOwnProp',
+        '9898680jLxetV',
+        'Model',
+        'createdAt',
+        'userId',
+        '1339480ZTFFbG',
+        'function',
+        'nqToo',
+        'value',
+        'fjAcu',
+        'erty',
+        '__metadata',
+        '9DjZXer',
+        'design:typ',
+        'nBjbA',
+        'prototype',
+        'default',
+        '26CyyIgt'
+    ];
+    a = function () {
+        return ab;
+    };
+    return a();
+}
+a0[a4(0xf4)] = !![], Object[a4(0xdd) + a7(0xf6)](exports, a4(0xd8), a0);
+const sequelize_typescript_1 = require(a7(0xce) + a7(0x101)), User_1 = __importDefault(require(a4(0x108))), Group_1 = __importDefault(require(a7(0xe0)));
+let UsersGroups = class UsersGroups extends sequelize_typescript_1[a7(0xee)] {
 };
 __decorate([
-    sequelize_typescript_1[a7(0x157)],
-    sequelize_typescript_1[a4(0x154) + a4(0x13e)],
-    sequelize_typescript_1[a4(0x143)],
-    __metadata(a4(0x11e) + 'e', Number)
-], UsersGroups[a4(0x14e)], 'id', void (0x12e * -0x1a + 0x12d * 0x17 + 0x1 * 0x3a1)), __decorate([
-    (0x1fd9 + 0x97 * 0x17 + -0x2d6a, sequelize_typescript_1[a7(0x132)])(() => Group_1[a4(0x14d)]),
-    sequelize_typescript_1[a7(0x143)],
-    __metadata(a4(0x11e) + 'e', Number)
-], UsersGroups[a4(0x14e)], a4(0x150), void (0x761 + 0xe41 + -0xad1 * 0x2)), __decorate([
-    (-0x3ca * -0x7 + 0x61a + -0x20a0, sequelize_typescript_1[a7(0x146)])(() => Group_1[a4(0x14d)]),
-    __metadata(a7(0x11e) + 'e', Group_1[a7(0x14d)])
-], UsersGroups[a7(0x14e)], a7(0x13d), void (-0x1 * -0x1a0 + 0x15df + -0x191 * 0xf)), __decorate([
-    (0x2ab * -0xa + 0x1bf1 + -0x11 * 0x13, sequelize_typescript_1[a7(0x132)])(() => User_1[a7(0x14d)]),
-    sequelize_typescript_1[a7(0x143)],
-    __metadata(a4(0x11e) + 'e', Number)
-], UsersGroups[a7(0x14e)], a4(0x14c), void (0x1ac * -0xd + 0x2425 + 0x7 * -0x20f)), __decorate([
-    (-0x202 * -0x7 + -0x3 * -0x4e1 + -0x1cb1, sequelize_typescript_1[a7(0x146)])(() => User_1[a4(0x14d)]),
-    __metadata(a4(0x11e) + 'e', User_1[a4(0x14d)])
-], UsersGroups[a7(0x14e)], a7(0x121), void (-0x13 * -0xf4 + 0xb39 + -0x1d55)), __decorate([
-    sequelize_typescript_1[a4(0x141)],
-    __metadata(a4(0x11e) + 'e', Date)
-], UsersGroups[a4(0x14e)], a4(0x13f), void (0x1fb4 + 0x1 * 0xa52 + -0x1503 * 0x2)), __decorate([
-    sequelize_typescript_1[a7(0x13a)],
-    __metadata(a4(0x11e) + 'e', Date)
-], UsersGroups[a7(0x14e)], a4(0x14f), void (0x13fc + 0x1 * 0xf16 + -0x43 * 0x86));
+    sequelize_typescript_1[a4(0xcf)],
+    sequelize_typescript_1[a7(0xd9) + a4(0x102)],
+    sequelize_typescript_1[a4(0xe1)],
+    __metadata(a4(0xf9) + 'e', Number)
+], UsersGroups[a7(0xfb)], 'id', void (-0xd * -0x295 + 0xddd * -0x1 + 0x1a * -0xc2)), __decorate([
+    (0x3fe * 0x2 + -0x12 * 0x1fc + 0x1bbc, sequelize_typescript_1[a4(0xe9)])(() => Group_1[a4(0xfc)]),
+    sequelize_typescript_1[a4(0xe1)],
+    __metadata(a4(0xf9) + 'e', Number)
+], UsersGroups[a4(0xfb)], a7(0xde), void (0x242e + 0x9d * -0x35 + -0x1 * 0x3ad)), __decorate([
+    (-0x1 * 0x1517 + -0x36 * 0x5e + 0x1 * 0x28eb, sequelize_typescript_1[a7(0x104)])(() => Group_1[a7(0xfc)]),
+    __metadata(a7(0xf9) + 'e', Group_1[a7(0xfc)])
+], UsersGroups[a7(0xfb)], a7(0xe8), void (0x1f33 + 0x23b2 + -0xd61 * 0x5)), __decorate([
+    (0x1498 + -0xfc1 + -0x4d7, sequelize_typescript_1[a7(0xe9)])(() => User_1[a7(0xfc)]),
+    sequelize_typescript_1[a4(0xe1)],
+    __metadata(a4(0xf9) + 'e', Number)
+], UsersGroups[a4(0xfb)], a7(0xf0), void (-0x2 * -0x8c + 0x224f * -0x1 + 0x2137)), __decorate([
+    (0x6c3 + -0x160f + -0x1 * -0xf4c, sequelize_typescript_1[a4(0x104)])(() => User_1[a4(0xfc)]),
+    __metadata(a7(0xf9) + 'e', User_1[a7(0xfc)])
+], UsersGroups[a4(0xfb)], a7(0xdb), void (0x3b + -0x6b * -0x3 + -0x17c)), __decorate([
+    sequelize_typescript_1[a4(0xea)],
+    __metadata(a4(0xf9) + 'e', Date)
+], UsersGroups[a4(0xfb)], a7(0xef), void (-0x134b + -0x1421 + 0x276c)), __decorate([
+    sequelize_typescript_1[a4(0x106)],
+    __metadata(a7(0xf9) + 'e', Date)
+], UsersGroups[a7(0xfb)], a7(0x10b), void (-0x1a60 + 0x1 * 0xd83 + 0x25 * 0x59));
 var a1 = {};
-a1[a7(0x14a) + a7(0x133)] = !![], UsersGroups = __decorate([(0x4 * 0x468 + -0x264 + -0xf3c, sequelize_typescript_1[a7(0x120)])(a1)], UsersGroups), exports[a7(0x14d)] = UsersGroups;
+a1[a4(0xda) + a7(0xe5)] = !![], UsersGroups = __decorate([(0x1f1 * 0x13 + -0x2167 + 0x2 * -0x1be, sequelize_typescript_1[a4(0xd5)])(a1)], UsersGroups), exports[a7(0xfc)] = UsersGroups;

@@ -1,82 +1,18 @@
 'use strict';
-function a() {
-    const G = [
-        'Services/S',
-        'aultWhatsA',
-        '53110qmiVVd',
-        '__esModule',
-        'Tickets',
-        'defineProp',
-        './CreateLo',
-        'howContact',
-        'ticket',
-        'telegram',
-        'gTicketSer',
-        'ERR_CREATI',
-        'mand',
-        'vice',
-        'status',
-        'NG_TICKET',
-        '5181822cbHKSp',
-        'channel',
-        'Bpbml',
-        'Emit',
-        'isGroup',
-        'type',
-        '78061QalwZm',
-        'whatsapp',
-        'UexWm',
-        '2aLyQhV',
-        'tenantId',
-        '../../erro',
-        'Zzopq',
-        'create',
-        'contactId',
-        'ontactOpen',
-        'ticketId',
-        'ate',
-        'erty',
-        'ticket:upd',
-        '8253826gapXta',
-        './ShowTick',
-        'xJpRC',
-        'ers/GetDef',
-        'fault',
-        'cOcXS',
-        'value',
-        'flKwV',
-        'iaVvN',
-        '4921617WKoYSh',
-        'ers/CheckC',
-        'includes',
-        'rs/AppErro',
-        '12414368tKbRkf',
-        'instagram',
-        '../../help',
-        '../Contact',
-        'Service',
-        'ers/socket',
-        '4782024QSnGpX',
-        'etService',
-        '196BUosSC',
-        'default',
-        '__importDe',
-        '$create',
-        'payload',
-        'isActiveDe',
-        'userId'
-    ];
-    a = function () {
-        return G;
-    };
-    return a();
-}
 const B = b, C = b;
+function b(c, d) {
+    const e = a();
+    return b = function (f, g) {
+        f = f - (0x1f8f + -0x1 * 0xb2a + -0x83 * 0x26);
+        let h = e[f];
+        return h;
+    }, b(c, d);
+}
 (function (c, d) {
     const z = b, A = b, e = c();
     while (!![]) {
         try {
-            const f = -parseInt(z(0xf5)) / (-0x1ed7 + -0x1f3 * -0x13 + -0x631) + -parseInt(z(0xf8)) / (0x773 * -0x5 + -0x1666 + -0x1 * -0x3ba7) * (parseInt(A(0x10c)) / (0x1db + -0x1f7d + 0x1da5)) + parseInt(A(0x118)) / (-0x8ae + 0x1971 + -0x10bf) * (-parseInt(z(0xe1)) / (-0x800 * 0x2 + -0x35 * -0x79 + -0x88 * 0x11)) + parseInt(A(0xef)) / (-0x4 * 0x11e + -0x6ef * -0x1 + 0x5 * -0x7d) + parseInt(z(0x103)) / (-0x13e6 + -0x20d8 * -0x1 + -0x1 * 0xceb) + parseInt(z(0x110)) / (-0x11f7 + -0x6b0 + 0x18af) + -parseInt(z(0x116)) / (0x2 * -0x10e2 + 0x16a * -0x10 + 0x386d * 0x1);
+            const f = -parseInt(z(0xf3)) / (0x49c + -0x425 * -0x2 + -0xce5) * (parseInt(z(0x10f)) / (0x21d8 + 0x9 * 0x1a0 + -0x3076)) + parseInt(A(0xf9)) / (-0x2 * -0x109 + -0x1 * -0x527 + 0x736 * -0x1) + parseInt(A(0x122)) / (-0x2 * -0x755 + -0x3 * 0x863 + 0x9 * 0x12b) * (parseInt(A(0x124)) / (-0x30 * 0x85 + -0x171b + -0x602 * -0x8)) + parseInt(z(0x121)) / (0xda * -0x8 + 0xd8b + -0x11 * 0x65) + -parseInt(A(0x10c)) / (-0x16 * -0x15d + 0x23ed + -0x41e4) * (parseInt(z(0xfc)) / (-0x7 * 0x143 + 0x2047 * -0x1 + -0x4 * -0xa49)) + parseInt(A(0x11e)) / (0x1d8 * 0x4 + -0xa * -0x135 + -0x1369 * 0x1) * (-parseInt(z(0x10d)) / (0x1 * -0x4f7 + 0xe9 * 0xf + -0x171 * 0x6)) + parseInt(z(0x12f)) / (-0x1 * 0x625 + 0x3a0 + 0x290);
             if (f === d)
                 break;
             else
@@ -85,22 +21,14 @@ const B = b, C = b;
             e['push'](e['shift']());
         }
     }
-}(a, -0x31 * -0x73d6 + -0x7f1c2 * -0x2 + 0x2285 * -0xbd));
-var __importDefault = this && this[B(0x11a) + C(0x107)] || function (c) {
-    const D = B;
-    return c && c[D(0xe2)] ? c : { 'default': c };
+}(a, -0xbec15 + -0xa9f * 0x2b + -0x1 * -0x1568e9));
+var __importDefault = this && this[B(0x131) + C(0x134)] || function (c) {
+    const D = C;
+    return c && c[D(0x12e)] ? c : { 'default': c };
 };
-function b(c, d) {
-    const e = a();
-    return b = function (f, g) {
-        f = f - (-0x2 * -0xee + 0x416 + -0x1 * 0x513);
-        let h = e[f];
-        return h;
-    }, b(c, d);
-}
 const k = {};
-k[C(0x109)] = !![], Object[C(0xe4) + B(0x101)](exports, C(0xe2), k);
-const AppError_1 = __importDefault(require(B(0xfa) + B(0x10f) + 'r')), CheckContactOpenTickets_1 = __importDefault(require(B(0x112) + B(0x10d) + C(0xfe) + C(0xe3))), GetDefaultWhatsApp_1 = __importDefault(require(C(0x112) + C(0x106) + C(0xe0) + 'pp')), socketEmit_1 = __importDefault(require(B(0x112) + B(0x115) + C(0xf2))), ShowContactService_1 = __importDefault(require(B(0x113) + B(0xdf) + B(0xe6) + C(0x114))), CreateLogTicketService_1 = __importDefault(require(C(0xe5) + C(0xe9) + B(0xec))), ShowTicketService_1 = __importDefault(require(C(0x104) + C(0x117))), CreateTicketService = async ({
+k[B(0xfa)] = !![], Object[C(0x110) + C(0x117)](exports, B(0x12e), k);
+const AppError_1 = __importDefault(require(B(0x10a) + C(0x11b) + 'r')), CheckContactOpenTickets_1 = __importDefault(require(B(0x119) + C(0x113) + C(0x118) + B(0x11f))), GetDefaultWhatsApp_1 = __importDefault(require(C(0x119) + C(0x12c) + B(0x132) + 'pp')), socketEmit_1 = __importDefault(require(C(0x119) + C(0x115) + C(0x107))), ShowContactService_1 = __importDefault(require(C(0xff) + C(0x127) + C(0x111) + B(0x126))), CreateLogTicketService_1 = __importDefault(require(C(0x112) + B(0x102) + B(0x103))), ShowTicketService_1 = __importDefault(require(B(0xf5) + B(0x10b))), CreateTicketService = async ({
         contactId: i,
         status: j,
         userId: l,
@@ -109,27 +37,101 @@ const AppError_1 = __importDefault(require(B(0xfa) + B(0x10f) + 'r')), CheckCont
         channelId: channelId = undefined
     }) => {
         const E = C, F = B, o = {};
-        o[E(0xf7)] = E(0x111), o[E(0x105)] = F(0xe8), o[E(0x10a)] = E(0xf6), o[F(0xf1)] = E(0xea) + E(0xee), o[E(0xfb)] = F(0xe7), o[F(0x108)] = F(0xfc), o[E(0x10b)] = F(0x102) + E(0x100);
-        const p = o, q = await (-0x1 * -0x100e + -0x5 * -0xbf + 0x1 * -0x13c9, GetDefaultWhatsApp_1[E(0x119)])(m, channelId);
+        o[E(0xf7)] = F(0x105), o[F(0xf6)] = F(0x120), o[F(0x128)] = F(0xf8), o[F(0x104)] = E(0x11d) + F(0xfd), o[E(0x10e)] = F(0x101), o[E(0xfe)] = E(0x100), o[E(0x106)] = F(0x12d) + F(0x123);
+        const p = o, q = await (0x26c2 + -0x98b + 0x33f * -0x9, GetDefaultWhatsApp_1[F(0x125)])(m, channelId);
         if (!n || ![
                 p[F(0xf7)],
-                p[E(0x105)],
-                p[E(0x10a)]
-            ][E(0x10e)](n))
-            throw new AppError_1[(E(0x119))](p[E(0xf1)]);
-        await (-0x149c + 0x644 * -0x1 + 0x1ae0, CheckContactOpenTickets_1[E(0x119)])(i);
+                p[F(0xf6)],
+                p[F(0x128)]
+            ][E(0x114)](n))
+            throw new AppError_1[(E(0x125))](p[E(0x104)]);
+        await (-0x857 + 0x254e + -0x1cf7, CheckContactOpenTickets_1[E(0x125)])(i);
         const r = {};
-        r['id'] = i, r[E(0xf9)] = m;
-        const {isGroup: s} = await (0x4 * -0x260 + 0x24f * 0x1 + 0x731 * 0x1, ShowContactService_1[F(0x119)])(r), t = {};
-        t[F(0xfd)] = i, t[E(0xed)] = j, t[F(0xf3)] = s, t[F(0x11e)] = l, t[F(0x11d) + F(0xeb)] = !![], t[E(0xf0)] = n, t[E(0xf9)] = m;
-        const {id: u} = await q[E(0x11b)](p[F(0xfb)], t), v = {};
-        v['id'] = u, v[F(0xf9)] = m;
-        const w = await (-0x1 * 0x1733 + -0x1b8f + -0xb2 * -0x49, ShowTicketService_1[E(0x119)])(v);
+        r['id'] = i, r[E(0x116)] = m;
+        const {isGroup: s} = await (0x211c + 0xbd9 + -0x1 * 0x2cf5, ShowContactService_1[F(0x125)])(r), t = {};
+        t[E(0x11a)] = i, t[F(0x108)] = j, t[E(0x133)] = s, t[F(0x12b)] = l, t[E(0x130) + F(0xfb)] = !![], t[F(0xf4)] = n, t[F(0x116)] = m;
+        const {id: u} = await q[F(0x129)](p[F(0x10e)], t), v = {};
+        v['id'] = u, v[F(0x116)] = m;
+        const w = await (0x3 * 0xc45 + -0x135c + 0x5d1 * -0x3, ShowTicketService_1[F(0x125)])(v);
         if (!w)
-            throw new AppError_1[(F(0x119))](p[F(0xf1)]);
+            throw new AppError_1[(F(0x125))](p[F(0x104)]);
         const x = {};
-        x[E(0x11e)] = l, x[F(0xff)] = w['id'], x[E(0xf4)] = p[F(0x108)], await (-0x2464 + 0x1 * 0xbc0 + -0x13 * -0x14c, CreateLogTicketService_1[E(0x119)])(x);
+        x[F(0x12b)] = l, x[F(0x109)] = w['id'], x[F(0x12a)] = p[E(0xfe)], await (-0x1349 * 0x1 + -0x1e61 + 0x31aa, CreateLogTicketService_1[E(0x125)])(x);
         const y = {};
-        return y[E(0xf9)] = m, y[E(0xf4)] = p[E(0x10b)], y[F(0x11c)] = w, (-0x1 * 0x80a + -0x262c + 0x46 * 0xa9, socketEmit_1[E(0x119)])(y), w;
+        return y[E(0x116)] = m, y[E(0x12a)] = p[E(0x106)], y[E(0x11c)] = w, (-0x12 * 0x1d0 + -0x6e2 + -0x2 * -0x13c1, socketEmit_1[F(0x125)])(y), w;
     };
-exports[C(0x119)] = CreateTicketService;
+function a() {
+    const G = [
+        'whatsapp',
+        '1551405esMvdY',
+        'value',
+        'mand',
+        '9544xrCYXb',
+        'NG_TICKET',
+        'bdXMe',
+        '../Contact',
+        'create',
+        'ticket',
+        'gTicketSer',
+        'vice',
+        'dnOvp',
+        'instagram',
+        'YOrPc',
+        'Emit',
+        'status',
+        'ticketId',
+        '../../erro',
+        'etService',
+        '5754JgXleZ',
+        '6237640BbaqXj',
+        'RXVhZ',
+        '20DNreEC',
+        'defineProp',
+        'howContact',
+        './CreateLo',
+        'ers/CheckC',
+        'includes',
+        'ers/socket',
+        'tenantId',
+        'erty',
+        'ontactOpen',
+        '../../help',
+        'contactId',
+        'rs/AppErro',
+        'payload',
+        'ERR_CREATI',
+        '9BuDtQA',
+        'Tickets',
+        'telegram',
+        '3632550BmwEIe',
+        '4ioDfeE',
+        'ate',
+        '4577935LZQDpc',
+        'default',
+        'Service',
+        'Services/S',
+        'bKbvU',
+        '$create',
+        'type',
+        'userId',
+        'ers/GetDef',
+        'ticket:upd',
+        '__esModule',
+        '7950316AxZhng',
+        'isActiveDe',
+        '__importDe',
+        'aultWhatsA',
+        'isGroup',
+        'fault',
+        '65163tndgEJ',
+        'channel',
+        './ShowTick',
+        'JIKaw',
+        'AYQcu'
+    ];
+    a = function () {
+        return G;
+    };
+    return a();
+}
+exports[C(0x125)] = CreateTicketService;

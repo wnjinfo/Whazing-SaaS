@@ -2,7 +2,7 @@
 function b(c, d) {
     const e = a();
     return b = function (f, g) {
-        f = f - (0xbda + 0x65f + -0x1053);
+        f = f - (0xd9 * -0x23 + -0x25fe + 0x221b * 0x2);
         let h = e[f];
         return h;
     }, b(c, d);
@@ -12,7 +12,7 @@ const H = b, I = b;
     const F = b, G = b, e = c();
     while (!![]) {
         try {
-            const f = -parseInt(F(0x1e7)) / (0xb * -0x1a5 + 0xad6 + 0x742) * (parseInt(G(0x214)) / (0x24b4 * 0x1 + -0x10b9 + -0x13f9)) + -parseInt(F(0x210)) / (0xdbe * 0x2 + 0xb00 + 0x93 * -0x43) * (-parseInt(F(0x1fe)) / (-0x10a9 * -0x1 + 0x1b7 * -0x15 + 0x135e)) + parseInt(G(0x1f9)) / (0x1f89 * -0x1 + 0x1ae * 0x16 + -0x566) * (parseInt(F(0x1fc)) / (-0x2 * -0x3c2 + 0x2 * -0x9ff + 0xc80)) + parseInt(F(0x204)) / (-0x12b6 + 0x1d6b + 0x1 * -0xaae) * (-parseInt(F(0x20c)) / (-0x471 * -0x7 + -0x371 * 0x5 + 0x12 * -0xc5)) + -parseInt(F(0x20f)) / (-0x1d * -0xff + -0x1e5f + 0x185) * (parseInt(F(0x1e8)) / (-0x2494 + -0x2c1 * 0x5 + 0x1 * 0x3263)) + parseInt(G(0x20d)) / (-0x19a2 + 0x6e * -0x33 + -0x5d * -0x83) * (-parseInt(G(0x1f4)) / (-0x50f * -0x2 + -0x17ea + -0x6ec * -0x2)) + parseInt(F(0x1ea)) / (0x2 * 0x10b7 + -0x10ad + 0x2 * -0x85a) * (parseInt(F(0x1fb)) / (0x5d9 + 0x271 * 0xb + 0x15 * -0x18e));
+            const f = parseInt(F(0x9c)) / (-0x3 * -0x727 + -0x253b * 0x1 + 0x7 * 0x241) * (parseInt(F(0x95)) / (-0x2314 + -0x10e2 + -0x67f * -0x8)) + parseInt(F(0x9e)) / (0x2b * -0x6d + 0x1a * -0x115 + 0x2e74) * (parseInt(F(0x96)) / (-0x11be + 0x72 * 0x20 + 0x382)) + -parseInt(G(0x8e)) / (0xa + -0x156f + 0x156a) * (-parseInt(F(0x9b)) / (0x9 * -0x243 + 0x7b4 + -0xcad * -0x1)) + parseInt(G(0x90)) / (0x96 * -0x8 + -0x27 * 0x5b + 0x1294) * (-parseInt(F(0xad)) / (-0x5 * 0x3ad + 0x2437 * 0x1 + -0x11ce)) + -parseInt(G(0xae)) / (0x204b + -0x485 * -0x2 + 0xdc4 * -0x3) * (parseInt(F(0x9f)) / (-0x11f0 + 0x200d + -0xe13)) + parseInt(F(0xab)) / (0x15e2 + 0x3 * -0xb11 + -0x4 * -0x2d7) + parseInt(F(0x93)) / (-0x25a8 + -0x11d * -0x1b + 0x13 * 0x67) * (-parseInt(G(0x8f)) / (0x14fc + 0x260 * -0x2 + 0x565 * -0x3));
             if (f === d)
                 break;
             else
@@ -21,116 +21,115 @@ const H = b, I = b;
             e['push'](e['shift']());
         }
     }
-}(a, -0x108cb * 0x19 + 0xb9ff8 + 0x1ce6c5));
-var __importDefault = this && this[H(0x203) + H(0x1f0)] || function (c) {
-    const J = I;
-    return c && c[J(0x1fa)] ? c : { 'default': c };
-};
-const k = {};
-k[I(0x20e)] = !![], Object[I(0x1ee) + H(0x1f1)](exports, I(0x1fa), k);
+}(a, -0xe * -0xf8ec + 0x1 * 0x53974 + -0x1 * 0xa6d9b));
 function a() {
     const O = [
-        'WqpWX',
-        'update',
-        './../../mo',
-        '__importDe',
-        '7wHuMQn',
-        'read',
-        'receiverId',
-        'findOne',
-        'forEach',
-        'lMessage',
-        'userGroupI',
-        'userId',
-        '5842072cYYCBu',
-        '6127tSYVTX',
-        'value',
-        '27HQhqCr',
-        '3YNnyYu',
-        'sKELE',
-        'length',
-        '../../mode',
-        '79996lmSLjt',
-        'dels/Users',
-        'Groups',
-        'ls/ReadMes',
-        'internalMe',
-        'rs/AppErro',
-        '29EeCqqX',
-        '2501860jkBRIZ',
-        'sageGroups',
-        '6364501EFHqtn',
-        'ssageId',
         'create',
-        '_NOT_FOUND',
-        'defineProp',
-        'where',
-        'fault',
-        'erty',
-        'gzcYR',
+        '11319xXTqfw',
+        '4034830jeYwYL',
+        'value',
+        '__importDe',
         'USER_GROUP',
-        '10284ftjmNG',
+        'defineProp',
+        'Groups',
         '../../erro',
         'groupId',
+        '../../mode',
+        'where',
+        'internalMe',
+        'ssageId',
+        '4643430YMaFuh',
         'ls/Interna',
-        'default',
-        '35590EhGIbs',
+        '53864hTaKxf',
+        '9fgoykh',
+        'findOne',
+        'dels/Users',
+        'findAll',
+        './../../mo',
+        'userGroupI',
+        'forEach',
+        'qWYxc',
+        'PCRWj',
         '__esModule',
-        '56AAcmQj',
-        '852mNsXWp',
+        'fault',
+        'rs/AppErro',
+        'default',
+        'read',
+        'update',
+        'ls/ReadMes',
+        'erty',
+        '_NOT_FOUND',
+        '5lCWWPa',
+        '1001kEJrnh',
+        '518ebBuAX',
+        'lMessage',
+        'sageGroups',
+        '249252qFmkHK',
         'senderId',
-        '4441208BrOPjP',
-        'findAll'
+        '2cmafCb',
+        '892nQeVMV',
+        'userId',
+        'receiverId',
+        'RsQtn',
+        'length',
+        '5289042vCsnsL',
+        '907181tYcLXK'
     ];
     a = function () {
         return O;
     };
     return a();
 }
-const AppError_1 = __importDefault(require(H(0x1f5) + H(0x1e6) + 'r')), InternalMessage_1 = __importDefault(require(H(0x213) + I(0x1f7) + H(0x209))), ReadMessageGroups_1 = __importDefault(require(H(0x213) + I(0x217) + H(0x1e9))), UsersGroups_1 = __importDefault(require(I(0x202) + H(0x215) + H(0x216))), ReadMessageService = async ({
+var __importDefault = this && this[H(0xa1) + H(0xb8)] || function (c) {
+    const J = H;
+    return c && c[J(0xb7)] ? c : { 'default': c };
+};
+const k = {};
+k[H(0xa0)] = !![], Object[I(0xa3) + H(0xbe)](exports, H(0xb7), k);
+const AppError_1 = __importDefault(require(H(0xa5) + I(0xb9) + 'r')), InternalMessage_1 = __importDefault(require(I(0xa7) + H(0xac) + H(0x91))), ReadMessageGroups_1 = __importDefault(require(I(0xa7) + H(0xbd) + H(0x92))), UsersGroups_1 = __importDefault(require(H(0xb2) + H(0xb0) + H(0xa4))), ReadMessageService = async ({
         senderId: l,
         userId: m,
         isGroup: n
     }) => {
-        const K = H, L = I, o = {};
-        o[K(0x200)] = function (q, r) {
+        const K = I, L = H, o = {};
+        o[K(0xb6)] = function (q, r) {
             return q <= r;
-        }, o[L(0x1f2)] = function (q, r) {
+        }, o[L(0x99)] = function (q, r) {
             return q === r;
-        }, o[L(0x211)] = K(0x1f3) + L(0x1ed);
+        }, o[L(0xb5)] = K(0xa2) + L(0x8d);
         const p = o;
-        if (p[K(0x1f2)](n, ![])) {
+        if (p[K(0x99)](n, ![])) {
             const q = {};
-            q[K(0x205)] = !![];
+            q[K(0xbb)] = !![];
             const r = {};
-            r[K(0x1fd)] = l, r[K(0x206)] = m;
+            r[K(0x94)] = l, r[K(0x98)] = m;
             const s = {};
-            s[K(0x1ef)] = r, await InternalMessage_1[K(0x1f8)][L(0x201)](q, s);
+            s[L(0xa8)] = r, await InternalMessage_1[K(0xba)][K(0xbc)](q, s);
         } else {
             const t = {};
-            t[K(0x1f6)] = l, t[K(0x20b)] = m;
+            t[L(0xa6)] = l, t[L(0x97)] = m;
             const u = {};
-            u[L(0x1ef)] = t;
-            const v = await UsersGroups_1[L(0x1f8)][L(0x207)](u);
-            !v && new AppError_1[(K(0x1f8))](p[K(0x211)], 0x5d3 + -0x2 * 0x128b + 0x20d7);
+            u[L(0xa8)] = t;
+            const v = await UsersGroups_1[K(0xba)][K(0xaf)](u);
+            !v && new AppError_1[(K(0xba))](p[K(0xb5)], 0x21a1 + 0x106 * 0x2 + -0x12d * 0x1d);
             const w = {};
-            w[K(0x1f6)] = v[L(0x1f6)];
+            w[K(0xa6)] = v[K(0xa6)];
             const x = {};
-            x[K(0x1ef)] = w;
-            const y = await InternalMessage_1[L(0x1f8)][K(0x1ff)](x);
-            y[K(0x208)](async z => {
-                const M = L, N = K, A = {};
-                A[M(0x218) + N(0x1eb)] = z['id'], A[M(0x20a) + 'd'] = v['id'];
+            x[L(0xa8)] = w;
+            const y = await InternalMessage_1[K(0xba)][K(0xb1)](x);
+            y[K(0xb4)](async z => {
+                const M = K, N = L, A = {};
+                A[M(0xa9) + M(0xaa)] = z['id'], A[N(0xb3) + 'd'] = v['id'];
                 const B = {};
-                B[N(0x1ef)] = A;
-                const C = await ReadMessageGroups_1[M(0x1f8)][M(0x1ff)](B);
-                if (p[N(0x200)](C[M(0x212)], 0x1 * 0xade + 0x73a + 0x1218 * -0x1)) {
+                B[N(0xa8)] = A;
+                const C = await ReadMessageGroups_1[M(0xba)][N(0xb1)](B);
+                if (p[N(0xb6)](C[N(0x9a)], -0x16a3 + 0x21a3 + -0xb00)) {
                     const D = {};
-                    D[N(0x218) + N(0x1eb)] = z['id'], D[N(0x20a) + 'd'] = v['id'];
+                    D[M(0xa9) + N(0xaa)] = z['id'], D[N(0xb3) + 'd'] = v['id'];
                     const E = D;
-                    await ReadMessageGroups_1[N(0x1f8)][N(0x1ec)](E);
+                    await ReadMessageGroups_1[N(0xba)][M(0x9d)](E);
                 }
             });
         }
     };
-exports[H(0x1f8)] = ReadMessageService;
+exports[I(0xba)] = ReadMessageService;

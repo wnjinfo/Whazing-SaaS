@@ -1,10 +1,18 @@
 'use strict';
+function b(c, d) {
+    var e = a();
+    return b = function (f, g) {
+        f = f - (0x12e4 + -0x197f + 0x82e);
+        var h = e[f];
+        return h;
+    }, b(c, d);
+}
 var J = b, K = b;
 (function (c, d) {
     var H = b, I = b, e = c();
     while (!![]) {
         try {
-            var f = -parseInt(H(0x111)) / (0xdd * 0x2 + 0x2 * 0x488 + 0xb * -0xfb) * (-parseInt(H(0x113)) / (-0x2477 + -0x21b * 0xf + -0x232 * -0x1f)) + -parseInt(H(0x114)) / (-0x1d * -0x34 + 0xbc + 0x1 * -0x69d) * (-parseInt(H(0x13f)) / (0x1 * -0x1825 + -0x5ff * 0x3 + 0x437 * 0xa)) + -parseInt(I(0x12a)) / (0x42 * -0x23 + -0xa9f + 0x13aa) + parseInt(I(0x14b)) / (0x5 * 0x2de + -0x242c + -0x577 * -0x4) * (-parseInt(H(0x133)) / (0x9 * -0x43e + -0x15aa + 0x27 * 0x189)) + -parseInt(H(0x147)) / (-0x20dd + -0x4e1 * -0x3 + 0x1242) + -parseInt(H(0x12e)) / (0x269d + 0x3b * 0x4d + 0x3853 * -0x1) * (parseInt(H(0x14c)) / (-0x1e6a + 0xc96 * -0x2 + -0xde8 * -0x4)) + parseInt(H(0x149)) / (0xdeb + 0x455 + -0x1235);
+            var f = parseInt(H(0x1d9)) / (0x1 * -0x932 + -0x6d * -0x57 + 0x318 * -0x9) * (parseInt(I(0x1ce)) / (-0xe66 + -0x1a1f + -0x19f * -0x19)) + -parseInt(H(0x1c9)) / (0x4fd * 0x4 + 0x1790 + -0x2b81) + -parseInt(I(0x1ad)) / (-0x19c + -0xdaa + 0xf4a) + parseInt(H(0x1a9)) / (0x12ad * 0x2 + -0xdc3 + -0x2 * 0xbc9) * (parseInt(I(0x1a8)) / (-0x1225 * -0x1 + 0x2 * -0x1215 + 0x120b)) + parseInt(H(0x193)) / (0x16 * -0x10f + -0x1053 + 0x56 * 0x76) + -parseInt(I(0x1bb)) / (-0x1e8f * 0x1 + -0x1509 + 0x33a0) * (parseInt(I(0x1bf)) / (0xbc4 + 0xd7 * 0x1a + 0xd * -0x295)) + parseInt(I(0x198)) / (0x22 * 0x11b + 0x72d * -0x1 + -0x137 * 0x19);
             if (f === d)
                 break;
             else
@@ -13,172 +21,184 @@ var J = b, K = b;
             e['push'](e['shift']());
         }
     }
-}(a, 0xabb2a + 0x1 * -0x112832 + 0x2c435 * 0x7));
-function b(c, d) {
-    var e = a();
-    return b = function (f, g) {
-        f = f - (0x25 * 0x10b + -0x1 * -0x23ad + 0x249d * -0x2);
-        var h = e[f];
-        return h;
-    }, b(c, d);
-}
-var __createBinding = this && this[J(0x12b) + J(0x115)] || (Object[J(0x10b)] ? function (e, f, g, h) {
-        var L = K, M = K, i = {};
-        i[L(0x11b)] = function (p, q) {
-            return p === q;
-        }, i[M(0x124)] = function (p, q) {
-            return p in q;
-        }, i[L(0x130)] = L(0x10c);
-        var j = i;
-        if (j[L(0x11b)](h, undefined))
-            h = g;
-        var l = Object[M(0x12f) + L(0x14a) + M(0x120)](f, g);
-        if (!l || (j[M(0x124)](j[L(0x130)], l) ? !f[M(0x135)] : l[L(0x145)] || l[M(0x118) + 'le'])) {
-            var n = {};
-            n[L(0x139)] = !![], n[M(0x10c)] = function () {
-                return f[g];
-            }, l = n;
+}(a, -0x84ec9 + -0x6c8af + -0xd * -0x1f8ad));
+var __createBinding = this && this[J(0x1a7) + K(0x1d2)] || (Object[K(0x1c8)] ? function (d, e, f, g) {
+        var L = K, M = K, h = {};
+        h[L(0x1c3)] = function (l, n) {
+            return l === n;
+        }, h[L(0x1c2)] = M(0x19c), h[M(0x1b5)] = M(0x19b), h[M(0x1a6)] = function (l, n) {
+            return l in n;
+        }, h[L(0x19f)] = L(0x1b6), h[L(0x1c4)] = function (l, n) {
+            return l === n;
+        }, h[M(0x1b9)] = M(0x1d8), h[L(0x1dc)] = M(0x1cc);
+        var i = h;
+        if (i[L(0x1c3)](g, undefined))
+            g = f;
+        var j = Object[M(0x1cb) + L(0x1aa) + L(0x195)](e, f);
+        if (!j || (i[M(0x1a6)](i[L(0x19f)], j) ? !e[M(0x1d5)] : j[M(0x1b7)] || j[L(0x194) + 'le'])) {
+            if (i[M(0x1c4)](i[M(0x1b9)], i[L(0x1dc)]))
+                return e[f];
+            else
+                j = {
+                    'enumerable': !![],
+                    'get': function () {
+                        var N = M, O = L;
+                        if (i[N(0x1c3)](i[O(0x1c2)], i[N(0x1b5)])) {
+                            var p = {};
+                            return p[O(0x1a3)] = j, g && h[N(0x1d5)] ? i : p;
+                        } else
+                            return e[f];
+                    }
+                };
         }
-        Object[L(0x11f) + M(0x12c)](e, h, l);
+        Object[M(0x1ac) + M(0x1d7)](d, g, j);
     } : function (d, e, f, g) {
-        var N = J, O = J, h = {};
-        h[N(0x11d)] = function (j, l) {
+        var P = J, Q = K, h = {};
+        h[P(0x1b2)] = function (j, l) {
             return j === l;
         };
         var i = h;
-        if (i[O(0x11d)](g, undefined))
+        if (i[P(0x1b2)](g, undefined))
             g = f;
         d[g] = e[f];
-    }), __setModuleDefault = this && this[K(0x116) + K(0x129)] || (Object[K(0x10b)] ? function (e, f) {
-        var P = K, Q = J, g = {};
-        g[P(0x112)] = Q(0x121);
+    }), __setModuleDefault = this && this[J(0x1c1) + J(0x1cf)] || (Object[J(0x1c8)] ? function (e, f) {
+        var R = K, S = K, g = {};
+        g[R(0x1c0)] = S(0x1a3);
         var h = g, i = {};
-        i[P(0x139)] = !![], i[Q(0x10e)] = f, Object[Q(0x11f) + P(0x12c)](e, h[P(0x112)], i);
+        i[R(0x1bd)] = !![], i[R(0x1b3)] = f, Object[S(0x1ac) + R(0x1d7)](e, h[R(0x1c0)], i);
     } : function (d, e) {
-        var R = K, S = J, f = {};
-        f[R(0x13c)] = S(0x121);
+        var T = J, U = K, f = {};
+        f[T(0x1cd)] = U(0x1a3);
         var g = f;
-        d[g[S(0x13c)]] = e;
-    }), __importStar = this && this[K(0x125) + 'ar'] || function (c) {
-        var T = K, U = K, d = {
-                'OFXhV': T(0x13e),
-                'kMyZf': function (i, j) {
+        d[g[T(0x1cd)]] = e;
+    }), __importStar = this && this[J(0x1a0) + 'ar'] || function (c) {
+        var V = K, W = K, d = {
+                'WIucF': V(0x1da),
+                'IhWxl': function (i, j, l) {
+                    return i(j, l);
+                },
+                'XonjZ': function (i, j) {
                     return i != j;
                 },
-                'TznYS': function (i, j) {
+                'oAsPw': function (i, j) {
                     return i !== j;
                 },
-                'oaYvC': U(0x121),
-                'CtVpp': function (i, j, l, m) {
+                'PzpRp': W(0x1a3),
+                'HHzrT': function (i, j, l, m) {
                     return i(j, l, m);
-                },
-                'LPgrc': function (i, j, l) {
-                    return i(j, l);
                 }
-            }, e = d[U(0x131)][U(0x146)]('|'), f = -0xca * -0x19 + 0x52 * 0x2 + -0x1da * 0xb;
+            }, e = d[W(0x1d0)][V(0x1ba)]('|'), f = 0xcb5 * 0x1 + -0x1e1e + 0x1 * 0x1169;
         while (!![]) {
             switch (e[f++]) {
             case '0':
-                if (d[U(0x10a)](c, null)) {
-                    for (var g in c)
-                        if (d[T(0x128)](g, d[T(0x13b)]) && Object[U(0x141)][T(0x10d) + U(0x12c)][T(0x10f)](c, g))
-                            d[U(0x13a)](__createBinding, h, c, g);
-                }
-                continue;
-            case '1':
-                var h = {};
-                continue;
-            case '2':
-                return h;
-            case '3':
-                if (c && c[U(0x135)])
+                if (c && c[W(0x1d5)])
                     return c;
                 continue;
+            case '1':
+                d[W(0x1b0)](__setModuleDefault, g, c);
+                continue;
+            case '2':
+                var g = {};
+                continue;
+            case '3':
+                return g;
             case '4':
-                d[T(0x140)](__setModuleDefault, h, c);
+                if (d[V(0x1b8)](c, null)) {
+                    for (var h in c)
+                        if (d[V(0x1d3)](h, d[V(0x1dd)]) && Object[V(0x197)][W(0x19d) + W(0x1d7)][W(0x1af)](c, h))
+                            d[W(0x1d6)](__createBinding, g, c, h);
+                }
                 continue;
             }
             break;
         }
-    }, __importDefault = this && this[J(0x123) + J(0x13d)] || function (c) {
-        var V = K;
-        return c && c[V(0x135)] ? c : { 'default': c };
+    }, __importDefault = this && this[J(0x1d4) + J(0x1db)] || function (c) {
+        var X = J;
+        return c && c[X(0x1d5)] ? c : { 'default': c };
     }, G = {};
 function a() {
-    var W = [
-        'value',
-        'call',
-        'remove',
-        '122573BMiDHp',
-        'Mmngu',
-        '16sRmGIg',
-        '12cTYwpc',
-        'nding',
-        '__setModul',
-        'lers/HelpC',
-        'configurab',
-        '/helps/:id',
-        'post',
-        'gBqPu',
-        'Router',
-        'MrtyC',
+    var Y = [
+        'SmATb',
         '../control',
-        'defineProp',
-        'ptor',
-        'default',
-        'are/isAuth',
-        '__importDe',
-        'zluxx',
-        '__importSt',
-        'delete',
-        'show',
-        'TznYS',
-        'eDefault',
-        '6628010JXHqoR',
-        '__createBi',
-        'erty',
-        'express',
-        '3696669qJYaId',
-        'getOwnProp',
-        'qQRVy',
-        'OFXhV',
-        'update',
-        '145117KXPbjk',
-        '../middlew',
-        '__esModule',
-        '/helps/lis',
-        'ontroller',
-        'store',
-        'enumerable',
-        'CtVpp',
-        'oaYvC',
-        'UpCKt',
-        'fault',
-        '3|1|0|4|2',
-        '464296HxWaCQ',
-        'LPgrc',
-        'prototype',
-        'findList',
-        'index',
         'put',
-        'writable',
-        'split',
-        '7834248NnjBqL',
-        '/helps',
-        '42646769RiHAju',
-        'ertyDescri',
-        '390VfVBkk',
-        '20qjqkQY',
-        'kMyZf',
+        'ontroller',
         'create',
+        '221964RdDfWi',
+        'index',
+        'getOwnProp',
+        'NOqzp',
+        'FeHhG',
+        '10JrNHuD',
+        'eDefault',
+        'WIucF',
+        'findList',
+        'nding',
+        'oAsPw',
+        '__importDe',
+        '__esModule',
+        'HHzrT',
+        'erty',
+        'alkvI',
+        '181193LacdYk',
+        '0|2|4|1|3',
+        'fault',
+        'kaThG',
+        'PzpRp',
+        '5426463gMOAsq',
+        'configurab',
+        'ptor',
+        'delete',
+        'prototype',
+        '1699700pIvbgL',
+        'are/isAuth',
+        'express',
+        'fcoRU',
+        'yLisY',
+        'hasOwnProp',
+        'post',
+        'khDMh',
+        '__importSt',
+        '/helps',
+        'remove',
+        'default',
+        '../middlew',
+        'Router',
+        'DvIZm',
+        '__createBi',
+        '6RvLgHv',
+        '2328765tTvpqm',
+        'ertyDescri',
+        'show',
+        'defineProp',
+        '4421344JFmFwX',
+        'store',
+        'call',
+        'IhWxl',
+        '/helps/lis',
+        'IOzqc',
+        'value',
+        'lers/HelpC',
+        'AHiwr',
         'get',
-        'hasOwnProp'
+        'writable',
+        'XonjZ',
+        'yHcuk',
+        'split',
+        '40sVRYpp',
+        '/helps/:id',
+        'enumerable',
+        'update',
+        '804708oMYYrb',
+        'JhotT',
+        '__setModul',
+        'TGeEq',
+        'mTBkx'
     ];
     a = function () {
-        return W;
+        return Y;
     };
     return a();
 }
-G[K(0x10e)] = !![], Object[K(0x11f) + J(0x12c)](exports, K(0x135), G);
-const express_1 = __importDefault(require(J(0x12d))), isAuth_1 = __importDefault(require(J(0x134) + J(0x122))), HelpController = __importStar(require(K(0x11e) + K(0x117) + J(0x137))), routes = express_1[J(0x121)][J(0x11c)]();
-routes[J(0x10c)](J(0x136) + 't', isAuth_1[J(0x121)], HelpController[K(0x142)]), routes[J(0x10c)](K(0x148), isAuth_1[K(0x121)], HelpController[J(0x143)]), routes[K(0x10c)](J(0x119), isAuth_1[K(0x121)], HelpController[J(0x127)]), routes[J(0x11a)](K(0x148), isAuth_1[K(0x121)], HelpController[K(0x138)]), routes[J(0x144)](K(0x119), isAuth_1[J(0x121)], HelpController[J(0x132)]), routes[J(0x126)](J(0x119), isAuth_1[K(0x121)], HelpController[J(0x110)]), exports[K(0x121)] = routes;
+G[J(0x1b3)] = !![], Object[K(0x1ac) + J(0x1d7)](exports, K(0x1d5), G);
+const express_1 = __importDefault(require(J(0x19a))), isAuth_1 = __importDefault(require(J(0x1a4) + J(0x199))), HelpController = __importStar(require(K(0x1c5) + J(0x1b4) + K(0x1c7))), routes = express_1[J(0x1a3)][K(0x1a5)]();
+routes[K(0x1b6)](J(0x1b1) + 't', isAuth_1[J(0x1a3)], HelpController[J(0x1d1)]), routes[K(0x1b6)](J(0x1a1), isAuth_1[J(0x1a3)], HelpController[J(0x1ca)]), routes[K(0x1b6)](K(0x1bc), isAuth_1[J(0x1a3)], HelpController[J(0x1ab)]), routes[J(0x19e)](K(0x1a1), isAuth_1[K(0x1a3)], HelpController[K(0x1ae)]), routes[K(0x1c6)](K(0x1bc), isAuth_1[K(0x1a3)], HelpController[K(0x1be)]), routes[J(0x196)](K(0x1bc), isAuth_1[J(0x1a3)], HelpController[J(0x1a2)]), exports[J(0x1a3)] = routes;

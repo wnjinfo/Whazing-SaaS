@@ -1,10 +1,18 @@
 'use strict';
 const z = b, A = b;
+function b(c, d) {
+    const e = a();
+    return b = function (f, g) {
+        f = f - (0x1ad0 + -0x3 * 0xb1b + 0x1 * 0x74c);
+        let h = e[f];
+        return h;
+    }, b(c, d);
+}
 (function (c, d) {
     const x = b, y = b, e = c();
     while (!![]) {
         try {
-            const f = -parseInt(x(0x17b)) / (0x230e + 0x2216 + -0x4523) + parseInt(x(0x159)) / (-0x23 * -0x119 + -0x2 * -0x832 + -0x1 * 0x36cd) + -parseInt(x(0x16b)) / (-0xde2 + 0x26cb * -0x1 + 0x34b0) * (-parseInt(y(0x178)) / (-0xb * 0x100 + -0x1caa + -0x27ae * -0x1)) + parseInt(x(0x18e)) / (-0x1e4a + 0x5a0 * -0x5 + -0x3a6f * -0x1) + parseInt(x(0x188)) / (0x855 + -0x209a + -0x184b * -0x1) * (parseInt(y(0x16e)) / (0x763 * -0x1 + -0x199d + -0x1 * -0x2107)) + parseInt(y(0x170)) / (0x1fd1 + 0x91 * -0x43 + 0x62a) + parseInt(y(0x15a)) / (-0x265e + -0x12e * 0x13 + -0x1 * -0x3cd1) * (-parseInt(y(0x193)) / (-0x18c0 + 0x20e + -0xb5e * -0x2));
+            const f = -parseInt(x(0xd4)) / (-0x17 * 0x56 + -0xa88 * 0x1 + 0x1a9 * 0xb) * (parseInt(y(0xf6)) / (0x42d + -0x1 * -0x73d + -0xb68)) + -parseInt(x(0x10b)) / (-0x1f * 0x11c + 0x1d12 + 0x555) + parseInt(y(0x101)) / (-0x1b3 + 0x22c5 + -0x210e) + -parseInt(x(0xf2)) / (-0x4 * -0x34c + 0x10b3 + -0x1dde) + parseInt(x(0x106)) / (-0x264f + 0x7 * -0x112 + 0x2dd3 * 0x1) + -parseInt(y(0xe9)) / (-0x99e * -0x4 + -0x2073 + -0x5fe) * (-parseInt(y(0x108)) / (-0x1907 + 0x21d3 + -0x8c4)) + -parseInt(x(0xfb)) / (0x1896 + 0x1772 + -0x2fff * 0x1) * (-parseInt(y(0x10f)) / (-0x1 * -0x259d + -0x2 * 0x6c + -0x24bb));
             if (f === d)
                 break;
             else
@@ -13,122 +21,114 @@ const z = b, A = b;
             e['push'](e['shift']());
         }
     }
-}(a, 0xb * -0x136c2 + 0x1513b0 + -0x1202 * -0x57));
-var __importDefault = this && this[z(0x169) + A(0x179)] || function (c) {
+}(a, 0x4deb + -0x1 * 0x10f97 + -0x3 * -0x1ea06));
+var __importDefault = this && this[z(0x105) + z(0xf8)] || function (c) {
     const B = A;
-    return c && c[B(0x171)] ? c : { 'default': c };
+    return c && c[B(0xd7)] ? c : { 'default': c };
 };
-function b(c, d) {
-    const e = a();
-    return b = function (f, g) {
-        f = f - (-0x20c1 + -0x195c + -0x55 * -0xb3);
-        let h = e[f];
-        return h;
-    }, b(c, d);
-}
-const k = {};
 function a() {
     const E = [
-        'PebhD',
-        'ticket',
-        'whatsappId',
-        'number',
-        'erty',
-        'enIARestCl',
-        'reateMessa',
-        'ls/Contact',
-        'parse',
-        'bot',
-        'ticket_id',
-        '2249826WOfaIZ',
-        'isGroup',
-        'tenantId',
-        'eToIA',
-        'dateQueueI',
-        '../Message',
-        '8721075pyEEva',
-        'message',
-        '../../rest',
-        'TGmpV',
-        '../../mode',
-        '33260vKPkfu',
-        'umber',
-        'sendType',
         'contact_na',
-        'Transfer',
-        'RWBTm',
-        'queue_tran',
         'ls/Whatsap',
-        'read',
-        'status',
-        'YBDvj',
-        'ATicket',
-        'sender_num',
-        '2765550bzrWAx',
-        '11979hCDiHz',
-        'Services/C',
-        'Clients/op',
-        'typeMessag',
-        'is_chat_ia',
-        'ber',
-        'sendMessag',
         'body',
-        'default',
-        'answer',
-        'ervices/Up',
-        'name',
-        '../TicketS',
-        'pending',
-        'findByPk',
-        '__importDe',
-        'log',
-        '454203dDkRta',
-        'ient',
-        'answered',
-        '14xzFdQN',
-        'rvice',
-        '7834104AFzwJc',
-        '__esModule',
-        'fromMe',
-        'contactId',
+        'reateMessa',
         'msg',
+        'contactId',
+        'message',
+        'answer',
+        'BqJNX',
+        '1HZqpYa',
+        'is_chat_ia',
+        'Services/C',
+        '__esModule',
+        'eToIA',
+        'ls/Contact',
+        'receiver_n',
+        'log',
         'defineProp',
-        'ydOlk',
+        'name',
+        'ber',
+        'enIARestCl',
+        'Transfer',
+        'queue_tran',
+        'fromMe',
+        'status',
+        'Clients/op',
+        'TLUbx',
+        'parse',
         'value',
-        '28WTJzdk',
+        'fwOkv',
+        '92351MgFpnE',
+        'number',
+        '../TicketS',
+        'dateQueueI',
+        'sender_num',
+        'typeMessag',
+        'umber',
+        'findByPk',
+        'default',
+        '2773935bwMbQG',
+        'ticket_id',
+        'answered',
+        'tenantId',
+        '304882afazgP',
+        'ticket',
         'fault',
+        'sendType',
+        'whatsappId',
+        '18jScqmC',
+        'bot',
+        'ient',
+        '../../mode',
+        'read',
+        '../Message',
+        '504540qiUXxu',
+        'rvice',
+        'isGroup',
+        'sendMessag',
+        '__importDe',
+        '29916qVDvKO',
+        'ervices/Up',
+        '248gzzmfJ',
+        'pending',
+        'ogvqz',
+        '1545828btdalb',
+        '../../rest',
+        'erty',
+        'ATicket',
+        '5045790VRWOwT',
         'geSystemSe',
-        '581824QIqOhv',
-        'receiver_n'
+        'zCqxa'
     ];
     a = function () {
         return E;
     };
     return a();
 }
-k[A(0x177)] = !![], Object[A(0x175) + z(0x181)](exports, A(0x171), k);
-const Contact_1 = __importDefault(require(A(0x192) + z(0x184))), openIARestClient_1 = require(z(0x190) + z(0x15c) + A(0x182) + z(0x16c)), CreateMessageSystemService_1 = __importDefault(require(A(0x18d) + A(0x15b) + z(0x183) + A(0x17a) + z(0x16f))), Whatsapp_1 = __importDefault(require(A(0x192) + A(0x153) + 'p')), UpdateQueueIATicket_1 = __importDefault(require(z(0x166) + z(0x164) + z(0x18c) + A(0x157))), VerifyMensageOpenIA = async (h, i, j, l) => {
-        const C = A, D = z, m = {};
-        m[C(0x191)] = function (o, p) {
+const k = {};
+k[z(0xe7)] = !![], Object[A(0xdc) + A(0x10d)](exports, z(0xd7), k);
+const Contact_1 = __importDefault(require(z(0xfe) + z(0xd9))), openIARestClient_1 = require(z(0x10c) + A(0xe4) + A(0xdf) + z(0xfd)), CreateMessageSystemService_1 = __importDefault(require(A(0x100) + A(0xd6) + z(0xce) + A(0x110) + z(0x102))), Whatsapp_1 = __importDefault(require(z(0xfe) + A(0xcc) + 'p')), UpdateQueueIATicket_1 = __importDefault(require(A(0xeb) + z(0x107) + z(0xec) + A(0x10e))), VerifyMensageOpenIA = async (h, i, j, l) => {
+        const C = A, D = A, m = {};
+        m[C(0x10a)] = function (o, p) {
             return o === p;
-        }, m[D(0x176)] = D(0x167), m[D(0x17d)] = C(0x186), m[C(0x156)] = function (o, p) {
+        }, m[D(0xd3)] = C(0x109), m[D(0x111)] = D(0xfc), m[D(0xe8)] = function (o, p) {
             return o == p;
-        }, m[D(0x198)] = D(0x197);
+        }, m[C(0xe5)] = D(0xe0);
         const n = m;
-        if (n[C(0x191)](j[D(0x155)], n[C(0x176)]) && !i[C(0x172)] && !j[C(0x189)] && !j[D(0x16d)] && j[C(0x15e)])
+        if (n[D(0x10a)](j[C(0xe3)], n[D(0xd3)]) && !i[D(0xe2)] && !j[D(0x103)] && !j[D(0xf4)] && j[C(0xd5)])
             try {
-                const o = await Contact_1[C(0x162)][D(0x168)](j[D(0x173)]), p = await Whatsapp_1[D(0x162)][C(0x168)](j[D(0x17f)]), q = {};
-                q['id'] = h['id'], q[C(0x196) + 'me'] = o[D(0x165)], q[D(0x187)] = j['id'], q[D(0x161)] = i[D(0x161)], q[C(0x158) + C(0x15f)] = p[C(0x180)], q[C(0x17c) + C(0x194)] = o[C(0x180)];
+                const o = await Contact_1[C(0xf1)][C(0xf0)](j[C(0xd0)]), p = await Whatsapp_1[C(0xf1)][C(0xf0)](j[C(0xfa)]), q = {};
+                q['id'] = h['id'], q[D(0xcb) + 'me'] = o[C(0xdd)], q[D(0xf3)] = j['id'], q[C(0xcd)] = i[D(0xcd)], q[D(0xed) + C(0xde)] = p[C(0xea)], q[D(0xda) + D(0xef)] = o[C(0xea)];
                 const r = {};
-                r[D(0x18f)] = q;
-                let s = await (0x4cb + 0x2011 + -0x24dc, openIARestClient_1[D(0x160) + D(0x18b)])(r);
-                s = JSON[D(0x185)](s);
+                r[D(0xd1)] = q;
+                let s = await (-0xdcd * -0x2 + -0x15b5 + -0x5e5 * 0x1, openIARestClient_1[C(0x104) + C(0xd8)])(r);
+                s = JSON[C(0xe6)](s);
                 const t = {};
-                t[C(0x161)] = s[D(0x18f)][C(0x163)], t[D(0x172)] = !![], t[D(0x154)] = !![], t[D(0x195)] = n[D(0x17d)];
+                t[D(0xcd)] = s[D(0xd1)][D(0xd2)], t[D(0xe2)] = !![], t[D(0xff)] = !![], t[C(0xf9)] = n[D(0x111)];
                 const u = t, v = {};
-                v[D(0x174)] = u, v[C(0x18a)] = j[D(0x18a)], v[D(0x17e)] = j, v[C(0x195)] = u[D(0x195)], v[D(0x155)] = n[D(0x176)], await (0x2 * 0xa03 + -0x2472 + -0x41b * -0x4, CreateMessageSystemService_1[C(0x162)])(v), n[D(0x156)](s[C(0x18f)][D(0x15d) + 'e'], n[D(0x198)]) && await (0x986 + 0x1a7b * 0x1 + -0x2401 * 0x1, UpdateQueueIATicket_1[D(0x162)])(p[D(0x152) + 'sf'], j);
+                v[C(0xcf)] = u, v[C(0xf5)] = j[C(0xf5)], v[D(0xf7)] = j, v[C(0xf9)] = u[D(0xf9)], v[D(0xe3)] = n[C(0xd3)], await (-0x10a * 0x5 + -0x1 * 0x9af + 0xd * 0x125, CreateMessageSystemService_1[D(0xf1)])(v), n[D(0xe8)](s[C(0xd1)][D(0xee) + 'e'], n[C(0xe5)]) && await (0x1b2a + 0xd * 0x97 + -0x22d5, UpdateQueueIATicket_1[C(0xf1)])(p[D(0xe1) + 'sf'], j);
             } catch (w) {
-                console[D(0x16a)](w);
+                console[D(0xdb)](w);
             }
     };
-exports[z(0x162)] = VerifyMensageOpenIA;
+exports[z(0xf1)] = VerifyMensageOpenIA;

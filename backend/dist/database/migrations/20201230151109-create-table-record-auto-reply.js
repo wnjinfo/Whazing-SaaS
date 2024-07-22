@@ -1,59 +1,10 @@
 'use strict';
 const B = b, C = b;
-function a() {
-    const H = [
-        'primaryKey',
-        '2632220xHwbPc',
-        'RjSGN',
-        'ent',
-        'defineProp',
-        '278fBBQNB',
-        'value',
-        'dropTable',
-        'erty',
-        'allowNull',
-        'YJABv',
-        '9iyoyGT',
-        '756OXCXnR',
-        'INTEGER',
-        'LqKPX',
-        '__esModule',
-        'CASCADE',
-        'AutoReplyL',
-        '4939896kBmhai',
-        'autoIncrem',
-        'dFrZI',
-        'type',
-        'vKgTz',
-        '20XoWTCO',
-        '2679501Xdktnx',
-        'sequelize',
-        '2866647rKRZAn',
-        '56940yTFAwF',
-        'ogs',
-        'DATE',
-        'SMfTo',
-        '3594AsXkrd',
-        'STRING',
-        'Tickets',
-        'Contacts',
-        '168NdsBYu',
-        'DataTypes',
-        'createTabl',
-        '985970gYhgMn',
-        'restrict',
-        'exports'
-    ];
-    a = function () {
-        return H;
-    };
-    return a();
-}
 (function (c, d) {
     const z = b, A = b, e = c();
     while (!![]) {
         try {
-            const f = -parseInt(z(0xe7)) / (-0x1ba1 * 0x1 + 0x1e13 + 0x19 * -0x19) * (-parseInt(A(0xcd)) / (-0x1 * 0x5f2 + 0x3 * -0xc0e + 0x2a1e)) + -parseInt(A(0xe2)) / (-0x154f * -0x1 + 0x43 * -0x1 + -0x703 * 0x3) + parseInt(A(0xdf)) / (0x1 * -0x477 + 0x7 * -0x3a0 + 0x1ddb) * (-parseInt(A(0xc5)) / (-0x194 + 0x1aab + -0xc89 * 0x2)) + parseInt(z(0xe3)) / (-0x1cc4 + 0x243 + 0x1a87) * (-parseInt(z(0xd4)) / (-0x2541 * -0x1 + 0x33c * 0x1 + 0x1 * -0x2876)) + -parseInt(A(0xda)) / (-0xfe9 * -0x2 + -0x621 + -0x19a9) + parseInt(A(0xd3)) / (-0x9c5 * 0x1 + 0x148 * -0x12 + 0x7 * 0x4b2) * (parseInt(z(0xc9)) / (-0x22ad + -0x23a3 + 0xa * 0x709)) + -parseInt(z(0xe0)) / (-0xdf9 + -0x1b8c + 0x2990) * (-parseInt(A(0xc2)) / (0x4 * 0x807 + 0x16f * 0x6 + -0x28aa));
+            const f = -parseInt(z(0x8f)) / (-0x4b * 0x23 + -0x1 * -0x1225 + -0x7e3) * (-parseInt(A(0xaa)) / (-0x513 + 0x1e * 0x1c + 0x1cd)) + parseInt(z(0xa7)) / (-0x2 * -0x959 + 0x634 + 0x115 * -0x17) + parseInt(A(0x90)) / (-0x1 * 0x2302 + 0x1719 + -0xbed * -0x1) + parseInt(A(0x99)) / (0x2472 + -0x1066 + -0x1407) * (-parseInt(z(0xa4)) / (-0x198b + -0x252 + 0x1be3)) + -parseInt(z(0xa2)) / (-0x1243 + -0x1 * -0x1fc9 + 0x1 * -0xd7f) * (parseInt(A(0x8e)) / (-0x2ce * -0x2 + -0x1da7 * -0x1 + 0x233b * -0x1)) + -parseInt(A(0x9e)) / (0x25b5 + -0x1f8e * -0x1 + -0x453a) + parseInt(A(0xab)) / (0x2 * -0xdbc + 0xfd + -0x1a85 * -0x1) * (parseInt(z(0x9c)) / (-0x1 * 0xca + 0x1d * -0xf9 + -0x9ae * -0x3));
             if (f === d)
                 break;
             else
@@ -62,34 +13,82 @@ function a() {
             e['push'](e['shift']());
         }
     }
-}(a, -0x39a6d + -0x9106c + 0x15a829));
-const y = {};
-y[B(0xce)] = !![], Object[C(0xcc) + C(0xd0)](exports, C(0xd7), y);
-const sequelize_1 = require(C(0xe1));
+}(a, -0x1 * 0x157b4 + -0x1474 + -0x3d0f7 * -0x1));
+function a() {
+    const H = [
+        'primaryKey',
+        'allowNull',
+        '1980531prVWfa',
+        'STRING',
+        '12UWhtUA',
+        'type',
+        'DataTypes',
+        '661857lQNMhe',
+        'xLNGp',
+        'qBirL',
+        '20Vmmmjd',
+        '963370iDfQVS',
+        'dropTable',
+        'VsnFm',
+        'restrict',
+        'ent',
+        'defineProp',
+        'ogs',
+        'value',
+        'CASCADE',
+        'pRvJu',
+        'erty',
+        '8dpDqBv',
+        '29884ZZlhLy',
+        '980316MSWprd',
+        'INTEGER',
+        'AutoReplyL',
+        'peOPt',
+        'Contacts',
+        'exports',
+        'Tickets',
+        'sequelize',
+        'autoIncrem',
+        '545665KgKciP',
+        'IBKRj',
+        '__esModule',
+        '11zTTeCh',
+        'DATE',
+        '1825173KKhzkC',
+        'createTabl'
+    ];
+    a = function () {
+        return H;
+    };
+    return a();
+}
 function b(c, d) {
     const e = a();
     return b = function (f, g) {
-        f = f - (0x2ea * 0xc + -0x10a7 + -0x1190);
+        f = f - (-0xb95 * 0x3 + -0x101 * -0x13 + 0x1030);
         let h = e[f];
         return h;
     }, b(c, d);
 }
-module[C(0xc7)] = {
+const y = {};
+y[B(0x8a)] = !![], Object[B(0x88) + C(0x8d)](exports, B(0x9b), y);
+const sequelize_1 = require(B(0x97));
+module[B(0x95)] = {
     'up': j => {
-        const D = B, E = B, k = {};
-        k[D(0xdc)] = D(0xd9) + D(0xe4), k[D(0xd2)] = D(0xc1), k[E(0xe6)] = D(0xd8), k[D(0xde)] = E(0xc6), k[E(0xca)] = D(0xe9);
+        const D = C, E = B, k = {};
+        k[D(0x85)] = E(0x92) + D(0x89), k[D(0x93)] = D(0x94), k[D(0x8c)] = D(0x8b), k[E(0xa9)] = D(0x86), k[E(0xa8)] = E(0x96);
         const l = k, m = {};
-        m[D(0xdd)] = sequelize_1[D(0xc3)][E(0xd5)], m[D(0xdb) + D(0xcb)] = !![], m[D(0xc8)] = !![], m[E(0xd1)] = ![];
+        m[D(0xa5)] = sequelize_1[D(0xa6)][E(0x91)], m[E(0x98) + D(0x87)] = !![], m[E(0xa0)] = !![], m[D(0xa1)] = ![];
         const n = {};
-        n[E(0xdd)] = sequelize_1[E(0xc3)][E(0xd5)], n[E(0xd1)] = ![];
+        n[D(0xa5)] = sequelize_1[D(0xa6)][D(0x91)], n[E(0xa1)] = ![];
         const o = {};
-        o[D(0xdd)] = sequelize_1[E(0xc3)][D(0xe8)], o[E(0xd1)] = ![];
+        o[E(0xa5)] = sequelize_1[E(0xa6)][D(0xa3)], o[E(0xa1)] = ![];
         const p = {};
-        p[D(0xdd)] = sequelize_1[E(0xc3)][D(0xd5)], p[D(0xd1)] = ![];
+        p[E(0xa5)] = sequelize_1[D(0xa6)][E(0x91)], p[D(0xa1)] = ![];
         const q = {};
-        q[D(0xdd)] = sequelize_1[E(0xc3)][D(0xe8)], q[E(0xd1)] = ![];
+        q[D(0xa5)] = sequelize_1[D(0xa6)][D(0xa3)], q[E(0xa1)] = ![];
         const r = {};
-        return r[E(0xdd)] = sequelize_1[E(0xc3)][D(0xe8)], r[D(0xd1)] = ![], j[E(0xc4) + 'e'](l[D(0xdc)], {
+        return r[E(0xa5)] = sequelize_1[E(0xa6)][D(0xa3)], r[D(0xa1)] = ![], j[D(0x9f) + 'e'](l[E(0x85)], {
             'id': m,
             'autoReplyId': n,
             'autoReplyName': o,
@@ -97,38 +96,38 @@ module[C(0xc7)] = {
             'stepsReplyMessage': q,
             'wordsReply': r,
             'contactId': {
-                'type': sequelize_1[D(0xc3)][D(0xd5)],
+                'type': sequelize_1[D(0xa6)][E(0x91)],
                 'references': {
-                    'model': l[D(0xd2)],
+                    'model': l[E(0x93)],
                     'key': 'id'
                 },
-                'onUpdate': l[D(0xe6)],
-                'onDelete': l[D(0xde)]
+                'onUpdate': l[E(0x8c)],
+                'onDelete': l[E(0xa9)]
             },
             'ticketId': {
-                'type': sequelize_1[D(0xc3)][D(0xd5)],
+                'type': sequelize_1[D(0xa6)][D(0x91)],
                 'references': {
-                    'model': l[D(0xca)],
+                    'model': l[E(0xa8)],
                     'key': 'id'
                 },
-                'onUpdate': l[E(0xe6)],
-                'onDelete': l[E(0xde)],
+                'onUpdate': l[E(0x8c)],
+                'onDelete': l[D(0xa9)],
                 'allowNull': ![]
             },
             'createdAt': {
-                'type': sequelize_1[D(0xc3)][E(0xe5)](0x18ab + 0x1169 + -0x2a0e),
+                'type': sequelize_1[E(0xa6)][E(0x9d)](0x278 + 0xbf5 + -0xe67),
                 'allowNull': ![]
             },
             'updatedAt': {
-                'type': sequelize_1[E(0xc3)][E(0xe5)](0x2549 + 0x109 * 0x4 + -0x2967),
+                'type': sequelize_1[D(0xa6)][D(0x9d)](-0x25e0 + 0x11b6 + 0x143 * 0x10),
                 'allowNull': ![]
             }
         });
     },
     'down': d => {
-        const F = B, G = C, e = {};
-        e[F(0xd6)] = F(0xd9) + F(0xe4);
+        const F = B, G = B, e = {};
+        e[F(0x9a)] = G(0x92) + F(0x89);
         const f = e;
-        return d[F(0xcf)](f[G(0xd6)]);
+        return d[F(0x84)](f[F(0x9a)]);
     }
 };

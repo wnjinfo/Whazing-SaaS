@@ -4,7 +4,7 @@ const n = b, o = b;
     const l = b, m = b, e = c();
     while (!![]) {
         try {
-            const f = parseInt(l(0x1db)) / (-0x1 * -0x1744 + -0x618 + 0x5b9 * -0x3) + parseInt(l(0x1e0)) / (-0x38a + -0x1 * -0x191d + -0x1 * 0x1591) * (parseInt(l(0x1d1)) / (0x987 * 0x3 + -0xe0d + -0xe85)) + parseInt(l(0x1d5)) / (0x1 * -0xae3 + 0x28b + 0x85c) * (-parseInt(m(0x1ce)) / (0x1259 + 0xd0b + 0x1 * -0x1f5f)) + parseInt(m(0x1e2)) / (0x10f3 + -0x2f1 + -0xdfc * 0x1) + parseInt(m(0x1df)) / (0x1 * 0x19c7 + 0xad8 * 0x1 + -0x926 * 0x4) + parseInt(m(0x1d9)) / (-0x12 * -0x1a1 + 0x8b * 0x2e + -0x1 * 0x3644) + parseInt(m(0x1cd)) / (-0x13ef + -0xb53 + 0x1 * 0x1f4b);
+            const f = -parseInt(l(0xb4)) / (-0x14 * -0x6a + -0x545 * -0x5 + 0x454 * -0x8) * (parseInt(m(0xaa)) / (-0x1 * 0x1655 + 0x260 * -0x4 + 0x1fd7)) + parseInt(m(0xbd)) / (0x1 * -0x11a5 + -0x7d6 + 0x197e * 0x1) * (parseInt(l(0xb9)) / (0x1094 + -0x1b81 + 0xaf1)) + -parseInt(l(0xc1)) / (-0x209d + 0x1 * 0x6a6 + -0xcfe * -0x2) + parseInt(m(0xad)) / (0xa0 * -0x26 + -0x6 * -0x3d3 + 0xd4) + parseInt(l(0xb5)) / (0x13d * -0x1c + -0x15b * 0xd + -0x4a * -0xb5) + -parseInt(m(0xc2)) / (-0x1a07 + 0xc0e + 0xe01) + parseInt(m(0xb0)) / (0x1 * 0xd37 + 0x1de7 + -0x2b15);
             if (f === d)
                 break;
             else
@@ -13,56 +13,56 @@ const n = b, o = b;
             e['push'](e['shift']());
         }
     }
-}(a, 0xbce2 * 0x9 + 0x1 * 0x34f4a + 0x4 * 0x8eaa));
-function b(c, d) {
-    const e = a();
-    return b = function (f, g) {
-        f = f - (-0x11 * -0x5 + -0x1ba2 + 0x27 * 0xbf);
-        let h = e[f];
-        return h;
-    }, b(c, d);
-}
-var __importDefault = this && this[n(0x1e5) + o(0x1e7)] || function (c) {
-    const p = o;
-    return c && c[p(0x1d4)] ? c : { 'default': c };
-};
-const k = {};
-k[o(0x1d3)] = !![], Object[o(0x1e1) + o(0x1dd)](exports, n(0x1d4), k);
-const express_1 = require(n(0x1d6)), isAuth_1 = __importDefault(require(n(0x1d2) + n(0x1de))), ultilizacaoRoutes = (0x1310 + 0x1 * -0xdd + -0x1233, express_1[n(0x1cf)])(), ulitlizacaoVpsController_1 = require(n(0x1e4) + o(0x1dc) + n(0x1e6) + n(0x1e3));
+}(a, -0x101f * 0x6a + -0xdf33c + 0x1e0db7));
 function a() {
     const q = [
-        '__esModule',
-        '8STQAcQ',
-        'express',
-        'CheckServi',
-        '/status',
-        '6503808oVQJjz',
-        'get',
-        '457807hDJyQl',
-        'lers/ulitl',
-        'erty',
+        '842895POPEkF',
+        '942408CvWdzy',
         'are/isAuth',
-        '2161782WfBVzl',
-        '2qSARSd',
-        'defineProp',
-        '2130330pXKPtR',
-        'ontroller',
-        '../control',
-        '__importDe',
-        'izacaoVpsC',
-        'fault',
-        'ceMessenge',
-        '2036340MAiqjt',
-        '3500270ckRAax',
+        'lers/ulitl',
         'Router',
+        '707254vGfAkA',
+        'izacaoVpsC',
+        '../control',
+        '2478582NJnkxH',
         'default',
-        '112092MOlsmQ',
+        '__esModule',
+        '2261988lXsdIn',
+        'CheckServi',
+        'fault',
+        'express',
+        '3wZCyLo',
+        '7143892WGNpXj',
+        'get',
         '../middlew',
-        'value'
+        'value',
+        '38644XPUkCI',
+        'ceMessenge',
+        'erty',
+        '__importDe',
+        '87YDOhyt',
+        'ontroller',
+        'defineProp',
+        '/status'
     ];
     a = function () {
         return q;
     };
     return a();
 }
-ultilizacaoRoutes[o(0x1da)](o(0x1d8), isAuth_1[n(0x1d0)], ulitlizacaoVpsController_1[o(0x1d7) + n(0x1cc) + 'r']), exports[n(0x1d0)] = ultilizacaoRoutes;
+var __importDefault = this && this[n(0xbc) + o(0xb2)] || function (c) {
+    const p = n;
+    return c && c[p(0xaf)] ? c : { 'default': c };
+};
+const k = {};
+function b(c, d) {
+    const e = a();
+    return b = function (f, g) {
+        f = f - (0xf6f + -0x152f + 0x66a * 0x1);
+        let h = e[f];
+        return h;
+    }, b(c, d);
+}
+k[o(0xb8)] = !![], Object[o(0xbf) + o(0xbb)](exports, n(0xaf), k);
+const express_1 = require(o(0xb3)), isAuth_1 = __importDefault(require(n(0xb7) + n(0xc3))), ultilizacaoRoutes = (0x16e4 * -0x1 + 0xa0a + 0xcda, express_1[o(0xc5)])(), ulitlizacaoVpsController_1 = require(o(0xac) + n(0xc4) + o(0xab) + n(0xbe));
+ultilizacaoRoutes[n(0xb6)](o(0xc0), isAuth_1[o(0xae)], ulitlizacaoVpsController_1[o(0xb1) + o(0xba) + 'r']), exports[o(0xae)] = ultilizacaoRoutes;

@@ -1,39 +1,18 @@
 'use strict';
-var k = b, l = b;
-function a() {
-    var q = [
-        '8424370qSlvbe',
-        'all',
-        '_random_uu',
-        '2165975ZAQzSq',
-        'iHkgo',
-        '4HDzfnM',
-        'value',
-        '738147ZjeQmU',
-        'CyKHq',
-        'select\x20gen',
-        '9030378JuIhvK',
-        'query',
-        '683413EmVyyq',
-        'id()',
-        '11180984gBDbxe',
-        'exports',
-        '__esModule',
-        'erty',
-        'defineProp',
-        '1748624FjOAxe',
-        'sequelize'
-    ];
-    a = function () {
-        return q;
-    };
-    return a();
+function b(c, d) {
+    var e = a();
+    return b = function (f, g) {
+        f = f - (-0x3fc * -0x4 + -0xf3 * 0x12 + -0x1 * -0x1b7);
+        var h = e[f];
+        return h;
+    }, b(c, d);
 }
+var k = b, l = b;
 (function (c, d) {
     var i = b, j = b, e = c();
     while (!![]) {
         try {
-            var f = -parseInt(i(0x1eb)) / (0x26f1 + 0x909 * -0x2 + 0x1 * -0x14de) + parseInt(j(0x1f2)) / (0x51 * -0x3a + 0x4f4 * -0x1 + -0x10 * -0x175) + parseInt(j(0x1e6)) / (-0x1f7f + -0x3 * -0x211 + -0x194f * -0x1) * (-parseInt(j(0x1f9)) / (-0xe * 0x44 + 0x219a + 0x1 * -0x1dde)) + -parseInt(j(0x1f4)) / (0x1828 + -0x23f7 + 0xbd4) + parseInt(j(0x1e9)) / (0x1c51 + 0x263 * 0x3 + -0x2374) + -parseInt(j(0x1f7)) / (0x11c1 * -0x1 + 0xb * 0x166 + 0x266) + parseInt(i(0x1ed)) / (0x2b * 0x33 + -0x19 * -0x81 + -0xa91 * 0x2);
+            var f = -parseInt(i(0x98)) / (0x2 * -0x10bd + 0x4c * 0x34 + -0x1 * -0x120b) * (-parseInt(i(0xa4)) / (-0xf50 + 0x1 * -0x2064 + 0x2fb6)) + parseInt(i(0x9d)) / (0x1828 + -0x3b * 0xa6 + -0xe1d * -0x1) + -parseInt(i(0xa0)) / (-0xf47 * 0x1 + 0xa78 + 0x4d3) * (parseInt(j(0x94)) / (0x19a5 + -0x755 + 0x3 * -0x619)) + parseInt(j(0x99)) / (-0x68d + 0x81 * 0x17 + -0x504) * (-parseInt(i(0xa5)) / (0x1957 + -0x1bb5 + 0x1 * 0x265)) + parseInt(i(0x9a)) / (0x32 * 0x71 + 0x3 * 0x9df + -0x33a7) + parseInt(i(0x93)) / (-0x7b8 + -0x812 + 0x1 * 0xfd3) + -parseInt(i(0x97)) / (-0x2a8 + -0x5d * -0x59 + -0x1da3);
             if (f === d)
                 break;
             else
@@ -42,27 +21,50 @@ function a() {
             e['push'](e['shift']());
         }
     }
-}(a, 0x870ef * -0x1 + -0x194a53 + 0x2ec037));
-function b(c, d) {
-    var e = a();
-    return b = function (f, g) {
-        f = f - (-0xd * 0x21d + 0xc * -0x236 + 0x1 * 0x37e7);
-        var h = e[f];
-        return h;
-    }, b(c, d);
-}
+}(a, -0xdc35f + 0x9135 * -0x11 + 0x1e9d6a));
 var g = {};
-g[k(0x1fa)] = !![], Object[l(0x1f1) + k(0x1f0)](exports, l(0x1ef), g), module[l(0x1ee)] = {
+g[k(0x91)] = !![], Object[l(0x9c) + k(0x9b)](exports, l(0xa3), g), module[k(0x95)] = {
     'up': d => {
-        var m = k, n = l, e = {};
-        e[m(0x1e7)] = n(0x1e8) + m(0x1f6) + n(0x1ec);
+        var m = l, n = k, e = {};
+        e[m(0x9f)] = n(0x96) + n(0xa7) + n(0x9e);
         var f = e;
-        return Promise[n(0x1f5)]([d[m(0x1f3)][m(0x1ea)](f[m(0x1e7)])]);
+        return Promise[m(0xa6)]([d[m(0xa2)][m(0xa1)](f[n(0x9f)])]);
     },
     'down': d => {
-        var o = k, p = k, e = {};
-        e[o(0x1f8)] = p(0x1e8) + p(0x1f6) + p(0x1ec);
+        var o = l, p = k, e = {};
+        e[o(0x92)] = o(0x96) + o(0xa7) + p(0x9e);
         var f = e;
-        return Promise[p(0x1f5)]([d[p(0x1f3)][p(0x1ea)](f[p(0x1f8)])]);
+        return Promise[o(0xa6)]([d[p(0xa2)][p(0xa1)](f[p(0x92)])]);
     }
 };
+function a() {
+    var q = [
+        '295401vCutkq',
+        '584400OChIiI',
+        '1171544oGTEuO',
+        'erty',
+        'defineProp',
+        '49722BZVsjd',
+        'id()',
+        'oiheJ',
+        '2516yKwpNH',
+        'query',
+        'sequelize',
+        '__esModule',
+        '6OVxRyl',
+        '28eMpSgc',
+        'all',
+        '_random_uu',
+        'value',
+        'ekrYD',
+        '1805193FUoFZB',
+        '785brRoTm',
+        'exports',
+        'select\x20gen',
+        '2889900EKHMgD'
+    ];
+    a = function () {
+        return q;
+    };
+    return a();
+}

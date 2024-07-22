@@ -1,47 +1,10 @@
 'use strict';
-const s = b, t = b;
-function a() {
-    const x = [
-        '1818520aFLauP',
-        '321384LUtXvs',
-        '4421421HshLhX',
-        'ls/Setting',
-        '5gwTDXr',
-        'rs/AppErro',
-        '94206mibCij',
-        '2444982YzBRkx',
-        '../../erro',
-        '4647730xmuwcm',
-        'TING_FOUND',
-        '../../mode',
-        'key',
-        '__esModule',
-        'update',
-        'wQBFu',
-        'ERR_NO_SET',
-        '21avrsxy',
-        'value',
-        'default',
-        '__importDe',
-        'tenantId',
-        'defineProp',
-        '90NkboaX',
-        'where',
-        'findOne',
-        'erty',
-        'fault',
-        '6200nCGheg'
-    ];
-    a = function () {
-        return x;
-    };
-    return a();
-}
+const r = b, s = b;
 (function (c, d) {
-    const q = b, r = b, e = c();
+    const p = b, q = b, e = c();
     while (!![]) {
         try {
-            const f = parseInt(q(0xe6)) / (-0x5b5 * -0x5 + 0x1a5 * -0x7 + -0x1105) + parseInt(r(0xfc)) / (0x653 * -0x1 + -0x9 * -0x385 + -0x656 * 0x4) * (-parseInt(q(0xf7)) / (-0xbe8 * -0x1 + 0x1 * -0x2016 + 0x1431)) + parseInt(r(0xe1)) / (0x2 * -0x11c8 + -0x215e + -0x19 * -0x2c2) + -parseInt(r(0xe4)) / (0x351 + 0x4 * 0x746 + -0x2064) * (parseInt(r(0xe7)) / (-0xed2 * -0x1 + -0x9b8 + -0x514)) + parseInt(r(0xf1)) / (-0x264f + -0xfd3 * 0x2 + 0x45fc) * (parseInt(q(0xe0)) / (0x14f7 + 0x13fc * 0x1 + -0x28eb)) + parseInt(r(0xe2)) / (0x1 * -0x7ca + 0x1 * -0x21f5 + -0x2fc * -0xe) + -parseInt(q(0xe9)) / (-0x25be + 0x4a1 + 0xcf * 0x29);
+            const f = parseInt(p(0x1d1)) / (-0x2059 + 0xf * -0x254 + 0x4346) * (parseInt(p(0x1d3)) / (0x1c9 * -0xb + -0x14e9 * 0x1 + 0x288e)) + -parseInt(q(0x1db)) / (-0xa29 + 0x15ee + -0x1ae * 0x7) + parseInt(q(0x1d6)) / (-0x650 + -0x2207 + 0x285b) * (parseInt(q(0x1e1)) / (-0x3ff + -0x24d * -0xd + -0x19e5)) + -parseInt(p(0x1e0)) / (0x1 * 0x1843 + 0x1f54 + 0x239 * -0x19) + -parseInt(p(0x1d4)) / (-0xf3d + 0x11ca + -0x286) + -parseInt(q(0x1cb)) / (0x20d6 + 0x1 * 0x1ba5 + -0x3c73) + parseInt(p(0x1ce)) / (-0x1f5 + 0x2058 + -0x1e5a);
             if (f === d)
                 break;
             else
@@ -50,36 +13,70 @@ function a() {
             e['push'](e['shift']());
         }
     }
-}(a, -0x48c9 + 0x78a45 + -0x16b5c));
-var __importDefault = this && this[s(0xf4) + t(0xfb)] || function (c) {
-    const u = t;
-    return c && c[u(0xed)] ? c : { 'default': c };
+}(a, -0x65 * 0x30b9 + 0x7de5c * 0x1 + 0xab525 * 0x2));
+var __importDefault = this && this[r(0x1dc) + s(0x1de)] || function (c) {
+    const t = r;
+    return c && c[t(0x1da)] ? c : { 'default': c };
 };
-const k = {};
 function b(c, d) {
     const e = a();
     return b = function (f, g) {
-        f = f - (0xf1c + -0x7 * 0x3e1 + 0xceb);
+        f = f - (0xc69 + -0xb44 + 0xa6);
         let h = e[f];
         return h;
     }, b(c, d);
 }
-k[t(0xf2)] = !![], Object[s(0xf6) + t(0xfa)](exports, s(0xed), k);
-const AppError_1 = __importDefault(require(t(0xe8) + t(0xe5) + 'r')), Setting_1 = __importDefault(require(t(0xeb) + s(0xe3))), UpdateSettingService = async ({
+const k = {};
+k[r(0x1d5)] = !![], Object[r(0x1d7) + s(0x1dd)](exports, r(0x1da), k);
+const Setting_1 = __importDefault(require(r(0x1cd) + s(0x1e2))), UpdateSettingService = async ({
         key: g,
         value: h,
         tenantId: i
     }) => {
-        const v = t, w = s, j = {};
-        j[v(0xef)] = v(0xf0) + w(0xea);
-        const l = j, m = {};
-        m[v(0xec)] = g, m[v(0xf5)] = i;
-        const n = {};
-        n[v(0xf8)] = m;
-        const o = await Setting_1[w(0xf3)][w(0xf9)](n);
-        if (!o)
-            throw new AppError_1[(v(0xf3))](l[w(0xef)], 0x95 * -0x4 + -0x2535 + -0x5 * -0x839);
-        const p = {};
-        return p[v(0xf2)] = h, await o[w(0xee)](p), o;
+        const u = r, v = r, j = {};
+        j[u(0x1d9)] = g, j[v(0x1cf)] = i;
+        const l = {};
+        l[u(0x1d0)] = j;
+        let m = await Setting_1[u(0x1d2)][v(0x1d8)](l);
+        if (!m) {
+            const n = {};
+            n[u(0x1d9)] = g, n[v(0x1d5)] = h, n[u(0x1cf)] = i, m = await Setting_1[u(0x1d2)][u(0x1cc)](n);
+        } else {
+            const o = {};
+            o[v(0x1d5)] = h, await m[v(0x1df)](o);
+        }
+        return m;
     };
-exports[t(0xf3)] = UpdateSettingService;
+exports[s(0x1d2)] = UpdateSettingService;
+function a() {
+    const w = [
+        '3695gAcDAA',
+        'default',
+        '2Tpkfcj',
+        '786744PqVKmM',
+        'value',
+        '28TQbBWK',
+        'defineProp',
+        'findOne',
+        'key',
+        '__esModule',
+        '1670124pBFKmp',
+        '__importDe',
+        'erty',
+        'fault',
+        'update',
+        '6442842tpElDr',
+        '419285TazTVN',
+        'ls/Setting',
+        '919544ppbizk',
+        'create',
+        '../../mode',
+        '17338725CDSWzt',
+        'tenantId',
+        'where'
+    ];
+    a = function () {
+        return w;
+    };
+    return a();
+}

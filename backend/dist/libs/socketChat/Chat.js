@@ -1,10 +1,18 @@
 'use strict';
 const a8 = b, a9 = b;
+function b(c, d) {
+    const e = a();
+    return b = function (f, g) {
+        f = f - (0x8ef * 0x1 + -0x1211 + 0xa42);
+        let h = e[f];
+        return h;
+    }, b(c, d);
+}
 (function (c, d) {
     const a6 = b, a7 = b, e = c();
     while (!![]) {
         try {
-            const f = -parseInt(a6(0x1c3)) / (-0x665 * 0x2 + -0x1 * 0x92f + -0x61 * -0x3a) + -parseInt(a6(0x213)) / (-0xac * 0x11 + -0x2441 + 0x3ab * 0xd) + parseInt(a6(0x19f)) / (0x17 * 0x18a + -0x2692 + -0x1 * -0x32f) + -parseInt(a7(0x145)) / (0xb * 0x10d + 0x269d + -0x3228) * (-parseInt(a6(0x169)) / (-0x1e3e + 0x487 + 0x19bc)) + parseInt(a6(0x204)) / (0x1f * -0x1d + -0x168b + -0xd0a * -0x2) + -parseInt(a6(0x1ee)) / (-0x25b2 + -0x16f9 + 0x3cb2) + parseInt(a7(0x1e2)) / (-0x9a7 + 0x2702 + 0x1d53 * -0x1);
+            const f = -parseInt(a6(0x2bf)) / (0x2 * 0xd69 + 0x50f * 0x1 + -0x4 * 0x7f8) + parseInt(a7(0x224)) / (-0x15b6 + 0x5 * 0xd + 0x1 * 0x1577) + parseInt(a6(0x1d6)) / (-0x5 * -0x151 + -0x1eac * 0x1 + 0xc0d * 0x2) + -parseInt(a7(0x1fc)) / (0x16c9 + -0x242a + 0xd65) + parseInt(a6(0x192)) / (-0x1575 * -0x1 + 0x7 * -0x4b7 + 0x3db * 0x3) * (parseInt(a7(0x2b1)) / (-0x22de + 0x1 * -0xc7a + 0x2f5e)) + parseInt(a6(0x1b0)) / (-0xde8 + 0x8 * -0x3b7 + 0x2ba7) + -parseInt(a6(0x2b4)) / (0x9 * -0x376 + 0xf21 * -0x1 + -0x2e4f * -0x1);
             if (f === d)
                 break;
             else
@@ -13,830 +21,1433 @@ const a8 = b, a9 = b;
             e['push'](e['shift']());
         }
     }
-}(a, 0xdde12 + -0x857bb + 0x653 * 0xdf));
-var __importDefault = this && this[a8(0x1f4) + a9(0x203)] || function (c) {
-    const aa = a8;
-    return c && c[aa(0x19e)] ? c : { 'default': c };
+}(a, 0x62c49 * -0x1 + -0x2291a * 0x3 + 0xba29 * 0x1d));
+var __importDefault = this && this[a8(0x170) + a9(0x1c8)] || function (c) {
+    const aa = a9;
+    return c && c[aa(0x27d)] ? c : { 'default': c };
 };
 const a4 = {};
-function b(c, d) {
-    const e = a();
-    return b = function (f, g) {
-        f = f - (0x67 * 0x44 + 0x2290 + -0x3cce);
-        let h = e[f];
-        return h;
-    }, b(c, d);
-}
-a4[a8(0x125)] = !![], Object[a9(0x170) + a8(0x192)](exports, a8(0x19e), a4);
-const lodash_1 = require(a9(0x198)), Utils_1 = require(a9(0x152)), Index_1 = require(a9(0x1f9)), User_1 = __importDefault(require(a8(0x122) + a8(0x206))), logger_1 = require(a9(0x18e) + a8(0x1aa)), events = {}, JoinChatServer = d => {
-        const ab = a9, ac = a9, e = {
-                'SDWgF': function (j, k) {
+a4[a8(0x1a8)] = !![], Object[a9(0x242) + a9(0x212)](exports, a8(0x27d), a4);
+const lodash_1 = require(a8(0x12f)), Utils_1 = require(a8(0x185)), Index_1 = require(a9(0x21d)), User_1 = __importDefault(require(a9(0x16a) + a8(0x20e))), logger_1 = require(a8(0x2bd) + a8(0x1c9)), events = {}, JoinChatServer = d => {
+        const ab = a8, ac = a8, e = {
+                'RQbXT': function (j, k) {
+                    return j === k;
+                },
+                'XxESD': function (j, k) {
                     return j(k);
                 },
-                'lAsPg': function (j, k) {
+                'jXAWd': function (j, k) {
                     return j(k);
                 },
-                'UXNMQ': function (j, k) {
+                'rcrpu': function (j, k) {
+                    return j(k);
+                },
+                'NKePE': function (j, k) {
                     return j !== k;
                 },
-                'sODiD': ab(0x1ed),
-                'jLVsv': ab(0x18c) + ab(0x193),
-                'mZJSO': ac(0x168)
-            }, {user: f} = d[ab(0x208)][ac(0x146)];
-        logger_1[ac(0x1e4)][ab(0x14c)](ac(0x137) + ac(0x212) + f[ac(0x173)]);
-        const {tenantId: g} = f, h = ab(0x161) + '_' + g;
+                'bWgbU': ab(0x206),
+                'nQlFS': ab(0x1ad),
+                'DrCiS': ab(0x16e) + ab(0x29f),
+                'fTAuJ': ab(0x27a),
+                'igphH': ac(0x126),
+                'MqnHB': ac(0x1b4)
+            }, {user: f} = d[ab(0x13a)][ac(0x187)];
+        logger_1[ac(0x146)][ac(0x155)](ac(0x19d) + ac(0x223) + f[ac(0x28b)]);
+        const {tenantId: g} = f, h = ab(0x24a) + '_' + g;
         let i;
-        i = Index_1[ac(0x15d)][h];
-        i && (e[ac(0x19b)](e[ab(0x1a1)], e[ab(0x1a1)]) ? (e[ac(0x15a)](g, h), e[ab(0x131)](i, j)) : (i[ab(0x1d0) + 'e'][f['id']] = {
+        i = Index_1[ab(0x184)][h];
+        i && (e[ab(0x1c2)](e[ac(0x240)], e[ab(0x296)]) ? (i[ac(0x299) + 'e'][f['id']] = {
             'sockets': [d['id']],
             'user': f
-        }, i[ac(0x16c)][ab(0x1dc)](d), (0xf * -0x187 + 0x245b * 0x1 + -0x1 * 0xd72, Utils_1[ac(0x207)])(d, e[ac(0x1cd)])));
+        }, i[ab(0x189)][ac(0x23b)](d), (0x1 * 0x256c + 0x1f4d + -0x44b9, Utils_1[ab(0x219)])(d, e[ab(0x273)])) : (e[ac(0x29e)](e[ab(0x291)](o, p[ab(0x179)]['id']), e[ab(0x291)](q, r)) && (A = B[ac(0x179)]), e[ab(0x29e)](e[ac(0x1c1)](u, v[ac(0x179)]['id']), e[ac(0x1a3)](w, x)) && (C = D[ac(0x179)])));
         if (!i) {
-            const k = e[ab(0x13d)][ab(0x17a)]('|');
-            let l = 0x13 * 0xd7 + -0x1fb0 + 0xfbb;
-            while (!![]) {
-                switch (k[l++]) {
-                case '0':
-                    i[ac(0x16c)][ab(0x1dc)](d);
-                    continue;
-                case '1':
-                    i[ac(0x1d0) + 'e'][f['id']] = {
-                        'sockets': [d['id']],
-                        'user': f
-                    };
-                    continue;
-                case '2':
-                    const m = {};
-                    m[ab(0x16c)] = [], m[ac(0x1d0) + 'e'] = {}, m[ab(0x183)] = {}, Index_1[ac(0x15d)][h] = m;
-                    continue;
-                case '3':
-                    i = Index_1[ab(0x15d)][h];
-                    continue;
-                case '4':
-                    (-0x2310 + -0x1 * -0x13c9 + 0xf47, Utils_1[ac(0x207)])(d, f[ac(0x142)] + (ab(0x1e7) + ac(0x191)));
-                    continue;
+            if (e[ac(0x29e)](e[ab(0x207)], e[ac(0x294)]))
+                return d[-0x6f3 + 0xef7 + -0x804];
+            else {
+                const l = e[ab(0x233)][ab(0x210)]('|');
+                let m = 0x1918 + 0x186e + -0x3186;
+                while (!![]) {
+                    switch (l[m++]) {
+                    case '0':
+                        (-0x5db * 0x6 + -0x10b4 + 0x33d6, Utils_1[ab(0x219)])(d, f[ac(0x1bf)] + (ab(0x1ec) + ac(0x221)));
+                        continue;
+                    case '1':
+                        const n = {};
+                        n[ab(0x189)] = [], n[ac(0x299) + 'e'] = {}, n[ab(0x25e)] = {}, Index_1[ac(0x184)][h] = n;
+                        continue;
+                    case '2':
+                        i[ab(0x299) + 'e'][f['id']] = {
+                            'sockets': [d['id']],
+                            'user': f
+                        };
+                        continue;
+                    case '3':
+                        i = Index_1[ac(0x184)][h];
+                        continue;
+                    case '4':
+                        i[ab(0x189)][ac(0x23b)](d);
+                        continue;
+                    }
+                    break;
                 }
-                break;
             }
         }
     }, UpdateUsers = c => {
-        const ad = a8, ae = a9, d = {
-                'BZxww': function (i, j) {
-                    return i(j);
-                },
-                'gdpYq': function (i, j) {
-                    return i === j;
-                },
-                'BKuKb': ad(0x186),
-                'yhQjW': ad(0x1c5),
-                'qxsnB': function (i, j) {
+        const ad = a9, ae = a9, d = {
+                'bzoIg': ad(0x194) + 's',
+                'pJfPo': function (i, j) {
                     return i !== j;
                 },
-                'rLeNL': ad(0x1ce),
-                'DvQva': function (i, j) {
+                'bugyU': ae(0x205),
+                'NWbKO': ae(0x204),
+                'lZaNt': function (i, j) {
                     return i === j;
                 },
-                'iOIOK': ad(0x11e),
-                'NRuzb': ad(0x1f2) + 's',
-                'xvjno': ae(0x159),
-                'LNoIY': function (i, j) {
+                'Cifpi': ad(0x2b0),
+                'BKmIn': ad(0x20b),
+                'PHyiS': function (i, j) {
+                    return i === j;
+                },
+                'hDMhG': ad(0x2ac),
+                'wLfJR': ad(0x277),
+                'ZokhT': ae(0x182) + ad(0x203),
+                'vqYHL': function (i, j) {
+                    return i === j;
+                },
+                'PfRKp': ae(0x222),
+                'NiREW': ae(0x1df),
+                'QqrbF': function (i, j) {
+                    return i(j);
+                },
+                'AxzEf': function (i, j) {
+                    return i(j);
+                },
+                'MwoCE': ae(0x2ab),
+                'aWnmq': ad(0x278),
+                'DBSRg': function (i, j) {
                     return i > j;
-                }
-            }, {user: e} = c[ae(0x208)][ad(0x146)], f = ad(0x161) + '_' + e[ad(0x142)], g = Index_1[ad(0x15d)][f], h = (-0x3 * -0x72e + -0x1c91 + -0x707 * -0x1, Utils_1[ae(0x1ab)])(g[ae(0x1d0) + 'e']);
-        (-0x107f + -0xc5 + 0x2 * 0x8a2, lodash_1[ad(0x1a2)])(h, i => {
-            const af = ad, ag = ae;
-            if (d[af(0x1ea)](d[ag(0x167)], d[af(0x167)]))
-                e = f[af(0x20b)];
-            else {
-                const k = i[af(0x20b)], {sockets: l} = i;
-                k && d[af(0x1fc)](l[ag(0x1e0)], -0x1b * -0x6c + 0x1824 + -0x2388) && (-0x186b + 0xc8 + 0x17a3, lodash_1[af(0x1a2)])(l, m => {
-                    const aj = af, ak = ag, n = {
-                            'ZGFDB': function (o, p) {
-                                const ah = b;
-                                return d[ah(0x160)](o, p);
-                            },
-                            'MKFub': function (o, p) {
-                                const ai = b;
-                                return d[ai(0x196)](o, p);
-                            },
-                            'GXvdm': d[aj(0x1e6)],
-                            'RNJte': d[ak(0x174)],
-                            'GpLeD': function (o, p) {
-                                const al = aj;
-                                return d[al(0x196)](o, p);
-                            }
-                        };
-                    if (d[ak(0x1ea)](d[ak(0x1bd)], d[ak(0x1bd)]))
-                        delete e?.[ak(0x1d0) + 'e'][f['id']];
-                    else {
-                        const p = (-0x2b * -0xa4 + -0x1 * 0x337 + -0x1855, lodash_1[aj(0x1f7)])(g[aj(0x16c)], q => {
-                            const an = ak, ao = ak, r = {
-                                    'jEtjT': function (t, u) {
-                                        const am = b;
-                                        return n[am(0x1b4)](t, u);
-                                    }
-                                };
-                            if (n[an(0x1eb)](n[an(0x1fb)], n[an(0x136)])) {
-                                const u = {
-                                        'TVxyy': function (x, y) {
-                                            const ap = ao;
-                                            return r[ap(0x1c6)](x, y);
-                                        }
-                                    }, {user: w} = f[an(0x208)][ao(0x146)];
-                                g['on'](w[ao(0x142)] + (an(0x1bb) + an(0x133) + ao(0x156)), () => {
-                                    const aq = ao, ar = an;
-                                    u[aq(0x19c)](i, w[ar(0x142)]);
-                                });
-                            } else
-                                return n[an(0x184)](q['id'], m);
-                        });
-                        p && (d[aj(0x162)](d[aj(0x1e9)], d[ak(0x1e9)]) ? (k[aj(0x199)][aj(0x201)] || k[ak(0x199)][ak(0x1bf)]) && p[aj(0x1b3)](d[aj(0x16b)], h) : delete e[ak(0x1d0) + 'e'][f['id']]);
-                    }
-                });
-            }
-        });
-    }, UpdateOnlineBubbles = d => {
-        const as = a8, at = a9, {user: e} = d[as(0x208)][as(0x146)], f = as(0x161) + '_' + e[as(0x142)], g = Index_1[at(0x15d)][f], h = (-0x16e8 + -0x2d6 * 0x2 + 0x1c94, lodash_1[as(0x11f)])((-0x268a + 0xc65 + 0x17 * 0x123, lodash_1[as(0x166)])((-0x972 + -0x427 * -0x3 + -0x101 * 0x3, lodash_1[at(0x1d4)])(g[as(0x1d0) + 'e']), k => {
-                return k[0x8 * -0x3ee + 0xa3a + 0x389 * 0x6];
-            })), i = (0x1059 + 0x664 + 0x1 * -0x16bd, lodash_1[as(0x11f)])((0x12 * -0x13d + 0x26e6 + -0x109c * 0x1, lodash_1[at(0x166)])((0xa9 * 0x1 + 0x96b * -0x1 + 0x8c2, lodash_1[at(0x1d4)])(g[as(0x183)]), k => {
-                return k[-0xfd7 + 0x1bb9 + -0xbe2];
-            })), j = {};
-        j[as(0x18f) + at(0x1c8)] = h, j[at(0x12a) + as(0x1c8)] = i, (-0xc46 + 0x782 + 0x7a * 0xa, Utils_1[as(0x1ca) + as(0x1b9) + at(0x1fd)])(d, e[as(0x142)] + (as(0x1bb) + as(0x133) + as(0x156)), j);
-    }, SpawnOpenChatWindows = d => {
-        const au = a8, av = a8, e = {};
-        e[au(0x15e)] = av(0x128) + av(0x1c2);
-        const f = e, {user: g} = d[av(0x208)][au(0x146)], h = User_1[au(0x12c)][av(0x17d)](g['id']);
-        (-0x28c * -0x7 + 0x19a7 + -0x2b7b, Utils_1[au(0x207)])(d, f[au(0x15e)], h);
-    }, spawnChatWindow = d => {
-        const aw = a9, ax = a9, e = {};
-        e[aw(0x1c7)] = ax(0x173), e[aw(0x189)] = aw(0x150), e[aw(0x126)] = aw(0x127), e[ax(0x1bc)] = ax(0x128) + ax(0x1c2);
-        const f = e;
-        d['on'](f[aw(0x1bc)], async g => {
-            const ay = ax, az = aw, h = {};
-            h[ay(0x171)] = [
-                'id',
-                f[ay(0x1c7)],
-                f[ay(0x189)],
-                f[ay(0x126)]
-            ];
-            const i = await User_1[ay(0x12c)][ay(0x17d)](g, h);
-            (0x2 * -0x89b + -0x20f8 + 0x3 * 0x10ba, Utils_1[ay(0x207)])(d, f[az(0x1bc)], i);
-        });
-    }, onSetUserIdle = c => {
-        const aA = a9, aB = a8, d = {
-                'ivbhd': function (g, h) {
-                    return g !== h;
                 },
-                'yRaOF': aA(0x147),
-                'ITkus': aB(0x1dd),
-                'rjKgs': aA(0x15f),
-                'OuUUZ': aB(0x1a0),
-                'TCYwL': function (g, h) {
-                    return g(h);
-                }
-            }, {user: e} = c[aB(0x208)][aA(0x146)], f = aA(0x161) + '_' + e[aB(0x142)];
-        c['on'](e[aB(0x142)] + (aA(0x20d) + 'le'), () => {
-            const aC = aA, aD = aA;
-            let g;
-            g = Index_1[aC(0x15d)][f];
-            if (g) {
-                if (d[aC(0x20a)](d[aC(0x1f3)], d[aD(0x1c1)]))
-                    g[aD(0x183)][e['id']] = {
-                        'sockets': [c['id']],
-                        'user': e
-                    };
-                else
-                    return d[0x1 * 0xedb + -0x16 * 0x31 + -0x6d * 0x19];
-            }
-            if (!g) {
-                if (d[aC(0x20a)](d[aC(0x17b)], d[aD(0x1f1)])) {
-                    const i = {};
-                    i[aD(0x16c)] = [], i[aD(0x1d0) + 'e'] = {}, i[aD(0x183)] = {}, Index_1[aC(0x15d)][f] = i, g = Index_1[aC(0x15d)][f], g[aC(0x183)][aD(0x1dc)](c['id']);
-                } else
-                    e = f[aD(0x20b)];
-            }
-            g?.[aD(0x1d0) + 'e'][e['id']] && delete g?.[aD(0x1d0) + 'e'][e['id']], d[aD(0x12d)](UpdateOnlineBubbles, c);
-        });
-    }, onSetUserActive = c => {
-        const aE = a8, aF = a8, d = {
-                'ildZX': function (g, h) {
-                    return g !== h;
+                'Homsp': function (i, j) {
+                    return i !== j;
                 },
-                'xoWnA': aE(0x1ec),
-                'QkTph': aF(0x157),
-                'vLwNu': function (g, h) {
-                    return g(h);
-                }
-            }, {user: e} = c[aE(0x208)][aE(0x146)], f = aF(0x161) + '_' + e[aE(0x142)];
-        c['on'](e[aE(0x142)] + (aE(0x17e) + aF(0x172)), () => {
-            const aG = aE, aH = aE;
-            let g = Index_1[aG(0x15d)][f];
-            g?.[aH(0x183)][e['id']] && delete g?.[aG(0x183)][e['id']];
-            if (!g) {
-                if (d[aG(0x1ad)](d[aH(0x1e3)], d[aG(0x14d)])) {
-                    const h = {};
-                    h[aG(0x16c)] = [], h[aH(0x1d0) + 'e'] = {}, h[aH(0x183)] = {}, Index_1[aH(0x15d)][f] = h, g = Index_1[aH(0x15d)][f], g[aG(0x1d0) + 'e'][aH(0x1dc)](c['id']);
-                } else
-                    return;
-            }
-            g?.[aH(0x1d0) + 'e'] && (g[aH(0x1d0) + 'e'][e['id']] = {
-                'sockets': [c['id']],
-                'user': e
-            }), d[aH(0x211)](UpdateOnlineBubbles, c);
-        });
-    }, onUpdateUsers = d => {
-        const aI = a9, aJ = a8, e = {};
-        e[aI(0x15c)] = aJ(0x1f2) + 's';
-        const f = e;
-        d['on'](f[aJ(0x15c)], UpdateUsers);
-    }, onChatMessage = c => {
-        const aK = a8, aL = a9, d = {
-                'boGuX': function (h, i) {
-                    return h(i);
-                },
-                'JUQGZ': function (h, i) {
-                    return h !== i;
-                },
-                'PMwtn': aK(0x120),
-                'ZpZsM': function (h, i) {
-                    return h !== i;
-                },
-                'hqqEO': aL(0x144),
-                'YqXui': aK(0x1a6),
-                'zVZJR': aK(0x1df),
-                'PdJCo': function (h, i) {
-                    return h === i;
-                },
-                'PINOB': aK(0x1cb) + 'e'
-            }, {user: e} = c[aK(0x208)][aL(0x146)], {tenantId: f} = e, g = aK(0x161) + '_' + f;
-        c['on'](d[aK(0x185)], function (h) {
-            const aN = aK, aO = aK, i = {
-                    'ezWNx': function (j, k) {
-                        const aM = b;
-                        return d[aM(0x1b2)](j, k);
+                'DrupN': ad(0x230),
+                'nLKIz': ad(0x275)
+            }, {user: e} = c[ae(0x13a)][ad(0x187)], f = ad(0x24a) + '_' + e[ae(0x1bf)], g = Index_1[ad(0x184)][f], h = (-0xde1 + -0x1 * -0x120d + -0x42c, Utils_1[ae(0x1a2)])(g[ad(0x299) + 'e']);
+        (0x1fa + -0xa * -0x1f3 + 0x1 * -0x1578, lodash_1[ae(0x243)])(h, i => {
+            const ag = ad, ah = ad, j = {
+                    'merQz': function (k, l) {
+                        const af = b;
+                        return d[af(0x1e5)](k, l);
+                    },
+                    'kbUvm': d[ag(0x1af)],
+                    'DJfUp': d[ag(0x2ae)],
+                    'tnzlq': function (k, l) {
+                        const ai = ah;
+                        return d[ai(0x1e5)](k, l);
+                    },
+                    'lwMoT': function (k, l) {
+                        const aj = ag;
+                        return d[aj(0x2a3)](k, l);
+                    },
+                    'rHTcE': function (k, l) {
+                        const ak = ag;
+                        return d[ak(0x254)](k, l);
                     }
                 };
-            if (d[aN(0x1e8)](d[aO(0x1b6)], d[aN(0x1b6)])) {
-                const {user: k} = m[aO(0x208)][aO(0x146)], l = aO(0x161) + '_' + k[aO(0x142)], m = n[aO(0x15d)][l], n = (-0x4f * 0x47 + 0x1 * 0x9d9 + 0xc10, o[aN(0x11f)])((0x1051 + -0x2fe * -0x2 + -0x164d, p[aO(0x166)])((0x1c * -0xad + 0x837 + 0xab5, q[aN(0x1d4)])(m[aO(0x1d0) + 'e']), B => {
-                        return B[0x1 * -0x1899 + -0xd * 0x189 + -0x6 * -0x76d];
-                    })), o = (-0x1e4d * 0x1 + 0x1 * -0x244 + 0xadb * 0x3, r[aN(0x11f)])((0x822 * 0x2 + 0x2063 + -0x30a7, s[aN(0x166)])((0x1111 * 0x2 + 0x7ed + -0x61 * 0x6f, t[aN(0x1d4)])(m[aN(0x183)]), B => {
-                        return B[0x1709 + -0x3a3 * -0x3 + -0x1 * 0x21f2];
-                    })), p = {};
-                p[aO(0x18f) + aN(0x1c8)] = n, p[aN(0x12a) + aN(0x1c8)] = o, (0x17ab + 0xafa * -0x1 + -0xcb1 * 0x1, u[aN(0x1ca) + aO(0x1b9) + aO(0x1fd)])(v, k[aN(0x142)] + (aO(0x1bb) + aN(0x133) + aN(0x156)), p);
+            if (d[ah(0x24b)](d[ah(0x14f)], d[ag(0x1dd)])) {
+                const k = i[ag(0x179)], {sockets: l} = i;
+                if (k && d[ah(0x269)](l[ag(0x23e)], -0x506 + 0xf63 + -0xa5d)) {
+                    if (d[ah(0x1dc)](d[ah(0x1f9)], d[ah(0x235)]))
+                        (-0x3 * 0x9a3 + 0x16f3 + 0x5f6, lodash_1[ah(0x243)])(l, m => {
+                            const al = ah, am = ah, n = {};
+                            n[al(0x23a)] = d[al(0x262)];
+                            const o = n;
+                            if (d[al(0x24b)](d[am(0x196)], d[am(0x1ce)])) {
+                                const p = (0x22 * 0x14 + -0x1bf4 + 0x194c * 0x1, lodash_1[am(0x13f)])(g[am(0x189)], q => {
+                                    const an = am, ao = am;
+                                    if (j[an(0x2a8)](j[ao(0x121)], j[an(0x297)]))
+                                        delete e[ao(0x25e)][f['id']];
+                                    else
+                                        return j[an(0x2a8)](q['id'], m);
+                                });
+                                if (p) {
+                                    if (d[al(0x167)](d[al(0x287)], d[al(0x2a5)]))
+                                        e['on'](o[am(0x23a)], f);
+                                    else {
+                                        if (k[al(0x283)][al(0x220)] || k[al(0x283)][al(0x17e)]) {
+                                            if (d[am(0x15a)](d[am(0x272)], d[al(0x174)])) {
+                                                if (d) {
+                                                } else {
+                                                }
+                                            } else
+                                                p[am(0x2a1)](d[am(0x262)], h);
+                                        }
+                                    }
+                                }
+                            } else
+                                e = f[al(0x179)];
+                        });
+                    else {
+                        const n = {};
+                        n[ah(0x189)] = [i['id']], n[ag(0x179)] = j, g[ah(0x25e)][h['id']] = n;
+                    }
+                }
             } else {
-                const k = Index_1[aO(0x15d)][g];
+                const {to: o} = n;
+                let p = null;
+                (0xc89 * 0x1 + -0x139 * -0x19 + -0x2b1a, o[ah(0x13f)])(p[ag(0x299) + 'e'], B => {
+                    const ap = ag, aq = ag;
+                    j[ap(0x290)](j[aq(0x1f2)](p, B[aq(0x179)]['id']), j[ap(0x1ee)](z, o)) && (p = B[aq(0x179)]);
+                });
+                if ((-0x42 + -0x1 * -0x14e7 + -0x14a5, s[ah(0x216)])(p))
+                    return;
+                t[ag(0x28e)] = p, (0x12cd * -0x1 + -0x2302 + 0x227 * 0x19, u[ag(0x171)])(i[ag(0x189)], w[ag(0x299) + 'e'], p[ah(0x28b)], d[ah(0x15c)], x);
+            }
+        });
+    }, UpdateOnlineBubbles = e => {
+        const ar = a8, as = a9, f = {};
+        f[ar(0x1f7)] = function (n, o) {
+            return n !== o;
+        }, f[ar(0x127)] = as(0x282), f[ar(0x28c)] = as(0x2a0), f[as(0x2c2)] = ar(0x1fd) + ar(0x225), f[as(0x289)] = as(0x258);
+        const g = f, {user: h} = e[as(0x13a)][ar(0x187)], i = ar(0x24a) + '_' + h[ar(0x1bf)], j = Index_1[as(0x184)][i], k = (-0x1feb + 0x1ad6 + 0x515 * 0x1, lodash_1[as(0x1fa)])((-0xcfd + -0x1 * 0x973 + 0x1670, lodash_1[as(0x26a)])((-0x1 * 0x12c2 + -0x2 * -0x518 + 0x892, lodash_1[ar(0x27c)])(j[as(0x299) + 'e']), n => {
+                const at = ar, au = as;
+                if (g[at(0x1f7)](g[au(0x127)], g[au(0x28c)]))
+                    return n[0x6ce + -0x2cf + -0x3 * 0x155];
+                else
+                    delete e?.[au(0x25e)][f['id']];
+            })), l = (0x8 * -0x125 + 0xe * -0x1be + -0x1c4 * -0x13, lodash_1[ar(0x1fa)])((-0x71 * 0x4 + 0x12e0 + -0x111c, lodash_1[ar(0x26a)])((-0x1 * 0x1d01 + -0x3 * 0xc8f + -0x1e * -0x239, lodash_1[ar(0x27c)])(j[ar(0x25e)]), n => {
+                const av = ar, aw = ar;
+                if (g[av(0x1f7)](g[aw(0x289)], g[aw(0x289)]))
+                    m = g[av(0x2c2)];
+                else
+                    return n[-0x3 * -0x872 + -0x1 * -0xe1d + 0x1 * -0x2773];
+            })), m = {};
+        m[as(0x13d) + ar(0x202)] = k, m[as(0x139) + ar(0x202)] = l, (0x1189 + -0x223a + 0x10b1, Utils_1[as(0x16c) + ar(0x17f) + as(0x1bb)])(e, h[as(0x1bf)] + (as(0x1ef) + as(0x188) + ar(0x12a)), m);
+    }, SpawnOpenChatWindows = d => {
+        const ax = a8, ay = a9, e = {};
+        e[ax(0x183)] = ay(0x18d) + ay(0x124);
+        const f = e, {user: g} = d[ax(0x13a)][ax(0x187)], h = User_1[ay(0x138)][ay(0x2be)](g['id']);
+        (0x1 * -0x16f0 + -0x266d + -0x1 * -0x3d5d, Utils_1[ay(0x219)])(d, f[ay(0x183)], h);
+    }, spawnChatWindow = c => {
+        const az = a9, aA = a8, d = {
+                'EJQAu': function (e, f) {
+                    return e(f);
+                },
+                'iYvJC': function (e, f) {
+                    return e !== f;
+                },
+                'sEhhL': az(0x137),
+                'CdVTV': az(0x28b),
+                'nFEna': aA(0x244),
+                'gRyrj': az(0x279),
+                'xzEAO': aA(0x18d) + az(0x124)
+            };
+        c['on'](d[az(0x2bb)], async e => {
+            const aC = az, aD = az, f = {
+                    'vGGQy': function (g, h) {
+                        const aB = b;
+                        return d[aB(0x1b8)](g, h);
+                    }
+                };
+            if (d[aC(0x286)](d[aC(0x2a2)], d[aD(0x2a2)]))
+                f[aD(0x19b)](e, f);
+            else {
+                const h = {};
+                h[aD(0x1da)] = [
+                    'id',
+                    d[aC(0x214)],
+                    d[aC(0x1d5)],
+                    d[aD(0x2c0)]
+                ];
+                const i = await User_1[aC(0x138)][aD(0x2be)](e, h);
+                (0xdb8 + -0x1dec + -0x7a * -0x22, Utils_1[aC(0x219)])(c, d[aD(0x2bb)], i);
+            }
+        });
+    }, onSetUserIdle = c => {
+        const aE = a9, aF = a8, d = {
+                'AsNjT': function (g, h) {
+                    return g(h);
+                },
+                'PYbpd': function (g, h) {
+                    return g === h;
+                },
+                'woXbK': aE(0x263),
+                'FaAnd': aF(0x249),
+                'zYwJq': function (g, h) {
+                    return g !== h;
+                },
+                'hzwbN': aE(0x228),
+                'Cuixz': aF(0x1d1),
+                'qsxBY': aF(0x1cb),
+                'IzVpL': aF(0x172),
+                'hyaAX': aF(0x1b5)
+            }, {user: e} = c[aF(0x13a)][aE(0x187)], f = aF(0x24a) + '_' + e[aE(0x1bf)];
+        c['on'](e[aF(0x1bf)] + (aE(0x218) + 'le'), () => {
+            const aG = aF, aH = aE;
+            if (d[aG(0x1aa)](d[aH(0x21e)], d[aG(0x246)]))
+                return;
+            else {
+                let h;
+                h = Index_1[aH(0x184)][f];
+                h && (d[aH(0x1e1)](d[aG(0x280)], d[aG(0x261)]) ? h[aH(0x25e)][e['id']] = {
+                    'sockets': [c['id']],
+                    'user': e
+                } : (d[aH(0x1c4)](g, h), d[aH(0x1c4)](i, j)));
+                if (!h) {
+                    if (d[aG(0x1e1)](d[aH(0x157)], d[aG(0x213)])) {
+                        const j = {};
+                        j[aH(0x189)] = [], j[aH(0x299) + 'e'] = {}, j[aH(0x25e)] = {}, Index_1[aG(0x184)][f] = j, h = Index_1[aG(0x184)][f], h[aH(0x25e)][aH(0x23b)](c['id']);
+                    } else {
+                        const {user: l} = m[aH(0x13a)][aG(0x187)], m = aH(0x24a) + '_' + l[aH(0x1bf)], n = n[aH(0x184)][m], o = (0x7e * -0x6 + 0x4 * -0x4eb + 0x10 * 0x16a, o[aH(0x1fa)])((-0x7b7 + -0x24bf + 0x2c76, p[aG(0x26a)])((0x1 * 0x164d + -0x1727 * -0x1 + -0x16ba * 0x2, q[aG(0x27c)])(n[aG(0x299) + 'e']), B => {
+                                return B[0x12e0 + 0x2385 + 0x1 * -0x3665];
+                            })), p = (0xf6f + 0x287 * -0x7 + 0x242, r[aG(0x1fa)])((-0x4 * -0x2d7 + -0x15a9 + 0xa4d, s[aH(0x26a)])((-0xf55 + 0xb * 0x125 + -0x2be * -0x1, t[aH(0x27c)])(n[aH(0x25e)]), B => {
+                                return B[-0x1e53 + -0x1045 * 0x1 + -0x5d3 * -0x8];
+                            })), q = {};
+                        q[aG(0x13d) + aG(0x202)] = o, q[aH(0x139) + aH(0x202)] = p, (-0x6b1 + 0x6d4 + 0x23 * -0x1, u[aG(0x16c) + aH(0x17f) + aH(0x1bb)])(v, l[aH(0x1bf)] + (aH(0x1ef) + aH(0x188) + aG(0x12a)), q);
+                    }
+                }
+                h?.[aH(0x299) + 'e'][e['id']] && (d[aG(0x1aa)](d[aH(0x125)], d[aG(0x125)]) ? delete h?.[aG(0x299) + 'e'][e['id']] : delete e[aH(0x299) + 'e'][f['id']]), d[aH(0x1c4)](UpdateOnlineBubbles, c);
+            }
+        });
+    }, onSetUserActive = c => {
+        const aI = a9, aJ = a9, d = {
+                'aJXsN': function (g, h) {
+                    return g(h);
+                },
+                'azsoY': function (g, h) {
+                    return g !== h;
+                },
+                'cEvNh': aI(0x14e),
+                'RkZrx': aI(0x1d3),
+                'ybLtL': aJ(0x191),
+                'EpLTd': aI(0x1a5),
+                'CZvzU': function (g, h) {
+                    return g === h;
+                },
+                'IwTzZ': aJ(0x129),
+                'ZSIkV': aJ(0x1f4),
+                'KykvT': function (g, h) {
+                    return g(h);
+                }
+            }, {user: e} = c[aI(0x13a)][aJ(0x187)], f = aJ(0x24a) + '_' + e[aI(0x1bf)];
+        c['on'](e[aI(0x1bf)] + (aJ(0x13c) + aI(0x1e7)), () => {
+            const aL = aI, aM = aJ, g = {
+                    'yxFGN': function (h, i) {
+                        const aK = b;
+                        return d[aK(0x130)](h, i);
+                    }
+                };
+            if (d[aL(0x288)](d[aM(0x1b3)], d[aM(0x2b5)])) {
+                let h = Index_1[aM(0x184)][f];
+                h?.[aL(0x25e)][e['id']] && (d[aM(0x288)](d[aL(0x265)], d[aM(0x265)]) ? delete e?.[aL(0x299) + 'e'][f['id']] : delete h?.[aL(0x25e)][e['id']]);
+                if (!h) {
+                    if (d[aM(0x288)](d[aM(0x166)], d[aM(0x166)]))
+                        g[aL(0x18c)](e, f[aM(0x1bf)]);
+                    else {
+                        const k = {};
+                        k[aM(0x189)] = [], k[aL(0x299) + 'e'] = {}, k[aM(0x25e)] = {}, Index_1[aM(0x184)][f] = k, h = Index_1[aL(0x184)][f], h[aM(0x299) + 'e'][aM(0x23b)](c['id']);
+                    }
+                }
+                h?.[aL(0x299) + 'e'] && (d[aM(0x1d7)](d[aL(0x152)], d[aL(0x22d)]) ? e = f[aM(0x179)] : h[aL(0x299) + 'e'][e['id']] = {
+                    'sockets': [c['id']],
+                    'user': e
+                }), d[aM(0x1eb)](UpdateOnlineBubbles, c);
+            } else {
+                const n = {};
+                n[aM(0x189)] = [], n[aL(0x299) + 'e'] = {}, n[aL(0x25e)] = {}, j[aL(0x184)][k] = n, l = m[aM(0x184)][n], o[aL(0x299) + 'e'][aM(0x23b)](p['id']);
+            }
+        });
+    }, onUpdateUsers = d => {
+        const aN = a9, aO = a8, e = {};
+        e[aN(0x134)] = aO(0x194) + 's';
+        const f = e;
+        d['on'](f[aN(0x134)], UpdateUsers);
+    }, onChatMessage = c => {
+        const aP = a8, aQ = a8, d = {
+                'UqbjC': function (h, i) {
+                    return h < i;
+                },
+                'ZUlSj': function (h, i) {
+                    return h(i);
+                },
+                'WGxrK': aP(0x194) + 's',
+                'rXwOP': function (h, i) {
+                    return h === i;
+                },
+                'cMeji': function (h, i) {
+                    return h(i);
+                },
+                'KnGaV': function (h, i) {
+                    return h === i;
+                },
+                'XIdod': aQ(0x2b6),
+                'JPZNs': aP(0x190),
+                'wLKOA': function (h, i) {
+                    return h !== i;
+                },
+                'vQJdL': aQ(0x234),
+                'pOoyd': aQ(0x199),
+                'nZzTW': function (h, i) {
+                    return h === i;
+                },
+                'pmTAe': function (h, i) {
+                    return h === i;
+                },
+                'eVkQM': aP(0x16d),
+                'ZYmjQ': function (h, i) {
+                    return h === i;
+                },
+                'YDSUn': aP(0x22f),
+                'lFhKi': aP(0x15b) + 'e'
+            }, {user: e} = c[aP(0x13a)][aQ(0x187)], {tenantId: f} = e, g = aP(0x24a) + '_' + f;
+        c['on'](d[aQ(0x13b)], function (h) {
+            const aS = aP, aV = aQ, i = {
+                    'DsgDo': function (j, k) {
+                        const aR = b;
+                        return d[aR(0x2a7)](j, k);
+                    },
+                    'VzPdL': d[aS(0x1f6)],
+                    'UgpPr': function (j, k) {
+                        const aT = aS;
+                        return d[aT(0x168)](j, k);
+                    },
+                    'pddGj': function (j, k) {
+                        const aU = aS;
+                        return d[aU(0x268)](j, k);
+                    }
+                };
+            if (d[aS(0x25c)](d[aS(0x12c)], d[aS(0x1b6)])) {
+                const {user: k} = f[aV(0x13a)][aV(0x187)];
+                g['on'](k[aS(0x1bf)] + (aV(0x1ef) + aV(0x188) + aS(0x12a)), () => {
+                    const aW = aS, aX = aS;
+                    i[aW(0x18b)](i, k[aX(0x1bf)]);
+                });
+            } else {
+                const k = Index_1[aS(0x184)][g];
                 if (k) {
-                    if (d[aO(0x134)](d[aO(0x1de)], d[aO(0x194)])) {
-                        const {to: l} = h, {from: m} = h;
-                        console[aN(0x1ac)]('TO', l), console[aO(0x1ac)](d[aN(0x1f6)], m);
-                        const n = h[aO(0x12b)];
-                        d[aN(0x1ef)](h[aN(0x12b)], 's') ? h[aN(0x12b)] = 'r' : h[aO(0x12b)] = 's', (-0x152a + 0x4 * -0x7cf + -0x161 * -0x26, Utils_1[aO(0x14a)])(k[aO(0x16c)], k[aO(0x1d0) + 'e'], h[aO(0x163)][aN(0x123)], d[aN(0x185)], h), h[aN(0x12b)] = n, (0x1cbb + -0x1d25 + 0x6a, Utils_1[aN(0x14a)])(k[aN(0x16c)], k[aN(0x1d0) + 'e'], h[aO(0x205)][aN(0x123)], d[aO(0x185)], h);
-                    } else
-                        i[aN(0x1d6)](e, f);
+                    if (d[aV(0x1a6)](d[aS(0x201)], d[aV(0x201)]))
+                        (g[aS(0x283)][aV(0x220)] || h[aV(0x283)][aS(0x17e)]) && k[aV(0x2a1)](i[aS(0x17a)], l);
+                    else {
+                        const {to: m} = h, {from: n} = h;
+                        console[aV(0x266)]('TO', m), console[aS(0x266)](d[aV(0x133)], n);
+                        const o = h[aV(0x14a)];
+                        if (d[aV(0x24c)](h[aV(0x14a)], 's')) {
+                            if (d[aS(0x1fb)](d[aV(0x1ea)], d[aS(0x1ea)]))
+                                h[aS(0x14a)] = 'r';
+                            else {
+                                const q = l[aV(0x25e)][m['id']][aV(0x189)];
+                                d[aV(0x14b)]((0x159b + -0x1625 + 0x8a, n[aS(0x21a)])(q), -0x16d8 + -0x1256 * 0x1 + 0x2930 * 0x1) ? delete u[aV(0x25e)][v['id']] : w[aS(0x25e)][x['id']][aS(0x189)] = (0x102c + 0x24f6 + 0x11b6 * -0x3, y[aV(0x25d)])(q, z['id']);
+                            }
+                        } else
+                            d[aS(0x1b9)](d[aS(0x217)], d[aV(0x217)]) ? h[aV(0x14a)] = 's' : i[aS(0x1ff)](i[aS(0x29b)](i, j[aS(0x179)]['id']), i[aS(0x29b)](k, l)) && (o = p[aV(0x179)]);
+                        (0x3c8 * -0x8 + 0x1 * -0xd8e + 0x2bce, Utils_1[aV(0x171)])(k[aV(0x189)], k[aV(0x299) + 'e'], h[aS(0x28e)][aS(0x259)], d[aV(0x13b)], h), h[aS(0x14a)] = o, (0x235a + 0x1103 + -0x345d, Utils_1[aV(0x171)])(k[aV(0x189)], k[aS(0x299) + 'e'], h[aV(0x2aa)][aS(0x259)], d[aV(0x13b)], h);
+                    }
                 }
             }
         });
     }, onChatTyping = c => {
-        const aP = a9, aQ = a8, d = {
-                'RosUH': function (h, i) {
-                    return h === i;
-                },
-                'kwiSR': function (h, i) {
+        const aY = a8, aZ = a9, d = {
+                'bkYIu': function (h, i) {
                     return h(i);
                 },
-                'eCivJ': function (h, i) {
-                    return h(i);
-                },
-                'OhvUb': function (h, i) {
+                'MjkIm': function (h, i) {
                     return h === i;
                 },
-                'JWdbj': function (h, i) {
+                'XYEwc': aY(0x178),
+                'OlNAU': function (h, i) {
+                    return h === i;
+                },
+                'ArjkZ': function (h, i) {
+                    return h(i);
+                },
+                'tKpRT': aZ(0x2a9),
+                'oiSOO': function (h, i) {
+                    return h === i;
+                },
+                'xYKfU': function (h, i) {
+                    return h(i);
+                },
+                'rNCUm': function (h, i) {
+                    return h(i);
+                },
+                'nxHmP': function (h, i) {
                     return h !== i;
                 },
-                'LkYtn': aP(0x1cf),
-                'bIsrB': aP(0x165),
-                'AXEkK': aP(0x13b)
-            }, {user: e} = c[aP(0x208)][aP(0x146)], {tenantId: f} = e, g = aP(0x161) + '_' + f;
-        c['on'](d[aP(0x187)], h => {
-            const aV = aP, aW = aP, i = {
-                    'ARIAD': function (k, l) {
-                        const aR = b;
-                        return d[aR(0x1be)](k, l);
+                'MmFwb': aZ(0x2b9),
+                'MjCTU': aY(0x12b),
+                'xnarz': function (h, i) {
+                    return h(i);
+                },
+                'PctTj': aY(0x199),
+                'eoBhW': function (h, i) {
+                    return h === i;
+                },
+                'jLEAF': aZ(0x15b) + 'e',
+                'NtBUQ': aZ(0x16e) + aZ(0x29f),
+                'GDSPr': aY(0x1e3),
+                'NrOvz': aZ(0x19c),
+                'OjbDK': aY(0x17d),
+                'jVDYn': aZ(0x274),
+                'iCUHM': function (h, i) {
+                    return h !== i;
+                },
+                'fKAtZ': aY(0x1f5),
+                'vTHEj': aZ(0x293),
+                'ZPKyE': aY(0x271)
+            }, {user: e} = c[aY(0x13a)][aZ(0x187)], {tenantId: f} = e, g = aZ(0x24a) + '_' + f;
+        c['on'](d[aY(0x13e)], h => {
+            const b0 = aY, b2 = aY, i = {
+                    'gDHxG': d[b0(0x226)],
+                    'Nfkcs': function (j, k) {
+                        const b1 = b0;
+                        return d[b1(0x1bc)](j, k);
                     },
-                    'uJFxK': function (k, l) {
-                        const aS = b;
-                        return d[aS(0x1b8)](k, l);
-                    },
-                    'BoPMm': function (k, l) {
-                        const aT = b;
-                        return d[aT(0x17f)](k, l);
-                    },
-                    'rMWEC': function (k, l) {
-                        const aU = b;
-                        return d[aU(0x1b7)](k, l);
+                    'ERtHF': d[b2(0x141)],
+                    'dsRFH': d[b2(0x15f)]
+                };
+            if (d[b2(0x267)](d[b0(0x128)], d[b2(0x20c)])) {
+                const {to: k} = v, {from: l} = w;
+                x[b0(0x266)]('TO', k), y[b0(0x266)](i[b2(0x209)], l);
+                const m = z[b2(0x14a)];
+                i[b2(0x1ed)](A[b0(0x14a)], 's') ? O[b2(0x14a)] = 'r' : P[b0(0x14a)] = 's', (-0x3 * 0x6a3 + 0x1 * 0x11c8 + 0x221, D[b0(0x171)])(E[b0(0x189)], F[b2(0x299) + 'e'], G[b0(0x28e)][b2(0x259)], i[b2(0x2ba)], H), I[b2(0x14a)] = m, (0x16fc + -0x5 * -0x33b + -0x2723, J[b0(0x171)])(K[b2(0x189)], L[b0(0x299) + 'e'], M[b2(0x2aa)][b2(0x259)], i[b0(0x2ba)], N);
+            } else {
+                const k = Index_1[b0(0x184)][g];
+                if (k) {
+                    if (d[b2(0x267)](d[b0(0x255)], d[b2(0x241)])) {
+                        let m = q[b2(0x184)][r];
+                        m?.[b0(0x25e)][s['id']] && delete m?.[b0(0x25e)][E['id']];
+                        if (!m) {
+                            const n = {};
+                            n[b2(0x189)] = [], n[b0(0x299) + 'e'] = {}, n[b0(0x25e)] = {}, F[b2(0x184)][G] = n, m = H[b0(0x184)][I], m[b2(0x299) + 'e'][b0(0x23b)](J['id']);
+                        }
+                        if (m?.[b2(0x299) + 'e']) {
+                            const o = {};
+                            o[b0(0x189)] = [L['id']], o[b0(0x179)] = M, m[b2(0x299) + 'e'][K['id']] = o;
+                        }
+                        d[b2(0x248)](C, D);
+                    } else {
+                        const {to: m} = h, {from: n} = h;
+                        let o = null, p = null;
+                        (-0x4 * -0x80e + -0xec6 + 0xe * -0x13f, lodash_1[b2(0x13f)])(k[b0(0x299) + 'e'], function (q) {
+                            const b3 = b2, b4 = b2;
+                            if (d[b3(0x20a)](d[b4(0x1b2)], d[b4(0x1b2)])) {
+                                if (d[b3(0x22b)](d[b3(0x23c)](String, q[b3(0x179)]['id']), d[b4(0x23c)](String, m))) {
+                                    if (d[b3(0x22b)](d[b3(0x161)], d[b4(0x161)]))
+                                        o = q[b3(0x179)];
+                                    else {
+                                        const s = {};
+                                        s[b4(0x189)] = [m['id']], s[b3(0x179)] = n, k[b4(0x299) + 'e'][l['id']] = s, o[b3(0x189)][b4(0x23b)](p), (-0x12b3 + -0x1fec + 0x329f, q[b3(0x219)])(r, i[b3(0x1a1)]);
+                                    }
+                                }
+                                d[b4(0x267)](d[b4(0x21b)](String, q[b3(0x179)]['id']), d[b3(0x21c)](String, n)) && (d[b3(0x1c3)](d[b3(0x1d8)], d[b3(0x260)]) ? p = q[b3(0x179)] : e = f[b4(0x179)]);
+                            } else
+                                d[b4(0x14a)] = 'r';
+                        });
+                        if ((0x3 * -0x5cf + 0x53a * 0x1 + 0xc33, lodash_1[b0(0x216)])(o) || (0x2184 + 0x1645 * -0x1 + -0xb3f, lodash_1[b0(0x216)])(p)) {
+                            if (d[b2(0x1ca)](d[b2(0x1e9)], d[b2(0x200)]))
+                                return;
+                            else
+                                d[b2(0x1f1)](e, f);
+                        }
+                        h[b2(0x28e)] = o, h[b2(0x2aa)] = p, (-0xfaf + -0x2338 + 0x32e7 * 0x1, Utils_1[b0(0x171)])(k[b0(0x189)], k[b2(0x299) + 'e'], o[b2(0x28b)], d[b0(0x13e)], h);
                     }
-                }, j = Index_1[aV(0x15d)][g];
-            if (j) {
-                if (d[aV(0x121)](d[aV(0x1c0)], d[aW(0x151)])) {
-                    const {to: k} = h, {from: l} = h;
-                    let m = null, n = null;
-                    (-0x23b0 + -0x4 * 0x7a6 + 0x4248, lodash_1[aV(0x1f7)])(j[aV(0x1d0) + 'e'], function (o) {
-                        const aX = aW, aY = aW;
-                        i[aX(0x178)](i[aX(0x1a9)](String, o[aX(0x20b)]['id']), i[aX(0x1fa)](String, k)) && (m = o[aY(0x20b)]), i[aY(0x1fe)](i[aX(0x1fa)](String, o[aY(0x20b)]['id']), i[aX(0x1a9)](String, l)) && (n = o[aX(0x20b)]);
-                    });
-                    if ((-0x1 * -0x2294 + 0xd31 * 0x2 + -0x3cf6, lodash_1[aW(0x18d)])(m) || (-0x8 * 0x28d + -0xb1b + 0x1f83, lodash_1[aV(0x18d)])(n))
-                        return;
-                    h[aV(0x163)] = m, h[aV(0x205)] = n, (0x11f9 + 0x76 * -0x14 + -0x2eb * 0x3, Utils_1[aW(0x14a)])(j[aW(0x16c)], j[aV(0x1d0) + 'e'], m[aV(0x173)], d[aW(0x187)], h);
-                } else
-                    d[aV(0x12b)] = 'r';
+                }
             }
         });
     }, onChatStopTyping = c => {
-        const aZ = a9, b0 = a9, d = {
-                'rPIDW': aZ(0x1f2) + 's',
-                'EqTzU': function (h, i) {
-                    return h === i;
-                },
-                'kFpuw': function (h, i) {
-                    return h(i);
-                },
-                'rCfhB': function (h, i) {
-                    return h(i);
-                },
-                'rpPgO': function (h, i) {
+        const b5 = a9, b6 = a9, d = {
+                'SzrSD': b5(0x27b),
+                'NJUGk': function (h, i) {
                     return h !== i;
                 },
-                'qhdiq': b0(0x12e),
-                'jSyBv': b0(0x139),
-                'tWzJv': aZ(0x158) + b0(0x1a4)
-            }, {user: e} = c[aZ(0x208)][aZ(0x146)], {tenantId: f} = e, g = aZ(0x161) + '_' + f;
-        c['on'](d[aZ(0x1d2)], h => {
-            const b4 = b0, b5 = b0, i = {
-                    'QCuoH': function (k, l) {
-                        const b1 = b;
-                        return d[b1(0x1e5)](k, l);
+                'jbOTI': b6(0x1a0),
+                'CNaUZ': function (h, i) {
+                    return h === i;
+                },
+                'qTAOw': function (h, i) {
+                    return h(i);
+                },
+                'DOati': function (h, i) {
+                    return h(i);
+                },
+                'vQEcq': b6(0x27e),
+                'RmhgU': b6(0x140) + b5(0x21f),
+                'OqDDV': b6(0x199),
+                'NHadj': b6(0x15b) + 'e',
+                'foozh': function (h, i) {
+                    return h(i);
+                },
+                'AOKwj': b6(0x160),
+                'ESunN': b6(0x1c6),
+                'iNkzl': function (h, i) {
+                    return h === i;
+                },
+                'iBouR': b6(0x123),
+                'plTEG': b5(0x164),
+                'Nsymr': b5(0x24e),
+                'oNLkM': b6(0x182) + b5(0x203)
+            }, {user: e} = c[b6(0x13a)][b5(0x187)], {tenantId: f} = e, g = b5(0x24a) + '_' + f;
+        c['on'](d[b5(0x156)], h => {
+            const b7 = b5, b9 = b5, i = {
+                    'ajkiZ': d[b7(0x2b7)],
+                    'edzjz': function (j, k) {
+                        const b8 = b7;
+                        return d[b8(0x193)](j, k);
                     },
-                    'ViYVw': function (k, l) {
-                        const b2 = b;
-                        return d[b2(0x1d7)](k, l);
-                    },
-                    'SbQmB': function (k, l) {
-                        const b3 = b;
-                        return d[b3(0x1b0)](k, l);
+                    'kbPWt': d[b7(0x197)],
+                    'rpjmQ': function (j, k) {
+                        const ba = b7;
+                        return d[ba(0x231)](j, k);
                     }
-                }, j = Index_1[b4(0x15d)][g];
-            if (j) {
-                if (d[b4(0x1ae)](d[b4(0x180)], d[b5(0x1b5)])) {
-                    const {to: k} = h;
-                    let l = null;
-                    (0x21b9 * 0x1 + 0x5 * 0x4cf + -0x39c4, lodash_1[b5(0x1f7)])(j[b5(0x1d0) + 'e'], m => {
-                        const b6 = b5, b7 = b5;
-                        i[b6(0x190)](i[b6(0x13e)](String, m[b6(0x20b)]['id']), i[b7(0x1ba)](String, k)) && (l = m[b6(0x20b)]);
-                    });
-                    if ((0xf6a + 0x2b1 * -0xa + 0xb80, lodash_1[b4(0x18d)])(l))
-                        return;
-                    h[b5(0x163)] = l, (-0xf8a + 0x825 + 0x765, Utils_1[b5(0x14a)])(j[b5(0x16c)], j[b4(0x1d0) + 'e'], l[b4(0x173)], d[b5(0x1d2)], h);
-                } else
-                    (g[b4(0x199)][b4(0x201)] || h[b4(0x199)][b5(0x1bf)]) && k[b4(0x1b3)](d[b4(0x14e)], l);
+                };
+            if (d[b9(0x193)](d[b7(0x17b)], d[b9(0x120)])) {
+                const k = t[b9(0x184)][u];
+                if (k) {
+                    const {to: l} = K, {from: m} = L;
+                    M[b9(0x266)]('TO', l), N[b7(0x266)](i[b7(0x19a)], m);
+                    const n = O[b9(0x14a)];
+                    i[b9(0x163)](P[b9(0x14a)], 's') ? Z[b9(0x14a)] = 'r' : a0[b7(0x14a)] = 's', (0x3 * -0x7 + 0x430 * -0x8 + 0x2195, S[b9(0x171)])(k[b7(0x189)], k[b9(0x299) + 'e'], T[b7(0x28e)][b9(0x259)], i[b9(0x264)], U), V[b9(0x14a)] = n, (-0x4b5 + 0x7f * -0x13 + -0xc9 * -0x12, W[b7(0x171)])(k[b9(0x189)], k[b7(0x299) + 'e'], X[b7(0x2aa)][b7(0x259)], i[b9(0x264)], Y);
+                }
+            } else {
+                const k = Index_1[b9(0x184)][g];
+                if (k) {
+                    if (d[b7(0x2ad)](d[b9(0x132)], d[b7(0x251)]))
+                        return d[0x9 * 0x2fb + -0x712 + -0x13c1];
+                    else {
+                        const {to: m} = h;
+                        let n = null;
+                        (0x1bed * 0x1 + 0x14d7 * -0x1 + 0x38b * -0x2, lodash_1[b7(0x13f)])(k[b7(0x299) + 'e'], o => {
+                            const bb = b7, bc = b7, p = {};
+                            p[bb(0x177)] = d[bc(0x144)];
+                            const q = p;
+                            if (d[bc(0x14c)](d[bb(0x215)], d[bb(0x215)]))
+                                h[bc(0x299) + 'e'][i['id']][bc(0x189)] = (-0x17f + 0x787 * -0x3 + 0x10c * 0x17, j[bb(0x25d)])(k, l['id']);
+                            else {
+                                if (d[bb(0x193)](d[bc(0x1d4)](String, o[bc(0x179)]['id']), d[bc(0x253)](String, m))) {
+                                    if (d[bc(0x14c)](d[bc(0x175)], d[bc(0x175)])) {
+                                        const t = q[bc(0x177)][bc(0x210)]('|');
+                                        let u = 0xf6d + -0x1864 + 0x8f7;
+                                        while (!![]) {
+                                            switch (t[u++]) {
+                                            case '0':
+                                                const w = {};
+                                                w[bb(0x189)] = [], w[bb(0x299) + 'e'] = {}, w[bb(0x25e)] = {}, q[bb(0x184)][r] = w;
+                                                continue;
+                                            case '1':
+                                                z[bb(0x189)][bc(0x23b)](A);
+                                                continue;
+                                            case '2':
+                                                const x = {};
+                                                x[bb(0x189)] = [x['id']], x[bb(0x179)] = y, o[bc(0x299) + 'e'][w['id']] = x;
+                                                continue;
+                                            case '3':
+                                                s = t[bb(0x184)][u];
+                                                continue;
+                                            case '4':
+                                                (0x5 * -0x42b + 0x3d * 0xb + 0x1238, B[bc(0x219)])(C, D[bb(0x1bf)] + (bc(0x1ec) + bb(0x221)));
+                                                continue;
+                                            }
+                                            break;
+                                        }
+                                    } else
+                                        n = o[bb(0x179)];
+                                }
+                            }
+                        });
+                        if ((-0x1a40 + -0x93d + 0x73 * 0x4f, lodash_1[b7(0x216)])(n)) {
+                            if (d[b9(0x14c)](d[b9(0x148)], d[b7(0x148)]))
+                                f['on'](d[b7(0x16b)], () => {
+                                    const bd = b7;
+                                    i[bd(0x18f)](i, j);
+                                });
+                            else
+                                return;
+                        }
+                        h[b7(0x28e)] = n, (-0x2494 + -0x1555 + 0x39e9, Utils_1[b7(0x171)])(k[b7(0x189)], k[b7(0x299) + 'e'], n[b9(0x28b)], d[b7(0x156)], h);
+                    }
+                }
             }
         });
     }, saveChatWindow = d => {
-        const b8 = a9, b9 = a8, e = {};
-        e[b8(0x140)] = b9(0x1a3) + b8(0x16f);
+        const be = a9, bf = a8, e = {};
+        e[be(0x27f)] = function (g, h) {
+            return g < h;
+        }, e[be(0x2b2)] = function (g, h) {
+            return g !== h;
+        }, e[be(0x26d)] = be(0x1ae), e[be(0x165)] = be(0x1d9), e[be(0x257)] = bf(0x1a4), e[be(0x135)] = be(0x208) + bf(0x143);
         const f = e;
-        d['on'](f[b8(0x140)], async g => {
-            const ba = b8, bb = b8, {userId: h} = g, {remove: i} = g, j = await User_1[ba(0x12c)][bb(0x17d)](h);
-            if (j) {
-                if (i) {
-                } else {
+        d['on'](f[be(0x135)], async g => {
+            const bh = be, bi = be, h = {
+                    'TPWYv': function (i, j) {
+                        const bg = b;
+                        return f[bg(0x27f)](i, j);
+                    }
+                };
+            if (f[bh(0x2b2)](f[bi(0x26d)], f[bi(0x165)])) {
+                const {userId: i} = g, {remove: j} = g, k = await User_1[bh(0x138)][bh(0x2be)](i);
+                if (k) {
+                    if (f[bh(0x2b2)](f[bi(0x257)], f[bi(0x257)])) {
+                        const m = {};
+                        m[bi(0x189)] = [i['id']], m[bh(0x179)] = j, g[bh(0x299) + 'e'][h['id']] = m;
+                    } else {
+                        if (j) {
+                        } else {
+                        }
+                    }
                 }
+            } else {
+                if (t[bi(0x25e)][u['id']]) {
+                    const p = K[bh(0x25e)][L['id']][bi(0x189)];
+                    h[bi(0x256)]((0x1dd7 + 0xc * -0x9a + -0x169f, M[bh(0x21a)])(p), -0x1685 + 0x1 * 0x11c9 + 0x4be) ? delete T[bh(0x25e)][U['id']] : V[bi(0x25e)][W['id']][bh(0x189)] = (0x950 + 0x5 * 0xe2 + -0xdba, X[bh(0x25d)])(p, Y['id']);
+                }
+                const n = {};
+                n['id'] = G['id'];
+                const o = (0x691 * -0x3 + 0x2465 + -0x10b2, E[bi(0x1cc)])(F[bi(0x189)], n);
+                H[bh(0x189)] = (-0x1 * -0x13ad + 0xc * 0x27 + -0x1581, I[bi(0x25d)])(J[bh(0x189)], o);
             }
         });
     }, onDisconnect = c => {
-        const bc = a9, bd = a9, d = {
-                'idXZE': bc(0x18c) + bd(0x193),
-                'eSYls': function (e, f) {
-                    return e !== f;
-                },
-                'yCWMt': bc(0x1d8),
-                'VaUNa': bd(0x19d),
-                'GZggS': function (e, f) {
-                    return e < f;
-                },
-                'rWRMX': bc(0x17c),
-                'gGxfZ': function (e, f) {
-                    return e(f);
-                },
-                'jjUEF': function (e, f) {
+        const bj = a8, bk = a9, d = {
+                'qwiob': bj(0x194) + 's',
+                'TQLUj': bj(0x16e) + bk(0x29f),
+                'vOVrJ': bk(0x20d),
+                'VjjIs': function (e, f) {
                     return e === f;
                 },
-                'AGTnG': bc(0x1b1) + bd(0x130),
-                'LhRmJ': function (e, f) {
+                'RFNap': bj(0x18d) + bj(0x124),
+                'lZRkD': bj(0x1d2),
+                'zjuIs': bk(0x2c3),
+                'NQUsO': function (e, f) {
                     return e !== f;
                 },
-                'nTbyG': bd(0x1af),
-                'mTSmz': bc(0x210),
-                'tQOeC': bc(0x20c) + bd(0x200),
-                'MnswS': bd(0x154)
+                'ORaXk': bk(0x122),
+                'KbreT': bj(0x25a),
+                'bpqxU': function (e, f) {
+                    return e !== f;
+                },
+                'hhxiS': bk(0x239),
+                'dkGjP': function (e, f) {
+                    return e < f;
+                },
+                'DGOsB': bk(0x25b),
+                'TstAc': bj(0x23d),
+                'lJMaf': bj(0x285),
+                'vnRPu': bk(0x1d0),
+                'RQbEk': bj(0x1e6),
+                'NvfjM': function (e, f) {
+                    return e === f;
+                },
+                'ulzwq': bj(0x1cf),
+                'oeFjm': bk(0x147),
+                'qDqVi': bk(0x18a),
+                'AKrPs': bj(0x1e8),
+                'edIEF': bk(0x142),
+                'btLWy': function (e, f) {
+                    return e(f);
+                },
+                'JlKpb': function (e, f) {
+                    return e === f;
+                },
+                'hNGoo': bj(0x180) + bk(0x24d),
+                'KMHfK': bk(0x198),
+                'QjSUq': bk(0x1fd) + bj(0x225),
+                'sznAl': bj(0x20f)
             };
-        c['on'](d[bc(0x1a8)], async e => {
-            const be = bc, bf = bd, {user: f} = c[be(0x208)][bf(0x146)], {tenantId: g} = f, h = be(0x161) + '_' + g, j = Index_1[be(0x15d)][h];
-            if (j?.[be(0x1d0) + 'e']) {
-                if (d[be(0x1f8)](d[be(0x16e)], d[bf(0x16e)])) {
-                    const m = {};
-                    return m[bf(0x12c)] = j, g && h[be(0x19e)] ? i : m;
-                } else {
-                    if (j[be(0x1d0) + 'e'][f['id']]) {
-                        if (d[bf(0x1f8)](d[be(0x1a5)], d[be(0x1a5)]))
-                            delete e?.[bf(0x183)][f['id']];
-                        else {
-                            const q = j[be(0x1d0) + 'e'][f['id']][bf(0x16c)];
-                            d[bf(0x1f0)]((-0x10aa + -0x1ff2 + 0x44 * 0xb7, lodash_1[be(0x177)])(q), 0x1e * -0x127 + 0x76f + 0x1b25) ? delete j[bf(0x1d0) + 'e'][f['id']] : j[be(0x1d0) + 'e'][f['id']][be(0x16c)] = (0x502 + -0x237f + 0x1e7d, lodash_1[bf(0x148)])(q, c['id']);
+        c['on'](d[bj(0x284)], async e => {
+            const bl = bk, bm = bj, f = {
+                    'Thbmr': d[bl(0x245)],
+                    'EuanT': d[bl(0x14d)],
+                    'KgERI': d[bm(0x237)],
+                    'mDXCu': function (g, h) {
+                        const bn = bl;
+                        return d[bn(0x29a)](g, h);
+                    },
+                    'mIqqE': d[bl(0x292)]
+                };
+            if (d[bl(0x29a)](d[bl(0x169)], d[bl(0x1fe)]))
+                e[bl(0x2a1)](f[bl(0x298)], f);
+            else {
+                const {user: h} = c[bl(0x13a)][bm(0x187)], {tenantId: j} = h, k = bm(0x24a) + '_' + j, l = Index_1[bl(0x184)][k];
+                if (l?.[bl(0x299) + 'e']) {
+                    if (d[bl(0x1e0)](d[bm(0x186)], d[bl(0x1a7)])) {
+                        if (l[bl(0x299) + 'e'][h['id']]) {
+                            if (d[bl(0x1cd)](d[bm(0x195)], d[bm(0x195)])) {
+                                const r = {};
+                                return r[bl(0x138)] = j, g && h[bm(0x27d)] ? i : r;
+                            } else {
+                                const r = l[bl(0x299) + 'e'][h['id']][bl(0x189)];
+                                if (d[bl(0x1de)]((0x7ef + -0x511 + 0x16f * -0x2, lodash_1[bm(0x21a)])(r), 0x19df + -0x1c27 + -0x24a * -0x1)) {
+                                    if (d[bm(0x1cd)](d[bm(0x1e4)], d[bm(0x1e4)])) {
+                                        const {user: t} = p[bm(0x13a)][bm(0x187)];
+                                        q[bl(0x146)][bm(0x155)](bl(0x19d) + bl(0x223) + t[bm(0x28b)]);
+                                        const {tenantId: u} = t, v = bm(0x24a) + '_' + u;
+                                        let w;
+                                        w = r[bm(0x184)][v];
+                                        w && (w[bl(0x299) + 'e'][t['id']] = {
+                                            'sockets': [C['id']],
+                                            'user': t
+                                        }, w[bl(0x189)][bm(0x23b)](D), (-0xc76 + -0x816 + -0x148c * -0x1, E[bm(0x219)])(F, f[bm(0x162)]));
+                                        if (!w) {
+                                            const x = f[bl(0x1ac)][bl(0x210)]('|');
+                                            let y = -0xfe + 0x25ca + -0x3c * 0x9d;
+                                            while (!![]) {
+                                                switch (x[y++]) {
+                                                case '0':
+                                                    w = H[bm(0x184)][v];
+                                                    continue;
+                                                case '1':
+                                                    w[bl(0x189)][bl(0x23b)](J);
+                                                    continue;
+                                                case '2':
+                                                    const z = {};
+                                                    z[bl(0x189)] = [], z[bm(0x299) + 'e'] = {}, z[bl(0x25e)] = {}, G[bm(0x184)][v] = z;
+                                                    continue;
+                                                case '3':
+                                                    w[bl(0x299) + 'e'][t['id']] = {
+                                                        'sockets': [I['id']],
+                                                        'user': t
+                                                    };
+                                                    continue;
+                                                case '4':
+                                                    (0x5 * 0x583 + 0xec6 + -0x2a55 * 0x1, K[bm(0x219)])(L, t[bl(0x1bf)] + (bm(0x1ec) + bm(0x221)));
+                                                    continue;
+                                                }
+                                                break;
+                                            }
+                                        }
+                                    } else
+                                        delete l[bl(0x299) + 'e'][h['id']];
+                                } else {
+                                    if (d[bm(0x29a)](d[bm(0x250)], d[bm(0x211)])) {
+                                        const u = {};
+                                        u[bm(0x189)] = [], u[bm(0x299) + 'e'] = {}, u[bm(0x25e)] = {}, j[bl(0x184)][k] = u, l = m[bl(0x184)][n], p[bl(0x25e)][bl(0x23b)](p['id']);
+                                    } else
+                                        l[bm(0x299) + 'e'][h['id']][bl(0x189)] = (-0x1 * 0x1ca2 + -0xcc9 + 0x296b, lodash_1[bl(0x25d)])(r, c['id']);
+                                }
+                            }
                         }
+                        const n = {};
+                        n['id'] = c['id'];
+                        const p = (-0x10f6 + 0x34b * -0xb + 0x23 * 0x185, lodash_1[bm(0x1cc)])(l[bl(0x189)], n);
+                        l[bl(0x189)] = (-0x1f3 * -0x9 + -0x3 * 0xa9 + -0xa6 * 0x18, lodash_1[bm(0x25d)])(l[bl(0x189)], p);
+                    } else {
+                        const v = (-0x2003 + -0x147b + -0x347e * -0x1, i[bm(0x13f)])(j[bm(0x189)], w => {
+                            const bo = bm;
+                            return f[bo(0x16f)](w['id'], o);
+                        });
+                        v && ((o[bl(0x283)][bl(0x220)] || p[bl(0x283)][bm(0x17e)]) && v[bl(0x2a1)](d[bl(0x245)], r));
                     }
-                    const m = {};
-                    m['id'] = c['id'];
-                    const n = (-0x130c + -0xfd0 * 0x1 + 0x22dc, lodash_1[bf(0x1a7)])(j[be(0x16c)], m);
-                    j[bf(0x16c)] = (0x5d7 * 0x4 + -0x2af * 0x1 + 0x1 * -0x14ad, lodash_1[be(0x148)])(j[bf(0x16c)], n);
                 }
-            }
-            if (j?.[be(0x183)]) {
-                if (j[be(0x183)][f['id']]) {
-                    const t = j[bf(0x183)][f['id']][be(0x16c)];
-                    d[bf(0x1f0)]((0x83 * 0x2e + 0xc45 * 0x3 + -0x3c59, lodash_1[be(0x177)])(t), 0xa8e + 0x1eb5 + -0x2941) ? delete j[be(0x183)][f['id']] : j[be(0x183)][f['id']][be(0x16c)] = (0x22c1 + -0x83a + -0x1a87, lodash_1[be(0x148)])(t, c['id']);
+                if (l?.[bl(0x25e)]) {
+                    if (d[bm(0x29a)](d[bm(0x2a6)], d[bm(0x2a6)])) {
+                        if (l[bl(0x25e)][h['id']]) {
+                            if (d[bl(0x29a)](d[bl(0x151)], d[bm(0x151)])) {
+                                const x = l[bm(0x25e)][h['id']][bm(0x189)];
+                                if (d[bl(0x1de)]((-0xe * 0x283 + 0x3 * -0x51a + 0x14 * 0x286, lodash_1[bm(0x21a)])(x), 0x177e + -0xfd9 * -0x2 + 0x7 * -0x7e2)) {
+                                    if (d[bl(0x150)](d[bm(0x145)], d[bm(0x227)]))
+                                        return;
+                                    else
+                                        delete l[bl(0x25e)][h['id']];
+                                } else
+                                    d[bm(0x1cd)](d[bl(0x238)], d[bl(0x236)]) ? l[bm(0x25e)][h['id']][bl(0x189)] = (0x23af + -0x100a + -0x13a5, lodash_1[bl(0x25d)])(x, c['id']) : v[bl(0x14a)] = 's';
+                            } else
+                                h[bl(0x25e)][w['id']][bl(0x189)] = (-0xbf * 0x23 + -0x1 * 0x30 + 0x1a4d, j[bl(0x25d)])(k, l['id']);
+                        }
+                        const v = {};
+                        v['id'] = c['id'];
+                        const w = (-0x1b96 + -0xf97 + 0x1 * 0x2b2d, lodash_1[bm(0x1cc)])(l[bl(0x189)], v);
+                        l[bl(0x189)] = (-0xd61 + 0xf7 * 0x3 + 0xa7c, lodash_1[bm(0x25d)])(l[bm(0x189)], w);
+                    } else {
+                        const {user: C} = g[bm(0x13a)][bl(0x187)], D = h[bm(0x138)][bm(0x2be)](C['id']);
+                        (-0x1 * -0x2704 + 0x2610 + 0x1 * -0x4d14, i[bl(0x219)])(j, f[bm(0x15d)], D);
+                    }
                 }
-                const r = {};
-                r['id'] = c['id'];
-                const s = (0x14d5 * 0x1 + -0x2360 + 0xe8b, lodash_1[bf(0x1a7)])(j[be(0x16c)], r);
-                j[bf(0x16c)] = (0x2353 * -0x1 + -0x1 * 0x1215 + 0x3568, lodash_1[bf(0x148)])(j[bf(0x16c)], s);
-            }
-            const k = await User_1[bf(0x12c)][be(0x17d)](f['id']);
-            k?.[bf(0x197)]({
-                'status': d[be(0x1da)],
-                'lastOnline': new Date()
-            }), d[bf(0x202)](UpdateOnlineBubbles, c);
-            if (d[be(0x1e1)](e, d[bf(0x1c9)])) {
-                if (d[bf(0x209)](d[be(0x13c)], d[bf(0x129)]))
-                    e = d[bf(0x1db)];
-                else {
-                    const v = {};
-                    v[bf(0x16c)] = [m['id']], v[be(0x20b)] = n, k[be(0x1d0) + 'e'][l['id']] = v, o[be(0x16c)][be(0x1dc)](p), (0x15c9 + 0x2 * 0x9ad + -0x2923, q[bf(0x207)])(r, d[bf(0x175)]);
+                const m = await User_1[bl(0x138)][bl(0x2be)](h['id']);
+                m?.[bm(0x22a)]({
+                    'status': d[bm(0x26e)],
+                    'lastOnline': new Date()
+                }), d[bl(0x1b7)](UpdateOnlineBubbles, c);
+                if (d[bl(0x229)](e, d[bm(0x1ab)])) {
+                    if (d[bl(0x1e0)](d[bm(0x1c5)], d[bl(0x1c5)]))
+                        return;
+                    else
+                        e = d[bl(0x176)];
                 }
+                logger_1[bm(0x146)][bl(0x1e2)](bm(0x295) + bl(0x23f) + e + bm(0x1f3) + h[bl(0x28b)] + bm(0x26c) + c['id']);
             }
-            logger_1[bf(0x1e4)][be(0x138)](be(0x182) + be(0x20e) + e + bf(0x14f) + f[bf(0x173)] + bf(0x1f5) + c['id']);
         });
     };
-events[a9(0x12f) + a8(0x188)] = onSetUserIdle, events[a9(0x16d) + a8(0x16a)] = onSetUserActive, events[a9(0x143) + a8(0x1c4)] = onUpdateUsers, events[a9(0x128) + a8(0x1c2)] = spawnChatWindow, events[a9(0x1ff) + a9(0x19a)] = onChatMessage, events[a8(0x1d5) + 'ng'] = onChatTyping, events[a8(0x132) + a9(0x15b)] = onChatStopTyping, events[a8(0x1a3) + a8(0x16f)] = saveChatWindow, events[a9(0x1d3) + 'ct'] = onDisconnect, events[a9(0x214) + a9(0x155)] = c => {
-    const bg = a8, bh = a8, d = {
-            'vgcZR': function (f, g) {
+events[a9(0x12d) + a9(0x1be)] = onSetUserIdle, events[a9(0x2b3) + a9(0x131)] = onSetUserActive, events[a8(0x149) + a9(0x28f)] = onUpdateUsers, events[a9(0x18d) + a9(0x124)] = spawnChatWindow, events[a9(0x159) + a9(0x1c7)] = onChatMessage, events[a8(0x136) + 'ng'] = onChatTyping, events[a9(0x26f) + a8(0x173)] = onChatStopTyping, events[a9(0x208) + a9(0x143)] = saveChatWindow, events[a9(0x181) + 'ct'] = onDisconnect, events[a9(0x19f) + a9(0x1b1)] = c => {
+    const bp = a9, bq = a9, d = {
+            'XMQBN': function (f, g) {
+                return f < g;
+            },
+            'SesMJ': function (f, g) {
+                return f !== g;
+            },
+            'qvYUB': bp(0x247),
+            'JlIQI': bp(0x12e),
+            'syPdI': function (f, g) {
                 return f(g);
             }
-        }, {user: e} = c[bg(0x208)][bh(0x146)];
-    c['on'](e[bh(0x142)] + (bh(0x1bb) + bh(0x133) + bh(0x156)), () => {
-        const bi = bh, bj = bg;
-        d[bi(0x124)](UpdateOnlineBubbles, e[bi(0x142)]);
-    });
-}, events[a9(0x141) + a8(0x176)] = c => {
-    const bk = a8, bl = a8, d = {
-            'pleii': function (e, f) {
-                return e(f);
-            },
-            'sioxp': function (e, f) {
-                return e === f;
-            },
-            'czqCs': bk(0x20f),
-            'BBRME': function (e, f) {
-                return e(f);
-            },
-            'tSYUg': bl(0x141) + bl(0x176)
-        };
-    c['on'](d[bk(0x149)], () => {
-        const bn = bk, bo = bk, e = {
-                'oABqn': function (f, g) {
-                    const bm = b;
-                    return d[bm(0x18a)](f, g);
+        }, {user: e} = c[bq(0x13a)][bp(0x187)];
+    c['on'](e[bq(0x1bf)] + (bp(0x1ef) + bq(0x188) + bq(0x12a)), () => {
+        const bs = bq, bt = bp, f = {
+                'WcHvN': function (g, h) {
+                    const br = b;
+                    return d[br(0x2c1)](g, h);
                 }
             };
-        d[bn(0x153)](d[bn(0x18b)], d[bn(0x18b)]) ? d[bn(0x1d1)](SpawnOpenChatWindows, c) : e[bn(0x14b)](e, f);
+        if (d[bs(0x22c)](d[bt(0x158)], d[bt(0x25f)]))
+            d[bs(0x1a9)](UpdateOnlineBubbles, e[bt(0x1bf)]);
+        else {
+            if (t[bt(0x299) + 'e'][u['id']]) {
+                const j = K[bt(0x299) + 'e'][L['id']][bt(0x189)];
+                f[bt(0x17c)]((0xe0b + -0x1877 + -0x1d * -0x5c, M[bt(0x21a)])(j), -0xa * -0x2d1 + -0x401 * -0x1 + -0x2029) ? delete T[bt(0x299) + 'e'][U['id']] : V[bs(0x299) + 'e'][W['id']][bs(0x189)] = (-0x2 * 0xc15 + -0x21 + 0x184b, X[bt(0x25d)])(j, Y['id']);
+            }
+            const h = {};
+            h['id'] = G['id'];
+            const i = (0x1f85 + 0x377 * 0x2 + -0x2673, E[bs(0x1cc)])(F[bt(0x189)], h);
+            H[bt(0x189)] = (0xe25 + -0x23b2 + 0x158d, I[bt(0x25d)])(J[bt(0x189)], i);
+        }
+    });
+}, events[a9(0x140) + a8(0x21f)] = c => {
+    const bu = a8, bv = a8, d = {
+            'TdAaC': function (e, f) {
+                return e < f;
+            },
+            'fbXyW': function (e, f) {
+                return e === f;
+            },
+            'rVvAN': bu(0x1c0),
+            'cdQMl': bu(0x1db),
+            'gGsFy': function (e, f) {
+                return e(f);
+            },
+            'fIGac': bu(0x140) + bv(0x21f)
+        };
+    c['on'](d[bv(0x2af)], () => {
+        const bw = bv, bx = bv;
+        if (d[bw(0x24f)](d[bw(0x1bd)], d[bx(0x22e)])) {
+            const f = l[bw(0x299) + 'e'][m['id']][bw(0x189)];
+            d[bx(0x252)]((0x76 * 0x3 + -0x1 * -0x1acb + 0x1c2d * -0x1, n[bw(0x21a)])(f), 0xca * -0x1f + -0x58 * -0x50 + -0x308) ? delete u[bx(0x299) + 'e'][v['id']] : w[bw(0x299) + 'e'][x['id']][bw(0x189)] = (0x199 * 0x17 + -0xffe + -0x14c1, y[bw(0x25d)])(f, z['id']);
+        } else
+            d[bw(0x276)](SpawnOpenChatWindows, c);
     });
 };
 function register(c) {
-    const bp = a8, bq = a8, d = {
-            'ysIES': bp(0x1cc) + bp(0x135) + bq(0x13f),
-            'LtweP': function (g, h) {
-                return g(h);
+    const by = a8, bz = a9, d = {
+            'atrCL': function (e, f) {
+                return e === f;
+            },
+            'OCRoM': by(0x2bc) + bz(0x15e) + by(0x281),
+            'TxdRj': function (e, f) {
+                return e(f);
+            },
+            'rlTeR': function (e, f) {
+                return e !== f;
+            },
+            'tFIyR': by(0x1ba),
+            'DsWZw': bz(0x29c),
+            'dtrbx': by(0x1f0),
+            'YtQWo': bz(0x28d)
+        };
+    if (!c[by(0x13a)]?.[by(0x187)]?.[by(0x1bf)]) {
+        if (d[by(0x2b8)](d[by(0x26b)], d[bz(0x153)]))
+            return;
+        else
+            return d[bz(0x154)](e['id'], f);
+    }
+    events[bz(0x12d) + bz(0x1be)](c), events[by(0x2b3) + by(0x131)](c), events[by(0x149) + bz(0x28f)](c), events[bz(0x19f) + bz(0x1b1)](c), events[bz(0x18d) + by(0x124)](c), events[by(0x140) + bz(0x21f)](c), events[by(0x159) + by(0x1c7)](c), events[by(0x136) + 'ng'](c), events[by(0x26f) + by(0x173)](c), events[by(0x208) + bz(0x143)](c), events[bz(0x181) + 'ct'](c);
+    if (c[by(0x13a)][by(0x187)][by(0x179)]['id']) {
+        if (d[by(0x154)](d[bz(0x270)], d[by(0x232)])) {
+            const g = d[bz(0x1f8)][bz(0x210)]('|');
+            let h = 0x9c2 + -0x892 + -0x98 * 0x2;
+            while (!![]) {
+                switch (g[h++]) {
+                case '0':
+                    D[bz(0x12d) + by(0x1be)](E);
+                    continue;
+                case '1':
+                    if (!C[bz(0x13a)]?.[bz(0x187)]?.[by(0x1bf)])
+                        return;
+                    continue;
+                case '2':
+                    P[by(0x159) + bz(0x1c7)](Q);
+                    continue;
+                case '3':
+                    H[bz(0x149) + bz(0x28f)](I);
+                    continue;
+                case '4':
+                    L[bz(0x18d) + by(0x124)](M);
+                    continue;
+                case '5':
+                    R[bz(0x136) + 'ng'](S);
+                    continue;
+                case '6':
+                    F[bz(0x2b3) + bz(0x131)](G);
+                    continue;
+                case '7':
+                    V[by(0x208) + by(0x143)](W);
+                    continue;
+                case '8':
+                    X[bz(0x181) + 'ct'](Y);
+                    continue;
+                case '9':
+                    N[bz(0x140) + by(0x21f)](O);
+                    continue;
+                case '10':
+                    J[by(0x19f) + by(0x1b1)](K);
+                    continue;
+                case '11':
+                    T[by(0x26f) + by(0x173)](U);
+                    continue;
+                case '12':
+                    Z[by(0x13a)][bz(0x187)][by(0x179)]['id'] && d[bz(0x2a4)](a2, a3);
+                    continue;
+                }
+                break;
             }
-        }, e = d[bq(0x164)][bp(0x17a)]('|');
-    let f = 0x5ba + -0x2215 + 0x1c5b;
-    while (!![]) {
-        switch (e[f++]) {
-        case '0':
-            events[bp(0x1a3) + bq(0x16f)](c);
-            continue;
-        case '1':
-            events[bq(0x132) + bq(0x15b)](c);
-            continue;
-        case '2':
-            events[bp(0x214) + bp(0x155)](c);
-            continue;
-        case '3':
-            events[bp(0x1d5) + 'ng'](c);
-            continue;
-        case '4':
-            c[bp(0x208)][bq(0x146)][bq(0x20b)]['id'] && d[bp(0x181)](JoinChatServer, c);
-            continue;
-        case '5':
-            events[bq(0x128) + bp(0x1c2)](c);
-            continue;
-        case '6':
-            events[bp(0x143) + bq(0x1c4)](c);
-            continue;
-        case '7':
-            events[bq(0x1ff) + bq(0x19a)](c);
-            continue;
-        case '8':
-            events[bq(0x16d) + bq(0x16a)](c);
-            continue;
-        case '9':
-            if (!c[bp(0x208)]?.[bp(0x146)]?.[bp(0x142)])
-                return;
-            continue;
-        case '10':
-            events[bq(0x1d3) + 'ct'](c);
-            continue;
-        case '11':
-            events[bp(0x12f) + bp(0x188)](c);
-            continue;
-        case '12':
-            events[bq(0x141) + bq(0x176)](c);
-            continue;
-        }
-        break;
+        } else
+            d[by(0x2a4)](JoinChatServer, c);
     }
 }
-function a() {
-    const bt = [
-        'email',
-        'bIsrB',
-        './Utils',
-        'sioxp',
-        'disconnect',
-        'neBubbles',
-        'bbles',
-        'BLRnr',
-        'chatStopTy',
-        'TPXkG',
-        'SDWgF',
-        'Typing',
-        'AMuSu',
-        'shared',
-        'IWBuN',
-        'GZdxU',
-        'BZxww',
-        'socketData',
-        'DvQva',
-        'toUser',
-        'ysIES',
-        'zKLqs',
-        'sortBy',
-        'xvjno',
-        '2|3|1|0|4',
-        '5sqpFKu',
-        'ctive',
-        'NRuzb',
-        'sockets',
-        'onSetUserA',
-        'yCWMt',
-        'ndow',
-        'defineProp',
-        'attributes',
-        'tive',
-        'name',
-        'yhQjW',
-        'idXZE',
-        'tWindows',
-        'size',
-        'ARIAD',
-        'eventLoop',
-        'split',
-        'rjKgs',
-        'offline',
-        'findByPk',
-        ':setUserAc',
-        'eCivJ',
-        'qhdiq',
-        'LtweP',
-        'User\x20disco',
-        'idleUsers',
-        'GpLeD',
-        'PINOB',
-        'TZZCX',
-        'AXEkK',
-        'dle',
-        'nVdIn',
-        'pleii',
-        'czqCs',
-        'joinSucces',
-        'isNull',
-        '../../util',
-        'sortedUser',
-        'QCuoH',
-        'ssfully',
-        'erty',
-        'sfully',
-        'YqXui',
-        'UtTuW',
-        'gdpYq',
-        'update',
-        'lodash',
-        'role',
-        'age',
-        'UXNMQ',
-        'TVxyy',
-        'jSXQK',
-        '__esModule',
-        '1059264aoMYTp',
-        'XVgnm',
-        'sODiD',
-        'forEach',
-        'saveChatWi',
-        'ping',
-        'VaUNa',
-        'jbmxl',
-        'findKey',
-        'MnswS',
-        'uJFxK',
-        's/logger',
-        'sortByKeys',
-        'log',
-        'ildZX',
-        'rpPgO',
-        'Tpbxf',
-        'rCfhB',
-        'transport\x20',
-        'boGuX',
-        'emit',
-        'ZGFDB',
-        'jSyBv',
-        'PMwtn',
-        'OhvUb',
-        'kwiSR',
-        'onnectedCl',
-        'SbQmB',
-        ':chat:upda',
-        'OmUDs',
-        'rLeNL',
-        'RosUH',
-        'isAgent',
-        'LkYtn',
-        'ITkus',
-        'indow',
-        '904095IhicEA',
-        'ers',
-        'AAdaG',
-        'jEtjT',
-        'pvUuj',
-        'List',
-        'AGTnG',
-        'sendToAllC',
-        'chatMessag',
-        '9|11|8|6|2',
-        'jLVsv',
-        'FMkcg',
-        'gUnSu',
-        'usersOnlin',
-        'BBRME',
-        'tWzJv',
-        'onDisconne',
-        'toPairs',
-        'onChatTypi',
-        'ezWNx',
-        'kFpuw',
-        'PFZRu',
-        'events',
-        'rWRMX',
-        'tQOeC',
-        'push',
-        'WvXDV',
-        'hqqEO',
-        'FROM',
-        'length',
-        'jjUEF',
-        '23266056bUvMQz',
-        'xoWnA',
-        'logger',
-        'EqTzU',
-        'BKuKb',
-        ':joinSucce',
-        'JUQGZ',
-        'iOIOK',
-        'qxsnB',
-        'MKFub',
-        'yFLwi',
-        'IQVjE',
-        '7984074nlbNzr',
-        'PdJCo',
-        'GZggS',
-        'OuUUZ',
-        'updateUser',
-        'yRaOF',
-        '__importDe',
-        '\x20-\x20',
-        'zVZJR',
-        'find',
-        'eSYls',
-        './Index',
-        'BoPMm',
-        'GXvdm',
-        'LNoIY',
-        'ients',
-        'rMWEC',
-        'onChatMess',
-        'minated',
-        'isAdmin',
-        'gGxfZ',
-        'fault',
-        '797418kkrzpK',
-        'fromUser',
-        'ls/User',
-        'sendToSelf',
-        'handshake',
-        'LhRmJ',
-        'ivbhd',
-        'user',
-        'client\x20ter',
-        ':setUserId',
-        'nnected\x20(',
-        'qUFqW',
-        'sFHhA',
-        'vLwNu',
-        'rver\x20USER\x20',
-        '2789078JlmFdf',
-        'updateOnli',
-        'jMFDz',
-        'fromPairs',
-        'uuryz',
-        'JWdbj',
-        '../../mode',
-        'username',
-        'vgcZR',
-        'value',
-        'MPDpK',
-        'profile',
-        'spawnChatW',
-        'mTSmz',
-        'sortedIdle',
-        'type',
-        'default',
-        'TCYwL',
-        'NhVjZ',
-        'onSetUserI',
-        'error',
-        'lAsPg',
-        'onChatStop',
-        'teOnlineBu',
-        'ZpZsM',
-        '|5|12|7|3|',
-        'RNJte',
-        'joinChatSe',
-        'debug',
-        'vlryA',
-        'register',
-        'chatTyping',
-        'nTbyG',
-        'mZJSO',
-        'ViYVw',
-        '1|0|10|4',
-        'Odbpg',
-        'getOpenCha',
-        'tenantId',
-        'onUpdateUs',
-        'ZEYOx',
-        '3072304InMMHQ',
-        'auth',
-        'pfbjT',
-        'without',
-        'tSYUg',
-        'sendToUser',
-        'oABqn',
-        'info',
-        'QkTph',
-        'rPIDW',
-        '):\x20'
-    ];
-    a = function () {
-        return bt;
-    };
-    return a();
-}
 const eventLoop = c => {
-        const br = a8, bs = a9, d = {
-                'UtTuW': function (e, f) {
+        const bA = a8, bB = a8, d = {
+                'YjdJe': function (e, f) {
                     return e(f);
                 }
             };
-        d[br(0x195)](UpdateUsers, c), d[bs(0x195)](UpdateOnlineBubbles, c);
+        d[bA(0x19e)](UpdateUsers, c), d[bA(0x19e)](UpdateOnlineBubbles, c);
     }, a5 = {};
-a5[a8(0x1d9)] = events, a5[a9(0x179)] = eventLoop, a5[a8(0x13a)] = register;
+function a() {
+    const bC = [
+        '956501OYqUpb',
+        'gRyrj',
+        'XMQBN',
+        'AfdVn',
+        'OHZkg',
+        'ESunN',
+        'kbUvm',
+        'aWidd',
+        'QvafR',
+        'indow',
+        'hyaAX',
+        'iWYTt',
+        'MWudv',
+        'GDSPr',
+        'yNvzh',
+        'bbles',
+        'FPPlZ',
+        'XIdod',
+        'onSetUserI',
+        'QifsW',
+        'lodash',
+        'aJXsN',
+        'ctive',
+        'iBouR',
+        'pOoyd',
+        'vHBgL',
+        'umZyM',
+        'onChatTypi',
+        'rhSmr',
+        'default',
+        'sortedIdle',
+        'handshake',
+        'lFhKi',
+        ':setUserAc',
+        'sortedUser',
+        'ZPKyE',
+        'find',
+        'getOpenCha',
+        'jLEAF',
+        'offline',
+        'ndow',
+        'SzrSD',
+        'ulzwq',
+        'logger',
+        'DsfrN',
+        'Nsymr',
+        'onUpdateUs',
+        'type',
+        'UqbjC',
+        'NJUGk',
+        'TQLUj',
+        'gHudn',
+        'MwoCE',
+        'NvfjM',
+        'RQbEk',
+        'IwTzZ',
+        'DsWZw',
+        'atrCL',
+        'info',
+        'oNLkM',
+        'qsxBY',
+        'qvYUB',
+        'onChatMess',
+        'PHyiS',
+        'chatMessag',
+        'ZokhT',
+        'mIqqE',
+        '|4|9|2|5|1',
+        'NtBUQ',
+        'macGj',
+        'tKpRT',
+        'EuanT',
+        'edzjz',
+        'Abpil',
+        'WsJst',
+        'EpLTd',
+        'lZaNt',
+        'rXwOP',
+        'lZRkD',
+        '../../mode',
+        'RmhgU',
+        'sendToAllC',
+        'wXlsl',
+        'joinSucces',
+        'mDXCu',
+        '__importDe',
+        'sendToUser',
+        'xvVhG',
+        'Typing',
+        'wLfJR',
+        'vQEcq',
+        'QjSUq',
+        'DrMsX',
+        'wkNHm',
+        'user',
+        'VzPdL',
+        'AOKwj',
+        'WcHvN',
+        'NduFi',
+        'isAgent',
+        'onnectedCl',
+        'transport\x20',
+        'onDisconne',
+        'chatStopTy',
+        'dOKHB',
+        'shared',
+        './Utils',
+        'ORaXk',
+        'auth',
+        'teOnlineBu',
+        'sockets',
+        'lsnAe',
+        'DsgDo',
+        'yxFGN',
+        'spawnChatW',
+        'eventLoop',
+        'rpjmQ',
+        'YGJpC',
+        'PikVo',
+        '5fnvEke',
+        'CNaUZ',
+        'updateUser',
+        'hhxiS',
+        'bugyU',
+        'NHadj',
+        'UYgIq',
+        'FROM',
+        'ajkiZ',
+        'vGGQy',
+        'cpzWJ',
+        'joinChatSe',
+        'YjdJe',
+        'updateOnli',
+        'VnFQT',
+        'dsRFH',
+        'sortByKeys',
+        'rcrpu',
+        'OWTfc',
+        'iRRTQ',
+        'wLKOA',
+        'KbreT',
+        'value',
+        'syPdI',
+        'PYbpd',
+        'hNGoo',
+        'KgERI',
+        'kVSos',
+        'nUAQh',
+        'PfRKp',
+        '6261766QoLWjv',
+        'neBubbles',
+        'XYEwc',
+        'cEvNh',
+        '1|3|2|4|0',
+        'zuGDQ',
+        'JPZNs',
+        'btLWy',
+        'EJQAu',
+        'ZYmjQ',
+        'LbPwL',
+        'ients',
+        'eoBhW',
+        'rVvAN',
+        'dle',
+        'tenantId',
+        'jREqI',
+        'jXAWd',
+        'NKePE',
+        'nxHmP',
+        'AsNjT',
+        'KMHfK',
+        'XrRHP',
+        'age',
+        'fault',
+        's/logger',
+        'iCUHM',
+        'ItdqT',
+        'findKey',
+        'bpqxU',
+        'NWbKO',
+        'gTNHg',
+        'QkIWx',
+        'Hhslw',
+        'uzDCZ',
+        'GntCt',
+        'qTAOw',
+        'nFEna',
+        '2159460BrHcAO',
+        'CZvzU',
+        'MmFwb',
+        'fJHFx',
+        'attributes',
+        'RWSaj',
+        'Homsp',
+        'aWnmq',
+        'dkGjP',
+        'PGmZL',
+        'NQUsO',
+        'zYwJq',
+        'debug',
+        'TEnSh',
+        'DGOsB',
+        'vqYHL',
+        'obtwT',
+        'tive',
+        'zAtSW',
+        'fKAtZ',
+        'eVkQM',
+        'KykvT',
+        ':joinSucce',
+        'Nfkcs',
+        'rHTcE',
+        ':chat:upda',
+        'PEQfy',
+        'xnarz',
+        'lwMoT',
+        '):\x20',
+        'mQmgP',
+        'LBuLo',
+        'WGxrK',
+        'goBoC',
+        'OCRoM',
+        'DrupN',
+        'fromPairs',
+        'pmTAe',
+        '865428iYmMfv',
+        'client\x20ter',
+        'zjuIs',
+        'UgpPr',
+        'vTHEj',
+        'vQJdL',
+        'List',
+        'ping',
+        'UcKrX',
+        'osaUM',
+        'DRAEt',
+        'fTAuJ',
+        'saveChatWi',
+        'gDHxG',
+        'MjkIm',
+        'GjsYg',
+        'NrOvz',
+        '2|0|3|1|4',
+        'ls/User',
+        'disconnect',
+        'split',
+        'lJMaf',
+        'erty',
+        'IzVpL',
+        'CdVTV',
+        'jbOTI',
+        'isNull',
+        'YDSUn',
+        ':setUserId',
+        'sendToSelf',
+        'size',
+        'xYKfU',
+        'rNCUm',
+        './Index',
+        'woXbK',
+        'tWindows',
+        'isAdmin',
+        'ssfully',
+        'iKjmL',
+        'rver\x20USER\x20',
+        '1208320HRKdWb',
+        'minated',
+        'PctTj',
+        'oeFjm',
+        'tFmIm',
+        'JlKpb',
+        'update',
+        'OlNAU',
+        'SesMJ',
+        'ZSIkV',
+        'cdQMl',
+        'LkyZe',
+        'OSlCe',
+        'foozh',
+        'YtQWo',
+        'MqnHB',
+        'tgSag',
+        'nLKIz',
+        'AKrPs',
+        'vOVrJ',
+        'qDqVi',
+        'objLi',
+        'JTKXb',
+        'push',
+        'ArjkZ',
+        'xcFwW',
+        'length',
+        'nnected\x20(',
+        'bWgbU',
+        'jVDYn',
+        'defineProp',
+        'forEach',
+        'email',
+        'qwiob',
+        'FaAnd',
+        'bsUXx',
+        'bkYIu',
+        'delcO',
+        'socketData',
+        'pJfPo',
+        'nZzTW',
+        'error',
+        'YntOu',
+        'fbXyW',
+        'TstAc',
+        'plTEG',
+        'TdAaC',
+        'DOati',
+        'AxzEf',
+        'OjbDK',
+        'TPWYv',
+        'nLFDS',
+        'peCAe',
+        'username',
+        'kWFSy',
+        'SnnJa',
+        'KnGaV',
+        'without',
+        'idleUsers',
+        'JlIQI',
+        'MjCTU',
+        'Cuixz',
+        'bzoIg',
+        'mVFIx',
+        'kbPWt',
+        'ybLtL',
+        'log',
+        'oiSOO',
+        'cMeji',
+        'DBSRg',
+        'sortBy',
+        'tFIyR',
+        '\x20-\x20',
+        'NXBaK',
+        'edIEF',
+        'onChatStop',
+        'dtrbx',
+        'chatTyping',
+        'hDMhG',
+        'DrCiS',
+        'HVXvK',
+        'ywkvv',
+        'gGsFy',
+        'QKzqg',
+        'LsrJT',
+        'profile',
+        'vFEeE',
+        '0|3|2|1|4',
+        'toPairs',
+        '__esModule',
+        'hDZfH',
+        'IXyKB',
+        'hzwbN',
+        '1|7|8|12',
+        'PGNGQ',
+        'role',
+        'sznAl',
+        'LcSSM',
+        'iYvJC',
+        'Cifpi',
+        'azsoY',
+        'wwXER',
+        'events',
+        'name',
+        'OAQiD',
+        'JiOLs',
+        'toUser',
+        'ers',
+        'tnzlq',
+        'XxESD',
+        'RFNap',
+        'jKhhm',
+        'igphH',
+        'User\x20disco',
+        'nQlFS',
+        'DJfUp',
+        'Thbmr',
+        'usersOnlin',
+        'VjjIs',
+        'pddGj',
+        'UTUEh',
+        'register',
+        'RQbXT',
+        'sfully',
+        'bfPqR',
+        'emit',
+        'sEhhL',
+        'QqrbF',
+        'TxdRj',
+        'BKmIn',
+        'vnRPu',
+        'ZUlSj',
+        'merQz',
+        'YuCeb',
+        'fromUser',
+        'JGgeV',
+        'NSdDC',
+        'iNkzl',
+        'NiREW',
+        'fIGac',
+        'sAsJG',
+        '3295092ASXEee',
+        'PsXlM',
+        'onSetUserA',
+        '8336992qxMriM',
+        'RkZrx',
+        'JczlT',
+        'OqDDV',
+        'rlTeR',
+        'hflqd',
+        'ERtHF',
+        'xzEAO',
+        '1|0|6|3|10',
+        '../../util',
+        'findByPk'
+    ];
+    a = function () {
+        return bC;
+    };
+    return a();
+}
+a5[a8(0x28a)] = events, a5[a8(0x18e)] = eventLoop, a5[a8(0x29d)] = register;
 const chat = a5;
-exports[a9(0x12c)] = chat;
+exports[a9(0x138)] = chat;

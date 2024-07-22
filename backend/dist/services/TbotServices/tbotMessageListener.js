@@ -4,7 +4,7 @@ const u = b, v = b;
     const s = b, t = b, e = c();
     while (!![]) {
         try {
-            const f = -parseInt(s(0x1e1)) / (-0x1cdf + 0x1468 + 0x878) + -parseInt(s(0x1d8)) / (-0x9 * -0x37c + 0x1c35 + 0x4f * -0xc1) * (parseInt(t(0x1e2)) / (0xf9 * 0x17 + 0x1807 * 0x1 + -0x2e63)) + parseInt(s(0x1cc)) / (-0x14d2 + -0xa3f + 0x1f15) + parseInt(t(0x1cd)) / (-0x5b3 * 0x2 + 0x91f + -0x24c * -0x1) * (-parseInt(t(0x1d2)) / (0x1f80 + 0x1294 + -0x320e)) + parseInt(t(0x1c8)) / (0x221a + -0x2 * 0x389 + 0x1 * -0x1b01) + parseInt(t(0x1d3)) / (0x515 * -0x4 + 0xc * 0xca + 0xae4) + parseInt(s(0x1ce)) / (0x4 * -0x57e + 0x2f * -0x5b + 0x26b6) * (parseInt(s(0x1de)) / (0x61 * 0x24 + 0x1ea * 0x13 + -0x4e * 0xa4));
+            const f = parseInt(s(0x1eb)) / (0xbf + 0x10fd + 0x59 * -0x33) + -parseInt(s(0x1f3)) / (0x51 * -0xd + 0xbd8 + -0x7b9) + parseInt(s(0x1e8)) / (-0x22fa + 0x1d53 + -0x32 * -0x1d) + parseInt(s(0x1f2)) / (-0x7c4 * 0x3 + 0xcc7 + 0xa89) * (parseInt(t(0x1df)) / (0x1b7c + 0x247 + -0x1b * 0x11a)) + parseInt(s(0x1e2)) / (0xc61 * -0x1 + 0xad3 * 0x2 + 0x3 * -0x315) + parseInt(t(0x1dd)) / (-0x26c7 + -0xdae + -0x1a3e * -0x2) + -parseInt(t(0x1e0)) / (-0xac1 + -0x1 * 0xa10 + -0x251 * -0x9);
             if (f === d)
                 break;
             else
@@ -13,66 +13,64 @@ const u = b, v = b;
             e['push'](e['shift']());
         }
     }
-}(a, -0x2fece + 0x1f63 * -0x1d + 0x9785d));
-var __importDefault = this && this[u(0x1d7) + u(0x1df)] || function (c) {
-    const w = u;
-    return c && c[w(0x1d9)] ? c : { 'default': c };
+}(a, 0x2bc2f * 0x1 + 0x354ea + -0x2f90c));
+var __importDefault = this && this[u(0x1ee) + u(0x1f5)] || function (c) {
+    const w = v;
+    return c && c[w(0x1e6)] ? c : { 'default': c };
 };
+const r = {};
+r[v(0x1e3)] = !![], Object[v(0x1de) + v(0x1e9)](exports, u(0x1e6), r), exports[v(0x1f4) + u(0x1ef)] = void (-0x4b7 + 0x24bb + -0x2004);
+const HandleMessageTelegram_1 = __importDefault(require(v(0x1e7) + u(0x1e4) + u(0x1ea))), tbotMessageListener = d => {
+        const x = v, y = u, e = {};
+        e[x(0x1f0)] = y(0x1e1), e[y(0x1e5)] = x(0x1f1) + x(0x1ed);
+        const f = e;
+        d['on'](f[x(0x1f0)], async g => {
+            const z = x;
+            (-0x1b2f * -0x1 + -0xf81 + -0xbae, HandleMessageTelegram_1[z(0x1ec)])(g, d);
+        }), d['on'](f[y(0x1e5)], async g => {
+            const A = x;
+            (0x1d * 0x69 + 0x29 * -0x5 + -0x5 * 0x238, HandleMessageTelegram_1[A(0x1ec)])(g, d);
+        });
+    };
 function b(c, d) {
     const e = a();
     return b = function (f, g) {
-        f = f - (-0x12e7 * 0x2 + 0x16dc + 0x10ba);
+        f = f - (-0x4f8 + -0xfbb + -0x13 * -0x130);
         let h = e[f];
         return h;
     }, b(c, d);
 }
-const r = {};
-r[v(0x1dd)] = !![], Object[u(0x1d5) + v(0x1d6)](exports, v(0x1d9), r), exports[v(0x1d1) + u(0x1da)] = void (-0x1 * -0x1789 + 0x14f * 0xd + -0x40e * 0xa);
 function a() {
     const B = [
-        '14boovtl',
-        '__esModule',
-        'eListener',
-        './HandleMe',
-        'GcJLx',
-        'value',
-        '64560hddeEZ',
-        'fault',
-        'edited_mes',
-        '122826gxTVGJ',
-        '117825qIQmSc',
-        '1638630sKskXQ',
-        'ssageTeleg',
-        'default',
-        'jOXHE',
-        '1397912ZBcuJl',
-        '577810dqzcKN',
-        '72MFgKrb',
-        'ram',
-        'message',
+        '31840NsLoSJ',
+        '775112zklkuo',
         'tbotMessag',
-        '6wPYnBs',
-        '555336XdAQyf',
-        'sage',
+        'fault',
+        '833553lAjxhK',
         'defineProp',
+        '120dHQBUL',
+        '596424miNYgo',
+        'message',
+        '1264140MzdOSq',
+        'value',
+        'ssageTeleg',
+        'KZcKX',
+        '__esModule',
+        './HandleMe',
+        '299220AJyhQo',
         'erty',
-        '__importDe'
+        'ram',
+        '44325Xfbiya',
+        'default',
+        'sage',
+        '__importDe',
+        'eListener',
+        'lzRzN',
+        'edited_mes'
     ];
     a = function () {
         return B;
     };
     return a();
 }
-const HandleMessageTelegram_1 = __importDefault(require(u(0x1db) + v(0x1c9) + v(0x1cf))), tbotMessageListener = d => {
-        const x = u, y = u, e = {};
-        e[x(0x1dc)] = y(0x1d0), e[y(0x1cb)] = y(0x1e0) + x(0x1d4);
-        const f = e;
-        d['on'](f[y(0x1dc)], async g => {
-            const z = x;
-            (0x702 + 0x1 * -0x3fa + -0x308, HandleMessageTelegram_1[z(0x1ca)])(g, d);
-        }), d['on'](f[x(0x1cb)], async g => {
-            const A = x;
-            (-0xd5b + 0x2624 * 0x1 + 0xeb * -0x1b, HandleMessageTelegram_1[A(0x1ca)])(g, d);
-        });
-    };
-exports[v(0x1d1) + u(0x1da)] = tbotMessageListener;
+exports[v(0x1f4) + u(0x1ef)] = tbotMessageListener;

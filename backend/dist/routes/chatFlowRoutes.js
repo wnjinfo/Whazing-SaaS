@@ -4,7 +4,7 @@ var J = b, K = b;
     var H = b, I = b, e = c();
     while (!![]) {
         try {
-            var f = parseInt(H(0x1a9)) / (-0x23d * -0x10 + -0x452 + 0xa7f * -0x3) + parseInt(I(0x1a1)) / (0x25 * -0x4b + 0x1255 + -0x77c) * (-parseInt(I(0x19a)) / (-0x10f * 0xb + -0x21c0 + 0xb5a * 0x4)) + -parseInt(H(0x185)) / (-0x29 * -0xb6 + -0x33f + 0x8d * -0x2f) + parseInt(H(0x1b5)) / (-0x2d * 0x7f + -0x6eb + 0x1d43) * (-parseInt(I(0x1ab)) / (-0x129a * 0x1 + 0x9 * -0x429 + 0x3811)) + -parseInt(H(0x1a4)) / (0x15ea + 0x15f2 + -0x643 * 0x7) + -parseInt(H(0x1b8)) / (0x17a0 + 0x601 + 0x1 * -0x1d99) + parseInt(H(0x182)) / (0x1bd9 + -0x45b + -0x1775) * (parseInt(I(0x18b)) / (-0x191 + -0x62 * 0x27 + 0x1089));
+            var f = -parseInt(H(0xb0)) / (0x160c + 0x1b55 + -0x3160) + parseInt(I(0xb6)) / (-0x97d * -0x2 + 0x1491 + -0x2789) * (parseInt(H(0x7a)) / (-0x128f + 0x1226 + -0x4 * -0x1b)) + parseInt(H(0xb8)) / (-0x20ba + -0x1a06 + 0x1 * 0x3ac4) * (-parseInt(H(0x91)) / (0x3 * -0x329 + 0x71 * 0x26 + -0x746)) + parseInt(H(0x72)) / (0x6 * -0x332 + -0x1e8b + 0x31bd) * (-parseInt(H(0x94)) / (0xf * 0x1f3 + -0x36c * -0x7 + -0x5 * 0xaa2)) + parseInt(I(0x86)) / (0x1fd0 + -0x1 * -0x23db + -0x43a3) * (-parseInt(H(0x9a)) / (-0x195f + -0x208 + 0x36e * 0x8)) + -parseInt(I(0x80)) / (0x659 * -0x6 + -0x3 * 0xc5b + -0x1 * -0x4b31) + parseInt(I(0x7e)) / (-0x1db0 + 0x26dd * -0x1 + 0x2 * 0x224c);
             if (f === d)
                 break;
             else
@@ -13,193 +13,246 @@ var J = b, K = b;
             e['push'](e['shift']());
         }
     }
-}(a, -0x18 * -0x184 + -0x4d * 0xb1b + 0x636d3));
+}(a, 0x170e * 0x30 + 0x1 * 0x4b6dd + -0x5fe3 * 0x10));
 function b(c, d) {
     var e = a();
     return b = function (f, g) {
-        f = f - (0x1715 + -0x1787 + -0x2d * -0xb);
+        f = f - (0x1 * -0x1bcb + 0x25 * 0xba + 0x157);
         var h = e[f];
         return h;
     }, b(c, d);
 }
-var __createBinding = this && this[J(0x1b4) + K(0x1b9)] || (Object[K(0x19e)] ? function (d, e, f, g) {
-        var L = J, M = J, h = {};
-        h[L(0x197)] = function (l, n) {
-            return l === n;
-        }, h[L(0x1bc)] = M(0x1aa), h[L(0x193)] = function (l, n) {
-            return l === n;
-        }, h[M(0x1c2)] = function (l, n) {
-            return l in n;
-        }, h[L(0x1af)] = M(0x1a6), h[M(0x186)] = function (l, n) {
-            return l === n;
-        }, h[L(0x195)] = M(0x1bb);
-        var i = h;
-        if (i[L(0x193)](g, undefined))
-            g = f;
-        var j = Object[L(0x1a5) + M(0x1c1) + L(0x19d)](e, f);
-        if (!j || (i[L(0x1c2)](i[L(0x1af)], j) ? !e[L(0x17e)] : j[M(0x18e)] || j[M(0x1be) + 'le'])) {
-            if (i[L(0x186)](i[L(0x195)], i[L(0x195)]))
-                j = {
+var __createBinding = this && this[J(0x87) + K(0x9d)] || (Object[K(0x97)] ? function (c, d, e, f) {
+        var L = J, M = J, g = {
+                'ICnlH': function (i, j) {
+                    return i === j;
+                },
+                'NyqKD': L(0xa3),
+                'KBKQd': M(0xae),
+                'pVBfv': M(0x93),
+                'kaBPZ': function (i, j) {
+                    return i != j;
+                },
+                'ORHkT': function (i, j) {
+                    return i !== j;
+                },
+                'yjmkc': M(0xbc),
+                'rrzmj': function (i, j, l, n) {
+                    return i(j, l, n);
+                },
+                'mJyhf': function (i, j, l) {
+                    return i(j, l);
+                },
+                'vcGgT': function (i, j) {
+                    return i === j;
+                },
+                'iyobj': function (i, j) {
+                    return i in j;
+                },
+                'zTZSE': M(0x8a),
+                'BFPET': L(0xbe),
+                'NfOKP': M(0x9e)
+            };
+        if (g[L(0x79)](f, undefined))
+            f = e;
+        var h = Object[M(0x7b) + M(0x9b) + L(0xa1)](d, e);
+        if (!h || (g[L(0xad)](g[M(0xb5)], h) ? !d[M(0x6f)] : h[M(0x92)] || h[M(0x9f) + 'le'])) {
+            if (g[L(0x81)](g[M(0xa6)], g[L(0xa9)]))
+                h = {
                     'enumerable': !![],
                     'get': function () {
                         var N = M, O = L;
-                        if (i[N(0x197)](i[N(0x1bc)], i[N(0x1bc)]))
-                            return e[f];
-                        else {
-                            if (i[N(0x197)](f, l))
-                                e = n;
-                            d[p] = q[r];
-                        }
+                        if (g[N(0xa5)](g[O(0xbb)], g[N(0xb4)])) {
+                            var j = {};
+                            j[O(0x7c)] = !![], j[N(0x8a)] = function () {
+                                return i[j];
+                            }, f = j;
+                        } else
+                            return d[e];
                     }
                 };
             else {
-                var n = {};
-                return n[M(0x1ae)] = j, g && h[M(0x17e)] ? i : n;
+                var j = g[L(0x83)][M(0x8b)]('|'), l = 0x1 * -0x1379 + -0xb0 * 0x11 + -0x1f29 * -0x1;
+                while (!![]) {
+                    switch (j[l++]) {
+                    case '0':
+                        if (n && c[L(0x6f)])
+                            return p;
+                        continue;
+                    case '1':
+                        if (g[M(0x7f)](q, null)) {
+                            for (var n in r)
+                                if (g[M(0x81)](n, g[M(0xab)]) && s[L(0x88)][M(0x99) + L(0x76)][M(0xb9)](t, n))
+                                    g[M(0x9c)](u, p, v, n);
+                        }
+                        continue;
+                    case '2':
+                        g[L(0x95)](w, p, x);
+                        continue;
+                    case '3':
+                        var p = {};
+                        continue;
+                    case '4':
+                        return p;
+                    }
+                    break;
+                }
             }
         }
-        Object[L(0x191) + M(0x181)](d, g, j);
+        Object[M(0x73) + L(0x76)](c, f, h);
     } : function (d, e, f, g) {
         var P = J, Q = K, h = {};
-        h[P(0x1a3)] = function (j, l) {
+        h[P(0x70)] = function (j, l) {
             return j === l;
         };
         var i = h;
-        if (i[P(0x1a3)](g, undefined))
+        if (i[P(0x70)](g, undefined))
             g = f;
         d[g] = e[f];
-    }), __setModuleDefault = this && this[J(0x18a) + J(0x1a0)] || (Object[K(0x19e)] ? function (e, f) {
-        var R = K, S = K, g = {};
-        g[R(0x190)] = S(0x1ae);
+    }), __setModuleDefault = this && this[K(0x6e) + J(0x96)] || (Object[K(0x97)] ? function (e, f) {
+        var R = J, S = J, g = {};
+        g[R(0x82)] = R(0xbc);
         var h = g, i = {};
-        i[R(0x1a8)] = !![], i[R(0x1bf)] = f, Object[S(0x191) + R(0x181)](e, h[S(0x190)], i);
+        i[S(0x7c)] = !![], i[R(0x71)] = f, Object[S(0x73) + S(0x76)](e, h[S(0x82)], i);
     } : function (d, e) {
-        var T = K, U = J, f = {};
-        f[T(0x196)] = T(0x1ae);
+        var T = J, U = J, f = {};
+        f[T(0xac)] = U(0xbc);
         var g = f;
-        d[g[U(0x196)]] = e;
-    }), __importStar = this && this[J(0x19f) + 'ar'] || function (c) {
-        var V = K, W = J, d = {
-                'tINen': V(0x1a7),
-                'DOGrl': function (i, j) {
+        d[g[U(0xac)]] = e;
+    }), __importStar = this && this[K(0xa0) + 'ar'] || function (c) {
+        var V = K, W = K, d = {
+                'dRVaF': V(0x74),
+                'ePuwm': function (i, j, l) {
+                    return i(j, l);
+                },
+                'aaAjx': function (i, j) {
                     return i != j;
                 },
-                'blRxK': function (i, j) {
+                'iqBYp': function (i, j) {
                     return i !== j;
                 },
-                'xWgrQ': V(0x1ae),
-                'Dzgfp': function (i, j, l, m) {
+                'KzFxp': W(0xbc),
+                'Suzxv': function (i, j, l, m) {
                     return i(j, l, m);
-                },
-                'wgdIc': function (i, j, l) {
-                    return i(j, l);
                 }
-            }, e = d[W(0x19b)][V(0x18c)]('|'), f = -0x1d5f + 0x151a + -0x49 * -0x1d;
+            }, e = d[V(0x98)][W(0x8b)]('|'), f = -0x2 * -0x23a + 0x17 * 0xb3 + 0x2ef * -0x7;
         while (!![]) {
             switch (e[f++]) {
             case '0':
-                if (d[V(0x1c0)](c, null)) {
-                    for (var g in c)
-                        if (d[W(0x180)](g, d[V(0x192)]) && Object[V(0x1ac)][W(0x1bd) + W(0x181)][W(0x198)](c, g))
-                            d[W(0x199)](__createBinding, h, c, g);
-                }
+                d[W(0xb7)](__setModuleDefault, g, c);
                 continue;
             case '1':
-                if (c && c[V(0x17e)])
-                    return c;
+                var g = {};
                 continue;
             case '2':
-                return h;
+                if (d[V(0x8d)](c, null)) {
+                    for (var h in c)
+                        if (d[W(0x78)](h, d[V(0xb1)]) && Object[W(0x88)][V(0x99) + V(0x76)][V(0xb9)](c, h))
+                            d[W(0x89)](__createBinding, g, c, h);
+                }
+                continue;
             case '3':
-                var h = {};
+                if (c && c[V(0x6f)])
+                    return c;
                 continue;
             case '4':
-                d[W(0x18d)](__setModuleDefault, h, c);
-                continue;
+                return g;
             }
             break;
         }
-    }, __importDefault = this && this[J(0x1b6) + K(0x1b3)] || function (c) {
+    }, __importDefault = this && this[K(0xba) + J(0xa2)] || function (c) {
         var X = J;
-        return c && c[X(0x17e)] ? c : { 'default': c };
+        return c && c[X(0x6f)] ? c : { 'default': c };
     }, G = {};
-G[K(0x1bf)] = !![], Object[J(0x191) + K(0x181)](exports, J(0x17e), G);
+G[J(0x71)] = !![], Object[K(0x73) + K(0x76)](exports, K(0x6f), G);
+const express_1 = __importDefault(require(K(0x8e))), isAuth_1 = __importDefault(require(J(0x84) + J(0xa7))), ChatFlowController = __importStar(require(K(0x85) + J(0x75) + J(0xa8) + K(0x8f))), chatFlowRoutes = express_1[K(0xbc)][J(0x77)]();
 function a() {
     var Y = [
-        'call',
-        'Dzgfp',
-        '93993ZAdeCE',
-        'tINen',
-        'are/isAuth',
-        'ptor',
-        'create',
-        '__importSt',
         'eDefault',
-        '4AVLNoW',
-        'delete',
-        'uUHTT',
-        '992103YPDepJ',
-        'getOwnProp',
-        'get',
-        '1|3|0|4|2',
-        'enumerable',
-        '150225ipVWeQ',
-        'wphNd',
-        '23274JpVFDK',
-        'prototype',
-        'update',
-        'default',
-        'ZFKSv',
-        'put',
-        'express',
-        'index',
-        'fault',
-        '__createBi',
-        '90rYmlIc',
-        '__importDe',
-        '../middlew',
-        '2806816BrbpoO',
-        'nding',
-        '/chat-flow',
-        'LhQrJ',
-        'OrBvw',
+        'create',
+        'dRVaF',
         'hasOwnProp',
-        'configurab',
-        'value',
-        'DOGrl',
+        '1184886wzmvdv',
         'ertyDescri',
-        'NsZHL',
-        'remove',
-        '__esModule',
-        'ler',
-        'blRxK',
-        'erty',
-        '6189057yIsVsw',
+        'rrzmj',
+        'nding',
+        'BhEzj',
+        'configurab',
+        '__importSt',
+        'ptor',
+        'fault',
+        'ZlbpN',
         'store',
-        'lers/ChatF',
-        '60724lqolXM',
-        'nUKjz',
-        '../control',
+        'ICnlH',
+        'BFPET',
+        'are/isAuth',
         'lowControl',
-        'Router',
-        '__setModul',
-        '10BdTgRh',
-        'split',
-        'wgdIc',
-        'writable',
-        '/:chatFlow',
-        'LLmgB',
-        'defineProp',
-        'xWgrQ',
-        'IEsZz',
+        'NfOKP',
+        'put',
+        'yjmkc',
+        'qwAQN',
+        'iyobj',
+        'wsaRj',
+        'index',
+        '40228oejjav',
+        'KzFxp',
+        '/chat-flow',
+        'update',
+        'KBKQd',
+        'zTZSE',
+        '3602mxBxkk',
+        'ePuwm',
+        '189672fizACD',
+        'call',
+        '__importDe',
+        'NyqKD',
+        'default',
         'post',
-        'ehzJn',
-        'hUHdA',
-        'KztmT'
+        'GPgkI',
+        '__setModul',
+        '__esModule',
+        'JbcGq',
+        'value',
+        '342VTvOWy',
+        'defineProp',
+        '3|1|2|0|4',
+        'lers/ChatF',
+        'erty',
+        'Router',
+        'iqBYp',
+        'vcGgT',
+        '600rFYtrg',
+        'getOwnProp',
+        'enumerable',
+        '/:chatFlow',
+        '10919227GjaOus',
+        'kaBPZ',
+        '3730570PPuolr',
+        'ORHkT',
+        'mDpRO',
+        'pVBfv',
+        '../middlew',
+        '../control',
+        '16IyvfNp',
+        '__createBi',
+        'prototype',
+        'Suzxv',
+        'get',
+        'split',
+        'delete',
+        'aaAjx',
+        'express',
+        'ler',
+        'remove',
+        '35lWnjeO',
+        'writable',
+        '0|3|1|2|4',
+        '17787ntIHAg',
+        'mJyhf'
     ];
     a = function () {
         return Y;
     };
     return a();
 }
-const express_1 = __importDefault(require(K(0x1b1))), isAuth_1 = __importDefault(require(J(0x1b7) + J(0x19c))), ChatFlowController = __importStar(require(J(0x187) + J(0x184) + K(0x188) + J(0x17f))), chatFlowRoutes = express_1[J(0x1ae)][K(0x189)]();
-chatFlowRoutes[J(0x194)](J(0x1ba), isAuth_1[K(0x1ae)], ChatFlowController[K(0x183)]), chatFlowRoutes[K(0x1a6)](J(0x1ba), isAuth_1[J(0x1ae)], ChatFlowController[K(0x1b2)]), chatFlowRoutes[K(0x1b0)](J(0x1ba) + J(0x18f) + 'Id', isAuth_1[K(0x1ae)], ChatFlowController[K(0x1ad)]), chatFlowRoutes[J(0x1a2)](K(0x1ba) + J(0x18f) + 'Id', isAuth_1[K(0x1ae)], ChatFlowController[J(0x17d)]), exports[K(0x1ae)] = chatFlowRoutes;
+chatFlowRoutes[J(0xbd)](J(0xb2), isAuth_1[J(0xbc)], ChatFlowController[K(0xa4)]), chatFlowRoutes[J(0x8a)](K(0xb2), isAuth_1[K(0xbc)], ChatFlowController[K(0xaf)]), chatFlowRoutes[K(0xaa)](J(0xb2) + J(0x7d) + 'Id', isAuth_1[J(0xbc)], ChatFlowController[K(0xb3)]), chatFlowRoutes[J(0x8c)](K(0xb2) + K(0x7d) + 'Id', isAuth_1[J(0xbc)], ChatFlowController[J(0x90)]), exports[K(0xbc)] = chatFlowRoutes;

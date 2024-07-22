@@ -2,7 +2,7 @@
 function b(c, d) {
     var e = a();
     return b = function (f, g) {
-        f = f - (0x173 * -0x12 + 0x2 * 0x75a + 0xc90);
+        f = f - (-0x293 * -0xc + 0x1c * -0x158 + 0x85a);
         var h = e[f];
         return h;
     }, b(c, d);
@@ -12,7 +12,7 @@ var J = b, K = b;
     var H = b, I = b, e = c();
     while (!![]) {
         try {
-            var f = parseInt(H(0x146)) / (-0x718 + -0x21da + 0x1 * 0x28f3) * (-parseInt(I(0x12e)) / (-0x1 * -0x1708 + 0x2546 + -0x3c4c)) + -parseInt(H(0x175)) / (-0x275 + 0x1f59 + -0x1 * 0x1ce1) + parseInt(H(0x185)) / (-0x254f + -0x1980 + 0x6fb * 0x9) + -parseInt(I(0x17d)) / (-0x598 * -0x3 + -0x51 + 0x2 * -0x839) + -parseInt(I(0x142)) / (-0x2455 + 0xc4 * -0x1c + 0x5 * 0xb8f) * (parseInt(H(0x173)) / (0x19ad + -0x1 * 0x22a9 + 0x903)) + -parseInt(H(0x132)) / (0xbc7 + 0x1 * 0xaa1 + 0x10 * -0x166) + parseInt(I(0x149)) / (0xadf * -0x3 + 0x23af + -0x15 * 0x25);
+            var f = parseInt(H(0x1fb)) / (-0x95 + -0xca1 + 0xc7 * 0x11) * (parseInt(H(0x1a4)) / (-0x2661 + -0x75 * -0x1f + 0x3e * 0x64)) + parseInt(H(0x1dd)) / (0xb * -0x11c + 0x79a + -0x49d * -0x1) + -parseInt(I(0x1f3)) / (-0x313 * -0xb + -0x13c3 + -0xe0a) * (-parseInt(I(0x1d4)) / (0xddc + -0xbf2 + -0x1e5)) + parseInt(H(0x1a0)) / (-0x9f8 + 0x206 * 0xc + -0xe4a) + -parseInt(I(0x1ee)) / (-0x1f79 + 0x1618 + 0x968) + parseInt(I(0x1ba)) / (-0x1 * 0xb6a + -0x14dc + -0x1027 * -0x2) + -parseInt(I(0x1d6)) / (-0x1c44 + 0x1a45 + 0x208);
             if (f === d)
                 break;
             else
@@ -21,210 +21,270 @@ var J = b, K = b;
             e['push'](e['shift']());
         }
     }
-}(a, 0xa539b * 0x1 + 0x173bfa + -0x154206));
-var __createBinding = this && this[J(0x14e) + J(0x145)] || (Object[J(0x170)] ? function (d, e, f, g) {
-        var L = K, M = K, h = {};
-        h[L(0x14f)] = function (l, n) {
-            return l === n;
-        }, h[L(0x139)] = M(0x130), h[L(0x156)] = M(0x174), h[L(0x17e)] = function (l, n) {
-            return l === n;
-        }, h[M(0x15a)] = function (l, n) {
-            return l in n;
-        }, h[M(0x13c)] = M(0x177), h[L(0x16f)] = function (l, n) {
-            return l in n;
-        }, h[M(0x13e)] = L(0x15b);
-        var i = h;
-        if (i[L(0x14f)](g, undefined))
-            g = f;
-        var j = Object[M(0x12f) + L(0x178) + L(0x138)](e, f);
-        if (!j || (i[L(0x16f)](i[M(0x13c)], j) ? !e[L(0x165)] : j[M(0x154)] || j[M(0x162) + 'le'])) {
-            if (i[M(0x17e)](i[L(0x13e)], i[L(0x13e)]))
-                j = {
+}(a, -0x74cbb + 0x6a * -0x48e + 0x100473));
+function a() {
+    var a2 = [
+        'configurab',
+        'agens',
+        'Router',
+        '134812ekvwBk',
+        'call',
+        '__createBi',
+        'ulXoE',
+        'criarMensa',
+        'cXuGd',
+        'lers/Inter',
+        'rVHEM',
+        '537019wvFRIx',
+        'tbjTa',
+        'writable',
+        'ens',
+        'post',
+        'DVjQI',
+        'nreadMessa',
+        'defineProp',
+        '2964918MXFGlm',
+        'opsbe',
+        'JkQbg',
+        'VqHKi',
+        '2TyqFQT',
+        'medias',
+        'YsoyV',
+        'pEtqh',
+        '__importDe',
+        'default',
+        'kkUax',
+        'listCountU',
+        'rno/mensag',
+        'pCkTX',
+        'multer',
+        'QfOrP',
+        'ertyDescri',
+        'OMDGw',
+        'hasOwnProp',
+        'lRPAd',
+        '0|1|4|3|2',
+        'eDefault',
+        'Controller',
+        'jqwMO',
+        'SwZUo',
+        'get',
+        '1181672evZPUi',
+        '__esModule',
+        'nding',
+        'put',
+        'JbwyU',
+        'ens/:userI',
+        'array',
+        'rno/count/',
+        'split',
+        'HBZfi',
+        '2|1|3|4|0',
+        'ctId',
+        'qmSTY',
+        'nalMessage',
+        'ens/:conta',
+        'MAkoD',
+        'marcarMens',
+        'BffEB',
+        '__setModul',
+        'value',
+        'ens/:mensa',
+        'prototype',
+        'lida',
+        'upload',
+        'mensagens',
+        '../middlew',
+        '105WAOmsT',
+        'enumerable',
+        '14960655XVMJid',
+        '/chat-inte',
+        'getOwnProp',
+        'agemNaoLid',
+        'gem',
+        'fault',
+        'gemId/nao-',
+        '873777HheIKS',
+        'create',
+        'xdDjq',
+        'WCbGk',
+        'eTKiL',
+        'Gwpzi',
+        'VyuXY',
+        'listarMens',
+        '__importSt',
+        'ptor',
+        '../control',
+        'are/isAuth',
+        'erty',
+        'HAznI',
+        '../config/',
+        'express',
+        'JnDKE',
+        '475188swZJuN',
+        'sCBdT'
+    ];
+    a = function () {
+        return a2;
+    };
+    return a();
+}
+var __createBinding = this && this[J(0x1f5) + J(0x1bc)] || (Object[K(0x1de)] ? function (c, d, e, f) {
+        var L = J, M = J, g = {
+                'sCBdT': L(0x1c4),
+                'xdDjq': function (i, j) {
+                    return i != j;
+                },
+                'HBZfi': function (i, j) {
+                    return i !== j;
+                },
+                'tbjTa': L(0x1a9),
+                'rVHEM': function (i, j, l, n) {
+                    return i(j, l, n);
+                },
+                'lRPAd': function (i, j, l) {
+                    return i(j, l);
+                },
+                'YsoyV': function (i, j) {
+                    return i === j;
+                },
+                'SwZUo': L(0x1b1),
+                'VqHKi': function (i, j) {
+                    return i in j;
+                },
+                'HAznI': L(0x1b9),
+                'cXuGd': M(0x1ed),
+                'ulXoE': M(0x1a1)
+            };
+        if (g[L(0x1a6)](f, undefined))
+            f = e;
+        var h = Object[M(0x1d8) + L(0x1b0) + L(0x1e6)](d, e);
+        if (!h || (g[M(0x1a3)](g[M(0x1ea)], h) ? !d[M(0x1bb)] : h[M(0x1fd)] || h[M(0x1f0) + 'le'])) {
+            if (g[M(0x1c3)](g[L(0x1f8)], g[L(0x1f6)]))
+                h = {
                     'enumerable': !![],
                     'get': function () {
-                        var N = M, O = M;
-                        if (i[N(0x14f)](i[O(0x139)], i[O(0x156)])) {
-                            var n = {};
-                            n[O(0x152)] = !![], n[N(0x177)] = function () {
-                                return i[j];
-                            }, f = n;
-                        } else
-                            return e[f];
+                        var N = L, Q = L, i = {
+                                'qmSTY': g[N(0x1ef)],
+                                'pEtqh': function (j, l) {
+                                    var O = N;
+                                    return g[O(0x1df)](j, l);
+                                },
+                                'WCbGk': function (j, l) {
+                                    var P = N;
+                                    return g[P(0x1c3)](j, l);
+                                },
+                                'BffEB': g[Q(0x1fc)],
+                                'VyuXY': function (j, l, n, p) {
+                                    var R = Q;
+                                    return g[R(0x1fa)](j, l, n, p);
+                                },
+                                'MAkoD': function (j, l, n) {
+                                    var S = N;
+                                    return g[S(0x1b3)](j, l, n);
+                                }
+                            };
+                        if (g[N(0x1a6)](g[Q(0x1b8)], g[Q(0x1b8)]))
+                            return d[e];
+                        else {
+                            var l = i[Q(0x1c6)][Q(0x1c2)]('|'), n = -0x1 * -0x2038 + 0x1d5c * -0x1 + -0x2dc;
+                            while (!![]) {
+                                switch (l[n++]) {
+                                case '0':
+                                    return p;
+                                case '1':
+                                    var p = {};
+                                    continue;
+                                case '2':
+                                    if (n && c[Q(0x1bb)])
+                                        return p;
+                                    continue;
+                                case '3':
+                                    if (i[Q(0x1a7)](q, null)) {
+                                        for (var q in r)
+                                            if (i[Q(0x1e0)](q, i[Q(0x1cb)]) && s[Q(0x1cf)][Q(0x1b2) + N(0x1e9)][Q(0x1f4)](t, q))
+                                                i[N(0x1e3)](u, p, v, q);
+                                    }
+                                    continue;
+                                case '4':
+                                    i[N(0x1c9)](w, p, x);
+                                    continue;
+                                }
+                                break;
+                            }
+                        }
                     }
                 };
             else {
-                if (i[L(0x17e)](p, q))
-                    r = s;
-                var n = t[M(0x12f) + L(0x178) + M(0x138)](u, v);
-                (!n || (i[L(0x15a)](i[L(0x13c)], n) ? !w[M(0x165)] : n[L(0x154)] || n[M(0x162) + 'le'])) && (n = {
-                    'enumerable': !![],
-                    'get': function () {
-                        return n[F];
-                    }
-                }), z[M(0x137) + L(0x135)](A, B, n);
+                var j = {};
+                return j[M(0x1a9)] = j, g && h[M(0x1bb)] ? i : j;
             }
         }
-        Object[M(0x137) + M(0x135)](d, g, j);
+        Object[L(0x19f) + M(0x1e9)](c, f, h);
     } : function (d, e, f, g) {
-        var P = J, Q = J, h = {};
-        h[P(0x182)] = function (j, l) {
+        var T = K, U = J, h = {};
+        h[T(0x1e1)] = function (j, l) {
             return j === l;
         };
         var i = h;
-        if (i[P(0x182)](g, undefined))
+        if (i[T(0x1e1)](g, undefined))
             g = f;
         d[g] = e[f];
-    }), __setModuleDefault = this && this[J(0x16d) + K(0x134)] || (Object[K(0x170)] ? function (e, f) {
-        var R = J, S = K, g = {};
-        g[R(0x176)] = R(0x15f);
+    }), __setModuleDefault = this && this[K(0x1cc) + K(0x1b5)] || (Object[K(0x1de)] ? function (e, f) {
+        var V = K, W = K, g = {};
+        g[V(0x1b7)] = W(0x1a9);
         var h = g, i = {};
-        i[S(0x152)] = !![], i[S(0x184)] = f, Object[R(0x137) + S(0x135)](e, h[S(0x176)], i);
+        i[W(0x1d5)] = !![], i[V(0x1cd)] = f, Object[W(0x19f) + W(0x1e9)](e, h[V(0x1b7)], i);
     } : function (d, e) {
-        var T = K, U = J, f = {};
-        f[T(0x14d)] = U(0x15f);
+        var X = K, Y = J, f = {};
+        f[X(0x1aa)] = Y(0x1a9);
         var g = f;
-        d[g[T(0x14d)]] = e;
-    }), __importStar = this && this[K(0x16e) + 'ar'] || function (c) {
-        var V = J, W = J, d = {
-                'ffpZO': V(0x155),
-                'QrdVQ': function (i, j, l) {
+        d[g[Y(0x1aa)]] = e;
+    }), __importStar = this && this[K(0x1e5) + 'ar'] || function (c) {
+        var Z = J, a0 = K, d = {
+                'QfOrP': Z(0x1b4),
+                'pCkTX': function (i, j, l) {
                     return i(j, l);
                 },
-                'AquCK': function (i, j) {
+                'JkQbg': function (i, j) {
                     return i != j;
                 },
-                'plydz': function (i, j) {
+                'Gwpzi': function (i, j) {
                     return i !== j;
                 },
-                'RVzBR': W(0x15f),
-                'SGYkc': function (i, j, l, m) {
+                'DVjQI': Z(0x1a9),
+                'JbwyU': function (i, j, l, m) {
                     return i(j, l, m);
                 }
-            }, e = d[V(0x14c)][V(0x181)]('|'), f = -0x3ea * -0x1 + 0x1ad3 + -0x1ebd;
+            }, e = d[Z(0x1af)][a0(0x1c2)]('|'), f = 0x2418 + -0x2043 + -0x3d5;
         while (!![]) {
             switch (e[f++]) {
             case '0':
-                return g;
+                if (c && c[a0(0x1bb)])
+                    return c;
+                continue;
             case '1':
                 var g = {};
                 continue;
             case '2':
-                d[W(0x171)](__setModuleDefault, g, c);
-                continue;
+                return g;
             case '3':
-                if (d[V(0x159)](c, null)) {
-                    for (var h in c)
-                        if (d[V(0x17a)](h, d[W(0x169)]) && Object[V(0x168)][V(0x17f) + V(0x135)][W(0x163)](c, h))
-                            d[W(0x144)](__createBinding, g, c, h);
-                }
+                d[a0(0x1ad)](__setModuleDefault, g, c);
                 continue;
             case '4':
-                if (c && c[V(0x165)])
-                    return c;
+                if (d[Z(0x1a2)](c, null)) {
+                    for (var h in c)
+                        if (d[Z(0x1e2)](h, d[Z(0x200)]) && Object[Z(0x1cf)][Z(0x1b2) + a0(0x1e9)][a0(0x1f4)](c, h))
+                            d[Z(0x1be)](__createBinding, g, c, h);
+                }
                 continue;
             }
             break;
         }
-    }, __importDefault = this && this[J(0x166) + K(0x15d)] || function (c) {
-        var X = J;
-        return c && c[X(0x165)] ? c : { 'default': c };
+    }, __importDefault = this && this[J(0x1a8) + K(0x1db)] || function (c) {
+        var a1 = J;
+        return c && c[a1(0x1bb)] ? c : { 'default': c };
     }, G = {};
-G[K(0x184)] = !![], Object[K(0x137) + J(0x135)](exports, J(0x165), G);
-const express_1 = require(K(0x131)), InternalMessage = __importStar(require(J(0x16c) + K(0x147) + K(0x148) + K(0x158))), isAuth_1 = __importDefault(require(K(0x16b) + J(0x15e))), multer_1 = __importDefault(require(K(0x151))), upload_1 = __importDefault(require(J(0x14b) + K(0x17b))), internalMessageRouter = (-0x273 * -0x9 + -0x13 * -0x1d8 + -0x3913 * 0x1, express_1[K(0x15c)])(), upload = (0x6ec + -0x15b5 + 0x2f5 * 0x5, multer_1[K(0x15f)])(upload_1[J(0x15f)]);
-internalMessageRouter[K(0x177)](J(0x13a) + K(0x161) + K(0x183) + 'd', isAuth_1[K(0x15f)], InternalMessage[J(0x172) + J(0x180)]), internalMessageRouter[K(0x177)](K(0x13a) + K(0x13d) + K(0x141), isAuth_1[J(0x15f)], InternalMessage[K(0x167) + K(0x150) + 'ge']), internalMessageRouter[J(0x14a)](J(0x13a) + K(0x161) + K(0x140), isAuth_1[J(0x15f)], upload[J(0x16a)](J(0x133)), InternalMessage[J(0x153) + K(0x13f)]), internalMessageRouter[J(0x13b)](J(0x13a) + K(0x161) + J(0x160) + J(0x17c) + J(0x136), isAuth_1[K(0x15f)], InternalMessage[K(0x179) + K(0x157) + 'a']), internalMessageRouter[K(0x13b)](K(0x13a) + K(0x161) + K(0x164) + J(0x143), isAuth_1[J(0x15f)], InternalMessage[J(0x179) + J(0x157) + 'a']), exports[J(0x15f)] = internalMessageRouter;
-function a() {
-    var Y = [
-        'defineProp',
-        'ptor',
-        'XCcqh',
-        '/chat-inte',
-        'put',
-        'LjGOz',
-        'rno/count/',
-        'ShoSI',
-        'gem',
-        'ens',
-        'mensagens',
-        '1038IeFoIh',
-        'ctId',
-        'SGYkc',
-        'nding',
-        '1lBLNrx',
-        'lers/Inter',
-        'nalMessage',
-        '29600361IqfeON',
-        'post',
-        '../config/',
-        'ffpZO',
-        'KREOZ',
-        '__createBi',
-        'wWOkx',
-        'nreadMessa',
-        'multer',
-        'enumerable',
-        'criarMensa',
-        'writable',
-        '4|1|3|2|0',
-        'uyhfm',
-        'agemNaoLid',
-        'Controller',
-        'AquCK',
-        'kMcHG',
-        'lhvyi',
-        'Router',
-        'fault',
-        'are/isAuth',
-        'default',
-        'ens/:mensa',
-        'rno/mensag',
-        'configurab',
-        'call',
-        'ens/:conta',
-        '__esModule',
-        '__importDe',
-        'listCountU',
-        'prototype',
-        'RVzBR',
-        'array',
-        '../middlew',
-        '../control',
-        '__setModul',
-        '__importSt',
-        'vakLw',
-        'create',
-        'QrdVQ',
-        'listarMens',
-        '19068cZMpeF',
-        'jGHAJ',
-        '1829583UxulLK',
-        'mkROz',
-        'get',
-        'ertyDescri',
-        'marcarMens',
-        'plydz',
-        'upload',
-        'gemId/nao-',
-        '5113395KWRJRT',
-        'BtXjS',
-        'hasOwnProp',
-        'agens',
-        'split',
-        'ZMKUo',
-        'ens/:userI',
-        'value',
-        '3689028pqTPTE',
-        '400558KKpuNq',
-        'getOwnProp',
-        'HwzPE',
-        'express',
-        '8806624VpvjYH',
-        'medias',
-        'eDefault',
-        'erty',
-        'lida'
-    ];
-    a = function () {
-        return Y;
-    };
-    return a();
-}
+G[J(0x1cd)] = !![], Object[J(0x19f) + J(0x1e9)](exports, K(0x1bb), G);
+const express_1 = require(K(0x1ec)), InternalMessage = __importStar(require(K(0x1e7) + J(0x1f9) + K(0x1c7) + J(0x1b6))), isAuth_1 = __importDefault(require(J(0x1d3) + J(0x1e8))), multer_1 = __importDefault(require(J(0x1ae))), upload_1 = __importDefault(require(K(0x1eb) + J(0x1d1))), internalMessageRouter = (-0xbc * 0xb + -0x2254 + 0x2a68 * 0x1, express_1[K(0x1f2)])(), upload = (0x1623 + -0xa * 0x83 + 0x1 * -0x1105, multer_1[J(0x1a9)])(upload_1[K(0x1a9)]);
+internalMessageRouter[J(0x1b9)](J(0x1d7) + J(0x1ac) + J(0x1bf) + 'd', isAuth_1[K(0x1a9)], InternalMessage[J(0x1e4) + J(0x1f1)]), internalMessageRouter[K(0x1b9)](K(0x1d7) + J(0x1c1) + K(0x1d2), isAuth_1[K(0x1a9)], InternalMessage[K(0x1ab) + K(0x19e) + 'ge']), internalMessageRouter[J(0x1ff)](K(0x1d7) + J(0x1ac) + J(0x1fe), isAuth_1[K(0x1a9)], upload[K(0x1c0)](J(0x1a5)), InternalMessage[J(0x1f7) + J(0x1da)]), internalMessageRouter[K(0x1bd)](J(0x1d7) + K(0x1ac) + K(0x1ce) + J(0x1dc) + J(0x1d0), isAuth_1[J(0x1a9)], InternalMessage[K(0x1ca) + J(0x1d9) + 'a']), internalMessageRouter[K(0x1bd)](K(0x1d7) + J(0x1ac) + J(0x1c8) + K(0x1c5), isAuth_1[J(0x1a9)], InternalMessage[K(0x1ca) + K(0x1d9) + 'a']), exports[K(0x1a9)] = internalMessageRouter;

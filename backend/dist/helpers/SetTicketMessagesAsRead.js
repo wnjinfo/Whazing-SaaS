@@ -4,7 +4,7 @@ const D = b, E = b;
     const B = b, C = b, e = c();
     while (!![]) {
         try {
-            const f = parseInt(B(0x15c)) / (-0x358 + 0xbe1 * 0x1 + 0x16c * -0x6) * (parseInt(C(0x120)) / (-0x495 + 0xf * -0x122 + 0x1595)) + -parseInt(C(0x151)) / (-0xb43 + 0x1526 + -0x9e0) + -parseInt(B(0x14c)) / (0x1dc8 * 0x1 + 0x1 * -0x8de + -0x14e6) * (-parseInt(C(0x153)) / (-0x49d * 0x2 + 0x1304 + 0x29 * -0x3d)) + parseInt(C(0x15f)) / (-0x26a3 + -0x7f6 + 0x2e9f) * (parseInt(B(0x165)) / (0x1c61 + 0xc49 * -0x1 + -0x1011)) + -parseInt(C(0x13d)) / (0x1 * -0x18f1 + -0x6cb + 0x1fc4) * (-parseInt(C(0x142)) / (-0x208c + -0x2a5 * 0x1 + 0x233a)) + -parseInt(B(0x11c)) / (0x22 * -0x29 + 0x246f + -0x1 * 0x1ef3) + -parseInt(B(0x11a)) / (-0x93f * 0x1 + -0x1e37 + -0x2781 * -0x1);
+            const f = -parseInt(B(0xdd)) / (0x1cf * 0xf + 0x1 * -0x1771 + -0x1 * 0x3af) * (-parseInt(C(0xe0)) / (-0x47 * -0x49 + 0xbcd + 0x200a * -0x1)) + parseInt(B(0xd8)) / (-0x79f * -0x1 + 0x1496 + 0x191 * -0x12) * (parseInt(C(0x122)) / (0x4 * 0x977 + -0xa77 + -0x1b61)) + -parseInt(B(0x12b)) / (0x1 * 0x263d + 0x1d67 + -0x439f) * (-parseInt(C(0x11e)) / (0x5 * 0x4c1 + -0x12dd + -0xfa * 0x5)) + parseInt(C(0x100)) / (0xd8 + 0x218b + -0x6 * 0x5ba) * (-parseInt(C(0x11c)) / (0x1ea0 * -0x1 + 0x22b9 + -0x411)) + parseInt(B(0x120)) / (-0x1be1 * 0x1 + 0x280 * 0xb + 0x6a * 0x1) * (parseInt(B(0xe5)) / (-0x1cea + 0x26f6 * -0x1 + 0x43ea)) + -parseInt(C(0x102)) / (-0x5 * -0x43b + -0x26b6 + 0x6 * 0x2ef) * (parseInt(C(0xe7)) / (-0x1a4b + 0x12f3 + -0xb * -0xac)) + -parseInt(C(0xf4)) / (-0x64d * -0x1 + -0x1786 + 0x5c2 * 0x3);
             if (f === d)
                 break;
             else
@@ -13,156 +13,161 @@ const D = b, E = b;
             e['push'](e['shift']());
         }
     }
-}(a, -0x227 * 0xc1 + 0x3128d * 0x4 + -0x83e * -0x50));
+}(a, -0x15544b + -0x2 * -0x34290 + 0x1a38c2 * 0x1));
 function a() {
     const K = [
-        '../models/',
-        'defineProp',
-        'gUCxq',
-        'QhjDb',
-        '3cUddqY',
-        'value',
-        'number',
-        '6ynMmOZ',
-        'ate',
-        'key',
-        'order',
-        'g.us',
-        'isGroup',
-        '7678027bvIWKi',
-        'EBpNj',
-        'stringify',
-        'default',
-        'markRead',
-        'hatsApp\x20se',
-        'oMcgY',
-        'forEach',
-        'fromMe',
-        'warn',
-        '16966312OmhDoH',
-        'LsDZn',
-        '486380JbhiXe',
-        'erty',
-        'payload',
-        'ticket:upd',
-        '155296susxRw',
-        'ages',
-        'contact',
-        'tenantId',
-        'lastMessag',
-        'onnected?\x20',
-        'cacheLayer',
-        'ssion\x20disc',
         'logger',
-        './GetTicke',
-        'che',
-        ':unreads',
+        'lastMessag',
+        'ate',
         'ogger',
-        '__esModule',
-        './socketEm',
-        'Could\x20not\x20',
-        '../libs/ca',
-        'whatsapp',
-        'read',
-        'where',
-        'fault',
-        'ges\x20as\x20rea',
-        'unreadMess',
-        '__importDe',
-        'chatModify',
-        'findAll',
-        'DESC',
+        '1832038qoRrOw',
         'ticketId',
-        'log',
-        '8JQaQdD',
-        'd.\x20Maybe\x20W',
-        's.whatsapp',
-        'OfZco',
-        '../utils/l',
-        '4019877GgOZzK',
-        'length',
-        'Message',
-        'BSurY',
-        'update',
-        'dataJson',
-        'createdAt',
-        'set',
-        'parse',
+        'whatsapp',
         'tWbotBaile',
-        '41684WYxjeD',
-        '.net',
-        'aNDMO',
+        'hatsApp\x20se',
+        'erty',
         'readMessag',
+        'set',
+        's.whatsapp',
+        'isGroup',
+        'ges\x20as\x20rea',
+        'markRead',
+        '7RVQUXq',
+        'rDwuA',
+        '11fWFFWr',
+        'g.us',
+        '../libs/ca',
+        'tenantId',
+        'read',
+        'createdAt',
+        ':unreads',
+        'fault',
+        'Pfond',
+        'fromMe',
+        'unreadMess',
+        'cacheLayer',
         'contacts:',
-        '1547874ZKyMtU',
-        'type',
-        '575jlrELk',
+        'Could\x20not\x20',
+        'defineProp',
         'mark\x20messa',
-        'Err:\x20',
+        'where',
+        'stringify',
+        'che',
+        'contactId',
+        'vWwur',
+        'd.\x20Maybe\x20W',
+        'sbvli',
+        'onnected?\x20',
+        'Message',
+        'chatModify',
+        '855472sFhpQQ',
+        'log',
+        '330ocaYlL',
+        '__importDe',
+        '152874UNUAAH',
+        '../utils/l',
+        '1436cGlRAe',
+        'ticket:upd',
+        '../models/',
+        'warn',
+        'qwZTq',
+        'wkvyS',
+        './socketEm',
+        'type',
         'channel',
-        'contactId'
+        '71930HPPDdk',
+        'kuOIr',
+        'ages',
+        'ssion\x20disc',
+        'default',
+        '2514HellBe',
+        'DESC',
+        'payload',
+        'contact',
+        'number',
+        '389078omjvhg',
+        'key',
+        'Err:\x20',
+        '2zcofwE',
+        'findAll',
+        './GetTicke',
+        'forEach',
+        'dataJson',
+        '460YeJhbE',
+        '.net',
+        '15200628ICHkuj',
+        'KFxIV',
+        'value',
+        'update',
+        'parse',
+        'order',
+        'length',
+        '__esModule',
+        'DgaIO'
     ];
     a = function () {
         return K;
     };
     return a();
 }
-var __importDefault = this && this[D(0x137) + E(0x134)] || function (c) {
+var __importDefault = this && this[D(0x11f) + E(0x109)] || function (c) {
     const F = E;
-    return c && c[F(0x12d)] ? c : { 'default': c };
+    return c && c[F(0xee)] ? c : { 'default': c };
 };
 const k = {};
 function b(c, d) {
     const e = a();
     return b = function (f, g) {
-        f = f - (0xa2e * 0x2 + 0x1fcb + -0x3313);
+        f = f - (-0x1b50 + -0x2 * 0xadc + 0x31df);
         let h = e[f];
         return h;
     }, b(c, d);
 }
-k[D(0x15d)] = !![], Object[E(0x159) + E(0x11d)](exports, D(0x12d), k);
-const cache_1 = require(D(0x130) + E(0x12a)), Message_1 = __importDefault(require(E(0x158) + D(0x144))), logger_1 = require(E(0x141) + D(0x12c)), GetTicketWbotBaileys_1 = __importDefault(require(D(0x129) + E(0x14b) + 'ys')), socketEmit_1 = __importDefault(require(E(0x12e) + 'it')), SetTicketMessagesAsRead = async m => {
-        const G = E, H = D, n = {};
-        n[G(0x145)] = function (p, q) {
+k[D(0xe9)] = !![], Object[E(0x110) + D(0xf9)](exports, E(0xee), k);
+const cache_1 = require(D(0x104) + E(0x114)), Message_1 = __importDefault(require(D(0x124) + D(0x11a))), logger_1 = require(E(0x121) + D(0xf3)), GetTicketWbotBaileys_1 = __importDefault(require(D(0xe2) + E(0xf7) + 'ys')), socketEmit_1 = __importDefault(require(D(0x128) + 'it')), SetTicketMessagesAsRead = async m => {
+        const G = D, H = D, n = {};
+        n[G(0xef)] = function (p, q) {
             return p === q;
-        }, n[H(0x116)] = H(0x131), n[G(0x15a)] = H(0x148), n[H(0x14e)] = G(0x13a), n[H(0x140)] = function (p, q) {
+        }, n[G(0x116)] = function (p, q) {
+            return p === q;
+        }, n[H(0xe8)] = H(0xf6), n[H(0x118)] = G(0x107), n[G(0x10a)] = G(0xd9), n[H(0x126)] = function (p, q) {
             return p > q;
-        }, n[G(0x11b)] = H(0x163), n[G(0x15b)] = G(0x13f) + G(0x14d), n[H(0x166)] = G(0x11f) + G(0x160);
+        }, n[G(0x101)] = G(0x103), n[H(0x127)] = G(0xfc) + G(0xe6), n[G(0x12c)] = H(0x123) + G(0xf2);
         const o = n;
         try {
             const p = {};
-            p[G(0x136) + H(0x121)] = 0x0, await m[G(0x146)](p), await cache_1[H(0x126)][G(0x149)](H(0x150) + m[G(0x157)] + G(0x12b), '0');
-            if (o[G(0x145)](m[G(0x156)], o[H(0x116)])) {
-                const q = await (-0x236 + -0xca4 + 0xeda, GetTicketWbotBaileys_1[G(0x168)])(m), r = {};
-                r[H(0x13b)] = m['id'], r[G(0x118)] = ![], r[G(0x132)] = ![];
+            p[G(0x10c) + G(0x12d)] = 0x0, await m[G(0xea)](p), await cache_1[G(0x10d)][H(0xfb)](H(0x10e) + m[G(0x115)] + H(0x108), '0');
+            if (o[H(0x116)](m[H(0x12a)], o[H(0xe8)])) {
+                const q = await (-0x20 * -0xfd + -0x4 * -0x3cb + -0x2ecc, GetTicketWbotBaileys_1[H(0xd7)])(m), r = {};
+                r[G(0xf5)] = m['id'], r[G(0x10b)] = ![], r[H(0x106)] = ![];
                 const s = {};
-                s[G(0x133)] = r, s[G(0x162)] = [[
-                        o[H(0x15a)],
-                        o[G(0x14e)]
+                s[G(0x112)] = r, s[H(0xec)] = [[
+                        o[H(0x118)],
+                        o[H(0x10a)]
                     ]];
-                const t = await Message_1[H(0x168)][G(0x139)](s);
-                t[H(0x117)](async y => {
-                    const I = H, J = H, z = JSON[I(0x14a)](y[J(0x147)]);
-                    z[J(0x161)] && o[I(0x145)](z[J(0x161)][J(0x118)], ![]) && await q[I(0x14f) + 'es']([z[I(0x161)]]);
+                const t = await Message_1[H(0xd7)][G(0xe1)](s);
+                t[G(0xe3)](async y => {
+                    const I = G, J = H, z = JSON[I(0xeb)](y[I(0xe4)]);
+                    z[J(0xde)] && o[J(0xef)](z[I(0xde)][I(0x10b)], ![]) && await q[J(0xfa) + 'es']([z[J(0xde)]]);
                 });
-                if (o[G(0x140)](t[H(0x143)], -0x10ed + 0xb68 + -0x9 * -0x9d)) {
-                    const y = JSON[G(0x14a)](JSON[G(0x167)](t[-0x1 * 0x1367 + -0x7aa * 0x4 + -0x320f * -0x1][H(0x147)]));
-                    if (y[H(0x161)] && o[G(0x145)](y[H(0x161)][G(0x118)], ![])) {
+                if (o[H(0x126)](t[G(0xed)], -0x2022 + 0x1 * 0xec3 + 0x115f)) {
+                    const y = JSON[G(0xeb)](JSON[G(0x113)](t[0x7 * 0xf9 + -0x7 * 0x566 + 0x1efb][H(0xe4)]));
+                    if (y[H(0xde)] && o[H(0xef)](y[H(0xde)][G(0x10b)], ![])) {
                         const z = {};
-                        z[G(0x114)] = !![], z[H(0x124) + 'es'] = [y], await q[H(0x138)](z, m[H(0x122)][G(0x15e)] + '@' + (m[G(0x164)] ? o[G(0x11b)] : o[H(0x15b)]));
+                        z[G(0xff)] = !![], z[H(0xf1) + 'es'] = [y], await q[H(0x11b)](z, m[H(0xdb)][H(0xdc)] + '@' + (m[G(0xfd)] ? o[G(0x101)] : o[G(0x127)]));
                     }
                 }
                 const u = {};
-                u[H(0x132)] = !![];
+                u[H(0x106)] = !![];
                 const v = {};
-                v[H(0x13b)] = m['id'], v[G(0x132)] = ![];
+                v[H(0xf5)] = m['id'], v[H(0x106)] = ![];
                 const w = {};
-                w[G(0x133)] = v, await Message_1[H(0x168)][G(0x146)](u, w);
+                w[G(0x112)] = v, await Message_1[H(0xd7)][G(0xea)](u, w);
                 const x = {};
-                x[G(0x123)] = m[H(0x123)], x[H(0x152)] = o[G(0x166)], x[H(0x11e)] = m, (0xdb7 + 0x19ef + 0x3a * -0xaf, socketEmit_1[G(0x168)])(x);
+                x[G(0x105)] = m[G(0x105)], x[H(0x129)] = o[H(0x12c)], x[G(0xda)] = m, (-0x1c9f + -0xf51 + -0x10 * -0x2bf, socketEmit_1[G(0xd7)])(x);
             }
         } catch (A) {
-            console[H(0x13c)](A), logger_1[G(0x128)][H(0x119)](G(0x12f) + H(0x154) + G(0x135) + H(0x13e) + H(0x115) + G(0x127) + G(0x125) + G(0x155) + A);
+            console[H(0x11d)](A), logger_1[G(0xf0)][H(0x125)](H(0x10f) + G(0x111) + G(0xfe) + G(0x117) + H(0xf8) + H(0x12e) + G(0x119) + H(0xdf) + A);
         }
     };
-exports[D(0x168)] = SetTicketMessagesAsRead;
+exports[E(0xd7)] = SetTicketMessagesAsRead;

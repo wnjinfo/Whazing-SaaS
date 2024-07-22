@@ -1,10 +1,184 @@
 'use strict';
-const z = b, A = b;
+function a() {
+    const Z = [
+        'disconnect',
+        'ogger',
+        'pingTimeou',
+        'ned\x20a\x20tick',
+        'getIO',
+        'at/Chat',
+        '6713634UZpXuv',
+        'LUxdD',
+        'kenSocket',
+        'ent\x20discon',
+        'initIO',
+        'tusUser',
+        '\x20tickets\x20c',
+        'amioi',
+        'HtIdr',
+        'dytwJ',
+        'pKSTG',
+        ':joinTicke',
+        'oZXNj',
+        'DWaIa',
+        'oined\x20to\x20',
+        'VwlVj',
+        'User',
+        'nected\x20,\x20',
+        'Client\x20joi',
+        'eoJPP',
+        'ion',
+        'kPkEe',
+        'lastOnline',
+        '2895494UEneRh',
+        'eSzKs',
+        'GnasP',
+        '__esModule',
+        'ljfQH',
+        'redis',
+        'lrogR',
+        './socketCh',
+        '10AMCGps',
+        'XMUxH',
+        '18CXgEsv',
+        'status',
+        'kVwtf',
+        'nected\x20in\x20',
+        'fication\x20c',
+        'info',
+        'connection',
+        'HZkbs',
+        'tion\x20error',
+        'isValid',
+        'FYnDH',
+        ':joinNotif',
+        'ied',
+        'rNRgS',
+        'FWjzL',
+        'user',
+        'eieum',
+        'data',
+        'lpOSp',
+        'hMNDW',
+        'handshake',
+        ':joinChatB',
+        'Client\x20con',
+        'message',
+        ':userVerif',
+        '__importDe',
+        'token',
+        'logger',
+        'et\x20channel',
+        'Server',
+        'tkHhq',
+        'XtzWj',
+        ':updateSta',
+        'RCTFP',
+        'IsaIK',
+        'attributes',
+        'tokenInval',
+        'Syibg',
+        'defineProp',
+        'emit',
+        'name',
+        'CbJCQ',
+        'ISGUZ',
+        'HNhpv',
+        'tenantId',
+        'oined\x20noti',
+        'env',
+        'lastLogin',
+        'warn',
+        'CQeal',
+        'jxRce',
+        'IO_REDIS_P',
+        'BIlaT',
+        '2934462auVFvR',
+        'hannel.',
+        'authentica',
+        '../errors/',
+        'ERVER',
+        'DWrlE',
+        'rKtuq',
+        'A\x20client\x20j',
+        'pingInterv',
+        '91WPPEeY',
+        'HFGWB',
+        'QeDnI',
+        'hannel\x20',
+        ':notificat',
+        'origin',
+        'adapter',
+        '481112tdrwOJ',
+        'id:\x20',
+        'userId',
+        'AppError',
+        'YepgE',
+        'ASSWORD',
+        'SPBwL',
+        'use',
+        'OJcBq',
+        'not\x20initia',
+        'uDYlg',
+        'toString',
+        'lized',
+        'KqaRY',
+        'auth',
+        'mHrkg',
+        'SERNAME',
+        'ujlFZ',
+        'mRCJT',
+        'update',
+        'id:',
+        '../models/',
+        'profile',
+        'ggMkP',
+        'ication',
+        'cors',
+        'fault',
+        'register',
+        './decodeTo',
+        'wwqpo',
+        'Socket\x20IO\x20',
+        'eUzQV',
+        'IO_REDIS_S',
+        'findByPk',
+        'join',
+        'jgYax',
+        '166520HZKDjZ',
+        'inmRf',
+        'default',
+        'FDuUm',
+        'EWbWd',
+        'IO_REDIS_U',
+        'WHrmk',
+        'socket.io-',
+        'erty',
+        '75364hPLcES',
+        'email',
+        'isOnline',
+        'ORT',
+        '../utils/l',
+        'value',
+        'tFrkZ',
+        'skOJF',
+        'tenant',
+        '1732330pVMzeA',
+        'QaANv',
+        'SOCKET\x20Cli',
+        'socket.io'
+    ];
+    a = function () {
+        return Z;
+    };
+    return a();
+}
+const B = b, C = b;
 (function (c, d) {
-    const x = b, y = b, e = c();
+    const z = b, A = b, e = c();
     while (!![]) {
         try {
-            const f = -parseInt(x(0x105)) / (0x2450 + 0x1 * -0xc4b + -0x1804) * (-parseInt(x(0x12e)) / (0x196c + 0x1 * 0x493 + 0x3 * -0x9ff)) + parseInt(x(0x168)) / (-0x1159 * -0x2 + -0x20d + 0x20a2 * -0x1) + -parseInt(x(0x13d)) / (0xb * 0x30d + -0x437 + -0x4 * 0x755) + parseInt(y(0x15f)) / (0x18aa + 0x1 * 0x1d09 + -0x35ae * 0x1) * (-parseInt(y(0x129)) / (-0x1376 + -0x1 * -0x19d9 + -0x65d)) + -parseInt(y(0x131)) / (0x56 * -0x33 + 0x1 * 0x23de + -0x12b5) * (parseInt(y(0xe8)) / (-0x329 * -0x6 + -0x9f5 + -0x8f9 * 0x1)) + parseInt(x(0x103)) / (0x3c8 + 0x1 * -0x1fbb + 0x31c * 0x9) + parseInt(y(0x153)) / (-0x2d * 0xae + 0x2 * 0xd79 + 0x1d7 * 0x2);
+            const f = parseInt(z(0x1c9)) / (0x22ec + 0xeeb + -0x31d6) + parseInt(A(0x1f3)) / (0x80b * 0x3 + 0x4f7 * 0x1 + -0x1b6 * 0x11) + parseInt(A(0x232)) / (0xc * 0x2f6 + -0x169e + -0x44d * 0x3) + -parseInt(A(0x266)) / (0x22e8 + 0x1 * 0x135 + -0x2419) * (parseInt(A(0x1fb)) / (0x59e * 0x2 + -0x74b + 0x1 * -0x3ec)) + -parseInt(A(0x1dc)) / (0x20e2 + 0x1de1 + 0x1 * -0x3ebd) + -parseInt(A(0x23b)) / (0x181 * 0x11 + 0x166 + -0x1af0) * (parseInt(A(0x242)) / (-0x6e7 * 0x4 + 0x1565 * 0x1 + 0x63f)) + parseInt(z(0x1fd)) / (0x232 + -0x1061 + 0x104 * 0xe) * (parseInt(z(0x1d2)) / (0xb37 + -0xf63 + -0xb * -0x62));
             if (f === d)
                 break;
             else
@@ -13,338 +187,193 @@ const z = b, A = b;
             e['push'](e['shift']());
         }
     }
-}(a, -0x9d00e + -0x4a3 * 0x3f3 + -0x12aa1b * -0x2));
-var __importDefault = this && this[z(0x10e) + z(0xe9)] || function (c) {
-    const B = A;
-    return c && c[B(0x127)] ? c : { 'default': c };
+}(a, 0xf81a5 + 0x1 * -0xe76ab + 0xc22f3));
+var __importDefault = this && this[B(0x216) + C(0x25c)] || function (c) {
+    const D = C;
+    return c && c[D(0x1f6)] ? c : { 'default': c };
+};
+const o = {};
+o[C(0x1ce)] = !![], Object[B(0x223) + C(0x1c8)](exports, B(0x1f6), o), exports[C(0x1da)] = exports[B(0x1e0)] = void (0x81f + 0x1da4 + -0x25c3);
+const socket_io_1 = require(B(0x1d5)), socket_io_redis_1 = __importDefault(require(B(0x1c7) + C(0x1f8))), AppError_1 = __importDefault(require(B(0x235) + C(0x245))), decodeTokenSocket_1 = __importDefault(require(B(0x25e) + B(0x1de))), logger_1 = require(C(0x1cd) + C(0x1d7)), User_1 = __importDefault(require(B(0x257) + B(0x1ec))), Chat_1 = __importDefault(require(C(0x1fa) + B(0x1db)));
+let io;
+const initIO = e => {
+    const E = B, F = B, f = {
+            'oZXNj': E(0x260) + F(0x24b) + E(0x24e),
+            'WHrmk': function (k, l) {
+                return k(l);
+            },
+            'lrogR': F(0x234) + E(0x205),
+            'eieum': function (k, l) {
+                return k === l;
+            },
+            'XtzWj': E(0x1cf),
+            'rNRgS': function (k, l) {
+                return k === l;
+            },
+            'DWrlE': F(0x246),
+            'QeDnI': F(0x24a),
+            'amioi': function (k, l) {
+                return k !== l;
+            },
+            'HNhpv': F(0x265),
+            'eUzQV': function (k, l) {
+                return k(l);
+            },
+            'SPBwL': F(0x229),
+            'GnasP': F(0x225),
+            'HZkbs': F(0x1ca),
+            'mRCJT': E(0x258),
+            'LUxdD': F(0x1fe),
+            'skOJF': E(0x22c),
+            'VwlVj': F(0x1f2),
+            'BIlaT': function (k) {
+                return k();
+            },
+            'RCTFP': function (k, l) {
+                return k(l);
+            },
+            'HtIdr': E(0x1d3),
+            'eoJPP': function (k, l) {
+                return k === l;
+            },
+            'ljfQH': F(0x1fc),
+            'IsaIK': E(0x210),
+            'ggMkP': F(0x222),
+            'mHrkg': F(0x22f),
+            'lpOSp': E(0x1e9),
+            'ujlFZ': F(0x1f1),
+            'FYnDH': E(0x226),
+            'HFGWB': F(0x213) + F(0x200) + F(0x1d1),
+            'FDuUm': F(0x1d6),
+            'uDYlg': E(0x203)
+        }, g = {};
+    g[E(0x240)] = '*';
+    const h = {};
+    h[E(0x25b)] = g, h[E(0x1d8) + 't'] = 0x2bf20, h[E(0x23a) + 'al'] = 0xea60, io = new socket_io_1[(F(0x21a))](e, h);
+    const i = {
+            'host': process[E(0x22b)][F(0x262) + E(0x236)],
+            'port': f[E(0x1c6)](Number, process[E(0x22b)][E(0x230) + F(0x1cc)]),
+            'username': process[E(0x22b)][F(0x1c5) + F(0x252)],
+            'password': process[E(0x22b)][E(0x230) + F(0x247)]
+        }, j = socket_io_redis_1[E(0x268)];
+    return io[E(0x241)](f[E(0x21e)](j, i)), io[E(0x249)](async (k, l) => {
+        const H = F, I = E, m = {
+                'FWjzL': function (n, p) {
+                    const G = b;
+                    return f[G(0x1c6)](n, p);
+                },
+                'kVwtf': f[H(0x1f9)]
+            };
+        if (f[H(0x20d)](f[H(0x21c)], f[I(0x21c)]))
+            try {
+                if (f[I(0x20a)](f[I(0x237)], f[I(0x23d)]))
+                    g[H(0x218)][H(0x202)](I(0x239) + H(0x22a) + H(0x201) + H(0x23e) + h + (H(0x23f) + H(0x1f0))), i[I(0x264)](j + (I(0x23f) + H(0x1f0)));
+                else {
+                    const p = k?.[H(0x211)]?.[H(0x250)]?.[I(0x217)], q = (-0x479 * 0x7 + 0x7 * -0x3fb + 0x3b2c, decodeTokenSocket_1[I(0x268)])(p);
+                    if (q[H(0x206)]) {
+                        if (f[H(0x1e3)](f[I(0x228)], f[I(0x228)]))
+                            i[H(0x218)][H(0x22d)](H(0x221) + H(0x243) + j), k[H(0x224)](I(0x221) + H(0x256) + l['id']), m[H(0x20b)](m, new n(m[H(0x1ff)]));
+                        else {
+                            const s = k?.[I(0x211)]?.[I(0x250)];
+                            k[H(0x211)][I(0x250)] = {
+                                ...s,
+                                ...q[H(0x20e)],
+                                'id': f[H(0x261)](String, q[I(0x20e)]['id']),
+                                'tenantId': f[H(0x1c6)](String, q[I(0x20e)][I(0x229)])
+                            };
+                            const t = {};
+                            t[H(0x220)] = [
+                                'id',
+                                f[I(0x248)],
+                                f[H(0x1f5)],
+                                f[H(0x204)],
+                                f[I(0x254)],
+                                f[I(0x1dd)],
+                                f[I(0x1d0)],
+                                f[I(0x1eb)]
+                            ];
+                            const u = await User_1[H(0x268)][H(0x263)](q[I(0x20e)]['id'], t);
+                            k[H(0x211)][H(0x250)][H(0x20c)] = u, f[H(0x231)](l);
+                        }
+                    }
+                    f[H(0x21e)](l, new Error(f[H(0x1f9)]));
+                }
+            } catch (v) {
+                if (f[H(0x1e3)](f[H(0x1e4)], f[H(0x1e4)])) {
+                    if (!f)
+                        throw new i[(I(0x268))](f[H(0x1e8)]);
+                    return h;
+                } else
+                    logger_1[I(0x218)][H(0x22d)](I(0x221) + I(0x243) + k), k[H(0x224)](I(0x221) + H(0x256) + k['id']), f[H(0x1c6)](l, new Error(f[H(0x1f9)]));
+            }
+        else {
+            const y = {};
+            y[I(0x214)] = I(0x1d4) + H(0x1df) + I(0x1ed) + g + ',\x20' + h, y[H(0x218)][H(0x202)](y);
+        }
+    }), io['on'](f[E(0x24c)], k => {
+        const J = F, L = F, l = {
+                'CQeal': f[J(0x1e8)],
+                'dytwJ': function (n, p) {
+                    const K = J;
+                    return f[K(0x1ef)](n, p);
+                },
+                'inmRf': f[L(0x1f7)],
+                'wwqpo': f[J(0x21f)],
+                'EWbWd': f[L(0x259)],
+                'eSzKs': function (n, p) {
+                    const M = L;
+                    return f[M(0x1e3)](n, p);
+                },
+                'ISGUZ': f[L(0x251)],
+                'KqaRY': f[J(0x20f)],
+                'tkHhq': f[L(0x253)],
+                'pKSTG': f[L(0x207)]
+            }, {tenantId: m} = k[L(0x211)][J(0x250)];
+        if (m) {
+            const n = {};
+            n[L(0x214)] = f[J(0x23c)], n[L(0x20e)] = k[J(0x211)][L(0x250)], logger_1[J(0x218)][J(0x202)](n), k[J(0x264)](m[J(0x24d)]()), k['on'](m + (J(0x215) + L(0x209)), async p => {
+                const N = L, O = L;
+                if (l[N(0x1e5)](l[O(0x267)], l[O(0x267)])) {
+                    const q = await User_1[N(0x268)][N(0x263)](p[N(0x244)]), r = {};
+                    r[N(0x1cb)] = !![], await q[O(0x255)](r), k[N(0x224)](p[O(0x229)] + (N(0x21d) + O(0x1e1)), q);
+                } else
+                    throw new h[(N(0x268))](l[N(0x22e)]);
+            }), k['on'](m + (J(0x212) + 'ox'), p => {
+                const P = L, Q = L;
+                if (l[P(0x1e5)](l[P(0x25f)], l[P(0x26a)])) {
+                    const r = {};
+                    return r[Q(0x268)] = j, g && h[Q(0x1f6)] ? i : r;
+                } else
+                    logger_1[Q(0x218)][Q(0x202)](P(0x1ee) + Q(0x1d9) + P(0x219) + '\x20' + m + ':' + p), k[P(0x264)](m + ':' + p);
+            }), k['on'](m + (L(0x208) + L(0x25a)), () => {
+                const R = J, S = L;
+                l[R(0x1f4)](l[S(0x227)], l[R(0x24f)]) ? (logger_1[S(0x218)][R(0x202)](S(0x239) + S(0x22a) + S(0x201) + R(0x23e) + m + (S(0x23f) + R(0x1f0))), k[S(0x264)](m + (R(0x23f) + R(0x1f0)))) : (i[R(0x218)][R(0x202)](S(0x239) + R(0x1ea) + j + ':' + k + (R(0x1e2) + S(0x233))), l[S(0x264)](m + ':' + n));
+            }), k['on'](m + (J(0x1e7) + 'ts'), p => {
+                const T = J, U = J;
+                l[T(0x1f4)](l[U(0x21b)], l[T(0x1e6)]) ? (logger_1[U(0x218)][U(0x202)](U(0x239) + U(0x1ea) + m + ':' + p + (U(0x1e2) + T(0x233))), k[U(0x264)](m + ':' + p)) : (i[T(0x218)][U(0x202)](U(0x1ee) + U(0x1d9) + U(0x219) + '\x20' + j + ':' + k), l[U(0x264)](m + ':' + n));
+            }), Chat_1[L(0x268)][L(0x25d)](k);
+        }
+        k['on'](f[L(0x269)], p => {
+            const V = J, W = L, q = {};
+            q[V(0x214)] = W(0x1d4) + W(0x1df) + V(0x1ed) + m + ',\x20' + p, logger_1[W(0x218)][W(0x202)](q);
+        });
+    }), io;
+};
+exports[B(0x1e0)] = initIO;
+const getIO = () => {
+    const X = B, Y = B, d = {};
+    d[X(0x238)] = Y(0x260) + Y(0x24b) + X(0x24e);
+    const e = d;
+    if (!io)
+        throw new AppError_1[(Y(0x268))](e[X(0x238)]);
+    return io;
 };
 function b(c, d) {
     const e = a();
     return b = function (f, g) {
-        f = f - (0x70f * -0x4 + -0x15fa + 0x1 * 0x331b);
+        f = f - (-0xc28 + -0x7b3 + 0x15a0);
         let h = e[f];
         return h;
     }, b(c, d);
 }
-const o = {};
-o[A(0x10c)] = !![], Object[z(0xec) + z(0xfa)](exports, z(0x127), o), exports[z(0x155)] = exports[A(0x16e)] = void (0x1b51 + -0x1ce6 + 0x87 * 0x3);
-const socket_io_1 = require(z(0x162)), socket_io_redis_1 = __importDefault(require(z(0x173) + z(0xf3))), AppError_1 = __importDefault(require(A(0xe7) + A(0xeb))), decodeTokenSocket_1 = __importDefault(require(z(0x143) + z(0x123))), logger_1 = require(A(0x16c) + z(0x130)), User_1 = __importDefault(require(A(0x137) + z(0x139))), Chat_1 = __importDefault(require(A(0x150) + A(0x135)));
-let io;
-const initIO = e => {
-    const C = A, D = z, f = {
-            'YKdXu': C(0x152) + D(0x17b) + D(0x16f),
-            'mmJXC': function (k, l) {
-                return k !== l;
-            },
-            'IpJpZ': D(0x116),
-            'VDCpR': D(0xf7),
-            'gWwgE': function (k, l) {
-                return k === l;
-            },
-            'UbNVR': C(0xfc),
-            'bhcXy': function (k, l) {
-                return k(l);
-            },
-            'EQVxF': function (k, l) {
-                return k(l);
-            },
-            'JzFwI': D(0x156),
-            'UstAr': D(0xf2),
-            'sITRf': C(0x132),
-            'NvDBu': D(0x12a),
-            'mTyIn': D(0x174),
-            'rCaeI': C(0x14b),
-            'WAIlH': C(0x164),
-            'xruhf': function (k) {
-                return k();
-            },
-            'ornkK': function (k, l) {
-                return k(l);
-            },
-            'CryMo': C(0x15c) + D(0x126),
-            'gEoHT': function (k, l) {
-                return k === l;
-            },
-            'XbZUp': D(0x11f),
-            'BqTje': C(0x140),
-            'FZASO': C(0x15d),
-            'NPbcZ': D(0x17a),
-            'XUtlU': C(0x136) + D(0x102) + C(0x12c),
-            'yvbKg': D(0xf1),
-            'fjLmz': function (k, l) {
-                return k(l);
-            },
-            'yEvnu': function (k, l) {
-                return k(l);
-            },
-            'tNJzV': C(0x14c)
-        }, g = {};
-    g[C(0x157)] = '*';
-    const h = {};
-    h[C(0x149)] = g, h[C(0x11a) + 't'] = 0x2bf20, h[C(0xee) + 'al'] = 0xea60, io = new socket_io_1[(D(0x161))](e, h);
-    const i = {
-            'host': process[C(0x113)][D(0x179) + D(0x100)],
-            'port': f[D(0x106)](Number, process[C(0x113)][D(0xf4) + D(0x169)]),
-            'username': process[D(0x113)][C(0x134) + D(0x15b)],
-            'password': process[C(0x113)][D(0xf4) + C(0x16a)]
-        }, j = socket_io_redis_1[D(0x10b)];
-    return io[C(0x13b)](f[C(0xfe)](j, i)), io[D(0x158)](async (k, l) => {
-        const E = D, F = C, m = {};
-        m[E(0x120)] = f[E(0x148)];
-        const n = m;
-        if (f[F(0x142)](f[F(0x122)], f[E(0x124)]))
-            try {
-                if (f[F(0xea)](f[E(0x17c)], f[F(0x17c)])) {
-                    const p = k?.[F(0x109)]?.[F(0x159)]?.[F(0x117)], q = (0x56 * -0x3d + 0x8a7 * 0x3 + -0x577, decodeTokenSocket_1[F(0x10b)])(p);
-                    if (q[E(0x14d)]) {
-                        const r = k?.[E(0x109)]?.[E(0x159)];
-                        k[E(0x109)][E(0x159)] = {
-                            ...r,
-                            ...q[F(0x176)],
-                            'id': f[E(0x167)](String, q[F(0x176)]['id']),
-                            'tenantId': f[F(0x15a)](String, q[E(0x176)][F(0x156)])
-                        };
-                        const s = {};
-                        s[F(0xfb)] = [
-                            'id',
-                            f[E(0x10f)],
-                            f[F(0xf8)],
-                            f[F(0xe6)],
-                            f[E(0x171)],
-                            f[E(0x151)],
-                            f[E(0x12f)],
-                            f[F(0x13e)]
-                        ];
-                        const t = await User_1[E(0x10b)][E(0xf5)](q[E(0x176)]['id'], s);
-                        k[F(0x109)][E(0x159)][E(0x104)] = t, f[F(0xed)](l);
-                    }
-                    f[E(0x175)](l, new Error(f[E(0x11b)]));
-                } else
-                    g[F(0x172)][F(0x14a)](E(0x14e) + E(0xe5) + E(0x165) + F(0x163) + h + (F(0x12b) + F(0x112))), i[E(0x170)](j + (E(0x12b) + F(0x112)));
-            } catch (v) {
-                logger_1[F(0x172)][E(0x154)](F(0x16b) + E(0xef) + k), k[F(0xf6)](F(0x16b) + E(0x101) + k['id']), f[E(0x15a)](l, new Error(f[E(0x11b)]));
-            }
-        else {
-            if (!f)
-                throw new i[(E(0x10b))](n[F(0x120)]);
-            return h;
-        }
-    }), io['on'](f[C(0x125)], k => {
-        const H = C, I = D, l = {
-                'eayFF': function (n, p) {
-                    const G = b;
-                    return f[G(0x145)](n, p);
-                },
-                'KvNWj': f[H(0x13f)],
-                'ZsCrz': f[I(0xf9)]
-            }, {tenantId: m} = k[I(0x109)][H(0x159)];
-        if (m) {
-            const n = {};
-            n[H(0x177)] = f[H(0xfd)], n[H(0x176)] = k[I(0x109)][H(0x159)], logger_1[I(0x172)][I(0x14a)](n), k[I(0x170)](m[H(0x146)]()), k['on'](m + (H(0x12d) + H(0x11d)), async p => {
-                const J = H, K = I;
-                if (l[J(0x133)](l[J(0x121)], l[J(0x110)])) {
-                    const r = {};
-                    return r[K(0x10b)] = j, g && h[K(0x127)] ? i : r;
-                } else {
-                    const r = await User_1[K(0x10b)][K(0xf5)](p[J(0xf0)]), s = {};
-                    s[J(0x166)] = !![], await r[K(0x178)](s), k[K(0xf6)](p[K(0x156)] + (K(0xff) + J(0x10a)), r);
-                }
-            }), k['on'](m + (I(0x11c) + 'ox'), p => {
-                const L = H, M = I, q = {};
-                q[L(0x147)] = f[M(0x148)];
-                const r = q;
-                if (f[M(0x145)](f[L(0x141)], f[L(0x15e)]))
-                    throw new h[(L(0x10b))](r[L(0x147)]);
-                else
-                    logger_1[L(0x172)][L(0x14a)](L(0x119) + L(0x107) + M(0x16d) + '\x20' + m + ':' + p), k[M(0x170)](m + ':' + p);
-            }), k['on'](m + (I(0x13c) + I(0x111)), () => {
-                const N = H, O = I;
-                logger_1[N(0x172)][N(0x14a)](N(0x14e) + O(0xe5) + N(0x165) + O(0x163) + m + (O(0x12b) + N(0x112))), k[N(0x170)](m + (N(0x12b) + O(0x112)));
-            }), k['on'](m + (H(0x14f) + 'ts'), p => {
-                const P = I, Q = H;
-                logger_1[P(0x172)][Q(0x14a)](Q(0x14e) + Q(0x118) + m + ':' + p + (Q(0x114) + Q(0x160))), k[Q(0x170)](m + ':' + p);
-            }), Chat_1[H(0x10b)][I(0x115)](k);
-        }
-        k['on'](f[I(0x11e)], p => {
-            const R = H, S = I, q = {};
-            q[R(0x177)] = S(0x17d) + S(0x108) + R(0x128) + m + ',\x20' + p, logger_1[S(0x172)][S(0x14a)](q);
-        });
-    }), io;
-};
-exports[z(0x16e)] = initIO;
-function a() {
-    const V = [
-        'tpyZI',
-        'User',
-        'GobKH',
-        'adapter',
-        ':joinNotif',
-        '326296CXoxfz',
-        'WAIlH',
-        'FZASO',
-        'ZSrcV',
-        'XbZUp',
-        'mmJXC',
-        './decodeTo',
-        'UEczX',
-        'gEoHT',
-        'toString',
-        'SSBAk',
-        'YKdXu',
-        'cors',
-        'info',
-        'lastLogin',
-        'connection',
-        'isValid',
-        'A\x20client\x20j',
-        ':joinTicke',
-        './socketCh',
-        'mTyIn',
-        'Socket\x20IO\x20',
-        '13911080UKtePD',
-        'warn',
-        'getIO',
-        'tenantId',
-        'origin',
-        'use',
-        'auth',
-        'EQVxF',
-        'SERNAME',
-        'authentica',
-        'eoRLb',
-        'BqTje',
-        '469405rfGjhR',
-        'hannel.',
-        'Server',
-        'socket.io',
-        'hannel\x20',
-        'lastOnline',
-        'fication\x20c',
-        'isOnline',
-        'bhcXy',
-        '794826rHjIrh',
-        'ORT',
-        'ASSWORD',
-        'tokenInval',
-        '../utils/l',
-        'et\x20channel',
-        'initIO',
-        'lized',
-        'join',
-        'NvDBu',
-        'logger',
-        'socket.io-',
-        'status',
-        'ornkK',
-        'data',
-        'message',
-        'update',
-        'IO_REDIS_S',
-        'gwnPL',
-        'not\x20initia',
-        'UbNVR',
-        'SOCKET\x20Cli',
-        'oined\x20noti',
-        'sITRf',
-        '../errors/',
-        '16pHLhOT',
-        'fault',
-        'gWwgE',
-        'AppError',
-        'defineProp',
-        'xruhf',
-        'pingInterv',
-        'id:\x20',
-        'userId',
-        'disconnect',
-        'name',
-        'redis',
-        'IO_REDIS_P',
-        'findByPk',
-        'emit',
-        'wSYlH',
-        'UstAr',
-        'NPbcZ',
-        'erty',
-        'attributes',
-        'xoCwU',
-        'XUtlU',
-        'yEvnu',
-        ':updateSta',
-        'ERVER',
-        'id:',
-        'nected\x20in\x20',
-        '3987891nJwpTR',
-        'user',
-        '614577KixGwu',
-        'fjLmz',
-        'ned\x20a\x20tick',
-        'ent\x20discon',
-        'handshake',
-        'tusUser',
-        'default',
-        'value',
-        'ElveD',
-        '__importDe',
-        'JzFwI',
-        'ZsCrz',
-        'ication',
-        'ion',
-        'env',
-        '\x20tickets\x20c',
-        'register',
-        'RYIgA',
-        'token',
-        'oined\x20to\x20',
-        'Client\x20joi',
-        'pingTimeou',
-        'CryMo',
-        ':joinChatB',
-        'ied',
-        'yvbKg',
-        'CjxsN',
-        'TaMPe',
-        'KvNWj',
-        'IpJpZ',
-        'kenSocket',
-        'VDCpR',
-        'tNJzV',
-        'tion\x20error',
-        '__esModule',
-        'nected\x20,\x20',
-        '66HiGKMJ',
-        'profile',
-        ':notificat',
-        'tenant',
-        ':userVerif',
-        '2SEeIyZ',
-        'rCaeI',
-        'ogger',
-        '3486749sgMgse',
-        'email',
-        'eayFF',
-        'IO_REDIS_U',
-        'at/Chat',
-        'Client\x20con',
-        '../models/'
-    ];
-    a = function () {
-        return V;
-    };
-    return a();
-}
-const getIO = () => {
-    const T = z, U = z, d = {};
-    d[T(0x10d)] = function (f, g) {
-        return f !== g;
-    }, d[U(0x144)] = T(0x13a), d[U(0x138)] = U(0x152) + U(0x17b) + U(0x16f);
-    const e = d;
-    if (!io) {
-        if (e[T(0x10d)](e[U(0x144)], e[T(0x144)]))
-            i[T(0x172)][U(0x14a)](U(0x14e) + T(0x118) + j + ':' + k + (T(0x114) + T(0x160))), l[U(0x170)](m + ':' + n);
-        else
-            throw new AppError_1[(U(0x10b))](e[T(0x138)]);
-    }
-    return io;
-};
-exports[A(0x155)] = getIO;
+exports[C(0x1da)] = getIO;

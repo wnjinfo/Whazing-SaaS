@@ -4,7 +4,7 @@ const s = b, t = b;
     const q = b, r = b, e = c();
     while (!![]) {
         try {
-            const f = parseInt(q(0x87)) / (-0x15f6 + 0x7b * 0x1b + 0x8fe) + -parseInt(q(0x72)) / (0x16fa + -0x39 * 0x45 + 0xb1 * -0xb) * (-parseInt(r(0x84)) / (-0x32 + 0x313 * 0x2 + -0x5f1)) + parseInt(r(0x7a)) / (0x1cb9 + 0x25d1 + -0x4286) * (-parseInt(r(0x82)) / (-0x1805 + -0x38 * 0x3b + 0x24f2)) + parseInt(q(0x79)) / (0x2326 + -0x11 * -0x7f + -0x2b8f * 0x1) + -parseInt(r(0x90)) / (0x7d + 0x3b * 0x20 + -0x7d6) * (-parseInt(r(0x76)) / (-0xb * -0x2c9 + 0x1426 + 0xb7 * -0x47)) + -parseInt(r(0x86)) / (-0x2222 + -0xdf1 * -0x1 + -0x6 * -0x35f) * (parseInt(r(0x69)) / (0x17 * -0x197 + -0xb7 * 0x32 + 0x4859)) + -parseInt(q(0x7e)) / (0x13ee + -0x1c3d + 0x85a);
+            const f = parseInt(q(0x168)) / (0x4f6 + 0x1dde * 0x1 + 0x22d3 * -0x1) + parseInt(r(0x156)) / (-0x1 * -0x617 + -0x1f6d + 0x1958) * (parseInt(r(0x145)) / (-0x1 * 0x11d5 + 0x13ac + -0x1d4)) + parseInt(r(0x169)) / (0x1faf + 0x3c7 + -0x1 * 0x2372) * (parseInt(q(0x147)) / (0xce * 0x25 + 0x166d + 0x1a17 * -0x2)) + -parseInt(r(0x154)) / (-0x26af + -0xabc + 0x3171) + parseInt(r(0x16b)) / (-0x1 * 0x151b + -0x6be * 0x4 + -0x2 * -0x180d) * (parseInt(r(0x14e)) / (-0x1b7a + -0x848 + 0x23ca)) + -parseInt(r(0x15f)) / (0x13d4 + 0x15cf + -0x299a) + -parseInt(r(0x15b)) / (0x2364 + -0x1e33 + -0x527) * (-parseInt(r(0x150)) / (0x226d * -0x1 + -0x16a9 * -0x1 + 0x1 * 0xbcf));
             if (f === d)
                 break;
             else
@@ -13,95 +13,95 @@ const s = b, t = b;
             e['push'](e['shift']());
         }
     }
-}(a, 0x412c9 + -0x1 * 0x9c0c + 0x6c78a));
-var __importDefault = this && this[s(0x93) + t(0x67)] || function (c) {
-    const u = t;
-    return c && c[u(0x7b)] ? c : { 'default': c };
-};
-const k = {};
-function b(c, d) {
-    const e = a();
-    return b = function (f, g) {
-        f = f - (-0x1 * 0x117d + -0x2 * -0x10f6 + 0x201 * -0x8);
-        let h = e[f];
-        return h;
-    }, b(c, d);
-}
-k[t(0x7c)] = !![], Object[s(0x96) + s(0x91)](exports, t(0x7b), k);
-const getQuotedForMessageId_1 = __importDefault(require(t(0x6a) + s(0x70) + t(0x8e) + s(0x68))), CreateMessageService_1 = __importDefault(require(s(0x6d) + t(0x6b) + t(0x8f) + s(0x7d))), MessengerVerifyMessage = async (f, g, h) => {
-        const v = s, w = t, i = {};
-        i[v(0x85)] = v(0x73);
-        const j = i;
-        let l;
-        if (f?.[v(0x6f)]?.[v(0x7f)]?.[w(0x78)]) {
-            const p = await (-0x1 * 0x706 + 0x14f5 + -0xdef, getQuotedForMessageId_1[v(0x71)])(f[v(0x6f)][w(0x7f)][w(0x78)], g[w(0x75)]);
-            l = p?.['id'] || undefined;
-        }
-        const m = {};
-        m[v(0x92)] = f[w(0x95)] || '', m[v(0x6e)] = g['id'], m[v(0x8b)] = h['id'], m[v(0x8a)] = f[w(0x6f)][v(0x83)] || '', m[v(0x89)] = ![], m[v(0x74)] = f[w(0x80)], m[w(0x8d)] = ![], m[v(0x77) + 'd'] = l, m[w(0x8c)] = f[w(0x8c)], m[w(0x6c)] = j[w(0x85)];
-        const n = m;
-        await g[w(0x81)]({
-            'lastMessage': n[w(0x8a)],
-            'lastMessageAt': new Date()[w(0x94)](),
-            'answered': ![]
-        });
-        const o = {};
-        o[v(0x88) + 'a'] = n, o[w(0x75)] = g[w(0x75)], await (0x1 * 0x24f2 + 0x8 * 0x1e6 + 0x1a11 * -0x2, CreateMessageService_1[w(0x71)])(o);
-    };
+}(a, -0x89ea7 + 0x10dc98 + -0x61f61 * -0x1));
 function a() {
     const x = [
-        'defineProp',
-        'fault',
-        'ageId',
-        '4860330gJuTtZ',
-        '../../help',
-        'Services/C',
-        'status',
-        '../Message',
-        'ticketId',
-        'message',
-        'ers/getQuo',
-        'default',
-        '10218bptEam',
-        'received',
-        'mediaType',
-        'tenantId',
-        '24bSPyQw',
-        'quotedMsgI',
+        '2144oOUSrI',
         'mid',
-        '6466962XdaNMz',
-        '428zfgmYh',
-        '__esModule',
+        '266203viHywr',
+        'message',
         'value',
-        'geService',
-        '5751042OMqeBB',
-        'reply_to',
-        'type',
-        'update',
-        '23705ScSWWa',
-        'text',
-        '201XlEEdx',
-        'oQgXI',
-        '9OTDMbD',
-        '403529AImUmT',
-        'messageDat',
+        'default',
         'fromMe',
+        'received',
+        'kbhcg',
+        'getTime',
+        'text',
+        'reply_to',
+        '3ktzAxq',
+        'tenantId',
+        '12605dcrNrI',
+        'messageId',
+        'type',
+        'Services/C',
         'body',
+        '__importDe',
+        'status',
+        '168RalQaG',
+        'geService',
+        '2582723woSaRO',
+        '__esModule',
+        'read',
+        'messageDat',
+        '9196734MpKTSK',
+        'message_id',
+        '285888POqivG',
+        'quotedMsgI',
+        'tedForMess',
+        'mediaType',
+        '../../help',
+        '10riwrRm',
+        'ageId',
+        'update',
+        '../Message',
+        '15746940aqiITO',
+        'fault',
         'contactId',
         'timestamp',
-        'read',
-        'tedForMess',
         'reateMessa',
-        '848834yRjlRF',
+        'defineProp',
+        'ers/getQuo',
+        'ticketId',
         'erty',
-        'messageId',
-        '__importDe',
-        'getTime',
-        'message_id'
+        '1696241BBAomw'
     ];
     a = function () {
         return x;
     };
     return a();
 }
-exports[t(0x71)] = MessengerVerifyMessage;
+var __importDefault = this && this[s(0x14c) + t(0x160)] || function (c) {
+    const u = s;
+    return c && c[u(0x151)] ? c : { 'default': c };
+};
+function b(c, d) {
+    const e = a();
+    return b = function (f, g) {
+        f = f - (0x1d57 + -0x7 * 0x16a + 0x22 * -0x89);
+        let h = e[f];
+        return h;
+    }, b(c, d);
+}
+const k = {};
+k[t(0x16d)] = !![], Object[t(0x164) + s(0x167)](exports, t(0x151), k);
+const getQuotedForMessageId_1 = __importDefault(require(t(0x15a) + s(0x165) + s(0x158) + t(0x15c))), CreateMessageService_1 = __importDefault(require(t(0x15e) + s(0x14a) + s(0x163) + s(0x14f))), MessengerVerifyMessage = async (f, g, h) => {
+        const v = s, w = s, i = {};
+        i[v(0x141)] = v(0x140);
+        const j = i;
+        let l;
+        if (f?.[v(0x16c)]?.[v(0x144)]?.[v(0x16a)]) {
+            const p = await (-0x1 * 0x157f + 0x1fb5 + 0xa36 * -0x1, getQuotedForMessageId_1[v(0x16e)])(f[v(0x16c)][w(0x144)][v(0x16a)], g[w(0x146)]);
+            l = p?.['id'] || undefined;
+        }
+        const m = {};
+        m[v(0x148)] = f[v(0x155)] || '', m[v(0x166)] = g['id'], m[v(0x161)] = h['id'], m[w(0x14b)] = f[w(0x16c)][w(0x143)] || '', m[v(0x13f)] = ![], m[w(0x159)] = f[w(0x149)], m[w(0x152)] = ![], m[v(0x157) + 'd'] = l, m[v(0x162)] = f[w(0x162)], m[v(0x14d)] = j[v(0x141)];
+        const n = m;
+        await g[w(0x15d)]({
+            'lastMessage': n[w(0x14b)],
+            'lastMessageAt': new Date()[v(0x142)](),
+            'answered': ![]
+        });
+        const o = {};
+        o[w(0x153) + 'a'] = n, o[v(0x146)] = g[w(0x146)], await (-0x1339 * 0x1 + 0x4 * -0x3fd + 0x232d, CreateMessageService_1[w(0x16e)])(o);
+    };
+exports[s(0x16e)] = MessengerVerifyMessage;

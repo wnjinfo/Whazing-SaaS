@@ -1,18 +1,115 @@
 'use strict';
-function b(c, d) {
-    const e = a();
-    return b = function (f, g) {
-        f = f - (0x8c3 * 0x3 + 0x1c * 0x7 + -0x191c);
-        let h = e[f];
-        return h;
-    }, b(c, d);
+function a() {
+    const S = [
+        'GfBTj',
+        'GET',
+        'zXgJD',
+        'vgeLY',
+        'url',
+        'cZXpr',
+        'all',
+        'pipe',
+        'message_id',
+        'finish',
+        'VpRMU',
+        'method',
+        '__esModule',
+        'path',
+        'tenantId',
+        'public',
+        'feXdC',
+        'EqURL',
+        'createWrit',
+        'erty',
+        'type',
+        '185616neGKZD',
+        'axios',
+        'split',
+        'reply_to',
+        'wciMQ',
+        'mid',
+        '__importDe',
+        'messageDat',
+        'update',
+        'EuTlK',
+        'message',
+        '708548nnIdXE',
+        'content-di',
+        '15732mYPMPF',
+        'NEoTK',
+        'kpTTF',
+        'fuSOT',
+        '1337fCkXqO',
+        '1139109qsDbez',
+        'parameters',
+        'error',
+        'join',
+        'MwOMH',
+        'text',
+        'DPmnz',
+        'fromMe',
+        'LOAD',
+        'IlFZZ',
+        'ageId',
+        'rKfmI',
+        'EuDkP',
+        'sposition',
+        'timestamp',
+        'stream',
+        '../../help',
+        'DMREZ',
+        'received',
+        'vQuHt',
+        'reateMessa',
+        'gCRxx',
+        'attachment',
+        'TwplS',
+        'geService',
+        'data',
+        '278280CVJWWo',
+        'BizAc',
+        '../Message',
+        '1671428vkJvvO',
+        'map',
+        'tedForMess',
+        'filename',
+        'payload',
+        'defineProp',
+        'fault',
+        'headers',
+        'YpZBd',
+        'qrNLK',
+        'default',
+        'parse',
+        'BMTEX',
+        'MvFte',
+        'eKMsl',
+        'avRVa',
+        'VWjgV',
+        'Services/C',
+        'value',
+        'hXfUe',
+        'content-ty',
+        'ERROR\x20DONW',
+        'eStream',
+        'getTime',
+        'dLWwB',
+        'RzQnt',
+        '1545750vRLKdm',
+        'ers/getQuo',
+        'responseTy'
+    ];
+    a = function () {
+        return S;
+    };
+    return a();
 }
-const z = b, A = b;
+const C = b, D = b;
 (function (c, d) {
-    const x = b, y = b, e = c();
+    const A = b, B = b, e = c();
     while (!![]) {
         try {
-            const f = parseInt(x(0x1ff)) / (-0x1093 * -0x1 + -0x4d8 * 0x8 + 0x162e) * (parseInt(x(0x21a)) / (-0x339 * 0x2 + 0x43 * 0x36 + -0x7ae)) + parseInt(x(0x210)) / (-0x167a + -0x3b6 + 0x1a33) * (parseInt(x(0x216)) / (-0x59 + 0x579 * 0x7 + -0x25f2)) + -parseInt(x(0x240)) / (0x1 * 0x4e3 + -0x1e65 + -0x5 * -0x51b) * (parseInt(y(0x204)) / (-0x18f + -0xca0 + -0x1 * -0xe35)) + parseInt(x(0x23d)) / (-0x14a2 + 0x1b89 + -0x6e * 0x10) + parseInt(x(0x235)) / (0x64b + 0x22a * -0x8 + 0xb0d) * (-parseInt(y(0x233)) / (-0x1f * -0x125 + -0x1bae + -0x7c4)) + -parseInt(y(0x222)) / (0x2eb * 0x6 + -0x353 * 0x5 + -0xd9) * (-parseInt(y(0x239)) / (0x1769 + 0x1b * 0xa6 + -0x1470 * 0x2)) + -parseInt(x(0x1f3)) / (-0x200a + -0x23df + -0x43f5 * -0x1);
+            const f = -parseInt(A(0x228)) / (0x1b * 0x4a + -0x86 * -0x47 + -0x2cf7) + parseInt(B(0x207)) / (0x9 * 0x239 + -0x397 * -0x2 + -0x1b2d) + parseInt(A(0x20e)) / (0xd5c + -0x6a + -0xcef) + -parseInt(B(0x22b)) / (0x45 * -0x7a + -0xc09 + 0x2cef) + -parseInt(A(0x1e4)) / (0x2628 + 0x336 + -0x2959) + parseInt(A(0x209)) / (-0x8d0 + -0x1aaf + -0x3 * -0xbd7) * (parseInt(A(0x20d)) / (-0x22aa + -0x2 * -0x3ac + 0x1b59)) + parseInt(B(0x1fc)) / (-0x6c6 + -0xec6 + 0x1594);
             if (f === d)
                 break;
             else
@@ -21,213 +118,146 @@ const z = b, A = b;
             e['push'](e['shift']());
         }
     }
-}(a, -0x13a642 + 0x2 * 0x5d9db + 0x125886));
-function a() {
-    const M = [
-        'parameters',
-        'mqfWy',
-        'HJeXZ',
-        'type',
-        'join',
-        'method',
-        'error',
-        'axios',
-        '1Meuzve',
-        'value',
-        'LDYPh',
-        'all',
-        'payload',
-        '6vKLGAo',
-        'pipe',
-        'PxIKo',
-        'dtPgK',
-        'tedForMess',
-        'fuqXr',
-        'update',
-        'ERROR\x20DONW',
-        'getTime',
-        'content-ty',
-        '../../help',
-        'createWrit',
-        '2445585tJHOZk',
-        'defineProp',
-        'Services/C',
-        'eStream',
-        'ghGBr',
-        'kRifS',
-        '4YNRxzL',
-        'message_id',
-        'messageDat',
-        'fault',
-        '12396JFdmzJ',
-        'reply_to',
-        'erty',
-        '__esModule',
-        'dIYiS',
-        'fromMe',
-        'cCLxz',
-        'split',
-        '30kfAzBQ',
-        'mid',
-        'headers',
-        'uAVQH',
-        'LOAD',
-        'AoJVV',
-        'message',
-        'default',
-        'AUoyL',
-        'timestamp',
-        'data',
-        'finish',
-        'PHJXx',
-        'pmIZU',
-        'ouByK',
-        'geService',
-        'filename',
-        '4999599EnsmCh',
-        'stream',
-        '16cMlepq',
-        'parse',
-        'ers/getQuo',
-        'content-di',
-        '1597365CFSIFR',
-        'sposition',
-        'attachment',
-        'map',
-        '8786085AIlWus',
-        'SsuOG',
-        'received',
-        '506040YwkVQf',
-        'tenantId',
-        'GET',
-        'path',
-        '../Message',
-        'url',
-        'KeMHg',
-        'zGbug',
-        'aSsIy',
-        '__importDe',
-        'text',
-        'ageId',
-        'pPIaF',
-        'public',
-        'reateMessa',
-        '7421964WQmbvO',
-        'responseTy',
-        'nqlwo',
-        'iMKLM'
-    ];
-    a = function () {
-        return M;
-    };
-    return a();
+}(a, 0x7544d + 0x1f83d + -0x57174));
+function b(c, d) {
+    const e = a();
+    return b = function (f, g) {
+        f = f - (-0x1b91 + 0x115b * 0x1 + 0xc13);
+        let h = e[f];
+        return h;
+    }, b(c, d);
 }
-var __importDefault = this && this[z(0x249) + A(0x219)] || function (c) {
-    const B = A;
-    return c && c[B(0x21d)] ? c : { 'default': c };
+var __importDefault = this && this[C(0x202) + D(0x231)] || function (c) {
+    const E = D;
+    return c && c[E(0x1f3)] ? c : { 'default': c };
 };
 const w = {};
-w[A(0x200)] = !![], Object[z(0x211) + z(0x21c)](exports, z(0x21d), w);
-const path_1 = require(z(0x243)), axios_1 = __importDefault(require(A(0x1fe))), fs_1 = require('fs'), content_disposition_1 = __importDefault(require(A(0x238) + A(0x23a))), CreateMessageService_1 = __importDefault(require(A(0x244) + z(0x212) + z(0x1f2) + z(0x231))), getQuotedForMessageId_1 = __importDefault(require(z(0x20e) + A(0x237) + z(0x208) + z(0x24b))), downloadFile = async (e, f) => {
-        const C = z, D = A, g = {
-                'dtPgK': C(0x20b) + C(0x226),
-                'pmIZU': function (o, p) {
+w[D(0x23d)] = !![], Object[C(0x230) + C(0x1fa)](exports, C(0x1f3), w);
+const path_1 = require(D(0x1f4)), axios_1 = __importDefault(require(C(0x1fd))), fs_1 = require('fs'), content_disposition_1 = __importDefault(require(C(0x208) + C(0x21b))), CreateMessageService_1 = __importDefault(require(D(0x22a) + D(0x23c) + C(0x222) + C(0x226))), getQuotedForMessageId_1 = __importDefault(require(C(0x21e) + C(0x1e5) + D(0x22d) + D(0x218))), downloadFile = async (e, f) => {
+        const F = D, G = D, g = {
+                'MvFte': F(0x1df) + F(0x216),
+                'DPmnz': function (o, p) {
                     return o(p);
                 },
-                'fuqXr': D(0x20d) + 'pe',
-                'aSsIy': C(0x22d),
-                'HJeXZ': D(0x1fd),
-                'ghGBr': D(0x242),
-                'AUoyL': D(0x234),
-                'SsuOG': D(0x238) + D(0x23a),
-                'cCLxz': function (o, p) {
-                    return o !== p;
-                },
-                'kRifS': C(0x21e),
-                'iMKLM': C(0x1f8),
-                'KeMHg': function (o, p) {
+                'cZXpr': F(0x1f0),
+                'BizAc': F(0x210),
+                'EqURL': F(0x1de) + 'pe',
+                'qrNLK': function (o, p) {
                     return o === p;
                 },
-                'ouByK': C(0x24c),
-                'AoJVV': C(0x1f1)
+                'gCRxx': G(0x1e9),
+                'vgeLY': function (o, p) {
+                    return o(p);
+                },
+                'TwplS': function (o, p) {
+                    return o !== p;
+                },
+                'MwOMH': G(0x217),
+                'DMREZ': F(0x1e8),
+                'fuSOT': G(0x21d),
+                'dLWwB': G(0x208) + F(0x21b),
+                'avRVa': function (o, p) {
+                    return o === p;
+                },
+                'EuTlK': F(0x237),
+                'feXdC': F(0x1dd),
+                'GfBTj': function (o, p) {
+                    return o !== p;
+                },
+                'eKMsl': G(0x219),
+                'NEoTK': F(0x1f6)
             }, h = {};
-        h[D(0x245)] = e, h[D(0x1fc)] = g[C(0x214)], h[D(0x1f4) + 'pe'] = g[C(0x22a)];
-        const i = await (0x11 * 0x56 + 0xca1 + -0x1257, axios_1[C(0x229)])(h), j = {};
-        j[C(0x1f7)] = {};
-        const k = i[D(0x224)][g[D(0x23e)]] ? content_disposition_1[D(0x229)][D(0x236)](i[D(0x224)][g[C(0x23e)]] || '') : j;
+        h[G(0x1eb)] = e, h[G(0x1f2)] = g[G(0x21f)], h[G(0x1e6) + 'pe'] = g[G(0x20c)];
+        const i = await (0x2289 + 0x23f * 0x1 + -0x24c8, axios_1[G(0x235)])(h), j = {};
+        j[G(0x20f)] = {};
+        const k = i[F(0x232)][g[F(0x1e2)]] ? content_disposition_1[G(0x235)][G(0x236)](i[G(0x232)][g[G(0x1e2)]] || '') : j;
         let l = '';
-        const m = k?.[C(0x1f7)]?.[C(0x232)];
+        const m = k?.[F(0x20f)]?.[F(0x22e)];
         if (m) {
-            if (g[C(0x220)](g[C(0x215)], g[C(0x1f6)])) {
-                const o = k[D(0x1f7)][C(0x232)];
-                l = new Date()[D(0x20c)]() + '-' + o;
-            } else
-                h[D(0x1fd)](g[D(0x207)], i), g[D(0x22f)](j, new k(l));
-        } else {
-            if (g[D(0x246)](g[D(0x230)], g[C(0x230)])) {
-                const q = i[C(0x224)][g[D(0x209)]], r = q[D(0x221)]('/')[0xbc * 0x1f + 0x8b1 + -0x53e * 0x6];
-                l = f + '-' + new Date()[D(0x20c)]() + '.' + r;
+            if (g[F(0x23a)](g[F(0x205)], g[F(0x1f7)])) {
+                const p = {};
+                return p[G(0x235)] = j, g && h[G(0x1f3)] ? i : p;
             } else {
-                const t = g[D(0x224)][g[C(0x209)]], u = t[C(0x221)]('/')[0x371 * -0x1 + 0x4e4 + -0x172];
-                h = i + '-' + new j()[D(0x20c)]() + '.' + u;
+                const p = k[G(0x20f)][G(0x22e)];
+                l = new Date()[G(0x1e1)]() + '-' + p;
+            }
+        } else {
+            if (g[F(0x1e7)](g[G(0x239)], g[G(0x239)]))
+                k[G(0x227)][F(0x1ee)]((-0x2e * 0x97 + -0x323 * -0x1 + -0x1 * -0x17ff, l[G(0x1f9) + G(0x1e0)])(m))['on'](g[G(0x1ec)], async () => s(t))['on'](g[F(0x229)], x => {
+                    const H = F, I = G;
+                    s[H(0x210)](g[H(0x238)], x), g[I(0x214)](t, new u(x));
+                });
+            else {
+                const r = i[G(0x232)][g[F(0x1f8)]], s = r[F(0x1fe)]('/')[-0x2ee * 0xa + 0x1 * -0x24fa + -0x37d * -0x13];
+                l = f + '-' + new Date()[F(0x1e1)]() + '.' + s;
             }
         }
-        const n = (-0x29 * -0x16 + 0x10f + 0x3 * -0x187, path_1[D(0x1fb)])(__dirname, '..', '..', '..', g[C(0x227)], l);
+        const n = (0x29 * -0x99 + 0x53 * 0x10 + 0x1351, path_1[G(0x211)])(__dirname, '..', '..', '..', g[G(0x20a)], l);
         return await new Promise((t, u) => {
-            const E = D, F = C;
-            i[E(0x22c)][E(0x205)]((-0x24f0 + -0x638 * 0x2 + 0x3160, fs_1[F(0x20f) + E(0x213)])(n))['on'](g[F(0x248)], async () => t(l))['on'](g[E(0x1f9)], v => {
-                const G = E, H = E;
-                console[G(0x1fd)](g[G(0x207)], v), g[H(0x22f)](u, new Error(v));
-            });
+            const J = G, L = G, v = {
+                    'VpRMU': g[J(0x238)],
+                    'kpTTF': function (x, y) {
+                        const K = J;
+                        return g[K(0x1ea)](x, y);
+                    }
+                };
+            if (g[J(0x225)](g[J(0x212)], g[L(0x212)])) {
+                const y = g[L(0x232)][g[J(0x1f8)]], z = y[L(0x1fe)]('/')[-0x6ac + -0x887 + -0x8b * -0x1c];
+                h = i + '-' + new j()[L(0x1e1)]() + '.' + z;
+            } else
+                i[L(0x227)][J(0x1ee)]((0x11dd * 0x2 + -0x1 * -0x207b + -0x4435, fs_1[J(0x1f9) + J(0x1e0)])(n))['on'](g[L(0x1ec)], async () => t(l))['on'](g[L(0x229)], y => {
+                    const M = J, N = L;
+                    g[M(0x234)](g[M(0x223)], g[M(0x223)]) ? (console[M(0x210)](g[M(0x238)], y), g[M(0x214)](u, new Error(y))) : (h[M(0x210)](v[N(0x1f1)], i), v[N(0x20b)](j, new k(l)));
+                });
         }), l;
     }, MessengerVerifyMediaMessage = async (c, d, e, f) => {
-        const I = A, J = z, g = {
-                'LDYPh': function (i, j, k) {
+        const O = D, P = D, g = {
+                'RzQnt': function (i, j, k) {
                     return i(j, k);
                 },
-                'nqlwo': function (i, j) {
+                'YpZBd': function (i, j) {
                     return i === j;
                 },
-                'uAVQH': I(0x206),
-                'PHJXx': function (i, j) {
+                'wciMQ': O(0x23b),
+                'vQuHt': function (i, j) {
                     return i > j;
                 },
-                'zGbug': I(0x23f)
+                'EuDkP': O(0x220)
             };
         let h;
-        await Promise[J(0x202)](d[J(0x228)][I(0x23b) + 's'][I(0x23c)](async (i, j) => {
-            const K = J, L = J, k = e['id'] + '_' + d[K(0x217)];
-            h = await g[L(0x201)](downloadFile, i[K(0x203)][K(0x245)], k);
+        await Promise[P(0x1ed)](d[P(0x206)][O(0x224) + 's'][O(0x22c)](async (i, j) => {
+            const Q = O, R = P, k = e['id'] + '_' + d[Q(0x1ef)];
+            h = await g[Q(0x1e3)](downloadFile, i[Q(0x22f)][R(0x1eb)], k);
             let l;
-            if (d?.[K(0x228)]?.[L(0x21b)]?.[K(0x223)]) {
-                if (g[L(0x1f5)](g[K(0x225)], g[K(0x225)])) {
-                    const o = await (-0x1299 + 0xfe + 0x119b, getQuotedForMessageId_1[L(0x229)])(d[L(0x228)][L(0x21b)][K(0x223)], e[L(0x241)]);
+            if (d?.[R(0x206)]?.[Q(0x1ff)]?.[Q(0x201)]) {
+                if (g[Q(0x233)](g[R(0x200)], g[Q(0x200)])) {
+                    const o = await (-0x115e + 0x5 * 0x6e6 + 0x4 * -0x448, getQuotedForMessageId_1[Q(0x235)])(d[Q(0x206)][R(0x1ff)][R(0x201)], e[Q(0x1f5)]);
                     l = o?.['id'] || undefined;
                 } else {
-                    const q = {};
-                    return q[K(0x229)] = j, g && h[K(0x21d)] ? i : q;
+                    const q = f[R(0x20f)][Q(0x22e)];
+                    g = new h()[R(0x1e1)]() + '-' + q;
                 }
             }
             const m = {
-                'messageId': g[K(0x22e)](j, 0x1 * 0xd49 + -0x1ab1 * -0x1 + -0x1 * 0x27fa) ? d[K(0x217)] + '__' + j : d[K(0x217)] || '',
+                'messageId': g[Q(0x221)](j, -0xb31 + 0x2464 + 0x1933 * -0x1) ? d[R(0x1ef)] + '__' + j : d[Q(0x1ef)] || '',
                 'ticketId': e['id'],
                 'contactId': f['id'],
-                'body': d[K(0x228)]?.[K(0x24a)] || '',
-                'fromMe': d[L(0x21f)],
+                'body': d[R(0x206)]?.[R(0x213)] || '',
+                'fromMe': d[Q(0x215)],
                 'read': ![],
                 'mediaUrl': h,
-                'mediaType': d[L(0x1fa)],
+                'mediaType': d[R(0x1fb)],
                 'quotedMsgId': l,
-                'timestamp': +d[L(0x22b)],
-                'status': g[K(0x247)]
+                'timestamp': +d[R(0x21c)],
+                'status': g[R(0x21a)]
             };
-            await e[L(0x20a)]({
-                'lastMessage': d[K(0x228)]?.[L(0x24a)] || h || '',
-                'lastMessageAt': new Date()[L(0x20c)](),
+            await e[R(0x204)]({
+                'lastMessage': d[Q(0x206)]?.[R(0x213)] || h || '',
+                'lastMessageAt': new Date()[Q(0x1e1)](),
                 'answered': ![]
             });
             const n = {};
-            n[L(0x218) + 'a'] = m, n[K(0x241)] = e[L(0x241)], await (0x25d9 + -0x1 * -0x979 + -0x2f52, CreateMessageService_1[K(0x229)])(n);
+            n[R(0x203) + 'a'] = m, n[R(0x1f5)] = e[Q(0x1f5)], await (0x2467 * -0x1 + -0xb8c + 0x2ff3, CreateMessageService_1[Q(0x235)])(n);
         }));
     };
-exports[z(0x229)] = MessengerVerifyMediaMessage;
+exports[C(0x235)] = MessengerVerifyMediaMessage;

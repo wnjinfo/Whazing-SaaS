@@ -1,10 +1,54 @@
 'use strict';
+function a() {
+    const u = [
+        'allowNull',
+        '1041830kAsSlw',
+        'aXYpW',
+        '3273CTXhJp',
+        'defineProp',
+        'queue_tran',
+        'removeColu',
+        'exports',
+        'BOOLEAN',
+        'zoCCy',
+        'Whatsapps',
+        'YbVZs',
+        'sequelize',
+        '56PmeZkM',
+        'TFTCT',
+        '102508iQGwFV',
+        'fJvfa',
+        'DataTypes',
+        '132YLqMPj',
+        '190680yCxCRH',
+        'INTEGER',
+        'is_open_ia',
+        'type',
+        'ble',
+        'value',
+        'VSFZF',
+        'describeTa',
+        '334aclTeZ',
+        '3996387aHihff',
+        'addColumn',
+        'defaultVal',
+        '__esModule',
+        '646141JmhZua',
+        '796864tBNJBW',
+        'erty',
+        '77SYokqv'
+    ];
+    a = function () {
+        return u;
+    };
+    return a();
+}
 const o = b, p = b;
 (function (d, e) {
     const m = b, n = b, f = d();
     while (!![]) {
         try {
-            const g = -parseInt(m(0x178)) / (0x1 * 0x8d1 + -0x531 + -0x39f) + -parseInt(m(0x183)) / (-0x13d8 + -0x1e36 + 0x3210) + -parseInt(n(0x182)) / (0x5e * -0x1b + 0x5 * 0x64c + -0x158f) * (-parseInt(n(0x174)) / (-0x1 * 0xcc5 + 0x87b + 0x44e)) + -parseInt(n(0x180)) / (-0xa8e + -0x58 + 0xaeb) * (parseInt(m(0x189)) / (0xc * -0x27d + 0x1 * -0x25ca + 0x43ac)) + parseInt(m(0x18b)) / (0xb7 * 0x5 + 0xe12 + -0x52 * 0x37) * (parseInt(n(0x17f)) / (0x223 * 0x7 + -0x1 * 0x1987 + 0x54d * 0x2)) + parseInt(n(0x184)) / (-0x85d * 0x1 + -0x1c08 + 0x246e) * (-parseInt(n(0x17b)) / (0x1ac9 * -0x1 + -0x99 * -0xa + -0x6f3 * -0x3)) + parseInt(n(0x18a)) / (-0x40f * -0x4 + -0x63f * -0x1 + -0x1670);
+            const g = parseInt(m(0xae)) / (0xdf6 + -0x168b + 0x2 * 0x44b) + parseInt(m(0xa9)) / (-0x122d * 0x1 + 0x1c3b * 0x1 + -0xa0c) * (parseInt(n(0xb5)) / (-0x17 * 0x7 + 0xd71 + -0x1d * 0x71)) + parseInt(n(0xaf)) / (0x193a + -0x598 * 0x6 + -0x2 * -0x42d) + parseInt(m(0xa1)) / (-0x39a + -0x72 * -0x48 + -0x329 * 0x9) * (parseInt(n(0xa0)) / (0xb5 * -0x33 + -0x2ce + -0xb * -0x389)) + parseInt(m(0x9d)) / (-0x1f19 + 0x23b2 + -0x492) * (-parseInt(m(0x9b)) / (0x1f0a + 0x47d * 0x6 + 0x8 * -0x73e)) + -parseInt(n(0xaa)) / (0x1ef * -0x7 + 0x3d * -0x43 + -0x1d89 * -0x1) + -parseInt(m(0xb3)) / (0x2257 * -0x1 + 0x9ad + -0x41e * -0x6) * (parseInt(m(0xb1)) / (-0x1f0f * -0x1 + 0x209d + -0xd * 0x4e5));
             if (g === e)
                 break;
             else
@@ -13,80 +57,36 @@ const o = b, p = b;
             f['push'](f['shift']());
         }
     }
-}(a, -0xfa71a * -0x1 + 0x82e63 + 0xe1242 * -0x1));
-function a() {
-    const u = [
-        'sequelize',
-        'addColumn',
-        'DataTypes',
-        'CwIbE',
-        'EOmWS',
-        'EcdZC',
-        'TBhIB',
-        'removeColu',
-        'queue_tran',
-        '185396XwMqoo',
-        'is_open_ia',
-        'describeTa',
-        'allowNull',
-        '1276708WfYnyY',
-        'BOOLEAN',
-        'defineProp',
-        '440jmQBOS',
-        'UFUVH',
-        'type',
-        'value',
-        '16LjAicm',
-        '1442690SJuAHt',
-        'INTEGER',
-        '24jwriUy',
-        '2495126KBTlYh',
-        '186273jNjzuR',
-        'defaultVal',
-        'vqkyh',
-        'Whatsapps',
-        'erty',
-        '6fpavIT',
-        '36912722mvoLbY',
-        '2228751vVihfy',
-        '__esModule',
-        'ble',
-        'exports'
-    ];
-    a = function () {
-        return u;
-    };
-    return a();
-}
+}(a, -0xb * 0x4d56 + 0x1 * -0x68f05 + 0x12e531));
+const c = {};
+c[o(0xa6)] = !![], Object[p(0xb6) + p(0xb0)](exports, o(0xad), c);
+const sequelize_1 = require(o(0x9a));
 function b(c, d) {
     const e = a();
     return b = function (f, g) {
-        f = f - (-0x1c6a + -0x2 * -0x550 + 0x1334);
+        f = f - (-0x783 + -0xa19 + -0x3 * -0x611);
         let h = e[f];
         return h;
     }, b(c, d);
 }
-const c = {};
-c[o(0x17e)] = !![], Object[o(0x17a) + o(0x188)](exports, o(0x18c), c);
-const sequelize_1 = require(o(0x16b));
-module[o(0x16a)] = {
+module[p(0xb9)] = {
     'up': async g => {
-        const q = o, r = p, h = {};
-        h[q(0x170)] = q(0x187), h[r(0x16e)] = q(0x175), h[r(0x186)] = q(0x173) + 'sf';
-        const i = h, j = await g[r(0x176) + r(0x18d)](i[q(0x170)]);
-        if (!j || !j[i[r(0x16e)]]) {
+        const q = o, r = o, h = {};
+        h[q(0xa7)] = r(0x98), h[r(0x99)] = q(0xa3), h[q(0x97)] = r(0xb7) + 'sf';
+        const i = h, j = await g[r(0xa8) + q(0xa5)](i[r(0xa7)]);
+        if (!j || !j[i[r(0x99)]]) {
             const k = {};
-            k[r(0x17d)] = sequelize_1[r(0x16d)][q(0x179)], k[q(0x185) + 'ue'] = ![], k[q(0x177)] = !![], await g[q(0x16c)](i[r(0x170)], i[r(0x16e)], k);
+            k[q(0xa4)] = sequelize_1[q(0x9f)][q(0xba)], k[q(0xac) + 'ue'] = ![], k[r(0xb2)] = !![], await g[r(0xab)](i[q(0xa7)], i[r(0x99)], k);
         }
-        if (!j || !j[i[r(0x186)]]) {
+        if (!j || !j[i[q(0x97)]]) {
             const l = {};
-            l[r(0x17d)] = sequelize_1[r(0x16d)][r(0x181)], l[r(0x177)] = !![], await g[q(0x16c)](i[r(0x170)], i[r(0x186)], l);
+            l[r(0xa4)] = sequelize_1[r(0x9f)][r(0xa2)], l[r(0xb2)] = !![], await g[q(0xab)](i[q(0xa7)], i[q(0x97)], l);
         }
     },
     'down': async e => {
-        const s = p, t = o, f = {};
-        f[s(0x17c)] = t(0x187), f[t(0x171)] = t(0x175), f[t(0x16f)] = s(0x173) + 'sf';
+        const s = p, t = p, f = {};
+        f[s(0x9e)] = t(0x98), f[s(0xb4)] = s(0xa3), f[s(0x9c)] = s(0xb7) + 'sf';
         const g = f;
-        await e[t(0x172) + 'mn'](g[s(0x17c)], g[s(0x171)]), await e[s(0x172) + 'mn'](g[t(0x17c)], g[s(0x16f)]);
+        await e[t(0xb8) + 'mn'](g[s(0x9e)], g[s(0xb4)]), await e[t(0xb8) + 'mn'](g[s(0x9e)], g[t(0x9c)]);
     }
 };

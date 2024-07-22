@@ -1,234 +1,18 @@
 'use strict';
-function a() {
-    const aK = [
-        '\x20message\x20(',
-        'TFhlL',
-        'number',
-        'extendedTe',
-        'staller/ff',
-        'update',
-        'exec',
-        'mediaName',
-        'JfHJE',
-        'kqmsG',
-        'metype',
-        '\x20-vn\x20-ab\x201',
-        'FXfXu',
-        '.net',
-        'logger',
-        'FOJVz',
-        'sHoAB',
-        'code',
-        'g.us',
-        'zLzLg',
-        'rHTUQ',
-        'gUMkT',
-        'ticket',
-        'fHNvi',
-        'PhqqV',
-        'audio/mp4',
-        'WxbKN',
-        '23224hswhrd',
-        'LSCSO',
-        '4|1|0|3|2',
-        'hTpCp',
-        'messageId',
-        'createdAt',
-        'document',
-        'get',
-        'text',
-        'aozKA',
-        'value',
-        'nding',
-        '1403694ZJNgke',
-        '3|2|1|0|4',
-        's/logger',
-        'FzKUQ',
-        'video',
-        'lxrvz',
-        'KzlST',
-        'enumerable',
-        '\x20-i\x20',
-        '@ffmpeg-in',
-        'wvDWn',
-        'resolve',
-        'TnJjX',
-        'sended',
-        'LuXqx',
-        'remoteJid',
-        'prototype',
-        'ls/Ticket',
-        'KXaRU',
-        'xacxC',
-        'FNdhF',
-        'Cvrsk',
-        'whatsapp',
-        'sRvfN',
-        'Options',
-        'fault',
-        'saFIu',
-        'fbzuw',
-        'ZbYTI',
-        'VylOM',
-        '../../util',
-        's.whatsapp',
-        'whBzu',
-        'applicatio',
-        'vdLcM',
-        '.mp3',
-        '4734015uEtFTs',
-        'vHMGS',
-        '28k\x20-ar\x2044',
-        'nant:\x20',
-        'default',
-        'lookup',
-        'tenantId',
-        'eFiUT',
-        'DOuJc',
-        'WPPEA',
-        'hpZhF',
-        'jTERn',
-        'XQffI',
-        'closed',
-        'destroy',
-        'quotedMsgI',
-        'mkVAn',
-        'EJLCv',
-        'YXULX',
-        'oVOFi',
-        'include',
-        'EHuqX',
-        'ertyDescri',
-        'cpuFq',
-        'PuMlf',
-        'Error\x20mess',
-        'readFileSy',
-        'child_proc',
-        '110SrPLvH',
-        'mediaType',
-        '__importSt',
-        'iqKnl',
-        'pending',
-        'defineProp',
-        'error',
-        'sequelize',
-        'IRAYm',
-        'info',
-        '3941XLBZtX',
-        'age\x20is\x20(te',
-        'BFqAf',
-        'contact',
-        '100\x20-f\x20ipo',
-        'audio-reco',
-        '\x20|\x20Ticket:',
-        '5367081kWoEqC',
-        'KwyuZ',
-        'NSEln',
-        'order',
-        'CmFVV',
-        'split',
-        'isGroup',
-        'mYONq',
-        'DnJmz',
-        'OCJVk',
-        'MCtmg',
-        'channel',
-        'rd-site',
-        '6166386mMJPMv',
-        'izHBe',
-        'ketMessage',
-        'EinIo',
-        'ers/SetTic',
-        'lte',
-        'sqSSN',
-        'findOne',
-        'wKrIP',
-        'ptor',
-        'GftnW',
-        'message',
-        '../../help',
-        'rgYcs',
-        '12wWdWbE',
-        'xtMessage',
-        'KvSgx',
-        'TqJCB',
-        'create',
-        'chat',
-        'pNFhv',
-        'writable',
-        '4GoZdpF',
-        'quoted',
-        '__setModul',
-        'ENOENT',
-        '../../mode',
-        'whatsappId',
-        'SkpFg',
-        'sendMessag',
-        'id:\x20',
-        'ls/Message',
-        'CnJMl',
-        'JiOLE',
-        'lhgiO',
-        'DqZum',
-        'CdAUs',
-        'configurab',
-        'call',
-        'zYlCz',
-        'Invalid\x20mi',
-        'HrLIf',
-        'getTime',
-        'erty',
-        '__createBi',
-        'ByRux',
-        'hasOwnProp',
-        'includes',
-        'join',
-        'forEach',
-        'MLRrq',
-        'ess',
-        'jLdxE',
-        'getMessage',
-        'Error\x20send',
-        '\x20-y',
-        'status',
-        '145oMMoIW',
-        'findAll',
-        'getOwnProp',
-        'eDefault',
-        'e\x20media',
-        ')::',
-        'body',
-        'AhMgU',
-        'mpeg',
-        'gmulz',
-        '20346KWXafV',
-        'ASC',
-        'key',
-        'model',
-        'mime-types',
-        'GzZVV',
-        'FSQJJ',
-        'sAsRead',
-        'audio',
-        'where',
-        '82199249KWUsfa',
-        '__esModule',
-        'public',
-        'path',
-        'dwNeK',
-        '__importDe'
-    ];
-    a = function () {
-        return aK;
-    };
-    return a();
+const am = b, an = b;
+function b(c, d) {
+    const e = a();
+    return b = function (f, g) {
+        f = f - (0x1a50 + -0x100 + -0x1869);
+        let h = e[f];
+        return h;
+    }, b(c, d);
 }
-const ac = b, ad = b;
 (function (c, d) {
-    const aa = b, ab = b, e = c();
+    const ak = b, al = b, e = c();
     while (!![]) {
         try {
-            const f = -parseInt(aa(0x21a)) / (0x1795 + 0xcb8 + 0x194 * -0x17) * (parseInt(aa(0x224)) / (-0x9 * -0xa + -0x1596 + -0x153e * -0x1)) + parseInt(aa(0x1d4)) / (0x4bb * -0x5 + 0x9dc + -0xdce * -0x1) * (-parseInt(ab(0x1f7)) / (-0x117f + 0x2378 + -0x11f5)) + -parseInt(aa(0x1a7)) / (0x2b * 0xb3 + -0x1 * 0x11f6 + -0xdd * 0xe) + parseInt(ab(0x1e1)) / (0x9c2 * -0x1 + -0x607 + 0xfcf) + parseInt(aa(0x1cd)) / (0x219 * -0x9 + -0x1 * -0x1 + 0x12e7) * (-parseInt(aa(0x24f)) / (0x109f + -0x1b10 + 0xa79)) + parseInt(aa(0x25b)) / (-0xead + 0x2 * -0x5d6 + -0x1 * -0x1a62) * (-parseInt(ab(0x1c3)) / (-0xf89 + 0x620 + 0x973)) + -parseInt(ab(0x22e)) / (-0x6b1 * -0x3 + -0x1138 + -0x2d0) * (-parseInt(ab(0x1ef)) / (-0x1641 * 0x1 + -0x3f2 * 0x4 + 0x2615));
+            const f = parseInt(ak(0x1e7)) / (0x4a * 0x1f + -0x1 * 0xc38 + 0x343) * (-parseInt(al(0x1da)) / (-0x1295 * 0x2 + 0x2491 * 0x1 + 0x1 * 0x9b)) + parseInt(al(0xf5)) / (0x70 * -0xf + 0x695 + 0x2 * -0x1) + parseInt(ak(0x170)) / (-0x1819 + -0x21c * 0x3 + -0x1 * -0x1e71) + -parseInt(ak(0x1d1)) / (-0x1c42 * 0x1 + 0x1 * -0x2368 + -0x3faf * -0x1) + parseInt(ak(0xf6)) / (-0x21fe + 0x3 * -0xe4 + 0x1258 * 0x2) + -parseInt(ak(0x1a8)) / (0x1 * 0xa6 + -0x33 * 0x4 + 0x2d) + -parseInt(al(0x1b8)) / (-0xaf4 + 0x908 * 0x3 + 0x2 * -0x80e);
             if (f === d)
                 break;
             else
@@ -237,432 +21,805 @@ const ac = b, ad = b;
             e['push'](e['shift']());
         }
     }
-}(a, -0x179d96 + 0x5 * -0x307eb + 0x351af1));
-var __createBinding = this && this[ac(0x20d) + ad(0x25a)] || (Object[ac(0x1f3)] ? function (e, f, g, h) {
-        const ae = ad, af = ac, i = {};
-        i[ae(0x23c)] = function (n, p) {
-            return n === p;
-        }, i[ae(0x1f1)] = function (n, p) {
-            return n in p;
-        }, i[ae(0x1bc)] = ae(0x256);
-        const j = i;
-        if (j[ae(0x23c)](h, undefined))
-            h = g;
-        var l = Object[ae(0x21c) + ae(0x1bd) + ae(0x1ea)](f, g);
-        if (!l || (j[af(0x1f1)](j[ae(0x1bc)], l) ? !f[ae(0x22f)] : l[ae(0x1f6)] || l[af(0x206) + 'le'])) {
-            const n = {};
-            n[ae(0x262)] = !![], n[af(0x256)] = function () {
-                return f[g];
-            }, l = n;
+}(a, 0xc55f + -0x1c6f * 0x7f + -0x1 * -0x17781c));
+var __createBinding = this && this[am(0x13b) + am(0x177)] || (Object[am(0x1b2)] ? function (c, d, e, f) {
+        const ao = an, ap = an, g = {
+                'eIMSN': ao(0xea),
+                'jfMeJ': function (i, j) {
+                    return i === j;
+                },
+                'VCvfz': ao(0xf8),
+                'xmoNC': ap(0x137),
+                'yMZuT': function (i, j) {
+                    return i != j;
+                },
+                'aLBUS': function (i, j) {
+                    return i !== j;
+                },
+                'lEEZJ': function (i, j, l, n) {
+                    return i(j, l, n);
+                },
+                'cTTXf': function (i, j, l) {
+                    return i(j, l);
+                },
+                'GbXXr': function (i, j) {
+                    return i === j;
+                },
+                'aBarz': function (i, j) {
+                    return i in j;
+                },
+                'qhIef': ao(0x127),
+                'BGiyR': ao(0x15c),
+                'QYkmg': ao(0x1d7)
+            };
+        if (g[ao(0x17d)](f, undefined))
+            f = e;
+        var h = Object[ap(0x138) + ap(0x192) + ap(0x15b)](d, e);
+        if (!h || (g[ap(0x181)](g[ap(0x1dd)], h) ? !d[ao(0x12a)] : h[ap(0x115)] || h[ap(0x194) + 'le'])) {
+            if (g[ao(0x14e)](g[ap(0x173)], g[ao(0x1a4)]))
+                h = {
+                    'enumerable': !![],
+                    'get': function () {
+                        const aq = ao, ar = ap, i = {};
+                        i[aq(0x1a2)] = g[ar(0x178)];
+                        const j = i;
+                        if (g[aq(0x1b3)](g[aq(0x1af)], g[aq(0x1af)]))
+                            return d[e];
+                        else
+                            e[j[aq(0x1a2)]] = f;
+                    }
+                };
+            else {
+                const j = g[ap(0x197)][ao(0x11f)]('|');
+                let l = -0x189 + -0x1619 + 0x17a2;
+                while (!![]) {
+                    switch (j[l++]) {
+                    case '0':
+                        var n = {};
+                        continue;
+                    case '1':
+                        if (g[ap(0x106)](q, null)) {
+                            for (var p in r)
+                                if (g[ao(0x14e)](p, g[ap(0x178)]) && s[ao(0x14b)][ao(0x10e) + ao(0x14a)][ap(0x129)](t, p))
+                                    g[ap(0x110)](u, n, v, p);
+                        }
+                        continue;
+                    case '2':
+                        g[ap(0x195)](w, n, x);
+                        continue;
+                    case '3':
+                        return n;
+                    case '4':
+                        if (n && c[ap(0x12a)])
+                            return p;
+                        continue;
+                    }
+                    break;
+                }
+            }
         }
-        Object[af(0x1c8) + af(0x20c)](e, h, l);
+        Object[ao(0x17c) + ao(0x14a)](c, f, h);
     } : function (d, e, f, g) {
-        const ag = ad, ah = ad, h = {};
-        h[ag(0x20a)] = function (j, l) {
+        const as = am, at = am, h = {};
+        h[as(0x12c)] = function (j, l) {
             return j === l;
         };
         const i = h;
-        if (i[ag(0x20a)](g, undefined))
+        if (i[at(0x12c)](g, undefined))
             g = f;
         d[g] = e[f];
-    }), __setModuleDefault = this && this[ac(0x1f9) + ac(0x21d)] || (Object[ac(0x1f3)] ? function (e, f) {
-        const ai = ad, aj = ad, g = {};
-        g[ai(0x1e7)] = ai(0x1ab);
+    }), __setModuleDefault = this && this[an(0xef) + am(0xe7)] || (Object[an(0x1b2)] ? function (e, f) {
+        const au = am, av = am, g = {};
+        g[au(0x1ac)] = av(0xea);
         const h = g, i = {};
-        i[aj(0x262)] = !![], i[aj(0x259)] = f, Object[ai(0x1c8) + ai(0x20c)](e, h[aj(0x1e7)], i);
+        i[av(0x147)] = !![], i[av(0x1d2)] = f, Object[au(0x17c) + av(0x14a)](e, h[av(0x1ac)], i);
     } : function (d, e) {
-        const ak = ac, al = ad, f = {};
-        f[ak(0x19e)] = al(0x1ab);
+        const aw = an, ax = an, f = {};
+        f[aw(0x10a)] = ax(0xea);
         const g = f;
-        d[g[al(0x19e)]] = e;
-    }), __importStar = this && this[ac(0x1c5) + 'ar'] || function (c) {
-        const am = ad, an = ac, d = {
-                'xacxC': am(0x251),
-                'mYONq': function (i, j) {
+        d[g[aw(0x10a)]] = e;
+    }), __importStar = this && this[am(0x126) + 'ar'] || function (c) {
+        const ay = am, az = am, d = {
+                'UKBWl': ay(0x105),
+                'uMIaA': function (i, j, l) {
+                    return i(j, l);
+                },
+                'AdsJy': function (i, j) {
                     return i != j;
                 },
-                'Cvrsk': function (i, j) {
+                'kKNVb': function (i, j) {
                     return i !== j;
                 },
-                'PhqqV': am(0x1ab),
-                'fHNvi': function (i, j, l, m) {
+                'wsRxa': az(0xea),
+                'tWEwr': function (i, j, l, m) {
                     return i(j, l, m);
-                },
-                'FSQJJ': function (i, j, l) {
-                    return i(j, l);
                 }
-            }, e = d[an(0x196)][an(0x1d9)]('|');
-        let f = -0xd47 + 0x2 * 0xc6e + 0x251 * -0x5;
+            }, e = d[ay(0xfd)][ay(0x11f)]('|');
+        let f = -0x1 * 0x8aa + -0x1034 + -0x3 * -0x84a;
         while (!![]) {
             switch (e[f++]) {
             case '0':
-                if (d[am(0x1db)](c, null)) {
-                    for (var g in c)
-                        if (d[an(0x198)](g, d[an(0x24c)]) && Object[an(0x193)][an(0x20f) + an(0x20c)][am(0x207)](c, g))
-                            d[am(0x24b)](__createBinding, h, c, g);
-                }
+                if (c && c[az(0x12a)])
+                    return c;
                 continue;
             case '1':
-                var h = {};
+                var g = {};
                 continue;
             case '2':
-                return h;
+                return g;
             case '3':
-                d[am(0x22a)](__setModuleDefault, h, c);
+                d[az(0xee)](__setModuleDefault, g, c);
                 continue;
             case '4':
-                if (c && c[am(0x22f)])
-                    return c;
+                if (d[ay(0x104)](c, null)) {
+                    for (var h in c)
+                        if (d[ay(0x113)](h, d[az(0x141)]) && Object[ay(0x14b)][ay(0x10e) + ay(0x14a)][az(0x129)](c, h))
+                            d[ay(0x112)](__createBinding, g, c, h);
+                }
                 continue;
             }
             break;
         }
-    }, __importDefault = this && this[ad(0x233) + ad(0x19c)] || function (c) {
-        const ao = ac;
-        return c && c[ao(0x22f)] ? c : { 'default': c };
+    }, __importDefault = this && this[an(0x156) + am(0x10d)] || function (c) {
+        const aA = an;
+        return c && c[aA(0x12a)] ? c : { 'default': c };
     };
 const G = {};
-G[ac(0x259)] = !![], Object[ac(0x1c8) + ad(0x20c)](exports, ac(0x22f), G), exports[ad(0x216) + ad(0x19b)] = void (-0x4d2 * 0x4 + 0x113d * 0x1 + -0x20b * -0x1);
-const path_1 = __importStar(require(ad(0x231))), sequelize_1 = require(ac(0x1ca)), Message_1 = __importDefault(require(ad(0x1fb) + ad(0x200))), Ticket_1 = __importDefault(require(ad(0x1fb) + ad(0x194))), logger_1 = require(ac(0x1a1) + ad(0x25d)), fs_1 = __importDefault(require('fs')), mime_types_1 = __importDefault(require(ad(0x228))), child_process_1 = require(ad(0x1c2) + ad(0x214)), ffmpeg_1 = __importDefault(require(ad(0x18c) + ac(0x238) + ad(0x222))), SetTicketMessagesAsRead_1 = __importDefault(require(ac(0x1ed) + ad(0x1e5) + ad(0x1e3) + ad(0x22b))), publicFolder = path_1[ac(0x1ab)][ac(0x18e)](__dirname, '..', '..', '..', ad(0x230)), SendMessagesSystemWbotBaileys = async (f, g, h = undefined) => {
-        const ap = ac, aq = ad, i = {
-                'DOuJc': function (l, m) {
+G[am(0x1d2)] = !![], Object[am(0x17c) + am(0x14a)](exports, am(0x12a), G), exports[an(0x1c0) + am(0x1e5)] = void (0x25 * -0xad + -0x62c * 0x6 + 0x1 * 0x3e09);
+const path_1 = __importStar(require(am(0xf4))), sequelize_1 = require(am(0x18f)), Message_1 = __importDefault(require(am(0x15a) + am(0x1cb))), Ticket_1 = __importDefault(require(am(0x15a) + am(0xf0))), logger_1 = require(am(0x1ce) + am(0x136)), fs_1 = __importDefault(require('fs')), mime_types_1 = __importDefault(require(am(0x186))), child_process_1 = require(am(0x11a) + an(0x131)), ffmpeg_1 = __importDefault(require(am(0xf1) + an(0x10c) + am(0x157))), SetTicketMessagesAsRead_1 = __importDefault(require(am(0x1be) + am(0x174) + am(0x155) + an(0x15f))), publicFolder = path_1[am(0xea)][am(0x146)](__dirname, '..', '..', '..', am(0x1e3)), SendMessagesSystemWbotBaileys = async (f, g, h = undefined) => {
+        const aB = an, aC = an, i = {
+                'hsFZJ': aB(0x1ab),
+                'ONYvv': aC(0xea),
+                'ntecf': function (l, m) {
                     return l(m);
                 },
-                'NSEln': ap(0x25c),
-                'hTpCp': function (l, m, n) {
-                    return l(m, n);
+                'scGLw': function (l, m) {
+                    return l(m);
                 },
-                'aozKA': function (l, m) {
-                    return l != m;
-                },
-                'gUMkT': function (l, m) {
-                    return l !== m;
-                },
-                'FzKUQ': aq(0x1ab),
-                'YXULX': function (l, m, n, o) {
-                    return l(m, n, o);
-                },
-                'LSCSO': function (l, m) {
-                    return l !== m;
-                },
-                'ByRux': ap(0x235),
-                'MCtmg': ap(0x1c6),
-                'eFiUT': aq(0x246),
-                'wvDWn': aq(0x1a2) + aq(0x241),
-                'hpZhF': function (l, m) {
-                    return l !== m;
-                },
-                'KzlST': ap(0x1f4),
-                'VylOM': ap(0x230),
-                'ZbYTI': ap(0x1fe) + ap(0x21e),
-                'TnJjX': function (l, m) {
-                    return l !== m;
-                },
-                'rgYcs': aq(0x201),
-                'DqZum': ap(0x1b0),
-                'MLRrq': function (l, m) {
+                'CmFit': function (l, m) {
                     return l === m;
                 },
-                'PuMlf': aq(0x215),
-                'sRvfN': ap(0x190),
-                'rHTUQ': function (l, m) {
-                    return l === m;
+                'AFTzN': function (l, m) {
+                    return l(m);
                 },
-                'whBzu': ap(0x1fa),
-                'KXaRU': function (l, m) {
+                'XPdIC': function (l, m) {
                     return l !== m;
                 },
-                'oVOFi': aq(0x197),
-                'KwyuZ': ap(0x1c7),
-                'lhgiO': aq(0x24a),
-                'vdLcM': aq(0x1b4),
-                'TqJCB': aq(0x199),
-                'saFIu': aq(0x1d0),
-                'dwNeK': aq(0x254),
-                'XQffI': ap(0x225)
+                'iYOtY': aC(0x166),
+                'GQzjt': aB(0x1e0),
+                'GpjrF': aC(0x151),
+                'mxMGH': aB(0xf9) + aC(0x1c3),
+                'EpiMZ': function (l, m) {
+                    return l === m;
+                },
+                'VzmRn': aC(0x149),
+                'QpcAZ': aC(0xe8),
+                'kmukn': function (l, m) {
+                    return l === m;
+                },
+                'hqboi': aC(0x160),
+                'ukuyl': aB(0x140),
+                'wExjH': aC(0x15d),
+                'nDpVo': aB(0x1b0),
+                'VxevU': aB(0x1e3),
+                'HITDu': aC(0x1c9),
+                'CPctn': aC(0x19d),
+                'cNCiq': aC(0x198) + aC(0x123),
+                'OnYlg': aB(0x15e),
+                'rwNRk': aB(0xfb),
+                'oBDqH': function (l, m) {
+                    return l === m;
+                },
+                'ebJKz': aC(0x12e),
+                'sqPCk': aB(0x143),
+                'MNkfU': aC(0xf7),
+                'UyQgA': aB(0x196),
+                'bsAIz': aB(0x1ca),
+                'zlBbO': function (l, m) {
+                    return l !== m;
+                },
+                'PnyJz': aC(0x17f),
+                'Bjvtu': aC(0x134),
+                'xGkHw': function (l, m) {
+                    return l === m;
+                },
+                'EzxIt': aB(0x139),
+                'WWclZ': aB(0x1d3),
+                'NhaSO': aB(0x13e),
+                'DbwkO': aC(0x14f),
+                'cKCDo': aB(0x19e),
+                'mFWhm': aB(0x130),
+                'IuEub': aC(0x199),
+                'FpYIW': aC(0x1ae),
+                'abXbG': function (l, m) {
+                    return l !== m;
+                },
+                'CkUeh': aC(0x1d8),
+                'Llgwo': aB(0x1d4)
             };
         let j;
         if (!h) {
-            if (i[aq(0x195)](i[aq(0x1ba)], i[ap(0x1ba)])) {
-                if (h)
-                    i[ap(0x1af)](i, j);
-                i[ap(0x1af)](k, l);
-            } else {
-                const m = { [sequelize_1['Op']['is']]: null }, n = {
+            if (i[aB(0x1d5)](i[aB(0x182)], i[aC(0x182)])) {
+                const l = { [sequelize_1['Op']['is']]: null }, m = {
                         'fromMe': !![],
-                        'messageId': m,
-                        'status': i[ap(0x1d5)],
+                        'messageId': l,
+                        'status': i[aC(0x128)],
                         [sequelize_1['Op']['or']]: [
-                            { 'scheduleDate': { [sequelize_1['Op'][ap(0x1e6)]]: new Date() } },
+                            { 'scheduleDate': { [sequelize_1['Op'][aB(0x19b)]]: new Date() } },
                             { 'scheduleDate': { [sequelize_1['Op']['is']]: null } }
                         ]
-                    }, o = {};
-                o[aq(0x227)] = Ticket_1[aq(0x1ab)], o['as'] = i[aq(0x203)], o[ap(0x22d)] = {
+                    }, n = {};
+                n[aB(0x158)] = Ticket_1[aB(0xea)], n['as'] = i[aC(0x16f)], n[aC(0x119)] = {
                     [sequelize_1['Op']['or']]: {
-                        'status': { [sequelize_1['Op']['ne']]: i[aq(0x1a5)] },
+                        'status': { [sequelize_1['Op']['ne']]: i[aC(0x1ad)] },
                         'isFarewellMessage': !![]
                     }
-                }, o[ap(0x1bb)] = [i[ap(0x19d)]], o[ap(0x22d)][ap(0x1ad)] = g, o[ap(0x22d)][ap(0x1df)] = i[ap(0x1f2)], o[ap(0x22d)][ap(0x1fc)] = f['id'];
-                const p = {};
-                p[aq(0x22d)] = n, p[aq(0x1bb)] = [o], p[ap(0x1d7)] = [[
-                        i[ap(0x232)],
-                        i[ap(0x1b3)]
-                    ]], j = await Message_1[ap(0x1ab)][ap(0x21b)](p);
-            }
-        } else
-            j = h;
-        let k;
-        await j[ap(0x212)](async w => {
-            const ar = aq, av = aq, x = {
-                    'FXfXu': i[ar(0x1d6)],
-                    'LuXqx': function (y, z, A) {
-                        const as = ar;
-                        return i[as(0x252)](y, z, A);
-                    },
-                    'cpuFq': function (z, A) {
-                        const at = ar;
-                        return i[at(0x258)](z, A);
-                    },
-                    'BFqAf': function (z, A) {
-                        const au = ar;
-                        return i[au(0x249)](z, A);
-                    },
-                    'GzZVV': i[av(0x25e)],
-                    'DnJmz': function (y, z, A, B) {
-                        const aw = ar;
-                        return i[aw(0x1b9)](y, z, A, B);
-                    },
-                    'wKrIP': function (y, z) {
-                        const ax = ar;
-                        return i[ax(0x1af)](y, z);
-                    },
-                    'gmulz': function (y, z) {
-                        const ay = av;
-                        return i[ay(0x1af)](y, z);
-                    }
+                }, n[aB(0x1d0)] = [i[aB(0x1de)]], n[aC(0x119)][aB(0x13d)] = g, n[aC(0x119)][aB(0xfa)] = i[aB(0x109)], n[aC(0x119)][aC(0x172)] = f['id'];
+                const o = {};
+                o[aC(0x119)] = m, o[aB(0x1d0)] = [n], o[aC(0x144)] = [[
+                        i[aC(0x184)],
+                        i[aC(0xeb)]
+                    ]], j = await Message_1[aC(0xea)][aC(0x1c2)](o);
+            } else
+                h = {
+                    'audio': i[aC(0xea)][aB(0x189) + 'nc'](j),
+                    'mimetype': k ? i[aB(0x1c1)] : l,
+                    'ptt': !![]
                 };
-            if (i[ar(0x250)](i[av(0x20e)], i[ar(0x1de)])) {
+        } else {
+            if (i[aB(0x185)](i[aC(0x18e)], i[aB(0x18d)]))
+                j = h;
+            else
+                return e[aB(0x118)][aB(0x175)](f), null;
+        }
+        let k;
+        await j[aB(0x114)](async w => {
+            const aE = aB, aF = aC, x = {
+                    'ppuUP': function (y, z) {
+                        const aD = b;
+                        return i[aD(0x188)](y, z);
+                    },
+                    'oibfP': i[aE(0x1c1)]
+                };
+            if (i[aF(0x1cd)](i[aE(0x1dc)], i[aF(0x152)])) {
                 let y = {};
-                const {ticket: z} = w, A = z[av(0x1d0)][ar(0x236)], B = z?.[ar(0x1da)] ? i[av(0x1ae)] : i[ar(0x18d)], C = A + '@' + B;
-                if (w[ar(0x1b6) + 'd']) {
-                    const D = {};
-                    D['id'] = w[ar(0x1b6) + 'd'];
-                    const E = {};
-                    E[ar(0x22d)] = D;
-                    const F = await Message_1[av(0x1ab)][ar(0x1e8)](E);
-                    y = F;
+                const {ticket: z} = w, A = z[aE(0x130)][aE(0xfe)], B = z?.[aE(0x176)] ? i[aF(0x163)] : i[aE(0x125)], C = A + '@' + B;
+                if (w[aF(0x102) + 'd']) {
+                    if (i[aF(0x13a)](i[aF(0x1cc)], i[aF(0x135)]))
+                        return e[f];
+                    else {
+                        const E = {};
+                        E['id'] = w[aF(0x102) + 'd'];
+                        const F = {};
+                        F[aF(0x119)] = E;
+                        const H = await Message_1[aF(0xea)][aF(0x1a0)](F);
+                        y = H;
+                    }
                 }
                 try {
-                    if (i[av(0x1b1)](w[ar(0x1c4)], i[av(0x261)]) && w[av(0x23b)]) {
-                        const M = await (-0x81 * 0x41 + -0xcff * -0x1 + 0x9 * 0x232, path_1[ar(0x211)])(__dirname, '..', '..', '..', i[ar(0x1a0)]), N = (0x155 * -0x18 + -0x1 * 0x11fa + 0x31f2, path_1[av(0x211)])(M, w[ar(0x23b)]), O = await (-0x247a + 0x242c + 0x4e, exports[av(0x216) + av(0x19b)])(w[ar(0x23b)], N);
-                        if (O) {
-                            const P = { ...O };
-                            k = await f[ar(0x1fe) + 'e'](C, P);
-                        }
-                        logger_1[ar(0x242)][ar(0x1cc)](i[ar(0x19f)]);
+                    if (i[aF(0x1b6)](i[aE(0x19f)], i[aF(0x11b)])) {
+                        const J = {};
+                        J[aE(0x147)] = !![], J[aE(0x1d2)] = J, f[aF(0x17c) + aE(0x14a)](g, i[aF(0x1bd)], J);
                     } else {
-                        if (y['id']) {
-                            if (i[av(0x18f)](i[ar(0x1ee)], i[ar(0x204)])) {
-                                const Q = {};
-                                Q[ar(0x192)] = C, Q['id'] = y[av(0x253)];
-                                const R = {};
-                                R[ar(0x257)] = y[av(0x220)];
-                                const S = {};
-                                S[av(0x237) + ar(0x1f0)] = R;
-                                const T = {};
-                                T[av(0x226)] = Q, T[ar(0x1ec)] = S;
-                                const U = {};
-                                U[ar(0x1f8)] = T;
-                                let V = U;
-                                const W = {};
-                                W[ar(0x257)] = w[ar(0x220)];
-                                const X = { ...V };
-                                k = await f[ar(0x1fe) + 'e'](C, W, X);
-                            } else {
-                                const Z = x[ar(0x240)][ar(0x1d9)]('|');
-                                let a0 = -0xb * 0x197 + -0xf9c + -0xe5 * -0x25;
-                                while (!![]) {
-                                    switch (Z[a0++]) {
-                                    case '0':
-                                        x[av(0x191)](w, a2, x);
-                                        continue;
-                                    case '1':
-                                        if (x[av(0x1be)](H, null)) {
-                                            for (var a1 in J)
-                                                if (x[ar(0x1cf)](a1, x[av(0x229)]) && K[ar(0x193)][av(0x20f) + ar(0x20c)][av(0x207)](L, a1))
-                                                    x[ar(0x1dc)](u, a2, v, a1);
-                                        }
-                                        continue;
-                                    case '2':
-                                        var a2 = {};
-                                        continue;
-                                    case '3':
-                                        if (n && o[ar(0x22f)])
-                                            return p;
-                                        continue;
-                                    case '4':
-                                        return a2;
+                        if (i[aF(0x1cd)](w[aE(0x1bc)], i[aF(0x161)]) && w[aE(0x10f)]) {
+                            if (i[aF(0x1cd)](i[aE(0x150)], i[aF(0x150)]))
+                                (-0xfd4 + 0x2452 * 0x1 + -0x56 * 0x3d, j[aF(0x1a1)])(k[aE(0xea)][aE(0xf4)] + aE(0x145) + l + (aE(0x1a3) + aE(0x17e) + aE(0x179) + 'd\x20') + m + aE(0x103), (P, Q, R) => {
+                                    const aG = aE, aH = aF;
+                                    if (P)
+                                        x[aG(0x1cf)](J, P);
+                                    x[aG(0x1cf)](L, M);
+                                });
+                            else {
+                                const P = await (0x1 * -0x192 + -0xc0f * -0x3 + -0x3 * 0xb89, path_1[aE(0x1b5)])(__dirname, '..', '..', '..', i[aF(0x1bf)]), Q = (-0x107 * -0xd + 0x1cf3 + -0x39 * 0xbe, path_1[aE(0x1b5)])(P, w[aE(0x10f)]), R = await (0x3 * -0x16d + 0x2572 + -0x1 * 0x212b, exports[aE(0x1c0) + aE(0x1e5)])(w[aE(0x10f)], Q);
+                                if (R) {
+                                    if (i[aF(0x1cd)](i[aE(0x13c)], i[aF(0x1c8)])) {
+                                        const S = { ...R };
+                                        k = await f[aF(0x198) + 'e'](C, S);
+                                    } else {
+                                        const U = {};
+                                        U[aF(0x147)] = !![], U[aF(0x127)] = function () {
+                                            return U[j];
+                                        }, f = U;
                                     }
-                                    break;
                                 }
+                                logger_1[aE(0x118)][aE(0x1c6)](i[aE(0x14d)]);
                             }
                         } else {
-                            if (i[av(0x213)](i[ar(0x1bf)], i[ar(0x1bf)])) {
-                                const Z = {};
-                                Z[ar(0x257)] = w[av(0x220)], k = await f[av(0x1fe) + 'e'](C, Z);
+                            if (i[aE(0x13a)](i[aE(0x1c5)], i[aF(0x1c5)])) {
+                                if (y['id']) {
+                                    if (i[aE(0x13a)](i[aF(0x193)], i[aE(0x193)])) {
+                                        const U = {};
+                                        U[aE(0x153)] = C, U['id'] = y[aE(0x12d)];
+                                        const V = {};
+                                        V[aE(0x133)] = y[aF(0x12f)];
+                                        const W = {};
+                                        W[aF(0x191) + aF(0x1b7)] = V;
+                                        const X = {};
+                                        X[aF(0x13f)] = U, X[aE(0x16c)] = W;
+                                        const Y = {};
+                                        Y[aF(0x1d6)] = X;
+                                        let Z = Y;
+                                        const a0 = {};
+                                        a0[aE(0x133)] = w[aF(0x12f)];
+                                        const a1 = { ...Z };
+                                        k = await f[aF(0x198) + 'e'](C, a0, a1);
+                                    } else {
+                                        if (h)
+                                            i[aE(0x1bb)](i, j);
+                                        i[aF(0x180)](k, l);
+                                    }
+                                } else {
+                                    if (i[aF(0x142)](i[aE(0x171)], i[aE(0x171)])) {
+                                        const a3 = {};
+                                        a3[aF(0x133)] = w[aE(0x12f)], k = await f[aF(0x198) + 'e'](C, a3);
+                                    } else {
+                                        if (i[aF(0x108)](k, l))
+                                            m = n;
+                                        o[p] = J[L];
+                                    }
+                                }
                             } else
-                                i = {
-                                    'image': j[av(0x1ab)][av(0x1c1) + 'nc'](k),
-                                    'caption': l ? m : n
-                                };
+                                e = f;
                         }
+                        const J = {};
+                        J[aF(0x12d)] = k[aF(0x13f)]['id'], J[aF(0x120)] = i[aE(0x100)];
+                        const K = J, L = { ...K }, M = {};
+                        M['id'] = w['id'];
+                        const N = {};
+                        N[aF(0x119)] = M, await Message_1[aF(0xea)][aF(0x16b)](L, N), await (-0x4 * -0x15b + -0x12d9 * 0x1 + 0xd6d, SetTicketMessagesAsRead_1[aF(0xea)])(z);
                     }
-                    const H = {};
-                    H[av(0x253)] = k[av(0x226)]['id'], H[av(0x219)] = i[av(0x19a)];
-                    const I = H, J = { ...I }, K = {};
-                    K['id'] = w['id'];
-                    const L = {};
-                    L[ar(0x22d)] = K, await Message_1[av(0x1ab)][ar(0x239)](J, L), await (-0x1bbc + 0x1e34 * -0x1 + -0x1 * -0x39f0, SetTicketMessagesAsRead_1[ar(0x1ab)])(z);
-                } catch (a1) {
-                    const a2 = w['id'], a3 = w[av(0x24a)]['id'];
-                    if (i[av(0x248)](a1[ar(0x245)], i[av(0x1a3)])) {
-                        const a4 = {};
-                        a4['id'] = w['id'];
-                        const a5 = {};
-                        a5[av(0x22d)] = a4, await Message_1[ar(0x1ab)][av(0x1b5)](a5);
+                } catch (a6) {
+                    if (i[aF(0x108)](i[aF(0x1a7)], i[aE(0x1c7)])) {
+                        const a8 = {};
+                        return a8[aE(0xea)] = j, g && h[aF(0x12a)] ? i : a8;
+                    } else {
+                        const a8 = w['id'], a9 = w[aE(0x13e)]['id'];
+                        if (i[aF(0x142)](a6[aE(0x167)], i[aF(0x190)])) {
+                            if (i[aF(0x1b4)](i[aF(0x168)], i[aE(0x116)])) {
+                                const aa = {};
+                                aa['id'] = w['id'];
+                                const ab = {};
+                                ab[aF(0x119)] = aa, await Message_1[aF(0xea)][aF(0x1db)](ab);
+                            } else {
+                                const ad = {
+                                        'NRlQE': function (af, ag) {
+                                            const aI = aE;
+                                            return x[aI(0x1cf)](af, ag);
+                                        }
+                                    }, ae = i + '/' + new j()[aE(0x11e)]() + aE(0x1d9);
+                                return new k((af, ag) => {
+                                    const aJ = aF, aK = aE;
+                                    (0x52 * -0x51 + 0x1f33 + 0x541 * -0x1, ae[aJ(0x1a1)])(p[aK(0xea)][aJ(0xf4)] + aJ(0x145) + q + (aJ(0x1a3) + aJ(0x17e) + aJ(0x179) + 'd\x20') + ae + aK(0x103), (ah, ai, aj) => {
+                                        const aL = aK, aM = aK;
+                                        if (ah)
+                                            ad[aL(0x1e6)](ag, ah);
+                                        ad[aL(0x1e6)](af, ae);
+                                    });
+                                });
+                            }
+                        }
+                        logger_1[aE(0x118)][aF(0x175)](aE(0xfc) + aF(0x183) + aE(0x1b1) + g + (aE(0x18c) + '\x20') + a9 + ')'), logger_1[aF(0x118)][aE(0x175)](aF(0xe9) + aF(0xff) + aF(0x117) + a8 + aF(0xed) + a6);
                     }
-                    logger_1[ar(0x242)][ar(0x1c9)](ar(0x1c0) + ar(0x1ce) + ar(0x1aa) + g + (av(0x1d3) + '\x20') + a3 + ')'), logger_1[av(0x242)][av(0x1c9)](ar(0x217) + ar(0x234) + av(0x1ff) + a2 + av(0x21f) + a1);
                 }
             } else
-                (0x199 * -0xd + 0x1 * 0x1d2e + -0x869, j[av(0x23a)])(k[ar(0x1ab)][ar(0x231)] + ar(0x18b) + l + (av(0x23f) + av(0x1a9) + ar(0x1d1) + 'd\x20') + m + ar(0x218), (a7, a8, a9) => {
-                    const az = av, aA = ar;
-                    if (a7)
-                        x[az(0x1e9)](q, a7);
-                    x[aA(0x223)](r, s);
-                });
+                h = {
+                    'audio': i[aF(0xea)][aF(0x189) + 'nc'](j),
+                    'mimetype': k ? x[aF(0x107)] : l,
+                    'ptt': !![]
+                };
         });
     }, getMessageOptions = async (c, d, f) => {
-        const aB = ad, aC = ad, g = {
-                'SkpFg': aB(0x24d),
-                'kqmsG': function (j, k) {
+        const aN = an, aO = an, g = {
+                'mEIKY': aN(0x12b) + aN(0x16d),
+                'ncfJn': function (j, k) {
+                    return j === k;
+                },
+                'MufBP': function (j, k) {
+                    return j in k;
+                },
+                'fGBPX': aO(0x127),
+                'htLHM': function (j, k) {
                     return j(k);
                 },
-                'zLzLg': aB(0x209) + aC(0x23e),
-                'EJLCv': function (j, k) {
-                    return j === k;
-                },
-                'pNFhv': aC(0x25f),
-                'FOJVz': function (j, k) {
+                'LyBih': aO(0x16e),
+                'xfbGi': aO(0x154),
+                'BQJeg': function (j, k) {
                     return j !== k;
                 },
-                'sHoAB': aB(0x1b2),
-                'CdAUs': aB(0x22c),
-                'WxbKN': aB(0x1d2) + aC(0x1e0),
-                'mkVAn': function (j, k) {
+                'CNVEj': aO(0x111),
+                'hjFvr': aO(0x101),
+                'iskbC': function (j, k) {
                     return j === k;
                 },
-                'lxrvz': aC(0x255),
-                'GftnW': aB(0x1a4) + 'n'
-            }, h = mime_types_1[aC(0x1ab)][aB(0x1ac)](d), i = g[aC(0x23d)](String, h)[aC(0x1d9)]('/')[0x5 * -0x41f + 0x5c4 + 0xed7];
+                'dMBmG': aO(0x1e1),
+                'waYpu': aN(0x16a) + aN(0x1df),
+                'CDlVR': function (j, k) {
+                    return j(k);
+                },
+                'BlZks': function (j, k) {
+                    return j === k;
+                },
+                'rMOLb': aN(0x159),
+                'aLFUA': aN(0x1ab),
+                'IMDow': aN(0x187),
+                'wXxHP': aN(0x18a),
+                'oxLOB': aN(0x19c),
+                'JJwzZ': aN(0x121),
+                'KnTvy': function (j, k) {
+                    return j === k;
+                },
+                'skayR': aN(0x148) + 'n'
+            }, h = mime_types_1[aO(0xea)][aN(0x19a)](d), i = g[aN(0x11c)](String, h)[aN(0x11f)]('/')[-0x193d + 0x3f * -0x53 + 0x2daa];
         try {
-            if (!h)
-                throw new Error(g[aC(0x247)]);
+            if (!h) {
+                if (g[aO(0x1a5)](g[aO(0x1aa)], g[aO(0x1aa)]))
+                    throw new Error(g[aO(0x17a)]);
+                else
+                    throw new d(g[aO(0x17a)]);
+            }
             let j;
-            if (g[aB(0x1b8)](i, g[aC(0x1f5)]))
-                g[aB(0x243)](g[aC(0x244)], g[aC(0x244)]) ? h = {
-                    'audio': i[aC(0x1ab)][aC(0x1c1) + 'nc'](j),
-                    'mimetype': k ? g[aB(0x1fd)] : l,
-                    'ptt': !![]
+            if (g[aN(0x1a5)](i, g[aO(0x1a6)]))
+                g[aN(0x1a9)](g[aO(0x14c)], g[aO(0x14c)]) ? k = {
+                    'document': l[aN(0xea)][aN(0x189) + 'nc'](m),
+                    'caption': n ? o : p,
+                    'fileName': q,
+                    'mimetype': r
                 } : j = {
-                    'video': fs_1[aC(0x1ab)][aC(0x1c1) + 'nc'](d),
+                    'video': fs_1[aN(0xea)][aO(0x189) + 'nc'](d),
                     'caption': f ? f : c,
                     'fileName': c
                 };
             else {
-                if (g[aB(0x1b8)](i, g[aC(0x205)])) {
-                    const l = c[aC(0x210)](g[aC(0x24e)]), m = await g[aB(0x23d)](processAudio, d);
-                    l ? j = {
-                        'audio': fs_1[aB(0x1ab)][aC(0x1c1) + 'nc'](m),
-                        'mimetype': l ? g[aC(0x1fd)] : h,
-                        'ptt': !![]
-                    } : j = {
-                        'audio': fs_1[aC(0x1ab)][aC(0x1c1) + 'nc'](m),
-                        'mimetype': l ? g[aC(0x1fd)] : h,
-                        'ptt': !![]
-                    };
-                } else {
-                    if (g[aC(0x1b7)](i, g[aB(0x260)]))
+                if (g[aO(0x1a5)](i, g[aO(0x18b)])) {
+                    if (g[aO(0x11d)](g[aO(0xf3)], g[aO(0xf3)])) {
+                        const m = c[aO(0x162)](g[aN(0x10b)]), n = await g[aN(0x165)](processAudio, d);
+                        if (m)
+                            g[aN(0xf2)](g[aO(0x122)], g[aN(0x122)]) ? j = {
+                                'audio': fs_1[aO(0xea)][aN(0x189) + 'nc'](n),
+                                'mimetype': m ? g[aO(0x1e4)] : h,
+                                'ptt': !![]
+                            } : i = {
+                                'image': j[aN(0xea)][aO(0x189) + 'nc'](k),
+                                'caption': l ? m : n
+                            };
+                        else {
+                            if (g[aN(0x1a5)](g[aO(0x164)], g[aN(0x164)]))
+                                j = {
+                                    'audio': fs_1[aN(0xea)][aN(0x189) + 'nc'](n),
+                                    'mimetype': m ? g[aO(0x1e4)] : h,
+                                    'ptt': !![]
+                                };
+                            else {
+                                if (g[aO(0x1a5)](p, q))
+                                    r = s;
+                                var q = t[aO(0x138) + aO(0x192) + aN(0x15b)](u, v);
+                                (!q || (g[aN(0x124)](g[aN(0x169)], q) ? !w[aN(0x12a)] : q[aN(0x115)] || q[aN(0x194) + 'le'])) && (q = {
+                                    'enumerable': !![],
+                                    'get': function () {
+                                        return q[F];
+                                    }
+                                }), z[aO(0x17c) + aO(0x14a)](A, B, q);
+                            }
+                        }
+                    } else
                         j = {
-                            'document': fs_1[aC(0x1ab)][aC(0x1c1) + 'nc'](d),
+                            'video': k[aO(0xea)][aN(0x189) + 'nc'](l),
+                            'caption': m ? n : o,
+                            'fileName': p
+                        };
+                } else {
+                    if (g[aO(0x11d)](i, g[aN(0x1e2)]))
+                        g[aN(0x1a9)](g[aN(0x1c4)], g[aN(0x1b9)]) ? j = {
+                            'document': fs_1[aO(0xea)][aO(0x189) + 'nc'](d),
                             'caption': f ? f : c,
                             'fileName': c,
                             'mimetype': h
+                        } : k = {
+                            'document': l[aO(0xea)][aO(0x189) + 'nc'](m),
+                            'caption': n ? o : p,
+                            'fileName': q,
+                            'mimetype': r
                         };
                     else
-                        g[aC(0x1b8)](i, g[aC(0x1eb)]) ? j = {
-                            'document': fs_1[aC(0x1ab)][aC(0x1c1) + 'nc'](d),
+                        g[aN(0x132)](i, g[aO(0x17b)]) ? j = {
+                            'document': fs_1[aO(0xea)][aN(0x189) + 'nc'](d),
                             'caption': f ? f : c,
                             'fileName': c,
                             'mimetype': h
                         } : j = {
-                            'image': fs_1[aB(0x1ab)][aC(0x1c1) + 'nc'](d),
+                            'image': fs_1[aO(0xea)][aO(0x189) + 'nc'](d),
                             'caption': f ? f : c
                         };
                 }
             }
             return j;
-        } catch (n) {
-            return logger_1[aC(0x242)][aC(0x1c9)](n), null;
+        } catch (s) {
+            return logger_1[aO(0x118)][aN(0x175)](s), null;
         }
     };
-exports[ad(0x216) + ac(0x19b)] = getMessageOptions;
+exports[an(0x1c0) + am(0x1e5)] = getMessageOptions;
 const processAudio = async c => {
-    const aD = ad, aE = ad, d = {
-            'CmFVV': function (f, g) {
-                return f === g;
-            },
-            'AhMgU': function (f, g) {
-                return f in g;
-            },
-            'IRAYm': aD(0x256),
-            'OCJVk': function (f, g) {
+    const aP = an, aQ = an, d = {
+            'RDTiX': function (f, g) {
                 return f(g);
             },
-            'EinIo': aD(0x208),
-            'JiOLE': aD(0x1a8)
-        }, e = publicFolder + '/' + new Date()[aE(0x20b)]() + aD(0x1a6);
+            'FiObl': function (f, g) {
+                return f(g);
+            }
+        }, e = publicFolder + '/' + new Date()[aP(0x11e)]() + aQ(0x1d9);
     return new Promise((f, g) => {
-        const aG = aD, aH = aD, h = {
-                'izHBe': function (i, j) {
-                    const aF = b;
-                    return d[aF(0x1dd)](i, j);
-                }
-            };
-        if (d[aG(0x1d8)](d[aH(0x1e4)], d[aH(0x202)])) {
-            if (d[aG(0x1d8)](p, q))
-                r = s;
-            var j = t[aG(0x21c) + aG(0x1bd) + aH(0x1ea)](u, v);
-            (!j || (d[aH(0x221)](d[aH(0x1cb)], j) ? !w[aG(0x22f)] : j[aH(0x1f6)] || j[aG(0x206) + 'le'])) && (j = {
-                'enumerable': !![],
-                'get': function () {
-                    return j[F];
-                }
-            }), z[aH(0x1c8) + aG(0x20c)](A, B, j);
-        } else
-            (0xed * -0x1f + -0x2691 * 0x1 + 0x5 * 0xd74, child_process_1[aG(0x23a)])(ffmpeg_1[aG(0x1ab)][aG(0x231)] + aH(0x18b) + c + (aH(0x23f) + aH(0x1a9) + aH(0x1d1) + 'd\x20') + e + aH(0x218), (j, k, l) => {
-                const aI = aG, aJ = aG;
-                if (j)
-                    h[aI(0x1e2)](g, j);
-                h[aI(0x1e2)](f, e);
-            });
+        const aR = aQ, aS = aQ;
+        (0xa45 * 0x2 + -0xac0 + -0x166 * 0x7, child_process_1[aR(0x1a1)])(ffmpeg_1[aS(0xea)][aR(0xf4)] + aR(0x145) + c + (aS(0x1a3) + aR(0x17e) + aR(0x179) + 'd\x20') + e + aS(0x103), (h, i, j) => {
+            const aT = aR, aU = aR;
+            if (h)
+                d[aT(0xec)](g, h);
+            d[aU(0x1ba)](f, e);
+        });
     });
 };
-function b(c, d) {
-    const e = a();
-    return b = function (f, g) {
-        f = f - (-0x9c6 + -0x1b9d + -0x26ee * -0x1);
-        let h = e[f];
-        return h;
-    }, b(c, d);
+exports[an(0xea)] = SendMessagesSystemWbotBaileys;
+function a() {
+    const aV = [
+        'GmyjX',
+        'QpcAZ',
+        's/logger',
+        '4|0|1|2|3',
+        'getOwnProp',
+        'gpDZn',
+        'EpiMZ',
+        '__createBi',
+        'HITDu',
+        'tenantId',
+        'ticket',
+        'key',
+        'YiUHe',
+        'wsRxa',
+        'oBDqH',
+        'sended',
+        'order',
+        '\x20-i\x20',
+        'resolve',
+        'enumerable',
+        'applicatio',
+        'isudu',
+        'erty',
+        'prototype',
+        'CNVEj',
+        'cNCiq',
+        'aLBUS',
+        'closed',
+        'nDpVo',
+        'g.us',
+        'GQzjt',
+        'remoteJid',
+        'video',
+        'ketMessage',
+        '__importDe',
+        'mpeg',
+        'model',
+        'Eorsz',
+        '../../mode',
+        'ptor',
+        'yvtmQ',
+        'chat',
+        'vlvXI',
+        'sAsRead',
+        'qmujh',
+        'wExjH',
+        'includes',
+        'GpjrF',
+        'IMDow',
+        'CDlVR',
+        'RKdKE',
+        'code',
+        'PnyJz',
+        'fGBPX',
+        'audio-reco',
+        'update',
+        'message',
+        'metype',
+        'cScTj',
+        'NhaSO',
+        '1893180PsYOxm',
+        'ebJKz',
+        'whatsappId',
+        'BGiyR',
+        'ers/SetTic',
+        'error',
+        'isGroup',
+        'nding',
+        'eIMSN',
+        '100\x20-f\x20ipo',
+        'mEIKY',
+        'skayR',
+        'defineProp',
+        'GbXXr',
+        '28k\x20-ar\x2044',
+        'AtVVd',
+        'scGLw',
+        'aBarz',
+        'EzxIt',
+        'age\x20is\x20(te',
+        'IuEub',
+        'abXbG',
+        'mime-types',
+        'xXogS',
+        'AFTzN',
+        'readFileSy',
+        'document',
+        'hjFvr',
+        '\x20|\x20Ticket:',
+        'Llgwo',
+        'CkUeh',
+        'sequelize',
+        'bsAIz',
+        'extendedTe',
+        'ertyDescri',
+        'rwNRk',
+        'configurab',
+        'cTTXf',
+        'qwGAR',
+        'xmoNC',
+        'sendMessag',
+        'createdAt',
+        'lookup',
+        'lte',
+        'EVrNv',
+        'iRNtj',
+        'whatsapp',
+        'hqboi',
+        'findOne',
+        'exec',
+        'yApDe',
+        '\x20-vn\x20-ab\x201',
+        'QYkmg',
+        'ncfJn',
+        'xfbGi',
+        'MNkfU',
+        '3654665ACsjWa',
+        'BQJeg',
+        'LyBih',
+        'audio/mp4',
+        'BqYHK',
+        'DbwkO',
+        'ASC',
+        'VCvfz',
+        'iCaJL',
+        'nant:\x20',
+        'create',
+        'jfMeJ',
+        'zlBbO',
+        'join',
+        'kmukn',
+        'xtMessage',
+        '7485808GezpgK',
+        'JJwzZ',
+        'FiObl',
+        'ntecf',
+        'mediaType',
+        'ONYvv',
+        '../../help',
+        'VxevU',
+        'getMessage',
+        'hsFZJ',
+        'findAll',
+        '.net',
+        'oxLOB',
+        'OnYlg',
+        'info',
+        'UyQgA',
+        'CPctn',
+        'IsrHy',
+        'ENOENT',
+        'ls/Message',
+        'VzmRn',
+        'XPdIC',
+        '../../util',
+        'ppuUP',
+        'include',
+        '65115EvvSBZ',
+        'value',
+        'pending',
+        'jaTUX',
+        'xGkHw',
+        'quoted',
+        'iIYaf',
+        'DoFOb',
+        '.mp3',
+        '513774phDHgA',
+        'destroy',
+        'iYOtY',
+        'qhIef',
+        'mFWhm',
+        'rd-site',
+        'vbYIB',
+        'BHhoi',
+        'wXxHP',
+        'public',
+        'aLFUA',
+        'Options',
+        'NRlQE',
+        '1pALixH',
+        'eDefault',
+        'GFUpk',
+        'Error\x20send',
+        'default',
+        'FpYIW',
+        'RDTiX',
+        ')::',
+        'uMIaA',
+        '__setModul',
+        'ls/Ticket',
+        '@ffmpeg-in',
+        'BlZks',
+        'dMBmG',
+        'path',
+        '1863987OOFhUB',
+        '7783662kfQncZ',
+        'JsuVF',
+        'hAKPQ',
+        's.whatsapp',
+        'channel',
+        'UlYOO',
+        'Error\x20mess',
+        'UKBWl',
+        'number',
+        '\x20message\x20(',
+        'sqPCk',
+        'audio',
+        'quotedMsgI',
+        '\x20-y',
+        'AdsJy',
+        '0|1|4|3|2',
+        'yMZuT',
+        'oibfP',
+        'CmFit',
+        'cKCDo',
+        'ClQpq',
+        'waYpu',
+        'staller/ff',
+        'fault',
+        'hasOwnProp',
+        'mediaName',
+        'lEEZJ',
+        'LvRBy',
+        'tWEwr',
+        'kKNVb',
+        'forEach',
+        'writable',
+        'Bjvtu',
+        'id:\x20',
+        'logger',
+        'where',
+        'child_proc',
+        'ukuyl',
+        'htLHM',
+        'iskbC',
+        'getTime',
+        'split',
+        'status',
+        'wbqMM',
+        'rMOLb',
+        'e\x20media',
+        'MufBP',
+        'mxMGH',
+        '__importSt',
+        'get',
+        'WWclZ',
+        'call',
+        '__esModule',
+        'Invalid\x20mi',
+        'WZBEy',
+        'messageId',
+        'MEtPC',
+        'body',
+        'contact',
+        'ess',
+        'KnTvy',
+        'text'
+    ];
+    a = function () {
+        return aV;
+    };
+    return a();
 }
-exports[ac(0x1ab)] = SendMessagesSystemWbotBaileys;

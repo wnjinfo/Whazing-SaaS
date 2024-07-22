@@ -1,53 +1,10 @@
 'use strict';
 const n = b, o = b;
-function a() {
-    const s = [
-        '../../mode',
-        'fault',
-        '68ibYQqR',
-        '6077880styrfq',
-        '16733810vDYwwR',
-        '__esModule',
-        'update',
-        'ls/Help',
-        '__importDe',
-        'ERR_NO_HEL',
-        '9785979xiAZKx',
-        'default',
-        '../../erro',
-        'RMlPJ',
-        '22qKvafd',
-        'defineProp',
-        '3398358TEBQey',
-        'value',
-        'erty',
-        '260595eBExlB',
-        '47KmGTmc',
-        '14414Htapue',
-        '1032hcwTxI',
-        'P_FOUND',
-        '54642zYuTlk',
-        'findByPk',
-        'rs/AppErro'
-    ];
-    a = function () {
-        return s;
-    };
-    return a();
-}
-function b(c, d) {
-    const e = a();
-    return b = function (f, g) {
-        f = f - (0x2462 + -0x1 * -0x62 + -0x22d9);
-        let h = e[f];
-        return h;
-    }, b(c, d);
-}
 (function (c, d) {
     const l = b, m = b, e = c();
     while (!![]) {
         try {
-            const f = -parseInt(l(0x1f5)) / (0x95f * 0x2 + 0x1778 * 0x1 + 0x5 * -0x871) * (-parseInt(l(0x1f6)) / (-0x77b + -0x1409 + 0x1b86)) + -parseInt(l(0x1f1)) / (-0x460 + 0x1e42 + -0x25 * 0xb3) + -parseInt(m(0x1fe)) / (-0x1 * -0x4ff + 0x2067 + -0xa * 0x3bd) * (parseInt(l(0x1f4)) / (0x20 * -0x102 + 0xd * -0x30 + -0x6f1 * -0x5)) + parseInt(m(0x1ff)) / (-0x1802 + -0x2349 + 0xbdd * 0x5) + parseInt(m(0x1f9)) / (-0x11b6 + -0x1006 + 0xc9 * 0x2b) * (-parseInt(m(0x1f7)) / (-0x1fb4 + 0x1607 * -0x1 + -0x1 * -0x35c3)) + -parseInt(m(0x1eb)) / (-0x1 * -0x1079 + -0x1 * -0xa8b + 0x1 * -0x1afb) + parseInt(l(0x200)) / (0x8bb + -0x8dc + 0x2b) * (parseInt(m(0x1ef)) / (-0x1f35 * 0x1 + 0x2a5 * -0xb + 0x3c57));
+            const f = -parseInt(l(0x9b)) / (-0x1 * -0x70 + -0xb7a + -0x1 * -0xb0b) + parseInt(l(0xa4)) / (0x59 * 0x21 + 0x19c7 + -0x253e) + parseInt(m(0x93)) / (0xe58 + -0x11d9 + 0x1e * 0x1e) + -parseInt(m(0x94)) / (-0x15ad * -0x1 + -0x1a4 + -0x1405) * (-parseInt(l(0xa6)) / (-0x1 * 0x189a + -0x5b * 0x6 + -0x1 * -0x1ac1)) + -parseInt(m(0x97)) / (-0xd58 * -0x2 + 0x9e * -0x1d + 0x11 * -0x84) * (-parseInt(m(0x99)) / (-0x195f + -0x77b * -0x5 + 0x1b7 * -0x7)) + -parseInt(l(0xab)) / (0x175b + -0x249b + 0x154 * 0xa) * (-parseInt(l(0xac)) / (0x92 * -0x9 + 0xc26 + -0x6fb * 0x1)) + -parseInt(m(0x9f)) / (-0x349 + -0x211a + -0x5 * -0x749) * (parseInt(m(0x96)) / (0x56b + 0x947 + -0x79 * 0x1f));
             if (f === d)
                 break;
             else
@@ -56,19 +13,62 @@ function b(c, d) {
             e['push'](e['shift']());
         }
     }
-}(a, -0x1ad13 * -0x7 + 0x19 * 0x518d + -0xac3bd));
-var __importDefault = this && this[n(0x204) + n(0x1fd)] || function (c) {
-    const p = o;
-    return c && c[p(0x201)] ? c : { 'default': c };
+}(a, -0x6 * 0xbcab + -0x5dd2 + 0x7 * 0x1b708));
+function b(c, d) {
+    const e = a();
+    return b = function (f, g) {
+        f = f - (-0x1 * 0xfd1 + -0x1815 + 0x2879);
+        let h = e[f];
+        return h;
+    }, b(c, d);
+}
+var __importDefault = this && this[n(0xa5) + n(0xa1)] || function (c) {
+    const p = n;
+    return c && c[p(0xa2)] ? c : { 'default': c };
 };
 const k = {};
-k[o(0x1f2)] = !![], Object[o(0x1f0) + n(0x1f3)](exports, n(0x201), k);
-const AppError_1 = __importDefault(require(o(0x1ed) + o(0x1fb) + 'r')), Help_1 = __importDefault(require(o(0x1fc) + n(0x203))), UpdateService = async d => {
+k[o(0xad)] = !![], Object[o(0xa8) + n(0x98)](exports, o(0xa2), k);
+const AppError_1 = __importDefault(require(o(0x9e) + o(0xa9) + 'r')), Help_1 = __importDefault(require(n(0xaa) + n(0x9a))), UpdateService = async d => {
         const q = o, r = o, e = {};
-        e[q(0x1ee)] = q(0x205) + q(0x1f8);
-        const f = e, {id: g} = d, h = await Help_1[q(0x1ec)][r(0x1fa)](g);
+        e[q(0xa7)] = q(0xa3) + q(0x95);
+        const f = e, {id: g} = d, h = await Help_1[r(0x9d)][r(0x9c)](g);
         if (!h)
-            throw new AppError_1[(q(0x1ec))](f[r(0x1ee)], -0x23b4 + -0x26f1 + 0x4c39);
-        return await h[q(0x202)](d), h;
+            throw new AppError_1[(r(0x9d))](f[r(0xa7)], 0x21 * -0x1b + 0x146f * 0x1 + -0x1ec * 0x8);
+        return await h[q(0xa0)](d), h;
     };
-exports[n(0x1ec)] = UpdateService;
+function a() {
+    const s = [
+        'ERR_NO_HEL',
+        '289868DGngck',
+        '__importDe',
+        '440855izEtVB',
+        'GCMMf',
+        'defineProp',
+        'rs/AppErro',
+        '../../mode',
+        '24XENaSA',
+        '1800342WAYhDn',
+        'value',
+        '2448462guNtFF',
+        '4kAOiIn',
+        'P_FOUND',
+        '11980078iKuzTu',
+        '16410hOKRmA',
+        'erty',
+        '609FoyCzq',
+        'ls/Help',
+        '325288ENbexR',
+        'findByPk',
+        'default',
+        '../../erro',
+        '10lCgBUR',
+        'update',
+        'fault',
+        '__esModule'
+    ];
+    a = function () {
+        return s;
+    };
+    return a();
+}
+exports[n(0x9d)] = UpdateService;

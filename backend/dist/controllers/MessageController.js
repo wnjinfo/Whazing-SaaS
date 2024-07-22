@@ -1,10 +1,10 @@
 'use strict';
-const z = b, A = b;
+const E = b, F = b;
 (function (c, d) {
-    const x = b, y = b, e = c();
+    const C = b, D = b, e = c();
     while (!![]) {
         try {
-            const f = -parseInt(x(0x133)) / (-0xd3d * -0x2 + -0x1f02 + 0x489) + -parseInt(x(0xea)) / (0x1e4 * -0xb + 0x1f05 + 0xa37 * -0x1) * (-parseInt(x(0xda)) / (0x260b + -0x6f2 * 0x5 + 0x2 * -0x1a7)) + -parseInt(y(0x14c)) / (-0xe36 * -0x2 + 0x118d + -0x2df5) + -parseInt(y(0xe0)) / (-0x1240 + 0xe4a * -0x1 + 0x208f) + parseInt(y(0x138)) / (0x4dd + -0x442 * 0x5 + 0x1073 * 0x1) * (-parseInt(y(0x127)) / (0x41c * -0x3 + 0x4 * 0x506 + -0x7 * 0x11b)) + parseInt(y(0x10b)) / (-0xbf9 * -0x2 + -0x3 * 0x9e9 + 0x5d1) + -parseInt(x(0xdf)) / (0x1847 + -0x139f + -0x49f) * (-parseInt(y(0x141)) / (0x9f * -0x3d + -0x1a15 + 0x4002));
+            const f = -parseInt(C(0x174)) / (0x16f * -0x2 + 0x18ef + -0x1610) * (parseInt(D(0x18f)) / (-0x1 * 0x1a0b + 0x49b + -0x3d * -0x5a)) + -parseInt(C(0x17d)) / (-0x3b4 * -0x9 + -0x465 + 0x9a4 * -0x3) + parseInt(D(0x1a3)) / (-0x1 * -0x18f7 + -0x3ae + 0x1545 * -0x1) + -parseInt(C(0x198)) / (0x15e5 + -0xf17 * -0x1 + -0x1 * 0x24f7) * (-parseInt(C(0x19f)) / (0x3f * 0x22 + 0x1 * 0x27a + -0x1 * 0xad2)) + parseInt(D(0x1aa)) / (-0x2 * 0x1c3 + 0x94d * -0x3 + 0xa7c * 0x3) + -parseInt(C(0x17c)) / (0x26e0 + 0x10e2 + 0x7 * -0x7f6) + parseInt(D(0x181)) / (0x305 * -0x4 + -0xd8e + -0x19ab * -0x1) * (-parseInt(C(0x1e8)) / (0x87b * 0x1 + 0x1f3f + -0x27b0));
             if (f === d)
                 break;
             else
@@ -13,341 +13,362 @@ const z = b, A = b;
             e['push'](e['shift']());
         }
     }
-}(a, -0x1f * 0x7367 + -0x192045 + 0x2e60 * 0x120));
-var __importDefault = this && this[z(0x154) + z(0x106)] || function (c) {
-    const B = A;
-    return c && c[B(0xfe)] ? c : { 'default': c };
-};
-const q = {};
+}(a, 0x36b * 0xf1 + -0x18955 + 0x1bb85 * 0x1));
 function a() {
-    const Q = [
-        'rvice',
-        'contact',
-        '6uremfe',
-        '/DeleteMes',
-        'XzLOu',
-        'ERR_EDITIN',
+    const X = [
+        'ListCountM',
+        'Read',
+        '80pAGZHK',
+        'erty',
+        'PjLLU',
         'dMessageSe',
-        'rHiSL',
-        'lrMWQ',
-        'pending',
-        'PIfjA',
-        '4286530oYFaqO',
-        'idFront',
-        'aKoLh',
-        'tHXLT',
-        'wTicketSer',
         's/MessageS',
-        'messages',
-        'userId',
-        'tWDAu',
+        'pageNumber',
+        'logger',
+        'index',
+        'edit',
+        'default',
+        'send',
         'sage',
-        'ices/EditW',
-        '330648egZRSZ',
-        'AppError',
-        'kRvls',
-        'json',
-        'msg',
-        'ERR_DELETE',
-        'ervices/Li',
-        'FUQqo',
-        '__importDe',
-        'sendType',
+        'Service',
+        'contact',
+        'wqNLR',
+        'DzwWX',
+        'ensagens',
+        'hPgFh',
+        'uwWvq',
+        'userId',
+        '../service',
+        'tHaGI',
+        'remove',
+        'try\x20Create',
+        'fFzUp',
+        'NQTkQ',
+        'fault',
+        'MessagesAs',
+        'xdOQn',
+        'VMyni',
+        'store',
+        '_SYSTEM_MS',
+        'tSzcr',
+        'eIgJh',
+        'isArray',
+        'messageId',
+        'user',
+        'ERR_EDITIN',
+        '5FgvERu',
+        '__esModule',
+        'vvSVJ',
+        'tYysm',
+        '../helpers',
+        'xHYpK',
         'hatsAppMes',
+        'fromMe',
+        '508496GmHrDi',
+        '309939ZXpxsS',
+        'aaTpo',
+        'defineProp',
+        'MessageSys',
+        '81234OENxZR',
+        'json',
+        'temService',
+        'srvPL',
+        'ERR_DELETE',
+        'ctJyW',
+        'G:\x20',
+        '../models/',
+        'GBBxb',
+        'eSystemSer',
+        'ogger',
+        'fLWnE',
+        'OMrxI',
+        'EsjdJ',
+        '80722bhNIut',
+        'XVKVX',
+        'msg',
+        'forEach',
+        'ontar\x20as\x20m',
+        'hUtsO',
+        'YlUTd',
+        'value',
+        'Ocorreu\x20um',
+        '15dTgWbL',
+        'fLine',
+        'ensagens.',
+        'eateMessag',
+        'oBqDd',
+        'essagesAsR',
+        '__importDe',
+        '398568aEqHsX',
+        'query',
+        'ARTUB',
+        'peXwC',
+        '1271764HfdBXw',
+        'count',
+        'sendType',
+        'rJZIt',
+        'ArwGN',
+        'message',
+        'nNxmt',
+        '1031702VnQatr',
+        'ticket',
+        'rvice',
         '/SetTicket',
         'ticketIdOr',
-        'sageSystem',
-        '../errors/',
-        'SetTicketM',
-        'etbpP',
-        'VcoPM',
-        'forward',
-        'params',
-        'ead',
-        'log',
-        'hasMore',
-        'erty',
-        'ticket',
-        'tKhlf',
-        'fKdzB',
-        'MessagesAs',
         'messagesOf',
-        'message',
-        'remove',
-        'svAfr',
-        'user',
-        'bHucX',
-        '6747FQPGAl',
-        'EmTHh',
-        's/WbotServ',
-        'ogger',
-        '_SYSTEM_MS',
-        '9XWrgvt',
-        '565915wAriDv',
-        'G:\x20',
-        '../service',
-        'index',
-        'rUUsm',
-        'VAijX',
-        'ticketId',
-        'medias',
-        'chat',
-        'send',
-        '252pXLvRc',
-        'value',
-        'UDOIV',
-        'FELVD',
-        'NOCMy',
-        'store',
-        'temService',
-        'tenantId',
-        'mPKju',
-        'vice',
-        'MessageSys',
-        'QsxTw',
-        'fromMe',
-        'rvices/Sho',
-        'FqgcI',
-        'ozipa',
-        'Message',
-        'qoGNc',
-        'body',
-        'ensagens.',
-        '__esModule',
-        'defineProp',
-        'default',
-        'Read',
-        'gYwJH',
-        'TaUrT',
-        'edit',
-        'eateForwar',
-        'fault',
-        '../helpers',
-        'Ocorreu\x20um',
-        'error',
-        'eSystemSer',
-        '9288904QdpPAv',
-        'logger',
-        'hdMdS',
-        'igin',
-        'essagesAsR',
-        'hVHPd',
-        'isArray',
-        'ZGdYM',
-        '../utils/l',
-        'rulLm',
-        'ListCountM',
-        'riqet',
-        'ervices/Cr',
-        'try\x20Create',
-        's/TicketSe',
-        'HEsTQ',
-        'ontar\x20as\x20m',
-        'rceKV',
-        'forEach',
-        'fLine',
-        'oHkWC',
-        'messageId',
-        'count',
-        'IGXqh',
-        'stMessages',
-        'pajSm',
-        'ensagens',
-        'eateMessag',
-        '1622243FVEGWd',
-        'DJGFN',
-        'Service',
-        'drkxI',
-        'scheduleDa',
-        'query',
         'status',
+        'IpnNZ',
+        'length',
+        'tenantId',
+        'wiAoK',
+        'wTicketSer',
+        'NFbIA',
+        'hasMore',
+        'ead',
+        'params',
+        'BfqaS',
+        'yXfQJ',
+        'pending',
+        'vice',
+        's/TicketSe',
+        'NqRGN',
+        'igin',
+        'yHFAW',
+        'ticketId',
+        'WItsv',
         '\x20erro\x20ao\x20c',
+        'eateForwar',
+        's/WbotServ',
+        '/DeleteMes',
+        'AppError',
+        'aanzT',
+        'sageSystem',
+        'ices/EditW',
+        'rvices/Sho',
+        'medias',
+        'forward',
+        'OsaXV',
+        '../errors/',
+        'ervices/Li',
+        'ervices/Cr',
+        'HrXAo',
+        'SetTicketM',
+        'qCxGA',
+        'scheduleDa',
+        'log',
+        'idFront',
         'G_WAPP_MSG',
-        'rptFa',
-        'lMTWJ',
-        'pageNumber',
-        '588904pyviMG',
-        '../models/',
-        'files'
+        'mediaUrl',
+        'cygMX',
+        'chat',
+        'Message',
+        'stMessages',
+        'bKTDx',
+        '../utils/l',
+        'KpnND',
+        'body',
+        'files',
+        'messages',
+        'error'
     ];
     a = function () {
-        return Q;
+        return X;
     };
     return a();
 }
-q[A(0xeb)] = !![], Object[A(0xff) + A(0xcf)](exports, A(0xfe), q), exports[z(0x15e)] = exports[z(0xd6)] = exports[A(0x104)] = exports[A(0xef)] = exports[z(0x115) + z(0x125)] = exports[z(0xe3)] = void (-0x1389 + 0x1 * -0x2d7 + -0x598 * -0x4);
-const AppError_1 = __importDefault(require(z(0x15a) + z(0x14d))), DeleteMessageSystem_1 = __importDefault(require(A(0x107) + A(0x139) + A(0x159))), SetTicketMessagesAsRead_1 = __importDefault(require(A(0x107) + z(0x157) + z(0xd3) + A(0x101))), Message_1 = __importDefault(require(A(0x134) + z(0xfa))), CreateForwardMessageService_1 = __importDefault(require(z(0xe2) + A(0x146) + A(0x117) + z(0x105) + z(0x13c) + z(0x136))), CreateMessageSystemService_1 = __importDefault(require(z(0xe2) + A(0x146) + A(0x117) + z(0x126) + z(0x10a) + z(0xf3))), ListMessagesService_1 = __importDefault(require(z(0xe2) + z(0x146) + A(0x152) + z(0x123) + A(0x129))), ShowTicketService_1 = __importDefault(require(z(0xe2) + z(0x119) + A(0xf7) + z(0x145) + A(0xf3))), logger_1 = require(z(0x113) + z(0xdd)), EditWhatsAppMessage_1 = __importDefault(require(z(0xe2) + z(0xdc) + A(0x14b) + A(0x156) + A(0x14a))), index = async (e, f) => {
-        const C = z, D = z, {ticketId: g} = e[C(0xcb)], {pageNumber: h} = e[C(0x12c)], {tenantId: i} = e[D(0xd8)], j = {};
-        j[D(0x132)] = h, j[D(0xe6)] = g, j[C(0xf1)] = i;
+var __importDefault = this && this[E(0x19e) + E(0x168)] || function (c) {
+    const G = F;
+    return c && c[G(0x175)] ? c : { 'default': c };
+};
+const q = {};
+q[F(0x196)] = !![], Object[F(0x17f) + E(0x1e9)](exports, E(0x175), q), exports[F(0x1ce)] = exports[E(0x164)] = exports[F(0x1f0)] = exports[E(0x16c)] = exports[E(0x1e6) + F(0x15e)] = exports[E(0x1ef)] = void (0xcc9 + -0x1e4e + -0xc3 * -0x17);
+const AppError_1 = __importDefault(require(E(0x1d0) + E(0x1c8))), DeleteMessageSystem_1 = __importDefault(require(F(0x178) + E(0x1c7) + F(0x1ca))), SetTicketMessagesAsRead_1 = __importDefault(require(F(0x178) + E(0x1ad) + F(0x169) + E(0x1e7))), Message_1 = __importDefault(require(F(0x188) + F(0x1dd))), CreateForwardMessageService_1 = __importDefault(require(E(0x162) + E(0x1ec) + E(0x1d2) + F(0x1c5) + F(0x1eb) + F(0x1ac))), CreateMessageSystemService_1 = __importDefault(require(F(0x162) + F(0x1ec) + F(0x1d2) + F(0x19b) + E(0x18a) + E(0x1bd))), ListMessagesService_1 = __importDefault(require(F(0x162) + E(0x1ec) + E(0x1d1) + F(0x1de) + E(0x1f4))), ShowTicketService_1 = __importDefault(require(E(0x162) + E(0x1be) + E(0x1cc) + E(0x1b5) + F(0x1bd))), logger_1 = require(F(0x1e0) + E(0x18b)), EditWhatsAppMessage_1 = __importDefault(require(F(0x162) + F(0x1c6) + E(0x1cb) + E(0x17a) + E(0x1f3))), index = async (e, f) => {
+        const H = F, I = E, {ticketId: g} = e[H(0x1b9)], {pageNumber: h} = e[H(0x1a0)], {tenantId: i} = e[H(0x172)], j = {};
+        j[H(0x1ed)] = h, j[I(0x1c2)] = g, j[H(0x1b3)] = i;
         const {
             count: k,
             messages: l,
             messagesOffLine: m,
             ticket: n,
             hasMore: o
-        } = await (0x5c9 * -0x1 + 0x1 * -0x1d4f + 0x8 * 0x463, ListMessagesService_1[D(0x100)])(j);
-        (0x21d8 + -0x2 * -0x66e + -0x1 * 0x2eb4, SetTicketMessagesAsRead_1[C(0x100)])(n);
+        } = await (0x19b9 + 0x17f6 * -0x1 + 0x1 * -0x1c3, ListMessagesService_1[H(0x1f1)])(j);
+        (-0x39 + -0xd4c + 0xd85, SetTicketMessagesAsRead_1[H(0x1f1)])(n);
         const p = {};
-        return p[D(0x121)] = k, p[C(0x147)] = l, p[D(0xd4) + C(0x11e)] = m, p[D(0xd0)] = n, p[D(0xce)] = o, f[D(0x14f)](p);
+        return p[H(0x1a4)] = k, p[I(0x1e4)] = l, p[I(0x1af) + I(0x199)] = m, p[I(0x1ab)] = n, p[I(0x1b7)] = o, f[I(0x182)](p);
     };
+exports[E(0x1ef)] = index;
+const ListCountMensagens = async (f, g) => {
+    const J = E, K = E, h = {};
+    h[J(0x18d)] = J(0x165) + K(0x180) + J(0x183), h[J(0x1db)] = function (j, k) {
+        return j !== k;
+    }, h[K(0x15c)] = K(0x15f), h[K(0x1b1)] = K(0x1c9), h[K(0x1b4)] = K(0x163), h[J(0x190)] = J(0x197) + K(0x1c4) + K(0x193) + J(0x19a);
+    const i = h;
+    try {
+        if (i[K(0x1db)](i[J(0x15c)], i[K(0x15c)])) {
+            const k = {};
+            return k[K(0x1f1)] = j, g && h[J(0x175)] ? i : k;
+        } else {
+            const k = await Message_1[K(0x1f1)][J(0x1a4)](), l = {};
+            return l[J(0x1a4)] = k, g[J(0x182)](l);
+        }
+    } catch (m) {
+        if (i[J(0x1db)](i[K(0x1b1)], i[J(0x1b4)])) {
+            const n = {};
+            return n[J(0x1e5)] = i[J(0x190)], g[K(0x1b0)](-0x1590 + 0xd * 0x2dc + -0xda8)[K(0x182)](n);
+        } else
+            e[J(0x1d7)](i[J(0x18d)], f);
+    }
+};
+exports[E(0x1e6) + E(0x15e)] = ListCountMensagens;
+const store = async (g, h) => {
+    const L = E, M = F, i = {};
+    i[L(0x166)] = L(0x197) + L(0x1c4) + L(0x193) + L(0x19a), i[L(0x1ba)] = L(0x1d4) + L(0x19d) + M(0x1b8), i[M(0x1a1)] = M(0x185) + M(0x16d) + 'G', i[L(0x179)] = function (s, t) {
+        return s instanceof t;
+    }, i[L(0x15d)] = function (s, t) {
+        return s === t;
+    }, i[M(0x1e1)] = M(0x173) + M(0x1d9), i[L(0x18c)] = function (s, t) {
+        return s === t;
+    }, i[M(0x16b)] = L(0x176), i[M(0x1b6)] = L(0x16e), i[M(0x1a6)] = M(0x1dc), i[M(0x17e)] = M(0x1bc), i[L(0x184)] = M(0x167), i[M(0x186)] = L(0x195), i[L(0x189)] = function (s, t) {
+        return s === t;
+    }, i[L(0x1c3)] = L(0x19c), i[L(0x16a)] = L(0x1bf), i[L(0x1df)] = function (s, t) {
+        return s === t;
+    }, i[L(0x1d3)] = M(0x1d5), i[M(0x1c1)] = function (s, t) {
+        return s > t;
+    }, i[L(0x16f)] = function (s, t) {
+        return s === t;
+    }, i[L(0x1bb)] = L(0x1ea), i[L(0x1a2)] = L(0x165) + L(0x180) + L(0x183);
+    const j = i, {ticketId: k} = g[L(0x1b9)], {
+            tenantId: l,
+            id: m
+        } = g[L(0x172)], n = g[L(0x1e2)], o = g[L(0x1e3)], p = {};
+    p['id'] = k, p[M(0x1b3)] = l;
+    const r = await (-0x1 * 0x172f + 0xcc2 + 0xa6d, ShowTicketService_1[M(0x1f1)])(p);
+    try {
+        if (j[M(0x18c)](j[L(0x184)], j[L(0x186)])) {
+            const t = {};
+            return t[M(0x1e5)] = j[L(0x166)], p[M(0x1b0)](-0xd43 + 0x695 + 0x8a2)[L(0x182)](t);
+        } else
+            await (-0xed7 + 0x102c + -0x1 * 0x155, SetTicketMessagesAsRead_1[L(0x1f1)])(r);
+    } catch (t) {
+        j[M(0x189)](j[M(0x1c3)], j[L(0x16a)]) ? e[M(0x1d7)](j[L(0x1ba)], f) : console[M(0x1d7)](j[M(0x1ba)], t);
+    }
+    try {
+        if (n[M(0x1da)]) {
+            if (j[L(0x1df)](j[M(0x1d3)], j[M(0x1d3)])) {
+                const v = {};
+                v[L(0x191)] = n, v[M(0x1b3)] = l, v[M(0x1cd)] = o, v[M(0x1ab)] = r, v[M(0x161)] = m, v[L(0x1d6) + 'te'] = n[L(0x1d6) + 'te'], v[L(0x1a5)] = n[M(0x1a5)] || j[L(0x1a6)], v[M(0x1b0)] = j[L(0x17e)], v[M(0x1d8)] = n[M(0x1d8)], await (0x1 * -0x1da7 + 0x1640 + -0x17b * -0x5, CreateMessageSystemService_1[M(0x1f1)])(v);
+            } else {
+                f[L(0x1ee)][M(0x1e5)](L(0x185) + L(0x16d) + M(0x187) + g);
+                throw new h[(L(0x1f1))](j[M(0x1a1)]);
+            }
+        } else {
+            if (o && j[M(0x1c1)](o[L(0x1b2)], -0x1d51 + -0x1c1e + 0x57 * 0xa9)) {
+                if (j[M(0x16f)](j[M(0x1bb)], j[M(0x1bb)]))
+                    o[L(0x192)](async (x, y) => {
+                        const P = M, Q = M, z = {
+                                'tYysm': function (A, B) {
+                                    const N = b;
+                                    return j[N(0x179)](A, B);
+                                },
+                                'uwWvq': function (A, B) {
+                                    const O = b;
+                                    return j[O(0x15d)](A, B);
+                                },
+                                'OsaXV': j[P(0x1e1)]
+                            };
+                        if (j[P(0x18c)](j[P(0x16b)], j[P(0x1b6)])) {
+                            if (z[Q(0x177)](i, j[Q(0x1f1)]) && z[Q(0x160)](k[P(0x1a8)], z[Q(0x1cf)])) {
+                                const B = {};
+                                return B[P(0x1e5)] = p[Q(0x1a8)], o[P(0x1b0)](-0xb2c + 0xb7f + -0x13d * -0x1)[Q(0x182)](B);
+                            }
+                            throw n;
+                        } else {
+                            const B = {
+                                'fromMe': n[Q(0x17b)],
+                                'body': Array[Q(0x170)](n[P(0x1e2)]) ? n[Q(0x1e2)][y] : n[Q(0x1e2)],
+                                'idFront': Array[Q(0x170)](n[P(0x1d8)]) ? n[Q(0x1d8)][y] : n[P(0x1d8)],
+                                'read': ![]
+                            };
+                            await (-0x1f6a + -0x2 * 0xac7 + 0x34f8, CreateMessageSystemService_1[P(0x1f1)])({
+                                'msg': B,
+                                'tenantId': l,
+                                'medias': [x],
+                                'ticket': r,
+                                'userId': m,
+                                'scheduleDate': n[Q(0x1d6) + 'te'] ? new Date(Array[P(0x170)](n[P(0x1d6) + 'te']) ? n[P(0x1d6) + 'te'][y] : n[Q(0x1d6) + 'te']) : undefined,
+                                'sendType': n[Q(0x1a5)] || j[P(0x1a6)],
+                                'status': j[Q(0x17e)],
+                                'idFront': Array[P(0x170)](n[Q(0x1d8)]) ? n[Q(0x1d8)][y] : n[Q(0x1d8)]
+                            });
+                        }
+                    });
+                else {
+                    const y = {};
+                    return y[L(0x1e5)] = y[L(0x1a8)], e[M(0x1b0)](0x1 * 0x1c13 + 0x1a82 + 0x793 * -0x7)[L(0x182)](y);
+                }
+            } else {
+                const y = {};
+                y[M(0x191)] = n, y[M(0x1b3)] = l, y[L(0x1cd)] = o, y[M(0x1ab)] = r, y[L(0x161)] = m, y[M(0x1d6) + 'te'] = n[L(0x1d6) + 'te'], y[M(0x1a5)] = n[M(0x1a5)] || j[L(0x1a6)], y[L(0x1b0)] = j[M(0x17e)], y[L(0x1d8)] = n[L(0x1d8)], await (-0x1 * -0x26e + -0x3a * 0x49 + 0x1 * 0xe1c, CreateMessageSystemService_1[M(0x1f1)])(y);
+            }
+        }
+    } catch (z) {
+        console[L(0x1d7)](j[L(0x1a2)], z);
+    }
+    return h[L(0x1f2)]();
+};
+exports[E(0x16c)] = store;
+const edit = async (f, g) => {
+    const R = E, S = E, h = {};
+    h[R(0x1a7)] = function (n, o) {
+        return n instanceof o;
+    }, h[S(0x1a9)] = function (n, o) {
+        return n === o;
+    }, h[S(0x194)] = S(0x173) + R(0x1d9);
+    const i = h, {messageId: j} = f[S(0x1b9)], {tenantId: k} = f[R(0x172)], l = +k, {body: m} = f[R(0x1e2)];
+    try {
+        const n = {};
+        n[R(0x171)] = j, n[S(0x1b3)] = l, n[S(0x1e2)] = m;
+        const {
+            ticketId: o,
+            message: p
+        } = await (-0x485 + 0x173f + -0x12ba, EditWhatsAppMessage_1[R(0x1f1)])(n);
+    } catch (r) {
+        if (i[S(0x1a7)](r, AppError_1[R(0x1f1)]) && i[R(0x1a9)](r[S(0x1a8)], i[S(0x194)])) {
+            const s = {};
+            return s[R(0x1e5)] = r[S(0x1a8)], g[R(0x1b0)](-0x700 * 0x4 + -0x17 * 0x62 + 0x1 * 0x265e)[R(0x182)](s);
+        }
+        throw r;
+    }
+    return g[S(0x1f2)]();
+};
+exports[E(0x1f0)] = edit;
+const remove = async (d, e) => {
+    const T = F, U = E, f = {};
+    f[T(0x18e)] = T(0x185) + T(0x16d) + 'G';
+    const g = f, {messageId: h} = d[T(0x1b9)], {tenantId: i} = d[U(0x172)];
+    try {
+        await (0x2 * -0xc55 + 0x142b + 0x1 * 0x47f, DeleteMessageSystem_1[U(0x1f1)])(d[T(0x1e2)]['id'], h, i);
+    } catch (j) {
+        logger_1[T(0x1ee)][T(0x1e5)](T(0x185) + U(0x16d) + T(0x187) + j);
+        throw new AppError_1[(T(0x1f1))](g[U(0x18e)]);
+    }
+    return e[T(0x1f2)]();
+};
+exports[F(0x164)] = remove;
 function b(c, d) {
     const e = a();
     return b = function (f, g) {
-        f = f - (-0x1bda + -0x1 * 0xa58 + 0x26fd);
+        f = f - (0x140 + 0x1f * 0x5c + -0xb09);
         let h = e[f];
         return h;
     }, b(c, d);
 }
-exports[A(0xe3)] = index;
-const ListCountMensagens = async (f, g) => {
-    const E = A, F = A, h = {};
-    h[E(0x15d)] = F(0x151) + F(0xde) + 'G', h[E(0xed)] = function (j, k) {
-        return j !== k;
-    }, h[E(0xe4)] = F(0x11c), h[E(0xd1)] = E(0x130), h[E(0x12a)] = F(0x108) + F(0x12e) + F(0x11b) + E(0xfd);
-    const i = h;
-    try {
-        if (i[E(0xed)](i[E(0xe4)], i[E(0xd1)])) {
-            const j = await Message_1[E(0x100)][F(0x121)](), k = {};
-            return k[E(0x121)] = j, g[E(0x14f)](k);
-        } else {
-            f[F(0x10c)][E(0x109)](E(0x151) + E(0xde) + E(0xe1) + g);
-            throw new h[(F(0x100))](i[F(0x15d)]);
-        }
-    } catch (m) {
-        const n = {};
-        return n[F(0x109)] = i[E(0x12a)], g[E(0x12d)](-0x1e8b + -0x18be + 0x393d * 0x1)[E(0x14f)](n);
-    }
-};
-exports[z(0x115) + A(0x125)] = ListCountMensagens;
-const store = async (f, g) => {
-    const G = A, H = A, h = {};
-    h[G(0x140)] = G(0x108) + G(0x12e) + G(0x11b) + H(0xfd), h[G(0xf9)] = H(0xe8), h[H(0xee)] = G(0x13f), h[G(0x144)] = function (r, s) {
-        return r instanceof s;
-    }, h[G(0x13d)] = function (r, s) {
-        return r === s;
-    }, h[G(0x102)] = G(0x13b) + H(0x12f), h[G(0x153)] = function (r, s) {
-        return r !== s;
-    }, h[H(0x14e)] = H(0x149), h[H(0xd9)] = H(0x15b) + G(0x10f) + G(0xcc), h[H(0xe5)] = function (r, s) {
-        return r !== s;
-    }, h[H(0xf2)] = H(0x116), h[G(0x131)] = G(0x110), h[H(0x112)] = H(0xec), h[H(0xf8)] = G(0x118) + G(0xf4) + G(0xf0);
-    const i = h, {ticketId: j} = f[H(0xcb)], {
-            tenantId: k,
-            id: l
-        } = f[G(0xd8)], m = f[G(0xfc)], n = f[G(0x135)], o = {};
-    o['id'] = j, o[H(0xf1)] = k;
-    const p = await (0x248a + 0x714 + -0x2 * 0x15cf, ShowTicketService_1[H(0x100)])(o);
-    try {
-        await (0x1a9f + -0x2f4 + -0x17ab, SetTicketMessagesAsRead_1[H(0x100)])(p);
-    } catch (r) {
-        if (i[H(0x153)](i[G(0x14e)], i[G(0x14e)])) {
-            const t = {};
-            return t[H(0x109)] = i[G(0x140)], o[H(0x12d)](0x1827 + -0x1433 * 0x1 + 0x80 * -0x4)[H(0x14f)](t);
-        } else
-            console[G(0xcd)](i[G(0xd9)], r);
-    }
-    try {
-        if (i[G(0xe5)](i[G(0xf2)], i[G(0xf2)])) {
-            const u = {};
-            return u[G(0x109)] = f[H(0xd5)], u[G(0x12d)](0x1c5f + 0x7cb + -0x229a)[H(0x14f)](u);
-        } else {
-            if (n) {
-                if (i[G(0xe5)](i[H(0x131)], i[G(0x112)]))
-                    n[G(0x11d)](async (u, v) => {
-                        const I = G, J = G, w = {
-                                'fromMe': m[I(0xf6)],
-                                'body': Array[I(0x111)](m[I(0xfc)]) ? m[I(0xfc)][v] : m[I(0xfc)],
-                                'idFront': Array[J(0x111)](m[I(0x142)]) ? m[J(0x142)][v] : m[J(0x142)],
-                                'read': ![]
-                            };
-                        await (-0xe37 + 0x15e1 + -0x7aa * 0x1, CreateMessageSystemService_1[I(0x100)])({
-                            'msg': w,
-                            'tenantId': k,
-                            'medias': [u],
-                            'ticket': p,
-                            'userId': l,
-                            'scheduleDate': m[I(0x12b) + 'te'] ? new Date(Array[J(0x111)](m[I(0x12b) + 'te']) ? m[J(0x12b) + 'te'][v] : m[J(0x12b) + 'te']) : undefined,
-                            'sendType': m[I(0x155)] || i[I(0xf9)],
-                            'status': i[J(0xee)],
-                            'idFront': Array[J(0x111)](m[J(0x142)]) ? m[J(0x142)][v] : m[I(0x142)]
-                        });
-                    });
-                else {
-                    if (i[G(0x144)](i, j[G(0x100)]) && i[H(0x13d)](k[H(0xd5)], i[H(0x102)])) {
-                        const v = {};
-                        return v[G(0x109)] = p[H(0xd5)], o[H(0x12d)](-0x1843 * 0x1 + 0x9 * 0x35b + 0x70 * -0xa)[H(0x14f)](v);
-                    }
-                    throw n;
-                }
-            } else {
-                const v = {};
-                v[G(0x150)] = m, v[H(0xf1)] = k, v[H(0xe7)] = n, v[G(0xd0)] = p, v[H(0x148)] = l, v[G(0x12b) + 'te'] = m[G(0x12b) + 'te'], v[H(0x155)] = m[H(0x155)] || i[G(0xf9)], v[G(0x12d)] = i[G(0xee)], v[G(0x142)] = m[G(0x142)], await (-0x120b * -0x1 + -0x17e + -0x108d, CreateMessageSystemService_1[G(0x100)])(v);
-            }
-        }
-    } catch (w) {
-        console[H(0xcd)](i[H(0xf8)], w);
-    }
-    return g[H(0xe9)]();
-};
-exports[z(0xef)] = store;
-const edit = async (f, g) => {
-    const K = z, L = z, h = {};
-    h[K(0x10d)] = K(0x118) + K(0xf4) + L(0xf0), h[K(0xd2)] = function (n, o) {
-        return n === o;
-    }, h[K(0x11f)] = K(0xfb), h[L(0x13a)] = function (n, o) {
-        return n instanceof o;
-    }, h[K(0x114)] = function (n, o) {
-        return n === o;
-    }, h[L(0x122)] = L(0x13b) + K(0x12f), h[K(0x128)] = function (n, o) {
-        return n === o;
-    }, h[K(0x13e)] = L(0xf5), h[K(0xdb)] = L(0x143);
-    const i = h, {messageId: j} = f[K(0xcb)], {tenantId: k} = f[L(0xd8)], l = +k, {body: m} = f[L(0xfc)];
-    try {
-        if (i[K(0xd2)](i[L(0x11f)], i[L(0x11f)])) {
-            const n = {};
-            n[K(0x120)] = j, n[K(0xf1)] = l, n[L(0xfc)] = m;
-            const {
-                ticketId: o,
-                message: p
-            } = await (0x1 * -0x731 + -0x2040 + -0x17 * -0x1b7, EditWhatsAppMessage_1[K(0x100)])(n);
-        } else {
-            const s = {};
-            return s[K(0x100)] = j, g && h[K(0xfe)] ? i : s;
-        }
-    } catch (s) {
-        if (i[L(0x13a)](s, AppError_1[L(0x100)]) && i[K(0x114)](s[K(0xd5)], i[K(0x122)])) {
-            if (i[L(0x128)](i[K(0x13e)], i[L(0xdb)]))
-                e[K(0xcd)](i[K(0x10d)], f);
-            else {
-                const u = {};
-                return u[K(0x109)] = s[K(0xd5)], g[K(0x12d)](0x5d4 + -0x393 * 0x7 + 0x14c1)[K(0x14f)](u);
-            }
-        }
-        throw s;
-    }
-    return g[K(0xe9)]();
-};
-exports[z(0x104)] = edit;
-const remove = async (d, e) => {
-    const M = A, N = z, f = {};
-    f[M(0xd7)] = M(0x15b) + M(0x10f) + N(0xcc), f[N(0x15c)] = function (j, k) {
-        return j !== k;
-    }, f[M(0x11a)] = N(0x103), f[N(0x124)] = N(0x151) + M(0xde) + 'G';
-    const g = f, {messageId: h} = d[M(0xcb)], {tenantId: i} = d[N(0xd8)];
-    try {
-        g[M(0x15c)](g[N(0x11a)], g[M(0x11a)]) ? e[N(0xcd)](g[N(0xd7)], f) : await (0x166 * -0x6 + -0x23f5 * -0x1 + -0x1 * 0x1b91, DeleteMessageSystem_1[M(0x100)])(d[M(0xfc)]['id'], h, i);
-    } catch (k) {
-        logger_1[N(0x10c)][M(0x109)](N(0x151) + M(0xde) + M(0xe1) + k);
-        throw new AppError_1[(M(0x100))](g[M(0x124)]);
-    }
-    return e[N(0xe9)]();
-};
-exports[A(0xd6)] = remove;
 const forward = async (d, e) => {
-    const O = z, P = A, f = d[O(0xfc)], {user: g} = d;
-    for (const h of f[P(0x147)]) {
+    const V = E, W = F, f = d[V(0x1e2)], {user: g} = d;
+    for (const h of f[V(0x1e4)]) {
         const i = {};
-        i[P(0x148)] = g['id'], i[O(0xf1)] = g[P(0xf1)], i[P(0xd5)] = h, i[O(0x137)] = f[O(0x137)], i[P(0x158) + P(0x10e)] = h[O(0xe6)], await (-0x1b66 + -0x2493 * 0x1 + 0x135 * 0x35, CreateForwardMessageService_1[P(0x100)])(i);
+        i[V(0x161)] = g['id'], i[W(0x1b3)] = g[W(0x1b3)], i[V(0x1a8)] = h, i[W(0x15b)] = f[W(0x15b)], i[W(0x1ae) + V(0x1c0)] = h[W(0x1c2)], await (-0x25 * 0xb5 + -0x1a6b + 0xa * 0x542, CreateForwardMessageService_1[W(0x1f1)])(i);
     }
-    return e[O(0xe9)]();
+    return e[V(0x1f2)]();
 };
-exports[z(0x15e)] = forward;
+exports[F(0x1ce)] = forward;

@@ -1,10 +1,107 @@
 'use strict';
-const C = b, D = b;
+function a() {
+    const K = [
+        '197645QwzARk',
+        'vFZYB',
+        'AKdDM',
+        'urar\x20no\x20we',
+        'eStatus',
+        '445535YTqwjF',
+        '524530FzwzJp',
+        '12NmEdjn',
+        '18NiRLio',
+        '2PMNzen',
+        'ticketId',
+        'pi:\x20',
+        'JgQlf',
+        'ooksAPI\x20su',
+        '../utils/l',
+        'iXBpV',
+        'rvwwe',
+        'uLFBI',
+        '2167696xBHEaq',
+        'wKslM',
+        'url\x20config',
+        'fault',
+        'payload',
+        '__importDe',
+        'number',
+        'attempts',
+        'url',
+        '__esModule',
+        'defineProp',
+        'GxofM',
+        'response',
+        'message',
+        'messageId',
+        'FRBZH',
+        '50701TXaosI',
+        'vmekn',
+        'info',
+        'snkFw',
+        'ogger',
+        'yyRnC',
+        'hookSessio',
+        'OkGeq',
+        'jjHdX',
+        'erty',
+        'PLqoZ',
+        'ack',
+        'externalKe',
+        'delay',
+        'HRkih',
+        'YyRRk',
+        'nStatus',
+        'WebHooksAP',
+        'default',
+        'status',
+        'data',
+        'qrcode',
+        'eITqP',
+        'Proml',
+        'bWcQD',
+        'authToken',
+        'gDnrK',
+        '\x20Payload:\x20',
+        '16YBcQgF',
+        'thNdT',
+        'existe.',
+        'msg',
+        'axios',
+        'yheNJ',
+        'Error\x20send',
+        'pyqPq',
+        'bhook\x20não\x20',
+        'post',
+        'name',
+        '9888307HBBkOP',
+        'logger',
+        'timestamp',
+        'UFySO',
+        'a:\x20',
+        'error',
+        'nEfXx',
+        'type',
+        '585201PvVWHw',
+        'qZJpE',
+        'ccess:\x20Dat',
+        'value',
+        'RnotZ',
+        'hookMessag',
+        'Queue\x20WebH',
+        '\x20message\x20a'
+    ];
+    a = function () {
+        return K;
+    };
+    return a();
+}
+const F = b, G = b;
 (function (c, d) {
-    const A = b, B = b, e = c();
+    const D = b, E = b, e = c();
     while (!![]) {
         try {
-            const f = parseInt(A(0x136)) / (-0x1601 + -0x1 * 0xfc1 + 0x25c3) * (-parseInt(B(0x15d)) / (0x1316 * 0x2 + 0x10dc + -0x3706)) + -parseInt(B(0x123)) / (0x1fc + 0x65e + 0x5 * -0x1ab) * (parseInt(B(0x139)) / (-0x22b9 * -0x1 + -0xb * 0xdf + -0x10 * 0x192)) + parseInt(B(0x127)) / (0x6f4 * 0x4 + -0xcc2 * 0x1 + -0xf09) + parseInt(B(0x124)) / (0x32a + 0x12a5 + -0x15c9) * (-parseInt(A(0x128)) / (0x5c9 * 0x3 + 0x1451 + -0x25a5)) + -parseInt(A(0x16d)) / (-0x29 * 0x67 + -0x1537 * -0x1 + -0x4b0) * (-parseInt(B(0x153)) / (0xbc4 + -0x37 * -0x17 + -0x10ac)) + -parseInt(A(0x14c)) / (-0x22b0 + -0x2 * 0x59a + -0x1 * -0x2dee) + parseInt(A(0x13c)) / (0x1aa4 + -0x25 * 0xf4 + 0x8ab);
+            const f = -parseInt(D(0x14c)) / (-0x97 * -0x31 + -0x5d1 * -0x5 + 0x1 * -0x39fb) * (parseInt(E(0x133)) / (0x2141 + 0x560 + -0x269f)) + -parseInt(D(0x17b)) / (-0x195a + 0x2623 + -0xcc6) + -parseInt(D(0x168)) / (-0x58f * 0x2 + -0x1 * 0xfbf + 0x1ae1) * (parseInt(D(0x12f)) / (-0xef9 * -0x1 + 0x17ec + 0x26e0 * -0x1)) + -parseInt(D(0x131)) / (0x9 * 0x215 + -0x1b97 + 0x11c * 0x8) * (-parseInt(E(0x12a)) / (-0x8 * -0x2cd + 0x233a + -0x399b)) + -parseInt(D(0x13c)) / (0x75 * 0xb + 0x2c7 + -0x5 * 0x18e) + parseInt(E(0x132)) / (-0x1200 + -0x73 * 0x5 + -0x58 * -0x3b) * (parseInt(E(0x130)) / (-0x1cea + 0x7b4 + -0x220 * -0xa)) + parseInt(D(0x173)) / (0x2 * 0x126e + 0x1ef6 + 0x1 * -0x43c7);
             if (f === d)
                 break;
             else
@@ -13,190 +110,113 @@ const C = b, D = b;
             e['push'](e['shift']());
         }
     }
-}(a, 0x204d * -0x43 + 0x3c2bc + -0x5 * -0x1ef47));
-var __importDefault = this && this[C(0x162) + C(0x167)] || function (c) {
-    const E = C;
-    return c && c[E(0x126)] ? c : { 'default': c };
-};
+}(a, 0xc345 * 0x1 + 0x1 * 0x6ac3 + 0x1ad0b));
 function b(c, d) {
     const e = a();
     return b = function (f, g) {
-        f = f - (-0x1 * 0x5c6 + 0x7c6 + -0x8 * 0x1c);
+        f = f - (0x957 * 0x4 + 0x25f3 + -0x4a26);
         let h = e[f];
         return h;
     }, b(c, d);
 }
+var __importDefault = this && this[F(0x141) + F(0x13f)] || function (c) {
+    const H = F;
+    return c && c[H(0x145)] ? c : { 'default': c };
+};
 const q = {};
-function a() {
-    const H = [
-        'status',
-        'hookSessio',
-        'attempts',
-        'message',
-        'timestamp',
-        'dJsIR',
-        'erty',
-        'axios',
-        'xxqay',
-        'ZGrAn',
-        '5836220FdcCYJ',
-        'kEBjs',
-        'nStatus',
-        'ooksAPI\x20su',
-        'type',
-        'ack',
-        'existe.',
-        '9tTUPpw',
-        'authToken',
-        'qNgHi',
-        'delay',
-        'data',
-        'NQoDq',
-        '\x20message\x20a',
-        'msg',
-        'ptbPs',
-        'RBbxy',
-        '956aUSGWs',
-        'error',
-        'XoYEz',
-        'value',
-        'urar\x20no\x20we',
-        '__importDe',
-        'FnnCN',
-        'zpmeP',
-        'externalKe',
-        'qrcode',
-        'fault',
-        'info',
-        'hookMessag',
-        'grrvC',
-        '../utils/l',
-        'mDHhg',
-        '895240yYcAPs',
-        'response',
-        'KYtVz',
-        'fyZbp',
-        'WebHooksAP',
-        'PlfVk',
-        'cmJaj',
-        'yAGvO',
-        'ynKSu',
-        '\x20Payload:\x20',
-        'ogger',
-        'GdjTf',
-        '1171617GBtmMw',
-        '6uzQtRn',
-        'a:\x20',
-        '__esModule',
-        '1707295nGkgaU',
-        '4383470iaUSSH',
-        'post',
-        'bhook\x20não\x20',
-        'ticketId',
-        'url',
-        'jyNCh',
-        'payload',
-        'defineProp',
-        'default',
-        'sNPPu',
-        'messageId',
-        'FvjZa',
-        'AaOnM',
-        'IfMnP',
-        '115XDPWUo',
-        'name',
-        'ccess:\x20Dat',
-        '4UgcGIm',
-        'logger',
-        'Error\x20send',
-        '16812059aFleuK',
-        'number',
-        'Queue\x20WebH',
-        'eStatus',
-        'pi:\x20',
-        'url\x20config'
-    ];
-    a = function () {
-        return H;
-    };
-    return a();
-}
-q[D(0x160)] = !![], Object[C(0x12f) + D(0x148)](exports, D(0x126), q);
-const axios_1 = __importDefault(require(D(0x149))), logger_1 = require(C(0x16b) + C(0x121)), r = {};
-r[D(0x156)] = 0x1770, r[D(0x144)] = 0x32, exports[D(0x130)] = {
-    'key': C(0x171) + 'I',
+q[F(0x17e)] = !![], Object[F(0x146) + G(0x155)](exports, F(0x145), q);
+const axios_1 = __importDefault(require(F(0x16c))), logger_1 = require(F(0x138) + F(0x150)), r = {};
+r[F(0x159)] = 0x1770, r[F(0x143)] = 0x32, exports[G(0x15e)] = {
+    'key': F(0x15d) + 'I',
     'options': r,
     async 'handle'({data: j}) {
-        const F = D, G = C, k = {};
-        k[F(0x170)] = function (m, n) {
+        const I = G, J = G, k = {};
+        k[I(0x179)] = J(0x13e) + J(0x12d) + J(0x170) + I(0x16a), k[J(0x15b)] = function (m, n) {
             return m === n;
-        }, k[F(0x174)] = G(0x141) + F(0x161) + F(0x12a) + F(0x152), k[G(0x173)] = function (m, n) {
+        }, k[I(0x15a)] = function (m, n) {
             return m !== n;
-        }, k[F(0x164)] = F(0x16c), k[G(0x147)] = F(0x134), k[G(0x16a)] = function (m, n) {
+        }, k[J(0x13d)] = I(0x153), k[I(0x163)] = I(0x13a), k[I(0x162)] = function (m, n) {
             return m === n;
-        }, k[G(0x12d)] = F(0x169) + G(0x13f), k[G(0x131)] = function (m, n) {
-            return m === n;
-        }, k[F(0x14d)] = G(0x169) + 'e', k[G(0x163)] = function (m, n) {
+        }, k[I(0x169)] = J(0x180) + I(0x12e), k[J(0x136)] = J(0x156), k[I(0x14d)] = I(0x180) + 'e', k[I(0x14f)] = function (m, n) {
             return m !== n;
-        }, k[G(0x158)] = G(0x122), k[G(0x133)] = G(0x143) + F(0x14e), k[F(0x15f)] = G(0x16f), k[F(0x15b)] = F(0x15c), k[G(0x14b)] = function (m, n) {
+        }, k[I(0x12c)] = J(0x13b), k[I(0x17f)] = I(0x12b), k[I(0x151)] = I(0x152) + I(0x15c), k[J(0x176)] = function (m, n) {
             return m === n;
-        }, k[F(0x155)] = G(0x175), k[F(0x172)] = G(0x14a), k[F(0x135)] = function (m, n) {
-            return m === n;
-        };
+        }, k[J(0x139)] = I(0x16f), k[J(0x147)] = function (m, n) {
+            return m !== n;
+        }, k[J(0x14b)] = I(0x154), k[I(0x16d)] = I(0x17c), k[J(0x166)] = J(0x164);
         const l = k;
         try {
-            let m = {};
-            if (!j?.[G(0x12c)]) {
-                if (l[F(0x173)](l[F(0x164)], l[G(0x147)])) {
-                    const o = {};
-                    return o[F(0x145)] = l[F(0x174)], o;
-                } else {
-                    n[F(0x13a)][G(0x15e)](G(0x13b) + G(0x159) + G(0x140) + i);
-                    if (l[F(0x170)](j?.[G(0x16e)]?.[F(0x142)], 0x2276 + 0x2279 + 0x191 * -0x2b)) {
-                        const s = {};
-                        return s[G(0x145)] = l[F(0x174)], s;
-                    }
-                    throw new k(l);
-                }
-            }
-            if (l[F(0x16a)](j[G(0x150)], l[G(0x12d)])) {
-                const s = {};
-                s[G(0x151)] = j[G(0x12e)][G(0x151)], s[F(0x132)] = j[F(0x12e)][G(0x132)], s[G(0x165) + 'y'] = j[F(0x12e)][F(0x165) + 'y'], s[G(0x150)] = j[F(0x150)], m = s;
-            }
-            if (l[G(0x131)](j[G(0x150)], l[F(0x14d)])) {
-                if (l[G(0x163)](l[F(0x158)], l[F(0x158)])) {
-                    const u = {};
-                    u[F(0x137)] = k[G(0x12e)][G(0x137)], u[G(0x13d)] = l[F(0x12e)][F(0x13d)], u[F(0x142)] = m[F(0x12e)][G(0x142)], u[G(0x166)] = n[G(0x12e)][F(0x166)], u[F(0x146)] = o[G(0x12e)][G(0x146)], u[G(0x150)] = p[F(0x150)], j = u;
-                } else {
-                    const u = {};
-                    u[F(0x146)] = j[G(0x12e)][G(0x146)], u[F(0x145)] = j[F(0x12e)][F(0x15a)], u[G(0x132)] = j[F(0x12e)][G(0x132)], u[G(0x12b)] = j[F(0x12e)][G(0x12b)], u[G(0x165) + 'y'] = j[F(0x12e)][G(0x165) + 'y'], u[G(0x150)] = j[F(0x150)], m = u;
-                }
-            }
-            if (l[G(0x16a)](j[F(0x150)], l[G(0x133)])) {
-                if (l[G(0x131)](l[F(0x15f)], l[F(0x15b)])) {
-                    const w = {};
-                    w[F(0x151)] = i[G(0x12e)][F(0x151)], w[G(0x132)] = j[F(0x12e)][F(0x132)], w[G(0x165) + 'y'] = k[F(0x12e)][F(0x165) + 'y'], w[F(0x150)] = l[G(0x150)], n = w;
-                } else {
-                    const w = {};
-                    w[G(0x137)] = j[F(0x12e)][G(0x137)], w[G(0x13d)] = j[F(0x12e)][G(0x13d)], w[G(0x142)] = j[F(0x12e)][F(0x142)], w[F(0x166)] = j[F(0x12e)][F(0x166)], w[G(0x146)] = j[G(0x12e)][F(0x146)], w[G(0x150)] = j[F(0x150)], m = w;
-                }
-            }
-            j[F(0x12e)][F(0x154)] ? await axios_1[F(0x130)][G(0x129)](j[G(0x12c)], m, { 'headers': { 'authorization': j[G(0x12e)][F(0x154)] } }) : await axios_1[G(0x130)][F(0x129)](j[F(0x12c)], m);
-            logger_1[F(0x13a)][F(0x168)](G(0x13e) + G(0x14f) + G(0x138) + G(0x125) + j + F(0x120) + m);
-            const n = {};
-            return n[G(0x157)] = j, n[F(0x12e)] = m, n;
-        } catch (x) {
-            if (l[F(0x14b)](l[F(0x155)], l[F(0x172)])) {
-                const z = {};
-                return z[F(0x145)] = l[F(0x174)], z;
+            if (l[I(0x15a)](l[J(0x13d)], l[J(0x13d)])) {
+                const n = {};
+                n[J(0x157)] = i[J(0x140)][J(0x157)], n[I(0x14a)] = j[I(0x140)][I(0x14a)], n[J(0x158) + 'y'] = k[J(0x140)][J(0x158) + 'y'], n[J(0x17a)] = l[I(0x17a)], h = n;
             } else {
-                logger_1[G(0x13a)][F(0x15e)](F(0x13b) + G(0x159) + F(0x140) + x);
-                if (l[F(0x135)](x?.[G(0x16e)]?.[F(0x142)], 0x5a7 * -0x1 + 0x14ca * 0x1 + -0xd8f)) {
-                    const z = {};
-                    return z[F(0x145)] = l[G(0x174)], z;
+                let n = {};
+                if (!j?.[J(0x144)]) {
+                    if (l[I(0x15b)](l[J(0x163)], l[I(0x163)])) {
+                        const p = {};
+                        return p[I(0x149)] = l[J(0x179)], p;
+                    } else {
+                        const t = {};
+                        return t[J(0x149)] = l[I(0x179)], t;
+                    }
                 }
-                throw new Error(x);
+                if (l[J(0x162)](j[J(0x17a)], l[I(0x169)])) {
+                    if (l[J(0x15a)](l[J(0x136)], l[J(0x136)])) {
+                        const u = {};
+                        return u[J(0x149)] = l[I(0x179)], u;
+                    } else {
+                        const u = {};
+                        u[J(0x157)] = j[J(0x140)][I(0x157)], u[I(0x14a)] = j[J(0x140)][J(0x14a)], u[J(0x158) + 'y'] = j[J(0x140)][I(0x158) + 'y'], u[J(0x17a)] = j[I(0x17a)], n = u;
+                    }
+                }
+                if (l[I(0x162)](j[J(0x17a)], l[I(0x14d)])) {
+                    if (l[I(0x14f)](l[I(0x12c)], l[J(0x17f)])) {
+                        const v = {};
+                        v[I(0x175)] = j[J(0x140)][I(0x175)], v[J(0x149)] = j[I(0x140)][J(0x16b)], v[I(0x14a)] = j[I(0x140)][I(0x14a)], v[I(0x134)] = j[I(0x140)][I(0x134)], v[I(0x158) + 'y'] = j[I(0x140)][J(0x158) + 'y'], v[I(0x17a)] = j[J(0x17a)], n = v;
+                    } else {
+                        const x = {};
+                        x[I(0x175)] = k[I(0x140)][I(0x175)], x[J(0x149)] = l[J(0x140)][J(0x16b)], x[J(0x14a)] = m[J(0x140)][I(0x14a)], x[I(0x134)] = n[I(0x140)][J(0x134)], x[J(0x158) + 'y'] = o[J(0x140)][J(0x158) + 'y'], x[I(0x17a)] = p[J(0x17a)], j = x;
+                    }
+                }
+                if (l[J(0x15b)](j[J(0x17a)], l[J(0x151)])) {
+                    if (l[J(0x176)](l[I(0x139)], l[I(0x139)])) {
+                        const x = {};
+                        x[J(0x172)] = j[J(0x140)][I(0x172)], x[I(0x142)] = j[J(0x140)][J(0x142)], x[J(0x15f)] = j[I(0x140)][J(0x15f)], x[J(0x161)] = j[J(0x140)][J(0x161)], x[I(0x175)] = j[J(0x140)][I(0x175)], x[J(0x17a)] = j[I(0x17a)], n = x;
+                    } else {
+                        const z = {};
+                        z[I(0x172)] = k[J(0x140)][J(0x172)], z[I(0x142)] = l[I(0x140)][J(0x142)], z[J(0x15f)] = m[I(0x140)][I(0x15f)], z[I(0x161)] = n[J(0x140)][I(0x161)], z[J(0x175)] = o[J(0x140)][J(0x175)], z[J(0x17a)] = p[I(0x17a)], j = z;
+                    }
+                }
+                if (j[J(0x140)][J(0x165)]) {
+                    if (l[J(0x147)](l[I(0x14b)], l[J(0x16d)]))
+                        await axios_1[J(0x15e)][J(0x171)](j[J(0x144)], n, { 'headers': { 'authorization': j[J(0x140)][J(0x165)] } });
+                    else {
+                        const A = {};
+                        return A[I(0x15e)] = j, g && A[I(0x145)] ? i : A;
+                    }
+                } else {
+                    if (l[J(0x176)](l[J(0x166)], l[J(0x166)]))
+                        await axios_1[I(0x15e)][I(0x171)](j[J(0x144)], n);
+                    else {
+                        o[I(0x174)][J(0x178)](I(0x16e) + J(0x129) + J(0x135) + i);
+                        if (l[J(0x15b)](j?.[J(0x148)]?.[J(0x15f)], -0x25f0 + 0x11f9 + -0x158b * -0x1)) {
+                            const B = {};
+                            return B[J(0x149)] = l[J(0x179)], B;
+                        }
+                        throw new k(l);
+                    }
+                }
+                logger_1[J(0x174)][J(0x14e)](I(0x181) + J(0x137) + J(0x17d) + J(0x177) + j + J(0x167) + n);
+                const o = {};
+                return o[J(0x160)] = j, o[I(0x140)] = n, o;
             }
+        } catch (B) {
+            logger_1[J(0x174)][J(0x178)](I(0x16e) + J(0x129) + J(0x135) + B);
+            if (l[I(0x176)](B?.[I(0x148)]?.[I(0x15f)], 0x1461 + 0x1955 + -0x15 * 0x21a)) {
+                const C = {};
+                return C[I(0x149)] = l[J(0x179)], C;
+            }
+            throw new Error(B);
         }
     }
 };

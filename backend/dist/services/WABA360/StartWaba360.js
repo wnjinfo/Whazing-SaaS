@@ -1,18 +1,86 @@
 'use strict';
 const s = b, t = b;
-function b(c, d) {
-    const e = a();
-    return b = function (f, g) {
-        f = f - (-0x118d + 0x2001 * -0x1 + 0x4 * 0xc7d);
-        let h = e[f];
-        return h;
-    }, b(c, d);
+function a() {
+    const z = [
+        'ECT_WABA_3',
+        './Waba360S',
+        'number',
+        'logger',
+        '\x20Tenant:\x20',
+        'fault',
+        '775680GiNpDb',
+        '../../libs',
+        '21FzPxYw',
+        '60:\x20',
+        'pZcEe',
+        'presa:\x20',
+        'tokenAPI',
+        '341446TsfExH',
+        's/logger',
+        'emit',
+        './SetWebHo',
+        'AyhHe',
+        'ession',
+        '2251632gglUCo',
+        'UrlWabaWeb',
+        'pZJlV',
+        'StartWaba3',
+        '../../util',
+        '2jyxnPG',
+        'ERROR_CONN',
+        'info',
+        'erty',
+        'ckMessages',
+        ':whatsappS',
+        '13983525GycWDr',
+        'value',
+        'okUrl',
+        'update',
+        'SetWebHook',
+        'default',
+        '56605OeUCGD',
+        '../../erro',
+        'sSystem',
+        'ciada\x20|\x20Em',
+        'url',
+        'endMessage',
+        '489624WoUrUF',
+        'Conexão\x20Wa',
+        'KWelA',
+        'error',
+        'apiKey',
+        'defineProp',
+        'CHECK_INTE',
+        '__importDe',
+        'getIO',
+        'Error:\x20',
+        '__esModule',
+        '/socket',
+        'status',
+        'CONNECTED',
+        'OPENING',
+        'Hook',
+        'rs/AppErro',
+        'RVAL',
+        'tenantId',
+        'ba\x20360\x20ini',
+        'env',
+        'xBhJI',
+        'ERROR:\x20che',
+        'Url\x20360\x20|\x20',
+        '636498HcxOgV',
+        'DISCONNECT'
+    ];
+    a = function () {
+        return z;
+    };
+    return a();
 }
 (function (c, d) {
     const q = b, r = b, e = c();
     while (!![]) {
         try {
-            const f = parseInt(q(0xac)) / (0x13d * -0xb + -0x1d01 + 0x7 * 0x617) * (-parseInt(r(0xa0)) / (-0x375 * 0x5 + -0x10de + -0x5 * -0x6d5)) + -parseInt(r(0x89)) / (-0x1b56 + 0x109 * 0x1 + 0x1a50) * (parseInt(q(0x91)) / (0x20c3 + -0xced * -0x3 + -0x4786 * 0x1)) + parseInt(q(0x6e)) / (0x309 * 0x1 + -0x1017 + -0xd13 * -0x1) * (parseInt(r(0x8c)) / (-0x1 * -0xd63 + -0x18a * -0x3 + -0x11fb * 0x1)) + -parseInt(r(0x87)) / (0x7c9 + -0x3ef * -0x5 + -0x1 * 0x1b6d) + parseInt(q(0xab)) / (-0x1849 + 0x2 * 0x65f + 0xb93 * 0x1) * (parseInt(r(0x96)) / (-0x1333 + -0x2a2 + 0x15de)) + parseInt(r(0x66)) / (0xc1d + 0x14a4 + -0x19 * 0x14f) * (-parseInt(q(0x82)) / (0x1c05 + -0x12cb * -0x2 + -0x4190)) + parseInt(q(0x72)) / (0x1 * 0x1a87 + -0x10a3 * -0x1 + -0x2b1e);
+            const f = -parseInt(q(0xf0)) / (0x1f41 * 0x1 + 0xa3e * 0x2 + 0xe * -0x3b2) + -parseInt(r(0xfb)) / (0x100c + 0x16d6 + -0x20 * 0x137) * (parseInt(q(0xe1)) / (-0x5d5 + -0x10f4 + 0x16cc)) + -parseInt(q(0xe9)) / (-0x1 * 0x23b6 + 0x330 * 0xb + -0x22 * -0x5) + -parseInt(q(0xc3)) / (-0xd34 + 0x106d * -0x1 + 0x9e2 * 0x3) + -parseInt(r(0xf6)) / (-0x12ba + 0x144d * 0x1 + -0x1 * 0x18d) + -parseInt(r(0xeb)) / (-0x1 * -0x1107 + -0x2463 + 0x1363) * (parseInt(r(0xc9)) / (0x1ab7 + -0x18a7 + -0x208)) + parseInt(q(0xbd)) / (0x4 * -0x962 + -0x1 * -0xeff + -0x9 * -0x282);
             if (f === d)
                 break;
             else
@@ -21,135 +89,64 @@ function b(c, d) {
             e['push'](e['shift']());
         }
     }
-}(a, 0x4eabd * 0x1 + 0x58d5b + -0x375de));
-function a() {
-    const z = [
-        'error',
-        'UrlWabaWeb',
-        '1254JvUJhU',
-        'okUrl',
-        'StartWaba3',
-        'RVAL',
-        '/socket',
-        '4384975kMmQKI',
-        'uMKXr',
-        '246vhaMoG',
-        's/logger',
-        'ERROR:\x20che',
-        '223602itAxCp',
-        'Conexão\x20Wa',
-        'CONNECTED',
-        'ba\x20360\x20ini',
-        'Hook',
-        '14988fRlMwC',
-        'DNAPE',
-        './SetWebHo',
-        'number',
-        '../../util',
-        '9702SNsctC',
-        'ECT_WABA_3',
-        'fault',
-        'url',
-        'Url\x20360\x20|\x20',
-        '__esModule',
-        '60:\x20',
-        '../../erro',
-        'ession',
-        '__importDe',
-        '2aPgSsv',
-        'getIO',
-        'presa:\x20',
-        'rs/AppErro',
-        ':whatsappS',
-        'WEvSB',
-        '../../libs',
-        'ZWjVb',
-        'Error:\x20',
-        'defineProp',
-        'update',
-        '4720aQmdet',
-        '527117XOAvoi',
-        '56310JrzsBr',
-        'tenantId',
-        'logger',
-        'tokenAPI',
-        './Waba360S',
-        'OPENING',
-        'sSystem',
-        'status',
-        '5wsncBC',
-        'value',
-        'OBMDf',
-        'ERROR_CONN',
-        '22665180gcbWcZ',
-        'ciada\x20|\x20Em',
-        'env',
-        'default',
-        'ckMessages',
-        'SetWebHook',
-        'emit',
-        'apiKey',
-        'erty',
-        'DISCONNECT',
-        'CHECK_INTE',
-        'endMessage',
-        'info',
-        '\x20Tenant:\x20'
-    ];
-    a = function () {
-        return z;
-    };
-    return a();
-}
-var __importDefault = this && this[s(0x9f) + s(0x98)] || function (c) {
+}(a, 0x4b20e + 0x64c49 * -0x1 + 0x53412));
+var __importDefault = this && this[s(0xd0) + s(0xe8)] || function (c) {
     const u = t;
-    return c && c[u(0x9b)] ? c : { 'default': c };
+    return c && c[u(0xd3)] ? c : { 'default': c };
 };
 const k = {};
-k[t(0x6f)] = !![], Object[t(0xa9) + t(0x7a)](exports, s(0x9b), k), exports[s(0x84) + '60'] = void (0x1b6d + -0x5 * -0x7a7 + -0x41b0);
-const AppError_1 = __importDefault(require(s(0x9d) + t(0xa3) + 'r')), socket_1 = require(s(0xa6) + s(0x86)), logger_1 = require(s(0x95) + s(0x8a)), SetWebHookUrl_1 = __importDefault(require(s(0x93) + s(0x83))), Waba360SendMessagesSystem_1 = __importDefault(require(s(0x6a) + t(0x7d) + t(0x6c))), checkingWaba360 = {}, checkMessagesWaba360 = async c => {
-        const v = t, w = s;
-        if (checkingWaba360[c[v(0x67)]])
+function b(c, d) {
+    const e = a();
+    return b = function (f, g) {
+        f = f - (0x4fc * -0x1 + 0x153a + -0xf81);
+        let h = e[f];
+        return h;
+    }, b(c, d);
+}
+k[s(0xbe)] = !![], Object[s(0xce) + t(0xfe)](exports, t(0xd3), k), exports[s(0xf9) + '60'] = void (-0x5c8 + 0x256c + -0x5a * 0x5a);
+const AppError_1 = __importDefault(require(t(0xc4) + t(0xd9) + 'r')), socket_1 = require(t(0xea) + t(0xd4)), logger_1 = require(t(0xfa) + t(0xf1)), SetWebHookUrl_1 = __importDefault(require(s(0xf3) + t(0xbf))), Waba360SendMessagesSystem_1 = __importDefault(require(s(0xe4) + s(0xc8) + s(0xc5))), checkingWaba360 = {}, checkMessagesWaba360 = async c => {
+        const v = t, w = t;
+        if (checkingWaba360[c[v(0xdb)]])
             return;
-        checkingWaba360[c[v(0x67)]] = !![];
+        checkingWaba360[c[v(0xdb)]] = !![];
         try {
-            await (-0x2047 + -0xa2b + 0x1 * 0x2a72, Waba360SendMessagesSystem_1[w(0x75)])(c);
+            await (0xf76 + -0x1f0c + 0x46 * 0x39, Waba360SendMessagesSystem_1[v(0xc2)])(c);
         } catch (d) {
-            logger_1[v(0x68)][v(0x80)](v(0x8b) + v(0x76) + w(0x7f) + c[v(0x67)] + '::', d);
+            logger_1[w(0xe6)][v(0xcc)](w(0xdf) + w(0xff) + v(0xe7) + c[w(0xdb)] + '::', d);
         }
-        checkingWaba360[c[w(0x67)]] = ![];
+        checkingWaba360[c[v(0xdb)]] = ![];
     }, StartWaba360 = async g => {
         const x = t, y = s, h = {
-                'DNAPE': x(0x6b),
-                'OBMDf': x(0xaa),
-                'uMKXr': x(0x8e),
-                'ZWjVb': function (l, m, n, o) {
+                'xBhJI': x(0xd7),
+                'KWelA': x(0xc0),
+                'pZcEe': x(0xd6),
+                'AyhHe': function (l, m, n, o) {
                     return l(m, n, o);
                 },
-                'WEvSB': y(0x7b) + 'ED'
-            }, i = (0xc73 * -0x2 + -0x517 + -0x1 * -0x1dfd, socket_1[x(0xa1)])(), j = {};
-        j[y(0x6d)] = h[y(0x92)], await g[x(0xaa)](j), i[y(0x78)](g[x(0x67)] + (y(0xa4) + y(0x9e)), {
-            'action': h[y(0x70)],
+                'pZJlV': x(0xe2) + 'ED'
+            }, i = (0x1f5d + 0x27a * 0x4 + 0x5 * -0x841, socket_1[y(0xd1)])(), j = {};
+        j[x(0xd5)] = h[y(0xde)], await g[y(0xc0)](j), i[x(0xf2)](g[y(0xdb)] + (y(0x100) + y(0xf5)), {
+            'action': h[y(0xcb)],
             'session': g
         });
         try {
             const l = {};
-            l[x(0x99)] = g[y(0x81) + x(0x90)] || '', l[y(0x79)] = g[y(0x69)], await (0x1108 + -0xf6e * -0x1 + -0x1e * 0x115, SetWebHookUrl_1[x(0x75)])(l);
+            l[y(0xc7)] = g[x(0xf7) + y(0xd8)] || '', l[y(0xcd)] = g[y(0xef)], await (-0x1f10 + -0x40 * -0x2e + 0x1390, SetWebHookUrl_1[x(0xc2)])(l);
             const m = '';
-            logger_1[x(0x68)][y(0x7e)](y(0x8d) + y(0x8f) + y(0x73) + x(0xa2) + g[y(0x67)]);
+            logger_1[y(0xe6)][x(0xfd)](y(0xca) + y(0xdc) + y(0xc6) + y(0xee) + g[x(0xdb)]);
             const n = {};
-            n[x(0x6d)] = h[y(0x88)], n[x(0x94)] = m, await g[y(0xaa)](n), h[y(0xa7)](setInterval, checkMessagesWaba360, +(process[x(0x74)][x(0x7c) + x(0x85)] || -0x726 + 0x36 * -0x95 + 0x2 * 0x1d0e), g), i[y(0x78)](g[y(0x67)] + (y(0xa4) + x(0x9e)), {
-                'action': h[y(0x70)],
+            n[y(0xd5)] = h[y(0xed)], n[y(0xe5)] = m, await g[y(0xc0)](n), h[x(0xf4)](setInterval, checkMessagesWaba360, +(process[y(0xdd)][x(0xcf) + y(0xda)] || -0x103c + 0x1f2 * 0x8 + -0xc * -0x1af), g), i[x(0xf2)](g[y(0xdb)] + (y(0x100) + x(0xf5)), {
+                'action': h[y(0xcb)],
                 'session': g
             });
         } catch (o) {
-            logger_1[y(0x68)][y(0x80)](x(0x77) + y(0x9a) + y(0xa8) + o);
+            logger_1[y(0xe6)][x(0xcc)](x(0xc1) + x(0xe0) + x(0xd2) + o);
             const p = {};
-            p[x(0x6d)] = h[x(0xa5)], await g[y(0xaa)](p), i[y(0x78)](g[x(0x67)] + (y(0xa4) + y(0x9e)), {
-                'action': h[y(0x70)],
+            p[x(0xd5)] = h[x(0xf8)], await g[x(0xc0)](p), i[y(0xf2)](g[x(0xdb)] + (x(0x100) + y(0xf5)), {
+                'action': h[y(0xcb)],
                 'session': g
             });
-            throw new AppError_1[(y(0x75))](y(0x71) + y(0x97) + x(0x9c) + o, -0xc41 + -0x1 * 0x15ca + 0x239f);
+            throw new AppError_1[(y(0xc2))](y(0xfc) + x(0xe3) + x(0xec) + o, 0x1 * -0x1d6b + -0xa61 * 0x2 + 0x33c1);
         }
     };
-exports[s(0x84) + '60'] = StartWaba360;
+exports[s(0xf9) + '60'] = StartWaba360;

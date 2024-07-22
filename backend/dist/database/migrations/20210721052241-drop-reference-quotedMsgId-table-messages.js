@@ -1,10 +1,69 @@
 'use strict';
+function b(c, d) {
+    var e = a();
+    return b = function (f, g) {
+        f = f - (0x14db * 0x1 + -0x4 * 0x52f + 0x104);
+        var h = e[f];
+        return h;
+    }, b(c, d);
+}
 var k = b, l = b;
+function a() {
+    var q = [
+        'sequelize',
+        'query',
+        'tedMsgId\x22)',
+        'RAINT\x20\x22Mes',
+        'CADE\x20ON\x20DE',
+        'UPDATE\x20CAS',
+        'edMsgId_fk',
+        '4041pvvdca',
+        '4456MyPYBs',
+        '2724095SNLFRK',
+        'y\x22\x20FOREIGN',
+        '735402czmSjv',
+        'ey\x22;',
+        'ULL;',
+        '10NJONyL',
+        '4912cuxjpe',
+        'mLSnq',
+        'defineProp',
+        'S\x20\x22Message',
+        'erty',
+        'Messages\x22\x20',
+        'DROP\x20CONST',
+        'ALTER\x20TABL',
+        '4032890ZJNDHN',
+        'ADD\x20CONSTR',
+        '1302Boxedw',
+        '\x20KEY\x20(\x22quo',
+        '6AEfnGl',
+        '__esModule',
+        'exports',
+        'ages_quote',
+        '\x20REFERENCE',
+        '2436833bonUrv',
+        'izsEn',
+        'LETE\x20SET\x20N',
+        'AINT\x20\x22Mess',
+        'E\x20public.\x22',
+        'value',
+        'sages_quot',
+        's\x22(id)\x20ON\x20',
+        '1454102SLKaqC',
+        'dMsgId_fke',
+        'all'
+    ];
+    a = function () {
+        return q;
+    };
+    return a();
+}
 (function (c, d) {
     var i = b, j = b, e = c();
     while (!![]) {
         try {
-            var f = -parseInt(i(0x162)) / (-0xc2 * -0x13 + 0xa41 + -0xc53 * 0x2) * (-parseInt(i(0x15f)) / (-0x59a + -0x20ba + -0x132b * -0x2)) + -parseInt(i(0x15a)) / (-0x1 * -0x2471 + 0xe9 * -0x9 + -0x1 * 0x1c3d) * (parseInt(i(0x16e)) / (-0xf25 + -0x1535 + 0x245e)) + -parseInt(j(0x159)) / (-0x1bdd + 0xbab * 0x3 + 0x1 * -0x71f) * (parseInt(i(0x163)) / (0x1 * 0x121d + -0xe01 + -0x416)) + parseInt(j(0x16f)) / (-0xc * 0x2e6 + 0xd6 * -0x6 + 0x27d3) * (parseInt(j(0x16d)) / (0x1c42 + 0x1fcb + 0x1b7 * -0x23)) + -parseInt(i(0x17b)) / (-0xe21 * 0x1 + 0x1 * 0x5e6 + -0x4 * -0x211) + -parseInt(i(0x170)) / (0x1a9 + 0x94 + -0x233) + -parseInt(i(0x180)) / (-0xcfe * 0x2 + -0x784 + 0x218b) * (-parseInt(j(0x167)) / (-0x10ca + -0x152f + 0x2605));
+            var f = -parseInt(i(0x14d)) / (0x1 * 0x18c0 + 0x3e6 + -0x1ca5) + parseInt(j(0x13f)) / (0x1 * -0x1c6f + -0x283 * 0x1 + -0x1c * -0x11b) + parseInt(j(0x130)) / (-0xe5 * 0x13 + -0x15f * 0x5 + 0x17dd) * (-parseInt(j(0x14a)) / (-0x6c1 + 0x2 * 0x114d + -0x1bd5)) + parseInt(j(0x12e)) / (-0x1188 + -0x1f62 + 0x1 * 0x30ef) * (parseInt(j(0x132)) / (-0x199f + 0x49 * -0x4f + 0x302c)) + parseInt(i(0x137)) / (-0x1a59 + 0x1b68 + 0x18 * -0xb) + -parseInt(j(0x126)) / (0x1098 + 0x21ba + -0x1925 * 0x2) * (parseInt(j(0x149)) / (0x1795 * -0x1 + -0xed * 0x9 + 0x1ff3)) + parseInt(i(0x125)) / (-0x1b5 * 0xd + 0x4 * 0x84e + -0x61 * 0x1d) * (parseInt(i(0x14b)) / (0x125 * 0x12 + -0x4 * 0x607 + 0x3 * 0x12f));
             if (f === d)
                 break;
             else
@@ -13,79 +72,19 @@ var k = b, l = b;
             e['push'](e['shift']());
         }
     }
-}(a, -0x1f2e + -0x628c2 + 0xe0da4));
-function b(c, d) {
-    var e = a();
-    return b = function (f, g) {
-        f = f - (-0x4 * -0x899 + -0x2707 + 0x5f8);
-        var h = e[f];
-        return h;
-    }, b(c, d);
-}
+}(a, -0x6e551 * 0x1 + 0x1059cb * -0x1 + -0x1 * -0x20eee9));
 var g = {};
-g[k(0x17c)] = !![], Object[l(0x15b) + k(0x17f)](exports, k(0x158), g), module[l(0x15d)] = {
+g[k(0x13c)] = !![], Object[k(0x128) + k(0x12a)](exports, k(0x133), g), module[k(0x134)] = {
     'up': d => {
-        var m = l, n = k, e = {};
-        e[m(0x160)] = n(0x155) + n(0x171) + n(0x156) + n(0x178) + m(0x16c) + n(0x173) + n(0x164) + m(0x165);
+        var m = l, n = l, e = {};
+        e[m(0x127)] = n(0x12d) + m(0x13b) + n(0x12b) + n(0x12c) + m(0x145) + m(0x13d) + n(0x148) + n(0x123);
         var f = e;
-        return Promise[n(0x175)]([d[m(0x17e)][m(0x15c)](f[m(0x160)])]);
+        return Promise[n(0x141)]([d[m(0x142)][n(0x143)](f[m(0x127)])]);
     },
     'down': d => {
-        var o = k, p = l, e = {};
-        e[o(0x166)] = o(0x155) + o(0x171) + p(0x156) + o(0x157) + p(0x172) + o(0x161) + o(0x17d) + p(0x168) + o(0x15e) + p(0x169) + o(0x174) + o(0x17a) + o(0x16b) + p(0x176) + p(0x179) + p(0x16a) + p(0x177);
+        var o = l, p = l, e = {};
+        e[o(0x138)] = o(0x12d) + o(0x13b) + p(0x12b) + o(0x12f) + o(0x13a) + o(0x135) + p(0x140) + o(0x14c) + p(0x131) + o(0x144) + o(0x136) + o(0x129) + o(0x13e) + p(0x147) + p(0x146) + p(0x139) + p(0x124);
         var f = e;
-        return Promise[o(0x175)]([d[p(0x17e)][p(0x15c)](f[p(0x166)])]);
+        return Promise[o(0x141)]([d[p(0x142)][o(0x143)](f[o(0x138)])]);
     }
 };
-function a() {
-    var q = [
-        '2456540wYJCBp',
-        'E\x20public.\x22',
-        'AINT\x20\x22Mess',
-        'sages_quot',
-        '\x20REFERENCE',
-        'all',
-        'UPDATE\x20CAS',
-        'ULL;',
-        'DROP\x20CONST',
-        'CADE\x20ON\x20DE',
-        'S\x20\x22Message',
-        '5152491KFodKd',
-        'value',
-        'dMsgId_fke',
-        'sequelize',
-        'erty',
-        '6161287OCVOLq',
-        'ALTER\x20TABL',
-        'Messages\x22\x20',
-        'ADD\x20CONSTR',
-        '__esModule',
-        '4916105SIigFD',
-        '384RGGbJq',
-        'defineProp',
-        'query',
-        'exports',
-        '\x20KEY\x20(\x22quo',
-        '197570vaAaJp',
-        'JpJyg',
-        'ages_quote',
-        '2nmSOym',
-        '6yRhTfQ',
-        'edMsgId_fk',
-        'ey\x22;',
-        'COsZM',
-        '48LDtknC',
-        'y\x22\x20FOREIGN',
-        'tedMsgId\x22)',
-        'LETE\x20SET\x20N',
-        's\x22(id)\x20ON\x20',
-        'RAINT\x20\x22Mes',
-        '1511152MvawMF',
-        '15784wVpLUW',
-        '14bPnYIA'
-    ];
-    a = function () {
-        return q;
-    };
-    return a();
-}

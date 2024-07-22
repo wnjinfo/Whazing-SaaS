@@ -1,18 +1,44 @@
 'use strict';
-function b(c, d) {
-    var e = a();
-    return b = function (f, g) {
-        f = f - (-0x51f * -0x5 + 0x148b + -0x2c9b);
-        var h = e[f];
-        return h;
-    }, b(c, d);
-}
 var k = b, l = b;
+function a() {
+    var q = [
+        'all',
+        '1060svPpfc',
+        '4MbowrJ',
+        'ssages\x22\x20se',
+        'defineProp',
+        'value',
+        '402598RvAUKL',
+        'UPDATE\x20\x22Me',
+        '__esModule',
+        'Id\x22\x20\x20=\x20nul',
+        '1314140EOCxtL',
+        '573ohGvWb',
+        '2606004JKCZXP',
+        '105281fEkDpY',
+        'OaDak',
+        'sequelize',
+        '104JsVjag',
+        '3990402xOBVIz',
+        'Id\x22\x20\x20=\x20\x22id',
+        '1730cGrtNr',
+        'exports',
+        't\x20\x22message',
+        'query',
+        'JReps',
+        '6097383IIOZfi',
+        'erty'
+    ];
+    a = function () {
+        return q;
+    };
+    return a();
+}
 (function (c, d) {
     var i = b, j = b, e = c();
     while (!![]) {
         try {
-            var f = parseInt(i(0x193)) / (0x12 * -0x1b1 + 0xfaf * -0x2 + -0x4b * -0xd3) * (-parseInt(j(0x192)) / (-0x35 * 0x22 + 0x1 * 0x14ae + -0xda2)) + parseInt(i(0x19c)) / (-0x2 * -0x5 + 0x8fc * 0x3 + -0x1afb) * (parseInt(i(0x19f)) / (-0xe91 * 0x1 + -0x1 * -0x65b + 0x83a)) + parseInt(j(0x196)) / (-0x1 * 0xa61 + -0x173a + 0x21a0) * (-parseInt(i(0x19b)) / (-0x2284 + 0x1a81 + 0x809)) + -parseInt(i(0x18b)) / (0x1 * 0x23ab + 0x243 * 0x5 + -0x2ef3) + -parseInt(i(0x19d)) / (0x29 * 0xc1 + -0x18 * -0xec + -0x3501 * 0x1) * (parseInt(i(0x1a5)) / (-0x1388 + -0x2 * 0xc8a + 0x2ca5)) + -parseInt(j(0x18f)) / (-0x19cb + 0x1d * 0x59 + 0xc * 0x150) * (parseInt(i(0x1a3)) / (-0x17b0 + 0xe83 * 0x1 + 0x938)) + parseInt(j(0x1a1)) / (-0x1abe + 0x56 * -0x20 + -0x2 * -0x12c5) * (parseInt(j(0x195)) / (0x2 * -0x123b + 0x1b7 * 0x3 + 0x646 * 0x5));
+            var f = -parseInt(i(0x190)) / (0x1 * 0x23e9 + -0x68f + -0x1d59) * (parseInt(j(0x17e)) / (0xf37 + 0xa0b * 0x3 + -0x2 * 0x16ab)) + -parseInt(j(0x191)) / (0x26 * 0x89 + -0x15de + 0x18b) * (parseInt(i(0x187)) / (0x874 + -0x181b + -0x7 * -0x23d)) + parseInt(j(0x18f)) / (-0x2 * -0xb8c + 0x4 * 0x673 + -0x30df * 0x1) + -parseInt(i(0x196)) / (0x21ec + 0x10 * -0x25a + -0x3ba * -0x1) + parseInt(i(0x18b)) / (0x18cb + 0x871 * -0x2 + -0x7e2) * (parseInt(i(0x195)) / (0x1da9 + -0x20e9 + 0x2a * 0x14)) + parseInt(j(0x183)) / (-0xbdd + 0xab9 + 0x12d) + -parseInt(j(0x186)) / (-0x35 * -0x23 + -0x2 * -0x626 + 0x1381 * -0x1) * (-parseInt(i(0x192)) / (-0x46 * -0x4c + -0x269 * 0x5 + 0x10 * -0x8b));
             if (f === d)
                 break;
             else
@@ -21,55 +47,27 @@ var k = b, l = b;
             e['push'](e['shift']());
         }
     }
-}(a, -0x16061b * 0x1 + 0x6806f + 0x1b760c));
+}(a, -0x18e57 + 0x145377 + -0x87fa9));
 var g = {};
-g[k(0x1a6)] = !![], Object[l(0x19a) + k(0x199)](exports, l(0x1a2), g), module[l(0x197)] = {
+function b(c, d) {
+    var e = a();
+    return b = function (f, g) {
+        f = f - (-0x20a2 * -0x1 + 0x1 * -0x1313 + 0xa * -0x135);
+        var h = e[f];
+        return h;
+    }, b(c, d);
+}
+g[k(0x18a)] = !![], Object[l(0x189) + l(0x184)](exports, l(0x18d), g), module[l(0x17f)] = {
     'up': d => {
-        var m = k, n = k, e = {};
-        e[m(0x191)] = m(0x1a4) + n(0x190) + n(0x19e) + n(0x18d) + '\x22;';
+        var m = l, n = k, e = {};
+        e[m(0x193)] = n(0x18c) + m(0x188) + n(0x180) + m(0x17d) + '\x22;';
         var f = e;
-        return Promise[m(0x198)]([d[n(0x194)][n(0x18c)](f[m(0x191)])]);
+        return Promise[m(0x185)]([d[n(0x194)][n(0x181)](f[m(0x193)])]);
     },
     'down': d => {
         var o = l, p = k, e = {};
-        e[o(0x18e)] = o(0x1a4) + o(0x190) + o(0x19e) + o(0x1a0) + 'l;';
+        e[o(0x182)] = p(0x18c) + o(0x188) + p(0x180) + p(0x18e) + 'l;';
         var f = e;
-        return Promise[o(0x198)]([d[p(0x194)][p(0x18c)](f[o(0x18e)])]);
+        return Promise[p(0x185)]([d[o(0x194)][o(0x181)](f[p(0x182)])]);
     }
 };
-function a() {
-    var q = [
-        'MXyjD',
-        '166974KpgMNd',
-        '10ibHxrf',
-        'sequelize',
-        '4129489XIZArm',
-        '2913795juxStK',
-        'exports',
-        'all',
-        'erty',
-        'defineProp',
-        '12UIsHsi',
-        '2470059MRqZMv',
-        '879328PxifjN',
-        't\x20\x22message',
-        '4WMdFSX',
-        'Id\x22\x20\x20=\x20nul',
-        '132sFcyWN',
-        '__esModule',
-        '3175986JeJCRX',
-        'UPDATE\x20\x22Me',
-        '27zaLfLr',
-        'value',
-        '6413694TEsLTv',
-        'query',
-        'Id\x22\x20\x20=\x20\x22id',
-        'AMtIX',
-        '10Wsvqsr',
-        'ssages\x22\x20se'
-    ];
-    a = function () {
-        return q;
-    };
-    return a();
-}

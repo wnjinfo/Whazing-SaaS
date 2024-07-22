@@ -1,10 +1,69 @@
 'use strict';
+function a() {
+    const z = [
+        '64578gWdowW',
+        '../../mode',
+        '400NDDdPv',
+        'jsonwebtok',
+        '2395320osmUMO',
+        '38445zfETQu',
+        '9tnjdNC',
+        '581FMsTbs',
+        'value',
+        'default',
+        'sign',
+        'NFIG_NOT_F',
+        '__importDe',
+        'rs/AppErro',
+        '1038950MuSaRB',
+        'BFZbD',
+        'fault',
+        'ls/ApiConf',
+        '308UhEOrR',
+        '__esModule',
+        '960064QETBlp',
+        '122158VgOdIh',
+        'profile',
+        'ig/auth',
+        '../../conf',
+        'findByPk',
+        '31839EkIoDq',
+        '730d',
+        'admin',
+        'sessionId',
+        'update',
+        'tenantId',
+        'TEsNo',
+        '../../erro',
+        'expiresIn',
+        'erty',
+        'SGdQQ',
+        '4LlfyYJ',
+        'defineProp',
+        'ERR_API_CO',
+        'OUND',
+        'token',
+        'reload'
+    ];
+    a = function () {
+        return z;
+    };
+    return a();
+}
 const u = b, v = b;
+function b(c, d) {
+    const e = a();
+    return b = function (f, g) {
+        f = f - (0x237e + -0x27 * -0x6 + -0x71b * 0x5);
+        let h = e[f];
+        return h;
+    }, b(c, d);
+}
 (function (c, d) {
     const s = b, t = b, e = c();
     while (!![]) {
         try {
-            const f = -parseInt(s(0x12e)) / (0x19f5 + 0x2 * 0x135b + -0x1 * 0x40aa) * (-parseInt(s(0x116)) / (-0x1fc4 + 0x1eb4 + 0x112)) + -parseInt(s(0x10b)) / (-0x3d * 0x43 + 0xadd + 0x51d) + parseInt(s(0x12c)) / (-0x1 * -0x2185 + 0x579 + -0x26fa) * (parseInt(t(0x10a)) / (-0xe35 + 0x863 + 0x5d7)) + parseInt(s(0x120)) / (-0x27 * -0xfe + -0x14d * -0xc + -0x3648) * (parseInt(t(0x127)) / (0x241c + 0x1fbd + -0x2 * 0x21e9)) + parseInt(t(0x118)) / (-0x989 + 0x140 + 0x851) + parseInt(s(0x11d)) / (-0x5 * 0x2fc + -0x1e50 + 0x2d45) * (parseInt(s(0x115)) / (0x1 * 0x2375 + -0x15 * 0xf3 + -0xf7c)) + -parseInt(s(0x114)) / (-0x20f5 + -0x73 * -0x3a + -0xfe * -0x7);
+            const f = parseInt(s(0x10b)) / (0x908 * 0x2 + -0x83 * -0x49 + -0x1bb5 * 0x2) * (parseInt(s(0xfb)) / (-0xfa * 0xc + -0x1 * 0x5b1 + 0x116b)) + parseInt(t(0x100)) / (-0x5c * -0x14 + -0xc8c + 0x5 * 0x113) * (-parseInt(s(0xf8)) / (0x13f7 * 0x1 + -0x5d5 * 0x2 + -0x2c3 * 0x3)) + parseInt(s(0xf4)) / (-0x1037 * 0x2 + 0x3e6 * 0x2 + -0x18a7 * -0x1) + -parseInt(s(0xe6)) / (0x1644 + -0x26c + -0x13d2) * (-parseInt(t(0xed)) / (-0x1 * -0x3eb + -0x1505 + 0x1121)) + parseInt(t(0xfa)) / (0x11a2 + 0x1 * 0xd76 + -0x1f10) * (-parseInt(s(0xec)) / (-0x106 + 0x1479 * 0x1 + -0x136a)) + parseInt(t(0xe8)) / (-0x85a + 0x85 + 0x7df) * (-parseInt(s(0xeb)) / (0x2 * -0x7d0 + -0x1f96 + 0x2f41)) + parseInt(t(0xea)) / (0x1 * 0x13af + 0x10b9 + -0x245c);
             if (f === d)
                 break;
             else
@@ -13,86 +72,28 @@ const u = b, v = b;
             e['push'](e['shift']());
         }
     }
-}(a, 0x6d499 + -0x85702 + -0x3b * -0x238f));
-var __importDefault = this && this[u(0x112) + u(0x11e)] || function (c) {
+}(a, -0x9ebb9 + 0x1 * 0x575eb + 0xb9a12));
+var __importDefault = this && this[u(0xf2) + u(0xf6)] || function (c) {
     const w = v;
-    return c && c[w(0x119)] ? c : { 'default': c };
+    return c && c[w(0xf9)] ? c : { 'default': c };
 };
 const k = {};
-k[v(0x10f)] = !![], Object[u(0x110) + u(0x12a)](exports, v(0x119), k);
-function a() {
-    const z = [
-        'update',
-        '1oMcmDI',
-        'NFIG_NOT_F',
-        'default',
-        'findByPk',
-        '../../conf',
-        'wrGMy',
-        '410WqTGIB',
-        '1283718hmQpRI',
-        'ERR_API_CO',
-        '730d',
-        'profile',
-        'value',
-        'defineProp',
-        'token',
-        '__importDe',
-        'reload',
-        '12387804pouDDy',
-        '340970FzPWEL',
-        '1038842phfWSz',
-        '../../erro',
-        '2255176TTricT',
-        '__esModule',
-        'sessionId',
-        'jsonwebtok',
-        'admin',
-        '135uemBih',
-        'fault',
-        'sjkzh',
-        '1098smZmCJ',
-        'zkVob',
-        'ls/ApiConf',
-        'ig/auth',
-        'tenantId',
-        'OUND',
-        'sign',
-        '5257YMRJQk',
-        'rs/AppErro',
-        'expiresIn',
-        'erty',
-        '../../mode',
-        '26440pEOIlU'
-    ];
-    a = function () {
-        return z;
-    };
-    return a();
-}
-function b(c, d) {
-    const e = a();
-    return b = function (f, g) {
-        f = f - (0xfa * -0x8 + -0xc3d + 0x1512);
-        let h = e[f];
-        return h;
-    }, b(c, d);
-}
-const jsonwebtoken_1 = require(v(0x11b) + 'en'), ApiConfig_1 = __importDefault(require(v(0x12b) + u(0x122) + 'ig')), auth_1 = __importDefault(require(u(0x108) + u(0x123))), AppError_1 = __importDefault(require(v(0x117) + u(0x128) + 'r')), RenewApiConfigTokenService = async ({
+k[v(0xee)] = !![], Object[u(0xe1) + v(0x109)](exports, u(0xf9), k);
+const jsonwebtoken_1 = require(v(0xe9) + 'en'), ApiConfig_1 = __importDefault(require(u(0xe7) + v(0xf7) + 'ig')), auth_1 = __importDefault(require(u(0xfe) + u(0xfd))), AppError_1 = __importDefault(require(u(0x107) + u(0xf3) + 'r')), RenewApiConfigTokenService = async ({
         apiId: g,
         sessionId: h,
         tenantId: i
     }) => {
         const x = u, y = u, j = {};
-        j[x(0x109)] = y(0x10c) + y(0x105) + x(0x125), j[x(0x121)] = y(0x11c), j[x(0x11f)] = y(0x10d);
-        const l = j, {secret: m} = auth_1[y(0x106)], n = await ApiConfig_1[y(0x106)][x(0x107)](g);
+        j[x(0x106)] = x(0xe2) + x(0xf1) + y(0xe3), j[x(0x10a)] = x(0x102), j[y(0xf5)] = x(0x101);
+        const l = j, {secret: m} = auth_1[x(0xef)], n = await ApiConfig_1[x(0xef)][x(0xff)](g);
         if (!n)
-            throw new AppError_1[(x(0x106))](l[y(0x109)], 0x848 + -0x1765 + -0x10b1 * -0x1);
+            throw new AppError_1[(x(0xef))](l[y(0x106)], 0x1db4 + 0x1aa5 * -0x1 + -0x17b);
         const o = {};
-        o[y(0x124)] = i, o[y(0x10e)] = l[y(0x121)], o[x(0x11a)] = h;
+        o[y(0x105)] = i, o[x(0xfc)] = l[y(0x10a)], o[x(0x103)] = h;
         const p = {};
-        p[x(0x129)] = l[x(0x11f)];
-        const q = (-0x1bbc + -0x1fd4 + 0x3b90 * 0x1, jsonwebtoken_1[x(0x126)])(o, m, p), r = {};
-        return r[x(0x111)] = q, n[y(0x12d)](r), n[y(0x113)](), n;
+        p[y(0x108)] = l[y(0xf5)];
+        const q = (0x3 * -0x49b + 0x1 * 0x94f + 0x482 * 0x1, jsonwebtoken_1[x(0xf0)])(o, m, p), r = {};
+        return r[x(0xe4)] = q, n[x(0x104)](r), n[x(0xe5)](), n;
     };
-exports[u(0x106)] = RenewApiConfigTokenService;
+exports[u(0xef)] = RenewApiConfigTokenService;

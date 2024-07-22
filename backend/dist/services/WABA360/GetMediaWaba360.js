@@ -1,95 +1,127 @@
 'use strict';
+const A = b, B = b;
 function a() {
-    const I = [
-        '../../util',
-        'default',
-        'join',
-        'defineProp',
-        '/v1/media/',
-        'split',
-        '4567600QSOlpV',
-        'image',
-        '32304753tIcQDN',
-        '786348IYuPHH',
-        'url',
-        'IA:\x20',
-        'ypaoe',
-        'voice',
-        'WNLOAD_MED',
-        'FPrfI',
-        'document',
-        '__importDe',
-        'erty',
-        'filename',
-        'EwURz',
-        'axios',
-        'method',
-        '../../erro',
-        'stream',
-        'ERROR\x20DONW',
-        'mime_type',
-        'pcjtS',
-        'rIXej',
-        'XlqGj',
-        '__esModule',
-        'logger',
-        'erqRE',
-        'pipe',
-        '82864kfgKhZ',
-        'API_URL_36',
-        'rxNxj',
-        '4987199fXegnu',
-        '280566YtfZpo',
-        'jFSvs',
-        's/logger',
-        'getTime',
-        '2GQBFnW',
-        'fyZTc',
-        'finish',
-        'value',
-        '1188818bKPwkt',
-        'createWrit',
-        'bcvhY',
-        'responseTy',
-        'nJAjW',
-        'tokenAPI',
-        'WepaN',
-        'rs/AppErro',
+    const Q = [
+        'NIQKX',
         'audio',
-        'pKbTG',
-        'LOAD',
-        'sGaAH',
-        'error',
-        'env',
-        'dgucl',
-        'length',
-        '360_NOT_DO',
+        'IA:\x20',
+        'Voasr',
+        'logger',
+        'EoLUH',
+        'FPEJS',
+        'vslXD',
+        '../../util',
+        'mBxzC',
+        'UBRsT',
         'GET',
-        'eStream',
-        'D360-API-K',
-        'headers',
-        'fault',
-        'gzZYf',
-        'YmVBH',
-        'path',
-        'video',
-        'DWtqG',
         'data',
-        'wZzqh',
+        'IVfFD',
+        'QduYc',
+        'finish',
+        'SWmqB',
         'public',
-        '350bsEpVX'
+        'defineProp',
+        'mime_type',
+        '1156101AtoBfs',
+        'UNrBV',
+        'default',
+        '3677136LxhJog',
+        'ERROR\x20DONW',
+        'RxjoA',
+        'length',
+        'oOSAY',
+        'TAnma',
+        'ViwFK',
+        'WeCbd',
+        'headers',
+        'TNWuw',
+        'fRYsU',
+        'IhWeS',
+        'eStream',
+        'lgcpU',
+        'waxLx',
+        'NBYAs',
+        'UGatx',
+        'YWLnE',
+        'video',
+        'ncFqv',
+        'TcXPq',
+        'method',
+        '2891616AuMZZk',
+        'getTime',
+        'url',
+        'document',
+        'LOAD',
+        'QIvyn',
+        'responseTy',
+        'voice',
+        'idFDc',
+        'bINuS',
+        'erty',
+        's/logger',
+        'RPQWM',
+        'ponOF',
+        '/v1/media/',
+        'WFHku',
+        'sbbML',
+        'UlaqK',
+        'Dntdm',
+        'DDkzW',
+        'stream',
+        'MrRao',
+        '../../erro',
+        'qvLRD',
+        'join',
+        '3421548pBmrCB',
+        'BpAup',
+        '__importDe',
+        'createWrit',
+        'error',
+        'image',
+        'YfBXY',
+        'pipe',
+        'vZynN',
+        'filename',
+        'rs/AppErro',
+        'value',
+        'Hvfvs',
+        'path',
+        'split',
+        'vaRJs',
+        'D360-API-K',
+        'API_URL_36',
+        'YoxGE',
+        '3190404jcLoqe',
+        'fault',
+        'cWZYP',
+        '3098652fyePct',
+        '6947700nXakol',
+        'tVvnu',
+        'IFxoz',
+        '__esModule',
+        'XPtoo',
+        'meidA',
+        'ZDjLP',
+        'axios',
+        'env',
+        'mrDYI',
+        'VduyX',
+        'tokenAPI',
+        'WNLOAD_MED',
+        'XPHCW',
+        '360_NOT_DO',
+        'MwRHz'
     ];
     a = function () {
-        return I;
+        return Q;
     };
     return a();
 }
-const x = b, y = b;
 (function (c, d) {
-    const v = b, w = b, e = c();
+    const y = b, z = b, e = c();
     while (!![]) {
         try {
-            const f = parseInt(v(0x1ca)) / (-0x22db + 0x1 * 0x3a8 + 0x2 * 0xf9a) * (-parseInt(v(0x1ce)) / (-0x2 * -0x511 + 0x1789 * 0x1 + -0x21a9)) + -parseInt(v(0x1f6)) / (-0x138b + -0x1 * 0xefc + 0x228a) + parseInt(v(0x1c2)) / (-0x7a7 * 0x1 + -0x1 * -0x1f8e + -0x17e3) * (-parseInt(v(0x1ec)) / (0x1335 * -0x2 + 0x1eb3 + 0x7bc)) + -parseInt(v(0x1c6)) / (0x1 * 0x1ff6 + 0xee4 * -0x2 + -0x228) + parseInt(v(0x1c5)) / (-0xbfd + 0x2 * 0x1195 + -0x1726) + -parseInt(v(0x1f3)) / (-0x22a0 * -0x1 + 0x3 * 0xd + 0x251 * -0xf) + parseInt(w(0x1f5)) / (0x1 * 0xe1b + 0x5a9 + -0x13bb);
+            const f = parseInt(y(0xc9)) / (-0x4 * 0x84c + 0x125d + -0x34 * -0x49) + parseInt(z(0x75)) / (-0x3 * -0x5f6 + -0xa42 + -0x79e) + -parseInt(z(0xcc)) / (0x145b * -0x1 + -0x458 + -0x1 * -0x18b6) + parseInt(y(0x8e)) / (0x1077 * -0x1 + -0x1eb6 + 0x2f31) + -parseInt(y(0xa5)) / (-0x510 * -0x7 + 0xb6a * 0x3 + -0x45a9) + parseInt(y(0xa4)) / (-0x2200 + 0x8be * 0x3 + 0x1 * 0x7cc) + -parseInt(y(0xa1)) / (-0x1b99 + -0x2215 + -0x3db5 * -0x1);
             if (f === d)
                 break;
             else
@@ -98,89 +130,164 @@ const x = b, y = b;
             e['push'](e['shift']());
         }
     }
-}(a, -0x5cd36 + 0x1 * 0xf9584 + 0x22ab7));
+}(a, -0x18c3e8 + 0x10d7b2 * -0x1 + 0x3761d4));
+var __importDefault = this && this[A(0x90) + A(0xa2)] || function (c) {
+    const C = A;
+    return c && c[C(0xa8)] ? c : { 'default': c };
+};
+const u = {};
+u[B(0x99)] = !![], Object[B(0xc7) + B(0x7f)](exports, A(0xa8), u);
 function b(c, d) {
     const e = a();
     return b = function (f, g) {
-        f = f - (0x13d0 + -0x123f + 0x20);
+        f = f - (0x97c + -0xb7b * -0x3 + -0x5c * 0x79);
         let h = e[f];
         return h;
     }, b(c, d);
 }
-var __importDefault = this && this[x(0x1b1) + y(0x1e3)] || function (c) {
-    const z = x;
-    return c && c[z(0x1be)] ? c : { 'default': c };
-};
-const u = {};
-u[x(0x1cd)] = !![], Object[x(0x1f0) + x(0x1b2)](exports, y(0x1be), u);
-const axios_1 = __importDefault(require(x(0x1b5))), fs_1 = require('fs'), path_1 = require(y(0x1e6)), AppError_1 = __importDefault(require(x(0x1b7) + y(0x1d5) + 'r')), logger_1 = require(y(0x1ed) + x(0x1c8)), downloadFile = async (e, f, g) => {
-        const A = x, B = x, h = {
-                'WepaN': A(0x1b9) + A(0x1d8),
-                'fyZTc': function (n, o) {
+const axios_1 = __importDefault(require(A(0xac))), fs_1 = require('fs'), path_1 = require(B(0x9b)), AppError_1 = __importDefault(require(B(0x8b) + A(0x98) + 'r')), logger_1 = require(A(0xbd) + A(0x80)), downloadFile = async (e, f, g) => {
+        const D = A, E = B, h = {
+                'SWmqB': function (n, o) {
+                    return n !== o;
+                },
+                'Voasr': D(0x85),
+                'meidA': D(0xcd) + D(0x79),
+                'MwRHz': function (n, o) {
                     return n(o);
                 },
-                'DWtqG': A(0x1cc),
-                'EwURz': A(0x1da),
-                'XlqGj': B(0x1eb),
-                'pKbTG': B(0x1df),
-                'gzZYf': B(0x1b8)
-            }, i = process[B(0x1db)][B(0x1c3) + '0'] + A(0x1f1) + f, j = (-0xe19 + -0xbe4 * 0x1 + 0x19fd, path_1[A(0x1ef)])(__dirname, '..', '..', h[B(0x1bd)], g), k = {};
-        k[A(0x1e1) + 'EY'] = e;
+                'waxLx': function (n, o) {
+                    return n === o;
+                },
+                'DDkzW': E(0x9a),
+                'ponOF': E(0x7d),
+                'mBxzC': E(0xc4),
+                'vslXD': E(0x92),
+                'tVvnu': D(0xc6),
+                'WeCbd': D(0xc0),
+                'lgcpU': E(0x89)
+            }, i = process[D(0xad)][D(0x9f) + '0'] + D(0x83) + f, j = (0xdd2 * -0x1 + 0xe9f + 0xcd * -0x1, path_1[D(0x8d)])(__dirname, '..', '..', h[D(0xa6)], g), k = {};
+        k[D(0x9e) + 'EY'] = e;
         const l = {};
-        l[A(0x1f7)] = i, l[A(0x1b6)] = h[B(0x1d7)], l[B(0x1d1) + 'pe'] = h[A(0x1e4)], l[A(0x1e2)] = k;
-        const m = await (-0x94f + -0x3fb + -0x3 * -0x46e, axios_1[A(0x1ee)])(l);
+        l[E(0x77)] = i, l[D(0x74)] = h[D(0xd3)], l[E(0x7b) + 'pe'] = h[E(0xd9)], l[D(0xd4)] = k;
+        const m = await (-0x1e2a + 0x22b9 + -0x48f, axios_1[D(0xcb)])(l);
         await new Promise((n, o) => {
-            const C = B, D = B;
-            m[C(0x1e9)][C(0x1c1)]((-0x1280 + -0x11db + -0x1 * -0x245b, fs_1[C(0x1cf) + D(0x1e0)])(j))['on'](h[C(0x1e8)], async () => n(!![]))['on'](h[C(0x1b4)], p => {
-                const E = D, F = C;
-                console[E(0x1da)](h[F(0x1d4)], p), h[E(0x1cb)](o, new Error(p));
-            });
+            const G = D, H = D, p = {
+                    'UGatx': function (q, r) {
+                        const F = b;
+                        return h[F(0xc5)](q, r);
+                    },
+                    'QIvyn': h[G(0xb8)],
+                    'YfBXY': h[H(0xaa)],
+                    'UlaqK': function (q, r) {
+                        const I = H;
+                        return h[I(0xb4)](q, r);
+                    }
+                };
+            if (h[G(0xda)](h[G(0x88)], h[G(0x82)])) {
+                g[G(0xb9)][G(0x92)](h);
+                throw new i[(H(0xcb))](H(0xb3) + G(0xb1) + G(0xb7) + j);
+            } else
+                m[G(0xc1)][G(0x95)]((-0xd * -0x10d + -0x1 * -0x1c4e + 0x3 * -0xdfd, fs_1[H(0x91) + H(0xd8)])(j))['on'](h[G(0xbe)], async () => n(!![]))['on'](h[H(0xbc)], r => {
+                    const J = G, K = G;
+                    p[J(0xdc)](p[K(0x7a)], p[J(0x7a)]) ? (g = h[J(0x71)]['id'] || '', i = j[J(0x71)][K(0xc8)]) : (console[J(0x92)](p[J(0x94)], r), p[K(0x86)](o, new Error(r)));
+                });
         });
     }, GetMediaWaba360 = async ({
         channel: c,
         msg: d,
         ticket: e
     }) => {
-        const G = x, H = y, f = {
-                'dgucl': function (g, h) {
-                    return g !== h;
+        const L = B, M = B, f = {
+                'MrRao': L(0xcd) + M(0x79),
+                'NIQKX': function (g, h) {
+                    return g(h);
                 },
-                'rIXej': G(0x1c4),
-                'nJAjW': function (g, h) {
+                'IhWeS': function (g, h) {
                     return g > h;
                 },
-                'erqRE': G(0x1e5),
-                'ypaoe': H(0x1bb),
-                'bcvhY': function (g, h, i, j) {
+                'Dntdm': L(0xc4),
+                'YWLnE': L(0x92),
+                'YoxGE': function (g, h) {
+                    return g !== h;
+                },
+                'EoLUH': M(0xa7),
+                'TcXPq': function (g, h) {
+                    return g === h;
+                },
+                'ZDjLP': L(0x96),
+                'RPQWM': M(0xce),
+                'FPEJS': function (g, h) {
+                    return g !== h;
+                },
+                'TAnma': L(0xa3),
+                'NBYAs': L(0xaf),
+                'BpAup': M(0xc3),
+                'UBRsT': function (g, h) {
+                    return g === h;
+                },
+                'ncFqv': M(0xa9),
+                'UNrBV': function (g, h) {
+                    return g > h;
+                },
+                'mrDYI': L(0x7e),
+                'vaRJs': L(0xc2),
+                'TNWuw': function (g, h, i, j) {
                     return g(h, i, j);
                 },
-                'sGaAH': H(0x1c7),
-                'wZzqh': H(0x1fc)
+                'qvLRD': L(0xd2),
+                'oOSAY': M(0xd6)
             };
         try {
-            let g = '', h, i;
-            d?.[H(0x1fd)] && (g = d[H(0x1fd)]['id'] || '', h = d[H(0x1fd)][H(0x1b3)], i = d[G(0x1fd)][H(0x1ba)]);
-            d?.[G(0x1f4)] && (g = d[G(0x1f4)]['id'] || '', i = d[H(0x1f4)][H(0x1ba)]);
-            d?.[G(0x1e7)] && (g = d[G(0x1e7)]['id'] || '', i = d[H(0x1e7)][H(0x1ba)]);
-            if (d?.[G(0x1fa)]) {
-                if (f[G(0x1dc)](f[H(0x1bc)], f[H(0x1bc)])) {
-                    const n = {};
-                    return n[G(0x1ee)] = j, g && h[G(0x1be)] ? i : n;
-                } else {
-                    g = d[G(0x1fa)]['id'] || '';
-                    const n = d[H(0x1fa)][G(0x1ba)] || '', o = n[H(0x1f2)](';');
-                    i = f[H(0x1d2)](o[G(0x1dd)], 0xab2 * -0x3 + 0x109b + -0x7be * -0x2) ? o[-0x3 * 0xe4 + -0xb20 + 0x373 * 0x4] : d[G(0x1fa)][H(0x1ba)];
+            if (f[M(0xa0)](f[L(0xba)], f[M(0xba)]))
+                h[M(0x92)](f[M(0x8a)], i), f[L(0xb5)](j, new k(l));
+            else {
+                let h = '', i, j;
+                d?.[L(0x78)] && (f[L(0x73)](f[L(0xab)], f[M(0x81)]) ? (i = j[M(0x78)]['id'] || '', k = l[M(0x78)][M(0x97)], m = n[L(0x78)][M(0xc8)]) : (h = d[M(0x78)]['id'] || '', i = d[L(0x78)][M(0x97)], j = d[M(0x78)][M(0xc8)]));
+                d?.[L(0x93)] && (f[M(0xbb)](f[L(0xd1)], f[L(0xdb)]) ? (h = d[L(0x93)]['id'] || '', j = d[M(0x93)][M(0xc8)]) : (g = h[L(0xb6)]['id'] || '', i = j[L(0xb6)][M(0xc8)]));
+                if (d?.[M(0x71)]) {
+                    if (f[M(0x73)](f[L(0x8f)], f[M(0x8f)]))
+                        h = d[M(0x71)]['id'] || '', j = d[L(0x71)][M(0xc8)];
+                    else {
+                        const q = {};
+                        return q[L(0xcb)] = j, g && h[L(0xa8)] ? i : q;
+                    }
                 }
+                if (d?.[M(0x7c)]) {
+                    if (f[L(0xbf)](f[M(0x72)], f[M(0x72)])) {
+                        h = d[L(0x7c)]['id'] || '';
+                        const q = d[M(0x7c)][M(0xc8)] || '', r = q[L(0x9c)](';');
+                        j = f[M(0xca)](r[L(0xcf)], 0x107 * 0x18 + 0x119a * -0x2 + 0xa8d) ? r[-0x2e7 * 0xd + -0x784 + -0xb * -0x41d] : d[L(0x7c)][L(0xc8)];
+                    } else {
+                        h = i[L(0x7c)]['id'] || '';
+                        const t = j[L(0x7c)][L(0xc8)] || '', v = t[M(0x9c)](';');
+                        k = f[L(0xd7)](v[M(0xcf)], -0x19 * -0x105 + 0xecb + 0xd6d * -0x3) ? v[0x5bd + 0xe2a + -0x3fb * 0x5] : l[M(0x7c)][M(0xc8)];
+                    }
+                }
+                if (d?.[M(0xb6)]) {
+                    if (f[L(0xbf)](f[L(0xae)], f[M(0x9d)])) {
+                        const v = {
+                            'XPHCW': f[L(0x8a)],
+                            'WFHku': function (w, x) {
+                                const N = M;
+                                return f[N(0xb5)](w, x);
+                            }
+                        };
+                        j[M(0xc1)][L(0x95)]((0x99f * 0x4 + -0x1bc3 + -0xab9, k[M(0x91) + M(0xd8)])(l))['on'](f[M(0x87)], async () => q(!![]))['on'](f[L(0xdd)], w => {
+                            const O = M, P = L;
+                            q[O(0x92)](v[P(0xb2)], w), v[O(0x84)](r, new s(w));
+                        });
+                    } else
+                        h = d[M(0xb6)]['id'] || '', j = d[M(0xb6)][L(0xc8)];
+                }
+                const k = j?.[L(0x9c)]('/')[0x151a + 0x179 * 0xb + -0x1b2 * 0x16][L(0x9c)](';')[0x5 * -0x95 + -0xc71 + 0x6 * 0x28f], l = new Date()[M(0x76)](), m = i ? i + '_' + e['id'] + '_' + h + '_' + l + '.' + k : e['id'] + '_' + h + '_' + l + '.' + k;
+                return await f[L(0xd5)](downloadFile, c[L(0xb0)], h, m), m;
             }
-            d?.[G(0x1d6)] && (f[G(0x1dc)](f[G(0x1c0)], f[H(0x1f9)]) ? (g = d[G(0x1d6)]['id'] || '', i = d[H(0x1d6)][H(0x1ba)]) : (g = h[H(0x1f4)]['id'] || '', i = j[G(0x1f4)][H(0x1ba)]));
-            const j = i?.[G(0x1f2)]('/')[0xa38 + -0x2358 + -0x1921 * -0x1][G(0x1f2)](';')[0x1 * -0x1229 + -0x10e * 0xb + 0x1dc3], k = new Date()[H(0x1c9)](), l = h ? h + '_' + e['id'] + '_' + g + '_' + k + '.' + j : e['id'] + '_' + g + '_' + k + '.' + j;
-            return await f[G(0x1d0)](downloadFile, c[H(0x1d3)], g, l), l;
-        } catch (q) {
-            if (f[G(0x1dc)](f[H(0x1d9)], f[G(0x1ea)])) {
-                logger_1[G(0x1bf)][H(0x1da)](q);
-                throw new AppError_1[(G(0x1ee))](H(0x1de) + H(0x1fb) + H(0x1f8) + q);
+        } catch (v) {
+            if (f[M(0xa0)](f[M(0x8c)], f[M(0xd0)])) {
+                logger_1[M(0xb9)][L(0x92)](v);
+                throw new AppError_1[(M(0xcb))](M(0xb3) + L(0xb1) + L(0xb7) + v);
             } else
-                g = h[G(0x1e7)]['id'] || '', i = j[H(0x1e7)][H(0x1ba)];
+                g = h[M(0x93)]['id'] || '', i = j[L(0x93)][L(0xc8)];
         }
     };
-exports[x(0x1ee)] = GetMediaWaba360;
+exports[B(0xcb)] = GetMediaWaba360;

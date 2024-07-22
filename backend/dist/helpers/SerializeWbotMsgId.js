@@ -1,48 +1,10 @@
 'use strict';
 const o = b, p = b;
-function a() {
-    const s = [
-        'value',
-        'number',
-        '210JJcfYS',
-        '__esModule',
-        '112310rcbALp',
-        '7302Epircg',
-        '3205iGAUqw',
-        '676714kptGRr',
-        'contact',
-        'defineProp',
-        'isGroup',
-        'fromMe',
-        'erty',
-        '2883KScZuD',
-        '21ioflLm',
-        'default',
-        '902952FTglmV',
-        '4444100WARTSj',
-        '.us_',
-        '2640UeFGnN',
-        '2502BBUzYz',
-        '447669peIQmM'
-    ];
-    a = function () {
-        return s;
-    };
-    return a();
-}
-function b(c, d) {
-    const e = a();
-    return b = function (f, g) {
-        f = f - (-0x569 + 0x167 * 0x1a + 0x5 * -0x601);
-        let h = e[f];
-        return h;
-    }, b(c, d);
-}
 (function (c, d) {
     const m = b, n = b, e = c();
     while (!![]) {
         try {
-            const f = parseInt(m(0x119)) / (-0x1776 + 0x8f8 + 0xe7f) + parseInt(m(0x110)) / (-0x323 + 0x2321 + -0x1ffc) * (parseInt(n(0x109)) / (0x30 * 0x7a + 0x1779 + -0x526 * 0x9)) + parseInt(m(0x10d)) / (-0x12fd + -0x2 * 0x96e + 0x25dd) + parseInt(m(0x118)) / (0x1d11 * 0x1 + -0x112f + -0xbdd) * (-parseInt(m(0x117)) / (0x1584 + -0x18df + -0xad * -0x5)) + -parseInt(n(0x10a)) / (0x18f + -0x1 * -0x15d7 + 0x1f * -0xc1) * (parseInt(n(0x10c)) / (-0x1 * -0x801 + -0xe31 + 0x638)) + -parseInt(n(0x111)) / (0x1f * -0x2c + -0x2c9 * -0x7 + -0x12 * 0xc9) * (-parseInt(n(0x114)) / (0x11b9 + -0x2560 + -0x13b1 * -0x1)) + parseInt(m(0x116)) / (-0x3 * -0x20e + -0x1 * 0x26d7 + -0xc * -0x2ba) * (-parseInt(n(0x10f)) / (-0x169b + -0x3 * 0x4cf + 0x2514));
+            const f = -parseInt(m(0x1a4)) / (-0x181d + 0x262 + 0x15bc) * (-parseInt(m(0x1aa)) / (-0x3 * -0x4d5 + -0x1184 + 0x307)) + parseInt(n(0x19a)) / (-0x1c5e + -0x85a * -0x3 + 0x353) + -parseInt(m(0x19c)) / (0x1020 + 0x1a05 * -0x1 + 0x9e9) * (parseInt(n(0x1a7)) / (0x13f1 + -0x1b * -0xac + -0x38 * 0xae)) + -parseInt(n(0x19b)) / (-0x1b35 + 0x1 * 0x18ad + -0xda * -0x3) + -parseInt(m(0x1a0)) / (-0x13a3 + -0x1009 * 0x1 + 0x25 * 0xf7) + parseInt(m(0x1a6)) / (-0x620 + 0xa0d + -0x3e5) * (parseInt(n(0x1a3)) / (0x974 + 0x18dd * -0x1 + 0xf72)) + parseInt(n(0x19d)) / (-0x6 * -0x647 + 0x1b0e * -0x1 + -0x549 * 0x2);
             if (f === d)
                 break;
             else
@@ -51,11 +13,47 @@ function b(c, d) {
             e['push'](e['shift']());
         }
     }
-}(a, -0x1b170 + -0xfc87 * 0xb + 0x16c2e4));
+}(a, -0xc3100 + -0x613 * 0x34a + 0x2af340));
 const l = {};
-l[o(0x112)] = !![], Object[p(0x11b) + o(0x108)](exports, p(0x115), l);
+function b(c, d) {
+    const e = a();
+    return b = function (f, g) {
+        f = f - (-0x19fe + -0xc83 * -0x3 + -0x9f2);
+        let h = e[f];
+        return h;
+    }, b(c, d);
+}
+l[o(0x19f)] = !![], Object[o(0x1a1) + o(0x1a2)](exports, o(0x199), l);
 const SerializeWbotMsgId = (c, d) => {
-    const q = p, r = o, e = d[q(0x11d)] + '_' + c[q(0x11a)][q(0x113)] + '@' + (c[q(0x11c)] ? 'g' : 'c') + r(0x10e) + d['id'];
+    const q = p, r = o, e = d[q(0x1a5)] + '_' + c[r(0x1ac)][q(0x1a9)] + '@' + (c[r(0x1a8)] ? 'g' : 'c') + r(0x19e) + d['id'];
     return e;
 };
-exports[o(0x10b)] = SerializeWbotMsgId;
+function a() {
+    const s = [
+        '__esModule',
+        '941313pMYNcR',
+        '3323598SvtTmz',
+        '4CJzjoe',
+        '18452950aHuvwQ',
+        '.us_',
+        'value',
+        '7825272Gfhzoz',
+        'defineProp',
+        'erty',
+        '16272tMNiYm',
+        '11740YBwFjP',
+        'fromMe',
+        '3928nbwhnv',
+        '5807735aaaXXS',
+        'isGroup',
+        'number',
+        '84asyRZi',
+        'default',
+        'contact'
+    ];
+    a = function () {
+        return s;
+    };
+    return a();
+}
+exports[o(0x1ab)] = SerializeWbotMsgId;

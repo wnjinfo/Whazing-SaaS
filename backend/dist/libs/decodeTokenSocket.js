@@ -1,10 +1,18 @@
 'use strict';
-const A = b, B = b;
+function b(c, d) {
+    const e = a();
+    return b = function (f, g) {
+        f = f - (0x1697 * -0x1 + 0x281 * 0x1 + 0x15e5);
+        let h = e[f];
+        return h;
+    }, b(c, d);
+}
+const J = b, K = b;
 (function (c, d) {
-    const y = b, z = b, e = c();
+    const H = b, I = b, e = c();
     while (!![]) {
         try {
-            const f = -parseInt(y(0x1d1)) / (0x2 * -0x10f5 + 0x1 * 0x2305 + -0x3 * 0x5e) + -parseInt(z(0x1c3)) / (0xa5 * 0x17 + 0x1 * -0x1d4b + 0xe7a) * (-parseInt(z(0x1e8)) / (-0x1ee8 + 0x558 + 0x1993)) + -parseInt(y(0x1cd)) / (0x1 * 0x853 + 0x1 * 0xc3e + 0x148d * -0x1) + -parseInt(y(0x1c1)) / (-0x1411 + -0xb24 + -0xe * -0x23b) * (parseInt(y(0x1c8)) / (0x4b * 0x1f + -0x65 * 0x49 + 0x13 * 0x10a)) + parseInt(y(0x1e0)) / (-0x1f06 + 0xa23 * 0x3 + -0x52 * -0x2) * (-parseInt(y(0x1ca)) / (0x20e2 + -0x1b * 0xdb + -0x9c1)) + parseInt(y(0x1c0)) / (0xaeb + -0x12c4 + 0x7e2) * (-parseInt(y(0x1e9)) / (0x27 * 0xd6 + 0xad * 0xc + -0x28ac)) + -parseInt(z(0x1cb)) / (-0xceb + 0x9d9 + 0x1 * 0x31d) * (-parseInt(z(0x1dc)) / (-0x9a6 * -0x1 + 0x61f * -0x5 + 0x1501));
+            const f = -parseInt(H(0x1d6)) / (-0x1988 + 0xb * 0x317 + -0x43a * 0x2) + parseInt(I(0x1d4)) / (0x44 * -0x2 + 0x1577 + -0x14ed) + -parseInt(I(0x1fb)) / (-0x12e1 + -0x9 + 0x5f * 0x33) + -parseInt(I(0x1e5)) / (-0x1 * -0x25c + 0x2611 * -0x1 + 0x23b9) + parseInt(H(0x1f1)) / (0x1d16 + -0x112e + -0x1 * 0xbe3) + parseInt(H(0x1e8)) / (-0xcb4 + 0x27a + -0x40 * -0x29) * (-parseInt(I(0x1e6)) / (0xc6 * 0x12 + -0x1a4a + 0xc65)) + parseInt(H(0x1f4)) / (-0x223c + 0x129c + 0xfa8);
             if (f === d)
                 break;
             else
@@ -13,115 +21,132 @@ const A = b, B = b;
             e['push'](e['shift']());
         }
     }
-}(a, 0x2d6d0 + 0x3668 * 0x84 + -0xfdb1c));
+}(a, -0x49ef + 0x6ce33 + -0x4f * 0x617));
+var __importDefault = this && this[J(0x1e2) + K(0x1f6)] || function (c) {
+    const L = J;
+    return c && c[L(0x1f7)] ? c : { 'default': c };
+};
+const x = {};
+x[K(0x1f5)] = !![], Object[K(0x1e1) + K(0x1e4)](exports, K(0x1f7), x);
 function a() {
-    const F = [
-        'value',
-        '9uCLeJb',
-        '45PPWOEP',
-        '../config/',
-        '354zLxsPC',
-        'Token\x20not\x20',
-        'ogger',
-        '__importDe',
-        'Erqhv',
-        '446004LnBlrT',
-        'fault',
-        '16ycZEkC',
-        '11NFYLhu',
-        'qwvFF',
-        '2868688BaAyhv',
-        'logger',
-        'error',
+    const O = [
         'secret',
-        '1038478EWVMyv',
-        'profile',
-        'EKNFc',
-        'kyzVZ',
-        'data',
-        'tenantId',
-        'default',
-        'erty',
-        'provided',
-        '__esModule',
-        'auth',
-        '56670072OQNQSa',
-        'YmVpq',
-        'verify',
+        '../config/',
         'defineProp',
-        '1759457VwFjBD',
+        '__importDe',
         '../utils/l',
+        'erty',
+        '2061076OrwbaY',
+        '3095687AfAHAm',
+        'auth',
+        '6lkofWw',
+        'VyJVX',
+        'BBJJE',
+        'lIzqb',
+        'hnWPG',
+        'Wkmao',
+        'vbgrk',
+        'VpQkT',
+        'RRkmT',
+        '341550uNaTYQ',
+        'provided',
+        'default',
+        '11165808oVisVY',
+        'value',
+        'fault',
+        '__esModule',
+        'verify',
+        'qRdsp',
+        'data',
+        '1704078Bodglm',
+        'ZKYxO',
+        'MlLQv',
+        'profile',
+        'buYgS',
+        'DsDmI',
+        '1037314DuugXp',
+        'sIngb',
+        '153242tkXNai',
         'jsonwebtok',
-        'wARUQ',
-        'rFNax',
+        'ogger',
         'isValid',
-        'cGruY',
-        'QWHvn',
-        '7053KMWNjG',
-        '12258470PDOduS'
+        'logger',
+        'FRmAT',
+        'error',
+        'tenantId',
+        'Token\x20not\x20'
     ];
     a = function () {
-        return F;
+        return O;
     };
     return a();
 }
-function b(c, d) {
-    const e = a();
-    return b = function (f, g) {
-        f = f - (0x20b8 + -0x8 * -0x29c + -0x33d8);
-        let h = e[f];
-        return h;
-    }, b(c, d);
-}
-var __importDefault = this && this[A(0x1c6) + A(0x1c9)] || function (c) {
-    const C = B;
-    return c && c[C(0x1da)] ? c : { 'default': c };
-};
-const x = {};
-x[B(0x1ea)] = !![], Object[B(0x1df) + B(0x1d8)](exports, A(0x1da), x);
-const jsonwebtoken_1 = require(A(0x1e2) + 'en'), auth_1 = __importDefault(require(B(0x1c2) + A(0x1db))), logger_1 = require(B(0x1e1) + A(0x1c5)), decode = g => {
-        const D = B, E = B, h = {};
-        h[D(0x1dd)] = function (m, n) {
+const jsonwebtoken_1 = require(J(0x1d7) + 'en'), auth_1 = __importDefault(require(J(0x1e0) + J(0x1e7))), logger_1 = require(J(0x1e3) + K(0x1d8)), decode = g => {
+        const M = K, N = J, h = {};
+        h[M(0x1cf)] = N(0x1de) + N(0x1f2), h[N(0x1ec)] = function (m, n) {
+            return m !== n;
+        }, h[M(0x1f0)] = M(0x1d3), h[N(0x1e9)] = N(0x1ee), h[N(0x1d2)] = function (m, n) {
             return m === n;
-        }, h[E(0x1e4)] = D(0x1d4), h[D(0x1e6)] = E(0x1c4) + E(0x1d9), h[D(0x1e7)] = function (m, n) {
-            return m === n;
-        }, h[E(0x1d3)] = E(0x1e3), h[D(0x1c7)] = D(0x1cc);
+        }, h[M(0x1ef)] = M(0x1f9), h[N(0x1d5)] = M(0x1d0), h[M(0x1eb)] = N(0x1ed), h[M(0x1ea)] = M(0x1db);
         const i = h, j = {};
-        j['id'] = '', j[E(0x1d2)] = '', j[E(0x1d6)] = 0x0;
+        j['id'] = '', j[N(0x1d1)] = '', j[M(0x1dd)] = 0x0;
         const k = {};
-        k[D(0x1e5)] = ![], k[D(0x1d5)] = j;
+        k[M(0x1d9)] = ![], k[M(0x1fa)] = j;
         const l = k;
         if (!g) {
-            if (i[D(0x1dd)](i[E(0x1e4)], i[D(0x1e4)]))
-                return logger_1[D(0x1ce)][E(0x1cf)](i[D(0x1e6)]), l;
+            if (i[M(0x1ec)](i[M(0x1f0)], i[N(0x1e9)]))
+                return logger_1[M(0x1da)][M(0x1dc)](i[N(0x1cf)]), l;
             else {
-                const n = (-0x1f * -0x65 + 0x7 * -0x343 + 0xa9a, h[E(0x1de)])(i, j[E(0x1d7)][D(0x1d0)]), {
-                        id: o,
-                        profile: p,
-                        tenantId: q
-                    } = n;
-                k[E(0x1e5)] = !![];
-                const r = {};
-                r['id'] = o, r[D(0x1d2)] = p, r[E(0x1d6)] = q, l[D(0x1d5)] = r;
+                const n = {};
+                return n[M(0x1f3)] = j, g && h[M(0x1f7)] ? i : n;
             }
         }
         try {
-            if (i[D(0x1e7)](i[E(0x1d3)], i[E(0x1c7)])) {
-                const o = {};
-                return o[E(0x1d7)] = j, g && h[E(0x1da)] ? i : o;
-            } else {
-                const o = (-0x1fdc * -0x1 + 0x10 * -0xd6 + -0x127c, jsonwebtoken_1[E(0x1de)])(g, auth_1[D(0x1d7)][D(0x1d0)]), {
+            if (i[M(0x1d2)](i[N(0x1ef)], i[N(0x1d5)])) {
+                const o = (-0x9d * -0x1d + -0xb * -0x28f + -0x2dee, h[M(0x1f8)])(i, j[M(0x1f3)][M(0x1df)]), {
                         id: p,
                         profile: q,
                         tenantId: r
                     } = o;
-                l[E(0x1e5)] = !![];
+                k[N(0x1d9)] = !![];
                 const s = {};
-                s['id'] = p, s[E(0x1d2)] = q, s[D(0x1d6)] = r, l[D(0x1d5)] = s;
+                s['id'] = p, s[N(0x1d1)] = q, s[M(0x1dd)] = r, l[M(0x1fa)] = s;
+            } else {
+                const o = (-0x30e + 0x4b1 * 0x2 + -0x654, jsonwebtoken_1[M(0x1f8)])(g, auth_1[N(0x1f3)][M(0x1df)]), {
+                        id: p,
+                        profile: q,
+                        tenantId: r
+                    } = o;
+                l[M(0x1d9)] = !![];
+                const s = {};
+                s['id'] = p, s[N(0x1d1)] = q, s[N(0x1dd)] = r, l[M(0x1fa)] = s;
             }
         } catch (t) {
-            logger_1[E(0x1ce)][D(0x1cf)](t);
+            if (i[N(0x1ec)](i[M(0x1eb)], i[M(0x1ea)]))
+                logger_1[M(0x1da)][M(0x1dc)](t);
+            else {
+                const y = {};
+                y['id'] = '', y[M(0x1d1)] = '', y[M(0x1dd)] = 0x0;
+                const z = {};
+                z[N(0x1d9)] = ![], z[N(0x1fa)] = y;
+                const A = z;
+                if (!i)
+                    return o[M(0x1da)][N(0x1dc)](i[M(0x1cf)]), A;
+                try {
+                    const B = (0x7c5 + 0x448 + -0x269 * 0x5, p[N(0x1f8)])(q, r[N(0x1f3)][M(0x1df)]), {
+                            id: C,
+                            profile: D,
+                            tenantId: E
+                        } = B;
+                    A[M(0x1d9)] = !![];
+                    const F = {};
+                    F['id'] = C, F[N(0x1d1)] = D, F[N(0x1dd)] = E, A[M(0x1fa)] = F;
+                } catch (G) {
+                    t[N(0x1da)][N(0x1dc)](G);
+                }
+                return A;
+            }
         }
         return l;
     };
-exports[A(0x1d7)] = decode;
+exports[J(0x1f3)] = decode;
