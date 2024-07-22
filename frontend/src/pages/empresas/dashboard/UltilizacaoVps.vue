@@ -1,20 +1,26 @@
 <template>
-  <div class="server-status">
+  <div class="row col full-width q-pa-lg">
     <div class="clock" style="display: flex;">
       <div class="lado">
         <div class="status">
-        <h2 class="card-title">Status do servidor</h2>
-        <div class="info-item">
-          <p>Tempo do servidor ligado:</p>
-          <p class="info-value">{{ serverInfo["Uptime"] }}</p>
+          <h2 :class="$q.dark.isActive ? 'text-white' : ''">
+            <q-icon name="mdi-server-network q-pr-sm" /> Status do servidor
+          </h2>
+          <div class="info-item">
+            <p>Tempo do servidor ligado:</p>
+            <p class="info-value">
+              <q-icon name="mdi-clock-plus-outline q-pr-sm" /> {{ serverInfo["Uptime"] }}
+            </p>
+          </div>
+          <p class="clock-time">
+            Horas do Servidor: <q-icon name="mdi-clock-outline q-pr-sm" /> {{ currentTime }}
+          </p>
         </div>
-        <p class="clock-time">Horas do Servidor: {{ currentTime }}</p>
-      </div>
       </div>
     </div>
     <div class="cards-container">
-      <div class="info-card">
-        <h2 class="card-title">Informações Gerais</h2>
+      <div :class="['info-card', darkModeCardClass]">
+        <h2 :class="$q.dark.isActive ? 'text-white' : ''"><q-icon name="mdi-information-outline q-pr-sm" /> Informações Gerais</h2>
         <div class="info-item">
           <p>Hostname:</p>
           <p class="info-value">{{ serverInfo["Hostname"] }}</p>
@@ -32,8 +38,8 @@
           <p class="info-value">{{ serverInfo["Endereço IP"] }}</p>
         </div>
       </div>
-      <div class="info-card">
-        <h2 class="card-title">Memória</h2>
+      <div :class="['info-card', darkModeCardClass]">
+        <h2 :class="$q.dark.isActive ? 'text-white' : ''"><q-icon name="mdi-memory q-pr-sm" /> Memória</h2>
         <div class="info-item">
           <p>Total:</p>
           <p class="info-value">{{ serverInfo["Total Memory"] }}</p>
@@ -47,8 +53,8 @@
           <p class="info-value">{{ serverInfo["Memory Usage Percentage"] }}%</p>
         </div>
       </div>
-      <div class="info-card">
-        <h2 class="card-title">CPU</h2>
+      <div :class="['info-card', darkModeCardClass]">
+        <h2 :class="$q.dark.isActive ? 'text-white' : ''"><q-icon name="mdi-cpu-64-bit q-pr-sm" /> CPU</h2>
         <div class="info-item">
           <p>Quantidade de CPUs:</p>
           <p class="info-value">{{ serverInfo["Quantidade de CPUs"] }}</p>
@@ -58,8 +64,8 @@
           <p class="info-value">{{ serverInfo["CPU Usage Percentage"] }}%</p>
         </div>
       </div>
-      <div class="info-card">
-        <h2 class="card-title">Espaço em Disco</h2>
+      <div :class="['info-card', darkModeCardClass]">
+        <h2 :class="$q.dark.isActive ? 'text-white' : ''"><q-icon name="mdi-harddisk q-pr-sm" /> Espaço em Disco</h2>
         <div class="info-item">
           <p>Total:</p>
           <p class="info-value">{{ serverInfo["Total Disk Space"] }}</p>
@@ -89,8 +95,6 @@ export default {
   },
   mounted() {
     this.fetchServerInfo()
-
-    // Inicializa o relógio
     this.updateClock()
   },
   methods: {
@@ -103,7 +107,6 @@ export default {
       }
     },
     updateClock() {
-      // Função para atualizar o relógio a cada segundo
       const update = () => {
         const now = new Date()
         const hours = now.getHours().toString().padStart(2, '0')
@@ -111,23 +114,19 @@ export default {
         const seconds = now.getSeconds().toString().padStart(2, '0')
         this.currentTime = `${hours}:${minutes}:${seconds}`
       }
-
-      // Atualiza a hora a cada segundo
       update()
       setInterval(update, 1000)
+    }
+  },
+  computed: {
+    darkModeCardClass() {
+      return this.$q.dark.isActive ? 'bg-dark' : 'bg-light'
     }
   }
 }
 </script>
 
 <style scoped>
-
-.status {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  gap: 20rem; /* Adicione o valor desejado aqui para o espaçamento entre os itens */
-}
 .server-status {
   font-family: Arial, sans-serif;
   padding: 1rem;
@@ -137,45 +136,48 @@ export default {
   max-width: 100%;
   max-height: 35rem;
 }
-
-/* Estilo para a seção do relógio */
 .clock {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-bottom: 1rem; /* Adiciona um espaço entre o relógio e as informações do servidor */
+  margin-bottom: 1rem;
   max-height: 8rem;
 }
-
 .clock-time {
-  font-size: 1.06rem; /* Tamanho menor para o relógio */
-  margin-right: 1rem; /* Espaço à direita do relógio */
+  font-size: 1.06rem;
+  margin-right: 1rem;
 }
-
 .cards-container {
   display: flex;
-  justify-content: space-between;
+  flex-wrap: wrap;
   gap: 1rem;
-  max-height: 17rem;
 }
-
 .info-card {
   border: 0.1rem solid #ccc;
   border-radius: 0.5rem;
   padding: 1rem;
   background-color: #fff;
-  flex: 1;
+  flex: 1 1 calc(50% - 1rem);
 }
-
 .info-item {
   margin: 0.1rem 0;
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
-
 .info-value {
   font-weight: bold;
   color: #007BFF;
+}
+.text-white {
+  color: white !important;
+}
+.bg-dark {
+  background-color: #333 !important;
+  color: white !important;
+}
+.bg-light {
+  background-color: #fff !important;
+  color: black !important;
 }
 </style>

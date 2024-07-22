@@ -1,33 +1,67 @@
 <template>
-  <div v-if="userProfile === 'admin'">
-    <div class="row col full-width q-pa-lg">
-      <q-card flat bordered class="full-width">
+  <div v-if="userProfile === 'admin' || userProfile === 'super'">
+    <div class="bg-white mass-container container-rounded-10">
+      <div class="row col full-width q-pa-lg">
+      <q-card
+        flat
+        bordered
+        class="full-width"
+      >
         <q-card-section class="text-h6 text-bold">
-          Canais de Comunicação
-          <div class="absolute-top-right q-pa-sm">
-            <q-btn color="primary" icon="add" label="Adicionar" @click="modalWhatsapp = true" />
+          <h2 :class="$q.dark.isActive ? ('text-white') : ''">
+            <q-icon name="mdi-cellphone-wireless q-pr-sm" />
+            Canais de Comunicação
+          </h2>
+          <div class="q-pa-sm">
+            <q-btn flat class="generate-button btn-rounded-50"
+              icon="eva-plus-outline"
+              label="Adicionar Canal"
+              @click="modalWhatsapp = true"
+            />
           </div>
-          <q-separator />
         </q-card-section>
       </q-card>
     </div>
-    <div class="row full-width q-py-lg q-px-md ">
+    <div class="container-border q-ma-lg q-pb-md container-rounded-10">
+      <q-card-section>
+        <h2 :class="$q.dark.isActive ? ('text-white') : ''">
+        <q-icon name="eva-list-outline q-pr-sm" />
+        Listagem
+      </h2>
+      </q-card-section>
+
+      <div class="row full-width  q-px-md ">
       <template v-for="item in canais">
-        <q-card flat bordered class="col-xs-12 col-sm-5 col-md-4 col-lg-3 q-ma-md" :key="item.id">
+        <q-card
+          flat
+          bordered
+          class="col-xs-12 col-sm-5 col-md-4 col-lg-3 "
+          :key="item.id"
+        >
           <q-item>
             <q-item-section avatar>
               <q-avatar>
-                <q-icon size="40px" :name="`img:${item.type}-logo.png`" />
+                <q-icon
+                  size="40px"
+                  :name="`img:${item.type}-logo.png`"
+                />
               </q-avatar>
             </q-item-section>
             <q-item-section>
-              <q-item-label class="text-h6 text-bold">Nome: {{ item.name }}</q-item-label>
+              <q-item-label class="text-h6 text-bold">{{ item.name }}</q-item-label>
               <q-item-label class="text-h6 text-caption">
                 {{ item.type }}
               </q-item-label>
             </q-item-section>
             <q-item-section side>
-              <q-btn round flat dense icon="edit" @click="handleOpenModalWhatsapp(item)" v-if="isAdmin" />
+              <q-btn
+                round
+                flat
+                dense
+                icon="eva-edit-outline"
+                @click="handleOpenModalWhatsapp(item)"
+                v-if="isAdmin"
+              />
               <!-- <q-btn
             round
             flat
@@ -51,25 +85,94 @@
           <q-card-section>
             <!-- <q-toggle v-if="item.type === 'whatsapp'" v-model="item.is_open_ia" label="Chat pela IA"
               @input="handleSaveWhatsApp(item)" /> -->
-            <q-select v-if="!item.is_open_ia" outlined dense label="ChatBot" v-model="item.chatFlowId"
-              :options="listaChatFlow" map-options emit-value option-value="id" option-label="name" clearable
-              @input="handleSaveWhatsApp(item)" />
-            <!-- <q-select v-if="item.is_open_ia" outlined dense label="Fila de transferencia" v-model="item.queue_transf"
-              :options="listaFilas" map-options emit-value option-value="id" option-label="queue" clearable
-              @input="handleSaveWhatsApp(item)" /> -->
-            <!-- @input="atualizarConfiguracao('botTicketActive')" -->
+            <q-select
+              rounded
+              outlined
+              dense
+              label="ChatBot"
+              v-model="item.chatFlowId"
+              :options="listaChatFlow"
+              map-options
+              emit-value
+              option-value="id"
+              option-label="name"
+              clearable
+              @input="handleSaveWhatsApp(item)"
+            />
+          </q-card-section>
+          <q-card-section>
+            <q-select
+              rounded
+              outlined
+              dense
+              label="Fila"
+              v-model="item.queueId"
+              :options="listaFila"
+              map-options
+              emit-value
+              option-value="id"
+              option-label="queue"
+              clearable
+              @input="handleSaveWhatsApp(item)"
+            >
+              <q-tooltip>
+                Será atribuido essa fila para novos tickets
+              </q-tooltip>
+            </q-select>
+          </q-card-section>
+          <q-card-section>
+            <q-select
+              rounded
+              outlined
+              dense
+              label="Usuário"
+              v-model="item.userId"
+              :options="listaUsuario"
+              map-options
+              emit-value
+              option-value="id"
+              option-label="name"
+              clearable
+              @input="handleSaveWhatsApp(item)"
+              >
+              <q-tooltip>
+                Será atribuido esse usuário para novos tickets, BOT não vai acionar
+              </q-tooltip>
+            </q-select>
           </q-card-section>
           <q-separator />
-          <q-card-actions class="q-gutter-md q-pa-md q-pt-none" align="center">
-            <template v-if="item.type !== 'messenger'">
-              <q-btn v-if="item.type == 'whatsapp' && item.status == 'qrcode'" color="blue-5" label="QR Code"
-                @click="handleOpenQrModal(item, 'btn-qrCode')" icon-right="watch_later" :disable="!isAdmin" />
+          <q-card-actions
+            class="q-gutter-md q-pa-sm q-pt-none"
+            align="center"
+          >
+           <template v-if="item.type !== 'messenger'">
+              <q-btn
+                v-if="item.type == 'whatsapp' && item.status == 'qrcode'"
+                color="primary"
+                label="QR Code"
+                @click="handleOpenQrModal(item, 'btn-qrCode')"
+                icon-right="mdi-qrcode-scan"
+                :disable="!isAdmin"
+                class="btn-rounded-50 q-mx-sm"
+              />
 
               <div v-if="item.status == 'DISCONNECTED'" class="q-gutter-sm">
-                <q-btn v-if="item.type != 'whatsapp'" color="positive" label="Conectar"
-                  @click="handleStartWhatsAppSession(item.id)" />
-                <q-btn v-if="item.status == 'DISCONNECTED' && item.type == 'whatsapp'" color="blue-5" label="Novo QR Code"
-                  @click="handleRequestNewQrCode(item, 'btn-qrCode')" icon-right="watch_later" :disable="!isAdmin" />
+                <q-btn
+                  v-if="item.type != 'whatsapp'"
+                  color="positive"
+                  label="Conectar"
+                  @click="handleStartWhatsAppSession(item.id)"
+                  class="btn-rounded-50 q-mx-sm"
+                />
+                <q-btn
+                  v-if="item.status == 'DISCONNECTED' && item.type == 'whatsapp'"
+                  color="primary"
+                  label="Novo QR Code"
+                  @click="handleRequestNewQrCode(item, 'btn-qrCode')"
+                  icon-right="mdi-qrcode-scan"
+                  :disable="!isAdmin"
+                  class="btn-rounded-50 q-mx-sm"
+                />
 
               </div>
 
@@ -81,8 +184,15 @@
                 <q-separator vertical spaced="" />
               </div>
 
-              <q-btn v-if="['OPENING', 'CONNECTED', 'PAIRING', 'TIMEOUT'].includes(item.status)" color="negative"
-                label="Desconectar" @click="handleDisconectWhatsSession(item.id)" :disable="!isAdmin" class="q-mx-sm" />
+              <q-btn
+                v-if="['OPENING', 'CONNECTED', 'PAIRING', 'TIMEOUT'].includes(item.status)"
+                color="negative"
+                label="Desconectar"
+                icon="eva-wifi-off-outline"
+                @click="handleDisconectWhatsSession(item.id)"
+                :disable="!isAdmin"
+                class="btn-rounded-50 q-mx-sm"
+              />
             </template>
 
             <template v-if="item.type === 'messenger'">
@@ -96,15 +206,20 @@
                 </template>
               </VFacebookLogin>
             </template>
-            <q-btn color="red" icon="mdi-delete" @click="deleteWhatsapp(item)" :disable="!isAdmin" dense round flat
-              class="absolute-bottom-right">
-              <q-tooltip>
-                Deletar conexáo
+            <q-btn
+              color="negative"
+              icon="eva-trash-outline"
+              @click="deleteWhatsapp(item)"
+              :disable="!isAdmin"
+              dense
+              round
+              flat
+              class="absolute-bottom-right"
+            >
+             <q-tooltip>
+                Deletar conexão
               </q-tooltip>
             </q-btn>
-          </q-card-actions>
-        </q-card>
-      </template>
     </div>
     <ModalQrCode :abrirModalQR.sync="abrirModalQR" :channel="cDadosWhatsappSelecionado"
       @gerar-novo-qrcode="v => handleRequestNewQrCode(v, 'btn-qrCode')" />
@@ -129,6 +244,7 @@ import VFacebookLogin from 'vue-facebook-login-component'
 import { FetchFacebookPages, LogoutFacebookPages } from 'src/service/facebook'
 import { ListarChatFlow } from 'src/service/chatFlow'
 import { ListarFilas } from 'src/service/filas'
+import { ListarUsuarios } from 'src/service/user'
 
 const userLogado = JSON.parse(localStorage.getItem('usuario'))
 
@@ -150,7 +266,8 @@ export default {
       modalWhatsapp: false,
       whatsappSelecionado: {},
       listaChatFlow: [],
-      listaFilas: [],
+      listaFila: [],
+      listaUsuario: [],
       whatsAppId: null,
       canais: [],
       objStatus: {
@@ -247,7 +364,11 @@ export default {
     },
     async buscaFilas() {
       const { data } = await ListarFilas()
-      this.listaFilas = data.filter(f => f.isActive)
+      this.listaFila = data.filter(f => f.isActive)
+    },
+    async listarUsuario () {
+      const { data } = await ListarUsuarios()
+      this.listaUsuario = data.users
     },
     async fbLogout(whatsapp) {
       console.info('fbLogout')
@@ -344,6 +465,9 @@ export default {
         console.error(error)
       }
       this.loading = false
+      setTimeout(() => {
+        window.location.reload()
+      }, 1000)
     },
     async listarWhatsapps() {
       const { data } = await ListarWhatsapps()
@@ -405,14 +529,26 @@ export default {
           }]
         })
       }
+    },
+    handleUpdateSession(session) {
+      this.$store.commit('UPDATE_SESSION', session)
+      this.atualizarPagina()
+    },
+    atualizarPagina() {
+      location.reload()
     }
+  },
+  beforeDestroy() {
+    this.$root.$off('UPDATE_SESSION', this.handleUpdateSession)
   },
   mounted() {
     this.userProfile = localStorage.getItem('profile')
     this.isAdmin = localStorage.getItem('profile')
     this.buscaFilas()
+    this.listarUsuario()
     this.listarWhatsapps()
     this.listarChatFlow()
+    this.$root.$on('UPDATE_SESSION', this.handleUpdateSession)
   }
   // destroyed() {
   //   this.disconnectSocket()

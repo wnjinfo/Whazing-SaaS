@@ -21,6 +21,7 @@
             class="required"
             outlined
             dense
+            rounded
             style="width: 500px"
             v-model="campanha.name"
             label="Nome da Campanha"
@@ -29,6 +30,7 @@
             error-message="Obrigatório"
           />
           <q-datetime-picker
+          rounded
             style="width: 200px"
             dense
             hide-bottom-space
@@ -45,6 +47,7 @@
             error-message="Não pode ser inferior ao dia atual"
           />
           <q-select
+            rounded
             class="required"
             dense
             outlined
@@ -64,6 +67,7 @@
             style="width: 250px"
           />
           <q-input
+            rounded
             class="required"
             outlined
             dense
@@ -90,8 +94,8 @@
             append
             :max-files="1"
             counter
-            :max-file-size="10485760"
-            :max-total-size="30485760"
+            :max-file-size="15728640"
+            :max-total-size="31457280"
             accept=".jpg, .png, image/jpeg, .pdf, .doc, .docx, .mp4, .xls, .xlsx, .jpeg, .zip, .ppt, .pptx, image/*"
             @rejected="onRejectedFiles"
             style="width: 350px"
@@ -371,17 +375,19 @@
         </div>
 
       </q-card-section>
-      <q-card-section>
-        <div class="row justify-center">
+    </div>
+
+      <q-card-section class="q-mb-md">
+        <div class="float-right q-mb-md">
           <q-btn
             label="Cancelar"
             color="negative"
             v-close-popup
-            class="q-mr-md"
+            class="q-mr-md btn-rounded-50"
           />
           <q-btn
             label="Salvar"
-            color="positive"
+            class="generate-button btn-rounded-50"
             icon="save"
             @click="handleCampanha"
           />
@@ -451,7 +457,7 @@ export default {
         message2: null,
         message3: null,
         sessionId: null,
-        delay: 40
+        delay: 20
       },
       messageTemplate: {
         mediaUrl: null,
@@ -465,7 +471,7 @@ export default {
         createdAt: '2021-02-20T20:09:04.736Z',
         updatedAt: '2021-02-20T23:26:24.311Z',
         quotedMsgId: null,
-        delay: 40,
+        delay: 20,
         ticketId: 0,
         contactId: null,
         userId: null,
@@ -534,7 +540,7 @@ export default {
     }
   },
   methods: {
-    onInsertSelectVariable (variable, ref, messageField) {
+    onInsertSelectVariable(variable, ref, messageField) {
       var tArea = this.$refs[ref]
       if (!tArea) {
         return
@@ -584,7 +590,7 @@ export default {
         message4: null,
         mediaUrl: null,
         userId: null,
-        delay: 40,
+        delay: 20,
         sessionId: null
       }
     },
@@ -642,10 +648,10 @@ export default {
         })
         return
       }
-      if (this.campanha.delay < 40) {
+      if (this.campanha.delay < 20) {
         this.$q.notify({
           type: 'negative',
-          message: 'O campo delay deve ser no mínimo 40'
+          message: 'O campo delay deve ser no mínimo 20'
         })
         return
       }
@@ -667,6 +673,8 @@ export default {
         medias.append('medias', this.arquivos)
         if (this.campanha.id) {
           const { data } = await AlterarCampanha(medias, campanha.id)
+          console.log(this.campanha)
+          console.log(data)
           this.$emit('modal-campanha:editada', data)
           this.$q.notify({
             type: 'info',
@@ -682,6 +690,7 @@ export default {
           })
         } else {
           const { data } = await CriarCampanha(medias)
+          console.log(data)
           this.$emit('modal-campanha:criada', data)
           this.$q.notify({
             type: 'positive',

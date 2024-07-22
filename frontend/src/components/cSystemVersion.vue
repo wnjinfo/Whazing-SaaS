@@ -1,9 +1,8 @@
 <template>
-  <div class="text-caption text-center bg-grey-1 q-pa-sm">
-    Versão Sistema:
+  <div class="text-caption text-center q-pa-sm">
     <q-badge align="middle"
       color="primary">
-      v{{ cVersion }}
+      Versão: {{ cVersion }}
     </q-badge>
   </div>
 </template>

@@ -1,22 +1,60 @@
 <template>
   <q-dialog persistent :value="modalPlano" @hide="fecharModal" @show="abrirModal">
-    <q-card style="width: 500px" class="q-pa-lg">
+    <q-card class="container-rounded-10 modal-container q-pa-lg">
+
+      <q-card-actions align="right">
+        <q-btn
+          flat
+          color="negative"
+          icon="eva-close-outline"
+          v-close-popup
+        />
+      </q-card-actions>
+
       <q-card-section>
-        <div class="text-h6">{{ planoEdicao.id ? 'Editar' : 'Criar' }} Plano</div>
+        <div class="text-h6 text-center font-family-main">{{ planoEdicao.id ? 'Editar' : 'Criar' }} Plano</div>
       </q-card-section>
-      <q-card-section>
-            <q-input class="row col" square outlined v-model="plano.name" label="Nome do Plano" />
-            <q-input class="row col" square outlined v-model="plano.maxUsers" label="Máx. Usuários" />
-            <q-input class="row col" square outlined v-model="plano.maxConnections" label="Máx. Conexões" />
-            <q-input class="row col" square outlined v-model="plano.value" label="Valor" />
+      <div class="container-border container-rounded-10">
+
+      <q-card-section class="row flex-gap-1 q-col-gutter-sm">
+        <div class="text-h6 font-family-main">
+          Informações
+        </div>
+        <div class="flex-gap-1 full-width row q-col-gutter-sm">
+          <div class="full-width">
+            <c-input rounded outlined v-model="plano.name" label="Nome do Plano" />
+          </div>
+          <div class="full-width">
+            <c-input rounded outlined v-model="plano.maxUsers" label="Máx. Usuários" />
+          </div>
+          <div class="full-width">
+            <c-input rounded outlined v-model="plano.maxConnections" label="Máx. Conexões" />
+          </div>
+          <div class="full-width">
+            <c-input rounded outlined v-model="plano.value" label="Valor" />
+          </div>
+          <div class="full-width">
         <q-checkbox
           v-model="plano.isPublic"
           label="Publico"
         />
+          </div>
+        </div>
       </q-card-section>
-      <q-card-actions align="right" class="q-mt-md">
-        <q-btn flat label="Cancelar" color="negative" v-close-popup class="q-mr-md" />
-        <q-btn flat label="Salvar" color="primary" @click="handlePlano" />
+      </div>
+      <q-card-actions align="right">
+        <q-btn
+          label="Cancelar"
+          class="q-px-md q-mr-sm btn-rounded-50"
+          color="negative"
+          v-close-popup
+        />
+        <q-btn
+          label="Salvar"
+          class="q-px-md btn-rounded-50 generate-button"
+          icon="eva-save-outline"
+          @click="handlePlano"
+        />
       </q-card-actions>
     </q-card>
   </q-dialog>

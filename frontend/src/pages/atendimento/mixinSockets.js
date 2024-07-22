@@ -3,6 +3,8 @@ import Router from 'src/router/index'
 import checkTicketFilter from 'src/utils/checkTicketFilter'
 import { socketIO } from 'src/utils/socket'
 import { ConsultarTickets } from 'src/service/tickets'
+import { orderBy } from 'lodash'
+import { parseISO } from 'date-fns'
 
 const socket = socketIO()
 
@@ -65,7 +67,7 @@ export default {
     },
     socketMessagesList () {
       // Implementação original da função socketMessagesList
-      console.log('socketMessagesList function called')
+      // console.log('socketMessagesList function called')
       // Coloque aqui a lógica necessária para a função socketMessagesList
     },
     socketTicket () {
@@ -115,16 +117,16 @@ export default {
               includeNotQueueDefined: [true, false]
               // date: new Date(),
             }
-            console.log('Definiu parametros')
+            // console.log('Definiu parametros')
             try {
-              console.log('try')
+              // console.log('try')
               const { data } = await ConsultarTickets(params)
-              console.log('try 1')
+              // console.log('try 1')
               this.countTickets = data.count // count total de tickets no status
-              console.log('try 2')
+              // console.log('try 2')
               // this.ticketsList = data.tickets
               this.$store.commit('UPDATE_NOTIFICATIONS', data)
-              console.log('try 3')
+              // console.log('try 3')
               // this.$store.commit('SET_HAS_MORE', data.hasMore)
               // console.log(this.notifications)
             } catch (err) {
@@ -182,7 +184,7 @@ export default {
                 body: 'Cliente: ' + data.payload.contact.name,
                 tag: 'simple-push-demo-notification'
               })
-              console.log(message)
+              // console.log(message)
             }
           }
         })

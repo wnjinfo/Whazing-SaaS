@@ -1,7 +1,31 @@
 <template>
   <div>
+    <div class="bg-white mass-container container-rounded-10">
+      <div class="row col full-width q-pa-lg">
+      <q-card
+        flat
+        bordered
+        class="full-width"
+      >
+        <q-card-section class="text-h6 text-bold">
+          <h2 :class="$q.dark.isActive ? ('text-white') : ''">
+            <q-icon name="mdi-help q-pr-sm" />
+            Ajuda
+          </h2>
+        </q-card-section>
+      </q-card>
+    </div>
+
+    <div class="container-border q-ma-lg q-pb-md container-rounded-10">
+      <q-card-section>
+        <h2 :class="$q.dark.isActive ? ('text-white') : ''">
+        <q-icon name="eva-list-outline q-pr-sm" />
+        Listagem
+      </h2>
+      </q-card-section>
+
     <div class="q-pa-md row q-gutter-md">
-      <div v-for="ajuda in ajudas" :key="ajuda.id" class="col-12 col-sm-6 col-md-4">
+      <div v-for="ajuda in ajudas" :key="ajuda.id">
         <q-card @click="abrirModal(ajuda)">
           <q-card-section>
             <img :src="`https://img.youtube.com/vi/${ajuda.video}/hqdefault.jpg`" width="100%" height="100%" :alt="ajuda.title">

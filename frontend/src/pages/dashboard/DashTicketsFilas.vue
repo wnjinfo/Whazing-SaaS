@@ -1,67 +1,174 @@
 <template>
-  <div v-if="userProfile === 'admin'">
-    <div class="row col q-pa-md justify-between items-center">
-      <h1> Painel Atendimentos </h1>
-      <q-btn color="primary" icon="mdi-filter" label="Filtros" @click="visualizarFiltros = true" />
-      <q-separator />
+  <div class="mass-container container-rounded-10" v-if="userProfile === 'admin'">
+    <div class="col q-pa-md items-center" >
+      <h2>
+        <q-icon name="mdi-view-dashboard-variant" />
+        Painel Atendimentos
+      </h2>
+        <div class="q-mb-md row flex-gap-1">
+          <q-btn
+          icon="mdi-filter"
+          label="Filtros"
+          class="generate-button btn-rounded-50"
+          :class="{'generate-button-dark' : $q.dark.isActive}"
+          @click="visualizarFiltros = true" />
+        <!-- <q-btn @click="listarUsuarios2"
+            flat
+            color="primary"
+            class="bg-padrao btn-rounded"
+            style="margin-right: 10px;">
+          <q-icon name="mdi-transfer" />
+          <q-tooltip content-class="bg-primary text-bold">
+            Transferir Atendimento entre Usuários
+          </q-tooltip>
+        </q-btn> -->
+          <!--  <q-btn @click="fecharTicketsAbertos"
+            color="primary"
+            label="atendimentos abertos"
+            icon="mdi-close"
+            class="btn-rounded-50">
+          <q-tooltip content-class="bg-primary text-bold">
+            Fechar Atendimentos Abertos
+          </q-tooltip>
+        </q-btn>
+        <q-btn @click="fecharTicketsPendentes"
+            flat
+            icon="mdi-close"
+            label="atendimentos pendentes"
+            class="generate-button btn-rounded-50"
+            :class="{'generate-button-dark' : $q.dark.isActive}">
+
+          <q-tooltip content-class="text-bold">
+            Fechar Atendimentos Pendentes
+          </q-tooltip>
+        </q-btn>
+      </div>
     </div>
 
-    <q-dialog full-height position="right" v-model="visualizarFiltros">
+    <!-- <div class="row col q-pa-md justify-between items-center">
+      <h1> Painel Atendimentos </h1>
+        <q-btn color="primary"
+          icon="mdi-filter"
+          label="Filtros"
+          @click="visualizarFiltros = true" />
+        <q-btn @click="listarUsuarios2"
+            flat
+            color="primary"
+            class="bg-padrao btn-rounded">
+          <q-icon name="mdi-transfer" />
+          <q-tooltip content-class="bg-primary text-bold">
+            Transferir Tickets entre Usuários
+          </q-tooltip>
+        </q-btn>
+        <q-btn @click="fecharTicketsPendentes"
+            flat
+            color="primary"
+            class="bg-padrao btn-rounded">
+          <q-icon name="mdi-transfer" />
+          <q-tooltip content-class="bg-primary text-bold">
+            Fechar Tickets Pendentes
+          </q-tooltip>
+        </q-btn>
+      <q-separator />
+    </div> -->
+
+    <q-dialog full-height
+      position="left"
+      v-model="visualizarFiltros">
       <q-card style="width: 300px">
         <q-card-section>
           <div class="text-h6">Filtros</div>
         </q-card-section>
         <q-card-section class="q-gutter-md">
-          <DatePick dense class="row col" v-model="pesquisaTickets.dateStart" />
-          <DatePick dense class="row col" v-model="pesquisaTickets.dateEnd" />
+          <DatePick dense
+            class="row col"
+            v-model="pesquisaTickets.dateStart" />
+          <DatePick dense
+            class="row col"
+            v-model="pesquisaTickets.dateEnd" />
           <q-separator v-if="profile === 'admin'" />
-          <q-toggle v-if="profile === 'admin'" class="q-ml-lg" v-model="pesquisaTickets.showAll"
+          <q-toggle v-if="profile === 'admin'"
+            class="q-ml-lg"
+            v-model="pesquisaTickets.showAll"
             label="(Admin) - Visualizar Todos" />
-          <q-separator class="q-mb-md" v-if="profile === 'admin'" />
+          <q-separator class="q-mb-md"
+            v-if="profile === 'admin'" />
 
-          <q-select v-if="!pesquisaTickets.showAll" square dense outlined hide-bottom-space emit-value map-options
-            multiple options-dense use-chips label="Filas" color="primary" v-model="pesquisaTickets.queuesIds"
-            :options="filas" :input-debounce="700" option-value="id" option-label="queue"
+          <q-select v-if="!pesquisaTickets.showAll"
+            square
+            dense
+            outlined
+            hide-bottom-space
+            emit-value
+            map-options
+            multiple
+            options-dense
+            use-chips
+            label="Filas"
+            color="primary"
+            v-model="pesquisaTickets.queuesIds"
+            :options="filas"
+            :input-debounce="700"
+            option-value="id"
+            option-label="queue"
             input-style="width: 280px; max-width: 280px;" />
           <!-- @input="debounce(BuscarTicketFiltro(), 700)" -->
         </q-card-section>
         <q-card-section>
           <q-separator />
           <div class="text-h6 q-mt-md">Tipo de visualização</div>
-          <q-option-group :options="optionsVisao" label="Visão" type="radio" v-model="visao" />
+          <q-option-group :options="optionsVisao"
+            label="Visão"
+            type="radio"
+            v-model="visao" />
         </q-card-section>
         <q-card-actions align="center">
-          <q-btn outline label="Atualizar" color="primary" v-close-popup @click="consultarTickets" />
+          <q-btn outline
+            label="Atualizar"
+            color="primary"
+            v-close-popup
+            @click="consultarTickets" />
         </q-card-actions>
       </q-card>
     </q-dialog>
 
-    <div style="height: 85vh" class="scroll">
+    <div
+      class="scroll">
       <template v-for="(items, key) in sets">
-        <div :style="{ height: 800 }" :key="key" class="row q-pa-md q-col-gutter-md q-mb-sm">
-          <div :class="contentClass" v-for="(item, index) in items" :key="index">
-            <q-card bordered square flat>
-              <q-item v-if="visao === 'U' || visao === 'US'" class="text-bold" :class="{
-                'bg-negative text-white': definirNomeUsuario(item[0]) === 'Pendente'
-              }">
+        <div
+          :key="key"
+          class="row q-pa-md q-col-gutter-md q-mb-sm">
+          <div :class="contentClass"
+            v-for="(item, index) in items"
+            :key="index">
+            <q-card class="container-border container-rounded-50"
+              flat>
+              <q-item v-if="visao === 'U' || visao === 'US'"
+                class="font-family-main text-bold"
+                :class="{
+                  'bg-negative text-white': definirNomeUsuario(item[0]) === 'Pendente'
+                }">
                 <!-- <q-item-section avatar>
                   <q-avatar>
                     <img src="https://cdn.quasar.dev/img/boy-avatar.png">
                   </q-avatar>
                 </q-item-section> -->
                 <q-item-section>
-                  <q-item-label class="text-bold text-h6">{{ definirNomeUsuario(item[0]) }}</q-item-label>
-                  <q-item-label caption :class="{
-                    'text-white': definirNomeUsuario(item[0]) === 'Pendente'
-                  }">
+                  <q-item-label class="font-family-main text-bold text-h6">{{ definirNomeUsuario(item[0]) }}</q-item-label>
+                  <q-item-label caption class="font-family-main"
+                    :class="{
+                      'text-white': definirNomeUsuario(item[0]) === 'Pendente'
+                    }">
                     Atendimentos: {{ item.length }}
                   </q-item-label>
                 </q-item-section>
               </q-item>
 
-              <q-item v-if="visao === 'F' || visao === 'FS'" class="text-bold" :class="{
-                'bg-negative text-white': definirNomeFila(item[0]) === 'Sem Fila'
-              }">
+              <q-item v-if="visao === 'F' || visao === 'FS'"
+                class="font-family-main text-bold"
+                :class="{
+                  'bg-negative text-white': definirNomeFila(item[0]) === 'Sem Fila'
+                }">
                 <q-item-section avatar>
                   <q-avatar>
                     <img src="https://cdn.quasar.dev/img/boy-avatar.png">
@@ -69,18 +176,35 @@
                 </q-item-section>
                 <q-item-section>
                   <q-item-label>{{ definirNomeFila(item[0]) }}</q-item-label>
-                  <q-item-label caption :class="{
-                    'text-white': definirNomeFila(item[0]) === 'Sem Fila'
-                  }">
+                  <q-item-label caption
+                    :class="{
+                      'text-white': definirNomeFila(item[0]) === 'Sem Fila'
+                    }">
                     Abertos: {{ counterStatus(item).open }} | Pendentes: {{ counterStatus(item).pending }} | Total: {{
-                      item.length
+                        item.length
                     }}
                   </q-item-label>
                 </q-item-section>
+                <q-btn @click="listarFilas"
+                  v-if="definirNomeFila(item[0]).toLowerCase() === 'sem fila'"
+                  flat
+                  color="primary"
+                  class="bg-padrao btn-rounded">
+                  <q-icon name="mdi-transfer" />
+                  <q-tooltip content-class="bg-primary text-bold">
+                    Transferir Atendimentos Sem Fila
+                  </q-tooltip>
+                </q-btn>
               </q-item>
               <q-separator />
-              <q-card-section :style="{ height: '320px' }" class="scroll" v-if="visao === 'U' || visao === 'F'">
-                <ItemTicket v-for="(ticket, i) in item" :key="i" :ticket="ticket" :filas="filas" />
+              <q-card-section :style="{ height: '320px' }"
+                class="bg-grey-3 scroll"
+
+                v-if="visao === 'U' || visao === 'F'">
+                <ItemTicket v-for="(ticket, i) in item"
+                  :key="i"
+                  :ticket="ticket"
+                  :filas="filas" />
               </q-card-section>
             </q-card>
           </div>
@@ -89,24 +213,167 @@
       </template>
     </div>
 
+    <q-dialog v-model="modalTransferirTicket"
+      @hide="modalTransferirTicket = false"
+      persistent>
+      <q-card class="q-pa-md"
+        style="width: 500px">
+        <q-card-section>
+          <div class="text-h6">Transferir todos os atendimentos sem fila</div>
+          <div class="text-h8">Selecione o destino (atendimentos sem fila):</div>
+        </q-card-section>
+        <q-card-section>
+          <q-select square
+            outlined
+            v-model="filaSelecionada"
+            :options="filas"
+            emit-value
+            map-options
+            option-value="id"
+            option-label="queue"
+            label="Fila de destino" />
+        </q-card-section>
+        <q-card-section>
+          <q-select square
+            outlined
+            v-model="usuarioSelecionado"
+            :options="usuarios.filter(filterUsers)"
+            emit-value
+            map-options
+            option-value="id"
+            option-label="name"
+            label="Usuário destino" />
+        </q-card-section>
+        <q-card-actions align="right">
+          <q-btn
+            label="Sair"
+            color="negative"
+            v-close-popup
+            class="q-mr-lg" />
+          <q-btn
+            label="Salvar"
+            color="primary"
+            @click="confirmarTransferenciaTicket" />
+        </q-card-actions>
+      </q-card>
+    </q-dialog>
+
+    <q-dialog v-model="modalTransferirTicket2"
+      @hide="modalTransferirTicket2 = false"
+      persistent>
+      <q-card class="q-pa-md"
+        style="width: 500px">
+        <q-card-section>
+          <div class="text-h6">Transferir atendimento entre usuários</div>
+          <div class="text-h8">Atenção, os usuários devem ter acesso as mesmas filas:</div>
+        </q-card-section>
+        <q-card-section>
+          <q-select square
+            outlined
+            v-model="usuarioSelecionado2"
+            :options="usuarios2"
+            emit-value
+            map-options
+            option-value="id"
+            option-label="name"
+            label="Usuário de Origem" />
+        </q-card-section>
+        <q-card-section>
+          <q-select square
+            outlined
+            v-model="usuarioSelecionado3"
+            :options="usuarios3"
+            emit-value
+            map-options
+            option-value="id"
+            option-label="name"
+            label="Usuário de Destino" />
+        </q-card-section>
+        <q-card-actions align="right">
+          <q-btn
+            label="Sair"
+            color="negative"
+            v-close-popup
+            class="q-mr-lg" />
+          <q-btn
+            label="Salvar"
+            color="primary"
+            @click="confirmarTransferenciaTicket2" />
+        </q-card-actions>
+      </q-card>
+    </q-dialog>
+
+    <q-dialog v-model="modalTransferirTicket3"
+      @hide="modalTransferirTicket3 = false"
+      persistent>
+      <q-card class="q-pa-md container-rounded-10">
+        <q-card-section>
+          <div class="text-h6 font-family-main">Resolver todos os atendimentos pendentes</div>
+          <div class="text-h8">Atenção, essa é uma ação em massa e não poderá ser revertida.</div>
+        </q-card-section>
+        <q-card-actions align="right">
+          <q-btn
+            label="Sair"
+            color="negative"
+            v-close-popup
+            class="q-mr-lg btn-rounded-50" />
+          <q-btn
+            label="Resolver"
+            class="btn-rounded-50 generate-button"
+            icon="eva-save-outline"
+            @click="resolverTodosPendentes" />
+        </q-card-actions>
+      </q-card>
+    </q-dialog>
+
+    <q-dialog v-model="modalTransferirTicket4"
+      @hide="modalTransferirTicket4 = false"
+      persistent>
+      <q-card class="q-pa-md container-rounded-10"
+        style="width: 500px">
+        <q-card-section>
+          <div class="text-h6 font-family-main">Resolver todos os atendimentos abertos</div>
+          <div class="text-h8">Atenção, essa é uma ação em massa e não poderá ser revertida.</div>
+        </q-card-section>
+        <q-card-actions align="right">
+          <q-btn
+            label="Sair"
+            color="negative"
+            v-close-popup
+            class="q-mr-lg btn-rounded-50" />
+          <q-btn
+            label="Resolver"
+            class="btn-rounded-50 generate-button"
+            icon="eva-save-outline"
+            @click="resolverTodosAbertos" />
+        </q-card-actions>
+      </q-card>
+    </q-dialog>
+
   </div>
 </template>
 
 <script>
+// const userId = +localStorage.getItem('userId')
 const usuario = JSON.parse(localStorage.getItem('usuario'))
+import { socketIO } from 'src/utils/socket'
+const socket = socketIO()
+
 import ItemTicket from 'src/pages/atendimento/ItemTicket'
 import { ConsultarTicketsQueuesService } from 'src/service/estatisticas.js'
 import { ListarFilas } from 'src/service/filas'
+import { ListarUsuarios } from 'src/service/user'
+import { AtualizarTicket } from 'src/service/tickets'
 const UserQueues = localStorage.getItem('queues')
 import { groupBy } from 'lodash'
 const profile = localStorage.getItem('profile')
 import { format, sub } from 'date-fns'
 export default {
-  name: 'Painel De Controle',
+  name: 'painel-de-controle',
   components: { ItemTicket },
-  data() {
+  data () {
     return {
-      userProfile: 'user',
+      userProfile: 'admin',
       profile,
       visualizarFiltros: false,
       slide: 0,
@@ -126,11 +393,22 @@ export default {
       },
       tickets: [],
       filas: [],
+      usuarios: [],
+      modalTransferirTicket: false,
+      usuarioSelecionado: null,
+      filaSelecionada: null,
+      usuarios2: [],
+      usuarios3: [],
+      modalTransferirTicket2: false,
+      modalTransferirTicket3: false,
+      modalTransferirTicket4: false,
+      usuarioSelecionado2: null,
+      usuarioSelecionado3: null,
       sizes: { lg: 3, md: 3, sm: 2, xs: 1 }
     }
   },
   computed: {
-    contentClass() {
+    contentClass () {
       let contentClass = 'col'
       const keysLenSize = Object.keys(this.cTicketsUser[0]).length
       for (const size of ['xl', 'lg', 'md', 'sm', 'xs']) {
@@ -141,7 +419,7 @@ export default {
       }
       return contentClass
     },
-    sets() {
+    sets () {
       const sets = []
       // const items = this.itemsPerSet
       const limit = Math.ceil(this.cTicketsUser.length / this.itemsPerSet)
@@ -152,7 +430,7 @@ export default {
       }
       return sets[0]
     },
-    itemsPerSet() {
+    itemsPerSet () {
       let cond = false
       for (const size of ['xl', 'lg', 'md', 'sm', 'xs']) {
         cond = cond || this.$q.screen[size]
@@ -162,7 +440,7 @@ export default {
       }
       return 1
     },
-    cUserQueues() {
+    cUserQueues () {
       try {
         const filasUsuario = JSON.parse(UserQueues).map(q => {
           if (q.isActive) {
@@ -174,18 +452,192 @@ export default {
         return []
       }
     },
-    cTicketsUser() {
+    cTicketsUser () {
       const field = this.visao === 'U' || this.visao === 'US' ? 'userId' : 'queueId'
       return [groupBy(this.tickets, field)]
     }
   },
   methods: {
-    deleteTicket(ticketId) {
+    filterUsers (element, index, array) {
+      const fila = this.filaSelecionada
+      if (fila == null) return true
+      const queues_valid = element.queues.filter(function (element, index, array) {
+        return (element.id == fila)
+      })
+      return (queues_valid.length > 0)
+    },
+    async listarFilas () {
+      try {
+        const { data } = await ListarFilas()
+        this.filas = data
+        this.modalTransferirTicket = true
+        this.listarUsuarios()
+      } catch (error) {
+        console.error(error)
+        this.$notificarErro('Problema ao carregar filas', error)
+      }
+    },
+    async listarUsuarios () {
+      try {
+        const { data } = await ListarUsuarios()
+        this.usuarios = data.users
+        this.modalTransferirTicket = true
+      } catch (error) {
+        console.error(error)
+        this.$notificarErro('Problema ao carregar usuários', error)
+      }
+    },
+    async atualizarTicketPorFila (id, user, fila, status) {
+      await AtualizarTicket(id, {
+        userId: user,
+        queueId: fila,
+        status: status,
+        isTransference: 1
+      })
+    },
+    async confirmarTransferenciaTicket () {
+      if (this.usuarioSelecionado === null) {
+        this.$notificarErro('Selecione o usuário e a fila destino para os atendimentos pendentes!')
+        return
+      }
+      try {
+        for (const ticket of this.tickets) {
+          if (ticket.queueId === null) {
+            await this.atualizarTicketPorFila(ticket.id, this.usuarioSelecionado, this.filaSelecionada, ticket.status)
+          }
+        }
+      } catch (error) {
+        console.error(error)
+        this.$notificarErro('Problema ao realizar transferência', error)
+      }
+      this.modalTransferirTicket = false
+    },
+    async listarUsuarios2 () {
+      try {
+        const { data } = await ListarUsuarios()
+        this.usuarios2 = data.users
+        this.usuarios3 = data.users
+        this.modalTransferirTicket2 = true
+      } catch (error) {
+        console.error(error)
+        this.$notificarErro('Problema ao carregar usuários', error)
+      }
+    },
+    async confirmarTransferenciaTicket2 () {
+      if (this.usuarioSelecionado2 === null || this.usuarioSelecionado3 === null) {
+        this.$notificarErro('Selecione o usuário destino!')
+        return
+      }
+      try {
+        for (const ticket of this.tickets) {
+          if (ticket.userId === this.usuarioSelecionado2) {
+            await this.atualizarTicketPorFila(ticket.id, this.usuarioSelecionado3, ticket.queueId, ticket.status)
+          }
+        }
+      } catch (error) {
+        console.error(error)
+        this.$notificarErro('Problema ao realizar transferência', error)
+      }
+      this.modalTransferirTicket2 = false
+    },
+    async atualizarTicketPendente (id, user, fila) {
+      await AtualizarTicket(id, {
+        userId: user,
+        queueId: fila,
+        status: 'closed',
+        isTransference: 1
+      })
+    },
+    async fecharTicketsPendentes () {
+      try {
+        this.modalTransferirTicket3 = true
+      } catch (error) {
+        console.error(error)
+        this.$notificarErro('Problema ao fechar atendimentos em massa', error)
+      }
+    },
+    async fecharTicketsAbertos () {
+      try {
+        this.modalTransferirTicket4 = true
+      } catch (error) {
+        console.error(error)
+        this.$notificarErro('Problema ao fechar atendimentos em massa', error)
+      }
+    },
+    async resolverTodosPendentes() {
+      try {
+        const pendingTickets = this.tickets.filter(ticket => ticket.status === 'pending')
+
+        for (let i = 0; i < pendingTickets.length; i += 10) {
+          const batch = pendingTickets.slice(i, i + 10)
+          const batchPromises = batch.map(ticket =>
+            this.atualizarTicketPendente(ticket.id, ticket.userId, ticket.queueId)
+              .catch(e => {
+                console.log(ticket.id + ' não atualizado: ' + e)
+              })
+          )
+          this.$q.notify({
+            color: 'warning',
+            position: 'top',
+            message: 'Tickets sendo resolvido em blocos de 10 itens.'
+          })
+          await Promise.all(batchPromises)
+        }
+
+        this.$q.notify({
+          color: 'warning',
+          position: 'top',
+          message: 'Aguarde, página será recarregada após a conclusão da ação.'
+        })
+        setTimeout(() => {
+          window.location.reload()
+        }, 1000)
+      } catch (error) {
+        console.error(error)
+        this.$notificarErro('Problema ao fechar atendimentos em massa', error)
+      }
+      this.modalTransferirTicket3 = false
+    },
+    async resolverTodosAbertos() {
+      try {
+        const openTickets = this.tickets.filter(ticket => ticket.status === 'open')
+
+        for (let i = 0; i < openTickets.length; i += 10) {
+          const batch = openTickets.slice(i, i + 10)
+          const batchPromises = batch.map(ticket =>
+            this.atualizarTicketPendente(ticket.id, ticket.userId, ticket.queueId)
+              .catch(e => {
+                console.log(ticket.id + ' não atualizado: ' + e)
+              })
+          )
+          this.$q.notify({
+            color: 'warning',
+            position: 'top',
+            message: 'Tickets sendo resolvido em blocos de 10 itens.'
+          })
+          await Promise.all(batchPromises)
+        }
+
+        this.$q.notify({
+          color: 'warning',
+          position: 'top',
+          message: 'Aguarde, página será recarregada após a conclusão da ação.'
+        })
+        setTimeout(() => {
+          window.location.reload()
+        }, 1000)
+      } catch (error) {
+        console.error(error)
+        this.$notificarErro('Problema ao fechar atendimentos em massa', error)
+      }
+      this.modalTransferirTicket4 = false
+    },
+    deleteTicket (ticketId) {
       const newTickets = [...this.tickets]
       const ticketsFilter = newTickets.filter(t => t.id !== ticketId)
       this.tickets = [...ticketsFilter]
     },
-    updateTicket(ticket) {
+    updateTicket (ticket) {
       const newTickets = [...this.tickets]
       const idx = newTickets.findIndex(t => ticket.id)
       if (idx) {
@@ -193,12 +645,12 @@ export default {
         this.tickets = [...newTickets]
       }
     },
-    createTicket(ticket) {
+    createTicket (ticket) {
       const newTickets = [...this.tickets]
       newTickets.unshift(ticket)
       this.tickets = [...newTickets]
     },
-    verifyIsActionSocket(data) {
+    verifyIsActionSocket (data) {
       if (!data.id) return false
 
       // mostrar todos
@@ -218,7 +670,7 @@ export default {
 
       // verificar se o usuario possui ecesso a fila do ticket
     },
-    conectSocketQueues(tenantId, queueId) {
+    conectSocketQueues (tenantId, queueId) {
       // socket.on(`${tenantId}:${queueId}:ticket:queue`, data => {
       //   if (!this.verifyIsActionSocket(data.ticket)) return
 
@@ -233,47 +685,35 @@ export default {
       //   }
       // })
     },
-    socketTickets(tenantId) {
-      // socket.emit(`${tenantId}:joinTickets`, 'open')
-      // socket.emit(`${tenantId}:joinTickets`, 'pending')
-
-      // socket.on(`${tenantId}:ticket`, data => {
-      //   if (!this.verifyIsActionSocket(data.ticket)) return
-
-      //   if (data.action === 'updateQueue' || data.action === 'create') {
-      //     this.updateTicket(data.ticket)
-      //   }
-
-      //   if (data.action === 'updateUnread') {
-      //     // this.$store.commit('RESET_UNREAD', data.ticketId)
-      //   }
-
-      //   if (
-      //     (data.action === 'update' || data.action === 'create') &&
-      //     (!data.ticket.userId || data.ticket.userId === userId /* || showAll */)
-      //   ) {
-      //     this.updateTicket(data.ticket)
-      //   }
-
-      //   if (data.action === 'delete') {
-      //     this.deleteTicket(data.ticketId)
-      //   }
-      // })
+    socketTickets () {
+      socket.on(`${usuario.tenantId}:ticketList`, async (data) => {
+        if (data.type === 'ticket:update') {
+          if (data.payload.channel !== 'waba') {
+            console.log('socket ON: DASH:UPDATE')
+            this.$q.notify({
+              color: 'positive',
+              position: 'bottom',
+              message: `Novas interações para o atendimento ${data.payload.id} recebidas. Caso queira acessar as novas informações nesse painel, atualize essa página.`
+            })
+          }
+        }
+      })
     },
-    connectSocket() {
+    connectSocket () {
+      this.socketTickets()
       this.cUserQueues.forEach(el => {
         this.conectSocketQueues(usuario.tenantId, el.id)
       })
     },
-    definirNomeUsuario(item) {
+    definirNomeUsuario (item) {
       this.verifyIsActionSocket(item)
       return item?.user?.name || 'Pendente'
     },
-    definirNomeFila(f) {
+    definirNomeFila (f) {
       const fila = this.filas.find(fila => fila.id === f.queueId)
       return fila?.queue || 'Sem Fila'
     },
-    counterStatus(tickets) {
+    counterStatus (tickets) {
       const status = {
         open: 0,
         pending: 0,
@@ -285,7 +725,7 @@ export default {
       status.closed = group.closed?.length || 0
       return status
     },
-    consultarTickets() {
+    consultarTickets () {
       ConsultarTicketsQueuesService(this.pesquisaTickets)
         .then(res => {
           this.tickets = res.data
@@ -296,19 +736,30 @@ export default {
           this.$notificarErro('Erro ao consultar atendimentos', error)
         })
     },
-    onResize({ height }) {
+    onResize ({ height }) {
       this.height = height
     }
   },
 
-  async mounted() {
-    this.userProfile = localStorage.getItem('profile')
+  async mounted () {
+    if (!localStorage.getItem('reloaded')) {
+      localStorage.setItem('reloaded', 'true')
+      window.location.reload()
+    } else {
+      localStorage.removeItem('reloaded')
+    }
     await ListarFilas().then(res => {
       this.filas = res.data
     })
     await this.consultarTickets()
+    this.userProfile = localStorage.getItem('profile')
+  },
+  destroyed () {
+    socket.disconnect()
   }
 }
 </script>
 
-<style lang="scss" scoped></style>
+<style lang="scss" scoped>
+
+</style>

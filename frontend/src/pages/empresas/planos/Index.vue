@@ -1,19 +1,29 @@
 <template>
   <div>
-    <template>
-          <div>
+    <q-table flat
+      bordered
+      square
+      hide-bottom
+      class="contact-table container-rounded-10 my-sticky-dynamic q-ma-lg"
+      :data="planos"
+      :columns="columns"
+      :loading="loading"
+      row-key="id"
+      :pagination.sync="pagination"
+      :rows-per-page-options="[0]">
+      <template v-slot:top-left>
+        <div>
+          <h2  :class="$q.dark.isActive ? ('text-white') : ''">
+            <q-icon name="mdi-currency-usd q-pr-sm" />
+            Planos
+          </h2>
+          <q-btn class="generate-button btn-rounded-50"
+          icon="eva-plus-outline"
+          label="Adicionar"
+          @click="planoEdicao = {}; modalPlano = true" />
+        </div>
 
-            <div class="row">
-              <div class="col-6">
-                <h1>Planos</h1>
-              </div>
-              <div class="col-6" style="display: flex; justify-content: end; align-items: center;">
-                <q-btn color="primary" label="Adicionar" @click="planoEdicao = {}; modalPlano = true" />
-              </div>
-            </div>
-            <q-table style="width: 100%;margin-left: 0;" flat bordered square hide-bottom
-              class="my-sticky-dynamic q-ma-lg" :data="planos" :columns="columns" :loading="loading" row-key="id"
-              :pagination.sync="pagination" :rows-per-page-options="[0]">
+      </template>
 
               <template v-slot:body-cell-value="props">
                 <q-td class="text-center">
@@ -29,8 +39,8 @@
               </template>
               <template v-slot:body-cell-acoes="props">
                 <q-td class="text-center">
-                  <q-btn flat round icon="edit" @click="editarPlano(props.row)" />
-                  <q-btn flat round icon="mdi-delete" @click="deletarPlano(props.row)" />
+                  <q-btn flat round icon="eva-edit-outline" @click="editarPlano(props.row)" />
+                  <q-btn flat round icon="eva-trash-outline" @click="deletarPlano(props.row)" />
                 </q-td>
               </template>
             </q-table>

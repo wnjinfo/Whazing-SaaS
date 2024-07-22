@@ -24,6 +24,8 @@ const routes = [
       { path: '/campanhas/:campanhaId', name: 'contatos-campanha', component: () => import('pages/campanhas/ContatosCampanha.vue') },
       { path: '/horario-atendimento', name: 'horarioAtendimento', component: () => import('pages/horarioAtendimento/Index.vue') },
       { path: '/api-service', name: 'api-service', component: () => import('pages/api/Index.vue') },
+      { path: '/chat-interno', name: 'chat-interno', component: () => import('pages/chatInterno/index.vue') },
+      { path: '/equipes', name: 'equipes', component: () => import('pages/equipes/Index.vue') },
       {
         path: '/chat-flow',
         component: () => import('pages/chatFlow/Index.vue'),
@@ -31,6 +33,29 @@ const routes = [
         children: [
           { path: '', name: 'chat-flow', component: () => import('pages/chatFlow/ListaChatFlow.vue') },
           { path: 'builder', name: 'chat-flow-builder', component: () => import('components/ccFlowBuilder/panel.vue') }
+        ]
+      },
+      {
+        path: 'atendimento',
+        name: 'atendimento',
+        component: () => import('pages/atendimento/Index.vue'),
+        children: [
+          {
+            path: 'chats',
+            name: 'chat-empty',
+            component: () => import('pages/atendimento/Chat.vue')
+          },
+          {
+            path: ':ticketId',
+            name: 'chat',
+            component: () => import('pages/atendimento/Chat.vue')
+          },
+          {
+            path: 'contatos',
+            name: 'chat-contatos',
+            component: () => import('pages/contatos/Index.vue'),
+            props: { isChatContact: true }
+          }
         ]
       }
     ]
@@ -67,7 +92,6 @@ const routes = [
       }
     ]
   },
-  { path: '/chat-interno', name: 'chat-interno', component: () => import('pages/chatInterno/index.vue') },
   {
     path: '/atendimento',
     name: 'atendimento',

@@ -1,31 +1,18 @@
 <template>
-  <div class="bg-white no-scroll hide-scrollbar overflow-hidden"
-    :style="style">
+  <div class="bg-white no-scroll hide-scrollbar overflow-hidden" :style="style">
     <InforCabecalhoChat @updateTicket:resolver="atualizarStatusTicket('closed')"
       @updateTicket:retornar="atualizarStatusTicket('pending')"
       @updateTicket:reabrir="atualizarStatusTicket('open')"
-      @abrir:modalAgendamentoMensagem="modalAgendamentoMensagem = true" />
+      @abrir:modalAgendamentoMensagem="onClickOpenAgendamentoMensagem()"
+    />
 
-    <q-scroll-area ref="scrollContainer"
-      class="scroll-y "
-      :style="cStyleScroll"
-      @scroll="scrollArea">
-      <transition appear
-        enter-active-class="animated fadeIn"
-        leave-active-class="animated fadeOut">
-        <infinite-loading v-if="cMessages.length"
-          @infinite="onLoadMore"
-          direction="top"
-          :identificador="ticketFocado.id"
-          spinner="spiral">
+    <q-scroll-area ref="scrollContainer" class="scroll-y q-pb-lg" :style="cStyleScroll" @scroll="scrollArea" >
+      <transition appear enter-active-class="animated fadeIn" leave-active-class="animated fadeOut">
+        <infinite-loading v-if="cMessages.length" @infinite="onLoadMore" direction="top" :identificador="ticketFocado.id" spinner="spiral">
           <div slot="no-results">
-            <div v-if="!cMessages.length">
-              Sem resultados :(
-            </div>
+            <div v-if="!cMessages.length">Sem resultados :(</div>
           </div>
-          <div slot="no-more">
-            Nada mais a carregar :)
-          </div>
+          <div slot="no-more">Nada mais a carregar :)</div>
         </infinite-loading>
       </transition>
       <MensagemChat :replyingMessage.sync="replyingMessage"
@@ -36,13 +23,16 @@
         :mensagensParaEncaminhar.sync="mensagensParaEncaminhar" />
       <div id="inicioListaMensagensChat"></div>
     </q-scroll-area>
-    <div class="absolute-center items-center"
+    <div
+      class="absolute-center items-center"
       :class="{
-          'row col text-center q-col-gutter-lg': !$q.screen.xs,
-          'full-width text-center': $q.screen.xs
-        }"
-      v-if="!ticketFocado.id">
-      <q-icon style="margin-left: 30vw"
+        'row col text-center q-col-gutter-lg': !$q.screen.xs,
+        'full-width text-center': $q.screen.xs,
+      }"
+      v-if="!ticketFocado.id"
+    >
+      <q-icon
+        style="margin-left: 30vw"
         size="6em"
         color="grey-6"
         name="mdi-emoticon-wink-outline"
@@ -65,15 +55,7 @@
         enter-active-class="animated fadeIn"
         leave-active-class="animated fadeOut">
         <div v-if="scrollIcon">
-          <q-btn class="vac-icon-scroll"
-            color="white"
-            text-color="black"
-            icon="mdi-arrow-down"
-            round
-            push
-            ripple
-            dense
-            @click="scrollToBottom" />
+          <q-btn class="vac-icon-scroll" color="white" text-color="black" icon="mdi-arrow-down" round push ripple dense @click="scrollToBottom" />
         </div>
       </transition>
     </div>
@@ -107,7 +89,7 @@
               {{ replyingMessage.contact && replyingMessage.contact.name }}
             </q-item-label>
             <q-item-label lines="4"
-              v-html="farmatarMensagemWhatsapp(replyingMessage.body)">
+              v-html="formatarMensagemWhatsapp(replyingMessage.body)">
             </q-item-label>
           </q-item-section>
           <q-btn @click="replyingMessage = null"
@@ -157,17 +139,8 @@
           </template>
         </q-select>
         <template v-slot:action>
-          <q-btn class="bg-padrao q-px-sm"
-            flat
-            color="negative"
-            label="Cancelar"
-            @click="cancelarMultiEncaminhamento" />
-          <q-btn class="bg-padrao q-px-sm"
-            flat
-            color="positive"
-            label="Enviar"
-            icon="mdi-send"
-            @click="confirmarEncaminhamentoMensagem(mensagensParaEncaminhar)" />
+          <q-btn class="bg-padrao q-px-sm" flat color="negative" label="Cancelar" @click="cancelarMultiEncaminhamento" />
+          <q-btn class="bg-padrao q-px-sm" flat color="positive" label="Enviar" icon="mdi-send" @click="confirmarEncaminhamentoMensagem(mensagensParaEncaminhar)" />
         </template>
       </q-banner>
 
@@ -177,28 +150,6 @@
       <q-resize-observer @resize="onResizeInputMensagem" />
     </q-footer>
 
-    <q-dialog v-model="modalAgendamentoMensagem"
-      persistent>
-      <q-card :style="$q.screen.width < 770 ? `min-width: 98vw; max-width: 98vw` : 'min-width: 50vw; max-width: 50vw'">
-        <q-card-section>
-          <div class="text-h6">
-            Agendamento de Mensagem
-            <q-btn flat
-              class="bg-padrao btn-rounded float-right"
-              color="negative"
-              icon="close"
-              v-close-popup />
-          </div>
-        </q-card-section>
-        <q-card-section class="q-mb-lg">
-          <InputMensagem isScheduleDate
-            :mensagensRapidas="mensagensRapidas"
-            :replyingMessage.sync="replyingMessage" />
-        </q-card-section>
-
-      </q-card>
-
-    </q-dialog>
     <q-dialog v-model="modalEncaminhamentoMensagem"
       persistent
       @hide="mensagemEncaminhamento = {}">
@@ -206,11 +157,7 @@
         <q-card-section>
           <div class="text-h6">
             Encaminhando Mensagem
-            <q-btn flat
-              class="bg-padrao btn-rounded float-right"
-              color="negative"
-              icon="close"
-              v-close-popup />
+            <q-btn flat class="bg-padrao btn-rounded float-right" color="negative" icon="close" v-close-popup />
           </div>
         </q-card-section>
         <q-separator inset />
@@ -251,14 +198,8 @@
             </template>
           </q-select>
         </q-card-section>
-        <q-card-actions align="right"
-          class="q-pa-md">
-          <q-btn class="bg-padrao q-px-sm"
-            flat
-            color="positive"
-            label="Enviar"
-            icon="mdi-send"
-            @click="confirmarEncaminhamentoMensagem([mensagemEncaminhamento])" />
+        <q-card-actions align="right" class="q-pa-md">
+          <q-btn class="bg-padrao q-px-sm" flat color="positive" label="Enviar" icon="mdi-send" @click="confirmarEncaminhamentoMensagem([mensagemEncaminhamento])" />
         </q-card-actions>
       </q-card>
     </q-dialog>
@@ -326,9 +267,7 @@ export default {
     style () {
       return {
         backgroundImage: this.$q.dark.isActive ? `url(${whatsBackgroundDark}) !important` : `url(${whatsBackground}) !important`,
-        // backgroundRepeat: 'no-repeat !important',
         backgroundPosition: 'center !important'
-        // backgroundSize: '50% !important',
       }
     },
     cStyleScroll () {
@@ -338,6 +277,14 @@ export default {
     }
   },
   methods: {
+    onClickOpenAgendamentoMensagem() {
+      const dialog = this.$q.dialog({
+        component: () => import('./AgendamentoMensagem.vue'),
+        parent: this,
+        mensagensRapidas: this.mensagensRapidas,
+        replyingMessage: this.replyingMessage
+      })
+    },
     async onResizeInputMensagem (size) {
       this.heigthInputMensagem = size.height
     },
@@ -460,7 +407,7 @@ audio {
     content: "";
     // use the linear-gradient for the fading effect
     // use a solid background color for a solid bar
-    background: linear-gradient(to right, transparent, #818078, transparent);
+    //background: linear-gradient(to right, transparent, #818078, transparent);
     position: absolute;
     left: 0;
     top: 50%;
@@ -472,13 +419,13 @@ audio {
     content: attr(data-content);
     position: relative;
     display: inline-block;
-    color: black;
+    color: grey;
     font-size: 16px;
     font-weight: 600;
     padding: 0 0.5em;
     line-height: 1.5em;
-    background-color: $grey;
-    border-radius: 15px;
+    background-color: white;
+    border-radius: 5px;
   }
 }
 
@@ -524,8 +471,7 @@ audio {
   position: absolute;
   bottom: 20px;
   right: 20px;
-  box-shadow: 0 1px 1px -1px rgba(0, 0, 0, 0.2), 0 1px 1px 0 rgba(0, 0, 0, 0.14),
-    0 1px 2px 0 rgba(0, 0, 0, 0.12);
+  box-shadow: 0 1px 1px -1px rgba(0, 0, 0, 0.2), 0 1px 1px 0 rgba(0, 0, 0, 0.14), 0 1px 2px 0 rgba(0, 0, 0, 0.12);
   display: flex;
   cursor: pointer;
   z-index: 99;
@@ -549,8 +495,7 @@ audio {
 .fade-enter,
 .fade-leave-to
 
-/* .fade-leave-active below version 2.1.8 */
-  {
+/* .fade-leave-active below version 2.1.8 */ {
   opacity: 0;
 }
 </style>

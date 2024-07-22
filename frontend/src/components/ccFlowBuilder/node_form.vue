@@ -1,15 +1,16 @@
 <template>
   <div class="q-px-md q-py-sm">
-    <div class="row justify-between col q-mb-sm">
-      <q-btn class="bg-padrao"
+    <div class="row col q-mb-sm">
+      <q-btn class="q-mr-sm generate-button btn-rounded-50"
+      :class="{'generate-button-dark' : $q.dark.isActive}"
         flat
         color="primary"
-        icon="mdi-plus"
+        icon="eva-plus-outline"
         label="Nova Etapa"
         @click="addNode" />
-      <q-btn class="bg-padrao"
+      <q-btn class="generate-button btn-rounded-50"
+      :class="{'generate-button-dark' : $q.dark.isActive}"
         flat
-        color="positive"
         icon="mdi-content-save-outline"
         label="Salvar"
         @click="$emit('saveFlow')" />
@@ -21,11 +22,11 @@
         Configuração Fluxo
       </div>
       <div class="q-pa-sm">
-        <q-input outlined
+        <q-input
           filled
           label="Nome"
           v-model="node.name"
-          class="q-my-sm"
+          class="contact-search"
           :disable="['start', 'configurations'].includes(node.type)" />
         <q-separator inset="" />
       </div>
@@ -39,10 +40,6 @@
               label="Interações" />
             <q-tab name="condicoes"
               label="Condições" />
-            <!-- <q-tab
-              name="acoes"
-              label="Ações"
-            /> -->
           </q-tabs>
           <q-tab-panels v-model="tabNodeForm"
             animated
@@ -52,45 +49,36 @@
             <q-tab-panel class="q-pa-none"
               name="interacoes">
               <div class="text-center ">
-                <div class="row q-mt-sm col justify-center">
+                <div class="row q-mt-sm col justify-center flex-gap-1">
                   <q-btn flat
                     icon="mdi-message-text-outline"
-                    class="bg-padrao btn-rounded q-mx-xs"
+                    class="generate-button btn-rounded q-mx-xs"
+                    :class="{'generate-button-dark' : $q.dark.isActive}"
                     :color="$q.dark.isActive ? 'white' : ''"
                     @click="addMessage">
                     <q-tooltip content-class="text-bold">
                       Enviar Mensagem
                     </q-tooltip>
                   </q-btn>
-                  <!-- <q-btn
-                    flat
-                    icon="mdi-message-settings-outline"
-                    class="bg-padrao btn-rounded q-mx-xs"
-                    :color="$q.dark.isActive ? 'white' : ''"
-                    @click="addMessageOptions"
-                  >
-                    <q-tooltip content-class="text-bold">
-                      Enviar Mensagem (Botões | Listas)
-                    </q-tooltip>
-                  </q-btn> -->
-                  <q-btn @click="addMediaField"
+                   <q-btn @click="addMediaField"
                     flat
                     icon="mdi-file-document-outline"
-                    class="bg-padrao btn-rounded q-mx-xs"
+                    class="generate-button btn-rounded q-mx-xs"
+                    :class="{'generate-button-dark' : $q.dark.isActive}"
                     :color="$q.dark.isActive ? 'white' : ''">
                     <q-tooltip content-class="text-bold">
                       Enviar documentos, vídeo, aúdio e outros arquivos.
                     </q-tooltip>
                   </q-btn>
                 </div>
-                <div class="row bg-grey-3 q-pa-sm q-my-md justify-center scroll"
+                <div class="row bg-grey-2 q-pa-sm q-my-md justify-center scroll"
                   style="height: calc(100vh - 495px)">
                   <div class="col-xs-12">
                     <div v-for="(element, idx) in node.interactions"
                       :key="element.id"
                       v-bind="element">
                       <div class="q-my-md">
-                        <div class="bg-white full-width row col justify-between ">
+                        <div class="bg-white q-pa-sm full-width row col justify-between ">
                           <q-btn round
                             dense
                             disable
@@ -103,7 +91,8 @@
                             icon="mdi-arrow-up-bold"
                             flat
                             color="positive"
-                            class="bg-padrao q-mr-md"
+                            class="generate-button q-mr-md"
+                            :class="{'generate-button-dark' : $q.dark.isActive}"
                             style="z-index: 999"
                             :disable="idx === 0"
                             @click="changePosition(node.interactions, idx, idx - 1)">
@@ -116,7 +105,8 @@
                             icon="mdi-arrow-down-bold"
                             flat
                             :color="$q.dark.isActive ? 'grey-3' : 'black'"
-                            class="bg-padrao q-mr-md"
+                            class="generate-button q-mr-md"
+                            :class="{'generate-button-dark' : $q.dark.isActive}"
                             style="z-index: 999"
                             @click="changePosition(node.interactions, idx, idx + 1)">
                             <q-tooltip>
@@ -127,12 +117,12 @@
                             dense
                             icon="mdi-close"
                             flat
-                            color="negative"
-                            class="bg-padrao"
+                            color="white"
+                            class="bg-red"
                             style="z-index: 999;"
                             @click="removeItem(element, idx + 1)" />
                         </div>
-                        <component :is="element.type"
+                        <component class-content="q-mt-sm" :is="element.type"
                           :element="element">
                         </component>
                       </div>
@@ -147,7 +137,8 @@
                 <div class="row q-mt-md col justify-end">
                   <q-btn flat
                     icon="mdi-vector-polyline-plus"
-                    class="bg-padrao btn-rounded q-mx-xs"
+                    class="generate-button btn-rounded q-mx-xs"
+                    :class="{'generate-button-dark' : $q.dark.isActive}"
                     :color="$q.dark.isActive ? 'white' : ''"
                     @click="addCondiction">
                     <q-tooltip content-class="text-bold">
@@ -175,7 +166,8 @@
                           icon="mdi-arrow-up-bold"
                           flat
                           color="positive"
-                          class="bg-padrao q-mr-md"
+                          class="generate-button q-mr-md"
+                          :class="{'generate-button-dark' : $q.dark.isActive}"
                           style="z-index: 999"
                           :disable="idx === 0"
                           @click="changePosition(node.conditions, idx, idx - 1)">
@@ -188,7 +180,8 @@
                           icon="mdi-arrow-down-bold"
                           flat
                           :color="$q.dark.isActive ? 'grey-3' : 'black'"
-                          class="bg-padrao q-mr-md"
+                          class="generate-button q-mr-md"
+                          :class="{'generate-button-dark' : $q.dark.isActive}"
                           style="z-index: 999"
                           @click="changePosition(node.conditions, idx, idx + 1)">
                           <q-tooltip>
@@ -199,8 +192,8 @@
                           dense
                           icon="mdi-close"
                           flat
-                          color="negative"
-                          class="bg-padrao"
+                          color="white"
+                          class="bg-red"
                           style="z-index: 999"
                           @click="removeConditionItem(condition, idx)" />
                       </div>
@@ -262,7 +255,7 @@
                               map-options
                               emit-value
                               clearable
-                              @input="condition.nextStepId = null; condition.userIdDestination = null" />
+                              @input="condition.nextStepId = null; condition.userIdDestination = null; condition.closeTicket = null" />
                             <q-select v-if="condition.action === 2"
                               dense
                               outlined
@@ -275,18 +268,16 @@
                               map-options
                               emit-value
                               clearable
-                              @input="condition.nextStepId = null; condition.queueId = null" />
+                              @input="condition.nextStepId = null; condition.queueId = null; condition.closeTicket = null" />
                           </div>
                         </div>
                       </q-card-section>
                     </q-card>
                   </template>
-
                 </div>
               </div>
             </q-tab-panel>
           </q-tab-panels>
-
           <div class="q-pa-sm q-gutter-md"
             v-show="type === 'line'">
             <q-input outlined
@@ -299,13 +290,13 @@
               @click="saveLine"
               label="Salvar" />
           </div>
-          <!--            <div class="el-node-form-tag"></div>-->
-        </div>
+         </div>
       </q-card-section>
 
       <q-card-section style="height: calc(100vh - 380px)"
         class="row bg-grey-3 q-pa-sm scroll col justify-start"
         v-if="node.type === 'configurations'">
+
         <q-card class="full-width q-my-sm"
           style="height: 280px;">
           <div class="full-width bg-grey-3 text-bold row col justify-between text-left q-pa-md">
@@ -409,25 +400,38 @@
                 </div>
               </div>
             </div>
-            <!-- <div class="row q-mt-md">
-              <div class="col">
-                <label
-                  class="text-subtitle1 text-bold q-mb-sm "
-                  for="inputEnvioMensagem"
-                > Enviar para: </label>
+          </q-card-section>
+        </q-card>
 
-                <q-option-group
-                  class="text-center"
-                  inline
-                  v-model="node.configurations.notOptionsSelectMessage.stepReturn"
-                  :options="[
-                  {label: 'Etapa atual', value: 'A'},
-                  {label: 'Etapa inicial', value: 'S'}
-                  ]"
-                  color="primary"
-                />
+        <q-card class="full-width q-my-sm"
+          style="height: 330px;" v-if="node.configurations.keyword">
+          <div class="full-width bg-grey-3 text-bold text-body1 row col justify-between text-left q-pa-md">
+            Palavra chave para iniciar o fluxo
+            <div class="row text-subtitle2">
+              Essa interação será acionada quando o cliente enviar a palavra chave definida,
+              e o cliente será encaminhado
+              para a Fila/Usuário configurados.
+            </div>
+          </div>
+          <q-card-section class="q-pa-sm">
+            <div class="row q-mt-sm">
+              <div class="col">
+                <label class="text-subtitle1 text-bold q-mb-sm"
+                  for="inputEnvioMensagem"> Palavra Gatilho: </label>
+                <div class="flex flex-inline full-width items-center">
+                <textarea ref="inputEnvioMensagemGatilho"
+                  id="inputEnvioMensagem"
+                  style="min-height: 10vh; max-height: 15vh; flex: auto"
+                  class="q-pa-sm bg-white"
+                  placeholder="Digite a palavra"
+                  autogrow
+                  dense
+                  outlined
+                  @input="(v) => node.configurations.keyword.message = v.target.value"
+                  :value="node.configurations.keyword.message" />
+                </div>
               </div>
-            </div> -->
+            </div>
           </q-card-section>
         </q-card>
 
@@ -562,8 +566,8 @@
             Auto Distribuir Atendimento
             <div class="row text-subtitle2">
               Não: Desativado. <br />
-              Balancear: Definirá o usuário com base na quantidade de atendimentos de cada usuário da fila. Usuário com
-              menos atendimentos será escolhido.<br />
+              <!-- Balancear: Definirá o usuário com base na quantidade de atendimentos de cada usuário da fila. Usuário com
+              menos atendimentos será escolhido.<br /> -->
               Aleatória: Definirá o usuário de forma aleatória/randômica para os usuários da fila.
             </div>
           </div>
@@ -576,7 +580,7 @@
                   :options="[
                     { value: 'N', label: 'Não' },
                     { value: 'R', label: 'Aleatória' },
-                    { value: 'B', label: 'Balanceada' }
+                    // { value: 'B', label: 'Balanceada' }
                   ]"
                   color="primary" />
               </div>
@@ -613,7 +617,7 @@
 
       </q-card-section>
 
-      <q-card-section style="height: calc(100vh - 380px)"
+       <q-card-section style="height: calc(100vh - 380px)"
         class="row bg-grey-3 q-pa-sm scroll col justify-start"
         v-if="node.type === 'start'">
         <q-card class="full-width q-my-sm">
@@ -667,6 +671,7 @@ export default {
   },
   data () {
     return {
+      onInsertSelectEmojincerramento: '',
       visible: true,
       tabNodeForm: 'interacoes',
       elements: [],
@@ -679,6 +684,7 @@ export default {
         { label: 'Qualquer resposta', value: 'US' },
         { label: 'Respostas', value: 'R' }
       ],
+      // node 或 line
       type: 'node',
       node: {},
       line: {},
@@ -709,16 +715,6 @@ export default {
         id: this.gerarUID()
       })
     },
-    // addMessageOptions () {
-    //   this.node.interactions.push({
-    //     type: 'MessageOptionsField',
-    //     data: {
-    //       message: '',
-    //       values: []
-    //     },
-    //     id: this.gerarUID()
-    //   })
-    // },
     addMediaField () {
       this.node.interactions.push({
         type: 'MediaField',
@@ -755,6 +751,7 @@ export default {
         interactions: [],
         conditions: [],
         actions: []
+        // ico: 'el-icon-present'
       }
       const evt = {
         originalEvent: {
@@ -783,6 +780,7 @@ export default {
       }).onOk(async () => {
         const nConditions = this.node.conditions.filter(c => c.id !== condition.id)
         this.node.conditions = nConditions
+        this.$emit('deleteLine', condition.id)
       })
     },
     onInsertSelectEmojiSaudacao (emoji) {
@@ -801,6 +799,27 @@ export default {
       self.txtContent = this.node.configurations.welcomeMessage.message
       self.txtContent = tmpStr.substring(0, startPos) + emoji.data + tmpStr.substring(endPos, tmpStr.length)
       this.node.configurations.welcomeMessage.message = self.txtContent
+      // move cursor:
+      setTimeout(() => {
+        tArea.selectionStart = tArea.selectionEnd = cursorPos + emoji.data.length
+      }, 10)
+    },
+    onInsertSelectEmojiEncerramento (emoji) {
+      const self = this
+      var tArea = this.$refs.inputEnvioMensagemEncerramento
+      // get cursor's position:
+      var startPos = tArea.selectionStart,
+        endPos = tArea.selectionEnd,
+        cursorPos = startPos,
+        tmpStr = tArea.value
+      // filter:
+      if (!emoji.data) {
+        return
+      }
+      // insert:
+      self.txtContent = this.node.configurations.farewellMessage.message
+      self.txtContent = tmpStr.substring(0, startPos) + emoji.data + tmpStr.substring(endPos, tmpStr.length)
+      this.node.configurations.farewellMessage.message = self.txtContent
       // move cursor:
       setTimeout(() => {
         tArea.selectionStart = tArea.selectionEnd = cursorPos + emoji.data.length
@@ -827,12 +846,36 @@ export default {
         tArea.selectionStart = tArea.selectionEnd = cursorPos + emoji.data.length
       }, 10)
     },
+    onInsertSelectEmojiTempo (emoji) {
+      const self = this
+      var tArea = this.$refs.inputEnvioMensagemTempo
+      // get cursor's position:
+      var startPos = tArea.selectionStart,
+        endPos = tArea.selectionEnd,
+        cursorPos = startPos,
+        tmpStr = tArea.value
+      // filter:
+      if (!emoji.data) {
+        return
+      }
+      // insert:
+      self.txtContent = this.node.configurations.notResponseMessage.message
+      self.txtContent = tmpStr.substring(0, startPos) + emoji.data + tmpStr.substring(endPos, tmpStr.length)
+      this.node.configurations.notResponseMessage.message = self.txtContent
+      // move cursor:
+      setTimeout(() => {
+        tArea.selectionStart = tArea.selectionEnd = cursorPos + emoji.data.length
+      }, 10)
+    },
     addLineStep (nextStepId, idx) {
       if (this.node.conditions[idx]?.queueId) {
         this.node.conditions[idx].queueId = null
       }
       if (this.node.conditions[idx]?.userIdDestination) {
         this.node.conditions[idx].userIdDestination = null
+      }
+      if (this.node.conditions[idx]?.closeTicket) {
+        this.node.conditions[idx].closeTicket = null
       }
       const oldToLine = this.node.conditions[idx].nextStepId
       this.node.conditions[idx].nextStepId = nextStepId
@@ -897,7 +940,7 @@ export default {
     }
   },
   mounted () {
-    console.log('node_form montou', this.node)
+    console.log('node_form mounted', this.node)
   }
 }
 </script>

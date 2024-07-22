@@ -1,24 +1,34 @@
 <template>
   <div>
-    <template>
-          <div>
+    <q-table flat
+      bordered
+      square
+      hide-bottom
+      class="contact-table container-rounded-10 my-sticky-dynamic q-ma-lg"
+      :data="ajudas"
+      :columns="columns"
+      :loading="loading"
+      row-key="id"
+      :pagination.sync="pagination"
+      :rows-per-page-options="[0]">
+      <template v-slot:top-left>
+        <div>
+          <h2  :class="$q.dark.isActive ? ('text-white') : ''">
+            <q-icon name="mdi-help q-pr-sm" />
+            Ajuda
+          </h2>
+          <q-btn class="generate-button btn-rounded-50"
+          icon="eva-plus-outline"
+          label="Adicionar"
+          @click="ajudaEdicao = {}; modalAjuda = true" />
+        </div>
 
-            <div class="row">
-              <div class="col-6">
-                <h1>Ajuda</h1>
-              </div>
-              <div class="col-6" style="display: flex; justify-content: end; align-items: center;">
-                <q-btn color="primary" label="Adicionar" @click="ajudaEdicao = {}; modalAjuda = true" />
-              </div>
-            </div>
-            <q-table style="width: 100%;margin-left: 0;" flat bordered square hide-bottom
-              class="my-sticky-dynamic q-ma-lg" :data="ajudas" :columns="columns" :loading="loading" row-key="id"
-              :pagination.sync="pagination" :rows-per-page-options="[0]">
+      </template>
 
               <template v-slot:body-cell-acoes="props">
                 <q-td class="text-center">
-                  <q-btn flat round icon="edit" @click="editarAjuda(props.row)" />
-                  <q-btn flat round icon="mdi-delete" @click="deletarAjuda(props.row)" />
+                  <q-btn flat round icon="eva-edit-outline" @click="editarAjuda(props.row)" />
+                  <q-btn flat round icon="eva-trash-outline" @click="deletarAjuda(props.row)" />
                 </q-td>
               </template>
             </q-table>

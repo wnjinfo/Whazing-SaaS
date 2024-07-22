@@ -1,28 +1,42 @@
 <template>
   <q-dialog persistent :value="modalEmpresa" @hide="fecharModal" @show="abrirModal">
-    <q-card style="width: 600px; margin-top: 2rem;">
-      <q-card-section class="q-col-gutter-sm">
-        <div class="text-h6">Cadastrar Empresa</div>
-        <div class="row q-col-gutter-sm">
-          <div class="col-12">
-            <c-input outlined v-model.trim="tenant.name" :validator="$v.tenant.name" @blur="$v.tenant.name.$touch"
+    <q-card class="container-rounded-10 modal-container q-pa-lg">
+
+      <q-card-actions align="right">
+        <q-btn
+          flat
+          color="negative"
+          icon="eva-close-outline"
+          v-close-popup
+        />
+      </q-card-actions>
+
+      <q-card-section>
+        <div class="text-h6 text-center font-family-main">{{tenant.name ? "Editar" : "Cadastrar"}} Empresa</div>
+      </q-card-section>
+      <div class="container-border container-rounded-10">
+
+      <q-card-section class="row flex-gap-1 q-col-gutter-sm">
+        <div class="text-h6 font-family-main">
+          Informações
+        </div>
+        <div class="flex-gap-1 full-width row q-col-gutter-sm">
+          <div class="full-width">
+            <c-input outlined v-model.trim="tenant.name" :validator="$v.tenant.name" @blur="$v.tenant.name.$touch" rounded
               label="Nome" />
           </div>
-          <div class="col-12">
-            <c-input outlined v-model.trim="tenant.cnpj" mask="##.###.###/####-##" label="CNPJ"
+          <div class="full-width">
+            <c-input outlined v-model.trim="tenant.cnpj" mask="##.###.###/####-##" label="CNPJ" rounded
               :validator="$v.tenant.cnpj" @blur="$v.tenant.cnpj.$touch" />
           </div>
-          <div class="col-12">
-            <c-input outlined v-model.trim="tenant.phone" mask="(##)#####-####" label="Whatsapp"
+          <div class="full-width">
+            <c-input outlined v-model.trim="tenant.phone" mask="(##)#####-####" label="Whatsapp" rounded
               :validator="$v.tenant.phone" @blur="$v.tenant.phone.$touch" />
           </div>
-          <div class="col-12">
+          <div class="full-width">
           <q-datetime-picker
-            dense
-            hide-bottom-space
+			rounded
             outlined
-            stack-label
-            bottom-slots
             label="Data/Hora Vencimento"
             mode="datetime"
             color="primary"
@@ -32,31 +46,34 @@
             :error="$v.tenant.dueDate.$error"
             error-message="Não pode ser inferior ao dia atual"
           />
+          </div>
+          <div class="full-width">
               <!-- Plano (seleção) -->
-              <q-select
+              <q-select rounded
                 v-model="tenant.planId"
                 :options="options"
                 label="Plano"
                 outlined
               />
           </div>
+          </div>
         </div>
       </q-card-section>
       <q-card-section class="q-col-gutter-sm" v-if="!isEdit">
         <div class="text-h6">Cadastrar Usuario Responsável</div>
         <div class="row q-col-gutter-sm">
-          <div class="col-12">
-            <c-input outlined v-model.trim="usuario.name" :validator="$v.usuario.name" @blur="$v.usuario.name.$touch"
+          <div class="full-width">
+            <c-input outlined v-model.trim="usuario.name" :validator="$v.usuario.name" @blur="$v.usuario.name.$touch" rounded
               label="Nome" />
           </div>
-          <div class="col-12">
-            <c-input outlined :validator="$v.usuario.email" @blur="$v.usuario.email.$touch" v-model.trim="usuario.email"
+          <div class="full-width">
+            <c-input outlined :validator="$v.usuario.email" @blur="$v.usuario.email.$touch" v-model.trim="usuario.email" rounded
               label="E-mail" />
           </div>
         </div>
         <div class="row q-col-gutter-sm">
-          <div class="col-12">
-            <c-input outlined v-model="usuario.password" :validator="$v.usuario.password"
+          <div class="full-width">
+            <c-input outlined v-model="usuario.password" :validator="$v.usuario.password" rounded
               @blur="$v.usuario.password.$touch" :type="isPwd ? 'password' : 'text'" label="Senha">
               <template v-slot:append>
                 <q-icon :name="isPwd ? 'visibility_off' : 'visibility'" class="cursor-pointer" @click="isPwd = !isPwd" />
@@ -66,8 +83,18 @@
         </div>
       </q-card-section>
       <q-card-actions align="right">
-        <q-btn label="Sair" class="q-px-md q-mr-sm" v-close-popup />
-        <q-btn label="Salvar" class="q-px-md" color="primary" @click.prevent="handleUsuario" />
+        <q-btn
+          label="Cancelar"
+          class="q-px-md q-mr-sm btn-rounded-50"
+          color="negative"
+          v-close-popup
+        />
+        <q-btn
+          label="Salvar"
+          class="q-px-md btn-rounded-50 generate-button"
+          icon="eva-save-outline"
+          @click="handleUsuario"
+        />
       </q-card-actions>
     </q-card>
   </q-dialog>
@@ -160,7 +187,7 @@ export default {
       try {
         const response = await list()
         this.planos = response.data
-        console.log('Planos fetched:', this.planos) // Log para verificar os dados recebidos
+        // console.log('Planos fetched:', this.planos) // Log para verificar os dados recebidos
       } catch (error) {
         console.error('Error fetching plan data:', error)
       }
@@ -172,7 +199,7 @@ export default {
         maxUsers: plan.maxUsers,
         maxConnections: plan.maxConnections
       }))
-      console.log('Formatted Planos:', formatted) // Log para verificar os dados formatados
+      // console.log('Formatted Planos:', formatted) // Log para verificar os dados formatados
       return formatted
     },
     async handleUsuario() {

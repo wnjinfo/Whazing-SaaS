@@ -1,374 +1,233 @@
 <template>
   <div>
-    <div
-      class="row absolute-full fit col-12"
-      ref="menuFast"
-    >
-      <q-menu
-        :target="$refs.menuFast"
-        :key="cMensagensRapidas.length"
-        square
-        no-focus
-        no-parent-event
-        class="no-box-shadow no-shadow"
-        fit
-        :offset="[0, 5]"
-        persistent
-        max-height="400px"
-        @hide="visualizarMensagensRapidas = false"
-        :value="textChat.startsWith('/') || visualizarMensagensRapidas"
-      >
-        <!-- :value="textChat.startsWith('/')" -->
-        <q-list
-          class="no-shadow no-box-shadow"
-          style="min-width: 100px"
-          separator
-          v-if="!cMensagensRapidas.length"
-        >
-          <q-item>
-            <q-item-section>
-              <q-item-label class="text-negative text-bold">Ops... Nada por aqui!</q-item-label>
-              <q-item-label caption>Cadastre suas mensagens na administração de sistema.</q-item-label>
-            </q-item-section>
-          </q-item>
-        </q-list>
 
-        <q-list
-          class="no-shadow no-box-shadow"
-          style="min-width: 100px"
-          separator
-          v-else
-        >
-          <q-item
-            v-for="resposta in cMensagensRapidas"
-            :key="resposta.key"
-            clickable
-            v-close-popup
-            @click="mensagemRapidaSelecionada(resposta.message)"
-          >
-            <q-item-section>
-              <q-item-label class="text-bold"> {{ resposta.key }} </q-item-label>
-              <q-item-label
-                caption
-                lines="2"
-              > {{ resposta.message }} </q-item-label>
-            </q-item-section>
-            <q-tooltip content-class="bg-padrao text-grey-9 text-bold">
-              {{ resposta.message }}
-            </q-tooltip>
-          </q-item>
-        </q-list>
-      </q-menu>
-    </div>
-
-    <div
-      style="min-height: 80px"
-      class="row q-pb-md q-pt-sm bg-white justify-start items-center text-grey-9 relative-position"
-    >
-
-      <div
-        class="row col-12 q-pa-sm"
-        v-if="isScheduleDate"
-      >
-        <q-datetime-picker
-          style="width: 300px"
-          dense
-          rounded
-          hide-bottom-space
-          outlined
-          stack-label
-          bottom-slots
-          label="Data/Hora Agendamento"
-          mode="datetime"
-          color="primary"
-          v-model="scheduleDate"
-          format24h
-        />
+    <div class="bg-transparent fast-messages-list" v-if="cMensagensRapidas.length > 0">
+        <q-badge class="text-white item-fast-messages-list q-pa-sm" v-for="(resposta, index) in cMensagensRapidas" :key="resposta.key" clickable v-close-popup @click="mensagemRapidaSelecionada(resposta)"
+        :class="getBadgeClass(index)">
+          <q-item-label class="text-bold">
+                  /{{ resposta.key }}
+          </q-item-label>
+          <q-tooltip content-class="bg-padrao text-grey-9 text-bold" anchor="top middle" self="bottom middle">
+            {{ resposta.message }}
+          </q-tooltip>
+        </q-badge>
       </div>
 
+    <div @drop.prevent="handleFileDrop" @dragover.prevent>
+      <div class="drop-area" @drop="handleFileDrop" @dragover="handleDragOver" @dragleave="handleDragLeave">
+
+        <div class="row q-col-gutter-md" v-if="isScheduleDate">
+          <div class="col-xs-12 col-md-6">
+            <q-select :options="schedule.options" v-model="schedule.selected" map-options outlined @input="onSelectSchedule" />
+          </div>
+          <div class="col-xs-12 col-md-6">
+            <q-datetime-picker outlined stack-label label="Data/Hora Agendamento" mode="datetime" v-model="scheduleDate" format24h :readonly="schedule.selected.value !== 'custom'" />
+          </div>
+        </div>
+
+      <div class="q-py-md row bg-white justify-start items-center text-grey-9 relative-position">
       <template v-if="!isRecordingAudio">
-        <q-btn
-          v-if="$q.screen.width > 500"
-          flat
-          dense
-          @click="abrirEnvioArquivo"
-          icon="mdi-paperclip"
-          :disable="cDisableActions"
-          class="bg-padrao btn-rounded q-mx-xs"
-          :color="$q.dark.isActive ? 'white' : ''"
-        >
-          <q-tooltip content-class="text-bold">
-            Enviar arquivo
-          </q-tooltip>
-        </q-btn>
-        <q-btn
-          v-if="$q.screen.width > 500"
-          flat
-          dense
-          icon="mdi-emoticon-happy-outline"
-          :disable="cDisableActions"
-          class="bg-padrao btn-rounded q-mx-xs"
-          :color="$q.dark.isActive ? 'white' : ''"
-        >
-          <q-tooltip content-class="text-bold">
-            Emoji
-          </q-tooltip>
-          <q-menu
-            anchor="top right"
-            self="bottom middle"
-            :offset="[5, 40]"
-          >
-            <VEmojiPicker
-              style="width: 40vw"
-              :showSearch="false"
-              :emojisByRow="20"
-              labelSearch="Localizar..."
-              lang="pt-BR"
-              @select="onInsertSelectEmoji"
-            />
-          </q-menu>
-        </q-btn>
-        <q-btn
-          v-if="$q.screen.width > 500"
-          flat
-          dense
-          @click="handlSendLinkVideo"
-          icon="mdi-message-video"
-          :disable="cDisableActions"
-          class="bg-padrao btn-rounded q-mx-xs"
-          :color="$q.dark.isActive ? 'white' : ''"
-        >
-          <q-tooltip content-class="text-bold">
-            Enviar link para videoconferencia
-          </q-tooltip>
-        </q-btn>
-        <q-toggle keep-color v-model="sign" dense @input="handleSign" class="q-mx-sm q-ml-md"
-          :color="sign ? 'positive' : 'black'" type="toggle" v-if="disabledSign">
-          <q-tooltip>
-            {{ sign ? 'Desativar' : 'Ativar' }} Assinatura
-          </q-tooltip>
-        </q-toggle>
-        <q-input
-          hide-bottom-space
-          :loading="loading"
-          :disable="cDisableActions"
-          ref="inputEnvioMensagem"
-          id="inputEnvioMensagem"
-          type="textarea"
-          @keydown.exact.enter.prevent="() => textChat.trim().length ? enviarMensagem() : ''"
-          v-show="!cMostrarEnvioArquivo"
-          class="col-grow q-mx-xs text-grey-10 inputEnvioMensagem"
-          bg-color="grey-2"
-          color="grey-7"
-          placeholder="Digita sua mensagem"
-          input-style="max-height: 30vh"
-          autogrow
-          rounded
-          dense
-          outlined
-          v-model="textChat"
-          :value="textChat"
-          @paste="handleInputPaste"
-        >
-          <!-- <template v-slot:hint>
-          "Quebra linha: Shift + Enter"
-        </template> -->
-          <template
-            v-slot:prepend
-            v-if="$q.screen.width < 500"
-          >
-            <q-btn
-              flat
-              icon="mdi-emoticon-happy-outline"
-              :disable="cDisableActions"
-              dense
-              round
-              :color="$q.dark.isActive ? 'white' : ''"
-            >
-              <q-tooltip content-class="text-bold">
-                Emoji
-              </q-tooltip>
-              <q-menu
-                anchor="top right"
-                self="bottom middle"
-                :offset="[5, 40]"
-              >
-                <VEmojiPicker
-                  style="width: 40vw"
-                  :showSearch="false"
-                  :emojisByRow="20"
-                  labelSearch="Localizar..."
-                  lang="pt-BR"
-                  @select="onInsertSelectEmoji"
-                />
+
+            <q-btn v-if="$q.screen.width > 500" flat dense icon="mdi-emoticon-happy-outline" :disable="cDisableActions" class="btn-rounded q-mx-xs" :color="$q.dark.isActive ? 'white' : ''" :class="{
+                  'text-white bg-black': $q.dark.isActive,
+                  '': !$q.dark.isActive
+                  }">
+              <q-tooltip content-class="text-bold"> Emoji </q-tooltip>
+              <q-menu anchor="top right" self="bottom middle" :offset="[5, 40]">
+                <VEmojiPicker style="width: 40vw" :showSearch="false" :emojisByRow="calculateEmojisByRow()" labelSearch="Localizar..." lang="pt-BR" @select="onInsertSelectEmoji" />
               </q-menu>
             </q-btn>
-          </template>
-          <template v-slot:append>
+
+            <q-btn flat dense round icon="eva-plus-outline" :class="{
+                  'text-white bg-black': $q.dark.isActive,
+                  'tab-item': !$q.dark.isActive
+                  }" v-if="$q.screen.width > 500">
+              <q-menu>
+                  <q-list style="min-width: 100px;">
+                    <q-item class="text-left" style="padding: 0">
+                      <q-btn
+                        flat
+                        @click="abrirEnvioArquivo"
+                        icon="mdi-paperclip"
+                        :disable="cDisableActions || desabilitarInput"
+                        class=" btn-rounded full-width"
+                        :color="$q.dark.isActive ? 'white' : ''"
+                        label="Enviar arquivo"
+                      >
+                    </q-btn>
+                    </q-item>
+                    <q-item style="padding: 0">
+                      <q-btn
+                      flat
+                      @click="handlSendLinkVideo"
+                      icon="mdi-message-video"
+                      :disable="cDisableActions || desabilitarInput"
+                      :color="$q.dark.isActive ? 'white' : ''"
+                      label="Enviar videoconferência"
+                      >
+                    </q-btn>
+                    </q-item>
+                  </q-list>
+              </q-menu>
+            </q-btn>
+
             <q-btn
+              v-if="mensagemRapidaMedia"
               flat
-              @click="abrirEnvioArquivo"
-              icon="mdi-paperclip"
-              :disable="cDisableActions"
               dense
-              round
-              v-if="$q.screen.width < 500"
-              class="bg-padrao btn-rounded"
+              icon="mdi-cancel"
+              class="bg-padrao btn-rounded q-mx-xs"
+
+              :color="$q.dark.isActive ? 'red' : 'red'"
+              @click="removerMediaMensagemRapida"
+            >
+              <q-tooltip content-class="text-bold"> Remover Mídia da Mensagem Rápida </q-tooltip>
+            </q-btn>
+
+            <q-input
+              hide-bottom-space
+              :loading="loading"
+              :disable="cDisableActions || Boolean(mensagemRapidaMedia)"
+              ref="inputEnvioMensagem"
+              id="inputEnvioMensagem"
+              type="textarea"
+              @keydown.exact.enter.prevent="() => (textChat.trim().length ? enviarMensagem() : '')"
+              v-show="!cMostrarEnvioArquivo"
+              class="col-grow q-mx-xs text-grey-10 inputEnvioMensagem"
+              bg-color="grey-2"
+              color="grey-7"
+              placeholder="Digita sua mensagem"
+              input-style="max-height: 30vh"
+              autogrow
+              rounded
+              dense
+              outlined
+              v-model="textChat"
+              :value="textChat"
+              @paste="handleInputPaste"
+            >
+
+              <template v-slot:prepend v-if="$q.screen.width < 500">
+                <q-btn  flat icon="mdi-emoticon-happy-outline" :disable="cDisableActions" dense round :color="$q.dark.isActive ? 'white' : ''">
+                  <q-tooltip content-class="text-bold"> Emoji </q-tooltip>
+                  <q-menu anchor="top right" self="bottom middle" :offset="[5, 40]">
+                    <VEmojiPicker style="width: 40vw" :showSearch="false" :emojisByRow="calculateEmojisByRow()" labelSearch="Localizar..." lang="pt-BR" @select="onInsertSelectEmoji" />
+                  </q-menu>
+                </q-btn>
+              </template>
+
+              <template v-slot:append>
+                <q-btn
+                  flat
+                  @click="abrirEnvioArquivo"
+                  icon="mdi-paperclip"
+                  :disable="cDisableActions"
+                  dense
+                  round
+                  v-if="$q.screen.width < 500"
+                  class="bg-padrao full-width"
+                  :color="$q.dark.isActive ? 'white' : ''"
+                >
+                  <q-tooltip content-class=" text-bold"> Enviar arquivo </q-tooltip>
+                </q-btn>
+
+                <q-toggle keep-color v-model="sign" dense @input="handleSign" class="q-mx-sm q-ml-md" :color="sign ? 'positive' : 'black'" type="toggle" v-if="userProfile === 'admin'">
+                <q-tooltip> {{ sign ? 'Desativar' : 'Ativar' }} Assinatura </q-tooltip>
+                </q-toggle>
+                <q-toggle keep-color v-model="sign" dense @input="handleSign" class="q-mx-sm q-ml-md" :color="sign ? 'positive' : 'black'" type="toggle" v-if="disabledSign && userProfile !== 'admin'">
+                  <q-tooltip> {{ sign ? 'Desativar' : 'Ativar' }} Assinatura </q-tooltip>
+                </q-toggle>
+
+              </template>
+            </q-input>
+
+            <q-file
+              :loading="loading"
+              :disable="cDisableActions || desabilitarInput"
+              ref="PickerFileMessage"
+              id="PickerFileMessage"
+              v-show="cMostrarEnvioArquivo"
+              v-model="arquivos"
+              class="col-grow q-mx-xs PickerFileMessage"
+              bg-color="blue-grey-1"
+              input-style="max-height: 30vh"
+              outlined
+              use-chips
+              multiple
+              autogrow
+              dense
+              rounded
+              append
+              :max-files="5"
+              :max-file-size="52428800"
+              :max-total-size="52428800"
+              :accept="accept"
+              @rejected="onRejectedFiles"
+            />
+
+            <q-btn
+              v-if="textChat || cMostrarEnvioArquivo || removeMedia"
+              ref="btnEnviarMensagem"
+              @click="enviarMensagem"
+              :disabled="ticketFocado.status !== 'open'"
+              flat
+              icon="mdi-send"
+              class="bg-padrao btn-rounded q-mx-xs"
               :color="$q.dark.isActive ? 'white' : ''"
             >
-              <q-tooltip content-class=" text-bold">
-                Enviar arquivo
-              </q-tooltip>
+              <q-tooltip content-class=" text-bold"> Enviar Mensagem </q-tooltip>
             </q-btn>
+
             <q-btn
-              dense
+              v-if="!textChat && !cMostrarEnvioArquivo && !isRecordingAudio"
+              @click="handleSartRecordingAudio"
+              :disabled="cDisableActions || desabilitarInput"
               flat
-              round
-              icon="mdi-message-flash-outline"
-              @click="visualizarMensagensRapidas = !visualizarMensagensRapidas"
+              icon="eva-mic-outline"
+              class="btn-rounded q-mx-xs"
+              :color="$q.dark.isActive ? 'white' : ''"
+              :class="{
+                  'text-white bg-black': $q.dark.isActive,
+                  '': !$q.dark.isActive
+                  }"
             >
-              <q-tooltip content-class="text-bold">
-                Mensagens Rápidas
-              </q-tooltip>
+              <q-tooltip content-class="text-bold"> Enviar Áudio </q-tooltip>
             </q-btn>
           </template>
-        </q-input>
-        <!-- tamanho maximo por arquivo de 10mb -->
-        <q-file
-          :loading="loading"
-          :disable="cDisableActions"
-          ref="PickerFileMessage"
-          id="PickerFileMessage"
-          v-show="cMostrarEnvioArquivo"
-          v-model="arquivos"
-          class="col-grow q-mx-xs PickerFileMessage"
-          bg-color="blue-grey-1"
-          input-style="max-height: 30vh"
-          outlined
-          use-chips
-          multiple
-          autogrow
-          dense
-          rounded
-          append
-          :max-files="5"
-          :max-file-size="15485760"
-          :max-total-size="15485760"
-          accept=".txt, .xml, .jpg, .png, image/jpeg, .pdf, .doc, .docx, .mp4, .ogg, .mp3, .xls, .xlsx, .jpeg, .rar, .zip, .ppt, .pptx, image/*"
-          @rejected="onRejectedFiles"
-        />
-        <q-btn
-          v-if="textChat || cMostrarEnvioArquivo"
-          ref="btnEnviarMensagem"
-          @click="enviarMensagem"
-          :disabled="ticketFocado.status !== 'open'"
-          flat
-          icon="mdi-send"
-          class="bg-padrao btn-rounded q-mx-xs"
-          :color="$q.dark.isActive ? 'white' : ''"
-        >
-          <q-tooltip content-class=" text-bold">
-            Enviar Mensagem
-          </q-tooltip>
-        </q-btn>
-        <q-btn
-          v-if="!textChat && !cMostrarEnvioArquivo && !isRecordingAudio"
-          @click="handleSartRecordingAudio"
-          :disabled="cDisableActions"
-          flat
-          icon="mdi-microphone"
-          class="bg-padrao btn-rounded q-mx-xs"
-          :color="$q.dark.isActive ? 'white' : ''"
-        >
-          <q-tooltip content-class="text-bold">
-            Enviar Áudio
-          </q-tooltip>
-        </q-btn>
-      </template>
-      <template v-else>
-        <div class="full-width items-center row justify-end ">
-          <q-skeleton
-            animation="pulse-y"
-            class="col-grow q-mx-md"
-            type="text"
-          />
-          <div
-            style="width: 200px"
-            class="flex flex-center items-center"
-            v-if="isRecordingAudio"
-          >
-            <q-btn
-              flat
-              icon="mdi-close"
-              color="negative"
-              @click="handleCancelRecordingAudio"
-              class="bg-padrao btn-rounded q-mx-xs"
-            />
-            <RecordingTimer
-              class="text-bold"
-              :class="{ 'text-white': $q.dark.isActive }"
-            />
-            <q-btn
-              flat
-              icon="mdi-send-circle-outline"
-              color="positive"
-              @click="handleStopRecordingAudio"
-              class="bg-padrao btn-rounded q-mx-xs"
-            />
-          </div>
 
-        </div>
-      </template>
-
-      <q-dialog
-        v-model="abrirModalPreviewImagem"
-        position="right"
-        @hide="hideModalPreviewImagem"
-        @show="showModalPreviewImagem"
-      >
-        <q-card
-          style="height: 90vh; min-width: 60vw; max-width: 60vw"
-          class="q-pa-md"
-        >
-          <q-card-section>
-            <div class="text-h6">{{ urlMediaPreview.title }}
-              <q-btn
-                class="float-right"
-                icon="close"
-                color="negative"
-                round
-                outline
-                @click="hideModalPreviewImagem"
-              />
+          <template v-else>
+            <div class="full-width items-center row justify-end">
+              <q-skeleton animation="pulse-y" class="col-grow q-mx-md" type="text" />
+              <div style="width: 200px" class="flex flex-center items-center" v-if="isRecordingAudio">
+                <q-btn flat icon="mdi-close" color="negative" @click="handleCancelRecordingAudio" class="bg-padrao btn-rounded q-mx-xs" />
+                <RecordingTimer class="text-bold" :class="{ 'text-white': $q.dark.isActive }" />
+                <q-btn flat icon="mdi-send-circle-outline" color="positive" @click="handleStopRecordingAudio" class="bg-padrao btn-rounded q-mx-xs" />
+              </div>
             </div>
-          </q-card-section>
-          <q-card-section>
-            <q-img
-              :src="urlMediaPreview.src"
-              spinner-color="white"
-              class="img-responsive mdi-image-auto-adjust q-uploader__file--img"
-              style="height: 60vh; min-width: 55vw; max-width: 55vw"
-            />
-          </q-card-section>
-          <q-card-actions align="center">
-            <q-btn
-              ref="qbtnPasteEnvioMensagem"
-              label="Enviar"
-              color="primary"
-              v-close-popup
-              @click="enviarMensagem"
-              @keypress.enter.exact="enviarMensagem()"
-            />
-          </q-card-actions>
-          <span class="row col text-caption text-blue-grey-10">* Confirmar envio: Enter</span>
-          <span class="row col text-caption text-blue-grey-10">** Cancelar: ESC</span>
-        </q-card>
-      </q-dialog>
+          </template>
+        </div>
+
+        <q-dialog v-model="abrirModalPreviewImagem" position="right" @hide="hideModalPreviewImagem" @show="showModalPreviewImagem">
+          <q-card style="height: 90vh; min-width: 60vw; max-width: 60vw" class="q-pa-md">
+            <q-card-section>
+              <div class="text-h6">
+                {{ urlMediaPreview.title }}
+                <q-btn class="float-right" icon="close" color="negative" round outline @click="hideModalPreviewImagem" />
+              </div>
+            </q-card-section>
+            <q-card-section>
+              <q-img :src="urlMediaPreview.src" spinner-color="white" class="img-responsive mdi-image-auto-adjust q-uploader__file--img" style="height: 60vh; min-width: 55vw; max-width: 55vw" />
+            </q-card-section>
+            <q-card-actions align="center">
+              <q-btn ref="qbtnPasteEnvioMensagem" label="Enviar" color="primary" v-close-popup @click="enviarMensagem" @keypress.enter.exact="enviarMensagem()" />
+            </q-card-actions>
+            <span class="row col text-caption text-blue-grey-10">* Confirmar envio: Enter</span>
+            <span class="row col text-caption text-blue-grey-10">** Cancelar: ESC</span>
+          </q-card>
+        </q-dialog>
+
     </div>
-    <!-- <p
-      v-if="!cMostrarEnvioArquivo"
-      class="row col text-caption text-blue-grey-10"
-    >Quebra linha/Parágrafo: Shift + Enter ||| Enviar Mensagem: Enter</p> -->
+
   </div>
 </template>
 
@@ -381,6 +240,8 @@ import { mapGetters } from 'vuex'
 import RecordingTimer from './RecordingTimer'
 import MicRecorder from 'mic-recorder-to-mp3'
 const Mp3Recorder = new MicRecorder({ bitRate: 128 })
+import { add, format } from 'date-fns'
+import { defineComponent } from 'vue'
 import { ListarConfiguracoes } from 'src/service/configuracoes'
 
 export default {
@@ -406,6 +267,15 @@ export default {
   },
   data () {
     return {
+      schedule: {
+        selected: { label: 'Agendamento customizado', value: 'custom', func: null },
+        options: [
+          { label: 'Agendamento customizado', value: 'custom', func: null },
+          { label: 'Em 30 minutos', value: '30_mins', func: () => add(new Date(), { minutes: 30 }) },
+          { label: 'Amanhã', value: 'amanha', func: () => add(new Date(), { days: 1 }) },
+          { label: 'Próxima semana', value: 'prox_semana', func: () => add(new Date(), { weeks: 1 }) }
+        ]
+      },
       loading: false,
       abrirFilePicker: false,
       abrirModalPreviewImagem: false,
@@ -419,6 +289,11 @@ export default {
       textChat: '',
       sign: false,
       scheduleDate: null,
+      userProfile: 'user',
+      mensagemRapidaMedia: '',
+      mensagemRapidaSetada: false,
+      removeMedia: false,
+      accept: '.txt, .xml, .jpg, .png, .pdf, .doc, .docx, .mp4, .xls, .xlsx, .jpeg, .zip, .ppt, .ogg, .mp3, .pptx, image/*, .mpeg, .pfx, .p2k',
       disabledSign: false
     }
   },
@@ -440,6 +315,38 @@ export default {
     }
   },
   methods: {
+    onSelectSchedule(newValue) {
+      if (!newValue.func) {
+        this.scheduleDate = null
+        return
+      }
+      const date = newValue.func()
+      this.scheduleDate = format(date, 'yyyy-MM-dd HH:mm')
+    },
+    handleFileDrop(event) {
+      const files = event.dataTransfer.files
+      if (files.length) {
+        this.textChat = ''
+        this.arquivos = [files[0]]
+        this.abrirModalPreviewImagem = true
+        this.urlMediaPreview = {
+          title: `Enviar imagem para ${this.ticketFocado?.contact?.name}`,
+          src: this.openFilePreviewDD(files[0])
+        }
+        this.$refs.inputEnvioMensagem.focus()
+      }
+    },
+    handleDragOver(event) {
+      event.preventDefault()
+      event.currentTarget.classList.add('dragover')
+    },
+    handleDragLeave(event) {
+      event.currentTarget.classList.remove('dragover')
+    },
+    openFilePreviewDD(file) {
+      const urlImg = window.URL.createObjectURL(file)
+      return urlImg
+    },
     async listarConfiguracoes() {
       const { data } = await ListarConfiguracoes()
       this.configuracoes = data
@@ -463,6 +370,30 @@ export default {
       const urlImg = window.URL.createObjectURL(data)
       return urlImg
     },
+    handleInputDrop(evt) {
+      const allowed = this.accept.split(',').map((a) => a.trim())
+      this.textChat = ''
+      this.arquivos = [
+        ...this.arquivos,
+        ...[...evt.dataTransfer.files].filter((file) => {
+          const ext = file.name.split('.').pop()
+          const extensionPattern = allowed.map((ext) => ext.replace(/\./g, '\\.').replace(/\*/g, '.*')).join('|')
+          const regex = new RegExp(`^(${extensionPattern})$`, 'i')
+          return regex.test(file.type) || regex.test('.' + ext)
+        })
+      ]
+
+      if (!this.arquivos.length) {
+        this.$q.notify({
+          message: 'Arquivo inválido!',
+          caption: `Formatos aceitos: ${allowed.join(', ')}`,
+          type: 'negative'
+        })
+        return
+      }
+
+      this.$refs.inputEnvioMensagem.focus()
+    },
     handleInputPaste (e) {
       if (!this.ticketFocado?.id) return
       if (e.clipboardData.files[0]) {
@@ -476,8 +407,23 @@ export default {
         this.$refs.inputEnvioMensagem.focus()
       }
     },
-    mensagemRapidaSelecionada (mensagem) {
-      this.textChat = mensagem
+    removerMediaMensagemRapida() {
+      this.removeMedia = false
+      this.mensagemRapidaMedia = ''
+      this.mensagemRapidaSetada = false
+    },
+    mensagemRapidaSelecionada(mensagem) {
+      if (mensagem.message !== 'null') {
+        this.textChat = mensagem.message
+      }
+      if (this.mensagemRapidaMedia !== null) {
+        this.mensagemRapidaMedia = mensagem.media
+        this.removeMedia = true
+      }
+      if (this.mensagemRapidaMedia !== null) {
+        this.mensagemRapidaSetada = true
+        this.removeMedia = true
+      }
       setTimeout(() => {
         this.$refs.inputEnvioMensagem.focus()
       }, 300)
@@ -581,7 +527,7 @@ export default {
       return formData
     },
     prepararMensagemTexto () {
-      if (this.textChat.trim() === '') {
+      if (this.textChat.trim() === '' && !this.removeMedia) {
         throw new Error('Mensagem Inexistente')
       }
 
@@ -597,26 +543,31 @@ export default {
             : '/ indica que você deseja enviar uma mensagem rápida, mas nenhuma foi localizada. Cadastre ou apague a / e digite sua mensagem.'
           this.$notificarErro(error)
           this.loading = false
+          console.error(error)
           throw new Error(error)
         }
       }
+
       let mensagem = this.textChat.trim()
       const username = localStorage.getItem('username')
       if (username && this.sign) {
         mensagem = `*${username}*:\n ${mensagem}`
       }
+
       const message = {
         read: 1,
         fromMe: true,
-        mediaUrl: '',
+        mediaUrl: this.mensagemRapidaSetada ? `${this.mensagemRapidaMedia}` : '',
         body: mensagem,
         scheduleDate: this.isScheduleDate ? this.scheduleDate : null,
         quotedMsg: this.replyingMessage,
         idFront: uid()
       }
+
       if (this.isScheduleDate) {
         message.scheduleDate = this.scheduleDate
       }
+
       return message
     },
     async enviarMensagem () {
@@ -625,12 +576,18 @@ export default {
         return
       }
       this.loading = true
+
+      if (this.mensagemRapidaSetada) {
+        this.cMostrarEnvioArquivo = false
+      }
+
       const ticketId = this.ticketFocado.id
       const message = !this.cMostrarEnvioArquivo
         ? this.prepararMensagemTexto()
         : this.prepararUploadMedia()
+
       try {
-        if (!this.cMostrarEnvioArquivo && !this.textChat) return
+        if (!this.cMostrarEnvioArquivo && !this.textChat && !this.removeMedia) return
         await EnviarMensagemTexto(ticketId, message)
         this.arquivos = []
         this.textChat = ''
@@ -642,9 +599,16 @@ export default {
         }, 300)
       } catch (error) {
         this.isRecordingAudio = false
+        this.removeMedia = false
+        this.mensagemRapidaMedia = ''
+        this.mensagemRapidaSetada = false
         this.loading = false
         this.$notificarErro('Ocorreu um erro!', error)
+        console.error('Erro ao enviar mensagem:', error)
       }
+      this.removeMedia = false
+      this.mensagemRapidaMedia = ''
+      this.mensagemRapidaSetada = false
       this.isRecordingAudio = false
       this.loading = false
       setTimeout(() => {
@@ -665,7 +629,9 @@ export default {
         body: mensagem,
         scheduleDate: this.isScheduleDate ? this.scheduleDate : null,
         quotedMsg: this.replyingMessage,
-        idFront: uid()
+        idFront: uid(),
+        ticket: this.ticketFocado,
+        group: this.ticketFocado.isGroup
       }
 
       this.loading = true
@@ -717,6 +683,25 @@ export default {
         }]
       })
     },
+    onResize() {
+      this.$forceUpdate()
+    },
+    calculateEmojisByRow() {
+      const screenWidth = window.innerWidth
+      if (screenWidth < 600) {
+        return 5
+      } else if (screenWidth >= 600 && screenWidth < 1200) {
+        return 10
+      } else {
+        return 20
+      }
+    },
+    getBadgeClass(index) {
+      const colors = ['bg-green-6', 'bg-orange-6', 'bg-teal-6', 'bg-blue-6', 'bg-deep-purple-6', 'bg-yellow-6', 'bg-brown-6', 'bg-cyan-6']
+      const colorIndex = index % 8
+      // console.log(index);
+      return colors[colorIndex]
+    },
     handleSign (state) {
       this.sign = state
       LocalStorage.set('sign', this.sign)
@@ -727,6 +712,7 @@ export default {
     const self = this
     window.addEventListener('paste', self.handleInputPaste)
     this.listarConfiguracoes()
+    this.userProfile = localStorage.getItem('profile')
     if (![null, undefined].includes(LocalStorage.getItem('sign'))) {
       this.handleSign(LocalStorage.getItem('sign'))
     }
@@ -751,4 +737,12 @@ export default {
   .inputEnvioMensagem,
   .PickerFileMessage
     width: 200px !important
+
+.emoji-picker
+  width: 100%
+
+@media (min-width: 600px)
+  .emoji-picker
+    width: 50vw
+
 </style>

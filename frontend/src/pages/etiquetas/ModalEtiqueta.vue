@@ -6,16 +6,29 @@
     @show="abrirModal"
   >
     <q-card
-      style="width: 500px"
-      class="q-pa-lg"
+      class="q-pa-lg container-rounded-10 modal-container"
     >
+    <q-card-actions
+        align="right"
+        class="q-mt-md"
+      >
+        <q-btn
+          flat
+          icon="eva-close"
+          color="negative"
+          v-close-popup
+        />
+      </q-card-actions>
       <q-card-section>
-        <div class="text-h6">{{ etiquetaEdicao.id ? 'Editar': 'Criar' }} Etiqueta</div>
+        <div class="text-h6 font-family-main text-center">{{ etiquetaEdicao.id ? 'Editar': 'Criar' }} Etiqueta</div>
       </q-card-section>
-      <q-card-section>
+      <q-card-section class="container-rounded-10 container-border q-pa-lg">
+        <div class="text-h6 font-family-main q-mb-md">
+          Informações
+        </div>
         <q-input
           class="row col"
-          square
+          rounded
           outlined
           v-model="etiqueta.tag"
           label="Nome da Etiqueta"
@@ -28,6 +41,7 @@
           :rules="['anyColor']"
           class="q-my-md"
           :dark="false"
+          rounded
         >
           <template v-slot:preappend>
           </template>
@@ -42,7 +56,7 @@
               >
                 <q-color
                   format-model="hex"
-                  square
+                  rounded
                   default-view="palette"
                   no-header
                   bordered
@@ -62,16 +76,15 @@
         class="q-mt-md"
       >
         <q-btn
-          flat
           label="Cancelar"
           color="negative"
           v-close-popup
-          class="q-mr-md"
+          class="q-mr-md btn-rounded-50"
         />
         <q-btn
-          flat
           label="Salvar"
-          color="primary"
+          icon="eva-save-outline"
+          class="btn-rounded-50 generate-button"
           @click="handleEtiqueta"
         />
       </q-card-actions>

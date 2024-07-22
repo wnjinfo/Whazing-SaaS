@@ -1,11 +1,38 @@
 <template>
-  <q-dialog persistent :value="modalFila" @hide="fecharModal" @show="abrirModal">
-    <q-card style="width: 500px" class="q-pa-lg">
+  <q-dialog
+    persistent
+    :value="modalFila"
+    @hide="fecharModal"
+    @show="abrirModal"
+  >
+    <q-card
+      class="q-pa-lg modal-container container-rounded-10"
+    >
+    <q-card-actions
+        align="right"
+        class="q-mt-md"
+      >
+        <q-btn
+          icon="eva-close"
+          color="negative"
+          v-close-popup
+          flat
+        />
+      </q-card-actions>
       <q-card-section>
-        <div class="text-h6">{{ filaEdicao.id ? 'Editar' : 'Criar' }} Fila</div>
+        <div class="text-h6 text-center font-family-main">{{ filaEdicao.id ? 'Editar': 'Criar' }} Fila</div>
       </q-card-section>
-      <q-card-section>
-            <q-input class="row col" square outlined v-model="fila.queue" label="Nome da Fila" />
+      <q-card-section class="container-border container-rounded-10">
+        <div class="text-h6 font-family-main q-mb-sm">
+          Informações
+        </div>
+        <q-input
+          class="row col"
+          rounded
+          outlined
+          v-model="fila.queue"
+          label="Nome da Fila"
+        />
         <q-input
           filled
           hide-bottom-space
@@ -42,16 +69,27 @@
           v-model="fila.isActive"
           label="Ativo"
         />
-          <!-- <div class="col-6">
-            <q-toggle v-model="fila.from_ia" label="Chat pela IA" />
-          </div> -->
       </q-card-section>
-      <q-card-actions align="right" class="q-mt-md">
-        <q-btn flat label="Cancelar" color="negative" v-close-popup class="q-mr-md" />
-        <q-btn flat label="Salvar" color="primary" @click="handleFila" />
+      <q-card-actions
+        align="right"
+        class="q-mt-md"
+      >
+        <q-btn
+          label="Cancelar"
+          color="negative"
+          v-close-popup
+          class="q-mr-md btn-rounded-50"
+        />
+        <q-btn
+          label="Salvar"
+          class="generate-button btn-rounded-50"
+          @click="handleFila"
+          icon="eva-save-outline"
+        />
       </q-card-actions>
     </q-card>
   </q-dialog>
+
 </template>
 
 <script>
@@ -70,7 +108,7 @@ export default {
       }
     }
   },
-  data() {
+  data () {
     return {
       fila: {
         id: null,
@@ -82,7 +120,7 @@ export default {
     }
   },
   methods: {
-    resetarFila() {
+    resetarFila () {
       this.fila = {
         id: null,
         queue: null,
@@ -91,19 +129,19 @@ export default {
         isActive: true
       }
     },
-    fecharModal() {
+    fecharModal () {
       this.resetarFila()
       this.$emit('update:filaEdicao', { id: null })
       this.$emit('update:modalFila', false)
     },
-    abrirModal() {
+    abrirModal () {
       if (this.filaEdicao.id) {
         this.fila = { ...this.filaEdicao }
       } else {
         this.resetarFila()
       }
     },
-    async handleFila() {
+    async handleFila () {
       try {
         this.loading = true
         if (this.fila.id) {
@@ -148,4 +186,5 @@ export default {
 }
 </script>
 
-<style lang="scss" scoped></style>
+<style lang="scss" scoped>
+</style>

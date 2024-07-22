@@ -20,14 +20,14 @@
             class="q-pl-sm">
             <q-btn round
               flat>
-              <q-avatar class="bg-grey">
+              <q-avatar class="bg-grey blur-effect">
                 <q-img :src="Value(cticket.contact, 'profilePicUrl')">
                 </q-img>
               </q-avatar>
             </q-btn>
           </q-item-section>
           <q-item-section id="InfoCabecalhoChat">
-            <q-item-label class="text-bold">
+            <q-item-label class="text-bold blur-effect">
               {{ Value(cticket.contact, 'name') }}
               <q-skeleton v-if="!Value(cticket.contact, 'name')"
                 animation="none"
@@ -59,50 +59,66 @@
             <q-btn @click="$emit('updateTicket:reabrir')"
               flat
               autofocus
-              icon="mdi-reload"
-              color="cyan"
-              class="bg-padrao btn-rounded"
+              icon="eva-refresh-outline"
+              :class="{
+                'text-white bg-black': $q.dark.isActive,
+                'tab-item': !$q.dark.isActive
+                }"
+              class="btn-rounded"
               :disable="cticket.status == 'open'">
-              <q-tooltip content-class="bg-cyan text-bold">
+              <q-tooltip content-class="text-bold">
                 Reabrir Ticket
               </q-tooltip>
             </q-btn>
             <q-btn @click="$emit('abrir:modalAgendamentoMensagem')"
+              v-if="ticketFocado.channel !== 'instagram' && ticketFocado.channel !== 'telegram'"
               flat
-              icon="mdi-message-text-clock-outline"
-              color="amber-9"
-              class="bg-padrao btn-rounded"
+              icon="eva-clock-outline"
+              :class="{
+                'text-white bg-black': $q.dark.isActive,
+                'tab-item': !$q.dark.isActive
+                }"
+              class="btn-rounded"
               :disable="cticket.status == 'closed'">
-              <q-tooltip content-class="bg-grey-9 text-bold">
+              <q-tooltip content-class="bg-primary text-bold">
                 Agendamento de mensagem
               </q-tooltip>
             </q-btn>
             <q-btn @click="$emit('updateTicket:retornar')"
               flat
-              icon="mdi-replay"
-              color="negative"
-              class="bg-padrao btn-rounded"
+              icon="eva-arrow-back-outline"
+              :class="{
+                'text-white bg-black': $q.dark.isActive,
+                'tab-item': !$q.dark.isActive
+                }"
+              class="btn-rounded"
               :disable="cticket.status == 'closed'">
-              <q-tooltip content-class="bg-negative text-bold">
+              <q-tooltip content-class="bg-primary text-bold">
                 Retornar Ticket para a Fila
               </q-tooltip>
             </q-btn>
             <q-btn @click="$emit('updateTicket:resolver')"
-              color="positive"
+              :class="{
+                'text-white bg-black': $q.dark.isActive,
+                'tab-item': !$q.dark.isActive
+                }"
               flat
-              class="bg-padrao btn-rounded"
-              icon="mdi-comment-check"
+              class="btn-rounded"
+              icon="eva-checkmark-circle-2-outline"
               :disable="cticket.status == 'closed'">
-              <q-tooltip content-class="bg-positive text-bold">
+              <q-tooltip content-class="bg-primary text-bold">
                 Resolver
               </q-tooltip>
             </q-btn>
             <q-btn @click="listarFilas"
               flat
-              color="primary"
-              class="bg-padrao btn-rounded"
+              :class="{
+                'text-white bg-black': $q.dark.isActive,
+                'tab-item': !$q.dark.isActive
+                }"
+              class="btn-rounded"
               :disable="cticket.status == 'closed'">
-              <q-icon name="mdi-transfer" />
+              <q-icon name="eva-corner-down-right-outline" />
               <q-tooltip content-class="bg-primary text-bold">
                 Transferir
               </q-tooltip>
@@ -123,7 +139,7 @@
 
               }">
               <q-fab-action @click="$emit('updateTicket:resolver')"
-                color="positive"
+                color="primary"
                 flat
                 class="bg-padrao q-pa-xs "
                 icon="mdi-comment-check"
@@ -131,20 +147,20 @@
                   'bg-black': $q.dark.isActive
 
                 }">
-                <q-tooltip content-class="bg-positive text-bold">
+                <q-tooltip content-class="bg-primary text-bold">
                   Resolver
                 </q-tooltip>
               </q-fab-action>
               <q-fab-action @click="$emit('updateTicket:retornar')"
                 flat
                 icon="mdi-replay"
-                color="negative"
+                color="primary"
                 class="bg-padrao q-pa-xs "
                 :class="{
                   'bg-black': $q.dark.isActive
 
                 }">
-                <q-tooltip content-class="bg-negative text-bold">
+                <q-tooltip content-class="bg-primary text-bold">
                   Retornar Ticket para a Fila
                 </q-tooltip>
               </q-fab-action>
@@ -163,14 +179,14 @@
               </q-fab-action>
               <q-fab-action @click="$emit('abrir:modalAgendamentoMensagem')"
                 flat
-                color="amber-9"
+                color="primary"
                 class="bg-padrao q-pa-xs "
                 :class="{
                   'bg-black': $q.dark.isActive
 
                 }">
                 <q-icon name="mdi-message-text-clock-outline" />
-                <q-tooltip content-class="bg-grey-9 text-bold">
+                <q-tooltip content-class="bg-primary text-bold">
                   Agendamento de mensagem
                 </q-tooltip>
               </q-fab-action>
@@ -258,12 +274,12 @@
             label="Usuário destino" />
         </q-card-section>
         <q-card-actions align="right">
-          <q-btn flat
+          <q-btn
             label="Sair"
             color="negative"
             v-close-popup
             class="q-mr-lg" />
-          <q-btn flat
+          <q-btn
             label="Salvar"
             color="primary"
             @click="confirmarTransferenciaTicket" />
@@ -332,7 +348,7 @@ export default {
     async listarFilas () {
       try {
         const { data } = await ListarFilas()
-        this.filas = data
+        this.filas = data.filter(fila => fila.isActive)
         this.modalTransferirTicket = true
         this.listarUsuarios()
       } catch (error) {
@@ -353,8 +369,8 @@ export default {
     async confirmarTransferenciaTicket () {
       if (!this.filaSelecionada) return
       // if (!this.usuarioSelecionado) return
-      console.log('usuario selecionado: ' + this.usuarioSelecionado)
-      console.log('usuario atual do ticket: ' + this.ticketFocado.userId)
+      // console.log('usuario selecionado: ' + this.usuarioSelecionado)
+      // console.log('usuario atual do ticket: ' + this.ticketFocado.userId)
       if (this.ticketFocado.userId === this.usuarioSelecionado && this.ticketFocado.userId != null) {
         this.$q.notify({
           type: 'info',
@@ -435,8 +451,10 @@ export default {
 }
 </script>
 
-<style lang="sass" scoped>
+<!-- <style lang="sass" scoped>
 #InfoCabecalhoChat
   .q-item__label + .q-item__label
     margin-top: 1.5px
-</style>
+.blur-effect
+  filter: blur(0px)
+</style> -->

@@ -1,12 +1,11 @@
 <template>
-  <div v-if="userProfile === 'admin'">
+  <div v-if="userProfile === 'admin' || userProfile === 'super' ">
     <q-table
       flat
       bordered
       square
       hide-bottom
-      class="my-sticky-dynamic q-ma-lg"
-      title="Etiquetas"
+      class="contact-table container-rounded-10 my-sticky-dynamic q-ma-lg"
       :data="etiquetas"
       :columns="columns"
       :loading="loading"
@@ -14,12 +13,20 @@
       :pagination.sync="pagination"
       :rows-per-page-options="[0]"
     >
-      <template v-slot:top-right>
+      <template v-slot:top-left>
+        <div>
+          <h2 :class="$q.dark.isActive ? ('text-white') : ''">
+          <q-icon name="mdi-tag-outline" ></q-icon>
+          Etiquetas
+        </h2>
         <q-btn
-          color="primary"
+          class="generate-button btn-rounded-50"
+          icon="eva-plus-outline"
           label="Adicionar"
           @click="etiquetaEdicao = {}; modalEtiqueta = true"
         />
+        </div>
+
       </template>
       <template v-slot:body-cell-color="props">
         <q-td class="text-center">
@@ -45,13 +52,15 @@
           <q-btn
             flat
             round
-            icon="edit"
+             :class="$q.dark.isActive ? ('text-white bg-black') : ''"
+            icon="eva-edit-outline"
             @click="editarEtiqueta(props.row)"
           />
           <q-btn
             flat
             round
-            icon="mdi-delete"
+             :class="$q.dark.isActive ? ('text-white bg-black') : ''"
+            icon="eva-trash-outline"
             @click="deletarEtiqueta(props.row)"
           />
         </q-td>
@@ -158,8 +167,8 @@ export default {
 
   },
   mounted () {
-    this.userProfile = localStorage.getItem('profile')
     this.listarEtiquetas()
+    this.userProfile = localStorage.getItem('profile')
   }
 }
 </script>

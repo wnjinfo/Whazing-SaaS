@@ -1,79 +1,200 @@
 <template>
-  <div class="q-pa-md bg-video">
-    <video autoplay muted loop>
-      <source src="/videologin.mp4" type="video/mp4" />
-    </video>
-    <q-layout class="vertical-center">
-      <q-page-container>
-        <q-page class="flex justify-center items-center">
-          <q-ajax-bar position="top" color="primary" size="5px" />
-          <q-card bordered class="card q-pa-md shadow-10" style="border-top: 5px solid #3E72AF; background-color: rgba(255,255,255,0.75); border-radius: 20px">
-            <q-card-section class="text-primary text-center">
-              <q-img src="/logo.png" spinner-color="white" style="height: 110px; max-width: 290px" class="q-mb-lg q-px-md" />
+  <div class="container">
+    <div class="login-section">
+      <q-layout class="full-width">
+        <q-page-container>
+          <q-page class="flex justify-center items-center">
+            <q-ajax-bar
+              position="top"
+              color="primary"
+              size="5px"
+            />
+            <div class="login-content">
+              <q-img
+                src="/logo.png"
+                spinner-color="white"
+                class="logo-image q-mb-lg q-px-md"
+                style="max-width: 100%"
+              />
               <q-separator spaced />
-            </q-card-section>
-            <q-card-section class="text-primary">
-              <div class="text-h6">Bem vindo!</div>
-              <div class="text-caption text-grey">Faça login...</div>
-            </q-card-section>
+              <div class="text-primary">
+                <div class="text-h6">Bem vindo!</div>
+                <div>
+                  <q-input
+                    rounded
+                    :color="$q.dark.isActive ? 'white ' : 'black'"
+                    class="q-mb-md"
+                    clearable
+                    v-model="form.email"
+                    placeholder="meu@email.com"
+                    @blur="$v.form.email.$touch"
+                    :error="$v.form.email.$error"
+                    error-message="Deve ser um e-mail válido."
+                    outlined
+                    @keypress.enter="fazerLogin"
+                  >
+                    <template v-slot:prepend>
+                      <q-icon
+                        name="mdi-email-outline"
+                        class="cursor-pointer"
+                        color='primary'
+                      />
+                    </template>
+                  </q-input>
 
-            <q-card-section>
-              <q-input class="q-mb-md" clearable v-model="form.email" placeholder="meu@email.com" @blur="$v.form.email.$touch" :error="$v.form.email.$error" error-message="Deve ser um e-mail válido." outlined @keypress.enter="fazerLogin">
-                <template v-slot:prepend>
-                  <q-icon name="mdi-email-outline" class="cursor-pointer" color='primary' />
-                </template>
-              </q-input>
-
-              <q-input outlined v-model="form.password" :type="isPwd ? 'password' : 'text'" @keypress.enter="fazerLogin">
-                <template v-slot:prepend>
-                  <q-icon name="mdi-shield-key-outline" class="cursor-pointer" color='primary' />
-                </template>
-                <template v-slot:append>
-                  <q-icon :name="isPwd ? 'visibility_off' : 'visibility'" class="cursor-pointer" @click="isPwd = !isPwd" />
-                </template>
-              </q-input>
-
+                  <q-input
+                    rounded
+                    :color="$q.dark.isActive ? 'white ' : 'black'"
+                    outlined
+                    v-model="form.password"
+                    :type="isPwd ? 'password' : 'text'"
+                    @keypress.enter="fazerLogin"
+                  >
+                    <template v-slot:prepend>
+                      <q-icon
+                        name="mdi-shield-key-outline"
+                        class="cursor-pointer"
+                        color='primary'
+                      />
+                    </template>
+                    <template v-slot:append>
+                      <q-icon
+                        :name="isPwd ? 'visibility_off' : 'visibility'"
+                        class="cursor-pointer"
+                        @click="isPwd = !isPwd"
+                      />
+                    </template>
+                  </q-input>
               <q-btn flat color="info" no-caps dense class="q-px-sm" label="Esqueci a senha" @click="modalEsqueciSenha = true" />
-            </q-card-section>
-            <q-card-actions>
+                </div>
               <q-btn flat color="info" no-caps dense class="q-px-sm" label="Registre-se, agora mesmo!" @click="redirecionarParaCadastro" />
-              <q-btn class="q-mr-sm q-my-lg" style="width: 150px" color="primary" :loading="loading" @click="fazerLogin">
-                Login
-                <span slot="loading">
-                  <q-spinner-puff class="on-left" />Logando...
-                </span>
-              </q-btn>
-            </q-card-actions>
+                <q-btn
+                  class="q-mr-sm q-my-lg generate-button btn-rounded-50"
+                  style="width: 150px"
+                  :loading="loading"
+                  @click="fazerLogin"
+                >
+                  Entrar
+                  <span slot="loading">
+                    <q-spinner-puff class="on-left" />Entrando...
+                  </span>
+                </q-btn>
+              </div>
+            </div>
+          </q-page>
+        </q-page-container>
+      </q-layout>
+    </div>
 
-            <q-inner-loading :showing="loading" />
-          </q-card>
-        </q-page>
-      </q-page-container>
-    </q-layout>
+<!-- Modal de Recuperação de Senha -->
+<q-dialog v-model="modalEsqueciSenha" persistent>
+  <q-card class="q-pa-md" style="max-width: 400px; margin: auto;">
+    <q-card-section>
+      <div class="row items-center">
+        <div class="col text-h6 text-center">Recuperar Senha</div>
+        <q-btn dense flat round icon="close" @click="modalEsqueciSenha = false" class="modal-close-btn col-auto" />
+      </div>
+    </q-card-section>
+    <q-card-section>
+      <q-form @submit.prevent="enviarEmail" class="flex flex-center column">
+        <q-input
+          rounded
+          :color="$q.dark.isActive ? 'white ' : 'black'"
+          clearable
+          v-model="emailRedefinicao"
+          placeholder="meu@email.com"
+          @blur="$v.form.email.$touch"
+          :error="$v.form.email.$error"
+          error-message="Deve ser um e-mail válido."
+          outlined
+          class="full-width"
+        >
+          <template v-slot:prepend>
+            <q-icon
+              name="mdi-email-outline"
+              class="cursor-pointer"
+              color='primary'
+            />
+          </template>
+        </q-input>
+        <q-btn class="q-my-lg generate-button btn-rounded-50" style="width: 150px" type="submit">
+          Enviar Email
+        </q-btn>
+      </q-form>
+      <div v-if="showAdditionalFields" class="flex flex-center column">
+        <q-input
+          rounded
+          :color="$q.dark.isActive ? 'white ' : 'black'"
+          class="q-mb-md full-width"
+          clearable
+          v-model="codigoVerificacao"
+          label="Código de Verificação"
+          outlined
+        >
+          <template v-slot:prepend>
+            <q-icon
+              name="mdi-keyboard"
+              class="cursor-pointer"
+              color='primary'
+            />
+          </template>
+        </q-input>
+        <q-input
+          rounded
+          :color="$q.dark.isActive ? 'white ' : 'black'"
+          outlined
+          v-model="novaSenha"
+          :type="isPwd ? 'password' : 'text'"
+          label="Nova Senha"
+          class="q-mb-md full-width"
+        >
+          <template v-slot:prepend>
+            <q-icon
+              name="mdi-shield-key-outline"
+              class="cursor-pointer"
+              color='primary'
+            />
+          </template>
+          <template v-slot:append>
+            <q-icon
+              :name="isPwd ? 'visibility_off' : 'visibility'"
+              class="cursor-pointer"
+              @click="isPwd = !isPwd"
+            />
+          </template>
+        </q-input>
+        <q-input
+          rounded
+          :color="$q.dark.isActive ? 'white ' : 'black'"
+          outlined
+          v-model="confirmarNovaSenha"
+          :type="isPwd ? 'password' : 'text'"
+          label="Confirmar Nova Senha"
+          class="q-mb-md full-width"
+        >
+          <template v-slot:prepend>
+            <q-icon
+              name="mdi-shield-key-outline"
+              class="cursor-pointer"
+              color='primary'
+            />
+          </template>
+          <template v-slot:append>
+            <q-icon
+              :name="isPwd ? 'visibility_off' : 'visibility'"
+              class="cursor-pointer"
+              @click="isPwd = !isPwd"
+            />
+          </template>
+        </q-input>
+        <q-btn class="q-my-lg generate-button btn-rounded-50" style="width: 150px" @click="redefinirSenha">
+          Redefinir Senha
+        </q-btn>
+      </div>
+    </q-card-section>
+  </q-card>
+</q-dialog>
 
-    <!-- Modal de Recuperação de Senha -->
-    <q-dialog v-model="modalEsqueciSenha" persistent>
-      <q-card>
-        <q-card-section>
-        <q-card-actions align="right">
-          <q-btn dense flat round icon="close" @click="modalEsqueciSenha = false" class="modal-close-btn" />
-        </q-card-actions>
-          <div class="text-h6">Recuperar Senha</div>
-        </q-card-section>
-        <q-card-section>
-          <q-form @submit.prevent="enviarEmail">
-            <q-input v-model="emailRedefinicao" label="Email" outlined />
-            <q-btn type="submit" label="Enviar Email" color="primary" class="q-mt-md" />
-          </q-form>
-          <div v-if="showAdditionalFields">
-            <q-input v-model="codigoVerificacao" label="Código de Verificação" outlined class="q-mt-md" />
-            <q-input v-model="novaSenha" type="password" label="Nova Senha" outlined class="q-mt-md" />
-            <q-input v-model="confirmarNovaSenha" type="password" label="Confirmar Nova Senha" outlined class="q-mt-md" />
-            <q-btn @click="redefinirSenha" label="Redefinir Senha" color="primary" class="q-mt-md" />
-          </div>
-        </q-card-section>
-      </q-card>
-    </q-dialog>
   </div>
 </template>
 
@@ -193,86 +314,45 @@ export default {
 </script>
 
 <style scoped>
-#login-app {
-  background: none;
+.container {
+  display: flex;
+  height: 100vh;
+  width: 100vw;
+  justify-content: center;
+  align-items: center;
 }
 
-.index {
-  width: 100%;
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  text-align: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  overflow: hidden;
-}
-
-.index h1 {
-  height: 150px;
-}
-
-.index h1 img {
-  height: 100%;
-}
-
-.index h2 {
-  color: #666;
-  margin-bottom: 200px;
-}
-
-.index h2 p {
-  margin: 0 0 50px;
-}
-
-.index .ivu-row-flex {
-  height: 100%;
-}
-
-#indexLizi {
-  position: absolute;
-  width: 100%;
-  top: 0;
-  bottom: 0;
-  overflow: hidden;
-}
-
-.bg {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-}
-
-.card {
-  width: 100%;
-  max-width: 430px;
-  height: 580px;
-  padding: 0px;
-  border-radius: 20px;
-}
-
-.vertical-center {
+.login-section {
+  width: 400px;
+  height: 50vh;
   display: flex;
   align-items: center;
-  justify-content: center;
-  height: 100vh;
+  justify-content: flex-end;
+  background-color: white;
+  border-radius: 10px
 }
 
-.bg-video video {
-  min-width: 100%;
-  min-height: 100%;
-}
-
-.bg-video {
-  position: fixed;
-  top: 0;
-  left: 0;
+.full-width {
   width: 100%;
-  height: 100%;
-  overflow: hidden;
-  z-index: -1;
 }
+
+.login-content {
+  text-align: center;
+}
+
+.video-container {
+  display: flex;
+  justify-content: flex-end;
+  width: 55%;
+}
+
+.logo-image {
+  height: auto;
+  max-width: 100%;
+}
+
+.fixed-layout {
+  width: 45%;
+}
+
 </style>

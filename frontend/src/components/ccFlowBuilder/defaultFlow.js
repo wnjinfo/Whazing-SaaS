@@ -63,7 +63,7 @@ const data = {
     // connector: 'Straight',
     // connector: 'Flowchart',
     // anchors: ['Top', 'Bottom'],
-    paintStyle: { strokeWidth: 3, stroke: '#8db1dd' }
+    paintStyle: { strokeWidth: 3, stroke: '#5c67f2' }
   }]
 }
 

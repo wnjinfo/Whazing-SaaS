@@ -5,9 +5,9 @@
     @hide="fecharModal"
     @show="abrirModal"
   >
-    <q-card style="width: 400px">
+    <q-card class="q-pa-lg container-rounded-10">
       <q-card-section class="q-pa-none">
-        <div class="full-width text-h6 row col bg-grey-4 q-pa-sm">Filas Usuário</div>
+        <div class="full-width text-h6 row col font-family-main q-pa-sm">Filas Usuário</div>
         <div
           style="font-size: 1em"
           class="text-caption text-bold row col q-px-sm q-pt-sm"
@@ -35,15 +35,15 @@
       </q-card-section>
       <q-card-actions align="right">
         <q-btn
-          label="Sair"
-          class="q-px-md q-mr-sm"
+          label="Cancelar"
+          class="q-px-md q-mr-sm btn-rounded-50"
           color="negative"
           v-close-popup
         />
         <q-btn
           label="Salvar"
-          class="q-px-md"
-          color="primary"
+          class="btn-rounded-50 generate-button"
+          icon="eva-save-outline"
           @click="handleFilaUsuario"
         />
       </q-card-actions>

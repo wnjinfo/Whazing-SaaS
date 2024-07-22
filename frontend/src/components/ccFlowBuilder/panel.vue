@@ -173,7 +173,7 @@ export default {
       const connParam = {
         source: from,
         target: to,
-        paintStyle: { strokeWidth: 3, stroke: '#8db1dd' }
+        paintStyle: { strokeWidth: 3, stroke: '#5c67f2' }
       }
       this.jsPlumb.connect(connParam, this.jsplumbConnectOptions)
       if (oldTo) {
@@ -297,7 +297,7 @@ export default {
           label: line.label ? line.label : '',
           connector: line.connector ? line.connector : '',
           anchors: line.anchors ? line.anchors : undefined,
-          paintStyle: { strokeWidth: 3, stroke: '#8db1dd' }
+          paintStyle: { strokeWidth: 3, stroke: '#5c67f2' }
         }
         this.jsPlumb.connect(connParam, this.jsplumbConnectOptions)
       }
@@ -321,7 +321,7 @@ export default {
         label: label
       })
 
-      conn.setPaintStyle({ strokeWidth: 3, stroke: '#8db1dd' })
+      conn.setPaintStyle({ strokeWidth: 3, stroke: '#5c67f2' })
 
       this.data.lineList.forEach(function (line) {
         if (line.from == from && line.to == to) {
@@ -331,6 +331,7 @@ export default {
     },
 
     deleteElement () {
+      if (this.activeElement.id === 'nodeC') return
       if (this.activeElement.type === 'node') {
         this.deleteNode(this.activeElement)
       } else if (this.activeElement.type === 'line') {

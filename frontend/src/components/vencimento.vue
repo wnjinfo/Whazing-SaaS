@@ -1,7 +1,7 @@
 <template>
   <div :class="['text-caption text-center q-pa-sm', { 'bg-red': isDueSoon }]">
     <q-badge align="middle" color="primary">
-      Seu plano vence dia {{ duedate }}!
+      {{ duedate }}
     </q-badge>
   </div>
 </template>

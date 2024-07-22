@@ -1,12 +1,13 @@
 <template>
-  <div v-if="userProfile === 'admin'">
+  <div v-if="userProfile === 'admin' || userProfile === 'super' ">
     <q-card
-      class="q-ma-sm "
+      class="q-ma-lg container-border container-rounded-10"
       square
     >
-      <div class="text-h5 q-pa-sm q-ma-sm">
-        Horário de Atendimento
-        <q-icon name="help">
+      <div class="q-pa-sm q-ma-sm">
+        <h2 :class="$q.dark.isActive ? ('text-white') : ''">
+          Horário de Atendimento
+          <q-icon name="help">
           <q-tooltip content-class="bg-light-blue-1 text-black q-pa-sm shadow-4">
             <span class="text-weight-medium"> Tipos de horário: </span>
             <span class="row col">
@@ -23,11 +24,12 @@
             </span>
           </q-tooltip>
         </q-icon>
+        </h2>
 
         <q-btn
-          color="primary"
+          class="btn-rounded-50 generate-button"
           label="Salvar"
-          class="float-right"
+          icon="eva-save-outline"
           @click="salvarHorariosAtendimento"
         />
       </div>
@@ -43,15 +45,16 @@
               square
               bordered
               flat
+              class="container-rounded-10"
             >
-              <div class="text-body1 text-bold bg-grey-3 q-pa-xs q-pl-sm">
+              <div class="font-family-main text-bold bg-grey-2 q-pa-xs q-pl-sm" :class="$q.dark.isActive ? ('text-black') : ''">
                 {{ dia.label }}
               </div>
               <q-separator />
               <q-card-section class="q-pt-none">
                 <q-option-group
                   inline
-                  class="row justify-between q-mb-md"
+                  class="row container-border container-rounded-10 q-mt-sm q-pr-md justify-between q-mb-md"
                   v-model="dia.type"
                   :options="optType"
                   color="primary"
@@ -112,14 +115,17 @@
     <q-card
       square
       bordered
-      class="q-ma-sm full-full-height"
+      class="q-ma-lg container-rounded-10 full-full-height"
     >
-      <div class="text-h6 q-pa-sm q-ma-sm">
-        Mensagem de Ausência
+      <div class="q-pa-sm q-ma-sm">
+        <h2>
+          Mensagem de Ausência
+        </h2>
+
         <q-btn
-          color="positive"
+          class="generate-button btn-rounded-50"
+          icon="eva-save-outline"
           label="Salvar"
-          class="float-right"
           @click="salvarMensagemAusencia"
         />
       </div>
@@ -273,19 +279,37 @@ export default {
       this.messageBusinessHours = data.messageBusinessHours
     },
     async salvarHorariosAtendimento () {
-      const { data } = await AtualizarHorariosAtendiemento(this.businessHours)
-      this.businessHours = data.businessHours
+      try {
+        const { data } = await AtualizarHorariosAtendiemento(this.businessHours)
+        this.businessHours = data.businessHours
+        this.$q.notify({
+          color: 'positive',
+          position: 'top',
+          message: 'Horário de funcionamento atualizado.'
+        })
+      } catch (e) {
+        console.log('Horário de funcionamento erro :' + e)
+      }
     },
     async salvarMensagemAusencia () {
-      const { data } = await AtualizarMensagemHorariosAtendiemento({
-        messageBusinessHours: this.messageBusinessHours
-      })
-      this.messageBusinessHours = data.messageBusinessHours
+      try {
+        const { data } = await AtualizarMensagemHorariosAtendiemento({
+          messageBusinessHours: this.messageBusinessHours
+        })
+        this.messageBusinessHours = data.messageBusinessHours
+        this.$q.notify({
+          color: 'positive',
+          position: 'top',
+          message: 'Mensagem de ausência atualizada.'
+        })
+      } catch (e) {
+        console.log('Mensagem de ausência erro :' + e)
+      }
     }
   },
   mounted () {
-    this.userProfile = localStorage.getItem('profile')
     this.listarMensagemHorariosAtendimento()
+    this.userProfile = localStorage.getItem('profile')
   }
 }
 </script>

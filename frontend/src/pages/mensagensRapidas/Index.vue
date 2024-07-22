@@ -5,8 +5,7 @@
       bordered
       square
       hide-bottom
-      class="my-sticky-dynamic q-ma-lg"
-      title="Mensagens Rápidas"
+      class="contact-table container-rounded-10 my-sticky-dynamic q-ma-lg"
       :data="mensagensRapidas"
       :columns="columns"
       :loading="loading"
@@ -14,12 +13,20 @@
       :pagination.sync="pagination"
       :rows-per-page-options="[0]"
     >
-      <template v-slot:top-right>
-        <q-btn
-          color="primary"
+      <template v-slot:top-left>
+        <div>
+          <h2  :class="$q.dark.isActive ? ('text-white') : ''">
+            <q-icon name="mdi-reply-all-outline" />
+            Mensagens rápidas
+          </h2>
+          <q-btn
+          class="generate-button btn-rounded-50"
+          icon="eva-plus-outline"
           label="Adicionar"
           @click="mensagemRapidaEmEdicao = {}; modalMensagemRapida = true"
         />
+        </div>
+
       </template>
       <template v-slot:body-cell-isActive="props">
         <q-td class="text-center">
@@ -30,18 +37,32 @@
           />
         </q-td>
       </template>
+      <template v-slot:body-cell-media="props">
+        <q-td :props="props">
+          <span v-if="props.row.media">
+            <a :href="generateMediaUrl(props.row.media)" target="_blank" style="text-decoration: underline; cursor: pointer;">
+              Abrir Arquivo
+            </a>
+          </span>
+          <span v-else>
+            Sem Arquivo
+          </span>
+        </q-td>
+      </template>
       <template v-slot:body-cell-acoes="props">
         <q-td class="text-center">
           <q-btn
             flat
             round
-            icon="edit"
+             :class="$q.dark.isActive ? ('text-white bg-black') : ''"
+            icon="eva-edit-outline"
             @click="editarMensagem(props.row)"
           />
           <q-btn
             flat
             round
-            icon="mdi-delete"
+             :class="$q.dark.isActive ? ('text-white bg-black') : ''"
+            icon="eva-trash-outline"
             @click="deletarMensagem(props.row)"
           />
         </q-td>
@@ -72,8 +93,8 @@ export default {
         { name: 'id', label: '#', field: 'id', align: 'left' },
         { name: 'key', label: 'Chave', field: 'key', align: 'left' },
         { name: 'message', label: 'Mensagem', field: 'message', align: 'left' },
+        { name: 'media', label: 'Arquivo', field: 'media', align: 'left' },
         { name: 'acoes', label: 'Ações', field: 'acoes', align: 'center' }
-
       ],
       pagination: {
         rowsPerPage: 40,
@@ -83,6 +104,9 @@ export default {
     }
   },
   methods: {
+    generateMediaUrl(mediaFileName) {
+      return `${process.env.URL_API}/public/${mediaFileName}`
+    },
     async listarMensagensRapidas () {
       const { data } = await ListarMensagensRapidas()
       this.mensagensRapidas = data
@@ -97,6 +121,8 @@ export default {
         newMensagens[idx] = mensagem
       }
       this.mensagensRapidas = [...newMensagens]
+      // console.log(this.mensagensRapidas)
+      // console.log('mensagemEditada')
     },
     editarMensagem (mensagem) {
       this.mensagemRapidaEmEdicao = { ...mensagem }

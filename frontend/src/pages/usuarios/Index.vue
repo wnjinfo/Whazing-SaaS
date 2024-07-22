@@ -1,8 +1,7 @@
 <template>
-  <div v-if="userProfile === 'admin'">
+  <div >
     <q-table
-      class="my-sticky-dynamic q-ma-lg"
-      title="Usuarios"
+      class="container-rounded-10 contact-table my-sticky-dynamic q-ma-lg"
       :data="usuarios"
       :columns="columns"
       :loading="loading"
@@ -10,12 +9,20 @@
       :pagination.sync="pagination"
       :rows-per-page-options="[0]"
     >
-      <template v-slot:top-right>
-        <q-input
+      <template v-slot:top-left>
+        <div>
+
+          <h2 :class="$q.dark.isActive ? ('text-white') : ''">
+            <q-icon name="mdi-account-group-outline q-pr-sm" />
+            Usuarios
+          </h2>
+
+          <div class="row flex-gap-1">
+            <q-input
           style="width: 300px"
           filled
           dense
-          class="col-grow"
+          class="contact-search col-grow"
           debounce="500"
           v-model="filter"
           clearable
@@ -27,14 +34,19 @@
           </template>
         </q-input>
         <q-btn
-          class="q-ml-md col"
+
+          class="generate-button btn-rounded-50 q-ml-md"
           :class="{
+            'text-white': $q.dark.isActive,
             'q-ml-none q-mt-md q-mr-md': $q.screen.width < 500
           }"
-          color="primary"
+          icon="eva-plus-outline "
           label="Adicionar"
           @click="usuarioSelecionado = {}; modalUsuario = true"
         />
+          </div>
+
+        </div>
 
       </template>
       <template v-slot:body-cell-acoes="props">
@@ -43,6 +55,7 @@
             flat
             round
             icon="mdi-arrow-decision-outline"
+            :class="$q.dark.isActive ? ('text-white bg-black') : ''"
             @click="gerirFilasUsuario(props.row)"
           >
             <q-tooltip>
@@ -52,13 +65,15 @@
           <q-btn
             flat
             round
-            icon="edit"
+            icon="eva-edit-outline"
+            :class="$q.dark.isActive ? ('text-white bg-black') : ''"
             @click="editarUsuario(props.row)"
           />
           <q-btn
             flat
             round
-            icon="mdi-delete"
+            icon="eva-trash-outline"
+            :class="$q.dark.isActive ? ('text-white bg-black') : ''"
             @click="deletarUsuario(props.row)"
           />
         </q-td>
@@ -144,7 +159,7 @@ export default {
         }
       })
       const usersObj = [...this.usuarios, ...newUsers]
-      this.usuarios = usersObj
+      this.usuarios = usersObj.filter(usuario => usuario.profile !== 'superadmin')
     },
     UPDATE_USUARIO (usuario) {
       let newUsuarios = [...this.usuarios]
@@ -240,9 +255,9 @@ export default {
     }
   },
   async mounted () {
-    this.userProfile = localStorage.getItem('profile')
     await this.listarFilas()
     await this.listarUsuarios()
+    this.userProfile = localStorage.getItem('profile')
   }
 }
 </script>

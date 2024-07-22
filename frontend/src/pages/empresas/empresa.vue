@@ -1,18 +1,53 @@
 <template>
-  <div>
-    <q-table class="my-sticky-dynamic q-ma-lg" title="Empresas" :data="filterEmpresas" :columns="columns"
-      :loading="loading" row-key="id" :pagination.sync="pagination" virtual-scroll :virtual-scroll-item-size="48"
-      :virtual-scroll-sticky-size-start="48" :rows-per-page-options="[0]">
-      <template v-slot:top-right>
-        <q-input style="width: 300px" filled dense class="col-grow" debounce="500" v-model="filter" clearable
-          placeholder="Localize" @input="filtrarEmpresa">
+  <div >
+    <q-table
+      class="container-rounded-10 contact-table my-sticky-dynamic q-ma-lg"
+      :data="filterEmpresas"
+      :columns="columns"
+      :loading="loading"
+      row-key="id"
+      :pagination.sync="pagination"
+      :rows-per-page-options="[0]"
+    >
+      <template v-slot:top-left>
+        <div>
+
+          <h2 :class="$q.dark.isActive ? ('text-white') : ''">
+            <q-icon name="mdi-office-building q-pr-sm" />
+            Empresas
+          </h2>
+
+          <div class="row flex-gap-1">
+            <q-input
+          style="width: 300px"
+          filled
+          dense
+          class="contact-search col-grow"
+          debounce="500"
+          v-model="filter"
+          clearable
+          placeholder="Localize"
+          @input="filtrarEmpresa"
+        >
           <template v-slot:prepend>
             <q-icon name="search" />
           </template>
         </q-input>
-        <q-btn class="q-ml-md col" :class="{
-          'q-ml-none q-mt-md q-mr-md': $q.screen.width < 500
-        }" color="primary" label="Adicionar" @click="tenantSelecionado = {}; modalEmpresa = true; isEdit = false" />
+        <q-btn
+
+          class="generate-button btn-rounded-50 q-ml-md"
+          :class="{
+            'text-white': $q.dark.isActive,
+            'q-ml-none q-mt-md q-mr-md': $q.screen.width < 500
+          }"
+          icon="eva-plus-outline "
+          label="Adicionar"
+          @click="tenantSelecionado = {}; modalEmpresa = true; isEdit = false"
+        />
+          </div>
+
+        </div>
+
       </template>
       <template v-slot:body="props">
         <q-tr :props="props">
@@ -65,12 +100,12 @@
                 Listar Conexões
               </q-tooltip>
             </q-btn>
-            <q-btn flat round icon="edit" @click="editarEmpresa(props.row)">
+            <q-btn flat round icon="eva-edit-outline" @click="editarEmpresa(props.row)">
               <q-tooltip content-class="shadow-4" :offset="[10, 10]">
                 Editar Empresa
               </q-tooltip>
             </q-btn>
-            <q-btn flat round icon="delete" @click="deletarTenant(props.row)">
+            <q-btn flat round icon="eva-trash-outline" @click="deletarTenant(props.row)">
               <q-tooltip content-class="shadow-4" :offset="[10, 10]">
                 Deletar Empresa
               </q-tooltip>
@@ -128,9 +163,14 @@ export default {
       listaWhatsapp: [],
       filterWhatsapp: [],
       pagination: {
-        page: 1,
-        rowsPerPage: 10,
-        rowsNumber: 0
+        rowsPerPage: 40,
+        rowsNumber: 0,
+        lastIndex: 0
+      },
+      params: {
+        pageNumber: 1,
+        searchParam: null,
+        hasMore: true
       },
       filter: '',
       modalEmpresa: false,

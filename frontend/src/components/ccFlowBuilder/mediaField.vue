@@ -23,9 +23,9 @@
           append
           :max-files="1"
           counter
-          :max-file-size="10242880"
-          :max-total-size="10242880"
-          accept=".txt, .jpg, .png, image/jpeg, .jpeg, image/*, .pdf, .doc, .docx, .xls, .xlsx, .zip, .ppt, .pptx, .mp4, .mp3, .ogg, .mpeg"
+          :max-file-size="52428800"
+          :max-total-size="52428800"
+          accept=".txt, .jpg, .png, image/jpeg, .jpeg, image/*, .pdf, .doc, .docx, .xls, .xlsx, .zip, .ppt, .pptx, .mp4, .mp3, .ogg"
           @rejected="onRejectedFiles"
           @input="getMediaUrl"
         />
@@ -134,6 +134,21 @@
             </q-tooltip>
           </q-btn>
         </div>
+        <!-- <q-input
+          v-if="cMediaUrl && $attrs.element.data.type.indexOf('audio') == -1"
+          dense
+          outlined
+          label="Subtítulo"
+          v-model="$attrs.element.data.caption"
+          color="black"
+          class="z-max q-pa-none q-mt-sm"
+        >
+
+          <template
+            slot="after"
+          >
+          </template>
+        </q-input> -->
 
       </q-card-section>
     </q-card>
@@ -230,7 +245,7 @@ export default {
         html: true,
         message: `Ops... Ocorreu um erro! <br>
         <ul>
-          <li>Arquivo deve ter no máximo 5MB.</li>
+          <li>Verifique o tamanho do arquivo.</li>
           <li>Priorize o envio de imagem ou vídeo.</li>
         </ul>`,
         type: 'negative',

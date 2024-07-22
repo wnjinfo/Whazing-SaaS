@@ -91,6 +91,7 @@ const userId = +localStorage.getItem('userId')
 import { ListarContatos } from 'src/service/contatos'
 import { CriarTicket } from 'src/service/tickets'
 import ContatoModal from 'src/pages/contatos/ContatoModal'
+import { mapGetters } from 'vuex'
 
 export default {
   name: 'ModalNovoTicket',
@@ -109,6 +110,9 @@ export default {
       modalContato: false,
       loading: false
     }
+  },
+  computed: {
+    ...mapGetters(['whatsapps'])
   },
   methods: {
     fecharModal () {
@@ -143,36 +147,111 @@ export default {
     },
     async criarTicket () {
       if (!this.contatoSelecionado.id) return
-      this.loading = true
-      try {
-        const { data: ticket } = await CriarTicket({
-          contactId: this.contatoSelecionado.id,
-          isActiveDemand: true,
-          userId: userId,
-          status: 'open'
-        })
-        await this.$store.commit('SET_HAS_MORE', true)
-        await this.$store.dispatch('AbrirChatMensagens', ticket)
-        this.$q.notify({
-          message: `Atendimento Iniciado || ${ticket.contact.name} - Ticket: ${ticket.id}`,
-          type: 'positive',
-          progress: true,
-          position: 'top',
-          actions: [{
-            icon: 'close',
-            round: true,
-            color: 'white'
-          }]
-        })
-        this.fecharModal()
-        if (this.$route.name !== 'atendimento') {
-          this.$router.push({ name: 'atendimento' })
+      const itens = []
+      const channelId = null
+      this.whatsapps.forEach(w => {
+        if (w.type === 'whatsapp') {
+          itens.push({ label: w.name, value: w.id })
         }
-      } catch (error) {
-        console.error(error)
-        this.$notificarErro('Ocorreu um erro ao iniciar o atendimento!', error)
-      }
+      })
+      this.loading = true
+      this.$q.dialog({
+        title: `Contato: ${this.contatoSelecionado.name}`,
+        message: 'Selecione o canal para iniciar o atendimento.',
+        options: {
+          type: 'radio',
+          model: channelId,
+          // inline: true
+          isValid: v => !!v,
+          items: itens
+        },
+        ok: {
+          push: true,
+          color: 'positive',
+          label: 'Iniciar'
+        },
+        cancel: {
+          push: true,
+          label: 'Cancelar',
+          color: 'negative'
+        },
+        persistent: true
+      }).onOk(async channelId => {
+        if (!channelId) return
+        this.loading = true
+        try {
+          const { data: ticket } = await CriarTicket({
+            contactId: this.contatoSelecionado.id,
+            isActiveDemand: true,
+            userId: userId,
+            channel: 'whatsapp',
+            channelId,
+            status: 'open'
+          })
+          await this.$store.commit('SET_HAS_MORE', true)
+          await this.$store.dispatch('AbrirChatMensagens', ticket)
+          this.$q.notify({
+            message: `Atendimento Iniciado || ${ticket.contact.name} - Ticket: ${ticket.id}`,
+            type: 'positive',
+            position: 'top',
+            progress: true,
+            actions: [{
+              icon: 'close',
+              round: true,
+              color: 'white'
+            }]
+          })
+          this.fecharModal()
+
+          this.$router.push({ name: 'chat', params: { ticketId: ticket.id } })
+        } catch (error) {
+          if (error.status === 409) {
+            const ticketAtual = JSON.parse(error.data.error)
+            this.abrirAtendimentoExistente(this.contatoSelecionado, ticketAtual)
+            this.fecharModal()
+            return
+          }
+          this.$notificarErro('Ocorreu um erro!', error)
+        }
+        this.loading = false
+      })
+
       this.loading = false
+    },
+    abrirChatContato (ticket) {
+      // caso esteja em um tamanho mobile, fechar a drawer dos contatos
+      if (this.$q.screen.lt.md && ticket.status !== 'pending') {
+        this.$root.$emit('infor-cabecalo-chat:acao-menu')
+      }
+      if (!(ticket.status !== 'pending' && (ticket.id !== this.$store.getters.ticketFocado.id || this.$route.name !== 'chat'))) return
+      this.$store.commit('SET_HAS_MORE', true)
+      this.$store.dispatch('AbrirChatMensagens', ticket)
+    },
+    abrirAtendimentoExistente (contato, ticket) {
+      this.$q.dialog({
+        title: 'Atenção!!',
+        message: `${contato.name} possui um atendimento em curso (Atendimento: ${ticket.id}). Deseja abrir o atendimento?`,
+        cancel: {
+          label: 'Não',
+          color: 'primary',
+          push: true
+        },
+        ok: {
+          label: 'Sim',
+          color: 'negative',
+          push: true
+        },
+        persistent: true
+      }).onOk(async () => {
+        try {
+          this.abrirChatContato(ticket)
+        } catch (error) {
+          this.$notificarErro(
+            'Não foi possível atualizar o token',
+            error
+          )
+        }
+      })
     }
   },
   destroyed () {

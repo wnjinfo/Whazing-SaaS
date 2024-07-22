@@ -200,6 +200,16 @@ export default {
           })
           .catch(error => {
             this.loading = false
+            this.$q.notify({
+              message: 'Atendimento nessa conexão já iniciado na aba aberto/pendente ou solicite ao admin para abrir um novo atendimento na opção contato.',
+              type: 'warning',
+              progress: true,
+              actions: [{
+                icon: 'close',
+                round: true,
+                color: 'white'
+              }]
+            })
             console.error(error)
             this.$notificarErro('Não foi possível atualizar o status', error)
           })

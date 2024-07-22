@@ -30,7 +30,7 @@
                 <VEmojiPicker
                   style="width: 40vw"
                   :showSearch="false"
-                  :emojisByRow="20"
+                  :emojisByRow="calculateEmojisByRow()"
                   labelSearch="Localizar..."
                   lang="pt-BR"
                   @select="onInsertSelectEmoji"
@@ -81,6 +81,19 @@ export default {
   name: 'MessageField',
   components: { VEmojiPicker },
   methods: {
+    onResize() {
+      this.$forceUpdate()
+    },
+    calculateEmojisByRow() {
+      const screenWidth = window.innerWidth
+      if (screenWidth < 600) {
+        return 5
+      } else if (screenWidth >= 600 && screenWidth < 1200) {
+        return 10
+      } else {
+        return 20
+      }
+    },
     onInsertSelectEmoji (emoji) {
       const self = this
       var tArea = this.$refs.inputEnvioMensagem
@@ -102,9 +115,26 @@ export default {
         tArea.selectionStart = tArea.selectionEnd = cursorPos + emoji.data.length
       }, 10)
     }
+  },
+  mounted() {
+    window.addEventListener('resize', this.onResize)
+  },
+  beforeDestroy() {
+    window.removeEventListener('resize', this.onResize)
   }
 }
 </script>
 
 <style lang="scss" scoped>
+
+.emoji-picker {
+  width: 100%;
+}
+
+@media (min-width: 600px) {
+  .emoji-picker {
+    width: 50vw;
+  }
+}
+
 </style>

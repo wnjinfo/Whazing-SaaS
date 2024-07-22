@@ -21,7 +21,7 @@
           :stamp="dataInWords(mensagem.createdAt)"
           :sent="mensagem.fromMe"
           class="text-weight-medium"
-          :bg-color="mensagem.fromMe ? 'grey-2' : $q.dark.isActive ? 'blue-2' : 'blue-1'"
+          :bg-color="mensagem.fromMe ? ($q.dark.isActive ? 'grey-10' : 'grey-2') : ($q.dark.isActive ? 'blue-2' : 'blue-1')"
           :class="{ pulseIdentications: identificarMensagem == `chat-message-${mensagem.id}` }">
           <!-- :bg-color="mensagem.fromMe ? 'grey-2' : 'secondary' " -->
           <div style="min-width: 100px; max-width: 350px;"
@@ -248,6 +248,12 @@
                 " >
                 </video>
             </template>
+            <template v-if="mensagem.mediaType === 'buttonsMessage'">
+              <div style="margin-top:20px" v-html="formatarBotaoWhatsapp(mensagem.body)"></div>
+            </template>
+            <template v-if="mensagem.mediaType === 'listMessage'">
+              <div style="margin-top:20px" v-html="formatarBotaoWhatsapp(mensagem.body)"></div>
+            </template>
             <template v-if=" !['audio', 'vcard', 'image', 'video'].includes(mensagem.mediaType) && mensagem.mediaUrl ">
               <div class="text-center full-width hide-scrollbar no-scroll">
                 <iframe v-if=" isPDF(mensagem.mediaUrl) "
@@ -283,7 +289,7 @@
                   <div class="row items-center q-ma-xs ">
                     <div class="ellipsis col-grow q-pr-sm"
                       style="max-width: 290px">
-                      {{ farmatarMensagemWhatsapp(mensagem.body || mensagem.mediaName) }}
+                      {{ formatarMensagemWhatsapp(mensagem.body || mensagem.mediaName) }}
                     </div>
                     <q-icon name="mdi-download" />
                   </div>
@@ -291,12 +297,13 @@
               </div>
             </template>
             <div v-linkified
-              v-if=" !['productMessage', 'contactMessage', 'application', 'audio', 'locationMessage', 'liveLocationMessage', 'interactiveMessage', 'pollCreationMessageV3', 'video', 'image'].includes(mensagem.mediaType) "
+              v-if=" !['listMessage', 'buttonsMessage', 'productMessage', 'contactMessage', 'application', 'audio', 'locationMessage', 'liveLocationMessage', 'interactiveMessage', 'pollCreationMessageV3'].includes(mensagem.mediaType) "
               :class=" { 'q-mt-sm': mensagem.mediaType !== 'chat' } "
               class="q-message-container row items-end no-wrap">
-              <div v-html=" farmatarMensagemWhatsapp(mensagem.body) ">
+              <div v-html=" formatarMensagemWhatsapp(mensagem.body) ">
               </div>
             </div>
+
           </div>
         </q-chat-message>
       </template>
@@ -403,7 +410,7 @@ export default {
           messageId: this.mensagemAtual.messageId,
           body: this.mensagemAtual.body
         })
-        console.log('Mensagem editada com sucesso')
+        // console.log('Mensagem editada com sucesso')
         this.showModaledit = false
         this.atualizarMensagem(updatedMessage)
       } catch (error) {
@@ -429,7 +436,7 @@ export default {
       this.modalContato = false
     },
     saveContact (contact) {
-      console.log('Contato salvo:', contact)
+      // console.log('Contato salvo:', contact)
       // Aqui você pode adicionar a lógica para salvar o contato
     },
     getMapThumbnail(body) {
@@ -564,12 +571,15 @@ export default {
   },
   mounted () {
     this.scrollToBottom()
+    window.addEventListener('resize', this.onResize)
     // this.$refs.audioMessage.forEach(element => {
     //   element.playbackRate = 2
     // })
   },
-  destroyed () {
-  }
+  beforeDestroy() {
+    window.removeEventListener('resize', this.onResize)
+  },
+  destroyed() {}
 }
 </script>
 
@@ -587,4 +597,15 @@ export default {
   left: -35px;
   z-index: 99999;
 }
+
+.emoji-picker {
+  width: 100%;
+}
+
+@media (min-width: 600px) {
+  .emoji-picker {
+    width: 50vw;
+  }
+}
+
 </style>

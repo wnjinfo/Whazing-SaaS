@@ -21,12 +21,11 @@ export const notificarErro = (msg, error = null) => {
     <p class="text-bold">
       <span class="text-bold">${msg}</span>
     </p>
-    <p>Detail: ${erro}</p>
     `
   }
 
   Notify.create({
-    type: 'negative',
+    type: 'warning',
     progress: true,
     position: 'top',
     timeout: 500,

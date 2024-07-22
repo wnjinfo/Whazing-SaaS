@@ -1,25 +1,26 @@
 <template>
   <div class="flex justify-center" style="width: 100%;">
-    <q-card class="q-my-md q-pa-sm" style="width: 100%;">
-      <q-card-section class="q-pa-md">
-        <div class="row q-gutter-md justify-center">
+      <q-card class="dashboard-container-cards">
+      <q-card-section class="dashboard-cards q-pa-md q-mb-sm">
+        <div class="row justify-center ">
           <div class="col-xs-12 col-sm-shrink">
             <q-card
               flat
               bordered
+              :class="{'bg-dark text-white' : $q.dark.isActive}"
               class="my-card full-height"
-              style="max-width: 220px; background-color: #ff2a00; color: white"
+
             >
               <q-card-section class="text-center">
+                <p class="my-card-text text-caption my-card-content">Empresas cadastrada</p>
                 <div class="row items-center">
                   <div class="col">
-                    <p class="text-h4 text-bold text-center text-branco">
+                    <p class="my-card-number my-card-content text-h4 text-bold text-center">
                       {{ quantidadeTenants }}
                     </p>
-                    <p class="text-caption text-branco">Empresas cadastrada</p>
                   </div>
                   <div class="col">
-                    <q-icon name="mdi-office-building" size="lg" color="white" class="text-white" />
+                    <q-icon name="mdi-office-building" size="xl" color="#2f2f2f" class="my-card-content" />
                   </div>
                 </div>
               </q-card-section>
@@ -29,19 +30,20 @@
             <q-card
               flat
               bordered
+              :class="{'bg-dark text-white' : $q.dark.isActive}"
               class="my-card full-height"
-              style="max-width: 220px; background-color: #01c853; color: white"
+
             >
               <q-card-section class="text-center">
+                    <p class="my-card-text text-caption my-card-content">Empresas Ativas</p>
                 <div class="row items-center">
                   <div class="col">
-                    <p class="text-h4 text-bold text-center text-branco">
+                    <p class="my-card-number my-card-content text-h4 text-bold text-center">
                       {{ quantidadeTenantsActive }}
                     </p>
-                    <p class="text-caption text-branco">Empresas Ativas</p>
                   </div>
                   <div class="col">
-                    <q-icon name="mdi-office-building" size="lg" color="white" class="text-white" />
+                    <q-icon name="mdi-office-building-plus" size="xl" color="#2f2f2f" class="my-card-content" />
                   </div>
                 </div>
               </q-card-section>
@@ -51,19 +53,20 @@
             <q-card
               flat
               bordered
+              :class="{'bg-dark text-white' : $q.dark.isActive}"
               class="my-card full-height"
-              style="max-width: 220px; background-color: #2879ff; color: white"
+
             >
               <q-card-section class="text-center">
+                <p class="my-card-text text-caption my-card-content">Empresas Inativas</p>
                 <div class="row items-center">
                   <div class="col">
-                    <p class="text-h4 text-bold text-center text-branco">
+                    <p class="my-card-number my-card-content text-h4 text-bold text-center">
                       {{ quantidadeTenants - quantidadeTenantsActive }}
                     </p>
-                    <p class="text-caption text-branco">Empresas Inativas</p>
                   </div>
                   <div class="col">
-                    <q-icon name="mdi-office-building" size="lg" color="white" class="text-white" />
+                    <q-icon name="mdi-office-building-remove" size="xl" color="#2f2f2f" class="my-card-content" />
                   </div>
                 </div>
               </q-card-section>
@@ -73,19 +76,21 @@
             <q-card
               flat
               bordered
+              :class="{'bg-dark text-white' : $q.dark.isActive}"
               class="my-card full-height"
-              style="max-width: 220px; background-color: #fec107; color: white"
+
             >
               <q-card-section class="text-center">
+                <p class="my-card-text text-caption my-card-content">Total de Usuarios</p>
                 <div class="row items-center">
                   <div class="col">
-                    <p class="text-h4 text-bold text-center text-branco">
+                    <p class="my-card-number my-card-content text-h4 text-bold text-center">
                       {{ quantidadeUsuarios }}
                     </p>
-                    <p class="text-caption text-branco">Total de Usuarios</p>
+
                   </div>
                   <div class="col">
-                    <q-icon name="mdi-account-multiple" size="lg" color="white" class="text-white" />
+                    <q-icon name="mdi-account-multiple" size="xl" color="#2f2f2f" class="my-card-content" />
                   </div>
                 </div>
               </q-card-section>
@@ -95,19 +100,21 @@
             <q-card
               flat
               bordered
+              :class="{'bg-dark text-white' : $q.dark.isActive}"
               class="my-card full-height"
-              style="max-width: 220px; background-color: #fa8900; color: white"
+
             >
               <q-card-section class="text-center">
+                <p class="my-card-text text-caption my-card-content">Total de Mensagens</p>
                 <div class="row items-center">
                   <div class="col">
-                    <p class="text-h4 text-bold text-center text-branco">
+                    <p class="my-card-number my-card-content text-h4 text-bold text-center">
                       {{ mensagem }}
                     </p>
-                    <p class="text-caption text-branco">Total de Mensagens</p>
+
                   </div>
                   <div class="col">
-                    <q-icon name="mdi-forum-outline" size="lg" color="white" class="text-white" />
+                    <q-icon name="mdi-forum-outline" size="xl" color="#2f2f2f" class="my-card-content" />
                   </div>
                 </div>
               </q-card-section>
@@ -117,19 +124,21 @@
             <q-card
               flat
               bordered
+              :class="{'bg-dark text-white' : $q.dark.isActive}"
               class="my-card full-height"
-              style="max-width: 220px; background-color: #3cff00; color: white"
+
             >
               <q-card-section class="text-center">
+                <p class="my-card-text text-caption my-card-content">Total de Conexões</p>
                 <div class="row items-center">
                   <div class="col">
-                    <p class="text-h4 text-bold text-center text-branco">
+                    <p class="my-card-number my-card-content text-h4 text-bold text-center">
                       {{ whatsapp }}
                     </p>
-                    <p class="text-caption text-branco">Total de Conexões</p>
+
                   </div>
                   <div class="col">
-                    <q-icon name="mdi-whatsapp" size="lg" color="white" class="text-white" />
+                    <q-icon name="mdi-whatsapp" size="xl" color="#2f2f2f" class="my-card-content" />
                   </div>
                 </div>
               </q-card-section>

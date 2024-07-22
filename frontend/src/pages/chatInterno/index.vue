@@ -1,8 +1,9 @@
 <template>
-  <div class="WAL position-relative bg-grey-4" :style="style">
-    <q-layout view="lHh Lpr lFf" class="WAL__layout shadow-3" container>
-      <q-header elevated>
-        <q-toolbar class="bg-grey-3 text-black">
+    <div class="wall whatsapp-app position-relative " :class="$q.dark.isActive ? ('text-white bg-black') : 'bg-grey-4'" :style="style">
+      <div class="bar-background">s</div>
+      <q-layout view="lHh Lpr lFf" class="wall-box whatsapp-layout shadow-3" container>
+      <q-header class="full-width" style="position: fixed !important; top: unset; bottom:unset ">
+        <q-toolbar class="bg-white text-black">
           <q-btn round flat icon="keyboard_arrow_left" class="WAL__drawer-open q-mr-sm" @click="toggleLeftDrawer" />
 
           <q-btn round flat :disable="cDisableActions">
@@ -21,23 +22,21 @@
         </q-toolbar>
       </q-header>
 
-      <q-drawer v-model="leftDrawerOpen" show-if-above bordered :breakpoint="690">
+      <q-drawer class="overflow-y-off" v-model="leftDrawerOpen" show-if-above bordered :breakpoint="690" >
         <q-toolbar class="bg-grey-3">
-          <q-btn flat class="bg-padrao btn-rounded" icon="mdi-home"
-            @click="() => $router.push({ name: 'home-dashboard' })">
-            <q-tooltip content-class="bg-padrao text-grey-9 text-bold">
+          <q-btn flat class="btn-rounded" :class="$q.dark.isActive ? ('text-white bg-black') : ''" icon="eva-undo-outline" @click="() => $router.push({ name: 'home-dashboard' })">
+            <q-tooltip content-class="text-bold" >
               Retornar ao menu
             </q-tooltip>
           </q-btn>
           <q-separator />
-          <q-btn flat class="bg-padrao btn-rounded" icon="mdi-whatsapp"
-            @click="() => $router.push({ name: 'chat-empty' })">
-            <q-tooltip content-class="bg-padrao text-grey-9 text-bold">
-              Atendimentos WhatsApp
+          <q-btn flat class="btn-rounded q-ml-xs" :class="$q.dark.isActive ? ('text-white bg-black') : ''" icon="eva-message-circle-outline" @click="() => $router.push({ name: 'chat-empty' })">
+            <q-tooltip content-class="text-bold">
+              Atendimento
             </q-tooltip>
           </q-btn>
           <q-space />
-          <q-btn round flat icon="close" class="WAL__drawer-close" @click="toggleLeftDrawer" />
+<q-btn round flat icon="close" class="WAL__drawer-close" @click="toggleLeftDrawer" />
         </q-toolbar>
 
         <q-toolbar class="bg-grey-2">
@@ -49,14 +48,14 @@
           </q-input>
         </q-toolbar>
 
-        <q-tabs v-model="tab" inline-label class="text-teal" dense>
-          <q-tab name="users" icon="person" label="Usuários" />
-          <q-tab name="groups" icon="groups" label="Grupos" />
+        <q-tabs v-model="tab" inline-label class="q-pa-sm flex-gap-1 btn-rounded" dense narrow-indicator :active-bg-color="$q.dark.isActive ? 'primary' : 'grey-3'" align="justify" :class="{'text-white': $q.dark.isActive, 'text-black': !$q.dark.isActive}">
+          <q-tab :ripple="false" class="q-mr-sm btn-rounded-50 " name="users" icon="eva-person-outline" :class="$q.dark.isActive ? ('text-white') : 'bg-grey-3 q-tab-personalized'" label="Usuários"></q-tab>
+          <q-tab :ripple="false" class=" btn-rounded-50 " name="groups" icon="eva-people-outline" label="Equipes" :class="$q.dark.isActive ? ('text-white') : 'bg-grey-3 q-tab-personalized'"></q-tab>
         </q-tabs>
         <template>
           <q-tab-panels v-model="tab" animated swipeable>
             <q-tab-panel name="users" class="tabChat">
-              <q-scroll-area style="height: calc(96vh - 158px) !important">
+              <q-scroll-area style="height: calc(96vh - 158px) !important;">
                 <q-list>
                   <q-item v-for="(contact) in searchedUsers" :key="contact.id" clickable v-ripple
                     @click="openChat(contact, false)">
@@ -208,18 +207,17 @@
       <q-footer>
         <q-toolbar class="bg-grey-3 text-black row">
           <template>
-            <q-btn round flat :disable="cDisableActions" @click="abrirEnvioArquivo">
-            <q-icon name="attachment" class="rotate-135" />
-          </q-btn>
-            <q-btn v-if="$q.screen.width > 500" flat dense icon="mdi-emoticon-happy-outline"
-              :disable="cDisableActions || cMostrarEnvioArquivo" class="bg-padrao btn-rounded q-mx-xs"
-              :color="$q.dark.isActive ? 'white' : ''">
+            <q-btn v-if="$q.screen.width > 500" :class="$q.dark.isActive ? ('text-white bg-black') : ''" icon="mdi-paperclip" round flat :disable="cDisableActions" @click="abrirEnvioArquivo" dense :color="$q.dark.isActive ? 'white' : ''">
+              <q-tooltip content-class="text-bold">
+                Anexar Arquivo
+              </q-tooltip>
+            </q-btn>
+            <q-btn v-if="$q.screen.width > 500" flat dense icon="mdi-emoticon-happy-outline" :disable="cDisableActions || cMostrarEnvioArquivo" class="btn-rounded q-mx-xs" :class="$q.dark.isActive ? ('text-white bg-black') : ''" :color="$q.dark.isActive ? 'white' : ''">
               <q-tooltip content-class="text-bold">
                 Emoji
               </q-tooltip>
               <q-menu anchor="top right" self="bottom middle" :offset="[5, 40]">
-                <VEmojiPicker style="width: 40vw" :showSearch="false" :emojisByRow="20" labelSearch="Localizar..."
-                  lang="pt-BR" @select="onInsertSelectEmoji" />
+                <VEmojiPicker style="width: 40vw" :showSearch="false" :emojisByRow="20" labelSearch="Localizar..." lang="pt-BR" @select="onInsertSelectEmoji" />
               </q-menu>
             </q-btn>
             <q-input hide-bottom-space :disable="cDisableActions" v-show="!cMostrarEnvioArquivo" ref="inputEnvioMensagem"
@@ -248,8 +246,7 @@
               @keydown.exact.enter.prevent="() => arquivos.length > 0 ? sendMessage() : ''"
               accept=".txt, .xml, .jpg, .png, image/jpeg, .pdf, .doc, .docx, .mp4, .xls, .xlsx, .jpeg, .zip, .ppt, .pptx, image/*"
               @rejected="onRejectedFiles" />
-            <q-btn ref="btnEnviarMensagem" @click="sendMessage()" flat icon="mdi-send" :disable="cDisableActions"
-              class="bg-padrao btn-rounded q-mx-xs" :color="$q.dark.isActive ? 'white' : ''">
+              <q-btn :class="$q.dark.isActive ? ('text-white bg-black') : ''" ref="btnEnviarMensagem" @click="sendMessage()" flat icon="mdi-send" :disable="cDisableActions" class="btn-rounded q-mx-xs" :color="$q.dark.isActive ? 'white' : ''">
               <q-tooltip content-class=" text-bold">
                 Enviar Mensagem
               </q-tooltip>
@@ -258,9 +255,6 @@
         </q-toolbar>
       </q-footer>
     </q-layout>
-    <audio ref="audioNotification">
-      <source :src="alertSound" type="audio/mp3">
-    </audio>
   </div>
 </template>
 
@@ -275,12 +269,10 @@ import VueEasyLightbox from 'vue-easy-lightbox'
 import { VEmojiPicker } from 'v-emoji-picker'
 import whatsBackground from 'src/assets/wa-background.png'
 import whatsBackgroundDark from 'src/assets/wa-background-dark.jpg'
-import alertSound from 'src/assets/chatInterno.mp3'
 import mixinSockets from 'src/pages/atendimento/mixinSockets'
-import socketInitial from 'src/layouts/socketInitial'
 
 export default {
-  mixins: [mixinSockets, socketInitial],
+  mixins: [mixinSockets],
   name: 'WhatsappLayout',
   props: {
     isLineDate: {
@@ -301,7 +293,6 @@ export default {
       message: '',
       newMenssage: '',
       urlMedia: '',
-      alertSound,
       tab: 'users',
       searchParam: '',
       searchedUsers: [],
@@ -324,7 +315,6 @@ export default {
     ...mapGetters([
       'userChat',
       'mensagemChatInterno',
-      'notificacaoChatInterno',
       'chatFocado',
       'unreadMessageInterna',
       'listaUsuarios',
@@ -485,16 +475,12 @@ export default {
           const grupo = this.listaGrupos[index]
           if ((index >= 0 && !this.chatFocado) || (this.chatFocado && this.chatFocado.id !== grupo.id)) {
             this.$store.commit('LISTA_NOTIFICACOES_CHAT_INTERNO', { action: 'update', data: 1 })
-            const audio = new Audio(alertSound)
-            audio.play()
             return
           }
           return
         }
         if ((!this.chatFocado || this.chatFocado.id !== this.notificacaoChatInterno.senderId) && this.notificacaoChatInterno.senderId !== usuario.userId) {
           this.$store.commit('LISTA_NOTIFICACOES_CHAT_INTERNO', { action: 'update', data: 1 })
-          const audio = new Audio(alertSound)
-          audio.play()
         }
       }
     }
@@ -872,7 +858,6 @@ export default {
 
     &:before
       content: ""
-      background: linear-gradient(to right, transparent, #818078, transparent)
       position: absolute
       left: 0
       top: 50%
@@ -883,12 +868,12 @@ export default {
       content: attr(data-content)
       position: relative
       display: inline-block
-      color: black
+      color: grey
       font-size: 16px
       font-weight: 600
       padding: 0 0.5em
       line-height: 1.5em
-      background-color: $grey
-      border-radius: 15px
+      background-color: white
+      border-radius: 5px
 
 </style>

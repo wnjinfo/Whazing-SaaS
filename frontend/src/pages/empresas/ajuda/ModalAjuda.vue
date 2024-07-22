@@ -1,17 +1,51 @@
 <template>
   <q-dialog persistent :value="modalAjuda" @hide="fecharModal" @show="abrirModal">
-    <q-card style="width: 500px" class="q-pa-lg">
+    <q-card class="container-rounded-10 modal-container q-pa-lg">
+
+      <q-card-actions align="right">
+        <q-btn
+          flat
+          color="negative"
+          icon="eva-close-outline"
+          v-close-popup
+        />
+      </q-card-actions>
+
       <q-card-section>
-        <div class="text-h6">{{ ajudaEdicao.id ? 'Editar' : 'Criar' }} Ajuda</div>
+        <div class="text-h6 text-center font-family-main">{{ ajudaEdicao.id ? 'Editar' : 'Criar' }} Ajuda</div>
       </q-card-section>
-      <q-card-section>
-            <q-input class="row col" square outlined v-model="ajuda.title" label="Título" />
-            <q-input class="row col" square outlined v-model="ajuda.description" label="Descrição" />
-            <q-input class="row col" square outlined v-model="ajuda.video" label="Código do Vídeo" />
+      <div class="container-border container-rounded-10">
+
+      <q-card-section class="row flex-gap-1 q-col-gutter-sm">
+        <div class="text-h6 font-family-main">
+          Informações
+        </div>
+        <div class="flex-gap-1 full-width row q-col-gutter-sm">
+          <div class="full-width">
+            <c-input rounded outlined v-model="ajuda.title" label="Título" />
+          </div>
+          <div class="full-width">
+            <c-input rounded outlined v-model="ajuda.description" label="Descrição" />
+          </div>
+          <div class="full-width">
+            <c-input rounded outlined v-model="ajuda.video" label="Código do Vídeo" />
+          </div>
+        </div>
       </q-card-section>
-      <q-card-actions align="right" class="q-mt-md">
-        <q-btn flat label="Cancelar" color="negative" v-close-popup class="q-mr-md" />
-        <q-btn flat label="Salvar" color="primary" @click="handleAjuda" />
+      </div>
+      <q-card-actions align="right">
+        <q-btn
+          label="Cancelar"
+          class="q-px-md q-mr-sm btn-rounded-50"
+          color="negative"
+          v-close-popup
+        />
+        <q-btn
+          label="Salvar"
+          class="q-px-md btn-rounded-50 generate-button"
+          icon="eva-save-outline"
+          @click="handleAjuda"
+        />
       </q-card-actions>
     </q-card>
   </q-dialog>

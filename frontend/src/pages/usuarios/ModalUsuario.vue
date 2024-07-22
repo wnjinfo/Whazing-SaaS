@@ -5,34 +5,52 @@
     @hide="fecharModal"
     @show="abrirModal"
   >
-    <q-card style="width: 600px">
+    <q-card class="container-rounded-10 modal-container q-pa-lg">
+
+      <q-card-actions align="right">
+        <q-btn
+          flat
+          color="negative"
+          icon="eva-close-outline"
+          v-close-popup
+        />
+      </q-card-actions>
+
       <q-card-section>
-        <div class="text-h6">Cadastrar Usuário</div>
+        <div class="text-h6 text-center font-family-main">{{usuario.name ? "Editar" : "Cadastrar"}} Usuário</div>
       </q-card-section>
-      <q-card-section class="q-col-gutter-sm">
-        <div class="row q-col-gutter-sm">
-          <div class="col-5">
+      <div class="container-border container-rounded-10">
+
+      <q-card-section class="row flex-gap-1 q-col-gutter-sm">
+        <div class="text-h6 font-family-main">
+          Informações
+        </div>
+        <div class="flex-gap-1 full-width row q-col-gutter-sm">
+          <div class="full-width">
             <c-input
               outlined
               v-model.trim="usuario.name"
               :validator="$v.usuario.name"
               @blur="$v.usuario.name.$touch"
               label="Nome"
+              rounded
             />
           </div>
-          <div class="col-7">
+          <div class="full-width">
             <c-input
               outlined
               :validator="$v.usuario.email"
               @blur="$v.usuario.email.$touch"
               v-model.trim="usuario.email"
               label="E-mail"
+              rounded
             />
           </div>
         </div>
-        <div class="row q-col-gutter-sm">
-          <div class="col-5">
+        <div class="flex-gap-1 full-width row q-col-gutter-sm">
+          <div class="full-width">
             <c-input
+              rounded
               outlined
               v-model="usuario.password"
               :validator="$v.usuario.password"
@@ -49,8 +67,9 @@
               </template>
             </c-input>
           </div>
-          <div class="col-7">
+          <div class="full-width">
             <q-select
+              rounded
               :disable="isProfile"
               outlined
               v-model="usuario.profile"
@@ -64,17 +83,19 @@
           </div>
         </div>
       </q-card-section>
+      </div>
+
       <q-card-actions align="right">
         <q-btn
-          label="Sair"
-          class="q-px-md q-mr-sm"
+          label="Cancelar"
+          class="q-px-md q-mr-sm btn-rounded-50"
           color="negative"
           v-close-popup
         />
         <q-btn
           label="Salvar"
-          class="q-px-md"
-          color="primary"
+          class="q-px-md btn-rounded-50 generate-button"
+          icon="eva-save-outline"
           @click="handleUsuario"
         />
       </q-card-actions>
@@ -180,10 +201,10 @@ export default {
       try {
         if (this.usuario.id) {
           const {
-            email, id, name, tenantId, password
+            email, id, name, tenantId, password, profile
           } = this.usuario
 
-          const params = { email, id, name, tenantId, password }
+          const params = { email, id, name, tenantId, password, profile }
 
           if (this.$store.state.user.isAdmin) {
             params.profile = this.usuario.profile
@@ -224,7 +245,7 @@ export default {
         if (error.data.error === 'ERR_USER_LIMIT_USER_CREATION') {
           Notify.create({
             type: 'negative',
-            message: 'Limite de usuario atingido. para ter mais usuários entre em contato com a equipe de suporte',
+            message: 'Limite de usuario atingido.',
             caption: 'ERR_USER_LIMIT_USER_CREATION',
             position: 'top',
             progress: true

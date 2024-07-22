@@ -1,5 +1,5 @@
 <template>
-  <div v-if="userProfile === 'admin'">
+  <div class="mass-container container-rounded-10" :class="$q.dark.isActive ? ('text-white bg-grey-10') : 'container-border'" v-if="userProfile === 'admin'">
     <q-list class="text-weight-medium">
       <q-item-label header class="text-bold text-h6 q-mb-lg">Configurações</q-item-label>
 
@@ -158,8 +158,81 @@
         </q-item-section>
       </q-item>
 
-    </q-list>
+      <q-item tag="label" v-ripple>
+        <q-item-section>
+          <q-item-label>Contador nas tabs superiores (Privados/Grupos)</q-item-label>
+          <q-item-label caption> Habilitando esta opção o usuário irá visualizar os tickcets com mensagens abertas nas tabs superiores de conversas privadas e grupos. </q-item-label>
+        </q-item-section>
 
+      <q-item-section avatar>
+        <q-toggle
+            v-model="universalCounter"
+            false-value="disabled"
+            true-value="enabled"
+            checked-icon="check"
+            keep-color
+            :color="universalCounter === 'enabled' ? 'green' : 'negative'"
+            size="md"
+            unchecked-icon="clear"
+            @input="atualizarConfiguracao('universalCounter')"
+        />
+        </q-item-section>
+      </q-item>
+
+      <q-item tag="label" v-ripple>
+        <q-item-section>
+          <q-item-label>Resolver atendimento sem interação automaticamente</q-item-label>
+          <q-item-label caption> Habilitando esta opção atendimentos ociosos serão resolvidos automaticamente. </q-item-label>
+        </q-item-section>
+
+      <q-item-section avatar>
+        <q-toggle
+            v-model="autoClose"
+            false-value="disabled"
+            true-value="enabled"
+            checked-icon="check"
+            keep-color
+            :color="autoClose === 'enabled' ? 'green' : 'negative'"
+            size="md"
+            unchecked-icon="clear"
+            @input="atualizarConfiguracao('autoClose')"
+        />
+        </q-item-section>
+      </q-item>
+
+      <div class="row q-px-md" v-if="autoClose === 'enabled'">
+        <div class="col-12">
+          <q-select
+            v-model="autoCloseTime"
+            :options="tempoOptions"
+            outlined
+            label="Escolha uma opção (tempo em minutos)"
+            input-style="min-height: 6vh; max-height: 9vh;"
+            debounce="700"
+            @input="atualizarConfiguracao('autoCloseTime')"
+          />
+        </div>
+      </div>
+
+      <div class="row q-px-md" v-if="autoClose === 'enabled'">
+        <div class="col-12">
+          <q-input
+            v-model="autoCloseMessage"
+            type="textarea"
+            autogrow
+            dense
+            outlined
+            label="Mensagem de encerramento"
+            input-style="min-height: 6vh; max-height: 9vh;"
+            debounce="700"
+            @input="atualizarConfiguracao('autoCloseMessage')"
+          />
+        </div>
+      </div>
+
+    </q-list>
+	
+<q-separator spaced />
   </div>
 </template>
 
@@ -171,6 +244,13 @@ export default {
   data() {
     return {
       userProfile: 'user',
+      tempoOptions: [
+        { value: '10', label: '10 minutos' },
+        { value: '60', label: '1 hora' },
+        { value: '1440', label: '1 dia' },
+        { value: '7200', label: '5 dias' },
+        { value: '14400', label: '10 dias' }
+      ],
       configuracoes: [],
       listaChatFlow: [],
       NotViewAssignedTickets: null,
@@ -184,6 +264,10 @@ export default {
       sendGreetingAccepted: null,
       sendMsgTransfTicket: null,
       spyticket: null,
+      universalCounter: null,
+      autoClose: null,
+      autoCloseTime: null,
+      autoCloseMessage: '',
       callRejectMessage: ''
     }
   },
@@ -208,26 +292,36 @@ export default {
       this.listaChatFlow = data.chatFlow
     },
     async atualizarConfiguracao(key) {
-      const params = {
-        key,
-        value: this.$data[key]
-      }
-      try {
-        await AlterarConfiguracao(params)
-        this.$q.notify({
-          type: 'positive',
-          message: 'Configuração alterada!',
-          progress: true,
-          actions: [{
-            icon: 'close',
-            round: true,
-            color: 'white'
-          }]
-        })
-      } catch (error) {
-        console.error('error - AlterarConfiguracao', error)
-        this.$data[key] = this.$data[key] === 'enabled' ? 'disabled' : 'enabled'
-        this.$notificarErro('Ocorreu um erro!', error)
+      if (key === 'autoCloseTime') {
+        const params = { key, value: this.$data[key].value }
+        try {
+          await AlterarConfiguracao(params)
+          this.$q.notify({
+            type: 'positive',
+            message: 'Configuração alterada!',
+            progress: true,
+            actions: [{ icon: 'close', round: true, color: 'white' }]
+          })
+        } catch (error) {
+          console.error('error - AlterarConfiguracao', error)
+          this.$data[key] = this.$data[key] === 'enabled' ? 'disabled' : 'enabled'
+          this.$notificarErro('Ocorreu um erro!', error)
+        }
+      } else {
+        const params = { key, value: this.$data[key] }
+        try {
+          await AlterarConfiguracao(params)
+          this.$q.notify({
+            type: 'positive',
+            message: 'Configuração alterada!',
+            progress: true,
+            actions: [{ icon: 'close', round: true, color: 'white' }]
+          })
+        } catch (error) {
+          console.error('error - AlterarConfiguracao', error)
+          this.$data[key] = this.$data[key] === 'enabled' ? 'disabled' : 'enabled'
+          this.$notificarErro('Ocorreu um erro!', error)
+        }
       }
     }
   },

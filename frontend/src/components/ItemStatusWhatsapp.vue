@@ -99,7 +99,7 @@ export default {
           description: 'Iniciando conexão com o Whatsapp.'
         },
         CONNECTED: {
-          color: 'green-8',
+          color: 'positive',
           icon: 'mdi-wifi-arrow-up-down',
           status: 'Conectado',
           description: 'Conexão estabelecida com sucesso!'

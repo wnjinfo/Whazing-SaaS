@@ -1,12 +1,11 @@
 <template>
-  <div v-if="userProfile === 'admin'">
+  <div v-if="userProfile === 'admin' || userProfile === 'super' ">
     <q-table
       flat
       bordered
       square
       hide-bottom
-      class="my-sticky-dynamic q-ma-lg"
-      title="Campanhas"
+      class="contact-table container-rounded-10 my-sticky-dynamic q-ma-lg"
       :data="campanhas"
       :columns="columns"
       :loading="loading"
@@ -14,10 +13,14 @@
       :pagination.sync="pagination"
       :rows-per-page-options="[0]"
     >
-      <template v-slot:top-right>
-        <q-btn
+      <template v-slot:top-left>
+        <div>
+          <h2  :class="$q.dark.isActive ? ('text-white') : ''">
+          Campanhas
+        </h2>
+        <div>
+          <q-btn
           class="q-mr-md"
-          color="primary"
           icon="refresh"
           outline
           @click="listarCampanhas"
@@ -27,10 +30,14 @@
           </q-tooltip>
         </q-btn>
         <q-btn
-          color="primary"
+          class="btn-rounded-50 generate-button"
+          icon="eva-plus-outline"
           label="Adicionar"
           @click="campanhaEdicao = {}; modalCampanha = true"
         />
+        </div>
+        </div>
+
       </template>
       <template v-slot:body-cell-color="props">
         <q-td class="text-center">
@@ -88,7 +95,7 @@
           <q-btn
             flat
             round
-            icon="edit"
+            icon="eva-edit-outline"
             @click="editarCampanha(props.row)"
           >
             <q-tooltip>
@@ -98,7 +105,7 @@
           <q-btn
             flat
             round
-            icon="mdi-delete"
+            icon="eva-trash-outline"
             @click="deletarCampanha(props.row)"
           >
             <q-tooltip>
@@ -198,7 +205,7 @@ export default {
       }
       this.$q.dialog({
         title: 'Atenção!!',
-        message: `Deseja realmente deletar a Campanha "${campanha.tag}"?`,
+        message: `Deseja realmente deletar a Campanha "${campanha.name}"?`,
         cancel: {
           label: 'Não',
           color: 'primary',
@@ -217,7 +224,7 @@ export default {
             let newCampanhas = [...this.campanhas]
             newCampanhas = newCampanhas.filter(f => f.id !== campanha.id)
             this.campanhas = [...newCampanhas]
-            this.$notificarSucesso(`Campanha ${campanha.tag} deletada!`)
+            this.$notificarSucesso(`Campanha ${campanha.name} deletada!`)
           })
         this.loading = false
       })
@@ -278,8 +285,8 @@ export default {
     }
   },
   mounted () {
-    this.userProfile = localStorage.getItem('profile')
     this.listarCampanhas()
+    this.userProfile = localStorage.getItem('profile')
   }
 }
 

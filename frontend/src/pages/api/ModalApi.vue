@@ -77,12 +77,12 @@
       </q-card-section>
       <q-card-actions align="right"
         class="q-mt-md">
-        <q-btn flat
+        <q-btn
           label="Cancelar"
           color="negative"
           v-close-popup
           class="q-mr-md" />
-        <q-btn flat
+        <q-btn
           label="Salvar"
           color="primary"
           @click="handleAPI" />

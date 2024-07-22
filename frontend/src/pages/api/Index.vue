@@ -1,21 +1,26 @@
 <template>
   <div v-if="userProfile === 'admin'">
-    <q-card class="q-ma-md">
+    <q-card class="container-border container-rounded-10 q-ma-lg">
       <q-card-section>
-        <div class="text-h6">
-          Configurações API
-          <q-btn class="float-right"
-            color="primary"
+        <div>
+          <h2 :class="$q.dark.isActive ? ('text-white') : ''">
+            <q-icon name="mdi-call-split"></q-icon>
+            Configurações API
+          </h2>
+
+          <q-btn
+            class="generate-button btn-rounded-50"
+            icon="eva-plus-outline"
             label="Adicionar"
+            style="margin: 2px;"
             @click="apiEdicao = {}; modalApi = !modalApi;" />
         </div>
       </q-card-section>
-      <q-separator />
       <q-card-section class="scroll"
         style="height: calc(100vh - 200px)">
         <q-item v-for="api in apis"
           :key="api.token"
-          class="q-my-md shadow-2">
+          class="q-my-md container-rounded-10 container-border">
 
           <q-item-section top>
             <q-item-label class="text-bold text-h6 q-my-sm">
@@ -37,7 +42,7 @@
                   flat
                   dense
                   round
-                  icon="edit"
+                  icon="eva-edit-outline"
                   @click="editarAPI(api)">
                   <q-tooltip>
                     Editar Configuraçao
@@ -60,7 +65,7 @@
                   flat
                   dense
                   round
-                  icon="delete"
+                  icon="eva-trash-outline"
                   @click="deletarApi(api)">
                   <q-tooltip>
                     Deletar Configuração
@@ -68,16 +73,17 @@
                 </q-btn>
               </div>
             </q-item-label>
+            <q-separator/>
             <q-item-label lines="4"
-              style="word-break: break-all;">
-              <p class="text-weight-medium text-nowrap q-pr-md">
+              style="word-break: break-all; padding-top: 10px">
+              <p class="text-weight-medium text-nowrap q-pr-md blur-effect">
                 <span class="text-bold">Url:
                 </span>
                 {{ montarUrlIntegração(api.id) }}
               </p>
             </q-item-label>
             <q-item-label style="word-break: break-all;">
-              <p class="text-weight-medium text-nowrap q-pr-md">
+              <p class="text-weight-medium text-nowrap q-pr-md blur-effect">
                 <span class="text-bold">Token:
                 </span>
                 {{ api.token }}
@@ -104,9 +110,8 @@
               class="q-mt-xs text-body2 text-weight-bold text-primary text-uppercase">
             </q-item-label>
             <q-item-label style="word-break: break-all;">
-            <q-btn class="float-right"
-            color="primary"
-            rounded
+          <q-btn
+            class="generate-button btn-rounded-50"
             label="POSTMAN"
             style="margin: 2px;"
             @click="download" />
@@ -275,5 +280,16 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+  .item-label {
+    border-bottom: 1px solid #ccc; // Cor da borda
+    padding-bottom: 10px; // Espaçamento abaixo do conteúdo
+    margin-bottom: 10px; // Espaçamento abaixo da borda
 
+    &:last-child {
+      border-bottom: none; // Remove a borda do último item
+    }
+  }
+  .blur-effect {
+    filter: blur(0px)
+  }
 </style>

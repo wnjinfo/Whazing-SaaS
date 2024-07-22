@@ -6,20 +6,32 @@
     persistent
   >
     <q-card
-      style="width: 500px"
-      class="q-pa-lg"
+      class="q-pa-lg modal-container container-rounded-10"
     >
+    <q-card-actions
+        align="right"
+        class="q-mt-md"
+      >
+        <q-btn
+          color="negative"
+          v-close-popup
+          icon="eva-close"
+          flat
+        />
+      </q-card-actions>
       <q-card-section>
-        <div class="text-h6">{{ chatFlow.isDuplicate ? 'Duplicar' : chatFlowEdicao.id ? 'Editar': 'Criar' }} Fluxo <span v-if="chatFlow.isDuplicate"> (Nome: {{ chatFlowEdicao.name }}) </span></div>
-        <div
-          v-if="chatFlow.isDuplicate"
-          class="text-subtitle1"
-        > Nome: {{ chatFlowEdicao.name }} </div>
+        <div class="text-h6 text-center font-family-main">{{ chatFlow.isDuplicate ? 'Duplicar' : chatFlowEdicao.id ? 'Editar': 'Criar' }} Fluxo <span v-if="chatFlow.isDuplicate"> (Nome: {{ chatFlowEdicao.name }}) </span></div>
+
       </q-card-section>
-      <q-card-section>
+      <q-card-section class="q-pa-lg container-border container-rounded-10">
+
+        <div class="text-h6 font-family-main q-mb-sm">
+          Informações
+        </div>
+
         <q-input
+          rounded
           class="row col"
-          square
           outlined
           v-model="chatFlow.name"
           label="Descrição"
@@ -41,7 +53,7 @@
           <q-input
             clearable
             class="full-width"
-            square
+            rounded
             outlined
             v-model="chatFlow.celularTeste"
             label="Número para Teste"
@@ -54,17 +66,16 @@
         class="q-mt-md"
       >
         <q-btn
-          flat
           label="Cancelar"
           color="negative"
           v-close-popup
-          class="q-mr-md"
+          class="q-mr-md btn-rounded-50"
         />
         <q-btn
-          flat
           label="Salvar"
-          color="primary"
           @click="handleAutoresposta"
+          class="generate-button btn-rounded-50"
+          icon="eva-save-outline"
         />
       </q-card-actions>
     </q-card>
@@ -138,13 +149,22 @@ export default {
         const { data } = await UpdateChatFlow(this.chatFlow)
         this.$notificarSucesso('Fluxo editado.')
         this.$emit('chatFlow:editado', data)
-      } else {
-        // setar id = null para rotina de duplicação de fluxo
+      }
+      if (!this.chatFlow.id && !this.chatFlow?.isDuplicate) {
         const flow = { ...getDefaultFlow(), ...this.chatFlow, id: null }
         const { data } = await CriarChatFlow(flow)
         this.$notificarSucesso('Novo fluxo criado.')
         this.$emit('chatFlow:criada', data)
       }
+      // else {
+      //   console.log(this.chatFlow)
+      //   console.log(this.chatFlow.isDuplicate)
+      //   // setar id = null para rotina de duplicação de fluxo
+      //   const flow = { ...getDefaultFlow(), ...this.chatFlow, id: null }
+      //   const { data } = await CriarChatFlow(flow)
+      //   this.$notificarSucesso('Novo fluxo criado.')
+      //   this.$emit('chatFlow:criada', data)
+      // }
       this.fecharModal()
     }
   }

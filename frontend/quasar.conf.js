@@ -19,34 +19,30 @@ module.exports = function (ctx) {
     // app boot file (/src/boot)
     // --> boot files are part of "main.js"
     // https://quasar.dev/quasar-cli/boot-files
-    boot: [
-      'vuelidate',
-      'ccComponents'
-    ],
+    boot: ['vuelidate', 'ccComponents'],
 
     // https://quasar.dev/quasar-cli/quasar-conf-js#Property%3A-css
-    css: [
-      'app.sass'
-    ],
+    css: ['app.sass'],
 
     // https://github.com/quasarframework/quasar/tree/dev/extras
     extras: [
-      // 'ionicons-v4',
-      'mdi-v5',
-      // 'fontawesome-v5',
-      // 'eva-icons',
-      // 'themify',
-      // 'line-awesome',
-      // 'roboto-font-latin-ext', // this or either 'roboto-font', NEVER both!
+      'ionicons-v4',
+      'mdi-v7',
+      'fontawesome-v6',
+      'eva-icons',
+      'themify',
+      'line-awesome',
+      'roboto-font-latin-ext', // this or either 'roboto-font', NEVER both!
 
       'roboto-font', // optional, you are not bound to it
-      'material-icons' // optional, you are not bound to it
+      'material-icons', // optional, you are not bound to it
+      'material-icons-outlined'
     ],
 
     // Full list of options: https://quasar.dev/quasar-cli/quasar-conf-js#Property%3A-build
     build: {
       env: {
-        URL_API: process.env.URL_API,
+        URL_API: process.env.URL_API || 'http://localhost:3000',
         FACEBOOK_APP_ID: process.env.FACEBOOK_APP_ID
       },
       vueRouterMode: 'hash', // available values: 'hash', 'history'
@@ -68,17 +64,7 @@ module.exports = function (ctx) {
       // extractCSS: false,
 
       // https://quasar.dev/quasar-cli/handling-webpack
-      extendWebpack (cfg) {
-        cfg.module.rules.push({
-          enforce: 'pre',
-          test: /\.(js|vue)$/,
-          loader: 'eslint-loader',
-          exclude: /node_modules/,
-          options: {
-            devtool: 'source-map',
-            preventExtract: true
-          }
-        })
+      extendWebpack(cfg) {
         cfg.devtool = 'source-map'
       }
     },
@@ -126,9 +112,12 @@ module.exports = function (ctx) {
     // https://quasar.dev/quasar-cli/developing-pwa/configuring-pwa
     pwa: {
       workboxPluginMode: 'GenerateSW', // 'GenerateSW' or 'InjectManifest'
-      workboxOptions: { maximumFileSizeToCacheInBytes: 10000000 }, // only for GenerateSW
+      workboxOptions: {
+        maximumFileSizeToCacheInBytes: 5 * 1024 * 1024
+      }, // only for GenerateSW
       manifest: {
         name: 'Whazing',
+        // maximumFileSizeToCacheInBytes: 5 * 1024 * 1024,
         short_name: 'Whazing',
         description: 'Bot Multi-atendimento',
         display: 'standalone',
@@ -181,13 +170,11 @@ module.exports = function (ctx) {
 
       packager: {
         // https://github.com/electron-userland/electron-packager/blob/master/docs/api.md#options
-
         // OS X / Mac App Store
         // appBundleId: '',
         // appCategoryType: '',
         // osxSign: '',
         // protocol: 'myapp://path',
-
         // Windows only
         // win32metadata: { ... }
       },
@@ -200,7 +187,7 @@ module.exports = function (ctx) {
       // More info: https://quasar.dev/quasar-cli/developing-electron-apps/node-integration
       nodeIntegration: true,
 
-      extendWebpack (/* cfg */) {
+      extendWebpack(/* cfg */) {
         // do something with Electron main process Webpack cfg
         // chainWebpack also available besides this extendWebpack
       }

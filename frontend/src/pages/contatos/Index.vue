@@ -1,7 +1,7 @@
 <template>
   <div>
     <q-table
-      class="my-sticky-dynamic"
+      class="contact-table my-sticky-dynamic container-rounded-10"
       title="Contatos"
       :id="`tabela-contatos-${isChatContact ? 'atendimento' : ''}`"
       :data="contacts"
@@ -24,7 +24,7 @@
       }"
     >
       <template v-slot:top>
-        <div class="row col-2 q-table__title items-center ">
+        <div class="row full-width q-table__title items-center ">
           <q-btn
             v-if="isChatContact"
             class="q-mr-sm"
@@ -34,16 +34,18 @@
             icon="mdi-close"
             @click="$router.push({ name: 'chat-empty' })"
           />
-          Contatos
-        </div>
-        <q-space />
+          <h2 :class="$q.dark.isActive ? ('text-white') : ''">
+            <q-icon name="eva-people-outline q-pr-sm" />
+            Contatos
+          </h2>
+          <div class="contact-header full-width">
         <q-input
+        class="contact-search"
           :class="{
           'order-last q-mt-md': $q.screen.width < 500
         }"
           style="width: 300px"
           filled
-          dense
           debounce="500"
           v-model="filter"
           clearable
@@ -55,34 +57,42 @@
           </template>
         </q-input>
         <q-btn
-          class="q-ml-md"
-          color="warning"
-          label="Sincronizar"
+          class="generate-button btn-rounded-50 q-ml-md"
+          icon="eva-sync-outline"
+          label="Sincronizar Contatos"
           @click="confirmarSincronizarContatos('whatsapp')"
         />
         <q-btn
-          class="q-ml-md"
-          color="black"
+          class="generate-button btn-rounded-50 q-ml-md"
+          icon="eva-cloud-upload-outline"
           label="Importar"
           v-if="!isChatContact"
           @click="modalImportarContatos = true"
-        />
+          >
+          <q-tooltip :offset="[5, 5]">
+            Nome;User<br>
+            Número;5551900000
+          </q-tooltip>
+        </q-btn>
         <q-btn
-          class="q-ml-md"
-          color="grey-8"
+          class="generate-button btn-rounded-50 q-ml-md"
           v-if="!isChatContact"
+          icon="eva-cloud-download-outline"
           label="Exportar"
           @click="handleExportContacts"
         />
         <q-btn
-          class="q-ml-md"
-          color="primary"
+          class="generate-button btn-rounded-50 q-ml-md"
+          icon="eva-person-add-outline"
           label="Adicionar"
           @click="selectedContactId = null; modalContato = true"
         />
-      </template>
-      <template v-slot:body-cell-profilePicUrl="props">
-        <q-td>
+        </div>
+        </div>
+
+        </template>
+      <template  v-slot:body-cell-profilePicUrl="props">
+        <q-td >
           <q-avatar style="border: 1px solid #9e9e9ea1 !important">
             <q-icon
               name="mdi-account"
@@ -120,28 +130,60 @@
             icon="img:instagram-logo.png"
             @click="handleSaveTicket(props.row, 'instagram')"
             v-if="props.row.instagramPK"
+
           />
-          <q-btn
+          <!-- <q-btn
             flat
             round
             icon="img:telegram-logo.png"
             @click="handleSaveTicket(props.row, 'telegram')"
-            v-if="props.row.telegramId"
-          />
+            v-if="props.row.number"
+          /> -->
           <q-btn
             flat
             round
-            icon="edit"
+            icon="eva-edit-outline"
             @click="editContact(props.row.id)"
+            :class="$q.dark.isActive ? ('text-white') : ''"
           />
           <q-btn
             flat
             round
-            icon="mdi-delete"
+            icon="eva-trash-outline"
             @click="deleteContact(props.row.id)"
+            :class="$q.dark.isActive ? ('text-white') : ''"
           />
         </q-td>
       </template>
+      <template v-slot:body-cell-number="props" >
+        <q-td>
+          <span v-if="props.row.number" class="blur-effect">
+            <a :class="$q.dark.isActive ? ('text-white') : ''" :href="getPhoneNumberLink(props.row.number)">
+              {{ props.row.number }}
+
+            </a>
+          </span>
+        </q-td>
+      </template>
+      <template v-slot:body-cell-email="props">
+        <q-td>
+          <span  v-if="props.row.email">
+            <a :class="$q.dark.isActive ? ('text-white') : ''" :href="'mailto:' + props.row.email">{{ props.row.email }}</a>
+          </span>
+        </q-td>
+      </template>
+      <template v-slot:body-cell-name="props">
+        <q-td>
+          <span  :class="$q.dark.isActive ? ('text-white') : ''" v-if="props.row.name">
+            {{ props.row.name }}
+          </span>
+        </q-td>
+      </template>
+      <template v-slot:body-cell-tags="props">
+      <q-td :props="props">
+        <span :class="$q.dark.isActive ? ('bg-black text-white') : ''" v-html="formatTags(props.row.tags)"></span>
+      </q-td>
+    </template>
       <template v-slot:pagination="{ pagination }">
         {{ contacts.length }}/{{ pagination.rowsNumber }}
       </template>
@@ -158,12 +200,26 @@
       persistent
       @show="abrirEnvioArquivo"
     >
-      <q-card style="width: 400px;">
-        <q-card-section class="row items-center">
-          <div class="text-h6">Importar Contatos</div>
+      <q-card class="modal-container container-rounded-10">
+
+        <q-card-actions align="right">
+          <q-btn
+            flat
+            dense
+            color="negative"
+            icon="eva-close"
+            v-close-popup
+            @click="isImportCSV = false; modalImportarContatos = false"
+          />
+        </q-card-actions>
+
+        <q-card-section class="items-center">
+          <div class="text-h6 text-center font-family-main">Importar Contatos</div>
         </q-card-section>
-        <q-card-section>
+        <div class="q-ma-lg container-border container-rounded-10">
+          <q-card-section>
           <q-file
+            rounded
             ref="PickerFileMessage"
             id="PickerFileMessage"
             bg-color="blue-grey-1"
@@ -181,14 +237,17 @@
           </q-file>
 
         </q-card-section>
-        <q-card-section>
+        </div>
+
+        <div class="q-ma-lg container-border container-rounded-10">
+          <q-card-section>
           <q-card
             class="bg-white q-mt-sm btn-rounded"
             style="width: 100%"
             bordered
             flat
           >
-            <q-card-section class="text-bold q-pb-none">
+            <q-card-section class="text-bold font-family-main q-pb-none">
               Etiquetas
               <q-separator />
             </q-card-section>
@@ -266,7 +325,7 @@
             bordered
             flat
           >
-            <q-card-section class="text-bold q-pb-none">
+            <q-card-section class="text-bold font-family-main q-pb-none">
               Carteira
               <q-separator />
             </q-card-section>
@@ -289,12 +348,14 @@
             </q-card-section>
           </q-card>
         </q-card-section>
+        </div>
+
         <q-card-section>
 
         </q-card-section>
         <q-card-actions align="right">
           <q-btn
-            class="q-ml-md"
+            class="q-ml-md btn-rounded-50"
             color="negative"
             label="Cancelar"
             v-close-popup
@@ -302,17 +363,61 @@
           />
 
           <q-btn
-            class="q-ml-md"
+            class="q-ml-md btn-rounded-50"
             color="positive"
+            icon="eva-checkmark"
             label="Confirmar"
             @click="handleImportCSV"
           />
           <q-btn
-            class="q-ml-md"
-            color="warning"
+            class="q-ml-md generate-button btn-rounded-50"
+            icon="eva-download"
             label="Baixar Modelo"
             @click="downloadModelCsv"
           />
+        </q-card-actions>
+      </q-card>
+    </q-dialog>
+    <q-dialog v-model="modalTransferirTicket"
+      @hide="modalTransferirTicket = false"
+      persistent>
+      <q-card class="q-pa-md"
+        style="width: 500px">
+        <q-card-section>
+          <div class="text-h6">Selecione o destino:</div>
+        </q-card-section>
+        <q-card-section>
+          <q-select square
+            outlined
+            v-model="filaSelecionada"
+            :options="filas"
+            emit-value
+            map-options
+            option-value="id"
+            option-label="queue"
+            label="Fila de destino" />
+        </q-card-section>
+        <q-card-section>
+          <q-select square
+            outlined
+            v-model="usuarioSelecionado"
+            :options="usuariosTransferencia.filter(filterUsers)"
+            emit-value
+            map-options
+            option-value="id"
+            option-label="name"
+            label="Usuário destino" />
+        </q-card-section>
+        <q-card-actions align="right">
+          <q-btn flat
+            label="Sair"
+            color="negative"
+            v-close-popup
+            class="q-mr-lg" />
+          <q-btn flat
+            label="Salvar"
+            color="primary"
+            @click="confirmarTransferenciaTicket" />
         </q-card-actions>
       </q-card>
     </q-dialog>
@@ -321,12 +426,13 @@
 
 <script>
 const userId = +localStorage.getItem('userId')
-import { CriarTicket } from 'src/service/tickets'
+import { CriarTicket, AtualizarTicket } from 'src/service/tickets'
 import { ListarContatos, ImportarArquivoContato, DeletarContato, SyncronizarContatos, ExportarArquivoContato } from 'src/service/contatos'
 import ContatoModal from './ContatoModal'
 import { ListarUsuarios } from 'src/service/user'
 import { ListarEtiquetas } from 'src/service/etiquetas'
 import { mapGetters } from 'vuex'
+import { ListarFilas } from 'src/service/filas'
 
 export default {
   name: 'IndexContatos',
@@ -344,7 +450,13 @@ export default {
   },
   data () {
     return {
+      modalTransferirTicket: false,
+      usuarioSelecionado: null,
+      filaSelecionada: null,
+      filas: [],
+      usuariosTransferencia: [],
       contacts: [],
+      ticketFocado: '',
       modalImportarContatos: false,
       modalContato: false,
       file: [],
@@ -381,7 +493,13 @@ export default {
             return r.name
           }
         },
-        { name: 'number', label: 'WhatsApp', field: 'number', align: 'center', style: 'width: 300px' },
+        {
+          name: 'number',
+          label: 'WhatsApp',
+          field: 'number',
+          align: 'center',
+          style: 'width: 300px'
+        },
         {
           name: 'wallet',
           label: 'Carteira',
@@ -389,6 +507,13 @@ export default {
           align: 'center',
           style: 'width: 300px'
           // format: v => v ? v.map(n => n.name)?.join(', ') : ''
+        },
+        {
+          name: 'tags',
+          label: 'Etiquetas',
+          field: 'tags',
+          align: 'center',
+          style: 'width: 300px'
         },
         {
           name: 'instagramPK',
@@ -402,7 +527,7 @@ export default {
         },
         {
           name: 'telegramId',
-          label: 'Id Telegram',
+          label: 'Telegram',
           field: 'telegramId',
           align: 'center',
           style: 'width: 300px',
@@ -416,15 +541,29 @@ export default {
     }
   },
   methods: {
-    downloadModelCsv () {
-      const csvContent = 'nome;numero\nCliente;5511999999999'
+    formatTags(tags) {
+      if (!Array.isArray(tags)) return ''
+
+      return tags.map(tag => {
+        return `<span style="background-color: ${tag.color}; padding: 2px 8px; border-radius: 4px; color: white; margin-right: 4px;">${tag.tag}</span>`
+      }).join('')
+    },
+    downloadModelCsv() {
+      const csvContent = 'nome;numero\nUser;5551900000'
       const blob = new Blob([csvContent], { type: 'text/csv' })
       const link = document.createElement('a')
       link.href = window.URL.createObjectURL(blob)
-      link.setAttribute('download', 'modelo.csv')
+      link.setAttribute('download', 'model.csv')
       document.body.appendChild(link)
       link.click()
       document.body.removeChild(link)
+    },
+    getPhoneNumberLink(number) {
+      if ((number.startsWith('55')) && (number.charAt(4) > 5)) {
+        return `tel:${number.slice(0, 4)}9${number.slice(-8)}`
+      } else {
+        return `tel:${number}`
+      }
     },
     abrirEnvioArquivo (event) {
       this.isImportCSV = true
@@ -453,6 +592,36 @@ export default {
         this.$notificarErro(err)
       }
     },
+    async listarFilas() {
+      return new Promise((resolve, reject) => {
+        ListarFilas()
+          .then(({ data }) => {
+            this.filas = data.filter(fila => fila.isActive)
+            this.modalTransferirTicket = true
+            return this.listarUsuariosTransferencia()
+          })
+          .then(() => {
+            this.$once('modalClosed', () => {
+              resolve()
+            })
+          })
+          .catch(error => {
+            console.error(error)
+            this.$notificarErro('Problema ao carregar filas', error)
+            reject(error)
+          })
+      })
+    },
+    async listarUsuariosTransferencia () {
+      try {
+        const { data } = await ListarUsuarios()
+        this.usuariosTransferencia = data.users
+        this.modalTransferirTicket = true
+      } catch (error) {
+        console.error(error)
+        this.$notificarErro('Problema ao carregar usuários', error)
+      }
+    },
     async listarUsuarios () {
       try {
         const { data } = await ListarUsuarios()
@@ -465,6 +634,49 @@ export default {
     async listarEtiquetas () {
       const { data } = await ListarEtiquetas(true)
       this.etiquetas = data
+    },
+    filterUsers (element, index, array) {
+      const fila = this.filaSelecionada
+      if (fila == null) return true
+      const queues_valid = element.queues.filter(function (element, index, array) {
+        return (element.id == fila)
+      })
+      return (queues_valid.length > 0)
+    },
+    async confirmarTransferenciaTicket () {
+      // if (!this.filaSelecionada) return
+      // if(!this.usuarioSelecionado){
+      //   this.$q.notify({
+      //     type: 'negative',
+      //     message: 'Selecione um usuário.',
+      //     progress: true,
+      //     actions: [{
+      //       icon: 'close',
+      //       round: true,
+      //       color: 'white'
+      //     }]
+      //   })
+      //   return
+      // }
+      await AtualizarTicket(this.ticketFocado.id, {
+        userId: this.usuarioSelecionado || userId,
+        queueId: this.filaSelecionada || null,
+        status: 'open',
+        isTransference: 1
+      })
+      this.$q.notify({
+        type: 'positive',
+        message: 'Ticket transferido.',
+        progress: true,
+        actions: [{
+          icon: 'close',
+          round: true,
+          color: 'white'
+        }]
+      })
+      this.modalTransferirTicket = false
+      this.$emit('modalClosed')
+      this.$store.commit('TICKET_FOCADO', {})
     },
     downloadFile (downloadLink) {
       const link = document.createElement('a')
@@ -526,6 +738,7 @@ export default {
     async listarContatos () {
       this.loading = true
       const { data } = await ListarContatos(this.params)
+      // console.log(data.contacts)
       // const user = this.usuario
       // console.log(data)
       // data.contacts = data.contacts.filter(function (element) {
@@ -546,7 +759,6 @@ export default {
     },
     async handleSaveTicket (contact, channel) {
       if (!contact.id) return
-
       const itens = []
       const channelId = null
       this.whatsapps.forEach(w => {
@@ -554,7 +766,6 @@ export default {
           itens.push({ label: w.name, value: w.id })
         }
       })
-
       this.$q.dialog({
         title: `Contato: ${contact.name}`,
         message: 'Selecione o canal para iniciar o atendimento.',
@@ -588,6 +799,8 @@ export default {
             channelId,
             status: 'open'
           })
+          this.ticketFocado = ticket
+          await this.listarFilas()
           await this.$store.commit('SET_HAS_MORE', true)
           await this.$store.dispatch('AbrirChatMensagens', ticket)
           this.$q.notify({
@@ -604,9 +817,18 @@ export default {
           this.$router.push({ name: 'chat', params: { ticketId: ticket.id } })
         } catch (error) {
           if (error.status === 409) {
+            console.log(error)
             const ticketAtual = JSON.parse(error.data.error)
-            this.abrirAtendimentoExistente(contact, ticketAtual)
-            return
+            if (ticketAtual.whatsappId === null) {
+              await AtualizarTicket(ticketAtual.id, {
+                whatsapp: channelId
+              })
+              this.abrirAtendimentoExistente(contact, ticketAtual)
+              return
+            } else {
+              this.abrirAtendimentoExistente(contact, ticketAtual)
+              return
+            }
           }
           this.$notificarErro('Ocorreu um erro!', error)
         }
@@ -749,7 +971,6 @@ export default {
       }
       this.loading = true
     }
-
   },
   mounted () {
     this.usuario = JSON.parse(localStorage.getItem('usuario'))
@@ -790,4 +1011,7 @@ export default {
   thead
     th
       height: 55px
+
+.blur-effect
+  filter: blur(0px)
 </style>

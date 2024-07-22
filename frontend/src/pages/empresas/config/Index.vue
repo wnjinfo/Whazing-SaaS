@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="mass-container container-rounded-10" :class="$q.dark.isActive ? ('text-white bg-grey-10') : 'container-border'">
     <q-list class="text-weight-medium">
       <q-item-label header class="text-bold text-h6 q-mb-lg">Configurações</q-item-label>
 

@@ -1,5 +1,5 @@
 <template>
-  <div v-if="userProfile === 'admin'">
+  <div v-if="userProfile === 'admin' || userProfile === 'super' ">
     <q-card
       bordered
       flat
@@ -275,7 +275,7 @@
               <div class="col-grow text-right">
                 <q-btn
                   class="q-mr-sm"
-                  color="info"
+                  color="primary"
                   label="Gerar"
                   icon="refresh"
                   @click="listarAddContatos"
@@ -286,7 +286,7 @@
         </q-card-section>
         <q-card-section>
           <q-table
-            class="my-sticky-dynamic q-ma-sm"
+            class="my-sticky-dynamic q-ma-sm blur-effect"
             style="height: 50vh"
             title="Contatos"
             id="tabela-contatos-campanha"
@@ -454,6 +454,7 @@ export default {
       return format(parseISO(date), dateMask)
     },
     async listarAddContatos () {
+      console.log(this.pesquisa)
       const { data } = await RelatorioContatos(this.pesquisa)
       this.contatosAdd = data.contacts
     },
@@ -470,13 +471,6 @@ export default {
       return estadosBR.find(e => e.sigla === estadoPorDdd[ddd])?.nome || ''
     },
     async addContatosCampanha () {
-      if (this.selected.length > 300) {
-        this.$q.notify({
-          type: 'negative',
-          message: 'O número máximo de contatos é 300'
-        })
-        return
-      }
       try {
         await AdicionarContatosCampanha(this.selected, this.$route.params.campanhaId)
         this.listarContatosCampanha()
@@ -560,13 +554,13 @@ export default {
     this.listarUsuarios()
   },
   mounted () {
-    this.userProfile = localStorage.getItem('profile')
     const campanhaParams = this.$route.params.campanha
     if (!campanhaParams) {
       this.$router.push({ name: 'campanhas' })
       return
     }
     this.listarContatosCampanha()
+    this.userProfile = localStorage.getItem('profile')
   }
 }
 </script>
@@ -600,4 +594,7 @@ export default {
   thead
     th
       height: 55px
+
+.blur-effect
+  filter: blur(0px)
 </style>

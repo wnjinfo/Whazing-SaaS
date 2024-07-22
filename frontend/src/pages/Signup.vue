@@ -1,32 +1,30 @@
 <template>
-  <div class="q-pa-md bg-video">
-    <video autoplay muted loop>
-      <source src="/videologin.mp4" type="video/mp4" />
-    </video>
-    <q-layout class="vertical-center">
-      <q-page-container>
-        <q-page class="flex justify-center items-center">
-          <q-ajax-bar position="top" color="primary" size="5px" />
-          <q-card
-            bordered
-            class="card q-pa-md shadow-10"
-            style="border-top: 5px solid #3E72AF; background-color: rgba(255,255,255,0.75); border-radius: 20px"
-          >
-            <q-card-section class="text-primary text-center">
+  <div class="container">
+    <div class="login-section">
+      <q-layout class="full-width">
+        <q-page-container>
+          <q-page class="flex justify-center items-center">
+            <q-ajax-bar
+              position="top"
+              color="primary"
+              size="5px"
+            />
+            <div class="login-content">
               <q-img
                 src="/logo.png"
                 spinner-color="white"
-                style="height: 110px; max-width: 290px"
-                class="q-mb-lg q-px-md"
+                class="logo-image q-mb-lg q-px-md"
+                style="max-width: 100%"
               />
               <q-separator spaced />
-            </q-card-section>
-
-            <q-card-section>
+              <div class="text-primary">
+                <div>
               <!-- Nome da Empresa -->
-              <q-input
-                class="q-mb-md"
-                clearable
+                  <q-input
+                    rounded
+                    :color="$q.dark.isActive ? 'white ' : 'black'"
+                    class="q-mb-md"
+                    clearable
                 v-model="form.nomeEmpresa"
                 placeholder="Nome da Empresa"
                 outlined
@@ -42,9 +40,11 @@
               </q-input>
 
               <!-- cnpj -->
-              <q-input
-                class="q-mb-md"
-                clearable
+                  <q-input
+                    rounded
+                    :color="$q.dark.isActive ? 'white ' : 'black'"
+                    class="q-mb-md"
+                    clearable
                 mask="##.###.###/####-##"
                 v-model="form.cnpj"
                 placeholder="CNPJ"
@@ -61,9 +61,11 @@
               </q-input>
 
               <!-- whatsapp -->
-              <q-input
-                class="q-mb-md"
-                clearable
+                  <q-input
+                    rounded
+                    :color="$q.dark.isActive ? 'white ' : 'black'"
+                    class="q-mb-md"
+                    clearable
                 mask="(##)#####-####"
                 v-model="form.whatsapp"
                 placeholder="Whatsapp"
@@ -80,9 +82,11 @@
               </q-input>
 
               <!-- nomeResponsavel -->
-              <q-input
-                class="q-mb-md"
-                clearable
+                  <q-input
+                    rounded
+                    :color="$q.dark.isActive ? 'white ' : 'black'"
+                    class="q-mb-md"
+                    clearable
                 v-model="form.nomeResponsavel"
                 placeholder="Nome do Responsavel"
                 outlined
@@ -98,9 +102,11 @@
               </q-input>
 
               <!-- email -->
-              <q-input
-                class="q-mb-md"
-                clearable
+                  <q-input
+                    rounded
+                    :color="$q.dark.isActive ? 'white ' : 'black'"
+                    class="q-mb-md"
+                    clearable
                 v-model="form.email"
                 placeholder="meu@email.com"
                 :error="$v.form.email.$error"
@@ -118,9 +124,11 @@
               </q-input>
 
               <!-- senha -->
-              <q-input
-                class="q-mb-md"
-                clearable
+                  <q-input
+                    rounded
+                    :color="$q.dark.isActive ? 'white ' : 'black'"
+                    class="q-mb-md"
+                    clearable
                 placeholder="SENHA"
                 v-model="form.password"
                 :type="isPwd ? 'password' : 'text'"
@@ -146,14 +154,16 @@
 
               <!-- Plano (seleção) -->
               <q-select
+                rounded
+                :color="$q.dark.isActive ? 'white ' : 'black'"
+                class="q-mb-md"
+                clearable
                 v-model="form.plano"
                 :options="options"
                 label="Plano"
                 outlined
               />
-            </q-card-section>
-            <q-card-actions>
-              <q-space />
+            </div>
               <q-btn
                 class="q-mr-sm q-my-lg"
                 style="width: 150px"
@@ -162,11 +172,7 @@
                 @click="handleTenant"
               >
                 Fazer Cadastro
-                <span slot="loading">
-                  <q-spinner-puff class="on-left" />Logando...
-                </span>
               </q-btn>
-            </q-card-actions>
 
             <q-btn
               flat
@@ -177,12 +183,13 @@
               label="Já tem uma conta? Entre!"
               @click="redirecionarParaLogin"
             />
+              </div>
+            </div>
+          </q-page>
+        </q-page-container>
+      </q-layout>
+    </div>
 
-            <q-inner-loading :showing="loading" />
-          </q-card>
-        </q-page>
-      </q-page-container>
-    </q-layout>
   </div>
 </template>
 
@@ -298,66 +305,45 @@ export default {
 </script>
 
 <style scoped>
-#login-app {
-  background: none;
+.container {
+  display: flex;
+  height: 150vh;
+  width: 100vw;
+  justify-content: center;
+  align-items: center;
 }
 
-.index {
+.login-section {
+  width: 400px;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  background-color: white;
+  border-radius: 10px
+}
+
+.full-width {
   width: 100%;
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  left: 0;
+}
+
+.login-content {
   text-align: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  overflow: hidden;
 }
 
-.index h1 {
-  height: 150px;
+.video-container {
+  display: flex;
+  justify-content: flex-end;
+  width: 55%;
 }
 
-.index h1 img {
-  height: 100%;
+.logo-image {
+  height: auto;
+  max-width: 100%;
 }
 
-.index h2 {
-  color: #666;
-  margin-bottom: 200px;
+.fixed-layout {
+  width: 45%;
 }
 
-.index h2 p {
-  margin: 0 0 50px;
-}
-
-.index .ivu-row-flex {
-  height: 100%;
-}
-
-#indexLizi {
-  position: absolute;
-  width: 100%;
-  top: 0;
-  bottom: 0;
-  overflow: hidden;
-}
-
-.bg {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-}
-
-.card {
-  width: 100%;
-  max-width: 430px;
-}
-
-.q-img__image {
-  background-repeat: no-repeat;
-  background-size: contain;
-}
 </style>

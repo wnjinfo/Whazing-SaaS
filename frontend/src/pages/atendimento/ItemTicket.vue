@@ -1,6 +1,6 @@
 <template>
   <q-list separator
-    style="max-width: 370px"
+    style="max-width: 100%"
     class="q-px-sm q-py-none q-pt-sm">
     <!-- :clickable="ticket.status !== 'pending' && (ticket.id !== $store.getters['ticketFocado'].id || $route.name !== 'chat')" -->
     <q-item clickable
@@ -137,7 +137,7 @@
         <q-item-label class="row col items-center justify-between"
           caption>
           Usuário: {{ ticket.username || '' }}
-          <q-chip :color="$q.dark.isActive ? 'blue-9' : 'blue-2'"
+          <q-chip :color="$q.dark.isActive ? '$primary' : 'blue-2'"
             dense
             square
             :label="ticket.whatsapp && ticket.whatsapp.name"
@@ -163,11 +163,15 @@
             Espiar
           </q-tooltip>
         </q-btn>
+
+        <!-- <span class="absolute-bottom-right" v-if="ticket.unreadMessages">
+          <q-badge style="font-size: .8em; border-radius: 10px;" class="q-py-xs" dense text-color="white" color="green" :label="ticket.unreadMessages" />
+        </span> -->
       </q-item-section>
     </q-item>
-    <q-separator color="grey-2"
-      inset="item" />
-     <q-separator />
+    <!-- <q-separator color="grey-2"
+      inset="item" /> -->
+    <!-- <q-separator /> -->
   </q-list>
 </template>
 
@@ -326,7 +330,7 @@ img:after
   width: inherit
   height: inherit
   z-index: 10
-  background: #ebebeb url('http://via.placeholder.com/300?text=PlaceHolder') no-repeat center
+  // background: #ebebeb url('http://via.placeholder.com/300?text=PlaceHolder') no-repeat center
   color: transparent
 
 .ticket-active-item
@@ -354,7 +358,7 @@ img:after
   border-left: 3px solid $positive
 
 .ticketNotAnswered
-  border-left: 5px solid $amber !important
+  border-left: 5px solid $warning !important
 
 .ticketBorder
   border-left: 5px solid $grey-9

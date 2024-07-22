@@ -6,8 +6,7 @@
           square
           flat
           bordered
-          class="my-sticky-dynamic q-ma-lg"
-          title="Fluxos"
+          class="contact-table container-rounded-10 my-sticky-dynamic q-ma-lg"
           hide-bottom
           :data="listachatFlow"
           :columns="columns"
@@ -16,13 +15,20 @@
           :pagination.sync="pagination"
           :rows-per-page-options="[0]"
         >
-          <template v-slot:top-right>
-            <q-btn
-              class="q-ml-md"
-              color="primary"
+          <template v-slot:top-left>
+            <div>
+              <h2  :class="$q.dark.isActive ? ('text-white') : ''">
+                <q-icon name="mdi-robot-outline q-pr-sm" />
+                Fluxos
+              </h2>
+              <q-btn
+              class="generate-button btn-rounded-50"
+              icon="eva-plus-outline"
               label="Adicionar"
               @click="chatFlowSelecionado = {}; modalChatFlow = true"
             />
+            </div>
+
           </template>
           <template v-slot:body-cell-isActive="props">
             <q-td class="text-center">
@@ -38,11 +44,11 @@
           <template v-slot:body-cell-acoes="props">
             <q-td class="text-center">
               <q-btn
-                color="blue-3"
-                icon="edit"
+                :class="$q.dark.isActive ? ('text-white bg-black') : ''"
+                icon="eva-edit-outline"
                 flat
                 round
-                class="bg-padrao"
+                class="q-mx-sm"
                 @click="editFlow(props.row)"
               >
                 <q-tooltip>
@@ -50,11 +56,11 @@
                 </q-tooltip>
               </q-btn>
               <q-btn
-                color="blue-3"
+                 :class="$q.dark.isActive ? ('text-white bg-black') : ''"
                 icon="mdi-content-duplicate"
                 flat
                 round
-                class="bg-padrao q-mx-sm"
+                class="q-mx-sm"
                 @click="duplicarFluxo(props.row)"
               >
                 <q-tooltip>
@@ -62,11 +68,11 @@
                 </q-tooltip>
               </q-btn>
               <q-btn
-                color="blue-3"
                 icon="mdi-sitemap"
                 flat
                 round
-                class="bg-padrao"
+                class="q-mx-sm"
+                 :class="$q.dark.isActive ? ('text-white bg-black') : ''"
                 @click="abrirFluxo(props.row)"
               >
                 <q-tooltip>
@@ -74,11 +80,11 @@
                 </q-tooltip>
               </q-btn>
               <q-btn
-                color="blue-3"
-                icon="delete"
+                icon="eva-trash-outline"
                 flat
                 round
-                class="bg-padrao"
+                class="q-mx-sm"
+                 :class="$q.dark.isActive ? ('text-white bg-black') : ''"
                 @click="deletarFluxo(props.row)"
               >
                 <q-tooltip>
@@ -100,17 +106,17 @@
     <q-dialog v-model="confirmDelete" persistent>
       <q-card style="min-width: 350px">
         <q-card-section>
-          <div class="text-h6">Você tem certeza que dessa escluir esse fluxo?</div>
+          <div class="text-h6">Você tem certeza que dessa excluir esse fluxo?</div>
           <div>{{ chatFlowSelecionado.name }}</div>
         </q-card-section>
         <q-card-actions align="right" class="text-primary">
           <q-btn
-            flat
             label="Cancelar"
             v-close-popup
             class="q-mr-md"
+            color="primary"
           />
-          <q-btn flat label="Excluir" color="negative" v-close-popup @click="confirmDeleteFoo()" />
+          <q-btn label="Excluir" color="negative" v-close-popup @click="confirmDeleteFoo()" />
         </q-card-actions>
       </q-card>
     </q-dialog>

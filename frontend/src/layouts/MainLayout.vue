@@ -1,63 +1,51 @@
 <template>
+  <div>
   <q-layout view="hHh Lpr lFf">
 
-    <q-header class="bg-white text-grey-8 q-py-xs " height-hint="58" bordered v-if="showMenu">
-      <q-toolbar>
-        <q-btn flat
-          dense
-          round
+    <div class="header-mobile"
+    v-if="this.$q.screen.lt.md">
+
+      <q-btn
+          color="white"
           @click="leftDrawerOpen = !leftDrawerOpen"
           aria-label="Menu"
-          icon="menu">
-          <q-tooltip>Menu</q-tooltip>
+          icon="menu"
+          size="lg"
+          class="menu-icon-mobile">
         </q-btn>
 
-        <q-btn flat
-          no-caps
-          no-wrap
-          dense
-          class="q-ml-sm"
-          v-if="$q.screen.gt.xs">
-          <q-img src="/logo.png"
-            spinner-color="primary"
-            style="height: 50px; width: 140px" />
-        </q-btn>
-        <q-space />
-        <div v-if="$q.screen.gt.xs">
-        <vencimento />
-        </div>
-            <q-btn round
-            dense
-            flat
-            color="grey-8" icon="refresh"
-            @click="reloadPage">
-            <q-tooltip >
-              Atualizar Página
-            </q-tooltip>
-          </q-btn>
+    </div>
 
-        <div class="q-gutter-sm row items-center no-wrap">
-           <q-btn round
+    <div class="header"
+      bordered
+      :class="{'header-buttons-mobile': this.$q.screen.lt.md}"
+      >
+      <q-toolbar
+      >
+
+        <div class="q-gutter-sm row items-center no-wrap" v-if="$route.name !== 'chat-interno' && $route.name !== 'atendimento' && $route.name !== 'chat-empty' && $route.name !== 'chat' && $route.name !== 'chat-contatos'">
+          <q-btn
             dense
             flat
-            color="grey-8"
-            icon="notifications">
+            icon="notifications"
+            class="header-buttons" size="xl"
+            >
             <q-badge color="red"
               text-color="white"
               floating
-              v-if="(this.notificacaoInternaNaoLida + parseInt(notifications_p.count) + parseInt(notifications.count)) > 0">
-              {{ this.notificacaoInternaNaoLida + parseInt(notifications_p.count) + parseInt(notifications.count)}}
+              v-if="(this.notificacaoInternaNaoLida + parseInt(notifications_p.count)) > 0">
+              {{ this.notificacaoInternaNaoLida + parseInt(notifications_p.count) }}
             </q-badge>
             <q-menu>
               <q-list style="min-width: 300px">
-                <q-item v-if="(parseInt(notificacoesChat) + parseInt(notifications_p.count)) == 0">
+                <q-item v-if="(parseInt(notifications.count) + parseInt(notifications_p.count)) == 0">
                   <q-item-section style="cursor: pointer;">
                     Nada de novo por aqui!
                   </q-item-section>
                 </q-item>
                 <q-item v-if="parseInt(notificacoesChat) > 0">
-                  <q-item-section avatar @click="() => $router.push({ name: 'chat-interno' })" style="cursor: pointer;">
-                    <q-avatar style="width: 60px; height: 60px" color="blue" text-color="white">
+                  <q-item-section avatar @click="() => $router.push({ name: 'interno' })" style="cursor: pointer;">
+                    <q-avatar style="width: 60px; height: 60px" color="primary" text-color="white">
                       {{ notificacoesChat }}
                     </q-avatar>
                   </q-item-section>
@@ -66,7 +54,7 @@
                   </q-item-section>
                 </q-item>
                 <q-item v-if="parseInt(notificacaoInternaNaoLida) > 0">
-                  <q-item-section avatar @click="() => $router.push({ name: 'chat-interno' })" style="cursor: pointer;">
+                  <q-item-section avatar @click="() => $router.push({ name: 'interno' })" style="cursor: pointer;">
                     <q-avatar style="width: 60px; height: 60px" color="primary" text-color="white">
                       {{ notificacaoInternaNaoLida }}
                     </q-avatar>
@@ -77,63 +65,56 @@
                 </q-item>
                 <q-item v-if="parseInt(notifications_p.count) > 0">
                   <q-item-section avatar
-                    @click="() => $router.push({ name: 'chat-empty' })"
+                    @click="() => $router.push({ name: 'atendimento' })"
                     style="cursor: pointer;">
                     <q-avatar style="width: 60px; height: 60px"
-                      color="blue"
+                      color="primary"
                       text-color="white">
                       {{ notifications_p.count }}
                     </q-avatar>
                   </q-item-section>
-                  <q-item-section @click="() => $router.push({ name: 'chat-empty' })"
+                  <q-item-section @click="() => $router.push({ name: 'atendimento' })"
                     style="cursor: pointer;">
                     Clientes pendentes na fila
-                  </q-item-section>
-                </q-item>
-                <q-item v-for="ticket in notifications.tickets"
-                  :key="ticket.id"
-                  style="border-bottom: 1px solid #ddd; margin: 5px;">
-                  <q-item-section avatar
-                    @click="abrirAtendimentoExistente(ticket.name, ticket)"
-                    style="cursor: pointer;">
-                    <q-avatar style="width: 60px; height: 60px">
-                      <img :src="ticket.profilePicUrl">
-                    </q-avatar>
-                  </q-item-section>
-                  <q-item-section @click="abrirAtendimentoExistente(ticket.name, ticket)"
-                    style="cursor: pointer;">
-                    <q-list>
-                      <q-item style="text-align:center; font-size: 17px; font-weight: bold; min-height: 0">{{ ticket.name
-                      }}</q-item>
-                      <q-item style="min-height: 0; padding-top: 0"><b>Mensagem: </b> {{ ticket.lastMessage }}</q-item>
-                    </q-list>
                   </q-item-section>
                 </q-item>
               </q-list>
             </q-menu>
             <q-tooltip >Notificações</q-tooltip>
           </q-btn>
-          <q-avatar :color="usuario.status === 'offline' ? 'negative' : 'positive'"
+
+          <q-btn  flat
+          class="header-buttons" size="lg">
+            <q-avatar :color="usuario.status === 'offline' ? 'negative' : 'positive'"
             text-color="white"
             size="25px"
             :icon="usuario.status === 'offline' ? 'mdi-account-off' : 'mdi-account-check'"
             rounded
-            class="q-ml-lg">
-            <q-tooltip>
+            >
+          </q-avatar>
+
+          <q-menu>
+              <q-list style="min-width: 100px">
+                <cStatusUsuario @update:usuario="atualizarUsuario"
+                  :usuario="usuario" />
+
+              </q-list>
+            </q-menu>
+
+          <q-tooltip>
               {{ usuario.status === 'offline' ? 'Usuário Offiline' : 'Usuário Online' }}
             </q-tooltip>
-          </q-avatar>
-          <q-btn round
+          </q-btn>
+
+          <q-btn
             flat
-            class="bg-padrao text-bold q-mx-sm q-ml-lg">
-            <q-avatar size="26px">
+            class="header-buttons" size="lg">
+            <q-avatar size="sm">
               {{ $iniciaisString(username) }}
             </q-avatar>
             <q-menu>
               <q-list style="min-width: 100px">
                 <q-item-label header> Olá! <b> {{ username }} </b> </q-item-label>
-                <cStatusUsuario @update:usuario="atualizarUsuario"
-                  :usuario="usuario" />
                 <q-item clickable
                   v-close-popup
                   @click="abrirModalUsuario">
@@ -146,8 +127,9 @@
                 </q-item>
                 <q-separator />
                 <q-item>
-                  <q-item-section>
-                    <cSystemVersion />
+                <q-item-section>
+                    <vencimento />
+                    <cSystemVersion  />
                   </q-item-section>
                 </q-item>
 
@@ -156,32 +138,66 @@
 
             <q-tooltip>Usuário</q-tooltip>
           </q-btn>
+
         </div>
       </q-toolbar>
-    </q-header>
+    </div>
 
-    <q-drawer v-model="leftDrawerOpen" show-if-above bordered :mini="miniState" @mouseover="miniState = false"
-      v-if="showMenu" @mouseout="miniState = true" mini-to-overlay content-class="bg-white text-grey-9">
+    <q-drawer v-model="leftDrawerOpen"
+      show-if-above
+      bordered
+      :mini="miniState"
+      @mouseover="miniState = true"
+      @mouseout="miniState = true"
+      mini-to-overlay
+      :content-class="$q.dark.isActive ? 'bg-black' : 'container-menu'">
+
       <q-scroll-area class="fit">
         <q-list padding :key="userProfile">
-          <!-- <q-item-label
-            header
-            class="text-grey-8"
-          >
-            Menu
-          </q-item-label> -->
           <EssentialLink v-for="item in menuData" :key="item.title" v-bind="item" />
           <div v-if="userProfile === 'admin'">
             <q-separator spaced />
             <div class="q-mb-lg"></div>
+              <EssentialLink v-if="exibirMenuEmpresas(item)"
+                :key="Empresas"
+                v-bind="{
+                  title: 'Empresas',
+                  caption: 'Configurações do SaaS',
+                  icon: 'mdi-office-building',
+                  routeName: 'empresas',
+                }" />
             <!-- <q-item-label header>Administração</q-item-label> -->
             <template v-for="item in menuDataAdmin">
-              <EssentialLink v-if="exibirMenuBeta(item) && validaTelaAdmin(item)" :key="item.title" v-bind="item" />
+              <EssentialLink v-if="exibirMenuBeta(item)" :key="item.title" v-bind="item" />
             </template>
+              <EssentialLink v-if="exibirMenuBeta(item)"
+                :key="Configurações"
+                v-bind="{
+                  title: 'Cadastros',
+                  caption: 'Cadastros do sistema',
+                  icon: 'mdi-list',
+                  routeName: 'cadastros',
+                  submenu: true,
+                  menuType: 'cadastros'
+
+                }" />
+                <EssentialLink v-if="exibirMenuBeta(item)"
+                :key="Configurações"
+                v-bind="{
+                  title: 'Configurações',
+                  caption: 'Configurações do sistema',
+                  icon: 'mdi-settings-2',
+                  routeName: 'configuracoes',
+                  submenu: true,
+                  menuType: 'configuracoes'
+
+                }" />
+                <q-separator spaced />
           </div>
 
         </q-list>
       </q-scroll-area>
+
       <div class="absolute-bottom text-center row justify-start"
         :class="{ 'bg-grey-3': $q.dark.isActive }"
         style="height: 40px">
@@ -189,6 +205,7 @@
           keep-color
           dense
           class="text-bold q-ml-xs"
+          :class="$q.dark.isActive ? 'bg-black full-width' : ''"
           :icon-color="$q.dark.isActive ? 'black' : 'white'"
           :value="$q.dark.isActive"
           :color="$q.dark.isActive ? 'grey-3' : 'black'"
@@ -216,6 +233,8 @@
       :modalUsuario.sync="modalUsuario"
       :usuarioEdicao.sync="usuario" />
   </q-layout>
+
+  </div>
 </template>
 
 <script>
@@ -247,12 +266,11 @@ const objMenu = [
     icon: 'mdi-home',
     routeName: 'home-dashboard'
   },
-
   {
     title: 'Atendimentos',
     caption: 'Lista de atendimentos',
     icon: 'mdi-whatsapp',
-    routeName: 'atendimento'
+    routeName: 'chat-empty'
   },
   {
     title: 'Contatos',
@@ -261,8 +279,8 @@ const objMenu = [
     routeName: 'contatos'
   },
   {
-    title: 'Chat Interno',
-    caption: 'Chat Interno',
+    title: 'Chat',
+    caption: 'Chat',
     icon: 'mdi-forum-outline',
     routeName: 'chat-interno'
   },
@@ -282,32 +300,6 @@ const objMenu = [
 
 const objMenuAdmin = [
   {
-    title: 'Empresas SaaS',
-    caption: 'Lista de empresas',
-    icon: 'mdi-office-building',
-    routeName: 'empresas',
-    submenu: [
-      {
-        title: 'Subitem 1',
-        caption: 'Descrição do Subitem 1',
-        icon: 'mdi-office-building',
-        routeName: 'empresas'
-      },
-      {
-        title: 'Subitem 2',
-        caption: 'Descrição do Subitem 2',
-        icon: 'mdi-office-building',
-        routeName: 'empresas'
-      }
-    ]
-  },
-  {
-    title: 'Canais',
-    caption: 'Canais de Comunicação',
-    icon: 'mdi-cellphone-wireless',
-    routeName: 'sessoes'
-  },
-  {
     title: 'Painel Atendimentos',
     caption: 'Visão geral dos atendimentos',
     icon: 'mdi-view-dashboard-variant',
@@ -320,60 +312,10 @@ const objMenuAdmin = [
     routeName: 'relatorios'
   },
   {
-    title: 'Usuarios',
-    caption: 'Admin de usuários',
-    icon: 'mdi-account-group',
-    routeName: 'usuarios'
-  },
-  {
-    title: 'Filas | Grupos',
-    caption: 'Cadastro de Filas',
-    icon: 'mdi-arrow-decision-outline',
-    routeName: 'filas'
-  },
-  {
-    title: 'Chatbot',
-    caption: 'Robô de atendimento',
-    icon: 'mdi-robot',
-    routeName: 'chat-flow'
-  },
-  {
-    title: 'Etiquetas',
-    caption: 'Cadastro de etiquetas',
-    icon: 'mdi-tag-text',
-    routeName: 'etiquetas'
-  },
-  {
-    title: 'Horário de Atendimento',
-    caption: 'Horário de funcionamento',
-    icon: 'mdi-calendar-clock',
-    routeName: 'horarioAtendimento'
-  },
-  {
-    title: 'Configurações',
-    caption: 'Configurações gerais',
-    icon: 'mdi-cog',
-    routeName: 'configuracoes'
-  },
-  {
     title: 'Financeiro',
     caption: 'Financeiro',
     icon: 'mdi-cash-multiple',
     routeName: 'financeiro'
-  },
-  {
-    title: 'Campanha',
-    caption: 'Campanhas de envio',
-    icon: 'mdi-message-bookmark-outline',
-    routeName: 'campanhas'
-    // isBeta: true
-  },
-  {
-    title: 'API',
-    caption: 'Integração sistemas externos',
-    icon: 'mdi-call-split',
-    routeName: 'api-service'
-    // isBeta: true
   }
 ]
 
@@ -383,6 +325,7 @@ export default {
   components: { EssentialLink, ModalUsuario, cStatusUsuario, cSystemVersion, vencimento, informative },
   data () {
     return {
+      whatsappId: null,
       username,
       domainExperimentalsMenus: ['@'],
       miniState: true,
@@ -470,14 +413,21 @@ export default {
       }
       return false
     },
-    validaTelaAdmin(itemMenu) {
+    exibirMenuEmpresas(itemMenu) {
       const user = JSON.parse(localStorage.getItem('usuario'))
-      if (itemMenu.routeName === 'empresas' && user.tenantId != 1) return false
+      if (user.tenantId != 1) {
+        return false
+      }
       return true
     },
     async listarWhatsapps() {
       const { data } = await ListarWhatsapps()
       this.$store.commit('LOAD_WHATSAPPS', data)
+    },
+    validaTelaAdmin(itemMenu) {
+      const user = JSON.parse(localStorage.getItem('usuario'))
+      if (itemMenu.routeName === 'empresas' && user.tenantId != 1) return false
+      return true
     },
     handlerNotifications(data) {
       const { body, contact, ticket } = data
@@ -676,4 +626,5 @@ export default {
 .q-img__image {
   background-size: contain;
 }
+
 </style>
