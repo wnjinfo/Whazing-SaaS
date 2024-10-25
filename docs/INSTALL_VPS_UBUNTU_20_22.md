@@ -141,7 +141,7 @@ cd ~
 25. baixar o repositório do whazing
 
 ```bash
-git clone https://github.com/cleitonme/Whazing-SaaS.git whazing
+git clone https://github.com/wnjinfo/Whazing-SaaS.git whazing
 ```
 
 26. Copiar o env de exemplo para o backend
