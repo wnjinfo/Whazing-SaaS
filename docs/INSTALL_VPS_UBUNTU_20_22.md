@@ -4,7 +4,7 @@
 - Antes de começar a instalação é necessário ter criado antecipadamente os subdomínios e já estarem apontados para o IP da VPS.
 - Feito ubuntu 20
 - Nesse modelo vamos usar docker porque versão Postgresql do repositorio UBUNTU 20 ta dando erro com whazing
-- Senha usada 123@mudar
+- Senha usada 123456789
 - Dominio Frontend: whazing.seusite.com.br
 - Dominio backend: backend.seusite.com.br
   
@@ -73,13 +73,13 @@ apt autoremove -y
 9. Instalar POSTGRESQL no Docker
 
 ```bash
-docker run --name postgresql -e POSTGRES_USER=whazing -e POSTGRES_PASSWORD=123@mudar -e TZ="America/Sao_Paulo" -p 5432:5432 --restart=always -v /data:/var/lib/postgresql/data -d postgres
+docker run --name postgresql -e POSTGRES_USER=whazing -e POSTGRES_PASSWORD=123456789 -e TZ="America/Sao_Paulo" -p 5432:5432 --restart=always -v /data:/var/lib/postgresql/data -d postgres
 ```
 
 10. Instalar Redis no Docker
 
 ```bash
-docker run --name redis-whazing -e TZ="America/Sao_Paulo" -p 6379:6379 --restart=always -d redis:latest redis-server --appendonly yes --requirepass "123@mudar"
+docker run --name redis-whazing -e TZ="America/Sao_Paulo" -p 6379:6379 --restart=always -d redis:latest redis-server --appendonly yes --requirepass "123456789"
 ```
 
 11. Instalar Rabbitmq no Docker opcional
@@ -180,7 +180,7 @@ DB_TIMEZONE=-03:00
 DB_PORT=5432
 POSTGRES_HOST=localhost
 POSTGRES_USER=whazing
-POSTGRES_PASSWORD=123@mudar
+POSTGRES_PASSWORD=123456789
 POSTGRES_DB=postgres
 
 
@@ -192,7 +192,7 @@ JWT_REFRESH_SECRET=gerado no passo 31
 IO_REDIS_SERVER=localhost
 IO_REDIS_PORT='6379'
 IO_REDIS_DB_SESSION='2'
-IO_REDIS_PASSWORD=123@mudar
+IO_REDIS_PASSWORD=123456789
 
 # tempo para randomização da mensagem de horário de funcionamento
 MIN_SLEEP_BUSINESS_HOURS=10000
@@ -209,8 +209,8 @@ MAX_SLEEP_INTERVAL=5000
 
 # dados do RabbitMQ / Para não utilizar, basta comentar a var AMQP_URL
 RABBITMQ_DEFAULT_USER=admin
-RABBITMQ_DEFAULT_PASS=123@mudar
-#AMQP_URL='amqp://admin:123@mudar@localhost:5672?connection_attempts=5&retry_delay=5'
+RABBITMQ_DEFAULT_PASS=123456789
+#AMQP_URL='amqp://admin:123456789@localhost:5672?connection_attempts=5&retry_delay=5'
 
 # api oficial (integração em desenvolvimento)
 API_URL_360=https://waba-sandbox.360dialog.io
